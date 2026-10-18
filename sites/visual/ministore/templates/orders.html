@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ S.orders_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.orders_h }}</h2>
+{% for o in orders %}
+  <div class="card" style="margin-bottom:10px">
+    <a href="/order/{{ o.id }}">{{ S.order_h.format(id=o.id) }}</a> — {{ S.cur }}{{ ('%.2f' % o.total) | v2_num }} — {{ o.status }} — {{ S.placed_word }} {{ o.placed_on }}
+    <div class="meta">{{ o.n_items | v2_num }} {{ S.items_word }} · {{ S.ship_to }} {{ o.address }}</div>
+  </div>
+{% else %}<p>{{ S.no_orders }}</p>{% endfor %}
+{% endblock %}

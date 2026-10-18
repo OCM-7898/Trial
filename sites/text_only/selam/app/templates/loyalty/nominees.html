@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("miles.nominees_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_account') }}">{{ t("nav.miles_account") }}</a></li>
+        <li>{{ t("miles.nominees_title") }}</li></ol>
+  </nav>
+  <h1>{{ t("miles.nominees_title") }}</h1>
+  <p>{{ t("miles.nominees_intro") }}</p>
+  {% if added %}<div class="notice notice-ok" role="status"><div>{{ t("miles.nominee_added") }}</div></div>{% endif %}
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+  {% if rows %}
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">{{ t("manage.passenger_name") }}</th><th scope="col">{{ t("miles.relationship") }}</th></tr></thead>
+    <tbody>{% for row in rows %}<tr><td>{{ row.name }}</td><td>{{ row.relationship or "--" }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% endif %}
+  <form class="searchform" method="post">
+    {{ text_field("nominee_name", "nominee_name", t("manage.passenger_name"), "", "", "", true) }}
+    {{ text_field("relationship", "relationship", t("miles.relationship"), "", t("miles.relationship_hint")) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("miles.add_nominee") }}</button></div>
+  </form>
+</div>
+{% endblock %}

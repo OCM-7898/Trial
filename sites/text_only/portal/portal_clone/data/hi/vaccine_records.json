@@ -1,0 +1,152 @@
+[
+ {
+  "id": 1,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "मौलवीबाज़ार टीकाकरण केंद्र"
+ },
+ {
+  "id": 2,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "मैमनसिंह टीकाकरण केंद्र"
+ },
+ {
+  "id": 3,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "खागड़ाछड़ी टीकाकरण केंद्र"
+ },
+ {
+  "id": 4,
+  "vaccine_name": "संयुक्त DT",
+  "centre_name": "नेत्रकोना टीकाकरण केंद्र"
+ },
+ {
+  "id": 5,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "गोपालगंज टीकाकरण केंद्र"
+ },
+ {
+  "id": 6,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "बरगुना टीकाकरण केंद्र"
+ },
+ {
+  "id": 7,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "नेत्रकोना टीकाकरण केंद्र"
+ },
+ {
+  "id": 8,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "बरिशाल टीकाकरण केंद्र"
+ },
+ {
+  "id": 9,
+  "vaccine_name": "त्रिसंयोजी A",
+  "centre_name": "टांगाइल टीकाकरण केंद्र"
+ },
+ {
+  "id": 10,
+  "vaccine_name": "त्रिसंयोजी A",
+  "centre_name": "खागड़ाछड़ी टीकाकरण केंद्र"
+ },
+ {
+  "id": 11,
+  "vaccine_name": "त्रिसंयोजी A",
+  "centre_name": "मौलवीबाज़ार टीकाकरण केंद्र"
+ },
+ {
+  "id": 12,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "मैमनसिंह टीकाकरण केंद्र"
+ },
+ {
+  "id": 13,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "राजबाड़ी टीकाकरण केंद्र"
+ },
+ {
+  "id": 14,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "टांगाइल टीकाकरण केंद्र"
+ },
+ {
+  "id": 15,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "खुलना टीकाकरण केंद्र"
+ },
+ {
+  "id": 16,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "लक्ष्मीपुर टीकाकरण केंद्र"
+ },
+ {
+  "id": 17,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "गाज़ीपुर टीकाकरण केंद्र"
+ },
+ {
+  "id": 18,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "नीलफामारी टीकाकरण केंद्र"
+ },
+ {
+  "id": 19,
+  "vaccine_name": "संयुक्त DT",
+  "centre_name": "कॉक्स बाज़ार टीकाकरण केंद्र"
+ },
+ {
+  "id": 20,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "पिरोजपुर टीकाकरण केंद्र"
+ },
+ {
+  "id": 21,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "झालोकाठी टीकाकरण केंद्र"
+ },
+ {
+  "id": 22,
+  "vaccine_name": "त्रिसंयोजी A",
+  "centre_name": "ब्राह्मणबाड़िया टीकाकरण केंद्र"
+ },
+ {
+  "id": 23,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "फ़रीदपुर टीकाकरण केंद्र"
+ },
+ {
+  "id": 24,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "जशोर टीकाकरण केंद्र"
+ },
+ {
+  "id": 25,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "किशोरगंज टीकाकरण केंद्र"
+ },
+ {
+  "id": 26,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "मादारीपुर टीकाकरण केंद्र"
+ },
+ {
+  "id": 27,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "राजशाही टीकाकरण केंद्र"
+ },
+ {
+  "id": 28,
+  "vaccine_name": "त्रिसंयोजी B",
+  "centre_name": "नोआखाली टीकाकरण केंद्र"
+ },
+ {
+  "id": 29,
+  "vaccine_name": "मौसमी IV",
+  "centre_name": "नारायणगंज टीकाकरण केंद्र"
+ },
+ {
+  "id": 30,
+  "vaccine_name": "संयुक्त DT",
+  "centre_name": "फ़रीदपुर टीकाकरण केंद्र"
+ }
+]

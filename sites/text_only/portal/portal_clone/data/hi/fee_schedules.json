@@ -1,0 +1,569 @@
+[
+ {
+  "id": 1,
+  "category": "सुधार",
+  "variant": "नाम की वर्तनी",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 2,
+  "category": "सुधार",
+  "variant": "नाम की वर्तनी",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 3,
+  "category": "सुधार",
+  "variant": "जन्म तिथि",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 4,
+  "category": "सुधार",
+  "variant": "जन्म तिथि",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 5,
+  "category": "सुधार",
+  "variant": "पता",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 6,
+  "category": "सुधार",
+  "variant": "पता",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 7,
+  "category": "पुनर्निर्गम",
+  "variant": "खोया कार्ड",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 8,
+  "category": "पुनर्निर्गम",
+  "variant": "खोया कार्ड",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 9,
+  "category": "पुनर्निर्गम",
+  "variant": "क्षतिग्रस्त कार्ड",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 10,
+  "category": "प्रतिलिपि",
+  "variant": "दूसरी और आगे",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 11,
+  "category": "साधारण",
+  "variant": "48 पृष्ठ",
+  "validity": "5 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 12,
+  "category": "साधारण",
+  "variant": "48 पृष्ठ",
+  "validity": "5 वर्ष",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 13,
+  "category": "साधारण",
+  "variant": "48 पृष्ठ",
+  "validity": "5 वर्ष",
+  "delivery": "आपातकालीन"
+ },
+ {
+  "id": 14,
+  "category": "साधारण",
+  "variant": "48 पृष्ठ",
+  "validity": "10 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 15,
+  "category": "साधारण",
+  "variant": "48 पृष्ठ",
+  "validity": "10 वर्ष",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 16,
+  "category": "साधारण",
+  "variant": "64 पृष्ठ",
+  "validity": "5 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 17,
+  "category": "साधारण",
+  "variant": "64 पृष्ठ",
+  "validity": "5 वर्ष",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 18,
+  "category": "साधारण",
+  "variant": "64 पृष्ठ",
+  "validity": "10 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 19,
+  "category": "साधारण",
+  "variant": "64 पृष्ठ",
+  "validity": "10 वर्ष",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 20,
+  "category": "सरकारी",
+  "variant": "48 पृष्ठ",
+  "validity": "5 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 21,
+  "category": "जन्म",
+  "variant": "45 दिन के भीतर",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 22,
+  "category": "जन्म",
+  "variant": "46 दिन से 5 वर्ष",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 23,
+  "category": "जन्म",
+  "variant": "5 वर्ष के बाद",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 24,
+  "category": "मृत्यु",
+  "variant": "45 दिन के भीतर",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 25,
+  "category": "मृत्यु",
+  "variant": "45 दिन के बाद",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 26,
+  "category": "सुधार",
+  "variant": "नाम या तिथि",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 27,
+  "category": "प्रमाणित प्रति",
+  "variant": "जन्म",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 28,
+  "category": "प्रमाणित प्रति",
+  "variant": "मृत्यु",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 29,
+  "category": "नामांतरण",
+  "variant": "साधारण",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 30,
+  "category": "नामांतरण",
+  "variant": "साधारण",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 31,
+  "category": "प्रमाणित प्रति",
+  "variant": "खतियान",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 32,
+  "category": "प्रमाणित प्रति",
+  "variant": "खतियान",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 33,
+  "category": "खोज",
+  "variant": "अभिलेख निरीक्षण",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 34,
+  "category": "विकास कर",
+  "variant": "आवासीय",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 35,
+  "category": "विकास कर",
+  "variant": "वाणिज्यिक",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 36,
+  "category": "कनेक्शन",
+  "variant": "घरेलू सिंगल फ़ेज़",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 37,
+  "category": "कनेक्शन",
+  "variant": "घरेलू थ्री फ़ेज़",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 38,
+  "category": "कनेक्शन",
+  "variant": "वाणिज्यिक",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 39,
+  "category": "मीटर",
+  "variant": "प्रतिस्थापन",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 40,
+  "category": "मीटर",
+  "variant": "स्थानांतरण",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 41,
+  "category": "पुनः संयोजन",
+  "variant": "विच्छेदन के बाद",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 42,
+  "category": "पुनर्जाँच",
+  "variant": "प्रति विषय",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 43,
+  "category": "प्रमाणपत्र",
+  "variant": "पुनर्निर्गम",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 44,
+  "category": "ट्रांसक्रिप्ट",
+  "variant": "प्रति प्रति",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 45,
+  "category": "समकक्षता",
+  "variant": "प्रमाणपत्र",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 46,
+  "category": "प्रवेश पत्र",
+  "variant": "प्रतिलिपि",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 47,
+  "category": "लर्नर",
+  "variant": "मोटरसाइकिल",
+  "validity": "2 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 48,
+  "category": "लर्नर",
+  "variant": "हल्का वाहन",
+  "validity": "2 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 49,
+  "category": "लाइसेंस",
+  "variant": "पेशेवर",
+  "validity": "5 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 50,
+  "category": "लाइसेंस",
+  "variant": "गैर-पेशेवर",
+  "validity": "10 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 51,
+  "category": "लाइसेंस",
+  "variant": "गैर-पेशेवर",
+  "validity": "10 वर्ष",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 52,
+  "category": "नवीनीकरण",
+  "variant": "पेशेवर",
+  "validity": "5 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 53,
+  "category": "प्रतिलिपि",
+  "variant": "कोई भी वर्ग",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 54,
+  "category": "पंजीकरण",
+  "variant": "व्यक्ति",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 55,
+  "category": "पंजीकरण",
+  "variant": "कंपनी",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 56,
+  "category": "क्लियरेंस",
+  "variant": "प्रमाणपत्र",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 57,
+  "category": "रिटर्न",
+  "variant": "विलंब से दाखिल",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 58,
+  "category": "अपील",
+  "variant": "ज्ञापन",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 59,
+  "category": "पूर्व-पंजीकरण",
+  "variant": "सरकारी पैकेज",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 60,
+  "category": "पूर्व-पंजीकरण",
+  "variant": "निजी पैकेज",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 61,
+  "category": "पंजीकरण",
+  "variant": "सरकारी पैकेज",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 62,
+  "category": "पंजीकरण",
+  "variant": "निजी पैकेज",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 63,
+  "category": "प्रतिस्थापन",
+  "variant": "नामिती परिवर्तन",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 64,
+  "category": "प्रमाणपत्र",
+  "variant": "टीकाकरण",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 65,
+  "category": "प्रमाणपत्र",
+  "variant": "सुधार",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 66,
+  "category": "स्वास्थ्य कार्ड",
+  "variant": "निर्गम",
+  "validity": "5 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 67,
+  "category": "मेडिकल बोर्ड",
+  "variant": "मूल्यांकन",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 68,
+  "category": "क्लियरेंस",
+  "variant": "घरेलू उपयोग",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 69,
+  "category": "क्लियरेंस",
+  "variant": "विदेश में उपयोग",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 70,
+  "category": "क्लियरेंस",
+  "variant": "विदेश में उपयोग",
+  "validity": "—",
+  "delivery": "एक्सप्रेस"
+ },
+ {
+  "id": 71,
+  "category": "चरित्र",
+  "variant": "प्रमाणपत्र",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 72,
+  "category": "किरायेदार",
+  "variant": "पंजीकरण",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 73,
+  "category": "नया",
+  "variant": "छोटा व्यापार",
+  "validity": "1 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 74,
+  "category": "नया",
+  "variant": "मध्यम व्यापार",
+  "validity": "1 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 75,
+  "category": "नया",
+  "variant": "बड़ा व्यापार",
+  "validity": "1 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 76,
+  "category": "नवीनीकरण",
+  "variant": "छोटा व्यापार",
+  "validity": "1 वर्ष",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 77,
+  "category": "प्रतिलिपि",
+  "variant": "कोई भी श्रेणी",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 78,
+  "category": "दावा",
+  "variant": "अधिवर्षिता",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 79,
+  "category": "दावा",
+  "variant": "पारिवारिक पेंशन",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 80,
+  "category": "प्रमाणपत्र",
+  "variant": "जीवन प्रमाणपत्र",
+  "validity": "—",
+  "delivery": "नियमित"
+ },
+ {
+  "id": 81,
+  "category": "प्रतिलिपि",
+  "variant": "वेतन पर्ची",
+  "validity": "—",
+  "delivery": "नियमित"
+ }
+]

@@ -1,0 +1,2180 @@
+[
+ {
+  "id": "visual-001",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳১৪৯৮.৮০ দামের টাইপ-C থেকে HDMI অ্যাডাপ্টার ১টি কিনে '২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪' ঠিকানায় পাঠান। অর্ডারটি যেন সত্যিই প্লেস হয়, সেজন্য চেকআউট শেষ পর্যন্ত সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪%",
+    "items": {
+     "1": 1
+    },
+    "total": 1498.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-002",
+  "site": "ministore",
+  "intent": "আমার Amazon Brand - Solimo ব্র্যান্ডের ৳২৩৯৮.৮০ দামের নন স্টিক হাঁড়ি একটি দরকার, ডেলিভারি হবে '৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫' ঠিকানায়। একটি অর্ডারে পুরো চেকআউট করে অর্ডারটি দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫%",
+    "items": {
+     "301": 1
+    },
+    "total": 2398.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/301",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-003",
+  "site": "ministore",
+  "intent": "'৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩' শিপিং ঠিকানা ব্যবহার করে AmazonBasics ব্র্যান্ডের ৳১৪৩৮.৮০ দামের ভিনাইল 4 পাউন্ড ডাম্বেল একটির জন্য অর্ডার দিন এবং চেকআউট সম্পূর্ণ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩%",
+    "items": {
+     "604": 1
+    },
+    "total": 1438.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/604",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-004",
+  "site": "ministore",
+  "intent": "একটি মাত্র অর্ডারে Amazon Basics ব্র্যান্ডের ৳৭৭৯৮.৮০ দামের এরিয়া রাগ ১টি কিনুন, '৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১%",
+    "items": {
+     "852": 1
+    },
+    "total": 7798.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/852",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-005",
+  "site": "ministore",
+  "intent": "বাগান বিভাগের উইকার প্ল্যান্টার ১টি কিনে '৬৮ উইলো ড্রাইভ, বয়সি, ৮৩৭০২' ঠিকানায় পাঠান। অর্ডারটি যেন সত্যিই প্লেস হয়, সেজন্য চেকআউট শেষ পর্যন্ত সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৬৮ উইলো ড্রাইভ, বয়সি, ৮৩৭০২%",
+    "items": {
+     "1261": 1
+    },
+    "total": 3598.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1261",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৬৮ উইলো ড্রাইভ, বয়সি, ৮৩৭০২",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-006",
+  "site": "ministore",
+  "intent": "আমার পোষা প্রাণী বিভাগের কুকুরের কলার একটি দরকার, ডেলিভারি হবে '৭ জুনিপার অ্যাভিনিউ, সেলেম, ৯৭৩০১' ঠিকানায়। একটি অর্ডারে পুরো চেকআউট করে অর্ডারটি দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৭ জুনিপার অ্যাভিনিউ, সেলেম, ৯৭৩০১%",
+    "items": {
+     "1791": 1
+    },
+    "total": 958.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1791",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৭ জুনিপার অ্যাভিনিউ, সেলেম, ৯৭৩০১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-007",
+  "site": "ministore",
+  "intent": "'১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১' শিপিং ঠিকানা ব্যবহার করে 'কালো' রঙের AmazonBasics ব্র্যান্ডের ওজন স্কেল একটির জন্য অর্ডার দিন এবং চেকআউট সম্পূর্ণ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১%",
+    "items": {
+     "2026": 1
+    },
+    "total": 1198.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2026",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-008",
+  "site": "ministore",
+  "intent": "একটি মাত্র অর্ডারে 'কমলা' রঙের AmazonBasics ব্র্যান্ডের স্পিকার কভার ১টি কিনুন, '২৬ পপলার লেন, ফ্রেসনো, ৯৩৬৫০' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%২৬ পপলার লেন, ফ্রেসনো, ৯৩৬৫০%",
+    "items": {
+     "7": 1
+    },
+    "total": 1798.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/7",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=২৬ পপলার লেন, ফ্রেসনো, ৯৩৬৫০",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-009",
+  "site": "ministore",
+  "intent": "খেলাধুলা বিভাগের সবচেয়ে সস্তা পণ্যটি (বিভাগটি দাম অনুযায়ী সাজান) ১টি কিনে '৮৮ লরেল স্ট্রিট, টুসন, ৮৫৭০১' ঠিকানায় পাঠান। অর্ডারটি যেন সত্যিই প্লেস হয়, সেজন্য চেকআউট শেষ পর্যন্ত সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৮৮ লরেল স্ট্রিট, টুসন, ৮৫৭০১%",
+    "items": {
+     "726": 1
+    },
+    "total": 478.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A6%96%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%A7%E0%A7%81%E0%A6%B2%E0%A6%BE?sort=price_asc",
+   "goto /product/726",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৮৮ লরেল স্ট্রিট, টুসন, ৮৫৭০১",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-010",
+  "site": "ministore",
+  "intent": "আমার পোষা প্রাণী বিভাগের সবচেয়ে বেশি রিভিউ পাওয়া পণ্যটি একটি দরকার, ডেলিভারি হবে '১৩ সিকামোর রোড, অ্যাক্রন, ৪৪৩০১' ঠিকানায়। একটি অর্ডারে পুরো চেকআউট করে অর্ডারটি দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%১৩ সিকামোর রোড, অ্যাক্রন, ৪৪৩০১%",
+    "items": {
+     "1911": 1
+    },
+    "total": 418.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A6%AA%E0%A7%8B%E0%A6%B7%E0%A6%BE%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A3%E0%A7%80?sort=reviews",
+   "goto /product/1911",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=১৩ সিকামোর রোড, অ্যাক্রন, ৪৪৩০১",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-011",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳৮৯৮.৮০ দামের কার চার্জার কিনুন, পরিমাণ ২, ডেলিভারি ঠিকানা '৫৫ ম্যাগনোলিয়া কোর্ট, বোকা, ৩৩৪২৭'; অর্ডারটি যেন সত্যিই প্লেস হয় তা নিশ্চিত করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৫৫ ম্যাগনোলিয়া কোর্ট, বোকা, ৩৩৪২৭%",
+    "items": {
+     "2": 2
+    },
+    "total": 1797.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=৫৫ ম্যাগনোলিয়া কোর্ট, বোকা, ৩৩৪২৭",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-012",
+  "site": "ministore",
+  "intent": "একটি মাত্র অর্ডারে মুদি বিভাগের স্যামন ফিলে ৩টি কিনুন, '২ হিকরি ওয়ে, প্রোভো, ৮৪৬০১' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%২ হিকরি ওয়ে, প্রোভো, ৮৪৬০১%",
+    "items": {
+     "2277": 3
+    },
+    "total": 3596.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2277",
+   "fill 1 qty=3",
+   "goto /checkout",
+   "fill 1 address=২ হিকরি ওয়ে, প্রোভো, ৮৪৬০১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-013",
+  "site": "ministore",
+  "intent": "'ধূসর' রঙের AmazonBasics ব্র্যান্ডের ট্রাভেল ক্যারিয়ার ২টি এক অর্ডারে কিনুন, '৭১ অ্যালডার ড্রাইভ, চিকো, ৯৫৯২৬' ঠিকানায় শিপ করে। চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৭১ অ্যালডার ড্রাইভ, চিকো, ৯৫৯২৬%",
+    "items": {
+     "1792": 2
+    },
+    "total": 5517.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1792",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=৭১ অ্যালডার ড্রাইভ, চিকো, ৯৫৯২৬",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-014",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳৬৫৮.৮০ দামের হেভি-ওয়েট প্লাস্টিক চামচ এবং AmazonFresh ব্র্যান্ডের ৳১০৭৮.৮০ দামের বিন কফি (প্রতিটি ১টি) কার্টে রাখুন এবং একটি অর্ডার হিসেবে '৩৪ রেডউড অ্যাভিনিউ, ডেভিস, ৯৫৬১৬' ঠিকানায় চেকআউট করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৩৪ রেডউড অ্যাভিনিউ, ডেভিস, ৯৫৬১৬%",
+    "items": {
+     "302": 1,
+     "2273": 1
+    },
+    "total": 1737.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/302",
+   "fill 1 qty=1",
+   "goto /product/2273",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৩৪ রেডউড অ্যাভিনিউ, ডেভিস, ৯৫৬১৬",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-015",
+  "site": "ministore",
+  "intent": "আমার খেলাধুলা বিভাগের রাবার পাজল ম্যাট এবং পোষা প্রাণী বিভাগের পেট ট্রেনিং প্যাড প্রতিটি ১টি করে '৯৬ সাইপ্রেস স্ট্রিট, টেম্পি, ৮৫২৮১' ঠিকানায় একটি শিপমেন্টে দরকার; সেই অর্ডারটি দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৯৬ সাইপ্রেস স্ট্রিট, টেম্পি, ৮৫২৮১%",
+    "items": {
+     "607": 1,
+     "1795": 1
+    },
+    "total": 4437.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/607",
+   "fill 1 qty=1",
+   "goto /product/1795",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৯৬ সাইপ্রেস স্ট্রিট, টেম্পি, ৮৫২৮১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-016",
+  "site": "ministore",
+  "intent": "একটি মাত্র অর্ডারে 'সাদা' রঙের Rivet ব্র্যান্ডের প্লাগ-ইন ল্যাম্প ১টি এবং AmazonBasics ব্র্যান্ডের ৳১০৭৯৮.৮০ দামের কমার্শিয়াল প্যাটিও হিটার ১টি কিনুন, '১৩ ডিটুর ড্রাইভ, মোবিল, ৩৬৬০২' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%১৩ ডিটুর ড্রাইভ, মোবিল, ৩৬৬০২%",
+    "items": {
+     "871": 1,
+     "1253": 1
+    },
+    "total": 14757.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/871",
+   "fill 1 qty=1",
+   "goto /product/1253",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=১৩ ডিটুর ড্রাইভ, মোবিল, ৩৬৬০২",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-017",
+  "site": "ministore",
+  "intent": "সাবটোটাল অন্তত ৳১২০০০.০০ হওয়ার জন্য AmazonBasics Licensing ব্র্যান্ডের ৳২১৫৮.৮০ দামের ইনক্লাইন্ড সর্টার-এর যতটি ইউনিট দরকার, ঠিক ততটি (সবচেয়ে কম সংখ্যক) অর্ডার করুন, '৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড%",
+    "items": {
+     "2039": 6
+    },
+    "total": 12952.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2039",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-018",
+  "site": "ministore",
+  "intent": "সাবটোটাল অন্তত ৳১২০০০.০০ হওয়ার জন্য রান্নাঘর বিভাগের বাঁশের মেজালুনা বোর্ড-এর যতটি ইউনিট দরকার, ঠিক ততটি (সবচেয়ে কম সংখ্যক) অর্ডার করুন, '৫ হারবার লেন, অস্টিন, ৭৮৭০১' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৫ হারবার লেন, অস্টিন, ৭৮৭০১%",
+    "items": {
+     "335": 6
+    },
+    "total": 12952.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/335",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=৫ হারবার লেন, অস্টিন, ৭৮৭০১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-019",
+  "site": "ministore",
+  "intent": "অফার পাতা থেকে সক্রিয় কুপন কোডটি খুঁজে বের করুন, তারপর সেই কুপন প্রয়োগ করে AmazonBasics ব্র্যান্ডের ৳৫১৫৮.৮০ দামের অ্যালকালাইন ব্যাটারি ১টি '২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪' ঠিকানায় অর্ডার করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪%",
+    "items": {
+     "6": 1
+    },
+    "total": 4642.92
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/6",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-020",
+  "site": "ministore",
+  "intent": "অফার পাতা থেকে সক্রিয় কুপন কোডটি খুঁজে বের করুন, তারপর সেই কুপন প্রয়োগ করে ঘর-গৃহস্থালি বিভাগের ফেদার প্রিন্ট ১টি '৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫' ঠিকানায় অর্ডার করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫%",
+    "items": {
+     "855": 1
+    },
+    "total": 2698.92
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/855",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-021",
+  "site": "ministore",
+  "intent": "অফার পাতা থেকে সক্রিয় কুপন কোডটি খুঁজে বের করুন, তারপর সেই কুপন প্রয়োগ করে 'বহুরঙা' রঙের AmazonBasics ব্র্যান্ডের রেজিস্ট্যান্স ব্যান্ড কম্বো ১টি '৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩' ঠিকানায় অর্ডার করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩%",
+    "items": {
+     "634": 1
+    },
+    "total": 2482.92
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/634",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-022",
+  "site": "ministore",
+  "intent": "রান্নাঘর বিভাগের সোয়ার্ল ফ্লুট গ্লাস এবং রান্নাঘর বিভাগের রুটি তাওয়া তুলনা করুন, এবং যেটি সস্তা শুধু সেটিই ১টি অর্ডার করুন, '৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১%",
+    "items": {
+     "305": 1
+    },
+    "total": 1078.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 307
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/305",
+   "goto /product/307",
+   "goto /product/305",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-023",
+  "site": "ministore",
+  "intent": "আপনার অ্যাকাউন্ট সেটিংসে সংরক্ষিত ডিফল্ট ঠিকানায় Astonica ব্র্যান্ডের ৳৫৯৯৮.৮০ দামের লাইট পোস্ট ১টি অর্ডার করুন (চেকআউটে প্রস্তাবিত ঠিকানাটিই রাখুন)। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%12 ওশান অ্যাভিনিউ, ট্যাম্পা, 33601%",
+    "items": {
+     "1264": 1
+    },
+    "total": 5998.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1264",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-024",
+  "site": "ministore",
+  "intent": "আপনার অ্যাকাউন্ট সেটিংসে ডিফল্ট শিপিং ঠিকানা বদলে '৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড' করুন। তারপর সেই (নতুন ডিফল্ট) ঠিকানায় AmazonBasics ব্র্যান্ডের ৳২২৭৮.৮০ দামের কাচের ড্রাই-ইরেজ বোর্ড ক্লাসিক ১টি অর্ডার করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড%",
+    "items": {
+     "1554": 1
+    },
+    "total": 2278.8
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=৪৮ আপডেট বুলেভার্ড, স্প্রিংফিল্ড",
+   "goto /product/1554",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-025",
+  "site": "ministore",
+  "intent": "একটি মাত্র অর্ডারে খেলনা বিভাগের 12\" Trouncer টি-রেক্স ক্লাসিক ১টি এবং AmazonBasics ব্র্যান্ডের ৳৬৫৮.৮০ দামের ক্যানারি লিগ্যাল প্যাড ক্লাসিক ২টি কিনুন, '১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১' ঠিকানায় পাঠাতে। পুরো চেকআউট সম্পন্ন করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১%",
+    "items": {
+     "1647": 1,
+     "1559": 2
+    },
+    "total": 3236.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1647",
+   "fill 1 qty=1",
+   "goto /product/1559",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-026",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳৬৫৮.৮০ দামের অ্যালকালাইন ব্যাটারি আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/4",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-027",
+  "site": "ministore",
+  "intent": "রান্নাঘর বিভাগের ভ্যাকুয়াম ক্লিনার আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 309
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/309",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-028",
+  "site": "ministore",
+  "intent": "'নীল' রঙের AmazonBasics ব্র্যান্ডের শিশুদের চেয়ার আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 872
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/872",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-029",
+  "site": "ministore",
+  "intent": "খেলাধুলা বিভাগের জায়ান্ট 4-ইন-এ-রো সেট এবং AmazonFresh ব্র্যান্ডের ৳১৯১৮.৮০ দামের কফি 32oz বান্ডেল আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 610
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/610",
+   "fill 2",
+   "goto /product/2278",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-030",
+  "site": "ministore",
+  "intent": "'হলুদ' রঙের Amazon Brand - Jam and Honey ব্র্যান্ডের 12\" Wild Onez বাঘ ক্লাসিক এবং বই-কাগজ বিভাগের ম্যাগনেটিক হোয়াইটবোর্ড ক্লাসিক আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1649
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1563
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1649",
+   "fill 2",
+   "goto /product/1563",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-031",
+  "site": "ministore",
+  "intent": "ইলেকট্রনিক্স বিভাগের চার্জিং কেবল আপনার উইশলিস্ট থেকে সরান। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/11",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-032",
+  "site": "ministore",
+  "intent": "Unbranded ব্র্যান্ডের ৳১৫৪৮০.০০ দামের মাইক্রোওয়েভ আপনার উইশলিস্ট থেকে সরান। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/321",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-033",
+  "site": "ministore",
+  "intent": "অফিস বিভাগটি দাম অনুযায়ী সাজান এবং সবচেয়ে সস্তা অফিস পণ্যটি আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2060
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2059
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2072
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2112
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A6%85%E0%A6%AB%E0%A6%BF%E0%A6%B8?sort=price_asc",
+   "goto /product/2060",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-034",
+  "site": "ministore",
+  "intent": "বাগান বিভাগে সবচেয়ে বেশি রিভিউ পাওয়া পণ্যটি খুঁজুন (সবচেয়ে বেশি রিভিউ অনুযায়ী সাজান) এবং সেটি আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1286
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%BE%E0%A6%A8?sort=reviews",
+   "goto /product/1286",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-035",
+  "site": "ministore",
+  "intent": "অর্ডার #4-এর ডেলিভারি ঠিকানা বদলে '১৩ ডিটুর ড্রাইভ, মোবিল, ৩৬৬০২' করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "address",
+    "value": "১৩ ডিটুর ড্রাইভ, মোবিল, ৩৬৬০২"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/address",
+   "fill 1 address=১৩ ডিটুর ড্রাইভ, মোবিল, ৩৬৬০২"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-036",
+  "site": "ministore",
+  "intent": "অর্ডার #4 বাতিল করুন (জিজ্ঞেস করা হলে নিশ্চিত করুন)। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-037",
+  "site": "ministore",
+  "intent": "অর্ডার #3-এর ডেলিভারি ঠিকানা বদলে '২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪' করুন, তারপর সেই অর্ডারটি বাতিল করুন (জিজ্ঞেস করা হলে নিশ্চিত করুন)। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "address",
+    "value": "২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/3/address",
+   "fill 1 address=২২ বার্চ ওয়ে, ডেনভার, ৮০০১৪",
+   "goto /order/3/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-038",
+  "site": "ministore",
+  "intent": "অর্ডার #4 বাতিল করুন, তারপর যোগাযোগ ফর্ম ব্যবহার করে অর্ডার 4 উল্লেখ করে 'অর্ডার 4 আর দরকার নেই, অনুগ্রহ করে বাতিল নিশ্চিত করুন।' বার্তাটি পাঠান। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "4",
+     "body": "%অর্ডার 4 আর দরকার নেই, অনুগ্রহ করে বাতিল নিশ্চিত করুন।%"
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1",
+   "goto /contact",
+   "fill 1 order_ref=4; message=অর্ডার 4 আর দরকার নেই, অনুগ্রহ করে বাতিল নিশ্চিত করুন।"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-039",
+  "site": "ministore",
+  "intent": "সেটিংসে আপনার ডিফল্ট শিপিং ঠিকানা বদলে '৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫' করুন, এবং খেলাধুলা বিভাগের Hopper পোর্টেবল কুলার আপনার উইশলিস্টে যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 613
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=৯ সিডার কোর্ট, পোর্টল্যান্ড, ৯৭২০৫",
+   "goto /product/613",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-040",
+  "site": "ministore",
+  "intent": "'কালো' রঙের Amazon Brand - Solimo ব্র্যান্ডের গ্রিল প্যান ১টি '৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩' ঠিকানায় অর্ডার করুন, তারপর এইমাত্র দেওয়া অর্ডারটি বাতিল করুন (জিজ্ঞেস করা হলে নিশ্চিত করুন)। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩%",
+    "items": {
+     "310": 1
+    },
+    "total": 1438.8
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 5
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/310",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩",
+   "fill 2",
+   "goto /order/5/cancel",
+   "fill 1"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-041",
+  "site": "ministore",
+  "intent": "Amazon Brand - Solimo ব্র্যান্ডের ৳১১৯৮.৮০ দামের দেয়াল স্টিকার আপনার উইশলিস্টে যোগ করুন এবং এটির ওপর 'মজবুত ফ্রেম, সহজে জোড়া লাগে, রং ছবির সাথে মিলে যায়।' লিখে একটি ৪-স্টার রিভিউ পোস্ট করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 854
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 854,
+     "user_id": 1,
+     "stars": 4,
+     "body": "%মজবুত ফ্রেম, সহজে জোড়া লাগে, রং ছবির সাথে মিলে যায়।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/854",
+   "fill 2",
+   "goto /product/854",
+   "fill 4 stars=4; body=মজবুত ফ্রেম, সহজে জোড়া লাগে, রং ছবির সাথে মিলে যায়।"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-042",
+  "site": "ministore",
+  "intent": "'Zenithware' ব্র্যান্ডটি কতটি পণ্য বিক্রি করে? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "এমন কোনো ব্র্যান্ড নেই",
+     "ব্র্যান্ড নেই",
+     "পাওয়া যায়নি",
+     "কোনো পণ্য নেই",
+     "০",
+     "0",
+     "শূন্য"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Zenithware",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-043",
+  "site": "ministore",
+  "intent": "'সেলফ-ওয়াটারিং টাইটানিয়াম বুকশেল্ফ'-এর দাম কত? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "পাওয়া যায়নি",
+     "এমন কোনো পণ্য নেই",
+     "খুঁজে পাওয়া যায়নি",
+     "তালিকায় নেই",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%AB-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%82%20%E0%A6%9F%E0%A6%BE%E0%A6%87%E0%A6%9F%E0%A6%BE%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AE%20%E0%A6%AC%E0%A7%81%E0%A6%95%E0%A6%B6%E0%A7%87%E0%A6%B2%E0%A7%8D%E0%A6%AB",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-044",
+  "site": "ministore",
+  "intent": "চেকআউটে SAVE25 কুপন কোডটি কত শতাংশ ছাড় দেয়? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "অজানা",
+     "অবৈধ",
+     "এমন কোনো কুপন নেই",
+     "কুপন নেই",
+     "পাওয়া যায়নি"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-045",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳৭৭৮.৮০ দামের লিথিয়াম CR123a 3V ব্যাটারি ১টি অর্ডার করুন। অর্ডার করা সম্ভব না হলে N/A উত্তর দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "স্টকে নেই",
+     "অর্ডার করা যাবে না",
+     "পাওয়া যাচ্ছে না",
+     "অর্ডার করা সম্ভব নয়"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/17",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-046",
+  "site": "ministore",
+  "intent": "'ghost_gary' ব্যবহারকারী তাঁর রিভিউতে AmazonBasics ব্র্যান্ডের ৳৩৫৯৮.৮০ দামের স্ক্রিন ফিল্টার-কে কত স্টার রেটিং দিয়েছেন? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো রিভিউ নেই",
+     "রিভিউ দেননি",
+     "এমন কোনো ব্যবহারকারী নেই",
+     "রেটিং দেননি",
+     "রিভিউ করেননি"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-047",
+  "site": "ministore",
+  "intent": "মুদি বিভাগে ৳৬০.০০-এর কম দামের যেকোনো একটি পণ্য খুঁজে তার নাম জানান। সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো পণ্য নেই",
+     "একটিও নেই",
+     "পাওয়া যায়নি",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /category/%E0%A6%AE%E0%A7%81%E0%A6%A6%E0%A6%BF?sort=price_asc",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-048",
+  "site": "ministore",
+  "intent": "অর্ডার #9-এর বর্তমান অবস্থা কী? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "এমন কোনো অর্ডার নেই",
+     "অর্ডার নেই",
+     "পাওয়া যায়নি",
+     "অর্ডার খুঁজে পাওয়া যায়নি"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /orders",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-049",
+  "site": "ministore",
+  "intent": "অর্ডার #2-এ আপনি খেলনা বিভাগের মিনি টিন ক্লাসিক কতটি কিনেছিলেন? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ছিল না",
+     "কেনা হয়নি",
+     "০",
+     "0",
+     "শূন্য",
+     "অন্তর্ভুক্ত নয়",
+     "অর্ডারে নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/2",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-050",
+  "site": "ministore",
+  "intent": "চেকআউটে FREESHIP কুপন কোডটি বর্তমানে কত শতাংশ ছাড় দেয়? কুপনটির মেয়াদ শেষ হয়ে থাকলে বা আর ছাড় না দিলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "মেয়াদ শেষ",
+     "মেয়াদোত্তীর্ণ",
+     "আর ছাড় দেয় না",
+     "সক্রিয় নয়",
+     "0%",
+     "০%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-051",
+  "site": "ministore",
+  "intent": "'বিড়ালের স্ক্র্যাচার লাউঞ্জার Ultra'-এর কতটি ইউনিট স্টকে আছে? সাইট থেকে এটি নির্ধারণ করা না গেলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "পাওয়া যায়নি",
+     "এমন কোনো পণ্য নেই",
+     "খুঁজে পাওয়া যায়নি",
+     "তালিকায় নেই",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AC%E0%A6%BF%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9A%E0%A6%BE%E0%A6%B0%20%E0%A6%B2%E0%A6%BE%E0%A6%89%E0%A6%9E%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%B0",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-052",
+  "site": "ministore",
+  "intent": "ইলেকট্রনিক্স বিভাগের ওয়্যারলেস কম্পিউটার মাউস-এর পণ্য পাতায় একটি প্রশ্ন ও উত্তর অংশ আছে। সেখানে বিক্রেতার উত্তর অনুযায়ী এটির সাথে কত মাসের ওয়ারেন্টি আসে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%B2%E0%A7%87%E0%A6%B8%20%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%AE%E0%A6%BE%E0%A6%89%E0%A6%B8%2C%20%E0%A6%87%E0%A6%89%E0%A6%8F%E0%A6%B8%E0%A6%AC%E0%A6%BF%20%E0%A6%A8%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8B%20%E0%A6%B0%E0%A6%BF%E0%A6%B8%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A6%B9",
+   "goto /product/52",
+   "stop 3 months"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-053",
+  "site": "ministore",
+  "intent": "'কালো' রঙের AmazonBasics ব্র্যান্ডের এক্সটেনশন কর্ড-এর পণ্য পাতার প্রশ্ন ও উত্তর অংশ অনুযায়ী সাধারণ ডেলিভারিতে কত কর্মদিবস লাগে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%9F%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%A8%20%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A1-%205%20M%20UK%2C%20%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%8B",
+   "goto /product/31",
+   "stop 4 business days"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-054",
+  "site": "ministore",
+  "intent": "Unbranded ব্র্যান্ডের ৳৩৯৫৮.৮০ দামের Technoline BC 700 সেট-এর প্রশ্ন ও উত্তর অংশে কতটি প্রশ্ন তালিকাভুক্ত আছে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Technoline%20BC%20700%20%E0%A6%B8%E0%A7%87%E0%A6%9F%2C%20%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%8B",
+   "goto /product/38",
+   "stop 4"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-055",
+  "site": "ministore",
+  "intent": "বাগান বিভাগের গ্যাস গ্রিল কভার-এর পণ্য পাতায় প্রশ্ন ও উত্তর ফর্ম ব্যবহার করে 'রংটা কি ছবির সাথে হুবহু মেলে?' প্রশ্নটি করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 1265,
+     "user_id": 1,
+     "question": "রংটা কি ছবির সাথে হুবহু মেলে?",
+     "answer": ""
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1265",
+   "fill 3 question=রংটা কি ছবির সাথে হুবহু মেলে?"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-056",
+  "site": "ministore",
+  "intent": "'কালো' রঙের AmazonBasics ব্র্যান্ডের পেন ইংক-এর পণ্য পাতায় 'বদলি যন্ত্রাংশ কি অর্ডার করা যায়?' প্রশ্নটি করুন, এবং পণ্যটি আপনার উইশলিস্টেও যোগ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 2027,
+     "user_id": 1,
+     "question": "বদলি যন্ত্রাংশ কি অর্ডার করা যায়?"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2027
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2027",
+   "fill 3 question=বদলি যন্ত্রাংশ কি অর্ডার করা যায়?",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-057",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳২৬৩৮.৮০ দামের ওয়্যারলেস শাওয়ার স্পিকার-এর পণ্য পাতায় কোন রিভিউয়ারের রিভিউ সবচেয়ে বেশি 'সহায়ক' ভোট পেয়েছে? ইউজারনেম লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "minimal_mia"
+    ],
+    "none_of": [
+     "bargain_ben",
+     "bookish_bea",
+     "kitchen_kat",
+     "outdoor_ollie"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%B2%E0%A7%87%E0%A6%B8%20%E0%A6%B6%E0%A6%BE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%95%E0%A6%BE%E0%A6%B0%2C%205W%20%E0%A6%A1%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%87%E0%A6%AD%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A6%B9",
+   "goto /product/14",
+   "stop minimal_mia"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-058",
+  "site": "ministore",
+  "intent": "ইলেকট্রনিক্স বিভাগের কনভার্টার কেবল-এর পণ্য পাতায় 'gymrat_gus'-এর লেখা রিভিউটি কতজনের কাছে সহায়ক মনে হয়েছে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26",
+     "২৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amazon%20Basic%20HDMI%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20DVI%20%E0%A6%95%E0%A6%A8%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%95%E0%A7%87%E0%A6%AC%E0%A6%B2%2C%20%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%8B",
+   "goto /product/5",
+   "stop 26"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-059",
+  "site": "ministore",
+  "intent": "'কালো' রঙের AmazonBasics ব্র্যান্ডের পোর্টেবল ব্লুটুথ স্পিকার-এর পণ্য পাতায় 'kitchen_kat'-এর লেখা রিভিউটির 'সহায়ক' বোতামটি চাপুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 91,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "reviews",
+    "match": {
+     "id": 91
+    },
+    "field": "helpful",
+    "value": 1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/20",
+   "fill 5"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-060",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳১৫৫৮.৮০ দামের অন-ইয়ার হেডফোন-এর পণ্য পাতায় সবচেয়ে বেশি 'সহায়ক' ভোট পাওয়া রিভিউটি খুঁজে তার 'সহায়ক' বোতামটি চাপুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 103,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/23",
+   "fill 6"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-061",
+  "site": "ministore",
+  "intent": "দোকানটি তার ব্র্যান্ড পাতায় কতটি ব্র্যান্ড তালিকাভুক্ত করেছে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "99",
+     "৯৯"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop 99"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-062",
+  "site": "ministore",
+  "intent": "ব্র্যান্ড পাতা অনুযায়ী কোন ব্র্যান্ডের পণ্য বেশি: 'Pinzon by Amazon' নাকি 'AmazonCommercial'? ব্র্যান্ডের নাম লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonCommercial"
+    ],
+    "none_of": [
+     "Pinzon by Amazon"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop AmazonCommercial"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-063",
+  "site": "ministore",
+  "intent": "ব্র্যান্ড পাতা অনুযায়ী 'UMI' ও 'Whole Paws'-এর মধ্যে কোনটির গড় রিভিউ রেটিং বেশি? ব্র্যান্ডের নাম লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Whole Paws"
+    ],
+    "none_of": [
+     "UMI"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop Whole Paws"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-064",
+  "site": "ministore",
+  "intent": "ইলেকট্রনিক্স বিভাগের AMAZONBASICS ব্র্যান্ডের চার্জিং কেবল-এর দাম কত? পরিমাণটি লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "958.80",
+     "৯৫৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=PlayStation%204%20%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%B0%20%E0%A6%9A%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BF%E0%A6%82%20%E0%A6%95%E0%A7%87%E0%A6%AC%E0%A6%B2",
+   "stop 958.80"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-065",
+  "site": "ministore",
+  "intent": "ঘর-গৃহস্থালি বিভাগের ৳৪৭৯৮.৮০ দামের কুইল্ট কম্বল কোন ব্র্যান্ডের পণ্য?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Arendale%20%E0%A6%AE%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%AC%E0%A6%BE%E0%A6%B0%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%A1%20%E0%A6%95%E0%A7%81%E0%A6%87%E0%A6%B2%E0%A7%8D%E0%A6%9F%20%E0%A6%95%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A6%B2",
+   "goto /product/858",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-066",
+  "site": "ministore",
+  "intent": "খেলাধুলা বিভাগের ভিনাইল 2 পাউন্ড ডাম্বেল-এর কতটি ইউনিট বর্তমানে স্টকে আছে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12",
+     "১২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AD%E0%A6%BF%E0%A6%A8%E0%A6%BE%E0%A6%87%E0%A6%B2%202%20%E0%A6%AA%E0%A6%BE%E0%A6%89%E0%A6%A8%E0%A7%8D%E0%A6%A1%20%E0%A6%A1%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A7%87%E0%A6%B2",
+   "goto /product/617",
+   "stop 12"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-067",
+  "site": "ministore",
+  "intent": "কোনটি সস্তা, রান্নাঘর বিভাগের AmazonCommercial ব্র্যান্ডের কুকওয়্যার সেট নাকি রান্নাঘর বিভাগের AmazonCommercial ব্র্যান্ডের ভিনাইল গ্লাভস? পণ্যের সঠিক নামটি লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "হেভি ডিউটি পাউডার ফ্রি ডিসপোজেবল ভিনাইল গ্লাভস"
+    ],
+    "none_of": [
+     "7-পিস স্টেইনলেস স্টিল ইন্ডাকশন রেডি কুকওয়্যার সেট",
+     "৭-পিস স্টেইনলেস স্টিল ইন্ডাকশন রেডি কুকওয়্যার সেট"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=7-%E0%A6%AA%E0%A6%BF%E0%A6%B8%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%87%E0%A6%A8%E0%A6%B2%E0%A7%87%E0%A6%B8%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%B2%20%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A6%B6%E0%A6%A8%20%E0%A6%B0%E0%A7%87%E0%A6%A1%E0%A6%BF%20%E0%A6%95%E0%A7%81%E0%A6%95%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%87%E0%A6%9F",
+   "goto /?q=%E0%A6%B9%E0%A7%87%E0%A6%AD%E0%A6%BF%20%E0%A6%A1%E0%A6%BF%E0%A6%89%E0%A6%9F%E0%A6%BF%20%E0%A6%AA%E0%A6%BE%E0%A6%89%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%AB%E0%A7%8D%E0%A6%B0%E0%A6%BF%20%E0%A6%A1%E0%A6%BF%E0%A6%B8%E0%A6%AA%E0%A7%8B%E0%A6%9C%E0%A7%87%E0%A6%AC%E0%A6%B2%20%E0%A6%AD%E0%A6%BF%E0%A6%A8%E0%A6%BE%E0%A6%87%E0%A6%B2%20%E0%A6%97%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%AD%E0%A6%B8",
+   "stop হেভি ডিউটি পাউডার ফ্রি ডিসপোজেবল ভিনাইল গ্লাভস"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-068",
+  "site": "ministore",
+  "intent": "এগুলোর মধ্যে কোনটি সবচেয়ে দামি: ইলেকট্রনিক্স বিভাগের AmazonBasics ব্র্যান্ডের ইথারনেট অ্যাডাপ্টার, ইলেকট্রনিক্স বিভাগের AmazonBasics ব্র্যান্ডের স্ক্রু বাল্ব, ইলেকট্রনিক্স বিভাগের Unbranded ব্র্যান্ডের অডিও স্প্লিটার? পণ্যের সঠিক নামটি লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "USB 3.0 থেকে 10/100/1000 গিগাবিট ইথারনেট অ্যাডাপ্টার",
+     "USB ৩.০ থেকে ১০/১০০/১০০০ গিগাবিট ইথারনেট অ্যাডাপ্টার"
+    ],
+    "none_of": [
+     "এলইডি E27 এডিসন স্ক্রু বাল্ব",
+     "এলইডি E২৭ এডিসন স্ক্রু বাল্ব",
+     "5-ওয়ে অক্স অডিও স্প্লিটার, হেডফোনের জন্য, কালো",
+     "৫-ওয়ে অক্স অডিও স্প্লিটার, হেডফোনের জন্য, কালো"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=USB%203.0%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%2010/100/1000%20%E0%A6%97%E0%A6%BF%E0%A6%97%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%9F%20%E0%A6%87%E0%A6%A5%E0%A6%BE%E0%A6%B0%E0%A6%A8%E0%A7%87%E0%A6%9F%20%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A6%BE%E0%A6%AA%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0",
+   "goto /?q=%E0%A6%8F%E0%A6%B2%E0%A6%87%E0%A6%A1%E0%A6%BF%20E27%20%E0%A6%8F%E0%A6%A1%E0%A6%BF%E0%A6%B8%E0%A6%A8%20%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%81%20%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%AC",
+   "goto /?q=5-%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%85%E0%A6%95%E0%A7%8D%E0%A6%B8%20%E0%A6%85%E0%A6%A1%E0%A6%BF%E0%A6%93%20%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%B9%E0%A7%87%E0%A6%A1%E0%A6%AB%E0%A7%8B%E0%A6%A8%E0%A7%87%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF%2C%20%E0%A6%95%E0%A6%BE%E0%A6%B2%E0%A7%8B",
+   "stop USB 3.0 থেকে 10/100/1000 গিগাবিট ইথারনেট অ্যাডাপ্টার"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-069",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳৩৫৯৮.৮০ দামের স্ক্রিন ফিল্টার-এর কতটি রিভিউ আছে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25",
+     "২৫"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%B8%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%AE%20%E0%A6%AE%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%97%E0%A6%A8%E0%A7%87%E0%A6%9F%E0%A6%BF%E0%A6%95%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%87%E0%A6%AD%E0%A7%87%E0%A6%B8%E0%A6%BF%20%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A8%20%E0%A6%AB%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%2C%2013%20%E0%A6%87%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A6%BF%20MacBook%20Air%202018-%E0%A6%8F%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF",
+   "goto /product/53",
+   "stop 25"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-070",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳২৬৯৮.৮০ দামের বোল সেট-এর কতটি ১-স্টার রিভিউ আছে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=10-%E0%A6%AA%E0%A6%BF%E0%A6%B8%20%E0%A6%AE%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%BF%E0%A6%82%20%E0%A6%AC%E0%A7%8B%E0%A6%B2%20%E0%A6%B8%E0%A7%87%E0%A6%9F%2C%20%E0%A6%A2%E0%A6%BE%E0%A6%95%E0%A6%A8%E0%A6%BE%20%E0%A6%B8%E0%A6%B9",
+   "goto /product/489",
+   "stop 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-071",
+  "site": "ministore",
+  "intent": "AmazonBasics ব্র্যান্ডের ৳৩৫৯৮.৮০ দামের স্ক্রিন ফিল্টার-এর জন্য দেখানো গড় স্টার রেটিং কত?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3.4",
+     "৩.৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop 3.4"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-072",
+  "site": "ministore",
+  "intent": "কোনটির গড় স্টার রেটিং বেশি: রান্নাঘর বিভাগের ট্র্যাডিশনাল হাইবল গ্লাস নাকি AmazonBasics ব্র্যান্ডের ৳২৬৯৮.৮০ দামের বোল সেট? পণ্যের সঠিক নামটি লিখে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10-পিস মিক্সিং বোল সেট, ঢাকনা সহ",
+     "১০-পিস মিক্সিং বোল সেট, ঢাকনা সহ"
+    ],
+    "none_of": [
+     "ট্র্যাডিশনাল হাইবল গ্লাস"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/421",
+   "goto /product/489",
+   "stop 10-পিস মিক্সিং বোল সেট, ঢাকনা সহ"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-073",
+  "site": "ministore",
+  "intent": "অফার পাতায় তালিকাভুক্ত বর্তমানে সক্রিয় কুপন কোডটি কী?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SAVE10"
+    ],
+    "none_of": [
+     "WELCOME5",
+     "FREESHIP"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop SAVE10"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-074",
+  "site": "ministore",
+  "intent": "মুদি বিভাগের এসপ্রেসো পড-এর ওপর 'তাজা অবস্থায় এসেছে আর প্যাকেজিংও ভালো ছিল।' লিখে একটি ৫-স্টার রিভিউ লিখুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 2287,
+     "user_id": 1,
+     "stars": 5,
+     "body": "%তাজা অবস্থায় এসেছে আর প্যাকেজিংও ভালো ছিল।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=50%20Ct.%20Solimo%20%E0%A6%8F%E0%A6%B8%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%B8%E0%A7%8B%20%E0%A6%AA%E0%A6%A1",
+   "goto /product/2287",
+   "fill 4 stars=5; body=তাজা অবস্থায় এসেছে আর প্যাকেজিংও ভালো ছিল।"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-075",
+  "site": "ministore",
+  "intent": "যোগাযোগ ফর্ম ব্যবহার করে অর্ডার 2 উল্লেখ করে 'অর্ডার 2 একটি পণ্য ছাড়া এসেছে, অনুগ্রহ করে পরামর্শ দিন।' বার্তাটি পাঠান। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "2",
+     "body": "%অর্ডার 2 একটি পণ্য ছাড়া এসেছে, অনুগ্রহ করে পরামর্শ দিন।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /contact",
+   "fill 1 order_ref=2; message=অর্ডার 2 একটি পণ্য ছাড়া এসেছে, অনুগ্রহ করে পরামর্শ দিন।"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ }
+]

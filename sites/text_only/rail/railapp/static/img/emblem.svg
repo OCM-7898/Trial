@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
+  <!-- fictional national-rail style winged wheel emblem -->
+  <g fill="none" stroke="#1d3a76" stroke-width="2">
+    <!-- wings -->
+    <path d="M28 34 Q10 30 4 18 Q16 24 28 26 Z" fill="#1d3a76"/>
+    <path d="M52 34 Q70 30 76 18 Q64 24 52 26 Z" fill="#1d3a76"/>
+    <!-- wheel -->
+    <circle cx="40" cy="30" r="16"/>
+    <circle cx="40" cy="30" r="11"/>
+    <circle cx="40" cy="30" r="2.5" fill="#1d3a76"/>
+  </g>
+  <g stroke="#1d3a76" stroke-width="1.6">
+    <line x1="40" y1="19" x2="40" y2="41"/>
+    <line x1="29" y1="30" x2="51" y2="30"/>
+    <line x1="32.2" y1="22.2" x2="47.8" y2="37.8"/>
+    <line x1="47.8" y1="22.2" x2="32.2" y2="37.8"/>
+    <line x1="34" y1="20" x2="46" y2="40"/>
+    <line x1="46" y1="20" x2="34" y2="40"/>
+    <line x1="30" y1="24" x2="50" y2="36"/>
+    <line x1="50" y1="24" x2="30" y2="36"/>
+  </g>
+  <path d="M20 52 Q40 44 60 52" fill="none" stroke="#f47216" stroke-width="3" stroke-linecap="round"/>
+  <rect x="18" y="56" width="44" height="3" rx="1.5" fill="#1d3a76"/>
+</svg>

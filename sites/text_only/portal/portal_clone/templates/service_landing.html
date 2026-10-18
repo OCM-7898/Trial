@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ s.name }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <h1>{{ s.name }}</h1>
+  <p class="lede">{{ s.summary }}</p>
+  <p>{{ s.description }}</p>
+  <p><a class="btn" href="/services/{{ s.slug }}/panel/">{{ S.side_panel_cta }}</a></p>
+  <h2>{{ S.notices }}</h2>
+  <table class="register">
+    <thead><tr>{% for c in S.notice_table_cols %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for n in notices %}
+    <tr><td>{{ n.ref_no }}</td><td>{{ n.title }}</td><td>{{ n.category }}</td><td>{{ n.date }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

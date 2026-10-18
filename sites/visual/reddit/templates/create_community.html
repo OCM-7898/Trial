@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ S.create_community }}{% endblock %}
+{% block content %}
+<h1>{{ S.create_community }}</h1>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="card">
+<form class="stack" method="post" action="/create_community">
+  <label>{{ S.community_name }}</label>
+  <input type="text" name="name">
+  <label>{{ S.community_desc }}</label>
+  <textarea name="description"></textarea>
+  <button>{{ S.create }}</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{
+ "_note": "HAND-WRITTEN 2026-09-26 Amharic names for RailSetu: the 22 real Indian stations, the 13 fictional trains, the seeded passengers and the account holder, transliterated into Ge'ez fidel (user decision). Codes, PNRs, dates and class codes are never translated.",
+ "stations": {"NDLS": "ኒው ዴልሂ", "BCT": "ሙምባይ ሴንትራል", "HWH": "ሃውራ ጀንክሽን", "MAS": "ቼናይ ሴንትራል", "SBC": "ቤንጋሉሩ ሲቲ", "SC": "ሴኩንደራባድ ጀንክሽን", "PUNE": "ፑኔ ጀንክሽን", "JP": "ጃይፑር ጀንክሽን", "LKO": "ላክናው", "CNB": "ካንፑር ሴንትራል", "ADI": "አህመዳባድ ጀንክሽን", "BPL": "ቦፓል ጀንክሽን", "PNBE": "ፓትና ጀንክሽን", "GHY": "ጉዋሃቲ", "BSB": "ቫራናሲ ጀንክሽን", "NGP": "ናግፑር ጀንክሽን", "AGC": "አግራ ካንት", "AII": "አጅመር ጀንክሽን", "ABR": "አቡ ሮድ", "RTM": "ራትላም ጀንክሽን", "NJP": "ኒው ጃልፓይጉሪ", "VSKP": "ቪሻካፓትናም"},
+ "trains": {"12301": "ያሙና ኤክስፕረስ", "12302": "ሃውራ ሜይል", "12903": "ሳጋርማላ ኤክስፕረስ", "12904": "ሙምባይ ሳምፓርክ ኤክስፕረስ", "12615": "ዳክሺን ኤክስፕረስ", "12659": "አራቫሊ ኤክስፕረስ", "12417": "ጎምቲ ሳምፓርክ", "12622": "ብራህማፑትራ ሊንክ ኤክስፕረስ", "12138": "ናርማዳ ሜይል", "12723": "ዴካን ሳምፓርክ", "12841": "ኮሮማንዴል ሊንክ ኤክስፕረስ", "12559": "ካሺ ኤክስፕረስ", "12049": "ታጅ ሳምፓርክ"},
+ "passengers": {"Rohan Sharma": "ሮሃን ሻርማ", "Anita Desai": "አኒታ ደሳይ", "Vikram Rao": "ቪክራም ራኦ", "Meera Iyer": "ሚራ አየር", "Priya Sharma": "ፕሪያ ሻርማ", "Arjun Nair": "አርጁን ናይር", "Kavita Joshi": "ካቪታ ጆሺ", "Dev Patel": "ዴቭ ፓቴል"},
+ "user": "ፕሪያ ሻርማ"
+}

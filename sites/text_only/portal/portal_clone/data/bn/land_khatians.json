@@ -1,0 +1,310 @@
+[
+ {
+  "id": 1,
+  "khatian_type": "বি.এস.",
+  "owner_name": "দেলোয়ার হক",
+  "father_name": "মনির ইসলাম",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 2,
+  "khatian_type": "বি.এস.",
+  "owner_name": "দেলোয়ার হক",
+  "father_name": "মনির ইসলাম",
+  "land_type": "পতিত"
+ },
+ {
+  "id": 3,
+  "khatian_type": "আর.এস.",
+  "owner_name": "তোফাজ্জল দাস",
+  "father_name": "দেলোয়ার মাহমুদ",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 4,
+  "khatian_type": "আর.এস.",
+  "owner_name": "শাহনাজ ভূঁইয়া",
+  "father_name": "রফিকুল রহমান",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 5,
+  "khatian_type": "সি.এস.",
+  "owner_name": "মনির দাস",
+  "father_name": "গোলাম চৌধুরী",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 6,
+  "khatian_type": "এস.এ.",
+  "owner_name": "মনির দাস",
+  "father_name": "গোলাম চৌধুরী",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 7,
+  "khatian_type": "সি.এস.",
+  "owner_name": "আমিনুল চৌধুরী",
+  "father_name": "দেলোয়ার মণ্ডল",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 8,
+  "khatian_type": "সি.এস.",
+  "owner_name": "সাবিনা খান",
+  "father_name": "ফারুক মণ্ডল",
+  "land_type": "কৃষি"
+ },
+ {
+  "id": 9,
+  "khatian_type": "আর.এস.",
+  "owner_name": "গোলাম খান",
+  "father_name": "তানভীর গুপ্ত",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 10,
+  "khatian_type": "বি.এস.",
+  "owner_name": "গোলাম খান",
+  "father_name": "তানভীর গুপ্ত",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 11,
+  "khatian_type": "সি.এস.",
+  "owner_name": "ইয়াসমিন গুপ্ত",
+  "father_name": "কামরুল রহমান",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 12,
+  "khatian_type": "আর.এস.",
+  "owner_name": "রেহানা দাস",
+  "father_name": "শফিকুল মণ্ডল",
+  "land_type": "কৃষি"
+ },
+ {
+  "id": 13,
+  "khatian_type": "এস.এ.",
+  "owner_name": "রেহানা দাস",
+  "father_name": "শফিকুল মণ্ডল",
+  "land_type": "কৃষি"
+ },
+ {
+  "id": 14,
+  "khatian_type": "বি.এস.",
+  "owner_name": "সাবিনা সাহা",
+  "father_name": "মোস্তফা চৌধুরী",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 15,
+  "khatian_type": "আর.এস.",
+  "owner_name": "সাবিনা সাহা",
+  "father_name": "মোস্তফা চৌধুরী",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 16,
+  "khatian_type": "বি.এস.",
+  "owner_name": "মোস্তফা হোসেন",
+  "father_name": "আবদুল হোসেন",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 17,
+  "khatian_type": "এস.এ.",
+  "owner_name": "আশরাফুল বেগম",
+  "father_name": "দেলোয়ার মণ্ডল",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 18,
+  "khatian_type": "এস.এ.",
+  "owner_name": "আবদুল ভূঁইয়া",
+  "father_name": "জসিম আলম",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 19,
+  "khatian_type": "এস.এ.",
+  "owner_name": "জাহাঙ্গীর হক",
+  "father_name": "তোফাজ্জল খান",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 20,
+  "khatian_type": "আর.এস.",
+  "owner_name": "তোফাজ্জল করিম",
+  "father_name": "কামরুল বেগম",
+  "land_type": "পতিত"
+ },
+ {
+  "id": 21,
+  "khatian_type": "বি.এস.",
+  "owner_name": "তোফাজ্জল করিম",
+  "father_name": "কামরুল বেগম",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 22,
+  "khatian_type": "আর.এস.",
+  "owner_name": "খালেদ আক্তার",
+  "father_name": "হাবিবুর হক",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 23,
+  "khatian_type": "এস.এ.",
+  "owner_name": "জাহানারা বড়ুয়া",
+  "father_name": "মাহবুব দাস",
+  "land_type": "পতিত"
+ },
+ {
+  "id": 24,
+  "khatian_type": "বি.এস.",
+  "owner_name": "জাহানারা বড়ুয়া",
+  "father_name": "মাহবুব দাস",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 25,
+  "khatian_type": "আর.এস.",
+  "owner_name": "রোকেয়া করিম",
+  "father_name": "রেজাউল সিদ্দিক",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 26,
+  "khatian_type": "এস.এ.",
+  "owner_name": "কোহিনূর আলম",
+  "father_name": "খালেদ দাস",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 27,
+  "khatian_type": "সি.এস.",
+  "owner_name": "কোহিনূর আলম",
+  "father_name": "খালেদ দাস",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 28,
+  "khatian_type": "আর.এস.",
+  "owner_name": "ফারুক রায়",
+  "father_name": "তোফাজ্জল মোল্লা",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 29,
+  "khatian_type": "এস.এ.",
+  "owner_name": "লুৎফা মাহমুদ",
+  "father_name": "তানভীর রহমান",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 30,
+  "khatian_type": "এস.এ.",
+  "owner_name": "লুৎফা মাহমুদ",
+  "father_name": "তানভীর রহমান",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 31,
+  "khatian_type": "আর.এস.",
+  "owner_name": "শহীদুল হক",
+  "father_name": "আবদুল খান",
+  "land_type": "পতিত"
+ },
+ {
+  "id": 32,
+  "khatian_type": "আর.এস.",
+  "owner_name": "শহীদুল হক",
+  "father_name": "আবদুল খান",
+  "land_type": "পতিত"
+ },
+ {
+  "id": 33,
+  "khatian_type": "সি.এস.",
+  "owner_name": "রেজাউল হক",
+  "father_name": "নজরুল মাহমুদ",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 34,
+  "khatian_type": "এস.এ.",
+  "owner_name": "রেজাউল খান",
+  "father_name": "রফিকুল চৌধুরী",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 35,
+  "khatian_type": "এস.এ.",
+  "owner_name": "রেজাউল খান",
+  "father_name": "রফিকুল চৌধুরী",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 36,
+  "khatian_type": "বি.এস.",
+  "owner_name": "কোহিনূর গুপ্ত",
+  "father_name": "রেজাউল বড়ুয়া",
+  "land_type": "পতিত"
+ },
+ {
+  "id": 37,
+  "khatian_type": "এস.এ.",
+  "owner_name": "কোহিনূর গুপ্ত",
+  "father_name": "রেজাউল বড়ুয়া",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 38,
+  "khatian_type": "এস.এ.",
+  "owner_name": "আনোয়ার সিদ্দিক",
+  "father_name": "নুরুল চৌধুরী",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 39,
+  "khatian_type": "সি.এস.",
+  "owner_name": "রেহানা রহমান",
+  "father_name": "জাহিদ ভূঁইয়া",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 40,
+  "khatian_type": "আর.এস.",
+  "owner_name": "আবদুল আলম",
+  "father_name": "কামরুল বড়ুয়া",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 41,
+  "khatian_type": "সি.এস.",
+  "owner_name": "আবদুল আলম",
+  "father_name": "কামরুল বড়ুয়া",
+  "land_type": "বসতভিটা"
+ },
+ {
+  "id": 42,
+  "khatian_type": "আর.এস.",
+  "owner_name": "দিলরুবা আলম",
+  "father_name": "নজরুল মিয়া",
+  "land_type": "পুকুর"
+ },
+ {
+  "id": 43,
+  "khatian_type": "আর.এস.",
+  "owner_name": "দিলরুবা আলম",
+  "father_name": "নজরুল মিয়া",
+  "land_type": "বাগান"
+ },
+ {
+  "id": 44,
+  "khatian_type": "বি.এস.",
+  "owner_name": "জাহিদ রহমান",
+  "father_name": "মাহবুব রহমান",
+  "land_type": "বসতভিটা"
+ }
+]

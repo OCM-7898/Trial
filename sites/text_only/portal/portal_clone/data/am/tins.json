@@ -1,0 +1,182 @@
+[
+ {
+  "id": 1,
+  "registered_name": "ደልዋር ሀቅ",
+  "circle": "ክበብ 1",
+  "zone": "ዞን 5"
+ },
+ {
+  "id": 2,
+  "registered_name": "ቶፋዛል ዳስ",
+  "circle": "ክበብ 12",
+  "zone": "ዞን 5"
+ },
+ {
+  "id": 3,
+  "registered_name": "ሻህናዝ ብሁይያን",
+  "circle": "ክበብ 1",
+  "zone": "ዞን 8"
+ },
+ {
+  "id": 4,
+  "registered_name": "ሞኒር ዳስ",
+  "circle": "ክበብ 14",
+  "zone": "ዞን 9"
+ },
+ {
+  "id": 5,
+  "registered_name": "አሚኑል ቾውዱሪ",
+  "circle": "ክበብ 14",
+  "zone": "ዞን 1"
+ },
+ {
+  "id": 6,
+  "registered_name": "ሳቢና ኻን",
+  "circle": "ክበብ 1",
+  "zone": "ዞን 6"
+ },
+ {
+  "id": 7,
+  "registered_name": "ጎላም ኻን",
+  "circle": "ክበብ 11",
+  "zone": "ዞን 1"
+ },
+ {
+  "id": 8,
+  "registered_name": "ያስሚን ጉፕታ",
+  "circle": "ክበብ 1",
+  "zone": "ዞን 11"
+ },
+ {
+  "id": 9,
+  "registered_name": "ሬሃና ዳስ",
+  "circle": "ክበብ 15",
+  "zone": "ዞን 4"
+ },
+ {
+  "id": 10,
+  "registered_name": "ሳቢና ሳሃ",
+  "circle": "ክበብ 25",
+  "zone": "ዞን 3"
+ },
+ {
+  "id": 11,
+  "registered_name": "ሙስጠፋ ሆሴን",
+  "circle": "ክበብ 22",
+  "zone": "ዞን 1"
+ },
+ {
+  "id": 12,
+  "registered_name": "አሽራፉል ቤጉም",
+  "circle": "ክበብ 31",
+  "zone": "ዞን 11"
+ },
+ {
+  "id": 13,
+  "registered_name": "አብዱል ብሁይያን",
+  "circle": "ክበብ 5",
+  "zone": "ዞን 10"
+ },
+ {
+  "id": 14,
+  "registered_name": "ጃሃንጊር ሀቅ",
+  "circle": "ክበብ 26",
+  "zone": "ዞን 9"
+ },
+ {
+  "id": 15,
+  "registered_name": "ቶፋዛል ካሪም",
+  "circle": "ክበብ 17",
+  "zone": "ዞን 11"
+ },
+ {
+  "id": 16,
+  "registered_name": "ኻሌድ አክተር",
+  "circle": "ክበብ 40",
+  "zone": "ዞን 10"
+ },
+ {
+  "id": 17,
+  "registered_name": "ጃሃናራ ባሩዋ",
+  "circle": "ክበብ 37",
+  "zone": "ዞን 12"
+ },
+ {
+  "id": 18,
+  "registered_name": "ሮኬያ ካሪም",
+  "circle": "ክበብ 26",
+  "zone": "ዞን 12"
+ },
+ {
+  "id": 19,
+  "registered_name": "ኮሂኑር አላም",
+  "circle": "ክበብ 20",
+  "zone": "ዞን 2"
+ },
+ {
+  "id": 20,
+  "registered_name": "ፋሩቅ ሮይ",
+  "circle": "ክበብ 3",
+  "zone": "ዞን 12"
+ },
+ {
+  "id": 21,
+  "registered_name": "ሉትፋ ማህሙድ",
+  "circle": "ክበብ 31",
+  "zone": "ዞን 6"
+ },
+ {
+  "id": 22,
+  "registered_name": "ሻሂዱል ሀቅ",
+  "circle": "ክበብ 31",
+  "zone": "ዞን 7"
+ },
+ {
+  "id": 23,
+  "registered_name": "ሬዛኡል ሀቅ",
+  "circle": "ክበብ 1",
+  "zone": "ዞን 3"
+ },
+ {
+  "id": 24,
+  "registered_name": "ሬዛኡል ኻን",
+  "circle": "ክበብ 40",
+  "zone": "ዞን 7"
+ },
+ {
+  "id": 25,
+  "registered_name": "ኮሂኑር ጉፕታ",
+  "circle": "ክበብ 20",
+  "zone": "ዞን 6"
+ },
+ {
+  "id": 26,
+  "registered_name": "አንዋር ሲዲቅ",
+  "circle": "ክበብ 27",
+  "zone": "ዞን 11"
+ },
+ {
+  "id": 27,
+  "registered_name": "ሬሃና ራህማን",
+  "circle": "ክበብ 1",
+  "zone": "ዞን 2"
+ },
+ {
+  "id": 28,
+  "registered_name": "አብዱል አላም",
+  "circle": "ክበብ 12",
+  "zone": "ዞን 12"
+ },
+ {
+  "id": 29,
+  "registered_name": "ዲልሩባ አላም",
+  "circle": "ክበብ 20",
+  "zone": "ዞን 4"
+ },
+ {
+  "id": 30,
+  "registered_name": "ዛሂድ ራህማን",
+  "circle": "ክበብ 10",
+  "zone": "ዞን 7"
+ }
+]

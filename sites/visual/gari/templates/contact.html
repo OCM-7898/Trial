@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ S.contact_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.contact_title }}</h1>
+{% if sent %}<div class="notice">{{ S.contact_sent }}</div>{% endif %}
+<div class="panel">
+<form class="stack" method="post" action="/contact">
+  <label>{{ S.subject }}</label>
+  <input type="text" name="subject">
+  <label>{{ S.message }}</label>
+  <textarea name="message"></textarea>
+  <button type="submit">{{ S.send }}</button>
+</form>
+</div>
+{% endblock %}

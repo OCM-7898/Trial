@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}{{ office.country }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('help_contact') }}">{{ t("nav.contact_us") }}</a></li>
+        <li>{{ office.country }}</li></ol>
+  </nav>
+  <h1>{{ office.country }}</h1>
+  <p class="hint">{{ office.city }} &middot; {{ office.country_code }}</p>
+
+  <div class="split">
+    <div>
+      <h2>{{ t("contact.channels") }}</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>
+            <th scope="col">{{ t("contact.channel") }}</th>
+            <th scope="col">{{ t("contact.detail") }}</th>
+            <th scope="col">{{ t("contact.available") }}</th>
+          </tr></thead>
+          <tbody>
+            {% for channel in channels %}
+            <tr>
+              <td>{{ channel.label }}
+                  {% if channel.urgent %}<span class="badge badge-ok">{{ t("contact.urgent_badge") }}</span>{% endif %}</td>
+              <td>{{ channel.value }}</td>
+              <td>{{ channel.availability }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="hint">{{ t("contact.urgent_note") }}</p>
+    </div>
+    <aside class="summary">
+      <h3>{{ t("contact.office") }}</h3>
+      <p>{{ office.address }}</p>
+      <p><strong>{{ t("contact.hours") }}</strong><br>{{ office.hours }}</p>
+      <p>
+        {% if office.has_ticket_desk %}<span class="badge badge-ok">{{ t("contact.has_desk") }}</span>
+        {% else %}<span class="badge badge-warn">{{ t("contact.no_desk") }}</span>{% endif %}
+      </p>
+      {% if not office.has_ticket_desk %}<p class="hint">{{ t("contact.no_desk_note") }}</p>{% endif %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

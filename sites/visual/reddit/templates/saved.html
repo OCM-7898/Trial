@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ S.saved_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.saved_title }}</h1>
+{% for p in posts %}
+<div class="card">
+  {% if p.n_images %}<a href="/post/{{ p.id }}"><img class="thumb" src="/static/post_images/{{ p.id }}_1.jpg" alt="{{ S.photo_alt.format(k=1, title=p.title) }}"></a>{% endif %}
+  <div class="meta"><a href="/f/{{ p.forum_name }}">f/{{ p.forum_name }}</a>
+    · {{ S.posted_by }} <a href="/u/{{ p.username }}">{{ p.username }}</a> · {{ p.posted_on }}
+    {% if p.locked %}<span class="badge lock">{{ S.locked_badge }}</span>{% endif %}</div>
+  <h2><a href="/post/{{ p.id }}">{{ p.title }}</a></h2>
+  <form class="inline" method="post" action="/saved/remove/{{ p.id }}">
+    <button class="line">{{ S.remove }}</button>
+  </form>
+</div>
+{% else %}<p>{{ S.saved_empty }}</p>{% endfor %}
+{% endblock %}

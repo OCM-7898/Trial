@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% from "flows/_segment_header.html" import segment_header %}
+{% block title %}{{ t("seats.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('manage_pnr', pnr=booking.pnr) }}">{{ booking.pnr }}</a></li>
+        <li>{{ t("seats.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("seats.title") }}</h1>
+  {{ segment_header(view) }}
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+
+  {% if views | length > 1 %}
+  <nav class="tabs" aria-label="{{ t('seats.choose_segment') }}">
+    {% for v in views %}
+    <a href="{{ path('seats', pnr=booking.pnr) }}?segment_id={{ v.segment.id }}"
+       class="{{ 'is-active' if v.segment.id == view.segment.id else '' }}">
+      {{ v.origin.iata }}&ndash;{{ v.destination.iata }}</a>
+    {% endfor %}
+  </nav>
+  {% endif %}
+
+  <p>{{ t("seats.legend") }}</p>
+
+  {% if guide.is_useful %}
+  <dl class="seatguide">
+    {% if guide.window %}<dt>{{ t("seats.window") }}</dt><dd>{{ guide.window | join(", ") }}</dd>{% endif %}
+    {% if guide.aisle %}<dt>{{ t("seats.aisle") }}</dt><dd>{{ guide.aisle | join(", ") }}</dd>{% endif %}
+    {% if guide.middle %}<dt>{{ t("seats.middle") }}</dt><dd>{{ guide.middle | join(", ") }}</dd>{% endif %}
+  </dl>
+  <p class="hint">{{ t("seats.guide_note") }}
+     <a href="{{ path('seats_legend', pnr=booking.pnr) }}">{{ t("seats.legend_title") }}</a></p>
+  {% endif %}
+
+  <form method="post" action="{{ path('seats', pnr=booking.pnr) }}">
+    <input type="hidden" name="segment_id" value="{{ view.segment.id }}">
+    <div class="field" style="max-width:320px">
+      <label for="passenger_id">{{ t("seats.passenger") }}</label>
+      <select id="passenger_id" name="passenger_id">
+        {% for p in booking.passengers if p.pax_type != "infant" %}
+        <option value="{{ p.id }}">{{ p.full_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="table-scroll">
+      <table class="seatmap">
+        <caption class="visually-hidden">{{ t("seats.title") }}</caption>
+        <thead><tr>
+          <th scope="col">{{ t("seats.row") }}</th>
+          <th scope="col">{{ t("seats.seats") }}</th>
+          <th scope="col">{{ t("seats.price") }}</th>
+        </tr></thead>
+        <tbody>
+          {% for row in rows %}
+          <tr>
+            <th scope="row">{{ row.number }}{% if row.is_exit %}
+              <span class="badge badge-warn">{{ t("seats.exit_row") }}</span>{% endif %}{% if row.has_extra_legroom %}
+              <span class="badge badge-info">{{ t("seats.legroom_badge") }}</span>{% endif %}</th>
+            <td>
+              {% for cell in row.cells %}
+                {% if cell is none %}<span class="seat-gap" aria-hidden="true"></span>
+                {% elif cell.taken %}<span class="seat is-taken" aria-label="{{ t('seats.taken') }}">{{ cell.seat.seat_no }}</span>
+                {% else %}
+                <button class="seat{% if cell.seat.is_aisle %} is-aisle{% endif %}{% if cell.seat.is_window %} is-window{% endif %}{% if cell.seat.extra_legroom %} is-legroom{% endif %}"
+                        type="submit" name="seat_no" value="{{ cell.seat.seat_no }}"
+                        data-position="{{ seat_position(cell.seat) }}"
+                        aria-label="{{ cell.seat.seat_no }}, {{ seat_position(cell.seat) }}"
+                        title="{{ cell.seat.seat_no }}, {{ seat_position(cell.seat) }}">{{ cell.seat.seat_no }}</button>
+                {% endif %}
+              {% endfor %}
+            </td>
+            <td>{{ fmt_money_range(row.price_low, row.price_high) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>
+{% endblock %}

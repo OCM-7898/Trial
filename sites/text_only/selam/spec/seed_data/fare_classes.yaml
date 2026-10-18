@@ -1,0 +1,155 @@
+# Nine fare classes across two cabins (CLAUDE.md 12).
+#
+# The spread is deliberate, not decorative: CLAUDE.md 9.2 requires seeded
+# bookings that are refundable / non-refundable / partially refundable and
+# changeable free / for a fee / not at all. Those branches have to exist in the
+# fare table before a booking can exhibit them.
+#
+# Cabin names come from brand.py via t(); these name_* fields are the fare
+# family names, which are brand-adjacent but distinct from the cabin itself.
+# Codes stay Latin in both builds (CLAUDE.md 11.1).
+fare_classes:
+- id: 1
+  code: EP
+  cabin: economy
+  name_en: Economy Promo
+  name_am: ኢኮኖሚ ፕሮሞ
+  refundable: false
+  refund_pct: 0
+  refund_fee_usd: 0
+  changeable: false
+  change_fee_usd: 0
+  miles_earn_pct: 0
+  upgrade_eligible: false
+  seat_selection_free: false
+  name_bn: ইকোনমি প্রোমো
+  name_hi: इकोनॉमी प्रोमो
+  name_ur: اکانومی پرومو
+- id: 2
+  code: EL
+  cabin: economy
+  name_en: Economy Lite
+  name_am: ኢኮኖሚ ላይት
+  refundable: false
+  refund_pct: 0
+  refund_fee_usd: 0
+  changeable: false
+  change_fee_usd: 0
+  miles_earn_pct: 25
+  upgrade_eligible: false
+  seat_selection_free: false
+  name_bn: ইকোনমি লাইট
+  name_hi: इकोनॉमी लाइट
+  name_ur: اکانومی لائٹ
+- id: 3
+  code: EB
+  cabin: economy
+  name_en: Economy Basic
+  name_am: ኢኮኖሚ ቤዚክ
+  refundable: false
+  refund_pct: 0
+  refund_fee_usd: 0
+  changeable: true
+  change_fee_usd: 120
+  miles_earn_pct: 50
+  upgrade_eligible: true
+  seat_selection_free: false
+  name_bn: ইকোনমি বেসিক
+  name_hi: इकोनॉमी बेसिक
+  name_ur: اکانومی بیسک
+- id: 4
+  code: EG
+  cabin: economy
+  name_en: Economy Group
+  name_am: ኢኮኖሚ ግሩፕ
+  refundable: true
+  refund_pct: 50
+  refund_fee_usd: 150
+  changeable: true
+  change_fee_usd: 150
+  miles_earn_pct: 75
+  upgrade_eligible: false
+  seat_selection_free: false
+  name_bn: ইকোনমি গ্রুপ
+  name_hi: इकोनॉमी ग्रुप
+  name_ur: اکانومی گروپ
+- id: 5
+  code: ES
+  cabin: economy
+  name_en: Economy Standard
+  name_am: ኢኮኖሚ ስታንዳርድ
+  refundable: true
+  refund_pct: 50
+  refund_fee_usd: 80
+  changeable: true
+  change_fee_usd: 60
+  miles_earn_pct: 100
+  upgrade_eligible: true
+  seat_selection_free: false
+  name_bn: ইকোনমি স্ট্যান্ডার্ড
+  name_hi: इकोनॉमी स्टैंडर्ड
+  name_ur: اکانومی اسٹینڈرڈ
+- id: 6
+  code: EF
+  cabin: economy
+  name_en: Economy Flex
+  name_am: ኢኮኖሚ ፍሌክስ
+  refundable: true
+  refund_pct: 100
+  refund_fee_usd: 0
+  changeable: true
+  change_fee_usd: 0
+  miles_earn_pct: 125
+  upgrade_eligible: true
+  seat_selection_free: true
+  name_bn: ইকোনমি ফ্লেক্স
+  name_hi: इकोनॉमी फ़्लेक्स
+  name_ur: اکانومی فلیکس
+- id: 7
+  code: HS
+  cabin: business
+  name_en: Highland Saver
+  name_am: ሃይላንድ ሴቨር
+  refundable: true
+  refund_pct: 50
+  refund_fee_usd: 150
+  changeable: true
+  change_fee_usd: 100
+  miles_earn_pct: 150
+  upgrade_eligible: false
+  seat_selection_free: true
+  name_bn: হাইল্যান্ড সেভার
+  name_hi: हाइलैंड सेवर
+  name_ur: ہائی لینڈ سیور
+- id: 8
+  code: HC
+  cabin: business
+  name_en: Highland Classic
+  name_am: ሃይላንድ ክላሲክ
+  refundable: true
+  refund_pct: 100
+  refund_fee_usd: 75
+  changeable: true
+  change_fee_usd: 0
+  miles_earn_pct: 200
+  upgrade_eligible: false
+  seat_selection_free: true
+  name_bn: হাইল্যান্ড ক্লাসিক
+  name_hi: हाइलैंड क्लासिक
+  name_ur: ہائی لینڈ کلاسک
+- id: 9
+  code: HF
+  cabin: business
+  name_en: Highland Flex
+  name_am: ሃይላንድ ፍሌክስ
+  refundable: true
+  refund_pct: 100
+  refund_fee_usd: 0
+  changeable: true
+  change_fee_usd: 0
+  miles_earn_pct: 250
+  upgrade_eligible: false
+  seat_selection_free: true
+  name_bn: হাইল্যান্ড ফ্লেক্স
+  name_hi: हाइलैंड फ़्लेक्स
+  name_ur: ہائی لینڈ فلیکس

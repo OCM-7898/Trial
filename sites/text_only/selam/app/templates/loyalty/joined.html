@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ t("join.done_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_join') }}">{{ t("join.title") }}</a></li>
+        <li>{{ t("join.done_title") }}</li></ol>
+  </nav>
+  <div class="notice notice-ok" role="status"><div>
+    <strong>{{ t("join.done_title") }}</strong>
+    <p>{{ t("join.done_body") }}</p>
+  </div></div>
+
+  <dl class="summary" style="position:static;max-width:520px">
+    <dt>{{ t("miles.member_no") }}</dt><dd><strong>{{ member.member_no }}</strong></dd>
+    <dt>{{ t("manage.passenger_name") }}</dt><dd>{{ member.full_name }}</dd>
+    <dt>{{ t("join.email") }}</dt><dd>{{ member.email }}</dd>
+    <dt>{{ t("lounge.tier") }}</dt><dd>{{ t("lounge.tier_blue") }}</dd>
+    <dt>{{ t("miles.balance") }}</dt><dd>{{ member.miles_balance }}</dd>
+  </dl>
+  <p><a class="btn btn-primary" href="{{ path('miles_account') }}">{{ t("nav.miles_account") }}</a></p>
+</div>
+{% endblock %}

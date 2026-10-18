@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ S.wishlist_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.wishlist_h }}</h2>
+{% for p in products %}
+<div class="card" style="margin-bottom:10px">
+  <a href="/product/{{ p.id }}"><strong>{{ p.name }}</strong></a> <span class="price">{{ S.cur }}{{ ('%.2f' % p.price) | v2_num }}</span>
+  <form class="inline" method="post" action="/cart/add/{{ p.id }}"><input type="hidden" name="qty" value="1"><button class="btn">{{ S.add_to_cart }}</button></form>
+  <form class="inline" method="post" action="/wishlist/remove/{{ p.id }}"><button class="btn grey">{{ S.remove }}</button></form>
+</div>
+{% else %}<p>{{ S.wishlist_empty }}</p>{% endfor %}
+{% endblock %}

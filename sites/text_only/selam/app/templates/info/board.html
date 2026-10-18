@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field %}
+{% block title %}{{ airport.iata }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('flight_status') }}">{{ t("status.title") }}</a></li>
+        <li>{{ airport.iata }}</li></ol>
+  </nav>
+  <h1>{{ airport.city }} ({{ airport.iata }})</h1>
+  <p class="hint">{{ airport.name }} &middot;
+     {% if departures %}{{ t("status.departures_board") }}{% else %}{{ t("status.arrivals_board") }}{% endif %}
+     &middot; {{ fmt_date(day) }}</p>
+  <p>
+    <a class="btn-link" href="{{ path('status_departures', iata=airport.iata) }}">{{ t("status.departures_board") }}</a>
+    <a class="btn-link" href="{{ path('status_arrivals', iata=airport.iata) }}">{{ t("status.arrivals_board") }}</a>
+  </p>
+  <form class="searchform" method="get">
+    {{ date_field("date", "date", t("status.date"), t("common.date_hint"), date_value) }}
+    <div class="actions"><button class="btn btn-secondary" type="submit">{{ t("results.apply") }}</button></div>
+  </form>
+  {% if rows %}
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">{{ t("results.flight") }}</th>
+      <th scope="col">{% if departures %}{{ t("search.destination") }}{% else %}{{ t("search.origin") }}{% endif %}</th>
+      <th scope="col">{{ t("results.depart") }}</th><th scope="col">{{ t("status.gate") }}</th>
+      <th scope="col">{{ t("status.status") }}</th></tr></thead>
+    <tbody>{% for row in rows %}<tr>
+      <td>{{ row.flight.flight_no }}</td><td>{{ row.other.city }} ({{ row.other.iata }})</td>
+      <td>{{ fmt_time(row.flight.dep_time) }}</td><td>{{ row.flight.gate or "--" }}</td>
+      <td><span class="badge {{ 'badge-warn' if row.flight.status != 'scheduled' else 'badge-ok' }}">{{ row.status_label }}</span></td>
+    </tr>{% endfor %}</tbody></table></div>
+  {% else %}<div class="notice notice-warn"><div>{{ t("status.no_movements") }}</div></div>{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field, text_field %}
+{% block title %}{{ t("stopover.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("stopover.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("stopover.title") }}</h1>
+  {% set also = [(t("stopover.book_title"), path("stopover_book"))] %}
+  {% include "partials/also.html" %}
+  <p>{{ t("stopover.rule", min=min_hours, max=max_hours) }}</p>
+
+  <form class="searchform" method="get" action="{{ path('stopover') }}">
+    {{ text_field("origin", "origin", t("search.origin"), "NBO", t("search.code_hint"), origin) }}
+    {{ text_field("destination", "destination", t("search.destination"), "LHR", t("search.code_hint"), destination) }}
+    {{ date_field("date", "date", t("search.depart"), t("common.date_hint"), date_value) }}
+    <div class="actions">
+      <button class="btn btn-primary" type="submit">{{ t("stopover.check") }}</button>
+      <a class="btn-link" href="{{ path('stopover_packages') }}">{{ t("stopover.see_packages") }}</a>
+    </div>
+  </form>
+
+  {% if results %}
+  {% for row in results %}
+  <section class="card" style="margin-bottom:18px">
+    <div class="card-body">
+      <h3>{{ row.itinerary.flight_numbers | join(" + ") }}</h3>
+      <p class="hint">
+        {{ fmt_time(row.itinerary.depart_at) }} &rarr; {{ fmt_time(row.itinerary.arrive_at) }}
+        &middot; {{ t("stopover.layover", h=row.hours, m="%02d" % row.minutes) }}
+      </p>
+      <p>
+        {% if row.eligible %}<span class="badge badge-ok">{{ t("stopover.eligible") }}</span>
+        {% else %}<span class="badge badge-warn">{{ t("stopover.not_eligible", min=min_hours, max=max_hours) }}</span>{% endif %}
+      </p>
+      {% if row.packages %}
+      <h4>{{ t("stopover.available_services") }}</h4>
+      <ul>
+        {% for package in row.packages %}
+        <li><strong>{{ package.name }}</strong> &mdash; {{ package.description }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+  {% elif searched %}
+  <div class="notice notice-warn"><div>{{ t("stopover.no_connection") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

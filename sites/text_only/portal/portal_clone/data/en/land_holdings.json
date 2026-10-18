@@ -1,0 +1,310 @@
+[
+ {
+  "id": 1,
+  "khatian_id": 1,
+  "holding_no": "HLD00001",
+  "owner_ref": 1,
+  "assessed_value": 426000
+ },
+ {
+  "id": 2,
+  "khatian_id": 2,
+  "holding_no": "HLD00002",
+  "owner_ref": 1,
+  "assessed_value": 891000
+ },
+ {
+  "id": 3,
+  "khatian_id": 3,
+  "holding_no": "HLD00003",
+  "owner_ref": 2,
+  "assessed_value": 672000
+ },
+ {
+  "id": 4,
+  "khatian_id": 4,
+  "holding_no": "HLD00004",
+  "owner_ref": 3,
+  "assessed_value": 69000
+ },
+ {
+  "id": 5,
+  "khatian_id": 5,
+  "holding_no": "HLD00005",
+  "owner_ref": 4,
+  "assessed_value": 324000
+ },
+ {
+  "id": 6,
+  "khatian_id": 6,
+  "holding_no": "HLD00006",
+  "owner_ref": 4,
+  "assessed_value": 395000
+ },
+ {
+  "id": 7,
+  "khatian_id": 7,
+  "holding_no": "HLD00007",
+  "owner_ref": 5,
+  "assessed_value": 745000
+ },
+ {
+  "id": 8,
+  "khatian_id": 8,
+  "holding_no": "HLD00008",
+  "owner_ref": 6,
+  "assessed_value": 351000
+ },
+ {
+  "id": 9,
+  "khatian_id": 9,
+  "holding_no": "HLD00009",
+  "owner_ref": 7,
+  "assessed_value": 501000
+ },
+ {
+  "id": 10,
+  "khatian_id": 10,
+  "holding_no": "HLD00010",
+  "owner_ref": 7,
+  "assessed_value": 512000
+ },
+ {
+  "id": 11,
+  "khatian_id": 11,
+  "holding_no": "HLD00011",
+  "owner_ref": 8,
+  "assessed_value": 49000
+ },
+ {
+  "id": 12,
+  "khatian_id": 12,
+  "holding_no": "HLD00012",
+  "owner_ref": 9,
+  "assessed_value": 646000
+ },
+ {
+  "id": 13,
+  "khatian_id": 13,
+  "holding_no": "HLD00013",
+  "owner_ref": 9,
+  "assessed_value": 327000
+ },
+ {
+  "id": 14,
+  "khatian_id": 14,
+  "holding_no": "HLD00014",
+  "owner_ref": 10,
+  "assessed_value": 412000
+ },
+ {
+  "id": 15,
+  "khatian_id": 15,
+  "holding_no": "HLD00015",
+  "owner_ref": 10,
+  "assessed_value": 273000
+ },
+ {
+  "id": 16,
+  "khatian_id": 16,
+  "holding_no": "HLD00016",
+  "owner_ref": 11,
+  "assessed_value": 606000
+ },
+ {
+  "id": 17,
+  "khatian_id": 17,
+  "holding_no": "HLD00017",
+  "owner_ref": 12,
+  "assessed_value": 319000
+ },
+ {
+  "id": 18,
+  "khatian_id": 18,
+  "holding_no": "HLD00018",
+  "owner_ref": 13,
+  "assessed_value": 761000
+ },
+ {
+  "id": 19,
+  "khatian_id": 19,
+  "holding_no": "HLD00019",
+  "owner_ref": 14,
+  "assessed_value": 560000
+ },
+ {
+  "id": 20,
+  "khatian_id": 20,
+  "holding_no": "HLD00020",
+  "owner_ref": 15,
+  "assessed_value": 802000
+ },
+ {
+  "id": 21,
+  "khatian_id": 21,
+  "holding_no": "HLD00021",
+  "owner_ref": 15,
+  "assessed_value": 749000
+ },
+ {
+  "id": 22,
+  "khatian_id": 22,
+  "holding_no": "HLD00022",
+  "owner_ref": 16,
+  "assessed_value": 95000
+ },
+ {
+  "id": 23,
+  "khatian_id": 23,
+  "holding_no": "HLD00023",
+  "owner_ref": 17,
+  "assessed_value": 184000
+ },
+ {
+  "id": 24,
+  "khatian_id": 24,
+  "holding_no": "HLD00024",
+  "owner_ref": 17,
+  "assessed_value": 289000
+ },
+ {
+  "id": 25,
+  "khatian_id": 25,
+  "holding_no": "HLD00025",
+  "owner_ref": 18,
+  "assessed_value": 857000
+ },
+ {
+  "id": 26,
+  "khatian_id": 26,
+  "holding_no": "HLD00026",
+  "owner_ref": 19,
+  "assessed_value": 250000
+ },
+ {
+  "id": 27,
+  "khatian_id": 27,
+  "holding_no": "HLD00027",
+  "owner_ref": 19,
+  "assessed_value": 114000
+ },
+ {
+  "id": 28,
+  "khatian_id": 28,
+  "holding_no": "HLD00028",
+  "owner_ref": 20,
+  "assessed_value": 207000
+ },
+ {
+  "id": 29,
+  "khatian_id": 29,
+  "holding_no": "HLD00029",
+  "owner_ref": 21,
+  "assessed_value": 739000
+ },
+ {
+  "id": 30,
+  "khatian_id": 30,
+  "holding_no": "HLD00030",
+  "owner_ref": 21,
+  "assessed_value": 528000
+ },
+ {
+  "id": 31,
+  "khatian_id": 31,
+  "holding_no": "HLD00031",
+  "owner_ref": 22,
+  "assessed_value": 175000
+ },
+ {
+  "id": 32,
+  "khatian_id": 32,
+  "holding_no": "HLD00032",
+  "owner_ref": 22,
+  "assessed_value": 466000
+ },
+ {
+  "id": 33,
+  "khatian_id": 33,
+  "holding_no": "HLD00033",
+  "owner_ref": 23,
+  "assessed_value": 466000
+ },
+ {
+  "id": 34,
+  "khatian_id": 34,
+  "holding_no": "HLD00034",
+  "owner_ref": 24,
+  "assessed_value": 169000
+ },
+ {
+  "id": 35,
+  "khatian_id": 35,
+  "holding_no": "HLD00035",
+  "owner_ref": 24,
+  "assessed_value": 157000
+ },
+ {
+  "id": 36,
+  "khatian_id": 36,
+  "holding_no": "HLD00036",
+  "owner_ref": 25,
+  "assessed_value": 582000
+ },
+ {
+  "id": 37,
+  "khatian_id": 37,
+  "holding_no": "HLD00037",
+  "owner_ref": 25,
+  "assessed_value": 827000
+ },
+ {
+  "id": 38,
+  "khatian_id": 38,
+  "holding_no": "HLD00038",
+  "owner_ref": 26,
+  "assessed_value": 355000
+ },
+ {
+  "id": 39,
+  "khatian_id": 39,
+  "holding_no": "HLD00039",
+  "owner_ref": 27,
+  "assessed_value": 444000
+ },
+ {
+  "id": 40,
+  "khatian_id": 40,
+  "holding_no": "HLD00040",
+  "owner_ref": 28,
+  "assessed_value": 296000
+ },
+ {
+  "id": 41,
+  "khatian_id": 41,
+  "holding_no": "HLD00041",
+  "owner_ref": 28,
+  "assessed_value": 628000
+ },
+ {
+  "id": 42,
+  "khatian_id": 42,
+  "holding_no": "HLD00042",
+  "owner_ref": 29,
+  "assessed_value": 354000
+ },
+ {
+  "id": 43,
+  "khatian_id": 43,
+  "holding_no": "HLD00043",
+  "owner_ref": 29,
+  "assessed_value": 783000
+ },
+ {
+  "id": 44,
+  "khatian_id": 44,
+  "holding_no": "HLD00044",
+  "owner_ref": 30,
+  "assessed_value": 561000
+ }
+]

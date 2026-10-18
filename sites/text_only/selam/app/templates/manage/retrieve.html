@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("manage.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol>
+      <li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li>{{ t("manage.title") }}</li>
+    </ol>
+  </nav>
+  <h1>{{ t("manage.title") }}</h1>
+  {% set also = [(t("nav.refund_status"), path("refund_status"))] %}
+  {% include "partials/also.html" %}
+  <p>{{ t("manage.intro") }}</p>
+
+  {% if error %}
+  <div class="notice notice-error" role="alert"><div>{{ error }}</div></div>
+  {% endif %}
+
+  <form class="searchform" method="post" action="{{ path('manage') }}">
+    {{ text_field("pnr", "pnr", t("manage.pnr"), t("manage.pnr_placeholder"), "", pnr, true) }}
+    {{ text_field("surname", "surname", t("manage.surname"), "", t("manage.surname_hint"), surname, true) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("manage.retrieve") }}</button></div>
+  </form>
+</div>
+{% endblock %}

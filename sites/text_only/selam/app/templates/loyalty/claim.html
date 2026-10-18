@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field %}
+{% block title %}{{ t("claim.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_account') }}">{{ t("brand.loyalty") }}</a></li>
+        <li>{{ t("claim.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("claim.title") }}</h1>
+
+  {% set also = [(t("nav.claim_partner"), path("miles_claim_partner")), (t("nav.claim_status"), path("miles_claim_status"))] %}
+  {% include "partials/also.html" %}
+  {% if claim %}
+  <div class="notice notice-ok" role="status"><div>
+    <strong>{{ t("claim.done_title") }}</strong>
+    <p>{{ t("claim.done_body") }}</p>
+  </div></div>
+  <dl class="summary" style="position:static;max-width:520px">
+    <dt>{{ t("claim.reference") }}</dt><dd><strong>{{ claim.reference_no }}</strong></dd>
+    <dt>{{ t("claim.status") }}</dt><dd>{{ t("claim.status_under_review") }}</dd>
+    <dt>{{ t("claim.ticket_no") }}</dt><dd>{{ claim.ticket_no }}</dd>
+    <dt>{{ t("results.flight") }}</dt><dd>{{ claim.flight_no }} &middot; {{ fmt_date(claim.flight_date) }}</dd>
+  </dl>
+  {% else %}
+  <p>{{ t("claim.intro") }}</p>
+  <form class="searchform" method="post" action="{{ path('miles_claim') }}" novalidate>
+    {% for name, label in [("member_no", t("miles.member_no")), ("ticket_no", t("claim.ticket_no")), ("flight_no", t("results.flight"))] %}
+    <div class="field">
+      <label for="{{ name }}">{{ label }}</label>
+      <input type="text" id="{{ name }}" name="{{ name }}" value="{{ values.get(name, '') }}"
+             {% if errors.get(name) %}aria-invalid="true" aria-describedby="{{ name }}-error"{% endif %}>
+      {% if errors.get(name) %}<span class="error-text" id="{{ name }}-error">{{ errors[name] }}</span>{% endif %}
+    </div>
+    {% endfor %}
+    <div class="field">
+      <label for="flight_date">{{ t("claim.flight_date") }}</label>
+      <input type="text" id="flight_date" name="flight_date" value="{{ values.get('flight_date', '') }}"
+             inputmode="numeric" placeholder="2026-02-14" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+             {% if errors.get('flight_date') %}aria-invalid="true" aria-describedby="flight_date-error"{% endif %}>
+      {% if errors.get('flight_date') %}<span class="error-text" id="flight_date-error">{{ errors['flight_date'] }}</span>
+      {% else %}<span class="hint">{{ t("common.date_hint") }}</span>{% endif %}
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("claim.submit") }}</button></div>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

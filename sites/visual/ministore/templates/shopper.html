@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ S.shopper_title.format(u=profile.username) }}{% endblock %}
+{% block content %}
+<h2>{{ S.shopper_h.format(u=profile.username) }}</h2>
+<h3>{{ S.reviews_written }}</h3>
+{% for r in reviews %}
+<div class="card" style="margin-bottom:10px">
+  <a href="/product/{{ r.pid }}"><strong>{{ r.product_name }}</strong></a> — {{ r.stars | v2_num }}{{ S.stars_suffix }}
+  <div class="meta">{{ r.body }}</div>
+</div>
+{% else %}<p>{{ S.no_reviews_dot }}</p>{% endfor %}
+{% endblock %}

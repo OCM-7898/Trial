@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ t("miles.tier_progress") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_account') }}">{{ t("nav.miles_account") }}</a></li>
+        <li>{{ t("miles.tier_progress") }}</li></ol>
+  </nav>
+  <h1>{{ t("miles.tier_progress") }}</h1>
+  <p>{{ t("miles.qualifying_explained") }}</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">{{ t("lounge.tier") }}</th><th scope="col">{{ t("miles.threshold") }}</th>
+      <th scope="col">{{ t("miles.your_status") }}</th></tr></thead>
+    <tbody>{% for tier in tiers %}<tr>
+      <td>{{ tier.name }}</td><td>{{ tier.floor }}</td>
+      <td>{% if tier.current %}<span class="badge badge-ok">{{ t("miles.current_tier") }}</span>
+          {% elif tier.reached %}<span class="badge">{{ t("miles.reached") }}</span>
+          {% else %}<span class="badge badge-warn">{{ t("miles.not_reached") }}</span>{% endif %}</td>
+    </tr>{% endfor %}</tbody></table></div>
+  <p><strong>
+    {% if progress.next_tier %}{{ t("miles.to_next_tier", n=progress.needed, tier=progress.next_tier) }}
+    {% else %}{{ t("miles.top_tier") }}{% endif %}
+  </strong></p>
+  <p class="hint">{{ t("miles.qualifying_now", n=member.qualifying_miles) }}</p>
+</div>
+{% endblock %}

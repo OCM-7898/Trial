@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("lounge.check_eligibility") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('lounges') }}">{{ t("lounge.title") }}</a></li>
+        <li>{{ t("lounge.check_eligibility") }}</li></ol>
+  </nav>
+  <h1>{{ t("lounge.check_eligibility") }}</h1>
+  <p>{{ t("lounge.eligibility_intro") }}</p>
+
+  <form class="searchform" method="get" action="{{ path('lounge_eligibility') }}">
+    {{ text_field("airport", "airport", t("lounge.airport"), "ADD", t("search.code_hint"), iata) }}
+    <div class="field">
+      <label for="cabin">{{ t("search.cabin") }}</label>
+      <select id="cabin" name="cabin">
+        {% for value, label in cabin_options %}
+        <option value="{{ value }}" {% if value == (cabin or "") %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="tier">{{ t("lounge.tier") }}</label>
+      <select id="tier" name="tier">
+        {% for value, label in tier_options %}
+        <option value="{{ value }}" {% if value == (tier or "") %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("lounge.check") }}</button></div>
+  </form>
+
+  {% if results %}
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("lounge.name") }}</th>
+        <th scope="col">{{ t("lounge.terminal") }}</th>
+        <th scope="col">{{ t("lounge.your_access") }}</th>
+        <th scope="col">{{ t("lounge.walk_in") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for row in results %}
+        <tr>
+          <td><a href="{{ path('lounge_detail', lounge_id=row.lounge.id) }}">{{ row.lounge.name }}</a></td>
+          <td>{{ row.lounge.terminal }}</td>
+          <td><span class="badge {{ 'badge-ok' if row.access.free else 'badge-warn' }}">{{ row.label }}</span></td>
+          <td>{% if row.access.free %}{{ t("common.none") }}{% elif row.access.price_usd %}{{ fmt_money(row.access.price_usd) }}{% else %}{{ t("common.none") }}{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

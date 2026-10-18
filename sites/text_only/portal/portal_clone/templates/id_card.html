@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ S.id_card_title }}</h1>
+  <p class="lede">{{ S.id_card_intro }}</p>
+  {% if citizen %}
+  <div class="certificate">
+    <div class="cert-head">
+      <div class="seal"></div>
+      <p class="cert-issuer">{{ S.govt }}</p>
+      <p class="cert-title">{{ S.id_card_title }}</p>
+    </div>
+    <dl class="record">
+      <dt>{{ S.f_citizen_id }}</dt><dd>{{ citizen.citizen_id }}</dd>
+      <dt>{{ S.f_name }}</dt><dd>{{ citizen.name }}</dd>
+      <dt>{{ S.f_father_name }}</dt><dd>{{ citizen.father_name }}</dd>
+      <dt>{{ S.f_mother_name }}</dt><dd>{{ citizen.mother_name }}</dd>
+      <dt>{{ S.f_dob }}</dt><dd>{{ citizen.dob }}</dd>
+      <dt>{{ S.f_perm_addr }}</dt><dd>{{ citizen.perm_addr }}</dd>
+    </dl>
+    <p class="cert-mark">{{ S.cert_mark }}</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

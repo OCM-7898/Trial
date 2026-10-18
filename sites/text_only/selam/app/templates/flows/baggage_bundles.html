@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("baggage.bundles_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("baggage.bundles_title")) }}
+<p>{{ t("baggage.bundles_intro") }}</p>
+{% if bundles %}
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("baggage.extra_kg") }}</th><th scope="col">{{ t("results.total") }}</th>
+    <th scope="col">{{ t("baggage.per_kg_header") }}</th></tr></thead>
+  <tbody>{% for bundle in bundles %}<tr>
+    <td>{{ t("manage.kg", n=bundle.kg) }}</td><td>{{ fmt_money(bundle.price) }}</td>
+    <td>{{ fmt_money(bundle.price / bundle.kg) }}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+<p class="hint">{{ t("baggage.bundles_compare", amount=fmt_money(rule.extra_kg_price_usd)) }}</p>
+<p><a class="btn btn-secondary" href="{{ path('bag_add', pnr=booking.pnr) }}?segment_id={{ view.segment.id }}">{{ t("baggage.buy_by_kg") }}</a></p>
+{% endif %}
+</div>{% endblock %}

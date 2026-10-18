@@ -1,0 +1,182 @@
+[
+ {
+  "id": 1,
+  "registered_name": "देलवार हक़",
+  "circle": "सर्किल 1",
+  "zone": "ज़ोन 5"
+ },
+ {
+  "id": 2,
+  "registered_name": "तोफ़ज्जल दास",
+  "circle": "सर्किल 12",
+  "zone": "ज़ोन 5"
+ },
+ {
+  "id": 3,
+  "registered_name": "शहनाज़ भुइयाँ",
+  "circle": "सर्किल 1",
+  "zone": "ज़ोन 8"
+ },
+ {
+  "id": 4,
+  "registered_name": "मुनीर दास",
+  "circle": "सर्किल 14",
+  "zone": "ज़ोन 9"
+ },
+ {
+  "id": 5,
+  "registered_name": "अमीनुल चौधरी",
+  "circle": "सर्किल 14",
+  "zone": "ज़ोन 1"
+ },
+ {
+  "id": 6,
+  "registered_name": "सबीना ख़ान",
+  "circle": "सर्किल 1",
+  "zone": "ज़ोन 6"
+ },
+ {
+  "id": 7,
+  "registered_name": "ग़ुलाम ख़ान",
+  "circle": "सर्किल 11",
+  "zone": "ज़ोन 1"
+ },
+ {
+  "id": 8,
+  "registered_name": "यास्मीन गुप्ता",
+  "circle": "सर्किल 1",
+  "zone": "ज़ोन 11"
+ },
+ {
+  "id": 9,
+  "registered_name": "रेहाना दास",
+  "circle": "सर्किल 15",
+  "zone": "ज़ोन 4"
+ },
+ {
+  "id": 10,
+  "registered_name": "सबीना साहा",
+  "circle": "सर्किल 25",
+  "zone": "ज़ोन 3"
+ },
+ {
+  "id": 11,
+  "registered_name": "मुस्तफ़ा हुसैन",
+  "circle": "सर्किल 22",
+  "zone": "ज़ोन 1"
+ },
+ {
+  "id": 12,
+  "registered_name": "अशरफ़ुल बेगम",
+  "circle": "सर्किल 31",
+  "zone": "ज़ोन 11"
+ },
+ {
+  "id": 13,
+  "registered_name": "अब्दुल भुइयाँ",
+  "circle": "सर्किल 5",
+  "zone": "ज़ोन 10"
+ },
+ {
+  "id": 14,
+  "registered_name": "जहाँगीर हक़",
+  "circle": "सर्किल 26",
+  "zone": "ज़ोन 9"
+ },
+ {
+  "id": 15,
+  "registered_name": "तोफ़ज्जल करीम",
+  "circle": "सर्किल 17",
+  "zone": "ज़ोन 11"
+ },
+ {
+  "id": 16,
+  "registered_name": "ख़ालिद अख़्तर",
+  "circle": "सर्किल 40",
+  "zone": "ज़ोन 10"
+ },
+ {
+  "id": 17,
+  "registered_name": "जहाँआरा बरुआ",
+  "circle": "सर्किल 37",
+  "zone": "ज़ोन 12"
+ },
+ {
+  "id": 18,
+  "registered_name": "रुक़ैया करीम",
+  "circle": "सर्किल 26",
+  "zone": "ज़ोन 12"
+ },
+ {
+  "id": 19,
+  "registered_name": "कोहिनूर आलम",
+  "circle": "सर्किल 20",
+  "zone": "ज़ोन 2"
+ },
+ {
+  "id": 20,
+  "registered_name": "फ़ारूक़ रॉय",
+  "circle": "सर्किल 3",
+  "zone": "ज़ोन 12"
+ },
+ {
+  "id": 21,
+  "registered_name": "लुत्फ़ा महमूद",
+  "circle": "सर्किल 31",
+  "zone": "ज़ोन 6"
+ },
+ {
+  "id": 22,
+  "registered_name": "शहीदुल हक़",
+  "circle": "सर्किल 31",
+  "zone": "ज़ोन 7"
+ },
+ {
+  "id": 23,
+  "registered_name": "रेज़ाउल हक़",
+  "circle": "सर्किल 1",
+  "zone": "ज़ोन 3"
+ },
+ {
+  "id": 24,
+  "registered_name": "रेज़ाउल ख़ान",
+  "circle": "सर्किल 40",
+  "zone": "ज़ोन 7"
+ },
+ {
+  "id": 25,
+  "registered_name": "कोहिनूर गुप्ता",
+  "circle": "सर्किल 20",
+  "zone": "ज़ोन 6"
+ },
+ {
+  "id": 26,
+  "registered_name": "अनवर सिद्दीक़",
+  "circle": "सर्किल 27",
+  "zone": "ज़ोन 11"
+ },
+ {
+  "id": 27,
+  "registered_name": "रेहाना रहमान",
+  "circle": "सर्किल 1",
+  "zone": "ज़ोन 2"
+ },
+ {
+  "id": 28,
+  "registered_name": "अब्दुल आलम",
+  "circle": "सर्किल 12",
+  "zone": "ज़ोन 12"
+ },
+ {
+  "id": 29,
+  "registered_name": "दिलरुबा आलम",
+  "circle": "सर्किल 20",
+  "zone": "ज़ोन 4"
+ },
+ {
+  "id": 30,
+  "registered_name": "ज़ाहिद रहमान",
+  "circle": "सर्किल 10",
+  "zone": "ज़ोन 7"
+ }
+]

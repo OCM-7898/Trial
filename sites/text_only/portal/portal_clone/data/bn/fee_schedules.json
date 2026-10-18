@@ -1,0 +1,569 @@
+[
+ {
+  "id": 1,
+  "category": "সংশোধন",
+  "variant": "নামের বানান",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 2,
+  "category": "সংশোধন",
+  "variant": "নামের বানান",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 3,
+  "category": "সংশোধন",
+  "variant": "জন্মতারিখ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 4,
+  "category": "সংশোধন",
+  "variant": "জন্মতারিখ",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 5,
+  "category": "সংশোধন",
+  "variant": "ঠিকানা",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 6,
+  "category": "সংশোধন",
+  "variant": "ঠিকানা",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 7,
+  "category": "পুনঃপ্রদান",
+  "variant": "হারানো কার্ড",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 8,
+  "category": "পুনঃপ্রদান",
+  "variant": "হারানো কার্ড",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 9,
+  "category": "পুনঃপ্রদান",
+  "variant": "ক্ষতিগ্রস্ত কার্ড",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 10,
+  "category": "প্রতিলিপি",
+  "variant": "দ্বিতীয় ও পরবর্তী",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 11,
+  "category": "সাধারণ",
+  "variant": "48 পৃষ্ঠা",
+  "validity": "5 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 12,
+  "category": "সাধারণ",
+  "variant": "48 পৃষ্ঠা",
+  "validity": "5 বছর",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 13,
+  "category": "সাধারণ",
+  "variant": "48 পৃষ্ঠা",
+  "validity": "5 বছর",
+  "delivery": "জরুরি"
+ },
+ {
+  "id": 14,
+  "category": "সাধারণ",
+  "variant": "48 পৃষ্ঠা",
+  "validity": "10 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 15,
+  "category": "সাধারণ",
+  "variant": "48 পৃষ্ঠা",
+  "validity": "10 বছর",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 16,
+  "category": "সাধারণ",
+  "variant": "64 পৃষ্ঠা",
+  "validity": "5 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 17,
+  "category": "সাধারণ",
+  "variant": "64 পৃষ্ঠা",
+  "validity": "5 বছর",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 18,
+  "category": "সাধারণ",
+  "variant": "64 পৃষ্ঠা",
+  "validity": "10 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 19,
+  "category": "সাধারণ",
+  "variant": "64 পৃষ্ঠা",
+  "validity": "10 বছর",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 20,
+  "category": "দাপ্তরিক",
+  "variant": "48 পৃষ্ঠা",
+  "validity": "5 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 21,
+  "category": "জন্ম",
+  "variant": "45 দিনের মধ্যে",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 22,
+  "category": "জন্ম",
+  "variant": "46 দিন থেকে 5 বছর",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 23,
+  "category": "জন্ম",
+  "variant": "5 বছর পর",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 24,
+  "category": "মৃত্যু",
+  "variant": "45 দিনের মধ্যে",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 25,
+  "category": "মৃত্যু",
+  "variant": "45 দিন পর",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 26,
+  "category": "সংশোধন",
+  "variant": "নাম বা তারিখ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 27,
+  "category": "সত্যায়িত অনুলিপি",
+  "variant": "জন্ম",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 28,
+  "category": "সত্যায়িত অনুলিপি",
+  "variant": "মৃত্যু",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 29,
+  "category": "নামজারি",
+  "variant": "সাধারণ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 30,
+  "category": "নামজারি",
+  "variant": "সাধারণ",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 31,
+  "category": "সত্যায়িত অনুলিপি",
+  "variant": "খতিয়ান",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 32,
+  "category": "সত্যায়িত অনুলিপি",
+  "variant": "খতিয়ান",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 33,
+  "category": "অনুসন্ধান",
+  "variant": "রেকর্ড পরিদর্শন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 34,
+  "category": "উন্নয়ন কর",
+  "variant": "আবাসিক",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 35,
+  "category": "উন্নয়ন কর",
+  "variant": "বাণিজ্যিক",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 36,
+  "category": "সংযোগ",
+  "variant": "আবাসিক সিঙ্গেল ফেজ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 37,
+  "category": "সংযোগ",
+  "variant": "আবাসিক থ্রি ফেজ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 38,
+  "category": "সংযোগ",
+  "variant": "বাণিজ্যিক",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 39,
+  "category": "মিটার",
+  "variant": "প্রতিস্থাপন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 40,
+  "category": "মিটার",
+  "variant": "স্থানান্তর",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 41,
+  "category": "পুনঃসংযোগ",
+  "variant": "সংযোগ বিচ্ছিন্নের পর",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 42,
+  "category": "পুনর্নিরীক্ষণ",
+  "variant": "প্রতি বিষয়",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 43,
+  "category": "সনদ",
+  "variant": "পুনঃপ্রদান",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 44,
+  "category": "ট্রান্সক্রিপ্ট",
+  "variant": "প্রতি কপি",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 45,
+  "category": "সমমান",
+  "variant": "সনদ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 46,
+  "category": "প্রবেশপত্র",
+  "variant": "প্রতিলিপি",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 47,
+  "category": "শিক্ষানবিশ",
+  "variant": "মোটরসাইকেল",
+  "validity": "2 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 48,
+  "category": "শিক্ষানবিশ",
+  "variant": "হালকা যান",
+  "validity": "2 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 49,
+  "category": "লাইসেন্স",
+  "variant": "পেশাদার",
+  "validity": "5 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 50,
+  "category": "লাইসেন্স",
+  "variant": "অপেশাদার",
+  "validity": "10 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 51,
+  "category": "লাইসেন্স",
+  "variant": "অপেশাদার",
+  "validity": "10 বছর",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 52,
+  "category": "নবায়ন",
+  "variant": "পেশাদার",
+  "validity": "5 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 53,
+  "category": "প্রতিলিপি",
+  "variant": "যেকোনো ক্লাস",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 54,
+  "category": "নিবন্ধন",
+  "variant": "ব্যক্তি",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 55,
+  "category": "নিবন্ধন",
+  "variant": "কোম্পানি",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 56,
+  "category": "ক্লিয়ারেন্স",
+  "variant": "সনদ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 57,
+  "category": "রিটার্ন",
+  "variant": "বিলম্বে দাখিল",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 58,
+  "category": "আপিল",
+  "variant": "স্মারক",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 59,
+  "category": "প্রাক-নিবন্ধন",
+  "variant": "সরকারি প্যাকেজ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 60,
+  "category": "প্রাক-নিবন্ধন",
+  "variant": "বেসরকারি প্যাকেজ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 61,
+  "category": "নিবন্ধন",
+  "variant": "সরকারি প্যাকেজ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 62,
+  "category": "নিবন্ধন",
+  "variant": "বেসরকারি প্যাকেজ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 63,
+  "category": "প্রতিস্থাপন",
+  "variant": "নমিনি পরিবর্তন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 64,
+  "category": "সনদ",
+  "variant": "টিকাদান",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 65,
+  "category": "সনদ",
+  "variant": "সংশোধন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 66,
+  "category": "স্বাস্থ্য কার্ড",
+  "variant": "প্রদান",
+  "validity": "5 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 67,
+  "category": "মেডিকেল বোর্ড",
+  "variant": "মূল্যায়ন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 68,
+  "category": "ক্লিয়ারেন্স",
+  "variant": "দেশীয় ব্যবহার",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 69,
+  "category": "ক্লিয়ারেন্স",
+  "variant": "বিদেশে ব্যবহার",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 70,
+  "category": "ক্লিয়ারেন্স",
+  "variant": "বিদেশে ব্যবহার",
+  "validity": "—",
+  "delivery": "এক্সপ্রেস"
+ },
+ {
+  "id": 71,
+  "category": "চরিত্র",
+  "variant": "সনদ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 72,
+  "category": "ভাড়াটিয়া",
+  "variant": "নিবন্ধন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 73,
+  "category": "নতুন",
+  "variant": "ক্ষুদ্র ব্যবসা",
+  "validity": "1 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 74,
+  "category": "নতুন",
+  "variant": "মাঝারি ব্যবসা",
+  "validity": "1 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 75,
+  "category": "নতুন",
+  "variant": "বৃহৎ ব্যবসা",
+  "validity": "1 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 76,
+  "category": "নবায়ন",
+  "variant": "ক্ষুদ্র ব্যবসা",
+  "validity": "1 বছর",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 77,
+  "category": "প্রতিলিপি",
+  "variant": "যেকোনো শ্রেণি",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 78,
+  "category": "দাবি",
+  "variant": "অবসর",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 79,
+  "category": "দাবি",
+  "variant": "পারিবারিক পেনশন",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 80,
+  "category": "সনদ",
+  "variant": "জীবিত থাকার সনদ",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ },
+ {
+  "id": 81,
+  "category": "প্রতিলিপি",
+  "variant": "বেতন বিবরণী",
+  "validity": "—",
+  "delivery": "নিয়মিত"
+ }
+]

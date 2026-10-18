@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("upgrade.bid_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("upgrade.bid_title")) }}
+{% if record %}
+<div class="notice notice-ok" role="status"><div>{{ t("upgrade.bid_done") }}</div></div>
+<dl class="summary" style="position:static;max-width:460px">
+  <dt>{{ t("form.reference") }}</dt><dd><strong>{{ record.reference_no }}</strong></dd>
+  <dt>{{ t("upgrade.your_bid") }}</dt><dd>{{ fmt_money(record.quoted_usd) }}</dd></dl>
+{% else %}
+<div class="notice {{ 'notice-info' if offer.allowed else 'notice-warn' }}"><div>{{ label }}</div></div>
+{% if offer.allowed %}
+<p>{{ t("upgrade.bid_intro", min=fmt_money(floor), offer=fmt_money(offer.detail.price_usd)) }}</p>
+{% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+<form class="searchform" method="post">
+  <input type="hidden" name="segment_id" value="{{ view.segment.id }}">
+  <div class="field"><label for="amount">{{ t("upgrade.your_bid") }}</label>
+    <input type="number" id="amount" name="amount" min="0" value="{{ floor | round | int }}"></div>
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("upgrade.place_bid") }}</button></div>
+</form>
+{% endif %}
+{% endif %}
+</div>{% endblock %}

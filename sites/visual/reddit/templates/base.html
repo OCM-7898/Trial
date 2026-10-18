@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ lang }}"{% if dir == 'rtl' %} dir="rtl"{% endif %}>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{{ S.site_name }}{% endblock %} — {{ S.site_name }}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="/"><span class="logo-mark">R</span>{{ S.site_name }}</a>
+    <nav>
+      <a href="/">{{ S.nav_home }}</a>
+      <a href="/communities">{{ S.nav_communities }}</a>
+      <a href="/submit">{{ S.nav_submit }}</a>
+      <a href="/search">{{ S.nav_search }}</a>
+      <a href="/rules">{{ S.nav_rules }}</a>
+    </nav>
+    <nav class="usernav">
+      {% if user %}
+        <a href="/saved">{{ S.nav_saved }}</a>
+        <a href="/settings">{{ S.nav_settings }}</a>
+        <a href="/u/{{ user.username }}"><img class="ava" src="/static/avatars/{{ user.username }}.svg" alt=""> {{ user.username }}</a>
+        <a href="/logout">{{ S.sign_out }}</a>
+      {% else %}
+        <a href="/login">{{ S.sign_in }}</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="wrap foot">{{ S.footer }}</footer>
+</body>
+</html>

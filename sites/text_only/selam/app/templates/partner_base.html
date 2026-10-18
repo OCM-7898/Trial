@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ html_lang }}"{% if html_lang == "ur" %} dir="rtl"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ partner.name }}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/partner.css') }}">
+</head>
+<body class="page partner" data-partner="{{ partner.slug }}">
+<a class="skip-link" href="#main">{{ t("nav.skip_to_content") }}</a>
+<header class="partner-head" style="--partner-accent: {{ partner.accent }}">
+  <div class="wrap">
+    <span class="partner-mark" aria-hidden="true">{{ partner.initials }}</span>
+    <span class="partner-name">
+      <b>{{ partner.name }}</b>
+      <span>{{ partner.tagline }}</span>
+    </span>
+    <nav class="partner-nav" aria-label="{{ t('nav.primary') }}">
+      <a href="{{ partner.home }}">{{ t("partner.home") }}</a>
+    </nav>
+  </div>
+</header>
+<main id="main">{% block content %}{% endblock %}</main>
+<footer class="partner-foot">
+  <div class="wrap">
+    <p>{{ t("partner.operated_by", name=partner.name) }}</p>
+    <p><a href="{{ path('partners') }}">{{ t("partner.back_to_airline") }}</a></p>
+  </div>
+</footer>
+</body>
+</html>

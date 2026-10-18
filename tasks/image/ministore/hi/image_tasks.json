@@ -1,0 +1,2188 @@
+[
+ {
+  "id": "image-ministore-001",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘Merrill क्वीन हेडबोर्ड, डेकोरेटिव नेलहेड ट्रिम के साथ’, ‘Bridgewater कर्व्ड क्वीन हेडबोर्ड’, ‘Glenwilde फुल हेडबोर्ड’, ‘Katama स्लिपकवर क्वीन हेडबोर्ड’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p921.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "7649.15",
+     "7,649.15",
+     "७६४९.१५",
+     "७,६४९.१५"
+    ],
+    "none_of": [
+     "8499.15",
+     "8,499.15",
+     "८४९९.१५",
+     "८,४९९.१५",
+     "10115.00",
+     "10,115.00",
+     "१०११५.००",
+     "१०,११५.००",
+     "10965.00",
+     "10,965.00",
+     "१०९६५.००",
+     "१०,९६५.००"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Glenwilde%20%E0%A4%AB%E0%A5%81%E0%A4%B2%20%E0%A4%B9%E0%A5%87%E0%A4%A1%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%A1",
+   "view 0",
+   "goto /product/1112",
+   "goto /product/919",
+   "goto /product/921",
+   "goto /product/867",
+   "stop 7649.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-002",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘Lawson मॉडर्न एंगल्ड लेदर चेयर’, ‘आर्मलेस टफ्टेड टर्न्ड लकड़ी के पायों वाली एक्सेंट चेयर’, ‘Cheyanne मॉडर्न एक्सेंट आर्म चेयर’, ‘कर्व्ड टफ्टेड वेलवेट एक्सेंट चेयर’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p980.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12665.00",
+     "12,665.00",
+     "१२६६५.००",
+     "१२,६६५.००"
+    ],
+    "none_of": [
+     "21165.00",
+     "21,165.00",
+     "२११६५.००",
+     "२१,१६५.००",
+     "10965.00",
+     "10,965.00",
+     "१०९६५.००",
+     "१०,९६५.००",
+     "9265.00",
+     "9,265.00",
+     "९२६५.००",
+     "९,२६५.००"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cheyanne%20%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B0%E0%A5%8D%E0%A4%A8%20%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%86%E0%A4%B0%E0%A5%8D%E0%A4%AE%20%E0%A4%9A%E0%A5%87%E0%A4%AF%E0%A4%B0",
+   "view 0",
+   "goto /product/920",
+   "goto /product/874",
+   "goto /product/980",
+   "goto /product/953",
+   "stop 12665.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-003",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘Avondale नेलहेड ट्रिम क्वीन बेड, हेडबोर्ड के साथ’, ‘कॉलेज डॉर्म बेड-इन-अ-बैग, इलास्टिक स्टोरेज पॉकेट के साथ’, ‘Fairmount इंडस्ट्रियल धातु किंग बेड, हेडबोर्ड के साथ’, ‘मॉडर्न लकड़ी का किंग बेड’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p1113.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "19465.00",
+     "19,465.00",
+     "१९४६५.००",
+     "१९,४६५.००"
+    ],
+    "none_of": [
+     "33915.00",
+     "33,915.00",
+     "३३९१५.००",
+     "३३,९१५.००",
+     "5949.15",
+     "5,949.15",
+     "५९४९.१५",
+     "५,९४९.१५",
+     "25415.00",
+     "25,415.00",
+     "२५४१५.००",
+     "२५,४१५.००"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Fairmount%20%E0%A4%87%E0%A4%82%E0%A4%A1%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%B2%20%E0%A4%A7%E0%A4%BE%E0%A4%A4%E0%A5%81%20%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AC%E0%A5%87%E0%A4%A1%2C%20%E0%A4%B9%E0%A5%87%E0%A4%A1%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%A1%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/1081",
+   "goto /product/1002",
+   "goto /product/1113",
+   "goto /product/1127",
+   "stop 19465.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-004",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘एलिवेटेड कूलिंग पेट बेड क्लासिक’, ‘गोल पेट बेड’, ‘रेज़्ड पेट बेड’, ‘फोम पेट बेड, बिल्लियों या कुत्तों के लिए’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p2003.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2549.15",
+     "2,549.15",
+     "२५४९.१५",
+     "२,५४९.१५"
+    ],
+    "none_of": [
+     "1699.15",
+     "1,699.15",
+     "१६९९.१५",
+     "१,६९९.१५",
+     "1954.15",
+     "1,954.15",
+     "१९५४.१५",
+     "१,९५४.१५",
+     "1274.15",
+     "1,274.15",
+     "१२७४.१५",
+     "१,२७४.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%8F%E0%A4%B2%E0%A4%BF%E0%A4%B5%E0%A5%87%E0%A4%9F%E0%A5%87%E0%A4%A1%20%E0%A4%95%E0%A5%82%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A5%87%E0%A4%9F%20%E0%A4%AC%E0%A5%87%E0%A4%A1%20%E0%A4%95%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%B8%E0%A4%BF%E0%A4%95",
+   "view 0",
+   "goto /product/2003",
+   "goto /product/1958",
+   "goto /product/1974",
+   "goto /product/1775",
+   "stop 2549.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-005",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘गेमिंग चैट हेडसेट, PlayStation 4 के लिए, माइक्रोफ़ोन के साथ’, ‘PlayStation 3 वायर्ड यूएसबी चैट हेडसेट’, ‘गेमिंग हेडसेट, माइक्रोफ़ोन के साथ, PC के लिए’, ‘प्रो गेमिंग हेडसेट’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p240.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1699.15",
+     "1,699.15",
+     "१६९९.१५",
+     "१,६९९.१५"
+    ],
+    "none_of": [
+     "2124.15",
+     "2,124.15",
+     "२१२४.१५",
+     "२,१२४.१५",
+     "1104.15",
+     "1,104.15",
+     "११०४.१५",
+     "१,१०४.१५",
+     "3399.15",
+     "3,399.15",
+     "३३९९.१५",
+     "३,३९९.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%97%E0%A5%87%E0%A4%AE%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%B9%E0%A5%87%E0%A4%A1%E0%A4%B8%E0%A5%87%E0%A4%9F%2C%20%E0%A4%AE%E0%A4%BE%E0%A4%87%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A5%8B%E0%A4%A8%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5%2C%20PC%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F",
+   "view 0",
+   "goto /product/86",
+   "goto /product/74",
+   "goto /product/240",
+   "goto /product/171",
+   "stop 1699.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-006",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘माइक्रोफ़ाइबर फ्लैट शीट’, ‘प्रीमियम माइक्रोफ़ाइबर फ्लैट शीट’, ‘400 थ्रेड काउंट शीट सेट’, ‘400TC सूती सैटिन रिंकल फ्री फ्लैट शीट’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p1096.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1019.15",
+     "1,019.15",
+     "१०१९.१५",
+     "१,०१९.१५"
+    ],
+    "none_of": [
+     "1104.15",
+     "1,104.15",
+     "११०४.१५",
+     "१,१०४.१५",
+     "2974.15",
+     "2,974.15",
+     "२९७४.१५",
+     "२,९७४.१५",
+     "2379.15",
+     "2,379.15",
+     "२३७९.१५",
+     "२,३७९.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%BF%E0%A4%AF%E0%A4%AE%20%E0%A4%AE%E0%A4%BE%E0%A4%87%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A4%BE%E0%A4%87%E0%A4%AC%E0%A4%B0%20%E0%A4%AB%E0%A5%8D%E0%A4%B2%E0%A5%88%E0%A4%9F%20%E0%A4%B6%E0%A5%80%E0%A4%9F",
+   "view 0",
+   "goto /product/1176",
+   "goto /product/1096",
+   "goto /product/1118",
+   "goto /product/1202",
+   "stop 1019.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-007",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘बड़ा कैट स्क्रैचिंग पोस्ट ट्री टावर, प्लेटफ़ॉर्म बेड के साथ’, ‘मल्टी प्लेटफ़ॉर्म स्टेप्स कैट ट्री टावर’, ‘छोटा कैट ट्री टावर, कॉन्डो और स्क्रैचिंग पोस्ट के साथ’, ‘बिल्ली का ट्री, सिसल स्क्रैचिंग पोस्ट और प्लश कॉन्डो वाला टावर’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p1873.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3824.15",
+     "3,824.15",
+     "३८२४.१५",
+     "३,८२४.१५"
+    ],
+    "none_of": [
+     "5949.15",
+     "5,949.15",
+     "५९४९.१५",
+     "५,९४९.१५",
+     "4674.15",
+     "4,674.15",
+     "४६७४.१५",
+     "४,६७४.१५",
+     "5524.15",
+     "5,524.15",
+     "५५२४.१५",
+     "५,५२४.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%9B%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A5%88%E0%A4%9F%20%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%9F%E0%A4%BE%E0%A4%B5%E0%A4%B0%2C%20%E0%A4%95%E0%A5%89%E0%A4%A8%E0%A5%8D%E0%A4%A1%E0%A5%8B%20%E0%A4%94%E0%A4%B0%20%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%88%E0%A4%9A%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A5%8B%E0%A4%B8%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/1813",
+   "goto /product/1847",
+   "goto /product/1873",
+   "goto /product/1996",
+   "stop 3824.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-008",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘व्हाइट बोर्ड मार्कर सेट’, ‘रिट्रैक्टेबल परमानेंट मार्कर’, ‘बुलेट/चिज़ल रिवर्सिबल टिप चॉक मार्कर’, ‘व्हाइटबोर्ड मार्कर सेट’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p2093.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "679.15",
+     "६७९.१५"
+    ],
+    "none_of": [
+     "636.65",
+     "६३६.६५",
+     "764.15",
+     "७६४.१५",
+     "594.15",
+     "५९४.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A5%87%E0%A4%9F/%E0%A4%9A%E0%A4%BF%E0%A4%9C%E0%A4%BC%E0%A4%B2%20%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%B8%E0%A4%BF%E0%A4%AC%E0%A4%B2%20%E0%A4%9F%E0%A4%BF%E0%A4%AA%20%E0%A4%9A%E0%A5%89%E0%A4%95%20%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A4%B0",
+   "view 0",
+   "goto /product/2185",
+   "goto /product/2101",
+   "goto /product/2093",
+   "goto /product/2171",
+   "stop 679.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-009",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘गुलाबी टेडी 3.5 फुट, खड़ा क्लासिक’, ‘बेज टेडी 3.5 फुट, खड़ा - फैमिली साइज़’, ‘क्रीम टेडी 60 सेमी क्लासिक’, ‘भूरा टेडी 3.5 फुट, खड़ा - कॉम्पैक्ट’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p1724.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2974.15",
+     "2,974.15",
+     "२९७४.१५",
+     "२,९७४.१५"
+    ],
+    "none_of": [
+     "3824.15",
+     "3,824.15",
+     "३८२४.१५",
+     "३,८२४.१५",
+     "5524.15",
+     "5,524.15",
+     "५५२४.१५",
+     "५,५२४.१५",
+     "1104.15",
+     "1,104.15",
+     "११०४.१५",
+     "१,१०४.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AD%E0%A5%82%E0%A4%B0%E0%A4%BE%20%E0%A4%9F%E0%A5%87%E0%A4%A1%E0%A5%80%203.5%20%E0%A4%AB%E0%A5%81%E0%A4%9F%2C%20%E0%A4%96%E0%A4%A1%E0%A4%BC%E0%A4%BE%20-%20%E0%A4%95%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A5%88%E0%A4%95%E0%A5%8D%E0%A4%9F",
+   "view 0",
+   "goto /product/1663",
+   "goto /product/1734",
+   "goto /product/1661",
+   "goto /product/1724",
+   "stop 2974.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-010",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘160 ग्राम प्लेड फ्लैनल सूती डुवे कवर’, ‘एसेंशियल्स माइक्रोफ़ाइबर डुवे कवर सेट’, ‘100% लिनन डुवे कवर सेट - 135x200+1x80x80 सेमी’, ‘किड्स प्रिंटेड मल्टी डॉट्स फुल/क्वीन डुवे कवर’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p1006.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1529.15",
+     "1,529.15",
+     "१५२९.१५",
+     "१,५२९.१५"
+    ],
+    "none_of": [
+     "4164.15",
+     "4,164.15",
+     "४१६४.१५",
+     "४,१६४.१५",
+     "7565.00",
+     "7,565.00",
+     "७५६५.००",
+     "७,५६५.००",
+     "2124.15",
+     "2,124.15",
+     "२१२४.१५",
+     "२,१२४.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%8F%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%B6%E0%A4%BF%E0%A4%AF%E0%A4%B2%E0%A5%8D%E0%A4%B8%20%E0%A4%AE%E0%A4%BE%E0%A4%87%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A4%BE%E0%A4%87%E0%A4%AC%E0%A4%B0%20%E0%A4%A1%E0%A5%81%E0%A4%B5%E0%A5%87%20%E0%A4%95%E0%A4%B5%E0%A4%B0%20%E0%A4%B8%E0%A5%87%E0%A4%9F",
+   "view 0",
+   "goto /product/1137",
+   "goto /product/1006",
+   "goto /product/929",
+   "goto /product/984",
+   "stop 1529.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-011",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘ट्रेडिशनल डाइनिंग टेबल 29\"H’, ‘Parson लकड़ी की साइड एंड टेबल’, ‘Eastport इंडस्ट्रियल लकड़ी की नाइटस्टैंड टेबल’, ‘Tucana इंजीनियर्ड लकड़ी की बेडसाइड टेबल, दराज़ के साथ’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1248.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1248
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1166
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 923
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 986
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Eastport%20%E0%A4%87%E0%A4%82%E0%A4%A1%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%B2%20%E0%A4%B2%E0%A4%95%E0%A4%A1%E0%A4%BC%E0%A5%80%20%E0%A4%95%E0%A5%80%20%E0%A4%A8%E0%A4%BE%E0%A4%87%E0%A4%9F%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%88%E0%A4%82%E0%A4%A1%20%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2",
+   "view 0",
+   "goto /product/1166",
+   "goto /product/923",
+   "goto /product/1248",
+   "goto /product/986",
+   "goto /product/1248",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-012",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘मॉडर्न फ़ार्महाउस लकड़ी के बेस वाला एडजस्टेबल लिविंग रूम फ्लोर लैंप’, ‘एक्सेंट बेडरूम टेबल लैंप, एलईडी बल्ब के साथ’, ‘रस्टिक फ़ार्महाउस जग लिविंग रूम टेबल लैंप, एलईडी बल्ब के साथ’, ‘मॉडर्न सिरेमिक टेबल लैंप, ज्यामितीय-पैटर्न बेस के साथ’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1042.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1042
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1135
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1054
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%AC%E0%A5%87%E0%A4%A1%E0%A4%B0%E0%A5%82%E0%A4%AE%20%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2%20%E0%A4%B2%E0%A5%88%E0%A4%82%E0%A4%AA%2C%20%E0%A4%8F%E0%A4%B2%E0%A4%88%E0%A4%A1%E0%A5%80%20%E0%A4%AC%E0%A4%B2%E0%A5%8D%E0%A4%AC%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/1135",
+   "goto /product/1042",
+   "goto /product/1200",
+   "goto /product/1054",
+   "goto /product/1042",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-013",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘Strathwood छतरी फ़र्नीचर कवर’, ‘गोल पेटियो फ़ायर पिट कवर’, ‘फ़ायर पिट पेटियो कवर’, ‘गैस ग्रिल बारबेक्यू कवर’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1376.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1496
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1382
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%AB%E0%A4%BC%E0%A4%BE%E0%A4%AF%E0%A4%B0%20%E0%A4%AA%E0%A4%BF%E0%A4%9F%20%E0%A4%AA%E0%A5%87%E0%A4%9F%E0%A4%BF%E0%A4%AF%E0%A5%8B%20%E0%A4%95%E0%A4%B5%E0%A4%B0",
+   "view 0",
+   "goto /product/1496",
+   "goto /product/1382",
+   "goto /product/1376",
+   "goto /product/1304",
+   "goto /product/1376",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-014",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘Truve मॉडर्न स्टडेड ओटोमन’, ‘Audrey मॉडर्न ओटोमन’, ‘मॉडर्न ओवरसाइज़्ड अपहोल्स्टर्ड चौकोर ओटोमन’, ‘Strathwood Brooklyn लेदर ओटोमन’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p906.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 906
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1107
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 990
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1171
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Truve%20%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B0%E0%A5%8D%E0%A4%A8%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%A1%E0%A5%87%E0%A4%A1%20%E0%A4%93%E0%A4%9F%E0%A5%8B%E0%A4%AE%E0%A4%A8",
+   "view 0",
+   "goto /product/906",
+   "goto /product/1107",
+   "goto /product/990",
+   "goto /product/1171",
+   "goto /product/906",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-015",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘Alaina कंटेम्पररी लेदर हाई-बैक स्विवल सीट काउंटर स्टूल’, ‘Alaina कंटेम्पररी हाई-बैक स्टूल’, ‘मॉडर्न प्लश हाई-पाइल शैग एरिया रग’, ‘Celinda टफ्टेड हाई-बैक बारस्टूल’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1164.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 896
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 972
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 946
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alaina%20%E0%A4%95%E0%A4%82%E0%A4%9F%E0%A5%87%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%B0%E0%A4%B0%E0%A5%80%20%E0%A4%B2%E0%A5%87%E0%A4%A6%E0%A4%B0%20%E0%A4%B9%E0%A4%BE%E0%A4%88-%E0%A4%AC%E0%A5%88%E0%A4%95%20%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%B2%20%E0%A4%B8%E0%A5%80%E0%A4%9F%20%E0%A4%95%E0%A4%BE%E0%A4%89%E0%A4%82%E0%A4%9F%E0%A4%B0%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%82%E0%A4%B2",
+   "view 0",
+   "goto /product/1164",
+   "goto /product/896",
+   "goto /product/972",
+   "goto /product/946",
+   "goto /product/1164",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-016",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘कंटेम्पररी स्ट्रिएटेड जूट एरिया रग’, ‘मॉडर्न वेव कॉस्मोपॉलिटन एरिया रग’, ‘बुना बॉर्डर वाला सिसल एरिया रग’, ‘गुलाबी ग्लोबल फ्लोरल ऊनी रग’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1048.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1048
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1069
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 882
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 898
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%AC%E0%A5%81%E0%A4%A8%E0%A4%BE%20%E0%A4%AC%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%A1%E0%A4%B0%20%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%B8%E0%A4%BF%E0%A4%B8%E0%A4%B2%20%E0%A4%8F%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%BE%20%E0%A4%B0%E0%A4%97",
+   "view 0",
+   "goto /product/1069",
+   "goto /product/882",
+   "goto /product/1048",
+   "goto /product/898",
+   "goto /product/1048",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-017",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘पेट केव बेड’, ‘फोल्डेबल क्यूब कैट बेड’, ‘कडलर पेट बेड’, ‘एसेंशियल नरम और आरामदायक बोल्स्टर लाउंज डॉग बेड’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1833.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1833
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1932
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1857
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1933
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%AB%E0%A5%8B%E0%A4%B2%E0%A5%8D%E0%A4%A1%E0%A5%87%E0%A4%AC%E0%A4%B2%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A5%82%E0%A4%AC%20%E0%A4%95%E0%A5%88%E0%A4%9F%20%E0%A4%AC%E0%A5%87%E0%A4%A1",
+   "view 0",
+   "goto /product/1932",
+   "goto /product/1833",
+   "goto /product/1857",
+   "goto /product/1933",
+   "goto /product/1833",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-018",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘प्लास्टिक शॉट ग्लास’, ‘शैटरप्रूफ स्टेमलेस वाइन ग्लास’, ‘Nia हाईबॉल ग्लास सेट’, ‘इलेक्ट्रिक कांच और स्टील केतली’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p580.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 580
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 485
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 445
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 512
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Nia%20%E0%A4%B9%E0%A4%BE%E0%A4%88%E0%A4%AC%E0%A5%89%E0%A4%B2%20%E0%A4%97%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%B8%E0%A5%87%E0%A4%9F",
+   "view 0",
+   "goto /product/485",
+   "goto /product/445",
+   "goto /product/580",
+   "goto /product/512",
+   "goto /product/580",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-019",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘Olander मिड-सेंचुरी मॉडर्न रिक्लाइनर चेयर, स्विवल बेस के साथ’, ‘मिड-सेंचुरी मॉडर्न ब्रास ट्रिम्ड टेबल लैंप, एलईडी बल्ब के साथ’, ‘Uptown मिड-सेंचुरी टफ्टेड कस्टमाइज़ेबल डेबेड सोफ़ा’, ‘Ava मिड-सेंचुरी मॉडर्न अपहोल्स्टर्ड ओटोमन’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1065.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1065
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1007
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1090
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 851
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ava%20%E0%A4%AE%E0%A4%BF%E0%A4%A1-%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9A%E0%A5%81%E0%A4%B0%E0%A5%80%20%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B0%E0%A5%8D%E0%A4%A8%20%E0%A4%85%E0%A4%AA%E0%A4%B9%E0%A5%8B%E0%A4%B2%E0%A5%8D%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0%E0%A5%8D%E0%A4%A1%20%E0%A4%93%E0%A4%9F%E0%A5%8B%E0%A4%AE%E0%A4%A8",
+   "view 0",
+   "goto /product/1007",
+   "goto /product/1090",
+   "goto /product/851",
+   "goto /product/1065",
+   "goto /product/1065",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-020",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘Aiden टफ्टेड मिड-सेंचुरी वेलवेट बेंच सीट सोफ़ा’, ‘मिड-सेंचुरी मॉडर्न सफ़ेद मार्बल और धातु साइड एंड टेबल’, ‘Uptown मिड-सेंचुरी मॉडर्न टफ्टेड वेलवेट डेबेड लवसीट’, ‘मिड-सेंचुरी स्विवल चेयर’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1229.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1229
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 934
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1106
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 950
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Aiden%20%E0%A4%9F%E0%A4%AB%E0%A5%8D%E0%A4%9F%E0%A5%87%E0%A4%A1%20%E0%A4%AE%E0%A4%BF%E0%A4%A1-%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9A%E0%A5%81%E0%A4%B0%E0%A5%80%20%E0%A4%B5%E0%A5%87%E0%A4%B2%E0%A4%B5%E0%A5%87%E0%A4%9F%20%E0%A4%AC%E0%A5%87%E0%A4%82%E0%A4%9A%20%E0%A4%B8%E0%A5%80%E0%A4%9F%20%E0%A4%B8%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A4%BE",
+   "view 0",
+   "goto /product/1229",
+   "goto /product/934",
+   "goto /product/1106",
+   "goto /product/950",
+   "goto /product/1229",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-021",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '३१० एल्म रोड, मैडिसन, ५३७०३' पर भिजवाएँ। यह इनमें से एक है: ‘भूरा टेडी 60 सेमी - फैमिली साइज़’, ‘गुलाबी टेडी 33 सेमी ट्विन पैक’, ‘क्रीम टेडी 33 सेमी - फैमिली साइज़’, ‘बेज टेडी 3.5 फुट, खड़ा क्लासिक’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1746.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%३१० एल्म रोड, मैडिसन, ५३७०३%",
+    "items": {
+     "1746": 1
+    },
+    "total": 2124.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1683
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1743
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1650
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%AD%E0%A5%82%E0%A4%B0%E0%A4%BE%20%E0%A4%9F%E0%A5%87%E0%A4%A1%E0%A5%80%2060%20%E0%A4%B8%E0%A5%87%E0%A4%AE%E0%A5%80%20-%20%E0%A4%AB%E0%A5%88%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A5%80%20%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9C%E0%A4%BC",
+   "view 0",
+   "goto /product/1746",
+   "goto /product/1683",
+   "goto /product/1743",
+   "goto /product/1650",
+   "goto /product/1746",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=३१० एल्म रोड, मैडिसन, ५३७०३",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-022",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '४१ मेपल स्ट्रीट, रीनो, ८९५०१' पर भिजवाएँ। यह इनमें से एक है: ‘मॉडर्न ज्यामितीय सिरेमिक प्लांटर’, ‘गोल वॉल माउंट प्लांटर’, ‘रिसाइकल्ड लकड़ी का डेक हैंगिंग प्लांटर’, ‘मीडियम विंडोपेन फुटेड स्टोनवेयर प्लांटर’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1297.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%४१ मेपल स्ट्रीट, रीनो, ८९५०१%",
+    "items": {
+     "1297": 1
+    },
+    "total": 2124.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1357
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1480
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1263
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%B0%E0%A4%BF%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%A1%20%E0%A4%B2%E0%A4%95%E0%A4%A1%E0%A4%BC%E0%A5%80%20%E0%A4%95%E0%A4%BE%20%E0%A4%A1%E0%A5%87%E0%A4%95%20%E0%A4%B9%E0%A5%88%E0%A4%82%E0%A4%97%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%82%E0%A4%9F%E0%A4%B0",
+   "view 0",
+   "goto /product/1357",
+   "goto /product/1480",
+   "goto /product/1297",
+   "goto /product/1263",
+   "goto /product/1297",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=४१ मेपल स्ट्रीट, रीनो, ८९५०१",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-023",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '६८ विलो ड्राइव, बॉइज़ी, ८३७०२' पर भिजवाएँ। यह इनमें से एक है: ‘100% स्टोनवेयर प्लांटर’, ‘विकर प्लांटर, ट्रेलिस के साथ’, ‘टेराज़ो प्लांटर, लकड़ी के स्टैंड के साथ’, ‘ज्यामितीय सिरेमिक प्लांटर’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1383.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%६८ विलो ड्राइव, बॉइज़ी, ८३७०२%",
+    "items": {
+     "1383": 1
+    },
+    "total": 1529.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1261
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1283
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1371
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=100%25%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8B%E0%A4%A8%E0%A4%B5%E0%A5%87%E0%A4%AF%E0%A4%B0%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%82%E0%A4%9F%E0%A4%B0",
+   "view 0",
+   "goto /product/1383",
+   "goto /product/1261",
+   "goto /product/1283",
+   "goto /product/1371",
+   "goto /product/1383",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=६८ विलो ड्राइव, बॉइज़ी, ८३७०२",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-024",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '७ जूनिपर एवेन्यू, सेलम, ९७३०१' पर भिजवाएँ। यह इनमें से एक है: ‘क्रीम टेडी 33 सेमी’, ‘बेज टेडी 3.5 फुट, खड़ा’, ‘भूरा टेडी 3.5 फुट, खड़ा’, ‘गुलाबी टेडी 33 सेमी’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1640.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%७ जूनिपर एवेन्यू, सेलम, ९७३०१%",
+    "items": {
+     "1640": 1
+    },
+    "total": 3824.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1631
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1622
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1627
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%AD%E0%A5%82%E0%A4%B0%E0%A4%BE%20%E0%A4%9F%E0%A5%87%E0%A4%A1%E0%A5%80%203.5%20%E0%A4%AB%E0%A5%81%E0%A4%9F%2C%20%E0%A4%96%E0%A4%A1%E0%A4%BC%E0%A4%BE",
+   "view 0",
+   "goto /product/1631",
+   "goto /product/1622",
+   "goto /product/1640",
+   "goto /product/1627",
+   "goto /product/1640",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=७ जूनिपर एवेन्यू, सेलम, ९७३०१",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-025",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१' पर भिजवाएँ। यह इनमें से एक है: ‘बेज टेडी 3.5 फुट, खड़ा - कॉम्पैक्ट’, ‘क्रीम टेडी 33 सेमी ट्विन पैक’, ‘भूरा टेडी 60 सेमी ट्विन पैक’, ‘गुलाबी टेडी 60 सेमी - फैमिली साइज़’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1690.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१%",
+    "items": {
+     "1690": 1
+    },
+    "total": 2804.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1706
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1687
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1732
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%AD%E0%A5%82%E0%A4%B0%E0%A4%BE%20%E0%A4%9F%E0%A5%87%E0%A4%A1%E0%A5%80%2060%20%E0%A4%B8%E0%A5%87%E0%A4%AE%E0%A5%80%20%E0%A4%9F%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%A8%20%E0%A4%AA%E0%A5%88%E0%A4%95",
+   "view 0",
+   "goto /product/1706",
+   "goto /product/1687",
+   "goto /product/1690",
+   "goto /product/1732",
+   "goto /product/1690",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-026",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '२६ पॉपलर लेन, फ़्रेस्नो, ९३६५०' पर भिजवाएँ। यह इनमें से एक है: ‘एक्स्ट्रा मोटी एक्सरसाइज़ योगा जिम फ्लोर मैट, कैरिंग स्ट्रैप के साथ’, ‘1.27 सेमी मोटी योगा मैट 6 पीस सेट’, ‘TPE योगा मैट’, ‘TPE और स्वेड योगा मैट’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p684.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%२६ पॉपलर लेन, फ़्रेस्नो, ९३६५०%",
+    "items": {
+     "684": 1
+    },
+    "total": 1699.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 818
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 682
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 706
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BE%20%E0%A4%AE%E0%A5%8B%E0%A4%9F%E0%A5%80%20%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9C%E0%A4%BC%20%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%AE%20%E0%A4%AB%E0%A5%8D%E0%A4%B2%E0%A5%8B%E0%A4%B0%20%E0%A4%AE%E0%A5%88%E0%A4%9F%2C%20%E0%A4%95%E0%A5%88%E0%A4%B0%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%88%E0%A4%AA%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/684",
+   "goto /product/818",
+   "goto /product/682",
+   "goto /product/706",
+   "goto /product/684",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=२६ पॉपलर लेन, फ़्रेस्नो, ९३६५०",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-027",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '८८ लॉरेल स्ट्रीट, टक्सन, ८५७०१' पर भिजवाएँ। यह इनमें से एक है: ‘Malida मिड-सेंचुरी मॉडर्न ओपन बैक स्विवल किचन बार स्टूल’, ‘Aiden मिड-सेंचुरी सोफ़ा, टेपर्ड लकड़ी के पायों के साथ’, ‘Ray मिड-सेंचुरी मॉडर्न किचन डाइनिंग रूम चेयर’, ‘मिड-सेंचुरी मॉडर्न डबल सर्कल प्लग-इन हैंगिंग पेंडेंट’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p910.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%८८ लॉरेल स्ट्रीट, टक्सन, ८५७०१%",
+    "items": {
+     "910": 1
+    },
+    "total": 6799.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1155
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1077
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 904
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Malida%20%E0%A4%AE%E0%A4%BF%E0%A4%A1-%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9A%E0%A5%81%E0%A4%B0%E0%A5%80%20%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B0%E0%A5%8D%E0%A4%A8%20%E0%A4%93%E0%A4%AA%E0%A4%A8%20%E0%A4%AC%E0%A5%88%E0%A4%95%20%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%B2%20%E0%A4%95%E0%A4%BF%E0%A4%9A%E0%A4%A8%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%82%E0%A4%B2",
+   "view 0",
+   "goto /product/910",
+   "goto /product/1155",
+   "goto /product/1077",
+   "goto /product/904",
+   "goto /product/910",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=८८ लॉरेल स्ट्रीट, टक्सन, ८५७०१",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-028",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '१३ सिकामोर रोड, एक्रन, ४४३०१' पर भिजवाएँ। यह इनमें से एक है: ‘Corona मैगज़ीन टेबल’, ‘मॉडर्न गोल धातु साइड एंड एक्सेंट टेबल’, ‘Ian मॉडर्न मीडियम डाइनिंग किचन टेबल’, ‘Phoenix Home ग्रेनाइट गोल प्लास्टिक बार हाइट फोल्डिंग टेबल’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p1243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%१३ सिकामोर रोड, एक्रन, ४४३०१%",
+    "items": {
+     "1243": 1
+    },
+    "total": 13515.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 967
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1125
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1046
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ian%20%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B0%E0%A5%8D%E0%A4%A8%20%E0%A4%AE%E0%A5%80%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A4%AE%20%E0%A4%A1%E0%A4%BE%E0%A4%87%E0%A4%A8%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%95%E0%A4%BF%E0%A4%9A%E0%A4%A8%20%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2",
+   "view 0",
+   "goto /product/967",
+   "goto /product/1125",
+   "goto /product/1243",
+   "goto /product/1046",
+   "goto /product/1243",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=१३ सिकामोर रोड, एक्रन, ४४३०१",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-029",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "फ़ोटो में दिखाया गया उत्पाद कौन-सा ब्रांड बेचता है? यह इनमें से एक है: ‘Movian Aero कॉफ़ी टेबल’, ‘इंडस्ट्रियल डेस्क टेबल’, ‘Parker गोल शेल्फ़ स्टोरेज कॉफ़ी टेबल’, ‘इंडस्ट्रियल कैफ़े टेबल’।",
+  "image": "sites/visual/ministore/static/img/products/p1196.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ravenna Home"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Parker%20%E0%A4%97%E0%A5%8B%E0%A4%B2%20%E0%A4%B6%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AB%E0%A4%BC%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%8B%E0%A4%B0%E0%A5%87%E0%A4%9C%20%E0%A4%95%E0%A5%89%E0%A4%AB%E0%A4%BC%E0%A5%80%20%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2",
+   "view 0",
+   "goto /product/1017",
+   "goto /product/1040",
+   "goto /product/1196",
+   "goto /product/1059",
+   "stop Ravenna Home"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-030",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "फ़ोटो में दिखाया गया उत्पाद कौन-सा ब्रांड बेचता है? यह इनमें से एक है: ‘एसेंशियल्स फोम ब्रश सेट, 6 पीस, स्टैम्प पेंटर - ट्रैवल एडिशन’, ‘पेंगुइन ओपन आइज़, ऐश - ट्रैवल एडिशन’, ‘12\" Wild Onez बाघ ट्रैवल एडिशन’, ‘पुट्टी स्लाइम 4\" टिन - ट्रैवल एडिशन’।",
+  "image": "sites/visual/ministore/static/img/products/p1764.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Umi."
+    ],
+    "none_of": [
+     "Amazon Brand - Jam & Honey",
+     "Amazon Brand - Jam and Honey",
+     "AmazonBasics"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%8F%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%B6%E0%A4%BF%E0%A4%AF%E0%A4%B2%E0%A5%8D%E0%A4%B8%20%E0%A4%AB%E0%A5%8B%E0%A4%AE%20%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%B6%20%E0%A4%B8%E0%A5%87%E0%A4%9F%2C%206%20%E0%A4%AA%E0%A5%80%E0%A4%B8%2C%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%88%E0%A4%AE%E0%A5%8D%E0%A4%AA%20%E0%A4%AA%E0%A5%87%E0%A4%82%E0%A4%9F%E0%A4%B0%20-%20%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%88%E0%A4%B5%E0%A4%B2%20%E0%A4%8F%E0%A4%A1%E0%A4%BF%E0%A4%B6%E0%A4%A8",
+   "view 0",
+   "goto /product/1764",
+   "goto /product/1763",
+   "goto /product/1761",
+   "goto /product/1756",
+   "stop Umi."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-031",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "फ़ोटो में दिखाया गया उत्पाद कौन-सा ब्रांड बेचता है? यह इनमें से एक है: ‘Topstar 70570BB00 स्विवल चेयर, बच्चों और किशोरों के लिए, हाई बैक’, ‘Dunford कैज़ुअल रोल्ड आर्म चेयर’, ‘Bayard कंटेम्पररी लेदर लिविंग रूम चेयर, कर्व्ड बैक के साथ’, ‘Cedar अपहोल्स्टर्ड एक्सेंट चेयर, नेलहेड के साथ’।",
+  "image": "sites/visual/ministore/static/img/products/p983.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Stone & Beam"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Rivet",
+     "Top Star"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cedar%20%E0%A4%85%E0%A4%AA%E0%A4%B9%E0%A5%8B%E0%A4%B2%E0%A5%8D%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0%E0%A5%8D%E0%A4%A1%20%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%9A%E0%A5%87%E0%A4%AF%E0%A4%B0%2C%20%E0%A4%A8%E0%A5%87%E0%A4%B2%E0%A4%B9%E0%A5%87%E0%A4%A1%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/959",
+   "goto /product/1074",
+   "goto /product/944",
+   "goto /product/983",
+   "stop Stone & Beam"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-032",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "फ़ोटो में दिखाया गया उत्पाद कौन-सा ब्रांड बेचता है? यह इनमें से एक है: ‘Ross मॉडर्न फ़ैब्रिक लिफ्ट-टॉप स्टोरेज ओटोमन पूफ़’, ‘Movian Aggol लिफ्ट-टॉप कॉफ़ी टेबल’, ‘Alkove Hayes लिफ्ट-टॉप ठोस लकड़ी की कॉफ़ी टेबल, 1 दराज़ के साथ’।",
+  "image": "sites/visual/ministore/static/img/products/p870.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Alkove"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Alkove%20Hayes%20%E0%A4%B2%E0%A4%BF%E0%A4%AB%E0%A5%8D%E0%A4%9F-%E0%A4%9F%E0%A5%89%E0%A4%AA%20%E0%A4%A0%E0%A5%8B%E0%A4%B8%20%E0%A4%B2%E0%A4%95%E0%A4%A1%E0%A4%BC%E0%A5%80%20%E0%A4%95%E0%A5%80%20%E0%A4%95%E0%A5%89%E0%A4%AB%E0%A4%BC%E0%A5%80%20%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2%2C%201%20%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BC%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/1020",
+   "goto /product/979",
+   "goto /product/870",
+   "stop Alkove"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-033",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "फ़ोटो में दिखाया गया उत्पाद कौन-सा ब्रांड बेचता है? यह इनमें से एक है: ‘एसेंशियल्स स्टैंड, Apple Watch चार्जर के लिए’, ‘FITUEYES PS304003WB प्रिंटर स्टैंड’, ‘एडजस्टेबल टैबलेट होल्डर स्टैंड’।",
+  "image": "sites/visual/ministore/static/img/products/p291.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonBasics"
+    ],
+    "none_of": [
+     "Eono",
+     "Unbranded"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%8F%E0%A4%A1%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2%20%E0%A4%9F%E0%A5%88%E0%A4%AC%E0%A4%B2%E0%A5%87%E0%A4%9F%20%E0%A4%B9%E0%A5%8B%E0%A4%B2%E0%A5%8D%E0%A4%A1%E0%A4%B0%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%88%E0%A4%82%E0%A4%A1",
+   "view 0",
+   "goto /product/206",
+   "goto /product/230",
+   "goto /product/291",
+   "stop AmazonBasics"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-034",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "फ़ोटो में दिखाया गया उत्पाद कौन-सा ब्रांड बेचता है? यह इनमें से एक है: ‘प्रीमियम बेड पिलो’, ‘इंडस्ट्रियल लेदर डिटेल थ्रो पिलो’, ‘विंटेज थ्रो पिलो’।",
+  "image": "sites/visual/ministore/static/img/products/p1215.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%BF%E0%A4%AF%E0%A4%AE%20%E0%A4%AC%E0%A5%87%E0%A4%A1%20%E0%A4%AA%E0%A4%BF%E0%A4%B2%E0%A5%8B",
+   "view 0",
+   "goto /product/1215",
+   "goto /product/1116",
+   "goto /product/1145",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-035",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद की कितनी समीक्षाएँ हैं? यह इनमें से एक है: ‘ब्लूटूथ स्टीरियो स्पीकर, वॉटर रेज़िस्टेंट डिज़ाइन’, ‘माइक्रो ब्लूटूथ स्पीकर’, ‘Bose SoundLink Micro वॉटरप्रूफ ब्लूटूथ स्पीकर’, ‘मिनी ब्लूटूथ स्पीकर’।",
+  "image": "sites/visual/ministore/static/img/products/p151.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "२"
+    ],
+    "none_of": [
+     "0",
+     "०",
+     "5",
+     "५",
+     "8",
+     "८"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AE%E0%A4%BF%E0%A4%A8%E0%A5%80%20%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%82%E0%A4%9F%E0%A5%82%E0%A4%A5%20%E0%A4%B8%E0%A5%8D%E0%A4%AA%E0%A5%80%E0%A4%95%E0%A4%B0",
+   "view 0",
+   "goto /product/147",
+   "goto /product/219",
+   "goto /product/40",
+   "goto /product/151",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-036",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद की कितनी समीक्षाएँ हैं? यह इनमें से एक है: ‘क्रीम टेडी 60 सेमी - कॉम्पैक्ट’, ‘भूरा टेडी 3.5 फुट, खड़ा ट्विन पैक’, ‘गुलाबी टेडी 3.5 फुट, खड़ा - फैमिली साइज़’, ‘बेज टेडी 3.5 फुट, खड़ा ट्विन पैक’।",
+  "image": "sites/visual/ministore/static/img/products/p1747.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "३"
+    ],
+    "none_of": [
+     "2",
+     "२",
+     "0",
+     "०",
+     "5",
+     "५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A4%BE%E0%A4%AC%E0%A5%80%20%E0%A4%9F%E0%A5%87%E0%A4%A1%E0%A5%80%203.5%20%E0%A4%AB%E0%A5%81%E0%A4%9F%2C%20%E0%A4%96%E0%A4%A1%E0%A4%BC%E0%A4%BE%20-%20%E0%A4%AB%E0%A5%88%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A5%80%20%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9C%E0%A4%BC",
+   "view 0",
+   "goto /product/1717",
+   "goto /product/1696",
+   "goto /product/1747",
+   "goto /product/1678",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-037",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद की कितनी समीक्षाएँ हैं? यह इनमें से एक है: ‘Bigelow मॉडर्न लेदर सोफ़ा, चौकोर पायों के साथ’, ‘Mayes स्लोप्ड नेलहेड सोफ़ा’, ‘Elizabeth कंटेम्पररी लवसीट सोफ़ा’, ‘Charles क्लासिक ओवरसाइज़्ड लेदर सोफ़ा’।",
+  "image": "sites/visual/ministore/static/img/products/p1160.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "२"
+    ],
+    "none_of": [
+     "10",
+     "१०",
+     "12",
+     "१२",
+     "0",
+     "०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Elizabeth%20%E0%A4%95%E0%A4%82%E0%A4%9F%E0%A5%87%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%B0%E0%A4%B0%E0%A5%80%20%E0%A4%B2%E0%A4%B5%E0%A4%B8%E0%A5%80%E0%A4%9F%20%E0%A4%B8%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A4%BE",
+   "view 0",
+   "goto /product/1158",
+   "goto /product/999",
+   "goto /product/1160",
+   "goto /product/987",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-038",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद की कितनी समीक्षाएँ हैं? यह इनमें से एक है: ‘मिड-सेंचुरी मॉडर्न सिरेमिक और बांस का प्लांटर गमला’, ‘मिड-सेंचुरी 100% स्टोनवेयर प्लांटर’, ‘मिड-सेंचुरी सिरेमिक प्लांटर, लोहे के स्टैंड के साथ 9.1\"H’, ‘मिड-सेंचुरी पैटर्न्ड प्लांटर’।",
+  "image": "sites/visual/ministore/static/img/products/p1254.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1",
+     "१"
+    ],
+    "none_of": [
+     "6",
+     "६",
+     "2",
+     "२",
+     "3",
+     "३"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AE%E0%A4%BF%E0%A4%A1-%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9A%E0%A5%81%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%BF%E0%A4%B0%E0%A5%87%E0%A4%AE%E0%A4%BF%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%82%E0%A4%9F%E0%A4%B0%2C%20%E0%A4%B2%E0%A5%8B%E0%A4%B9%E0%A5%87%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%88%E0%A4%82%E0%A4%A1%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5%209.1%22H",
+   "view 0",
+   "goto /product/1401",
+   "goto /product/1462",
+   "goto /product/1254",
+   "goto /product/1390",
+   "stop 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-039",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद की कितनी समीक्षाएँ हैं? यह इनमें से एक है: ‘हेरिंग मेडैलियन ट्रेडिशनल एरिया रग’, ‘मॉडर्न ज्यामितीय ऊनी एरिया रग’, ‘कैज़ुअल प्लेड रग’, ‘कंटेम्पररी आवरग्लास ऊनी एरिया रग’।",
+  "image": "sites/visual/ministore/static/img/products/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6",
+     "६"
+    ],
+    "none_of": [
+     "2",
+     "२",
+     "5",
+     "५",
+     "1",
+     "१"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%B9%E0%A5%87%E0%A4%B0%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AE%E0%A5%87%E0%A4%A1%E0%A5%88%E0%A4%B2%E0%A4%BF%E0%A4%AF%E0%A4%A8%20%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%A1%E0%A4%BF%E0%A4%B6%E0%A4%A8%E0%A4%B2%20%E0%A4%8F%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%BE%20%E0%A4%B0%E0%A4%97",
+   "view 0",
+   "goto /product/928",
+   "goto /product/1086",
+   "goto /product/1015",
+   "goto /product/1024",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-040",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद की कितनी समीक्षाएँ हैं? यह इनमें से एक है: ‘कंटेम्पररी धातु फ्लोर लैंप, मर्करी ग्लास एक्सेंट के साथ’, ‘विंटेज टास्क टेबल डेस्क लैंप, एलईडी बल्ब के साथ’, ‘ट्रेडिशनल शिनोइज़री सिरेमिक टेबल लैंप’, ‘ट्रेडिशनल धातु डाउनब्रिज डेस्क लैंप, एडजस्टेबल शेड के साथ’।",
+  "image": "sites/visual/ministore/static/img/products/p1009.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5",
+     "५"
+    ],
+    "none_of": [
+     "6",
+     "६",
+     "3",
+     "३",
+     "0",
+     "०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%95%E0%A4%82%E0%A4%9F%E0%A5%87%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%B0%E0%A4%B0%E0%A5%80%20%E0%A4%A7%E0%A4%BE%E0%A4%A4%E0%A5%81%20%E0%A4%AB%E0%A5%8D%E0%A4%B2%E0%A5%8B%E0%A4%B0%20%E0%A4%B2%E0%A5%88%E0%A4%82%E0%A4%AA%2C%20%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A4%B0%E0%A5%80%20%E0%A4%97%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/1009",
+   "goto /product/1091",
+   "goto /product/1070",
+   "goto /product/1139",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-041",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को इस दुकान में ढूँढें और उसकी कीमत बताएँ। अगर दुकान इसे नहीं बेचती, तो N/A उत्तर दें।",
+  "image": "assets/trap_photos/p661.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं मिला",
+     "ऐसा कोई उत्पाद नहीं",
+     "मौजूद नहीं",
+     "सूचीबद्ध नहीं",
+     "उपलब्ध नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1645",
+   "goto /product/1632",
+   "goto /product/1759",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-042",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को इस दुकान में ढूँढें और उसकी कीमत बताएँ। अगर दुकान इसे नहीं बेचती, तो N/A उत्तर दें।",
+  "image": "assets/trap_photos/p442.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं मिला",
+     "ऐसा कोई उत्पाद नहीं",
+     "मौजूद नहीं",
+     "सूचीबद्ध नहीं",
+     "उपलब्ध नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/936",
+   "goto /product/1039",
+   "goto /product/966",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-043",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को इस दुकान में ढूँढें और उसकी कीमत बताएँ। अगर दुकान इसे नहीं बेचती, तो N/A उत्तर दें।",
+  "image": "assets/trap_photos/p402.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं मिला",
+     "ऐसा कोई उत्पाद नहीं",
+     "मौजूद नहीं",
+     "सूचीबद्ध नहीं",
+     "उपलब्ध नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1205",
+   "goto /product/1234",
+   "goto /product/1185",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-044",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को इस दुकान में ढूँढें और उसकी कीमत बताएँ। अगर दुकान इसे नहीं बेचती, तो N/A उत्तर दें।",
+  "image": "assets/trap_photos/p698.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं मिला",
+     "ऐसा कोई उत्पाद नहीं",
+     "मौजूद नहीं",
+     "सूचीबद्ध नहीं",
+     "उपलब्ध नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1762",
+   "goto /product/1644",
+   "goto /product/1708",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-045",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘Amelia मॉडर्न 74\" सोफ़ा’, ‘Victoria फ़ैब्रिक 3 सीटर सोफ़ा’, ‘Blaine मॉडर्न लवसीट सोफ़ा’, ‘Emerly मॉडर्न सेक्शनल सोफ़ा’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p1004.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "46665.00",
+     "46,665.00",
+     "४६६६५.००",
+     "४६,६६५.००"
+    ],
+    "none_of": [
+     "38165.00",
+     "38,165.00",
+     "३८१६५.००",
+     "३८,१६५.००",
+     "33915.00",
+     "33,915.00",
+     "३३९१५.००",
+     "३३,९१५.००",
+     "59415.00",
+     "59,415.00",
+     "५९४१५.००",
+     "५९,४१५.००"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amelia%20%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B0%E0%A5%8D%E0%A4%A8%2074%22%20%E0%A4%B8%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A4%BE",
+   "view 0",
+   "goto /product/1004",
+   "goto /product/878",
+   "goto /product/916",
+   "goto /product/1163",
+   "stop 46665.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-046",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "फ़ोटो में इस दुकान में बिकने वाला एक उत्पाद दिखाया गया है। यह इनमें से एक है: ‘तांबे की बोतल और जग कॉम्बो’, ‘स्टेनलेस स्टील इंसुलेटेड पानी की बोतल, स्पाउट ढक्कन के साथ’, ‘शेकर बोतल, मिक्सर बॉल के साथ’, ‘बोरोसिलिकेट कांच की पानी की बोतल, स्लीव के साथ’। इसकी कीमत क्या है?",
+  "image": "sites/visual/ministore/static/img/products/p381.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1274.15",
+     "1,274.15",
+     "१२७४.१५",
+     "१,२७४.१५"
+    ],
+    "none_of": [
+     "1529.15",
+     "1,529.15",
+     "१५२९.१५",
+     "१,५२९.१५",
+     "1444.15",
+     "1,444.15",
+     "१४४४.१५",
+     "१,४४४.१५",
+     "764.15",
+     "७६४.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A5%8B%E0%A4%B8%E0%A4%BF%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A5%87%E0%A4%9F%20%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%9A%20%E0%A4%95%E0%A5%80%20%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80%20%E0%A4%95%E0%A5%80%20%E0%A4%AC%E0%A5%8B%E0%A4%A4%E0%A4%B2%2C%20%E0%A4%B8%E0%A5%8D%E0%A4%B2%E0%A5%80%E0%A4%B5%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/465",
+   "goto /product/444",
+   "goto /product/325",
+   "goto /product/381",
+   "stop 1274.15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-047",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद को अपनी विशलिस्ट में जोड़ें। यह इनमें से एक है: ‘Viewridge अपहोल्स्टर्ड रॉकिंग रिक्लाइनर चेयर, स्विवल के साथ’, ‘स्लोप्ड नेलहेड ट्रिम एक्सेंट चेयर’, ‘बॉन्डेड लेदर बिग एंड टॉल एग्ज़ीक्यूटिव ऑफ़िस कंप्यूटर डेस्क चेयर’, ‘Bradbury चेस्टरफ़ील्ड क्लासिक चेयर’। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p964.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 964
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1203
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 956
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 864
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Bradbury%20%E0%A4%9A%E0%A5%87%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0%E0%A4%AB%E0%A4%BC%E0%A5%80%E0%A4%B2%E0%A5%8D%E0%A4%A1%20%E0%A4%95%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%B8%E0%A4%BF%E0%A4%95%20%E0%A4%9A%E0%A5%87%E0%A4%AF%E0%A4%B0",
+   "view 0",
+   "goto /product/1203",
+   "goto /product/956",
+   "goto /product/864",
+   "goto /product/964",
+   "goto /product/964",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-048",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "‘C सेल एवरीडे अल्कलाइन बैटरी’ का उत्पाद पृष्ठ खोलें। उसकी फ़ोटो के अनुसार पैक में कितनी इकाइयाँ हैं?",
+  "image": "sites/visual/ministore/static/img/products/p181.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12",
+     "१२"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/181",
+   "stop 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-049",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "‘एक्सरसाइज़ फ़िटनेस एब रोलर, वर्कआउट के लिए’ का उत्पाद पृष्ठ खोलें। उसकी फ़ोटो के अनुसार पैक में कितनी इकाइयाँ हैं?",
+  "image": "sites/visual/ministore/static/img/products/p825.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "२"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/825",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-050",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "फ़ोटो में दिखाए गए उत्पाद का १ नग खरीदें और उसे '३४ रेडवुड एवेन्यू, डेविस, ९५६१६' पर भिजवाएँ। यह इनमें से एक है: ‘Alkove Hayes आयताकार ठोस लकड़ी की कॉफ़ी टेबल, 1 शेल्फ़ के साथ’, ‘क्लासिक कॉफ़ी टेबल’, ‘Amber फ़ार्महाउस शेल्फ़ स्टोरेज साइड एंड टेबल’, ‘एसेंशियल इंजीनियर्ड लकड़ी की कॉफ़ी टेबल’। ऑर्डर पूरा करने के लिए चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "image": "sites/visual/ministore/static/img/products/p947.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%३४ रेडवुड एवेन्यू, डेविस, ९५६१६%",
+    "items": {
+     "947": 1
+    },
+    "total": 16915.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 903
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1194
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1170
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alkove%20Hayes%20%E0%A4%86%E0%A4%AF%E0%A4%A4%E0%A4%BE%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%A0%E0%A5%8B%E0%A4%B8%20%E0%A4%B2%E0%A4%95%E0%A4%A1%E0%A4%BC%E0%A5%80%20%E0%A4%95%E0%A5%80%20%E0%A4%95%E0%A5%89%E0%A4%AB%E0%A4%BC%E0%A5%80%20%E0%A4%9F%E0%A5%87%E0%A4%AC%E0%A4%B2%2C%201%20%E0%A4%B6%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AB%E0%A4%BC%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "view 0",
+   "goto /product/947",
+   "goto /product/903",
+   "goto /product/1194",
+   "goto /product/1170",
+   "goto /product/947",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=३४ रेडवुड एवेन्यू, डेविस, ९५६१६",
+   "fill 2"
+  ],
+  "max_steps": 30
+ }
+]

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if step == 1 and intro %}<p class="lede">{{ intro }}</p>{% endif %}
+  <ol class="stepper">
+    {% for i in range(1, n_steps + 1) %}
+    <li class="{{ 'done' if i < step else ('current' if i == step else '') }}">{{ i }}</li>
+    {% endfor %}
+  </ol>
+  <p class="step-label">{{ S.step_of.format(a=step, b=n_steps) }}</p>
+  <form class="form" method="post">
+    <input type="hidden" name="_step" value="{{ next_step }}">
+    {% for name, val in carried.items() %}<input type="hidden" name="{{ name }}" value="{{ val }}">{% endfor %}
+    {% for name, label in fields %}
+    <div class="field"><label>{{ label }}</label><input name="{{ name }}"></div>
+    {% endfor %}
+    <button class="btn btn-primary">{% if step == n_steps %}{{ S.submit }}{% else %}{{ S.continue }}{% endif %}</button>
+  </form>
+</div>
+{% endblock %}

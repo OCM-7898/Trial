@@ -1,0 +1,38 @@
+{% extends "partner_base.html" %}
+{% from "macros/fields.html" import number_field %}
+{% block content %}
+<div class="wrap section">
+  <h1>{{ partner.name }}</h1>
+  <p>{{ t("partner.insurance_intro") }}</p>
+
+  <form class="searchform" method="get" action="{{ partner.home }}">
+    {{ number_field("fare", "fare", t("partner.trip_cost"), 0, 100000, fare | round | int) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("partner.quote") }}</button></div>
+  </form>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("partner.cover") }}</th>
+        <th scope="col">{{ t("partner.medical") }}</th>
+        <th scope="col">{{ t("partner.cancellation") }}</th>
+        <th scope="col">{{ t("nav.baggage") }}</th>
+        <th scope="col">{{ t("partner.premium") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for quote in quotes %}
+        <tr>
+          <td><strong>{{ quote.product.name }}</strong><br><span class="hint">{{ quote.product.coverage }}</span></td>
+          <td>{{ fmt_money(quote.product.medical_limit_usd) }}</td>
+          <td>{% if quote.product.cancellation_limit_usd %}{{ fmt_money(quote.product.cancellation_limit_usd) }}{% else %}{{ t("common.none") }}{% endif %}</td>
+          <td>{% if quote.product.baggage_limit_usd %}{{ fmt_money(quote.product.baggage_limit_usd) }}{% else %}{{ t("common.none") }}{% endif %}</td>
+          <td><strong>{{ fmt_money(quote.premium) }}</strong>
+              <br><span class="hint">{{ t("partner.premium_rule", pct=quote.product.price_pct, min=fmt_money(quote.product.price_min_usd)) }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="hint">{{ t("partner.insurance_note") }}</p>
+</div>
+{% endblock %}

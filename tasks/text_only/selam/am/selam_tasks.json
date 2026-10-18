@@ -1,0 +1,2140 @@
+[
+ {
+  "id": "selam-001",
+  "site": "selam",
+  "intent": "በ2026-04-20 ለአንድ አዋቂ ከአዲስ አበባ (ADD) ወደ ዱባይ (DXB) የአንድ አቅጣጫ በረራ ይያዙ፤ የተሳፋሪውን መረጃ ያስገቡ፤ ሳይከፍሉ በመጨረሻው የክፍያ ማጠቃለያ ገጽ ላይ ያቁሙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 2,
+    "lang": "am"
+   }
+  ],
+  "solution": [
+   "goto /book/results?origin=ADD&destination=DXB&depart=2026-04-20&adults=1",
+   "goto /book/passengers?itinerary=103435.1",
+   "fill 0 first_name_1=የሙከራ; last_name_1=ተሳፋሪ; contact_email=test.passenger@example.com; contact_phone=+251911000000",
+   "goto /book/review",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-002",
+  "site": "selam",
+  "intent": "ማጣቀሻው WGYBNA እና የአያት ስሙ አሰፋ የሆነውን የቦታ ማስያዣ ይክፈቱ። በጉዞ ዝርዝሩ ላይ ያሉትን የበረራ ቁጥሮች ያቅርቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 5,
+    "lang": "am"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM111"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM110"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "goto /manage/WGYBNA",
+   "stop SM111, SM110"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-003",
+  "site": "selam",
+  "intent": "የቦታ ማስያዣ W7JKUF (የአያት ስም ተረፈ) የመሄጃ በረራው ወደ ሌላ ቀን መዛወር አለበት። ያለ አማራጭ ይምረጡ፤ የታሪፍ ልዩነቱንና ካለ የለውጥ ክፍያውን ያሳዩ፤ ክፍያውን ከማረጋገጥዎ በፊት ያቁሙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 6,
+    "lang": "am"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "change_requests",
+    "match": {
+     "booking_id": 16,
+     "new_flight_id": [
+      100688,
+      100689,
+      100690,
+      100691,
+      100692,
+      100693,
+      100694,
+      100695,
+      100696,
+      100697,
+      100698,
+      100699,
+      100700,
+      100701,
+      100702,
+      100703,
+      100704,
+      100705,
+      100706,
+      100707,
+      100708,
+      100709,
+      100710,
+      100711,
+      100712,
+      100713,
+      100714,
+      100715
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=W7JKUF; surname=ተረፈ",
+   "goto /manage/W7JKUF/change",
+   "fill 0 new_flight_id=100688",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-004",
+  "site": "selam",
+  "intent": "የቦታ ማስያዣ SPMVJC (የአያት ስም ከበደ) በመስመር ላይ ተመላሽ ሊደረግ እንደሚችል ያረጋግጡ። ከተቻለ እስከ መጨረሻው የማስገቢያ ደረጃ ድረስ ጥያቄውን ይሙሉ። ካልተቻለ የተሰጠውን ምክንያት ያቅርቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "በድረ ገጹ ስላልተያዘ",
+     "ካወጣው ቢሮ"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 21
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=SPMVJC; surname=ከበደ",
+   "goto /manage/SPMVJC/refund",
+   "stop ይህ የቦታ ማስያዣ በድረ ገጹ ስላልተያዘ ተመላሽ ክፍያ ካወጣው ቢሮ መጠየቅ አለበት።"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-005",
+  "site": "selam",
+  "intent": "ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ቼክ-ኢን ያድርጉ እና የመሳፈሪያ ፈቃዱን ያውርዱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 8,
+    "lang": "am"
+   }
+  ],
+  "solution": [
+   "goto /checkin",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "fill 0",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-006",
+  "site": "selam",
+  "intent": "የቦታ ማስያዣ N9JKBF (የአያት ስም ኃይሌ) ይክፈቱ እና ለመሄጃው በረራ ያለ የመተላለፊያ መቀመጫ ይምረጡ። የመቀመጫውን ቁጥርና ዋጋ ያቅርቡ፤ ከክፍያ በፊት ያቁሙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 10,
+    "lang": "am"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1B",
+     "1C",
+     "1D",
+     "1E",
+     "2B",
+     "2C",
+     "2D",
+     "2E",
+     "3B",
+     "3C",
+     "3D",
+     "3E",
+     "4B",
+     "4C",
+     "4D",
+     "4E",
+     "5B",
+     "5C",
+     "5D",
+     "5E",
+     "6B",
+     "6C",
+     "6D",
+     "6E",
+     "7C",
+     "7D",
+     "7F",
+     "7G",
+     "8C",
+     "8D",
+     "8F",
+     "8G",
+     "9C",
+     "9D",
+     "9F",
+     "9G",
+     "10C",
+     "10D",
+     "10F",
+     "10G",
+     "11C",
+     "11D",
+     "11F",
+     "11G",
+     "12C",
+     "12D",
+     "12F",
+     "12G",
+     "13C",
+     "13D",
+     "13F",
+     "13G",
+     "14C",
+     "14D",
+     "14F",
+     "14G",
+     "15C",
+     "15D",
+     "15F",
+     "15G",
+     "16C",
+     "16D",
+     "16F",
+     "16G",
+     "17C",
+     "17D",
+     "17F",
+     "17G",
+     "18C",
+     "18D",
+     "18F",
+     "18G",
+     "19C",
+     "19D",
+     "19F",
+     "19G",
+     "20C",
+     "20D",
+     "20F",
+     "20G",
+     "21C",
+     "21D",
+     "21F",
+     "21G",
+     "22C",
+     "22D",
+     "22F",
+     "22G",
+     "23C",
+     "23D",
+     "23F",
+     "23G",
+     "24C",
+     "24D",
+     "24F",
+     "24G",
+     "25C",
+     "25D",
+     "25F",
+     "25G",
+     "26C",
+     "26D",
+     "26F",
+     "26G",
+     "27C",
+     "27D",
+     "27F",
+     "27G",
+     "28C",
+     "28D",
+     "28F",
+     "28G",
+     "29C",
+     "29D",
+     "29F",
+     "29G",
+     "30C",
+     "30D",
+     "30F",
+     "30G",
+     "31C",
+     "31D",
+     "31F",
+     "31G",
+     "32C",
+     "32D",
+     "32F",
+     "32G",
+     "33C",
+     "33D",
+     "33F",
+     "33G",
+     "34C",
+     "34D",
+     "34F",
+     "34G",
+     "35C",
+     "35D",
+     "35F",
+     "35G",
+     "36C",
+     "36D",
+     "36F",
+     "36G"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=ኃይሌ",
+   "goto /manage/N9JKBF/seats",
+   "fill 0 seat_no=1B",
+   "stop 1B"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-007",
+  "site": "selam",
+  "intent": "ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ለመሄጃው በረራ 23 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ይጨምሩ። ጠቅላላ ክፍያውን ያቅርቡ፤ ክፍያውን ከማጠናቀቅዎ በፊት ያቁሙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 13,
+    "lang": "am"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "276",
+     "276.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "goto /manage/WGYBNA/baggage",
+   "fill 0 extra_kg=23",
+   "stop 276"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-008",
+  "site": "selam",
+  "intent": "በአዲስ አበባ ቦሌ ዓለም አቀፍ አየር ማረፊያ ለአንድ ተሳፋሪ ያለ እንግዳ የላውንጅ መግቢያ ይግዙ። ሃይላንድ ላውንጅን ይምረጡ፣ ዋጋውን ያረጋግጡ፣ ሳይከፍሉ በክፍያ ገጹ ላይ ያቁሙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 16,
+    "lang": "am"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "55",
+     "55.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges/purchase",
+   "fill 0 lounge_id=1; passenger_name=የሙከራ ተሳፋሪ; guests=0",
+   "stop 55"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-009",
+  "site": "selam",
+  "intent": "የመጀመሪያ ስም ሰላማዊት፣ የአያት ስም በቀለ፣ ኢሜይል selamawit.bekele@example.com እና አገር ET ያለው አዲስ የሰላም ማይልስ አባል ይመዝግቡ። የተሰጠዎትን የአባልነት ቁጥር ያቅርቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 18,
+    "lang": "am"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM00000016"
+   }
+  ],
+  "solution": [
+   "goto /miles/join",
+   "fill 0 first_name=ሰላማዊት; last_name=በቀለ; email=selamawit.bekele@example.com; country_code=ET; dob=1992-05-14",
+   "stop SM00000016"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-010",
+  "site": "selam",
+  "intent": "አባል SM00000001 በ2026-03-15 ለበረራ SM246፣ ትኬት 0712345678901 ማይሎችን አላገኘም። ያልተመዘገቡ ማይሎች ጥያቄ ያስገቡ እና የጥያቄውን ማጣቀሻ ቁጥር ያቅርቡ። ሲመልሱ የጥያቄውን ማጣቀሻ በሚያሳየው የማረጋገጫ ገጽ ላይ ይቆዩ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 19,
+    "lang": "am"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "missing_miles_claims",
+    "match": {
+     "member_no": "SM00000001",
+     "flight_no": "SM246",
+     "flight_date": "2026-03-15"
+    }
+   }
+  ],
+  "solution": [
+   "goto /miles/claim",
+   "fill 0 member_no=SM00000001; ticket_no=0712345678901; flight_no=SM246; flight_date=2026-03-15",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-011",
+  "site": "selam",
+  "intent": "በ2026-03-19 በረራ SM106 ዋይ-ፋይ አለው። ያሉትን የኢንተርኔት ፓኬጆች ያወዳድሩ፤ ትልቁን የዳታ መጠን ይምረጡ፤ ከክፍያ በፊት ያቁሙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 21,
+    "lang": "am"
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM106&date=2026-03-19",
+   "fill 1 package_id=1038",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-012",
+  "site": "selam",
+  "intent": "በቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ ላለው የመሄጃ በረራ የምግብ አማራጮችን ያረጋግጡ፤ ከዚያም ለተሳፋሪው ግሉተን-አልባ ምግብ ይጠይቁ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 22,
+    "lang": "am"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "goto /onboard/dining?pnr=WGYBNA",
+   "fill 1 meal_code=GFML",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-013",
+  "site": "selam",
+  "intent": "በ2026-04-12 ለሚኖር የመሸጋገሪያ ጊዜ በአዲስ አበባ አየር ማረፊያ ውስጥ ባለው ዜና ትራንዚት ሆቴል የክፍል መኖርን ያረጋግጡ እና ሳይከፍሉ እስከ ቦታ ማስያዣ ማጠቃለያ ገጽ ይቀጥሉ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 25,
+    "lang": "am"
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "fill 0 arrival=2026-04-12; hours=12; guest_name=የሙከራ ተሳፋሪ",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-014",
+  "site": "selam",
+  "intent": "ከአየር መንገዱ ድረ ገጽ ብሔራዊ ኢ-ቪዛ አገልግሎትን ይክፈቱ፤ ለሰባት ቀን የቱሪስት ጉብኝት የቪዛ ዓይነቱን ይምረጡ፤ ከማመልከትዎ በፊት የሚያስፈልጉትን ሰነዶች ያቅርቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 26,
+    "lang": "am"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "ስድስት ወር",
+     "6 ወር"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/evisa",
+   "goto /partners/evisa?code=EV-T30",
+   "stop ከመድረሻ በኋላ ለስድስት ወር የሚሠራ ፓስፖርት፤ የቅርብ ጊዜ የፓስፖርት ፎቶግራፍ፤ የተረጋገጠ የመመለሻ ትኬት፤ የመኖሪያ ማረጋገጫ።"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-015",
+  "site": "selam",
+  "intent": "በ2026-04-12 ናይሮቢ (NBO) ለሚደርሱ ሁለት ተሳፋሪዎች በሪፍት ድራይቭ የአየር ማረፊያ ትራንስፖርት ያስይዙ፤ ሳይከፍሉ እስከ ቦታ ማስያዣ ማጠቃለያ ገጽ ይቀጥሉ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 28,
+    "lang": "am"
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "fill 1 offer_id=3",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-016",
+  "site": "selam",
+  "intent": "የኢኮኖሚ ግሩፕ (EG) እና የኢኮኖሚ ስታንዳርድ (ES) ታሪፍ ክፍሎችን የታሪፍ ደንቦች ይክፈቱ (የታሪፍ ደንብ ገጾቹ /book/fare-rules/<ኮድ> ላይ ናቸው፣ ለምሳሌ /book/fare-rules/EG)። የEG ተመላሽ ክፍያ ከES በምን ያህል ከፍ ያለ ነው? ልዩነቱን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "70",
+     "70.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EG",
+   "goto /book/fare-rules/ES",
+   "stop 70"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-017",
+  "site": "selam",
+  "intent": "በኢኮኖሚ ታሪፍ ክፍሎች የደንብ ገጾች ውስጥ (/book/fare-rules/<ኮድ> ላይ፤ እያንዳንዱ ገጽ ሌሎቹን ክፍሎች ያገናኛል) የትኛው ታሪፍ ክፍል ከፍተኛውን የለውጥ ክፍያ ያስከፍላል? የሁለት ፊደል ኮዱን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "EG",
+    "none_of": [
+     "EB",
+     "EF",
+     "EL",
+     "EP",
+     "ES"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EG",
+   "stop EG"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-018",
+  "site": "selam",
+  "intent": "1200 ለሚያስወጣ ጉዞ የሴፍቮያጅ ዋጋ ግምት ያግኙ። የተጓዥ ሽፋን (SV-PLUS) ደረጃ ፕሪሚየም ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "66",
+     "66.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=1200",
+   "stop 66"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-019",
+  "site": "selam",
+  "intent": "400 ለሚያስወጣ ጉዞ የሴፍቮያጅ ዋጋ ግምት ያግኙ። የሙሉ ሽፋን (SV-MAX) ደረጃ ፕሪሚየም ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "55",
+     "55.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=400",
+   "stop 55"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-020",
+  "site": "selam",
+  "intent": "በትርፍ ሻንጣ ክፍያ ገጽ መሠረት፣ በአውሮፓ ክልል የኢኮኖሚ ትኬት ላይ 15 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ስንት ያስከፍላል? ጠቅላላውን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "270",
+     "270.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /baggage/fees",
+   "stop 270"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-021",
+  "site": "selam",
+  "intent": "አባል SM00000004 (የአያት ስም ነጋሽ) በ2026-03-19 ከADD ወደ NBO የኢኮኖሚ የሽልማት መቀመጫ ይፈልጋሉ። ለሚያስፈልጉት ማይሎች የሽልማት ፍለጋውን፣ ለአሁኑ ቀሪ ደግሞ መለያቸውን ይመልከቱ። ስንት ተጨማሪ ማይሎች ያስፈልጋቸዋል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "12099",
+     "12099.00",
+     "12,099"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-search?origin=ADD&destination=NBO&date=2026-03-19&cabin=economy",
+   "goto /miles/account",
+   "fill 0 member_no=SM00000004; surname=ነጋሽ",
+   "stop 12099"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-022",
+  "site": "selam",
+  "intent": "የቅናሾች ገጹ የማስተዋወቂያ ኮድ AFRICA15ን ይዘረዝራል። የመቶኛ ቅናሹን በ600 ታሪፍ ላይ ሲተገበር የተቀነሰው ዋጋ ስንት ይሆናል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "510",
+     "510.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /offers",
+   "stop 510"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-023",
+  "site": "selam",
+  "intent": "በኢኮኖሚ ቤዚክ (EB) ታሪፍ ደንቦች መሠረት (ገጹ /book/fare-rules/EB ነው) ማይሎች በተበረረው ርቀት መቶኛ ይገኛሉ። በ2000 ማይል ጉዞ ላይ የEB ትኬት ስንት የሰላም ማይሎች ያስገኛል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1000",
+     "1000.00",
+     "1,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EB",
+   "stop 1000"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-024",
+  "site": "selam",
+  "intent": "በአዲስ አበባ ተርሚናል 2 ካሉት ላውንጆች መካከል ርካሹን ለተሳፋሪ 'የሙከራ ተሳፋሪ' ያለ እንግዳ የመግቢያ ክፍያ ይግዙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "lounge_purchases",
+    "match": {
+     "lounge_id": 4,
+     "guests": 0,
+     "passenger_name": "የሙከራ ተሳፋሪ"
+    }
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/4",
+   "goto /lounges/purchase",
+   "fill 0 lounge_id=4; passenger_name=የሙከራ ተሳፋሪ; guests=0"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-025",
+  "site": "selam",
+  "intent": "ሰላም በNBO፣ JNB፣ DAR እና LOS ሃይላንድ ላውንጅ ያካሂዳል። በየትኛው አየር ማረፊያ የመግቢያ ዋጋው ዝቅተኛ ነው? የአየር ማረፊያውን ኮድ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "DAR",
+    "none_of": [
+     "JNB",
+     "LOS",
+     "NBO"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop DAR"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-026",
+  "site": "selam",
+  "intent": "በኢኮኖሚ የሚበር የወርቅ ደረጃ አባል በአዲስ አበባ ተርሚናል 2 ነው። እዚያ ካሉት ሦስት ላውንጆች የትኛው አንዱ የወርቅ አባላትን በነጻ ያስገባል? የላውንጁን ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ሃይላንድ ላውንጅ ተርሚናል 2",
+    "none_of": [
+     "ሰላም ስካይ ላውንጅ",
+     "የመሸጋገሪያ ማረፊያ ላውንጅ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/2",
+   "stop ሃይላንድ ላውንጅ ተርሚናል 2"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-027",
+  "site": "selam",
+  "intent": "በበረራ SM106 እና በበረራ SM220 ላይ ያለውን የአውሮፕላን ውስጥ ዋይ-ፋይ ያወዳድሩ፣ ሁለቱም በ2026-03-19። የየትኛው በረራ ትልቁ የዳታ ፓኬጅ ርካሽ ነው፣ ስንትስ ያስከፍላል? የበረራ ቁጥሩንና ዋጋውን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "SM106",
+    "none_of": [
+     "SM220"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "22",
+     "22.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM106&date=2026-03-19",
+   "goto /onboard/wifi?flight_no=SM220&date=2026-03-19",
+   "stop SM106, 22"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-028",
+  "site": "selam",
+  "intent": "የአራት ሰው ቤተሰብ የ12 ሰዓት መሸጋገሪያ አለው። በዜና ትራንዚት ሆቴል ክፍሎች በ6 ሰዓት ብሎክ ዋጋ ይወጣላቸዋል። አራት ሰው የሚያስተኛው ክፍል ለሙሉ 12 ሰዓት ስንት ያስከፍላል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "240",
+     "240.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "stop 240"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-029",
+  "site": "selam",
+  "intent": "ሪፍትድራይቭ በNBO እና በADD ሁለቱም የግል ቫን ማጓጓዣ ያካሂዳል። የየትኛው አየር ማረፊያ ቫን ርካሽ ነው፣ በስንት? የአየር ማረፊያውን ኮድና ልዩነቱን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ADD",
+    "none_of": [
+     "NBO"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "7",
+     "7.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "goto /partners/riftdrive?airport=ADD&passengers=2&pickup=2026-04-12",
+   "stop ADD, 7"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-030",
+  "site": "selam",
+  "intent": "በ2026-04-12 ናይሮቢ (NBO) ለሚደርሱ ሁለት ተሳፋሪዎች የሪፍትድራይቭ የጋራ ሻትል ማጓጓዣ ያስይዙ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "car_bookings",
+    "match": {
+     "offer_id": 3,
+     "passengers": 2,
+     "pickup_date": "2026-04-12"
+    }
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "fill 1 offer_id=3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-031",
+  "site": "selam",
+  "intent": "የትኛው የአዲስ አበባ የመቆያ ፓኬጅ ረጅሙን ዝቅተኛ የመሸጋገሪያ ጊዜ ይፈልጋል? የፓኬጁን ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የሙሉ ቀን የደጋ ጉዞ",
+    "none_of": [
+     "ዜና ትራንዚት ሆቴል፣ በተርሚናል ውስጥ",
+     "የሃይላንድ ላውንጅ መግቢያ",
+     "የሃይላንድ ክላስ የመድረሻ ስዊት",
+     "የአየር ማረፊያ ትራንስፖርት፣ ወዲያና ወዲህ",
+     "የከተማ ሆቴል፣ አራት ኮከብ",
+     "የግማሽ ቀን የከተማ ጉብኝት"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /stopover/packages",
+   "stop የሙሉ ቀን የደጋ ጉዞ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-032",
+  "site": "selam",
+  "intent": "አባል SM00000006 (የአያት ስም ዘለቀ) የብር ደረጃ ነው። የደረጃ ሂደት ገጻቸውን ይክፈቱ፡ ወደ ቀጣዩ ደረጃ ለመድረስ ስንት ተጨማሪ ብቁ የሚያደርጉ ማይሎች ያስፈልጋቸዋል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "23634",
+     "23634.00",
+     "23,634"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000006; surname=ዘለቀ",
+   "goto /miles/account/tier-progress",
+   "stop 23634"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-033",
+  "site": "selam",
+  "intent": "በመለያ SM00000009 (የአያት ስም ወልደ) ላይ ያለው የአሁኑ የማይሎች ቀሪ ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "18730",
+     "18730.00",
+     "18,730"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000009; surname=ወልደ",
+   "stop 18730"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-034",
+  "site": "selam",
+  "intent": "የአባል SM00000010 (የአያት ስም ተረፈ) የቅርብ ጊዜ እንቅስቃሴ የማይሎች መግለጫ ይክፈቱ። የትኛው አንድ ግብይት ብዙ ማይሎችን አስገባ? ያንን የበረራ ቁጥርና የማይሎቹን መጠን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "SM172",
+    "none_of": [
+     "SM116",
+     "SM137",
+     "SM148",
+     "SM150",
+     "SM171",
+     "SM179",
+     "SM185",
+     "SM193",
+     "SM205",
+     "SM213",
+     "SM218",
+     "SM226"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "29516",
+     "29516.00",
+     "29,516"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000010; surname=ተረፈ",
+   "goto /miles/account/statement",
+   "stop SM172, 29516"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-035",
+  "site": "selam",
+  "intent": "ለአባል SM00000003 የጠፉ ማይሎች ጥያቄ ያስገቡ፡ ትኬት 0709876543210፣ በረራ SM188 በ2026-02-20 የተበረረ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "missing_miles_claims",
+    "match": {
+     "member_no": "SM00000003",
+     "ticket_no": "0709876543210",
+     "flight_no": "SM188",
+     "flight_date": "2026-02-20"
+    }
+   }
+  ],
+  "solution": [
+   "goto /miles/claim",
+   "fill 0 member_no=SM00000003; ticket_no=0709876543210; flight_no=SM188; flight_date=2026-02-20"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-036",
+  "site": "selam",
+  "intent": "በሽልማት ሠንጠረዡ መሠረት፣ ወደ ሰሜን አሜሪካ የአንድ አቅጣጫ የኢኮኖሚ ሽልማት ስንት ማይሎች ይፈልጋል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "60000",
+     "60000.00",
+     "60,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-chart",
+   "stop 60000"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-037",
+  "site": "selam",
+  "intent": "አባል SM00000011 (የአያት ስም አለሙ) ደረጃቸውንና ቀሪያቸውን ማወቅ ይፈልጋሉ። ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "gold",
+    "none_of": [
+     "blue",
+     "platinum",
+     "silver"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "88971",
+     "88971.00",
+     "88,971"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000011; surname=አለሙ",
+   "stop gold, 88971"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-038",
+  "site": "selam",
+  "intent": "አባል SM00000004 (የአያት ስም ነጋሽ፣ ቀሪው በመለያቸው ላይ የሚታይ) የ25,000 ማይል ሽልማት መለወጥ ይፈልጋሉ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "በቂ ማይል የለም",
+     "ማይሎች አይበቁም",
+     "መለወጥ አይቻልም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000004; surname=ነጋሽ",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-039",
+  "site": "selam",
+  "intent": "ለ2026-03-16 የአዲስ አበባ (ADD) የመነሻ ሰሌዳ ይክፈቱ (ሰሌዳው /flight-status/departures/ADD ላይ ነው)። ሰሌዳው ስንት መነሻዎችን ይዘረዝራል? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "74",
+     "74.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /flight-status/departures/ADD",
+   "stop 74"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-040",
+  "site": "selam",
+  "intent": "በ2026-03-16 በረራ SM152 ዘግይቷል። በስንት ደቂቃ ዘግይቷል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /flight-status?flight_no=SM152&date=2026-03-16",
+   "stop 40"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-041",
+  "site": "selam",
+  "intent": "ለበረራ SM107 በ2026-03-16 የመነሻ በሩንና የመነሻ ተርሚናሉን ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "B20"
+   },
+   {
+    "type": "answer_match",
+    "answer": "1"
+   }
+  ],
+  "solution": [
+   "goto /flight-status?flight_no=SM107&date=2026-03-16",
+   "stop gate B20, terminal 1"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-042",
+  "site": "selam",
+  "intent": "የወቅታዊ መስመሮች ገጹን ይመልከቱ፡ የትኞቹ መስመሮች በዓመቱ ከፊል ይቆማሉ? ምንም ከሌለ ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "ዓመቱን ሙሉ",
+     "ሁሉም መስመሮች",
+     "ምንም የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /schedules/seasonal",
+   "stop በአውታረ መረባችን ውስጥ ያሉ ሁሉም መስመሮች ዓመቱን ሙሉ ይሠራሉ።"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-043",
+  "site": "selam",
+  "intent": "የADD ወደ ABJ አገልግሎት በሳምንት ስንት ቀናት ይሠራል? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2",
+     "2.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /schedules?origin=ADD&destination=ABJ",
+   "stop 2"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-044",
+  "site": "selam",
+  "intent": "በማስያዣ N9JKBF (የአያት ስም ኃይሌ) ላይ ለመነሻ በረራው የሚገኝ የመስኮት መቀመጫ ይምረጡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "seat_assignments",
+    "match": {
+     "segment_id": 19,
+     "seat_no": [
+      "1A",
+      "1F",
+      "2A",
+      "2F",
+      "3A",
+      "3F",
+      "4A",
+      "4F",
+      "5A",
+      "5F",
+      "6A",
+      "6F",
+      "7A",
+      "7J",
+      "8A",
+      "8J",
+      "9A",
+      "9J",
+      "10A",
+      "10J",
+      "11A",
+      "11J",
+      "12A",
+      "12J",
+      "13A",
+      "13J",
+      "14A",
+      "14J",
+      "15A",
+      "15J",
+      "16A",
+      "16J",
+      "17A",
+      "17J",
+      "18A",
+      "18J",
+      "19A",
+      "19J",
+      "20A",
+      "20J",
+      "21A",
+      "21J",
+      "22A",
+      "22J",
+      "23A",
+      "23J",
+      "24A",
+      "24J",
+      "25A",
+      "25J",
+      "26A",
+      "26J",
+      "27A",
+      "27J",
+      "28A",
+      "28J",
+      "29A",
+      "29J",
+      "30A",
+      "30J",
+      "31A",
+      "31J",
+      "32A",
+      "32J",
+      "33A",
+      "33J",
+      "34A",
+      "34J",
+      "35A",
+      "35J",
+      "36A",
+      "36J"
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=ኃይሌ",
+   "goto /manage/N9JKBF/seats",
+   "fill 0 seat_no=1A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-045",
+  "site": "selam",
+  "intent": "ለማስያዣ MDQKTR (የአያት ስም ግርማ) ለመነሻ በረራው 10 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ይጨምሩ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 11,
+     "extra_kg": 10,
+     "segment_id": 20
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=MDQKTR; surname=ግርማ",
+   "goto /manage/MDQKTR/baggage",
+   "fill 0 extra_kg=10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-046",
+  "site": "selam",
+  "intent": "በማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ በመገናኛ ዝርዝር ገጹ (/manage/WGYBNA/contact-details፣ ከማስያዣው ገጽ ያልተገናኘ) የመገናኛ ዝርዝሩን ያዘምኑ፡ ኢሜይሉን ወደ assefa.new@example.com እና ስልኩን ወደ +251911222333 ያድርጉ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "WGYBNA"
+    },
+    "field": "email",
+    "value": "assefa.new@example.com"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "WGYBNA"
+    },
+    "field": "phone",
+    "value": "+251911222333"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "goto /manage/WGYBNA/contact-details",
+   "fill 0 email=assefa.new@example.com; phone=+251911222333"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-047",
+  "site": "selam",
+  "intent": "ማስያዣ EFC78Z (የአያት ስም ተረፈ)ን በስረዛ ገጹ (/manage/EFC78Z/cancel፣ ከማስያዣው ገጽ ያልተገናኘ) ሙሉ በሙሉ ይሰርዙ፣ ሲጠየቁ ያረጋግጡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "EFC78Z"
+    },
+    "field": "status",
+    "value": "cancelled"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=EFC78Z; surname=ተረፈ",
+   "goto /manage/EFC78Z/cancel",
+   "fill 0 confirm=yes"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-048",
+  "site": "selam",
+  "intent": "ማስያዣ J4KC9R (የአያት ስም ወልደ) ተመላሽ በሚደረግ ታሪፍ ላይ ነው። የመስመር ላይ ተመላሹን ጀምረው በግምገማ ደረጃው በኩል ያስገቡት።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=J4KC9R; surname=ወልደ",
+   "goto /manage/J4KC9R/refund",
+   "fill 0 confirm=1"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-049",
+  "site": "selam",
+  "intent": "ለማስያዣ N9JKBF (የአያት ስም ኃይሌ) የእስያ የአትክልት ምግብ (AVML) ይጠይቁ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "segment_id": 19,
+     "meal_code": "AVML"
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=ኃይሌ",
+   "goto /onboard/dining?pnr=N9JKBF",
+   "fill 1 meal_code=AVML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-050",
+  "site": "selam",
+  "intent": "ማስያዣ VF6ZBW (የአያት ስም ተስፋዬ) ለማሻሻያ ብቁ ነው። ለመነሻ በረራው የጥሬ ገንዘብ ማሻሻያውን በግምገማ ደረጃው በኩል ይጠይቁ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "upgrade_purchases",
+    "match": {
+     "segment_id": 5
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=VF6ZBW; surname=ተስፋዬ",
+   "goto /manage/VF6ZBW/upgrade",
+   "fill 0 segment_id=5"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-051",
+  "site": "selam",
+  "intent": "በማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ ሁለቱንም ያድርጉ፡ ለመነሻ በረራው 5 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ይጨምሩ፣ እና ዝቅተኛ ጨው ያለው ምግብ (LSML) ይጠይቁ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 1,
+     "extra_kg": 5,
+     "segment_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "meal_code": "LSML",
+     "segment_id": [
+      1,
+      2
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "goto /manage/WGYBNA/baggage",
+   "fill 0 extra_kg=5",
+   "goto /onboard/dining?pnr=WGYBNA",
+   "fill 1 meal_code=LSML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-052",
+  "site": "selam",
+  "intent": "በማስያዣ VF6ZBW (የአያት ስም ተስፋዬ) ላይ ሁለቱንም ያድርጉ፡ ለመነሻ በረራው 15 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ይጨምሩ፣ እና የስኳር በሽተኛ ምግብ (DBML) ይጠይቁ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 3,
+     "extra_kg": 15,
+     "segment_id": 5
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "meal_code": "DBML",
+     "segment_id": [
+      5,
+      6
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=VF6ZBW; surname=ተስፋዬ",
+   "goto /manage/VF6ZBW/baggage",
+   "fill 0 extra_kg=15",
+   "goto /onboard/dining?pnr=VF6ZBW",
+   "fill 1 meal_code=DBML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-053",
+  "site": "selam",
+  "intent": "ለማስያዣ WGYBNA በልዩ እርዳታ ቅጹ በኩል የዊልቼር እርዳታ ጥያቄ (የአገልግሎት ኮድ WCHR) ያስገቡ፣ በስም 'የሙከራ ተሳፋሪ'፣ ኢሜይል test.passenger@example.com፣ ማስታወሻ 'የመተላለፊያ ወንበር ያስፈልጋል'።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "kind": "assistance",
+     "payload": "%WCHR%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%WGYBNA%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%የሙከራ ተሳፋሪ%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%test.passenger@example.com%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%የመተላለፊያ ወንበር ያስፈልጋል%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/assistance/wheelchair",
+   "fill 0 full_name=የሙከራ ተሳፋሪ; email=test.passenger@example.com; booking_reference=WGYBNA; service_code=WCHR; notes=የመተላለፊያ ወንበር ያስፈልጋል"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-054",
+  "site": "selam",
+  "intent": "ከአዲስ አበባ (ADD) ወደ ለንደን (LHR) ለመብረር የጉዞ መስፈርቶቹን ይክፈቱ — የመስመሩ ገጽ /travel-requirements/ADD/LHR ነው። የሚያስፈልገውን የፓስፖርት ተቀባይነት በወራትና የሚያስፈልጉትን ባዶ ገጾች ብዛት ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6",
+     "6.00"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2",
+     "2.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /travel-requirements/ADD/LHR",
+   "stop 6 months, 2 pages"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-055",
+  "site": "selam",
+  "intent": "የጀርመን የመገናኛ ገጽ ይክፈቱ። የ24 ሰዓት አስቸኳይ የስልክ መስመሩንና ቢሮው ያለበትን ከተማ ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "+251 11 517 8888",
+    "none_of": [
+     "+214 38 836 7484"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "ፍራንክፈርት"
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "goto /help/contact/DE",
+   "stop +251 11 517 8888, ፍራንክፈርት"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-056",
+  "site": "selam",
+  "intent": "የኦስትሪያ የአካባቢ ቢሮ የስልክ ቁጥር ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "+203 13 510 5079"
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "goto /help/contact/AT",
+   "stop +203 13 510 5079"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-057",
+  "site": "selam",
+  "intent": "አብዛኞቹ ልዩ ምግቦች ከመነሻ 24 ሰዓት በፊት ይዘጋሉ፣ አንዳንዶቹ ግን ተጨማሪ ማስታወቂያ ይፈልጋሉ። የትኞቹ ልዩ ምግቦች 48 ሰዓት ይፈልጋሉ? ሁለቱንም ይጥቀሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ጃይን ቬጀቴሪያን",
+    "none_of": [
+     "ሂንዱ",
+     "ሙስሊም",
+     "እስያዊ ቬጀቴሪያን",
+     "ዝቅተኛ ስብ",
+     "ዝቅተኛ ጨው",
+     "የሕፃናት",
+     "የስኳር በሽተኛ",
+     "የኦርቶዶክስ ጾም",
+     "የጨቅላ",
+     "የፍራፍሬ ሳህን",
+     "ግሉተን የማይስማማው"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "ኮሸር",
+    "none_of": [
+     "ሂንዱ",
+     "ሙስሊም",
+     "እስያዊ ቬጀቴሪያን",
+     "ዝቅተኛ ስብ",
+     "ዝቅተኛ ጨው",
+     "የሕፃናት",
+     "የስኳር በሽተኛ",
+     "የኦርቶዶክስ ጾም",
+     "የጨቅላ",
+     "የፍራፍሬ ሳህን",
+     "ግሉተን የማይስማማው"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/dining/special-meals",
+   "stop ጃይን ቬጀቴሪያን, ኮሸር"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-058",
+  "site": "selam",
+  "intent": "በኢቪዛ አገልግሎት ላይ የ90 ቀን ቱሪስት ኢ-ቪዛን ከንግድ ኢ-ቪዛ ጋር ያወዳድሩ። የቱ ይበልጣል፣ በስንት? የቪዛውን ስምና ልዩነቱን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "የቱሪስት ኢ-ቪዛ፣ 90 ቀን",
+     "የ90 ቀን ቱሪስት",
+     "90 ቀን ቱሪስት",
+     "ቱሪስት ኢ-ቪዛ፣ 90",
+     "ቱሪስት (90"
+    ],
+    "none_of": [
+     "የንግድ ኢ-ቪዛ"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "10",
+     "10.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/evisa",
+   "stop የቱሪስት ኢ-ቪዛ፣ 90 ቀን, 10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-059",
+  "site": "selam",
+  "intent": "ከፍራንክፈርት (FRA) ከሚቀርቡት የባቡር ግንኙነቶች የትኛው መድረሻ አጭሩን የጉዞ ጊዜ አለው፣ ስንት ደቂቃ ነው? ሁለቱንም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ኮሎኝ",
+    "none_of": [
+     "ሙኒክ",
+     "ስቱትጋርት"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "62",
+     "62.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/eurorail?arrival=FRA",
+   "stop ኮሎኝ, 62"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-060",
+  "site": "selam",
+  "intent": "በአክራ (ACC) ለአንድ ተሳፋሪ የላውንጅ መግቢያ ይግዙ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "ላውንጅ የለም",
+     "ላውንጆች የሉም",
+     "ላውንጅ የለውም"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "lounge_purchases",
+    "match": {
+     "guests": 0
+    }
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-061",
+  "site": "selam",
+  "intent": "ለበረራ SM114 በ2026-03-17 ትልቁን የዋይ-ፋይ ፓኬጅ ይግዙ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "ዋይ-ፋይ የለም",
+     "ዋይፋይ የለም",
+     "ዋይ-ፋይ የለውም",
+     "አልተገጠመም"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wifi_purchases",
+    "match": {
+     "status": "pending"
+    }
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM114&date=2026-03-17",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-062",
+  "site": "selam",
+  "intent": "በ2026-03-19 ከADD ወደ ABJ በኢኮኖሚ በማይሎች ሊያዙ የሚችሉ የሽልማት መቀመጫዎችን ፈልገው የሚያስፈልጉትን ማይሎች ይግለጹ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "የሽልማት መቀመጫ የለም",
+     "መቀመጫ የለም",
+     "ተገኝነት የለም",
+     "አይገኝም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-search?origin=ADD&destination=ABJ&date=2026-03-19&cabin=economy",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-063",
+  "site": "selam",
+  "intent": "ማስያዣ WGYBNA (የአያት ስም አሰፋ) ለተሳፋሪው አይመችም። ለእሱ የመስመር ላይ ተመላሽ ያጠናቅቁ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "ተመላሽ አይደረግም",
+     "የማይመለስ",
+     "ሊመለስ አይችልም",
+     "ብቁ አይደለም"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=አሰፋ",
+   "goto /manage/WGYBNA/refund",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-064",
+  "site": "selam",
+  "intent": "በማስያዣ J4KC9R (የአያት ስም ወልደ) ላይ ያለውን የመነሻ በረራ ወደ ሃይላንድ ክፍል ያሻሽሉ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "ብቁ አይደለም",
+     "ሊሻሻል አይችልም",
+     "ለማሻሻያ ብቁ አይደለም",
+     "ማሻሻል አይቻልም"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "upgrade_purchases",
+    "match": {
+     "booking_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=J4KC9R; surname=ወልደ",
+   "goto /manage/J4KC9R/upgrade",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-065",
+  "site": "selam",
+  "intent": "በጃፓን ያለውን የሰላም አየር መንገድ ቢሮ የስልክ ቁጥር ያግኙ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "ቢሮ የለም",
+     "ቢሮ የለውም",
+     "የሰላም አየር መንገድ ቢሮ የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-066",
+  "site": "selam",
+  "intent": "በዜና ትራንዚት ሆቴል ስድስት ሰው የሚያስተኛ ክፍል ለ6 ሰዓት ቆይታ በ2026-04-12 ያስይዙ። በጣቢያው ላይ ይህ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "አይቻልም",
+     "ክፍል የለም",
+     "ክፍሎች የሉም",
+     "ማስተናገድ አይችልም",
+     "አያቀርብም"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "hotel_bookings",
+    "match": {
+     "arrival": "2026-04-12"
+    }
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-067",
+  "site": "selam",
+  "intent": "ሰላም አየር መንገድ በአዲስ አበባ (ADD) በሁሉም ተርሚናሎች ስንት ላውንጆችን ይዘረዝራል? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4",
+     "4.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop 4"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-068",
+  "site": "selam",
+  "intent": "በአዲስ አበባ ላሉት ሁለቱም ሃይላንድ ላውንጆች (ተርሚናል 1 እና ተርሚናል 2) የመግቢያ ክፍያ መግዛት ስንት ያስከፍላል? የተጣመረውን ጠቅላላ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "120",
+     "120.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop 120"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-069",
+  "site": "selam",
+  "intent": "የልዩ ምግቦች ገጹ ስንት የልዩ ምግብ ኮዶችን ይዘረዝራል? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "14",
+     "14.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/dining/special-meals",
+   "stop 14"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-070",
+  "site": "selam",
+  "intent": "የዩሮሬይል አጋር ገጹ ከፍራንክፈርት (FRA) ስንት ቀጣይ የባቡር መድረሻዎችን ይዘረዝራል? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "3",
+     "3.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/eurorail?arrival=FRA",
+   "stop 3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-071",
+  "site": "selam",
+  "intent": "በድረ ገጹ የአስተያየት ቅጽ በኩል በትክክል 'የተርሚናል 2 የላውንጅ ምልክቶች ግራ የሚያጋቡ ናቸው።' በሚል መልእክት አስተያየት ይላኩ",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%የተርሚናል 2 የላውንጅ ምልክቶች ግራ የሚያጋቡ ናቸው።%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /help/feedback",
+   "fill 0 full_name=የሙከራ ተሳፋሪ; email=test.passenger@example.com; category=complaint; message=የተርሚናል 2 የላውንጅ ምልክቶች ግራ የሚያጋቡ ናቸው።"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-072",
+  "site": "selam",
+  "intent": "ማስያዣ MBX744 (የአያት ስም ዘለቀ)ን ይክፈቱ። የተከፈለውን ጠቅላላና በማስያዣው ላይ ስንት ተሳፋሪዎች እንዳሉ ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1780",
+     "1780.00",
+     "1,780"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "10",
+     "10.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=MBX744; surname=ዘለቀ",
+   "goto /manage/MBX744",
+   "stop 1780, 10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-073",
+  "site": "selam",
+  "intent": "በአዲስ አበባ ተርሚናል 1 ያለውን ሃይላንድ ላውንጅ ከፍተው የመክፈቻ ሰዓቱንና በላውንጁ ገጽ ላይ እንደተሰጠው ትክክለኛ ቦታውን (የትኛውን በር እንደሚመለከት ጨምሮ) ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "በየቀኑ 04:00-23:30",
+     "04:00-23:30",
+     "04:00 to 23:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "ከበር A6 ትይዩ"
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/1",
+   "stop በየቀኑ 04:00-23:30; ተርሚናል 1፣ ከደህንነት ፍተሻ በኋላ፣ ከቀረጥ ነጻ አዳራሽ አንድ ፎቅ በላይ፣ ከበር A6 ትይዩ።"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-074",
+  "site": "selam",
+  "intent": "የአፍሪካ ክልል መስመር የሚበር የኢኮኖሚ አዋቂ 30 ኪግ የሚመዝን አንድ ሻንጣ መመዝገብ ይፈልጋል። የፈቃድ ገጹን (በሻንጣ ከፍተኛው ክብደት) እና የትርፍ ክፍያ ገጹን ተጠቅመው፣ ከዚያ ከፍተኛ በላይ ያለው ትርፍ ክብደት ስንት ያስከፍላል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "84",
+     "84.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /baggage/allowance?origin=ADD&destination=NBO&cabin=economy&pax_type=adult",
+   "goto /baggage/fees",
+   "stop 84"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-075",
+  "site": "selam",
+  "intent": "አንድ ተጓዥ የ250 ጉዞ ያስይዛል እና የሴፍቮያጅ ሽፋን ይፈልጋል። ለ250 ዋጋ ግምት ያግኙ፡ የትኛው የሽፋን ደረጃ ርካሹ ነው፣ ፕሪሚየሙስ ስንት ነው? የደረጃውን ስምና መጠኑን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "መሠረታዊ ሽፋን",
+    "none_of": [
+     "ሁሉን አቀፍ ሽፋን",
+     "የተጓዥ ሽፋን"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "18",
+     "18.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=250",
+   "stop መሠረታዊ ሽፋን, 18"
+  ],
+  "max_steps": 40
+ }
+]

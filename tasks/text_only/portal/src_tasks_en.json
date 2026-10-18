@@ -1,0 +1,167 @@
+[
+ {
+  "task_id": 1,
+  "intent": "Look up the status of the submitted identity correction request with slip number NI2000019 and report its current status.",
+  "login": true
+ },
+ {
+  "task_id": 2,
+  "intent": "Submit a correction to the name recorded on your identity card, changing it to 'Delwara Haque', attaching a supporting document.",
+  "login": true
+ },
+ {
+  "task_id": 3,
+  "intent": "Open the printable copy of your identity card.",
+  "login": true
+ },
+ {
+  "task_id": 4,
+  "intent": "Complete new voter registration through the full form, giving your name, parentage, date of birth, both addresses and an enrolment centre.",
+  "login": true
+ },
+ {
+  "task_id": 5,
+  "intent": "Check the status of passport application PPA04000017 and report it.",
+  "login": true
+ },
+ {
+  "task_id": 6,
+  "intent": "Fill in and submit a new passport application end to end: personal information, then address, then page count, validity and delivery.",
+  "login": true
+ },
+ {
+  "task_id": 7,
+  "intent": "Find the fee for an ordinary 48-page passport with 10 years validity and regular delivery, and report the amount.",
+  "login": false
+ },
+ {
+  "task_id": 8,
+  "intent": "Book a passport enrolment appointment at Barguna Passport and Immigration Office for 22 June 2026 at 10:30.",
+  "login": true
+ },
+ {
+  "task_id": 9,
+  "intent": "Apply for a new birth certificate for a child named 'Nusrat Haque' born on 2026-02-14, giving both parents' details.",
+  "login": true
+ },
+ {
+  "task_id": 10,
+  "intent": "Check the birth registration record numbered 20000000000373 and report the name recorded on it.",
+  "login": true
+ },
+ {
+  "task_id": 11,
+  "intent": "Submit a correction to the name on your birth registration record, changing it to 'Delwar Hoque'.",
+  "login": true
+ },
+ {
+  "task_id": 12,
+  "intent": "Look up khatian number 4438 in Dakshin Char mouza (Meherpur Para, Meherpur, Khulna division) and report the recorded owner's name.",
+  "login": true
+ },
+ {
+  "task_id": 13,
+  "intent": "Apply for a land mutation, giving buyer and seller details and the land particulars.",
+  "login": true
+ },
+ {
+  "task_id": 14,
+  "intent": "Pay the outstanding land development tax on holding HLD00001 for 2025-2026.",
+  "login": true
+ },
+ {
+  "task_id": 15,
+  "intent": "Open the certified copy of your khatian.",
+  "login": true
+ },
+ {
+  "task_id": 16,
+  "intent": "Pay the outstanding electricity bill BL0000005 on consumer number 08000007.",
+  "login": true
+ },
+ {
+  "task_id": 17,
+  "intent": "Check the total outstanding amount on consumer number 08000007 and report it.",
+  "login": true
+ },
+ {
+  "task_id": 18,
+  "intent": "Recharge prepaid meter MTR000002 with 500.",
+  "login": true
+ },
+ {
+  "task_id": 19,
+  "intent": "Open your billing history and report the amount of the most recent bill.",
+  "login": true
+ },
+ {
+  "task_id": 20,
+  "intent": "Retrieve the secondary examination result for roll number 763370, Rajshahi board, 2021, and report the grade point average.",
+  "login": false
+ },
+ {
+  "task_id": 21,
+  "intent": "Submit a rescrutiny application for Mathematics and English on your secondary result, roll number 763370.",
+  "login": false
+ },
+ {
+  "task_id": 22,
+  "intent": "Check the status of the driving licence with reference number BRT000001 and report it.",
+  "login": true
+ },
+ {
+  "task_id": 23,
+  "intent": "Generate and pay the licence fee challan for a professional licence.",
+  "login": true
+ },
+ {
+  "task_id": 24,
+  "intent": "Book a driving test at Barishal Transport Licensing Office for 26 June 2026 at 11:00.",
+  "login": true
+ },
+ {
+  "task_id": 25,
+  "intent": "Register for a new taxpayer identification number through the full application flow.",
+  "login": true
+ },
+ {
+  "task_id": 26,
+  "intent": "Verify whether taxpayer identification number 972871718941 is valid, and report the name registered against it.",
+  "login": true
+ },
+ {
+  "task_id": 27,
+  "intent": "Submit an individual e-return for assessment year 2025-2026.",
+  "login": true
+ },
+ {
+  "task_id": 28,
+  "intent": "Complete pilgrimage pre-registration and obtain the serial number.",
+  "login": false
+ },
+ {
+  "task_id": 29,
+  "intent": "Download the vaccination certificate for identity number 9999708182203 registered on 2023-09-15, and report the certificate number.",
+  "login": false
+ },
+ {
+  "task_id": 30,
+  "intent": "Apply for a police clearance certificate for employment abroad, giving both addresses.",
+  "login": true
+ },
+ {
+  "task_id": 31,
+  "intent": "Look up the identity correction request with slip number NI9999999 and report its status. If no such record exists, answer NO_RECORD.",
+  "login": true
+ },
+ {
+  "task_id": 32,
+  "intent": "Look up khatian number 99999 in Dakshin Char mouza (Meherpur Para, Meherpur, Khulna division). If no such record exists, answer NO_RECORD.",
+  "login": true
+ },
+ {
+  "task_id": 33,
+  "intent": "Retrieve the secondary result for roll number 999999, Rajshahi board, 2021. If no such result exists, answer NO_RECORD.",
+  "login": false
+ }
+]

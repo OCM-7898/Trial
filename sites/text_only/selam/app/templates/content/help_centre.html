@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ t("nav.help_centre") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("nav.help_centre") }}</li></ol>
+  </nav>
+  <h1>{{ t("nav.help_centre") }}</h1>
+  <p>{{ t("help.intro") }}</p>
+
+  {% for group in grouped %}
+  <section class="section">
+    <div class="section-head"><h2>{{ group.label }}</h2></div>
+    <div class="cards">
+      {% for page in group.pages %}
+      <article class="card">
+        <div class="card-body">
+          <h3><a href="{{ route_for(page.slug) }}">{{ page.title }}</a></h3>
+          <p>{{ page.summary }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

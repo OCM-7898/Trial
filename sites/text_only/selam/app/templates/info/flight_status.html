@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field, text_field %}
+{% block title %}{{ t("status.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("status.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("status.title") }}</h1>
+
+  {% set also = [(t("nav.status_route"), path("status_route")), (t("status.subscribe_title"), path("status_subscribe"))] %}
+  {% include "partials/also.html" %}
+  <form class="searchform" method="get" action="{{ path('flight_status') }}">
+    {{ text_field("flight_no", "flight_no", t("status.flight_no"), "SM120", t("status.flight_no_hint"), flight_no) }}
+    {{ date_field("date", "date", t("status.date"), t("common.date_hint"), date_value) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("status.submit") }}</button></div>
+  </form>
+
+  {% if result %}
+  <section class="section">
+    <h2>{{ result.flight.flight_no }}</h2>
+    <p class="hint">{{ result.origin.city }} ({{ result.origin.iata }}) &rarr;
+       {{ result.destination.city }} ({{ result.destination.iata }})</p>
+    <div class="table-scroll">
+      <table>
+        <tbody>
+          <tr><th scope="row">{{ t("status.status") }}</th>
+              <td><span class="badge {{ 'badge-warn' if result.flight.status != 'scheduled' else 'badge-ok' }}">{{ result.status_label }}</span>
+              {% if result.flight.delay_minutes %} {{ t("status.delayed_by", n=result.flight.delay_minutes) }}{% endif %}</td></tr>
+          <tr><th scope="row">{{ t("status.scheduled_departure") }}</th>
+              <td>{{ fmt_date(result.flight.date) }} &middot; {{ fmt_time(result.flight.dep_time) }}</td></tr>
+          <tr><th scope="row">{{ t("status.scheduled_arrival") }}</th>
+              <td>{{ fmt_date(result.arrival_date) }} &middot; {{ fmt_time(result.flight.arr_time) }}</td></tr>
+          <tr><th scope="row">{{ t("status.departure_terminal") }}</th><td>{{ result.flight.terminal_dep or "--" }}</td></tr>
+          <tr><th scope="row">{{ t("status.arrival_terminal") }}</th><td>{{ result.flight.terminal_arr or "--" }}</td></tr>
+          <tr><th scope="row">{{ t("status.gate") }}</th><td>{{ result.flight.gate or "--" }}</td></tr>
+          <tr><th scope="row">{{ t("status.aircraft") }}</th><td>{{ result.flight.aircraft.name }}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% elif searched %}
+  <div class="notice notice-warn"><div>{{ t("status.not_found") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

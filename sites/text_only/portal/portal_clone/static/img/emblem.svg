@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="emblem-title">
+  <title id="emblem-title">Emblem of the Republic of Haritia</title>
+  <!--
+    An abstract geometric device for a FICTIONAL state. It deliberately
+    resembles no real coat of arms, seal or national emblem: two concentric
+    rings, a star, three water bands and two symmetric sheaves. Committed as a
+    static file with a fixed viewBox so it renders byte-identically on every
+    build - a generated or randomised emblem would make two screenshots of the
+    same page differ, which is scored nondeterminism for a visual agent.
+  -->
+  <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="60" cy="60" r="49" fill="none" stroke="currentColor" stroke-width="1.5"/>
+
+  <!-- star -->
+  <path d="M60 24 L64.4 37.2 L78.2 37.2 L67.1 45.4 L71.3 58.6 L60 50.5 L48.7 58.6 L52.9 45.4 L41.8 37.2 L55.6 37.2 Z"
+        fill="currentColor"/>
+
+  <!-- three water bands -->
+  <path d="M36 70 q6 -5 12 0 t12 0 t12 0 t12 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M36 78 q6 -5 12 0 t12 0 t12 0 t12 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M36 86 q6 -5 12 0 t12 0 t12 0 t12 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- symmetric sheaves -->
+  <path d="M30 95 q-6 -18 2 -32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M90 95 q6 -18 -2 -32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M28 84 l-6 -3 M29 76 l-6 -3 M31 68 l-6 -3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M92 84 l6 -3 M91 76 l6 -3 M89 68 l6 -3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

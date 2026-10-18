@@ -1,0 +1,569 @@
+[
+ {
+  "id": 1,
+  "category": "تصحیح",
+  "variant": "نام کے ہجے",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 2,
+  "category": "تصحیح",
+  "variant": "نام کے ہجے",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 3,
+  "category": "تصحیح",
+  "variant": "تاریخِ پیدائش",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 4,
+  "category": "تصحیح",
+  "variant": "تاریخِ پیدائش",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 5,
+  "category": "تصحیح",
+  "variant": "پتہ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 6,
+  "category": "تصحیح",
+  "variant": "پتہ",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 7,
+  "category": "دوبارہ اجرا",
+  "variant": "گمشدہ کارڈ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 8,
+  "category": "دوبارہ اجرا",
+  "variant": "گمشدہ کارڈ",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 9,
+  "category": "دوبارہ اجرا",
+  "variant": "خراب کارڈ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 10,
+  "category": "نقل",
+  "variant": "دوسری اور بعد کی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 11,
+  "category": "عام",
+  "variant": "48 صفحات",
+  "validity": "5 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 12,
+  "category": "عام",
+  "variant": "48 صفحات",
+  "validity": "5 سال",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 13,
+  "category": "عام",
+  "variant": "48 صفحات",
+  "validity": "5 سال",
+  "delivery": "ہنگامی"
+ },
+ {
+  "id": 14,
+  "category": "عام",
+  "variant": "48 صفحات",
+  "validity": "10 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 15,
+  "category": "عام",
+  "variant": "48 صفحات",
+  "validity": "10 سال",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 16,
+  "category": "عام",
+  "variant": "64 صفحات",
+  "validity": "5 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 17,
+  "category": "عام",
+  "variant": "64 صفحات",
+  "validity": "5 سال",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 18,
+  "category": "عام",
+  "variant": "64 صفحات",
+  "validity": "10 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 19,
+  "category": "عام",
+  "variant": "64 صفحات",
+  "validity": "10 سال",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 20,
+  "category": "سرکاری",
+  "variant": "48 صفحات",
+  "validity": "5 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 21,
+  "category": "پیدائش",
+  "variant": "45 دن کے اندر",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 22,
+  "category": "پیدائش",
+  "variant": "46 دن سے 5 سال",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 23,
+  "category": "پیدائش",
+  "variant": "5 سال کے بعد",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 24,
+  "category": "وفات",
+  "variant": "45 دن کے اندر",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 25,
+  "category": "وفات",
+  "variant": "45 دن کے بعد",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 26,
+  "category": "تصحیح",
+  "variant": "نام یا تاریخ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 27,
+  "category": "تصدیق شدہ نقل",
+  "variant": "پیدائش",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 28,
+  "category": "تصدیق شدہ نقل",
+  "variant": "وفات",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 29,
+  "category": "انتقال",
+  "variant": "عام",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 30,
+  "category": "انتقال",
+  "variant": "عام",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 31,
+  "category": "تصدیق شدہ نقل",
+  "variant": "کھتیان",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 32,
+  "category": "تصدیق شدہ نقل",
+  "variant": "کھتیان",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 33,
+  "category": "تلاش",
+  "variant": "ریکارڈ معائنہ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 34,
+  "category": "ترقیاتی ٹیکس",
+  "variant": "رہائشی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 35,
+  "category": "ترقیاتی ٹیکس",
+  "variant": "تجارتی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 36,
+  "category": "کنکشن",
+  "variant": "گھریلو سنگل فیز",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 37,
+  "category": "کنکشن",
+  "variant": "گھریلو تھری فیز",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 38,
+  "category": "کنکشن",
+  "variant": "تجارتی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 39,
+  "category": "میٹر",
+  "variant": "تبدیلی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 40,
+  "category": "میٹر",
+  "variant": "منتقلی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 41,
+  "category": "دوبارہ کنکشن",
+  "variant": "منقطع ہونے کے بعد",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 42,
+  "category": "دوبارہ جانچ",
+  "variant": "فی مضمون",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 43,
+  "category": "سرٹیفکیٹ",
+  "variant": "دوبارہ اجرا",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 44,
+  "category": "ٹرانسکرپٹ",
+  "variant": "فی نقل",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 45,
+  "category": "مساوات",
+  "variant": "سرٹیفکیٹ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 46,
+  "category": "ایڈمٹ کارڈ",
+  "variant": "نقل",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 47,
+  "category": "لرنر",
+  "variant": "موٹر سائیکل",
+  "validity": "2 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 48,
+  "category": "لرنر",
+  "variant": "ہلکی گاڑی",
+  "validity": "2 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 49,
+  "category": "لائسنس",
+  "variant": "پیشہ ور",
+  "validity": "5 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 50,
+  "category": "لائسنس",
+  "variant": "غیر پیشہ ور",
+  "validity": "10 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 51,
+  "category": "لائسنس",
+  "variant": "غیر پیشہ ور",
+  "validity": "10 سال",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 52,
+  "category": "تجدید",
+  "variant": "پیشہ ور",
+  "validity": "5 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 53,
+  "category": "نقل",
+  "variant": "کوئی بھی کلاس",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 54,
+  "category": "رجسٹریشن",
+  "variant": "انفرادی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 55,
+  "category": "رجسٹریشن",
+  "variant": "کمپنی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 56,
+  "category": "کلیئرنس",
+  "variant": "سرٹیفکیٹ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 57,
+  "category": "ریٹرن",
+  "variant": "تاخیر سے جمع",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 58,
+  "category": "اپیل",
+  "variant": "یادداشت",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 59,
+  "category": "پیشگی رجسٹریشن",
+  "variant": "سرکاری پیکج",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 60,
+  "category": "پیشگی رجسٹریشن",
+  "variant": "نجی پیکج",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 61,
+  "category": "رجسٹریشن",
+  "variant": "سرکاری پیکج",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 62,
+  "category": "رجسٹریشن",
+  "variant": "نجی پیکج",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 63,
+  "category": "متبادل",
+  "variant": "نامزد کی تبدیلی",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 64,
+  "category": "سرٹیفکیٹ",
+  "variant": "ویکسینیشن",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 65,
+  "category": "سرٹیفکیٹ",
+  "variant": "تصحیح",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 66,
+  "category": "ہیلتھ کارڈ",
+  "variant": "اجرا",
+  "validity": "5 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 67,
+  "category": "میڈیکل بورڈ",
+  "variant": "تشخیص",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 68,
+  "category": "کلیئرنس",
+  "variant": "ملکی استعمال",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 69,
+  "category": "کلیئرنس",
+  "variant": "بیرونِ ملک استعمال",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 70,
+  "category": "کلیئرنس",
+  "variant": "بیرونِ ملک استعمال",
+  "validity": "—",
+  "delivery": "ایکسپریس"
+ },
+ {
+  "id": 71,
+  "category": "کردار",
+  "variant": "سرٹیفکیٹ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 72,
+  "category": "کرایہ دار",
+  "variant": "رجسٹریشن",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 73,
+  "category": "نیا",
+  "variant": "چھوٹا کاروبار",
+  "validity": "1 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 74,
+  "category": "نیا",
+  "variant": "درمیانہ کاروبار",
+  "validity": "1 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 75,
+  "category": "نیا",
+  "variant": "بڑا کاروبار",
+  "validity": "1 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 76,
+  "category": "تجدید",
+  "variant": "چھوٹا کاروبار",
+  "validity": "1 سال",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 77,
+  "category": "نقل",
+  "variant": "کوئی بھی زمرہ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 78,
+  "category": "دعویٰ",
+  "variant": "ریٹائرمنٹ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 79,
+  "category": "دعویٰ",
+  "variant": "خاندانی پنشن",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 80,
+  "category": "سرٹیفکیٹ",
+  "variant": "زندگی کا سرٹیفکیٹ",
+  "validity": "—",
+  "delivery": "معمولی"
+ },
+ {
+  "id": 81,
+  "category": "نقل",
+  "variant": "تنخواہ پرچی",
+  "validity": "—",
+  "delivery": "معمولی"
+ }
+]

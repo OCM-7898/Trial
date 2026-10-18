@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field %}
+{% block content %}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>{{ t("home.hero_title") }}</h1>
+      <p>{{ t("home.hero_subtitle") }}</p>
+    </div>
+    <div class="searchpanel" data-tabs>
+      <ul class="tabs" role="tablist">
+        <li role="presentation"><button role="tab" type="button" aria-selected="true"  aria-controls="panel-flights">{{ t("home.tab_flights") }}</button></li>
+        <li role="presentation"><button role="tab" type="button" aria-selected="false" aria-controls="panel-manage">{{ t("home.tab_manage") }}</button></li>
+        <li role="presentation"><button role="tab" type="button" aria-selected="false" aria-controls="panel-checkin">{{ t("home.tab_checkin") }}</button></li>
+        <li role="presentation"><button role="tab" type="button" aria-selected="false" aria-controls="panel-status">{{ t("home.tab_status") }}</button></li>
+      </ul>
+
+      <form id="panel-flights" class="searchform" method="get" action="{{ path('results') }}">
+        <div class="field">
+          <label for="origin">{{ t("search.origin") }}</label>
+          <input type="text" id="origin" name="origin" placeholder="{{ t('search.origin_placeholder') }}">
+        </div>
+        <div class="field">
+          <label for="destination">{{ t("search.destination") }}</label>
+          <input type="text" id="destination" name="destination" placeholder="{{ t('search.destination_placeholder') }}">
+        </div>
+        {{ date_field("depart", "depart", t("search.depart"), t("common.date_hint")) }}
+        {{ date_field("return", "return", t("search.return"), t("search.return_hint")) }}
+        <div class="field">
+          <label for="adults">{{ t("search.adults") }}</label>
+          <input type="number" id="adults" name="adults" min="1" max="9" value="1">
+        </div>
+        <div class="field">
+          <label for="cabin">{{ t("search.cabin") }}</label>
+          <select id="cabin" name="cabin">
+            <option value="economy">{{ t("brand.cabin_economy") }}</option>
+            <option value="business">{{ t("brand.cabin_business") }}</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button class="btn btn-gold" type="submit">{{ t("search.submit") }}</button>
+          <a class="btn-link" href="{{ path('multi_city') }}">{{ t("search.multi_city") }}</a>
+          <a class="btn-link" href="{{ path('flexible_dates') }}">{{ t("search.flexible_dates") }}</a>
+        </div>
+      </form>
+
+      <form id="panel-manage" class="searchform" method="get" action="{{ path('manage') }}" hidden>
+        <div class="field">
+          <label for="pnr">{{ t("manage.pnr") }}</label>
+          <input type="text" id="pnr" name="pnr" placeholder="{{ t('manage.pnr_placeholder') }}">
+        </div>
+        <div class="field">
+          <label for="surname">{{ t("manage.surname") }}</label>
+          <input type="text" id="surname" name="surname">
+        </div>
+        <div class="actions"><button class="btn btn-primary" type="submit">{{ t("manage.retrieve") }}</button></div>
+      </form>
+
+      <form id="panel-checkin" class="searchform" method="get" action="{{ path('checkin') }}" hidden>
+        <div class="field">
+          <label for="ci-pnr">{{ t("manage.pnr") }}</label>
+          <input type="text" id="ci-pnr" name="pnr">
+        </div>
+        <div class="field">
+          <label for="ci-surname">{{ t("manage.surname") }}</label>
+          <input type="text" id="ci-surname" name="surname">
+        </div>
+        <div class="actions"><button class="btn btn-primary" type="submit">{{ t("checkin.start") }}</button></div>
+      </form>
+
+      <form id="panel-status" class="searchform" method="get" action="{{ path('flight_status') }}" hidden>
+        <div class="field">
+          <label for="fs-no">{{ t("status.flight_no") }}</label>
+          <input type="text" id="fs-no" name="flight_no" placeholder="SM120">
+        </div>
+        {{ date_field("fs-date", "date", t("status.date"), t("common.date_hint")) }}
+        <div class="actions"><button class="btn btn-primary" type="submit">{{ t("status.submit") }}</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>{{ t("home.plan_title") }}</h2></div>
+    <div class="cards">
+      {% for item in quick_links %}
+      <article class="card">
+        <img class="card-media" src="{{ url_for('static', filename='img/' + item.image) }}"
+             alt="{{ item.alt }}" width="640" height="400" loading="lazy">
+        <div class="card-body">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.body }}</p>
+        </div>
+        <div class="card-foot"><a class="btn btn-secondary" href="{{ item.href }}">{{ t("common.learn_more") }}</a></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

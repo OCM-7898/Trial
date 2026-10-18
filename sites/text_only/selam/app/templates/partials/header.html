@@ -1,0 +1,28 @@
+<div class="topbar">
+  <div class="wrap">
+    <a href="{{ path('partners') }}">{{ t("nav.partner_services") }}</a>
+    <a href="{{ path('help_contact') }}">{{ t("nav.contact_us") }}</a>
+    <a href="{{ path('help') }}">{{ t("nav.help_centre") }}</a>
+  </div>
+</div>
+<header class="masthead">
+  <div class="wrap">
+    <a class="logo" href="{{ path('home') }}">
+      <img src="{{ url_for('static', filename='img/roundel.svg') }}" alt="{{ t('brand.airline') }}" width="44" height="44">
+      <span class="logo-name">
+        <b>{{ t("brand.airline") }}</b>
+        <span>{{ t("brand.tagline") }}</span>
+      </span>
+    </a>
+    <nav class="mainnav" aria-label="{{ t('nav.primary') }}">
+      <ul>
+        <li><a href="{{ path('search') }}"        {{ nav_current('book') }}>{{ t("nav.book") }}</a></li>
+        <li><a href="{{ path('manage') }}"        {{ nav_current('manage') }}>{{ t("nav.manage") }}</a></li>
+        <li><a href="{{ path('checkin') }}"       {{ nav_current('checkin') }}>{{ t("nav.checkin") }}</a></li>
+        <li><a href="{{ path('flight_status') }}" {{ nav_current('status') }}>{{ t("nav.flight_status") }}</a></li>
+        <li><a href="{{ path('miles_account') }}" {{ nav_current('miles') }}>{{ t("nav.miles") }}</a></li>
+        <li><a href="{{ path('help') }}"          {{ nav_current('help') }}>{{ t("nav.help") }}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

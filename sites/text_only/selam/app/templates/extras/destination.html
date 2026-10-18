@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ airport.city }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ airport.city }}</li></ol></nav>
+<h1>{{ airport.city }}</h1>
+<p class="hint">{{ airport.name }} ({{ airport.iata }}) &middot; {{ airport.country }}</p>
+<div class="split"><div>
+<h2>{{ t("destination.getting_there") }}</h2>
+<p>{{ t("destination.we_fly_from", n=origins|length) }}</p>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("search.origin") }}</th><th scope="col">{{ t("lounge.airport") }}</th></tr></thead>
+  <tbody>{% for origin in origins %}<tr><td>{{ origin.city }}</td><td>{{ origin.iata }}</td></tr>{% endfor %}</tbody>
+</table></div>
+<p><a class="btn btn-primary" href="{{ path('results') }}?origin=ADD&amp;destination={{ airport.iata }}&amp;depart=2026-04-12&amp;adults=1">{{ t("search.submit") }}</a>
+   <a class="btn btn-secondary" href="{{ path('destination_things', city=airport.iata) }}">{{ t("destination.attractions") }}</a></p>
+</div><aside class="summary">
+<h3>{{ t("destination.before_you_go") }}</h3>
+{% if requirement %}
+<p>{{ requirement.visa_required }}</p>
+<p class="hint">{{ t("requirements.passport_months", n=requirement.passport_months) }}</p>
+{% else %}<p class="hint">{{ t("destination.no_requirements") }}</p>{% endif %}
+{% if office %}<p><strong>{{ t("contact.office") }}</strong><br>{{ office.city }}<br>{{ office.phone }}</p>{% endif %}
+</aside></div>
+</div>{% endblock %}

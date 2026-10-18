@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ t("entertainment.catalog_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li><a href="{{ path('entertainment') }}">{{ t("entertainment.title") }}</a></li><li>{{ t("entertainment.catalog_title") }}</li></ol></nav>
+<h1>{{ t("entertainment.catalog_title") }}</h1>
+{% from "macros/fields.html" import text_field %}
+<form class="searchform" method="get">
+  {{ text_field("q", "q", t("entertainment.search"), "", t("entertainment.search_hint"), query) }}
+  <div class="field"><label for="category">{{ t("form.category") }}</label>
+    <select id="category" name="category">
+      <option value="">{{ t("results.stops_any") }}</option>
+      {% for value, label in categories %}
+      <option value="{{ value }}" {% if value == category %}selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select></div>
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("entertainment.search") }}</button></div>
+</form>
+{% if rows %}
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("entertainment.item") }}</th><th scope="col">{{ t("entertainment.genre") }}</th>
+    <th scope="col">{{ t("results.duration") }}</th><th scope="col">{{ t("entertainment.language") }}</th>
+    <th scope="col">{{ t("entertainment.year") }}</th></tr></thead>
+  <tbody>{% for row in rows %}<tr>
+    <td>{{ row.title }}</td><td>{{ row.genre }}</td>
+    <td>{{ t("wifi.minutes", n=row.minutes) }}</td><td>{{ row.language }}</td><td>{{ row.year }}</td>
+  </tr>{% endfor %}</tbody></table></div>
+{% else %}<div class="notice notice-warn"><div>{{ t("entertainment.nothing_found") }}</div></div>{% endif %}
+</div>{% endblock %}

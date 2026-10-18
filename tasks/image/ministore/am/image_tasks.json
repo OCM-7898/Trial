@@ -1,0 +1,2074 @@
+[
+ {
+  "id": "image-ministore-001",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «Merrill ኩዊን ሄድቦርድ፣ ከማስዋቢያ ኔይልሄድ ትሪም ጋር»፣ «Bridgewater ከርቭድ ኩዊን ሄድቦርድ»፣ «Glenwilde ፉል ሄድቦርድ»፣ «Katama ስሊፕከቨር ኩዊን ሄድቦርድ»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p921.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "11698.70",
+     "11,698.70"
+    ],
+    "none_of": [
+     "12998.70",
+     "12,998.70",
+     "15470.00",
+     "15,470.00",
+     "16770.00",
+     "16,770.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Glenwilde%20%E1%8D%89%E1%88%8D%20%E1%88%84%E1%8B%B5%E1%89%A6%E1%88%AD%E1%8B%B5",
+   "view 0",
+   "goto /product/1112",
+   "goto /product/919",
+   "goto /product/921",
+   "goto /product/867",
+   "stop 11698.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-002",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «Lawson ዘመናዊ አንግልድ የቆዳ ወንበር»፣ «እጀታ የሌለው ተፍትድ ተርንድ የእንጨት እግር አክሰንት ወንበር»፣ «Cheyanne ዘመናዊ አክሰንት አርም ወንበር»፣ «ከርቭድ ተፍትድ ቬልቬት አክሰንት ወንበር»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p980.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "19370.00",
+     "19,370.00"
+    ],
+    "none_of": [
+     "32370.00",
+     "32,370.00",
+     "16770.00",
+     "16,770.00",
+     "14170.00",
+     "14,170.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cheyanne%20%E1%8B%98%E1%88%98%E1%8A%93%E1%8B%8A%20%E1%8A%A0%E1%8A%AD%E1%88%B0%E1%8A%95%E1%89%B5%20%E1%8A%A0%E1%88%AD%E1%88%9D%20%E1%8B%88%E1%8A%95%E1%89%A0%E1%88%AD",
+   "view 0",
+   "goto /product/920",
+   "goto /product/874",
+   "goto /product/980",
+   "goto /product/953",
+   "stop 19370.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-003",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «Avondale ኔይልሄድ ትሪም ኩዊን አልጋ፣ ከሄድቦርድ ጋር»፣ «ኮሌጅ ዶርም ቤድ-ኢን-አ-ባግ፣ ከላስቲክ ማከማቻ ኪሶች ጋር»፣ «Fairmount ኢንዱስትሪያል የብረት ኪንግ አልጋ፣ ከሄድቦርድ ጋር»፣ «ዘመናዊ የእንጨት ኪንግ አልጋ»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p1113.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "29770.00",
+     "29,770.00"
+    ],
+    "none_of": [
+     "51870.00",
+     "51,870.00",
+     "9098.70",
+     "9,098.70",
+     "38870.00",
+     "38,870.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Fairmount%20%E1%8A%A2%E1%8A%95%E1%8B%B1%E1%88%B5%E1%89%B5%E1%88%AA%E1%8B%AB%E1%88%8D%20%E1%8B%A8%E1%89%A5%E1%88%A8%E1%89%B5%20%E1%8A%AA%E1%8A%95%E1%8C%8D%20%E1%8A%A0%E1%88%8D%E1%8C%8B%E1%8D%A3%20%E1%8A%A8%E1%88%84%E1%8B%B5%E1%89%A6%E1%88%AD%E1%8B%B5%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/1081",
+   "goto /product/1002",
+   "goto /product/1113",
+   "goto /product/1127",
+   "stop 29770.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-004",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «ከፍ ያለ ኩሊንግ የቤት እንስሳ አልጋ ክላሲክ»፣ «ክብ የቤት እንስሳ አልጋ»፣ «ከፍ ያለ የቤት እንስሳ አልጋ»፣ «ፎም የቤት እንስሳ አልጋ፣ ለድመቶች ወይም ውሾች»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p2003.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3898.70",
+     "3,898.70"
+    ],
+    "none_of": [
+     "2598.70",
+     "2,598.70",
+     "2988.70",
+     "2,988.70",
+     "1948.70",
+     "1,948.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8A%A8%E1%8D%8D%20%E1%8B%AB%E1%88%88%20%E1%8A%A9%E1%88%8A%E1%8A%95%E1%8C%8D%20%E1%8B%A8%E1%89%A4%E1%89%B5%20%E1%8A%A5%E1%8A%95%E1%88%B5%E1%88%B3%20%E1%8A%A0%E1%88%8D%E1%8C%8B%20%E1%8A%AD%E1%88%8B%E1%88%B2%E1%8A%AD",
+   "view 0",
+   "goto /product/2003",
+   "goto /product/1958",
+   "goto /product/1974",
+   "goto /product/1775",
+   "stop 3898.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-005",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «የጌም ቻት ሄድሴት፣ ለPlayStation 4፣ ከማይክሮፎን ጋር»፣ «PlayStation 3 ባለገመድ ዩኤስቢ ቻት ሄድሴት»፣ «የጌም ሄድሴት፣ ከማይክሮፎን ጋር፣ ለPC»፣ «ፕሮ የጌም ሄድሴት»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p240.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2598.70",
+     "2,598.70"
+    ],
+    "none_of": [
+     "3248.70",
+     "3,248.70",
+     "1688.70",
+     "1,688.70",
+     "5198.70",
+     "5,198.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8B%A8%E1%8C%8C%E1%88%9D%20%E1%88%84%E1%8B%B5%E1%88%B4%E1%89%B5%E1%8D%A3%20%E1%8A%A8%E1%88%9B%E1%8B%AD%E1%8A%AD%E1%88%AE%E1%8D%8E%E1%8A%95%20%E1%8C%8B%E1%88%AD%E1%8D%A3%20%E1%88%88PC",
+   "view 0",
+   "goto /product/86",
+   "goto /product/74",
+   "goto /product/240",
+   "goto /product/171",
+   "stop 2598.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-006",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «ማይክሮፋይበር ፍላት አንሶላ»፣ «ፕሪሚየም ማይክሮፋይበር ፍላት አንሶላ»፣ «400 ትሬድ ካውንት የአንሶላ ሴት»፣ «400TC ጥጥ ሳቲን ሪንክል ፍሪ ፍላት አንሶላ»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p1096.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1558.70",
+     "1,558.70"
+    ],
+    "none_of": [
+     "1688.70",
+     "1,688.70",
+     "4548.70",
+     "4,548.70",
+     "3638.70",
+     "3,638.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8D%95%E1%88%AA%E1%88%9A%E1%8B%A8%E1%88%9D%20%E1%88%9B%E1%8B%AD%E1%8A%AD%E1%88%AE%E1%8D%8B%E1%8B%AD%E1%89%A0%E1%88%AD%20%E1%8D%8D%E1%88%8B%E1%89%B5%20%E1%8A%A0%E1%8A%95%E1%88%B6%E1%88%8B",
+   "view 0",
+   "goto /product/1176",
+   "goto /product/1096",
+   "goto /product/1118",
+   "goto /product/1202",
+   "stop 1558.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-007",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «ትልቅ የድመት መቧጠጫ ምሰሶ ዛፍ ታወር፣ ከፕላትፎርም አልጋ ጋር»፣ «መልቲ ፕላትፎርም ስቴፕስ የድመት ዛፍ ታወር»፣ «ትንሽ የድመት ዛፍ ታወር፣ ከኮንዶ እና መቧጠጫ ምሰሶ ጋር»፣ «የድመት ዛፍ፣ ሲሳል መቧጠጫ ምሰሶዎች እና ፕላሽ ኮንዶ ያለው ታወር»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p1873.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5848.70",
+     "5,848.70"
+    ],
+    "none_of": [
+     "9098.70",
+     "9,098.70",
+     "7148.70",
+     "7,148.70",
+     "8448.70",
+     "8,448.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%89%B5%E1%8A%95%E1%88%BD%20%E1%8B%A8%E1%8B%B5%E1%88%98%E1%89%B5%20%E1%8B%9B%E1%8D%8D%20%E1%89%B3%E1%8B%88%E1%88%AD%E1%8D%A3%20%E1%8A%A8%E1%8A%AE%E1%8A%95%E1%8B%B6%20%E1%8A%A5%E1%8A%93%20%E1%88%98%E1%89%A7%E1%8C%A0%E1%8C%AB%20%E1%88%9D%E1%88%B0%E1%88%B6%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/1813",
+   "goto /product/1847",
+   "goto /product/1873",
+   "goto /product/1996",
+   "stop 5848.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-008",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «ነጭ ሰሌዳ ማርከሮች ሴት»፣ «ሪትራክተብል ፐርማነንት ማርከሮች»፣ «ቡሌት/ቺዝል ሪቨርሲብል ቲፕ የጠመኔ ማርከሮች»፣ «ነጭ ሰሌዳ ማርከሮች ሴት (ሴት)»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p2093.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1038.70",
+     "1,038.70"
+    ],
+    "none_of": [
+     "973.70",
+     "1168.70",
+     "1,168.70",
+     "908.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%89%A1%E1%88%8C%E1%89%B5/%E1%89%BA%E1%8B%9D%E1%88%8D%20%E1%88%AA%E1%89%A8%E1%88%AD%E1%88%B2%E1%89%A5%E1%88%8D%20%E1%89%B2%E1%8D%95%20%E1%8B%A8%E1%8C%A0%E1%88%98%E1%8A%94%20%E1%88%9B%E1%88%AD%E1%8A%A8%E1%88%AE%E1%89%BD",
+   "view 0",
+   "goto /product/2185",
+   "goto /product/2101",
+   "goto /product/2093",
+   "goto /product/2171",
+   "stop 1038.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-009",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «ሮዝ ቴዲ 3.5 ጫማ፣ የቆመ ክላሲክ»፣ «ቤዥ ቴዲ 3.5 ጫማ፣ የቆመ - ፋሚሊ ሳይዝ»፣ «ክሬም ቴዲ 60 ሴሜ ክላሲክ»፣ «ቡናማ ቴዲ 3.5 ጫማ፣ የቆመ - ኮምፓክት»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p1724.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4548.70",
+     "4,548.70"
+    ],
+    "none_of": [
+     "5848.70",
+     "5,848.70",
+     "8448.70",
+     "8,448.70",
+     "1688.70",
+     "1,688.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%89%A1%E1%8A%93%E1%88%9B%20%E1%89%B4%E1%8B%B2%203.5%20%E1%8C%AB%E1%88%9B%E1%8D%A3%20%E1%8B%A8%E1%89%86%E1%88%98%20-%20%E1%8A%AE%E1%88%9D%E1%8D%93%E1%8A%AD%E1%89%B5",
+   "view 0",
+   "goto /product/1663",
+   "goto /product/1734",
+   "goto /product/1661",
+   "goto /product/1724",
+   "stop 4548.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-010",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «160 ግራም ፕሌድ ፍላኔል ጥጥ ዱቬ ክዳን»፣ «ኢሰንሻልስ ማይክሮፋይበር ዱቬ ክዳን ሴት»፣ «100% ሊነን ዱቬ ክዳን ሴት - 135x200+1x80x80 ሴሜ»፣ «የልጆች ፕሪንትድ መልቲ ዶትስ ፉል/ኩዊን ዱቬ ክዳን»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p1006.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2338.70",
+     "2,338.70"
+    ],
+    "none_of": [
+     "6368.70",
+     "6,368.70",
+     "11570.00",
+     "11,570.00",
+     "3248.70",
+     "3,248.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8A%A2%E1%88%B0%E1%8A%95%E1%88%BB%E1%88%8D%E1%88%B5%20%E1%88%9B%E1%8B%AD%E1%8A%AD%E1%88%AE%E1%8D%8B%E1%8B%AD%E1%89%A0%E1%88%AD%20%E1%8B%B1%E1%89%AC%20%E1%8A%AD%E1%8B%B3%E1%8A%95%20%E1%88%B4%E1%89%B5",
+   "view 0",
+   "goto /product/1137",
+   "goto /product/1006",
+   "goto /product/929",
+   "goto /product/984",
+   "stop 2338.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-011",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «ትራዲሽናል የመመገቢያ ጠረጴዛ 29\"H»፣ «Parson የእንጨት የጎን ጠረጴዛ»፣ «Eastport ኢንዱስትሪያል እንጨት የመኝታ ጎን ጠረጴዛ»፣ «Tucana ኢንጂነርድ እንጨት የመኝታ ጎን ጠረጴዛ፣ ከመሳቢያ ጋር»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1248.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1248
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1166
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 923
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 986
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Eastport%20%E1%8A%A2%E1%8A%95%E1%8B%B1%E1%88%B5%E1%89%B5%E1%88%AA%E1%8B%AB%E1%88%8D%20%E1%8A%A5%E1%8A%95%E1%8C%A8%E1%89%B5%20%E1%8B%A8%E1%88%98%E1%8A%9D%E1%89%B3%20%E1%8C%8E%E1%8A%95%20%E1%8C%A0%E1%88%A8%E1%8C%B4%E1%8B%9B",
+   "view 0",
+   "goto /product/1166",
+   "goto /product/923",
+   "goto /product/1248",
+   "goto /product/986",
+   "goto /product/1248",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-012",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «ዘመናዊ ፋርምሃውስ የእንጨት ቤዝ የሚስተካከል የሳሎን የወለል መብራት»፣ «አክሰንት የመኝታ ክፍል የጠረጴዛ መብራት፣ ከኤልኢዲ አምፖል ጋር»፣ «ራስቲክ ፋርምሃውስ ጀግ የሳሎን የጠረጴዛ መብራት፣ ከኤልኢዲ አምፖል ጋር»፣ «ዘመናዊ ሴራሚክ የጠረጴዛ መብራት፣ ከጂኦሜትሪክ-ፓተርን ቤዝ ጋር»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1042.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1042
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1135
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1054
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%8A%A0%E1%8A%AD%E1%88%B0%E1%8A%95%E1%89%B5%20%E1%8B%A8%E1%88%98%E1%8A%9D%E1%89%B3%20%E1%8A%AD%E1%8D%8D%E1%88%8D%20%E1%8B%A8%E1%8C%A0%E1%88%A8%E1%8C%B4%E1%8B%9B%20%E1%88%98%E1%89%A5%E1%88%AB%E1%89%B5%E1%8D%A3%20%E1%8A%A8%E1%8A%A4%E1%88%8D%E1%8A%A2%E1%8B%B2%20%E1%8A%A0%E1%88%9D%E1%8D%96%E1%88%8D%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/1135",
+   "goto /product/1042",
+   "goto /product/1200",
+   "goto /product/1054",
+   "goto /product/1042",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-013",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «Strathwood የጃንጥላ የቤት ዕቃ ሽፋን»፣ «ክብ ፓቲዮ የእሳት ጉድጓድ ሽፋን»፣ «የእሳት ጉድጓድ ፓቲዮ ሽፋን»፣ «የጋዝ ግሪል ባርቢኪው ሽፋን»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1376.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1496
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1382
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%8B%A8%E1%8A%A5%E1%88%B3%E1%89%B5%20%E1%8C%89%E1%8B%B5%E1%8C%93%E1%8B%B5%20%E1%8D%93%E1%89%B2%E1%8B%AE%20%E1%88%BD%E1%8D%8B%E1%8A%95",
+   "view 0",
+   "goto /product/1496",
+   "goto /product/1382",
+   "goto /product/1376",
+   "goto /product/1304",
+   "goto /product/1376",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-014",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «Truve ዘመናዊ ስታድድ ኦቶማን»፣ «Audrey ዘመናዊ ኦቶማን»፣ «ዘመናዊ ኦቨርሳይዝድ አፕሆልስተርድ ካሬ ኦቶማን»፣ «Strathwood Brooklyn የቆዳ ኦቶማን»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p906.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 906
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1107
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 990
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1171
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Truve%20%E1%8B%98%E1%88%98%E1%8A%93%E1%8B%8A%20%E1%88%B5%E1%89%B3%E1%8B%B5%E1%8B%B5%20%E1%8A%A6%E1%89%B6%E1%88%9B%E1%8A%95",
+   "view 0",
+   "goto /product/906",
+   "goto /product/1107",
+   "goto /product/990",
+   "goto /product/1171",
+   "goto /product/906",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-015",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «Alaina ኮንቴምፖራሪ የቆዳ ሃይ-ባክ ስዊቭል መቀመጫ ካውንተር ስቱል»፣ «Alaina ኮንቴምፖራሪ ሃይ-ባክ ስቱል»፣ «ዘመናዊ ፕላሽ ሃይ-ፓይል ሻግ ኤሪያ ምንጣፍ»፣ «Celinda ተፍትድ ሃይ-ባክ ባርስቱል»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1164.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 896
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 972
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 946
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alaina%20%E1%8A%AE%E1%8A%95%E1%89%B4%E1%88%9D%E1%8D%96%E1%88%AB%E1%88%AA%20%E1%8B%A8%E1%89%86%E1%8B%B3%20%E1%88%83%E1%8B%AD-%E1%89%A3%E1%8A%AD%20%E1%88%B5%E1%8B%8A%E1%89%AD%E1%88%8D%20%E1%88%98%E1%89%80%E1%88%98%E1%8C%AB%20%E1%8A%AB%E1%8B%8D%E1%8A%95%E1%89%B0%E1%88%AD%20%E1%88%B5%E1%89%B1%E1%88%8D",
+   "view 0",
+   "goto /product/1164",
+   "goto /product/896",
+   "goto /product/972",
+   "goto /product/946",
+   "goto /product/1164",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-016",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «ኮንቴምፖራሪ ስትራይኤትድ ጁት ኤሪያ ምንጣፍ»፣ «ዘመናዊ ዌቭ ኮስሞፖሊታን ኤሪያ ምንጣፍ»፣ «የተሸመነ ድንበር ያለው ሲሳል ኤሪያ ምንጣፍ»፣ «ሮዝ ግሎባል ፍሎራል የሱፍ ምንጣፍ»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1048.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1048
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1069
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 882
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 898
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%8B%A8%E1%89%B0%E1%88%B8%E1%88%98%E1%8A%90%20%E1%8B%B5%E1%8A%95%E1%89%A0%E1%88%AD%20%E1%8B%AB%E1%88%88%E1%8B%8D%20%E1%88%B2%E1%88%B3%E1%88%8D%20%E1%8A%A4%E1%88%AA%E1%8B%AB%20%E1%88%9D%E1%8A%95%E1%8C%A3%E1%8D%8D",
+   "view 0",
+   "goto /product/1069",
+   "goto /product/882",
+   "goto /product/1048",
+   "goto /product/898",
+   "goto /product/1048",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-017",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «የቤት እንስሳ ዋሻ አልጋ»፣ «ተጣጣፊ ኪዩብ የድመት አልጋ»፣ «ካድለር የቤት እንስሳ አልጋ»፣ «ኢሰንሻል ለስላሳ እና ምቹ ቦልስተር ላውንጅ የውሻ አልጋ»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1833.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1833
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1932
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1857
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1933
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%89%B0%E1%8C%A3%E1%8C%A3%E1%8D%8A%20%E1%8A%AA%E1%8B%A9%E1%89%A5%20%E1%8B%A8%E1%8B%B5%E1%88%98%E1%89%B5%20%E1%8A%A0%E1%88%8D%E1%8C%8B",
+   "view 0",
+   "goto /product/1932",
+   "goto /product/1833",
+   "goto /product/1857",
+   "goto /product/1933",
+   "goto /product/1833",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-018",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «ፕላስቲክ ሾት ብርጭቆ»፣ «የማይሰበር ስቴምለስ የወይን ብርጭቆ»፣ «Nia ሃይቦል ብርጭቆ ሴት»፣ «ኤሌክትሪክ መስታወት እና ስቲል ጀበና»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p580.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 580
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 485
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 445
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 512
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Nia%20%E1%88%83%E1%8B%AD%E1%89%A6%E1%88%8D%20%E1%89%A5%E1%88%AD%E1%8C%AD%E1%89%86%20%E1%88%B4%E1%89%B5",
+   "view 0",
+   "goto /product/485",
+   "goto /product/445",
+   "goto /product/580",
+   "goto /product/512",
+   "goto /product/580",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-019",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «Olander ሚድ-ሴንቸሪ ዘመናዊ ሪክላይነር ወንበር፣ ከስዊቭል ቤዝ ጋር»፣ «ሚድ-ሴንቸሪ ዘመናዊ ብራስ ትሪምድ የጠረጴዛ መብራት፣ ከኤልኢዲ አምፖል ጋር»፣ «Uptown ሚድ-ሴንቸሪ ተፍትድ የሚበጅ ዴይቤድ ሶፋ»፣ «Ava ሚድ-ሴንቸሪ ዘመናዊ አፕሆልስተርድ ኦቶማን»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1065.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1065
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1007
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1090
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 851
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ava%20%E1%88%9A%E1%8B%B5-%E1%88%B4%E1%8A%95%E1%89%B8%E1%88%AA%20%E1%8B%98%E1%88%98%E1%8A%93%E1%8B%8A%20%E1%8A%A0%E1%8D%95%E1%88%86%E1%88%8D%E1%88%B5%E1%89%B0%E1%88%AD%E1%8B%B5%20%E1%8A%A6%E1%89%B6%E1%88%9B%E1%8A%95",
+   "view 0",
+   "goto /product/1007",
+   "goto /product/1090",
+   "goto /product/851",
+   "goto /product/1065",
+   "goto /product/1065",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-020",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «Aiden ተፍትድ ሚድ-ሴንቸሪ ቬልቬት ቤንች መቀመጫ ሶፋ»፣ «ሚድ-ሴንቸሪ ዘመናዊ ነጭ ማርብል እና ብረት የጎን ጠረጴዛ»፣ «Uptown ሚድ-ሴንቸሪ ዘመናዊ ተፍትድ ቬልቬት ዴይቤድ ላቭሲት»፣ «ሚድ-ሴንቸሪ ስዊቭል ወንበር»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1229.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1229
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 934
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1106
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 950
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Aiden%20%E1%89%B0%E1%8D%8D%E1%89%B5%E1%8B%B5%20%E1%88%9A%E1%8B%B5-%E1%88%B4%E1%8A%95%E1%89%B8%E1%88%AA%20%E1%89%AC%E1%88%8D%E1%89%AC%E1%89%B5%20%E1%89%A4%E1%8A%95%E1%89%BD%20%E1%88%98%E1%89%80%E1%88%98%E1%8C%AB%20%E1%88%B6%E1%8D%8B",
+   "view 0",
+   "goto /product/1229",
+   "goto /product/934",
+   "goto /product/1106",
+   "goto /product/950",
+   "goto /product/1229",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-021",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '310 ኤልም ሮድ, ማዲሰን, 53703' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «ቡናማ ቴዲ 60 ሴሜ - ፋሚሊ ሳይዝ»፣ «ሮዝ ቴዲ 33 ሴሜ ትዊን ፓክ»፣ «ክሬም ቴዲ 33 ሴሜ - ፋሚሊ ሳይዝ»፣ «ቤዥ ቴዲ 3.5 ጫማ፣ የቆመ ክላሲክ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1746.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 ኤልም ሮድ, ማዲሰን, 53703%",
+    "items": {
+     "1746": 1
+    },
+    "total": 3248.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1683
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1743
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1650
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%89%A1%E1%8A%93%E1%88%9B%20%E1%89%B4%E1%8B%B2%2060%20%E1%88%B4%E1%88%9C%20-%20%E1%8D%8B%E1%88%9A%E1%88%8A%20%E1%88%B3%E1%8B%AD%E1%8B%9D",
+   "view 0",
+   "goto /product/1746",
+   "goto /product/1683",
+   "goto /product/1743",
+   "goto /product/1650",
+   "goto /product/1746",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 ኤልም ሮድ, ማዲሰን, 53703",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-022",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '41 ሜፕል ስትሪት, ሪኖ, 89501' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «ዘመናዊ ጂኦሜትሪክ ሴራሚክ የአበባ ማሰሮ»፣ «ክብ የግድግዳ ማውንት የአበባ ማሰሮ»፣ «ሪሳይክልድ እንጨት ዴክ ተንጠልጣይ የአበባ ማሰሮ»፣ «መካከለኛ ዊንዶውፔን ፉትድ ስቶንዌር የአበባ ማሰሮ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1297.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%41 ሜፕል ስትሪት, ሪኖ, 89501%",
+    "items": {
+     "1297": 1
+    },
+    "total": 3248.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1357
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1480
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1263
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%88%AA%E1%88%B3%E1%8B%AD%E1%8A%AD%E1%88%8D%E1%8B%B5%20%E1%8A%A5%E1%8A%95%E1%8C%A8%E1%89%B5%20%E1%8B%B4%E1%8A%AD%20%E1%89%B0%E1%8A%95%E1%8C%A0%E1%88%8D%E1%8C%A3%E1%8B%AD%20%E1%8B%A8%E1%8A%A0%E1%89%A0%E1%89%A3%20%E1%88%9B%E1%88%B0%E1%88%AE",
+   "view 0",
+   "goto /product/1357",
+   "goto /product/1480",
+   "goto /product/1297",
+   "goto /product/1263",
+   "goto /product/1297",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=41 ሜፕል ስትሪት, ሪኖ, 89501",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-023",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '68 ዊሎው ድራይቭ, ቦይዚ, 83702' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «100% ስቶንዌር የአበባ ማሰሮ»፣ «ዊከር የአበባ ማሰሮ፣ ከትሬሊስ ጋር»፣ «ቴራዞ የአበባ ማሰሮ፣ ከእንጨት ስታንድ ጋር»፣ «ጂኦሜትሪክ ሴራሚክ የአበባ ማሰሮ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1383.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%68 ዊሎው ድራይቭ, ቦይዚ, 83702%",
+    "items": {
+     "1383": 1
+    },
+    "total": 2338.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1261
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1283
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1371
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=100%25%20%E1%88%B5%E1%89%B6%E1%8A%95%E1%8B%8C%E1%88%AD%20%E1%8B%A8%E1%8A%A0%E1%89%A0%E1%89%A3%20%E1%88%9B%E1%88%B0%E1%88%AE",
+   "view 0",
+   "goto /product/1383",
+   "goto /product/1261",
+   "goto /product/1283",
+   "goto /product/1371",
+   "goto /product/1383",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=68 ዊሎው ድራይቭ, ቦይዚ, 83702",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-024",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '7 ጁኒፐር አቬኑ, ሴለም, 97301' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «ክሬም ቴዲ 33 ሴሜ»፣ «ቤዥ ቴዲ 3.5 ጫማ፣ የቆመ»፣ «ቡናማ ቴዲ 3.5 ጫማ፣ የቆመ»፣ «ሮዝ ቴዲ 33 ሴሜ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1640.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%7 ጁኒፐር አቬኑ, ሴለም, 97301%",
+    "items": {
+     "1640": 1
+    },
+    "total": 5848.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1631
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1622
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1627
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%89%A1%E1%8A%93%E1%88%9B%20%E1%89%B4%E1%8B%B2%203.5%20%E1%8C%AB%E1%88%9B%E1%8D%A3%20%E1%8B%A8%E1%89%86%E1%88%98",
+   "view 0",
+   "goto /product/1631",
+   "goto /product/1622",
+   "goto /product/1640",
+   "goto /product/1627",
+   "goto /product/1640",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=7 ጁኒፐር አቬኑ, ሴለም, 97301",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-025",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '150 አስፐን ፕሌስ, ኦግደን, 84401' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «ቤዥ ቴዲ 3.5 ጫማ፣ የቆመ - ኮምፓክት»፣ «ክሬም ቴዲ 33 ሴሜ ትዊን ፓክ»፣ «ቡናማ ቴዲ 60 ሴሜ ትዊን ፓክ»፣ «ሮዝ ቴዲ 60 ሴሜ - ፋሚሊ ሳይዝ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1690.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%150 አስፐን ፕሌስ, ኦግደን, 84401%",
+    "items": {
+     "1690": 1
+    },
+    "total": 4288.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1706
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1687
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1732
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%89%A1%E1%8A%93%E1%88%9B%20%E1%89%B4%E1%8B%B2%2060%20%E1%88%B4%E1%88%9C%20%E1%89%B5%E1%8B%8A%E1%8A%95%20%E1%8D%93%E1%8A%AD",
+   "view 0",
+   "goto /product/1706",
+   "goto /product/1687",
+   "goto /product/1690",
+   "goto /product/1732",
+   "goto /product/1690",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=150 አስፐን ፕሌስ, ኦግደን, 84401",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-026",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '26 ፖፕላር ሌን, ፍሬዝኖ, 93650' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «ኤክስትራ ወፍራም የስፖርት ዮጋ ጂም የወለል ምንጣፍ፣ ከመሸከሚያ ማሰሪያ ጋር»፣ «1.27 ሴሜ ውፍረት ያለው የዮጋ ምንጣፍ 6 ፒስ ሴት»፣ «TPE የዮጋ ምንጣፍ»፣ «TPE እና ስዌድ የዮጋ ምንጣፍ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p684.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%26 ፖፕላር ሌን, ፍሬዝኖ, 93650%",
+    "items": {
+     "684": 1
+    },
+    "total": 2598.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 818
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 682
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 706
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E1%8A%A4%E1%8A%AD%E1%88%B5%E1%89%B5%E1%88%AB%20%E1%8B%88%E1%8D%8D%E1%88%AB%E1%88%9D%20%E1%8B%A8%E1%88%B5%E1%8D%96%E1%88%AD%E1%89%B5%20%E1%8B%AE%E1%8C%8B%20%E1%8C%82%E1%88%9D%20%E1%8B%A8%E1%8B%88%E1%88%88%E1%88%8D%20%E1%88%9D%E1%8A%95%E1%8C%A3%E1%8D%8D%E1%8D%A3%20%E1%8A%A8%E1%88%98%E1%88%B8%E1%8A%A8%E1%88%9A%E1%8B%AB%20%E1%88%9B%E1%88%B0%E1%88%AA%E1%8B%AB%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/684",
+   "goto /product/818",
+   "goto /product/682",
+   "goto /product/706",
+   "goto /product/684",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=26 ፖፕላር ሌን, ፍሬዝኖ, 93650",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-027",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '88 ሎሬል ስትሪት, ቱሰን, 85701' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «Malida ሚድ-ሴንቸሪ ዘመናዊ ክፍት ጀርባ ስዊቭል ኩሽና ባር ስቱል»፣ «Aiden ሚድ-ሴንቸሪ ሶፋ፣ ከቴፐርድ የእንጨት እግሮች ጋር»፣ «Ray ሚድ-ሴንቸሪ ዘመናዊ ኩሽና የመመገቢያ ክፍል ወንበሮች»፣ «ሚድ-ሴንቸሪ ዘመናዊ ደብል ሰርክል ፕላግ-ኢን ተንጠልጣይ ፔንዳንት»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p910.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%88 ሎሬል ስትሪት, ቱሰን, 85701%",
+    "items": {
+     "910": 1
+    },
+    "total": 10398.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1155
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1077
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 904
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Malida%20%E1%88%9A%E1%8B%B5-%E1%88%B4%E1%8A%95%E1%89%B8%E1%88%AA%20%E1%8B%98%E1%88%98%E1%8A%93%E1%8B%8A%20%E1%8A%AD%E1%8D%8D%E1%89%B5%20%E1%8C%80%E1%88%AD%E1%89%A3%20%E1%88%B5%E1%8B%8A%E1%89%AD%E1%88%8D%20%E1%8A%A9%E1%88%BD%E1%8A%93%20%E1%89%A3%E1%88%AD%20%E1%88%B5%E1%89%B1%E1%88%8D",
+   "view 0",
+   "goto /product/910",
+   "goto /product/1155",
+   "goto /product/1077",
+   "goto /product/904",
+   "goto /product/910",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=88 ሎሬል ስትሪት, ቱሰን, 85701",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-028",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '13 ሲካሞር ሮድ, አክሮን, 44301' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «Corona የመጽሔት ጠረጴዛ»፣ «ዘመናዊ ክብ የብረት የጎን አክሰንት ጠረጴዛ»፣ «Ian ዘመናዊ መካከለኛ የመመገቢያ ኩሽና ጠረጴዛ»፣ «Phoenix Home ግራናይት ክብ ፕላስቲክ ባር ሃይት ተጣጣፊ ጠረጴዛ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p1243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%13 ሲካሞር ሮድ, አክሮን, 44301%",
+    "items": {
+     "1243": 1
+    },
+    "total": 20670.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 967
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1125
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1046
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ian%20%E1%8B%98%E1%88%98%E1%8A%93%E1%8B%8A%20%E1%88%98%E1%8A%AB%E1%8A%A8%E1%88%88%E1%8A%9B%20%E1%8B%A8%E1%88%98%E1%88%98%E1%8C%88%E1%89%A2%E1%8B%AB%20%E1%8A%A9%E1%88%BD%E1%8A%93%20%E1%8C%A0%E1%88%A8%E1%8C%B4%E1%8B%9B",
+   "view 0",
+   "goto /product/967",
+   "goto /product/1125",
+   "goto /product/1243",
+   "goto /product/1046",
+   "goto /product/1243",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=13 ሲካሞር ሮድ, አክሮን, 44301",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-029",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "በፎቶው የሚታየውን ምርት የሚሸጠው የትኛው ብራንድ ነው? ከእነዚህ አንዱ ነው፦ «Movian Aero የቡና ጠረጴዛ»፣ «ኢንዱስትሪያል ዴስክ ጠረጴዛ»፣ «Parker ክብ መደርደሪያ ማከማቻ የቡና ጠረጴዛ»፣ «ኢንዱስትሪያል ካፌ ጠረጴዛ»።",
+  "image": "sites/visual/ministore/static/img/products/p1196.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ravenna Home"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Parker%20%E1%8A%AD%E1%89%A5%20%E1%88%98%E1%8B%B0%E1%88%AD%E1%8B%B0%E1%88%AA%E1%8B%AB%20%E1%88%9B%E1%8A%A8%E1%88%9B%E1%89%BB%20%E1%8B%A8%E1%89%A1%E1%8A%93%20%E1%8C%A0%E1%88%A8%E1%8C%B4%E1%8B%9B",
+   "view 0",
+   "goto /product/1017",
+   "goto /product/1040",
+   "goto /product/1196",
+   "goto /product/1059",
+   "stop Ravenna Home"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-030",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "በፎቶው የሚታየውን ምርት የሚሸጠው የትኛው ብራንድ ነው? ከእነዚህ አንዱ ነው፦ «ኢሰንሻልስ ፎም ብሩሽ ሴት፣ 6 ፒስ፣ ስታምፕ ፔይንተር - ትራቭል ኤዲሽን»፣ «ፔንግዊን ኦፕን አይስ፣ አሽ - ትራቭል ኤዲሽን»፣ «12\" Wild Onez ነብር ትራቭል ኤዲሽን»፣ «ፐቲ ስላይም 4\" ቆርቆሮ - ትራቭል ኤዲሽን»።",
+  "image": "sites/visual/ministore/static/img/products/p1764.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Umi."
+    ],
+    "none_of": [
+     "Amazon Brand - Jam & Honey",
+     "Amazon Brand - Jam and Honey",
+     "AmazonBasics"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8A%A2%E1%88%B0%E1%8A%95%E1%88%BB%E1%88%8D%E1%88%B5%20%E1%8D%8E%E1%88%9D%20%E1%89%A5%E1%88%A9%E1%88%BD%20%E1%88%B4%E1%89%B5%E1%8D%A3%206%20%E1%8D%92%E1%88%B5%E1%8D%A3%20%E1%88%B5%E1%89%B3%E1%88%9D%E1%8D%95%20%E1%8D%94%E1%8B%AD%E1%8A%95%E1%89%B0%E1%88%AD%20-%20%E1%89%B5%E1%88%AB%E1%89%AD%E1%88%8D%20%E1%8A%A4%E1%8B%B2%E1%88%BD%E1%8A%95",
+   "view 0",
+   "goto /product/1764",
+   "goto /product/1763",
+   "goto /product/1761",
+   "goto /product/1756",
+   "stop Umi."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-031",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "በፎቶው የሚታየውን ምርት የሚሸጠው የትኛው ብራንድ ነው? ከእነዚህ አንዱ ነው፦ «Topstar 70570BB00 ስዊቭል ወንበር፣ ለልጆች እና ታዳጊዎች፣ ሃይ ባክ»፣ «Dunford ካዥዋል ሮልድ አርም ወንበር»፣ «Bayard ኮንቴምፖራሪ የቆዳ የሳሎን ወንበር፣ ከከርቭድ ጀርባ ጋር»፣ «Cedar አፕሆልስተርድ አክሰንት ወንበር፣ ከኔይልሄድ ጋር»።",
+  "image": "sites/visual/ministore/static/img/products/p983.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Stone & Beam"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Rivet",
+     "Top Star"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cedar%20%E1%8A%A0%E1%8D%95%E1%88%86%E1%88%8D%E1%88%B5%E1%89%B0%E1%88%AD%E1%8B%B5%20%E1%8A%A0%E1%8A%AD%E1%88%B0%E1%8A%95%E1%89%B5%20%E1%8B%88%E1%8A%95%E1%89%A0%E1%88%AD%E1%8D%A3%20%E1%8A%A8%E1%8A%94%E1%8B%AD%E1%88%8D%E1%88%84%E1%8B%B5%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/959",
+   "goto /product/1074",
+   "goto /product/944",
+   "goto /product/983",
+   "stop Stone & Beam"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-032",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "በፎቶው የሚታየውን ምርት የሚሸጠው የትኛው ብራንድ ነው? ከእነዚህ አንዱ ነው፦ «Ross ዘመናዊ ጨርቅ ሊፍት-ቶፕ የማከማቻ ኦቶማን ፑፍ»፣ «Movian Aggol ሊፍት-ቶፕ የቡና ጠረጴዛ»፣ «Alkove Hayes ሊፍት-ቶፕ ሶሊድ እንጨት የቡና ጠረጴዛ፣ ከ1 መሳቢያ ጋር»።",
+  "image": "sites/visual/ministore/static/img/products/p870.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Alkove"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Alkove%20Hayes%20%E1%88%8A%E1%8D%8D%E1%89%B5-%E1%89%B6%E1%8D%95%20%E1%88%B6%E1%88%8A%E1%8B%B5%20%E1%8A%A5%E1%8A%95%E1%8C%A8%E1%89%B5%20%E1%8B%A8%E1%89%A1%E1%8A%93%20%E1%8C%A0%E1%88%A8%E1%8C%B4%E1%8B%9B%E1%8D%A3%20%E1%8A%A81%20%E1%88%98%E1%88%B3%E1%89%A2%E1%8B%AB%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/1020",
+   "goto /product/979",
+   "goto /product/870",
+   "stop Alkove"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-033",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "በፎቶው የሚታየውን ምርት የሚሸጠው የትኛው ብራንድ ነው? ከእነዚህ አንዱ ነው፦ «ኢሰንሻልስ ስታንድ፣ ለApple Watch ቻርጀር»፣ «FITUEYES PS304003WB የፕሪንተር ስታንድ»፣ «የሚስተካከል የታብሌት መያዣ ስታንድ»።",
+  "image": "sites/visual/ministore/static/img/products/p291.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonBasics"
+    ],
+    "none_of": [
+     "Eono",
+     "Unbranded"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8B%A8%E1%88%9A%E1%88%B5%E1%89%B0%E1%8A%AB%E1%8A%A8%E1%88%8D%20%E1%8B%A8%E1%89%B3%E1%89%A5%E1%88%8C%E1%89%B5%20%E1%88%98%E1%8B%AB%E1%8B%A3%20%E1%88%B5%E1%89%B3%E1%8A%95%E1%8B%B5",
+   "view 0",
+   "goto /product/206",
+   "goto /product/230",
+   "goto /product/291",
+   "stop AmazonBasics"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-034",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "በፎቶው የሚታየውን ምርት የሚሸጠው የትኛው ብራንድ ነው? ከእነዚህ አንዱ ነው፦ «ፕሪሚየም የአልጋ ትራስ»፣ «ኢንዱስትሪያል የቆዳ ዲቴይል ትሮው ትራስ»፣ «ቪንቴጅ ትሮው ትራስ»።",
+  "image": "sites/visual/ministore/static/img/products/p1215.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8D%95%E1%88%AA%E1%88%9A%E1%8B%A8%E1%88%9D%20%E1%8B%A8%E1%8A%A0%E1%88%8D%E1%8C%8B%20%E1%89%B5%E1%88%AB%E1%88%B5",
+   "view 0",
+   "goto /product/1215",
+   "goto /product/1116",
+   "goto /product/1145",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-035",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "በፎቶው የሚታየው ምርት ስንት ግምገማዎች አሉት? ከእነዚህ አንዱ ነው፦ «ብሉቱዝ ስቴሪዮ ስፒከር፣ ውሃ የማይበገር ዲዛይን»፣ «ማይክሮ ብሉቱዝ ስፒከር»፣ «Bose SoundLink Micro ውሃ የማያስገባ ብሉቱዝ ስፒከር»፣ «ሚኒ ብሉቱዝ ስፒከር»።",
+  "image": "sites/visual/ministore/static/img/products/p151.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ],
+    "none_of": [
+     "0",
+     "5",
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%88%9A%E1%8A%92%20%E1%89%A5%E1%88%89%E1%89%B1%E1%8B%9D%20%E1%88%B5%E1%8D%92%E1%8A%A8%E1%88%AD",
+   "view 0",
+   "goto /product/147",
+   "goto /product/219",
+   "goto /product/40",
+   "goto /product/151",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-036",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "በፎቶው የሚታየው ምርት ስንት ግምገማዎች አሉት? ከእነዚህ አንዱ ነው፦ «ክሬም ቴዲ 60 ሴሜ - ኮምፓክት»፣ «ቡናማ ቴዲ 3.5 ጫማ፣ የቆመ ትዊን ፓክ»፣ «ሮዝ ቴዲ 3.5 ጫማ፣ የቆመ - ፋሚሊ ሳይዝ»፣ «ቤዥ ቴዲ 3.5 ጫማ፣ የቆመ ትዊን ፓክ»።",
+  "image": "sites/visual/ministore/static/img/products/p1747.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3"
+    ],
+    "none_of": [
+     "2",
+     "0",
+     "5"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%88%AE%E1%8B%9D%20%E1%89%B4%E1%8B%B2%203.5%20%E1%8C%AB%E1%88%9B%E1%8D%A3%20%E1%8B%A8%E1%89%86%E1%88%98%20-%20%E1%8D%8B%E1%88%9A%E1%88%8A%20%E1%88%B3%E1%8B%AD%E1%8B%9D",
+   "view 0",
+   "goto /product/1717",
+   "goto /product/1696",
+   "goto /product/1747",
+   "goto /product/1678",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-037",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "በፎቶው የሚታየው ምርት ስንት ግምገማዎች አሉት? ከእነዚህ አንዱ ነው፦ «Bigelow ዘመናዊ የቆዳ ሶፋ፣ ከካሬ እግሮች ጋር»፣ «Mayes ስሎፕድ ኔይልሄድ ሶፋ»፣ «Elizabeth ኮንቴምፖራሪ ላቭሲት ሶፋ»፣ «Charles ክላሲክ ኦቨርሳይዝድ የቆዳ ሶፋ»።",
+  "image": "sites/visual/ministore/static/img/products/p1160.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ],
+    "none_of": [
+     "10",
+     "12",
+     "0"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Elizabeth%20%E1%8A%AE%E1%8A%95%E1%89%B4%E1%88%9D%E1%8D%96%E1%88%AB%E1%88%AA%20%E1%88%8B%E1%89%AD%E1%88%B2%E1%89%B5%20%E1%88%B6%E1%8D%8B",
+   "view 0",
+   "goto /product/1158",
+   "goto /product/999",
+   "goto /product/1160",
+   "goto /product/987",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-038",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "በፎቶው የሚታየው ምርት ስንት ግምገማዎች አሉት? ከእነዚህ አንዱ ነው፦ «ሚድ-ሴንቸሪ ዘመናዊ ሴራሚክ እና ቀርከሃ የአበባ ማሰሮ»፣ «ሚድ-ሴንቸሪ 100% ስቶንዌር የአበባ ማሰሮ»፣ «ሚድ-ሴንቸሪ ሴራሚክ የአበባ ማሰሮ፣ ከብረት ስታንድ ጋር 9.1\"H»፣ «ሚድ-ሴንቸሪ ፓተርንድ የአበባ ማሰሮ»።",
+  "image": "sites/visual/ministore/static/img/products/p1254.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1"
+    ],
+    "none_of": [
+     "6",
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%88%9A%E1%8B%B5-%E1%88%B4%E1%8A%95%E1%89%B8%E1%88%AA%20%E1%88%B4%E1%88%AB%E1%88%9A%E1%8A%AD%20%E1%8B%A8%E1%8A%A0%E1%89%A0%E1%89%A3%20%E1%88%9B%E1%88%B0%E1%88%AE%E1%8D%A3%20%E1%8A%A8%E1%89%A5%E1%88%A8%E1%89%B5%20%E1%88%B5%E1%89%B3%E1%8A%95%E1%8B%B5%20%E1%8C%8B%E1%88%AD%209.1%22H",
+   "view 0",
+   "goto /product/1401",
+   "goto /product/1462",
+   "goto /product/1254",
+   "goto /product/1390",
+   "stop 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-039",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "በፎቶው የሚታየው ምርት ስንት ግምገማዎች አሉት? ከእነዚህ አንዱ ነው፦ «ሄሪንግ ሜዳልዮን ትራዲሽናል ኤሪያ ምንጣፍ»፣ «ዘመናዊ ጂኦሜትሪክ የሱፍ ኤሪያ ምንጣፍ»፣ «ካዥዋል ፕሌድ ምንጣፍ»፣ «ኮንቴምፖራሪ አወርግላስ የሱፍ ኤሪያ ምንጣፍ»።",
+  "image": "sites/visual/ministore/static/img/products/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ],
+    "none_of": [
+     "2",
+     "5",
+     "1"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%88%84%E1%88%AA%E1%8A%95%E1%8C%8D%20%E1%88%9C%E1%8B%B3%E1%88%8D%E1%8B%AE%E1%8A%95%20%E1%89%B5%E1%88%AB%E1%8B%B2%E1%88%BD%E1%8A%93%E1%88%8D%20%E1%8A%A4%E1%88%AA%E1%8B%AB%20%E1%88%9D%E1%8A%95%E1%8C%A3%E1%8D%8D",
+   "view 0",
+   "goto /product/928",
+   "goto /product/1086",
+   "goto /product/1015",
+   "goto /product/1024",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-040",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "በፎቶው የሚታየው ምርት ስንት ግምገማዎች አሉት? ከእነዚህ አንዱ ነው፦ «ኮንቴምፖራሪ የብረት የወለል መብራት፣ ከመርኩሪ መስታወት አክሰንት ጋር»፣ «ቪንቴጅ ታስክ የጠረጴዛ ዴስክ መብራት፣ ከኤልኢዲ አምፖል ጋር»፣ «ትራዲሽናል ሺኖዋዜሪ ሴራሚክ የጠረጴዛ መብራት»፣ «ትራዲሽናል የብረት ዳውንብሪጅ የዴስክ መብራት፣ ከሚስተካከል ሼድ ጋር»።",
+  "image": "sites/visual/ministore/static/img/products/p1009.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5"
+    ],
+    "none_of": [
+     "6",
+     "3",
+     "0"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8A%AE%E1%8A%95%E1%89%B4%E1%88%9D%E1%8D%96%E1%88%AB%E1%88%AA%20%E1%8B%A8%E1%89%A5%E1%88%A8%E1%89%B5%20%E1%8B%A8%E1%8B%88%E1%88%88%E1%88%8D%20%E1%88%98%E1%89%A5%E1%88%AB%E1%89%B5%E1%8D%A3%20%E1%8A%A8%E1%88%98%E1%88%AD%E1%8A%A9%E1%88%AA%20%E1%88%98%E1%88%B5%E1%89%B3%E1%8B%88%E1%89%B5%20%E1%8A%A0%E1%8A%AD%E1%88%B0%E1%8A%95%E1%89%B5%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/1009",
+   "goto /product/1091",
+   "goto /product/1070",
+   "goto /product/1139",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-041",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "በፎቶው የሚታየውን ምርት በዚህ ሱቅ ውስጥ ፈልገው ዋጋውን ይግለጹ። ሱቁ ካልሸጠው N/A ብለው ይመልሱ።",
+  "image": "assets/trap_photos/p661.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገኘም",
+     "እንደዚህ ያለ ምርት የለም",
+     "የለም",
+     "አልተዘረዘረም",
+     "አይገኝም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1645",
+   "goto /product/1632",
+   "goto /product/1759",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-042",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "በፎቶው የሚታየውን ምርት በዚህ ሱቅ ውስጥ ፈልገው ዋጋውን ይግለጹ። ሱቁ ካልሸጠው N/A ብለው ይመልሱ።",
+  "image": "assets/trap_photos/p442.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገኘም",
+     "እንደዚህ ያለ ምርት የለም",
+     "የለም",
+     "አልተዘረዘረም",
+     "አይገኝም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/936",
+   "goto /product/1039",
+   "goto /product/966",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-043",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "በፎቶው የሚታየውን ምርት በዚህ ሱቅ ውስጥ ፈልገው ዋጋውን ይግለጹ። ሱቁ ካልሸጠው N/A ብለው ይመልሱ።",
+  "image": "assets/trap_photos/p402.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገኘም",
+     "እንደዚህ ያለ ምርት የለም",
+     "የለም",
+     "አልተዘረዘረም",
+     "አይገኝም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1205",
+   "goto /product/1234",
+   "goto /product/1185",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-044",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "በፎቶው የሚታየውን ምርት በዚህ ሱቅ ውስጥ ፈልገው ዋጋውን ይግለጹ። ሱቁ ካልሸጠው N/A ብለው ይመልሱ።",
+  "image": "assets/trap_photos/p698.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገኘም",
+     "እንደዚህ ያለ ምርት የለም",
+     "የለም",
+     "አልተዘረዘረም",
+     "አይገኝም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1762",
+   "goto /product/1644",
+   "goto /product/1708",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-045",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «Amelia ዘመናዊ 74\" ሶፋ»፣ «Victoria ጨርቅ 3 መቀመጫ ሶፋ»፣ «Blaine ዘመናዊ ላቭሲት ሶፋ»፣ «Emerly ዘመናዊ ሴክሽናል ሶፋ»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p1004.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "71370.00",
+     "71,370.00"
+    ],
+    "none_of": [
+     "58370.00",
+     "58,370.00",
+     "51870.00",
+     "51,870.00",
+     "90870.00",
+     "90,870.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amelia%20%E1%8B%98%E1%88%98%E1%8A%93%E1%8B%8A%2074%22%20%E1%88%B6%E1%8D%8B",
+   "view 0",
+   "goto /product/1004",
+   "goto /product/878",
+   "goto /product/916",
+   "goto /product/1163",
+   "stop 71370.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-046",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ፎቶው በዚህ ሱቅ የሚሸጥ አንድ ምርት ያሳያል። ከእነዚህ አንዱ ነው፦ «የመዳብ ጠርሙስ እና ጀግ ኮምቦ»፣ «ስቴንለስ ስቲል ኢንሱሌትድ የውሃ ጠርሙስ፣ ከስፓውት ክዳን ጋር»፣ «ሼከር ጠርሙስ፣ ከሚክሰር ኳስ ጋር»፣ «ቦሮሲሊኬት መስታወት የውሃ ጠርሙስ፣ ከስሊቭ ጋር»። ዋጋው ስንት ነው?",
+  "image": "sites/visual/ministore/static/img/products/p381.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1948.70",
+     "1,948.70"
+    ],
+    "none_of": [
+     "2338.70",
+     "2,338.70",
+     "2208.70",
+     "2,208.70",
+     "1168.70",
+     "1,168.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%89%A6%E1%88%AE%E1%88%B2%E1%88%8A%E1%8A%AC%E1%89%B5%20%E1%88%98%E1%88%B5%E1%89%B3%E1%8B%88%E1%89%B5%20%E1%8B%A8%E1%8B%8D%E1%88%83%20%E1%8C%A0%E1%88%AD%E1%88%99%E1%88%B5%E1%8D%A3%20%E1%8A%A8%E1%88%B5%E1%88%8A%E1%89%AD%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/465",
+   "goto /product/444",
+   "goto /product/325",
+   "goto /product/381",
+   "stop 1948.70"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-047",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "በፎቶው የሚታየውን ምርት ወደ የምኞት ዝርዝርዎ ያክሉ። ከእነዚህ አንዱ ነው፦ «Viewridge አፕሆልስተርድ ሮኪንግ ሪክላይነር ወንበር፣ ከስዊቭል ጋር»፣ «ስሎፕድ ኔይልሄድ ትሪም አክሰንት ወንበር»፣ «ቦንድድ የቆዳ ቢግ አንድ ቶል ኤክዚኪዩቲቭ የቢሮ ኮምፒውተር ዴስክ ወንበር»፣ «Bradbury ቼስተርፊልድ ክላሲክ ወንበር»። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p964.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 964
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1203
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 956
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 864
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Bradbury%20%E1%89%BC%E1%88%B5%E1%89%B0%E1%88%AD%E1%8D%8A%E1%88%8D%E1%8B%B5%20%E1%8A%AD%E1%88%8B%E1%88%B2%E1%8A%AD%20%E1%8B%88%E1%8A%95%E1%89%A0%E1%88%AD",
+   "view 0",
+   "goto /product/1203",
+   "goto /product/956",
+   "goto /product/864",
+   "goto /product/964",
+   "goto /product/964",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-048",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "የ«C ሴል ኤቭሪዴይ አልካላይን ባትሪዎች»ን የምርት ገጽ ይክፈቱ። በፎቶው መሠረት በጥቅሉ ውስጥ ስንት አሃዶች አሉ?",
+  "image": "sites/visual/ministore/static/img/products/p181.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/181",
+   "stop 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-049",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "የ«የስፖርት ፊትነስ አብ ሮለሮች፣ ለዎርክአውት»ን የምርት ገጽ ይክፈቱ። በፎቶው መሠረት በጥቅሉ ውስጥ ስንት አሃዶች አሉ?",
+  "image": "sites/visual/ministore/static/img/products/p825.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/825",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-050",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "በፎቶው የሚታየውን ምርት 1 ይግዙና ወደ '34 ሬድዉድ አቬኑ, ዴቪስ, 95616' እንዲላክ ያድርጉ። ከእነዚህ አንዱ ነው፦ «Alkove Hayes አራት ማዕዘን ሶሊድ እንጨት የቡና ጠረጴዛ፣ ከ1 መደርደሪያ ጋር»፣ «ክላሲክ የቡና ጠረጴዛ»፣ «Amber ፋርምሃውስ መደርደሪያ ማከማቻ የጎን ጠረጴዛ»፣ «ኢሰንሻል ኢንጂነርድ እንጨት የቡና ጠረጴዛ»። ትዕዛዙ እንዲመዘገብ ክፍያውን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "image": "sites/visual/ministore/static/img/products/p947.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%34 ሬድዉድ አቬኑ, ዴቪስ, 95616%",
+    "items": {
+     "947": 1
+    },
+    "total": 25870.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 903
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1194
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1170
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alkove%20Hayes%20%E1%8A%A0%E1%88%AB%E1%89%B5%20%E1%88%9B%E1%8B%95%E1%8B%98%E1%8A%95%20%E1%88%B6%E1%88%8A%E1%8B%B5%20%E1%8A%A5%E1%8A%95%E1%8C%A8%E1%89%B5%20%E1%8B%A8%E1%89%A1%E1%8A%93%20%E1%8C%A0%E1%88%A8%E1%8C%B4%E1%8B%9B%E1%8D%A3%20%E1%8A%A81%20%E1%88%98%E1%8B%B0%E1%88%AD%E1%8B%B0%E1%88%AA%E1%8B%AB%20%E1%8C%8B%E1%88%AD",
+   "view 0",
+   "goto /product/947",
+   "goto /product/903",
+   "goto /product/1194",
+   "goto /product/1170",
+   "goto /product/947",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=34 ሬድዉድ አቬኑ, ዴቪስ, 95616",
+   "fill 2"
+  ],
+  "max_steps": 30
+ }
+]

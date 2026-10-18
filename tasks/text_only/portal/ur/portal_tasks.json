@@ -1,0 +1,2321 @@
+[
+ {
+  "id": "portal-001",
+  "site": "portal",
+  "intent": "اپنے شناختی کارڈ پر درج نام کی تصحیح جمع کریں، نام بدل کر 'دلاورہ حق' کریں، ایک معاون دستاویز منسلک کر کے۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "name",
+     "new_value": "دلاورہ حق",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/name-correction/",
+   "fill 1 new_value=دلاورہ حق; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-002",
+  "site": "portal",
+  "intent": "ایک نئی پاسپورٹ درخواست شروع سے آخر تک بھر کر جمع کریں: ذاتی معلومات، پھر پتہ، پھر صفحات کی تعداد، میعاد اور ڈیلیوری۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=دلاور حق; dob=1987-08-28; father_name=منیر اسلام",
+   "fill 1 present_addr=مکان 16, روڈ 5, مولوی بازار گنج, مولوی بازار; perm_addr=گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار",
+   "fill 1 pages=48; validity=5; delivery=regular"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-003",
+  "site": "portal",
+  "intent": "برگونا پاسپورٹ و امیگریشن دفتر میں 22 جون 2026 کو 10:30 بجے پاسپورٹ اندراج اپائنٹمنٹ بک کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-22",
+     "slot_time": "10:30",
+     "office": "برگونا پاسپورٹ و امیگریشن دفتر"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=برگونا پاسپورٹ و امیگریشن دفتر; slot_date=2026-06-22; slot_time=10:30"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-004",
+  "site": "portal",
+  "intent": "صارف نمبر 08000007 کا بقایا بجلی بل BL0000005 ادا کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-005",
+  "site": "portal",
+  "intent": "مکمل درخواستی عمل کے ذریعے نئے ٹیکس دہندہ شناختی نمبر کے لیے رجسٹر ہوں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "tin-registration"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-registration/",
+   "fill 1 name=دلاور حق; father_name=منیر اسلام; dob=1987-08-28; address=مکان 16, روڈ 5, مولوی بازار گنج, مولوی بازار",
+   "fill 1 circle=سرکل 1; income_source=تنخواہ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-006",
+  "site": "portal",
+  "intent": "اپنا بجلی بلنگ تاریخچہ کھولیں اور 2026-01 کے بل کی رقم نوٹ کریں۔ بجلی فیس فہرست میں وہ فیس تلاش کریں جس کی رقم اس بل کی رقم سے کم رہتے ہوئے سب سے زیادہ ہے، اور اس فیس کے ویرینٹ کا نام جواب دیں۔ پھر اپنے میٹر کا سب سے پرانا بقایا بل ادا کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "گھریلو تھری فیز"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/electricity/fees/",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "stop گھریلو تھری فیز"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-007",
+  "site": "portal",
+  "intent": "لینڈ ریکارڈ تلاش کے ذریعے مہرپور ضلع میں کہیں واقع کھتیان نمبر 4438 تلاش کریں (تحصیل اور موضع نہیں دیے گئے) اور اس میں درج پلاٹ نمبر بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "357",
+     "۳۵۷"
+    ],
+    "none_of": [
+     "604"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=4438",
+   "stop 357"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-008",
+  "site": "portal",
+  "intent": "رول نمبر 763370 کا 2021 کا سیکنڈری (secondary) امتحانی نتیجہ دیکھیں (بورڈ نہیں دیا گیا — تلاش کے صفحے پر بورڈوں کی فہرست ہے) اور امیدوار کا ادارہ بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ماڈل ہائی اسکول"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=راجشاہی; year=2021; roll_no=763370",
+   "stop ماڈل ہائی اسکول"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-009",
+  "site": "portal",
+  "intent": "رجسٹریشن نمبر 20000000000373 والے پیدائش رجسٹریشن ریکارڈ کی تصدیق کریں اور اس کی رجسٹریشن کی تاریخ بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1987-09-06",
+     "۱۹۸۷-۰۹-۰۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "stop 1987-09-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-010",
+  "site": "portal",
+  "intent": "بجلی سروس کے صفحے پر تین نوٹسز کا عنوان ایک ہی ہے۔ 2025-10-12 کو جاری ہونے والے نوٹس کا زمرہ بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "آخری تاریخ"
+   }
+  ],
+  "solution": [
+   "goto /services/electricity/",
+   "stop آخری تاریخ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-011",
+  "site": "portal",
+  "intent": "پاسپورٹ درخواست PPA04000017 دیکھ کر اس کے کتابچے کے صفحات اور میعاد پڑھیں، پھر پاسپورٹ فیس فہرست سے بالکل اسی صفحات/میعاد امتزاج کی ایکسپریس (express) ڈیلیوری فیس بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "8050",
+     "8,050",
+     "۸۰۵۰",
+     "۸,۰۵۰"
+    ],
+    "none_of": [
+     "10350",
+     "4025",
+     "5750",
+     "6325",
+     "8625"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "goto /services/passport/fees/",
+   "stop 8050"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-012",
+  "site": "portal",
+  "intent": "اپنا بجلی بلنگ تاریخچہ کھولیں اور تمام چھ بلنگ مدتوں کی کل بل شدہ رقم بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "13576",
+     "13,576",
+     "۱۳۵۷۶",
+     "۱۳,۵۷۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 13576"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-013",
+  "site": "portal",
+  "intent": "سلپ نمبر NI9999999 والی شناختی تصحیح کی درخواست دیکھیں اور اس کی حیثیت بتائیں۔ ایسا کوئی ریکارڈ نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/correction-status/",
+   "fill 1 slip_no=NI9999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-014",
+  "site": "portal",
+  "intent": "جنوبی چر موضع (مہرپور پاڑہ، مہرپور، کھلنا ڈویژن) میں کھتیان نمبر 99999 دیکھیں۔ ایسا کوئی ریکارڈ نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=99999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-015",
+  "site": "portal",
+  "intent": "رول نمبر 999999، راجشاہی بورڈ، 2021 کا سیکنڈری (secondary) نتیجہ حاصل کریں۔ ایسا کوئی نتیجہ نہ ہو تو NO_RECORD جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=راجشاہی; year=2021; roll_no=999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-016",
+  "site": "portal",
+  "intent": "اپنا بجلی بلنگ تاریخچہ کھولیں اور 2026-01 کے بل کی رقم نوٹ کریں۔ ڈرائیونگ لائسنس فیس فہرست میں وہ سب سے مہنگی فیس تلاش کریں جو اس بل کی رقم سے کم ہے، پھر بالکل اسی زمرے/ویرینٹ کا چالان بنا کر (کارڈ سے، card) ادا کریں اور ادا کی گئی رقم بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1679",
+     "1,679",
+     "۱۶۷۹",
+     "۱,۶۷۹"
+    ],
+    "none_of": [
+     "1427",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1679,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/driving-licence/fees/",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=لائسنس; variant=پیشہ ور; method=card",
+   "stop 1679"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-017",
+  "site": "portal",
+  "intent": "صارف نمبر 08000049 کی کل بقایا رقم دیکھیں۔ بجلی فیس فہرست میں وہ سب سے مہنگی فیس تلاش کریں جو اس کل کے نصف سے کم ہے، اور اس فیس کے ویرینٹ کا نام جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "تجارتی"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/fees/",
+   "stop تجارتی"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-018",
+  "site": "portal",
+  "intent": "اپنے صارف نمبر 08000007 کے دونوں بقایا بجلی بل کارڈ سے (card) ادا کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-019",
+  "site": "portal",
+  "intent": "صارف نمبر 08000021 کے ایک سے زیادہ بجلی بل بقایا ہیں۔ صرف سب سے پرانا بل (کارڈ سے، card) ادا کریں اور باقی بقایا رہنے دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000011",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000012"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000021",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-020",
+  "site": "portal",
+  "intent": "صارف نمبر 08000049 کی کل بقایا رقم صارف نمبر 08000035 سے کتنی زیادہ ہے؟ فرق جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2094",
+     "2,094",
+     "۲۰۹۴",
+     "۲,۰۹۴"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "stop 2094"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-021",
+  "site": "portal",
+  "intent": "اپنے دو بقایا جات کا موازنہ کریں: صارف نمبر 08000007 کا کل غیر ادا شدہ بجلی بل، اور ہولڈنگ HLD00001 کا کل غیر ادا شدہ زمین ترقیاتی ٹیکس۔ دونوں میں سے بڑی رقم جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4776",
+     "4,776",
+     "۴۷۷۶",
+     "۴,۷۷۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000007",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00001",
+   "stop 4776"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-022",
+  "site": "portal",
+  "intent": "آپ کے بجلی بلنگ تاریخچے میں کتنے بلوں کی رقم ۲۰۰۰ سے زیادہ تھی؟ تعداد جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "3",
+     "۳"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-023",
+  "site": "portal",
+  "intent": "لینڈ ریکارڈ تلاش کے ذریعے جھینائدہ ضلع (کھلنا ڈویژن؛ تحصیل اور موضع نہیں دیے گئے) میں کہیں واقع کھتیان نمبر 5265 تلاش کریں اور اس میں درج مالک بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "منیر داس"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=71",
+   "fill 1 khatian_no=5265",
+   "stop منیر داس"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-024",
+  "site": "portal",
+  "intent": "چر کاندا موضع (دیناج پور بازار، دیناج پور، رنگپور ڈویژن) میں کھتیان نمبر 9458 دیکھیں اور تین باتیں بتائیں: مالک، زمین کی قسم اور ڈیسیمل میں رقبہ۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "توفضل داس"
+   },
+   {
+    "type": "answer_match",
+    "answer": "تالاب"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "242",
+     "۲۴۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=121",
+   "fill 1 khatian_no=9458",
+   "stop توفضل داس, تالاب, 242"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-025",
+  "site": "portal",
+  "intent": "وسطی پاڑہ موضع (راجشاہی شمالی، راجشاہی، راجشاہی ڈویژن) میں کھتیان نمبر 6743 دیکھیں، پھر اس ریکارڈ سے نقل کرتے ہوئے انتقال کی درخواست دیں: فروخت کنندہ کا نام = درج مالک، پلاٹ نمبر اور رقبہ جیسے درج ہیں۔ خریدار کے طور پر خود کو رکھیں (خریدار آئی ڈی 9999708182203)، فروخت کنندہ آئی ڈی 9999000000002۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%رقیہ کریم%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"1332\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"6743\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"buyer_id\": \"9999708182203\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_id\": \"9999000000002\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"185\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=6&district=51&upazila=203&mouza=114",
+   "fill 1 khatian_no=6743",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=دلاور حق; buyer_id=9999708182203; seller_name=رقیہ کریم; seller_id=9999000000002; khatian_no=6743; plot_no=1332; area=185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-026",
+  "site": "portal",
+  "intent": "ہولڈنگ HLD00003 پر کئی سال کا زمین ترقیاتی ٹیکس بقایا ہے۔ اس کے تمام بقایا واجبات کارڈ سے (card) ادا کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-027",
+  "site": "portal",
+  "intent": "کل بقایا زمین ترقیاتی ٹیکس کس ہولڈنگ پر زیادہ ہے: HLD00003 یا HLD00004؟ ہولڈنگ نمبر جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "HLD00003",
+     "HLD۰۰۰۰۳"
+    ],
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "stop HLD00003"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-028",
+  "site": "portal",
+  "intent": "لینڈ ریکارڈ تلاش میں نڑائل صدر تحصیل (نڑائل ضلع، کھلنا ڈویژن) تک جائیں اور شمالی چر موضع کا JL نمبر بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "295",
+     "۲۹۵"
+    ],
+    "none_of": [
+     "147",
+     "310"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=39&upazila=153",
+   "stop 295"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-029",
+  "site": "portal",
+  "intent": "لینڈ ریکارڈ تلاش کے ذریعے رنگپور ڈویژن میں کہیں واقع کھتیان نمبر 2052 تلاش کریں (ضلع، تحصیل اور موضع نہیں دیے گئے) اور اس میں درج مالک بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "کوہ نور عالم"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=123",
+   "fill 1 khatian_no=2052",
+   "stop کوہ نور عالم"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-030",
+  "site": "portal",
+  "intent": "جھینائدہ ضلع (کھلنا ڈویژن؛ تحصیل اور موضع نہیں دیے گئے) میں کہیں واقع کھتیان نمبر 8630 تلاش کریں اور مالک اور ڈیسیمل میں رقبہ دونوں بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "غلام خان"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "185",
+     "۱۸۵"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=72",
+   "fill 1 khatian_no=8630",
+   "stop غلام خان, 185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-031",
+  "site": "portal",
+  "intent": "لینڈ ریکارڈ تلاش کے ذریعے جھالوکاٹھی ضلع (بریسال ڈویژن؛ تحصیل اور موضع نہیں دیے گئے) میں کہیں واقع کھتیان نمبر 3232 تلاش کریں اور اس میں درج زمین کی قسم بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "بنجر"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=1&district=4&upazila=16&mouza=10",
+   "fill 1 khatian_no=3232",
+   "stop بنجر"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-032",
+  "site": "portal",
+  "intent": "ہولڈنگ HLD00003 پر تازہ ترین مالی سال کے سوا ہر بقایا زمین ترقیاتی ٹیکس کارڈ سے (card) ادا کریں — سب سے نیا بقایا غیر ادا شدہ رہنا چاہیے۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-033",
+  "site": "portal",
+  "intent": "کل بقایا زمین ترقیاتی ٹیکس کس ہولڈنگ پر زیادہ ہے: HLD00004 یا HLD00005؟ ہولڈنگ نمبر جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "HLD00005",
+     "HLD۰۰۰۰۵"
+    ],
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop HLD00005"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-034",
+  "site": "portal",
+  "intent": "رول نمبر 244479 کا 2021 کا سیکنڈری (secondary) امتحانی نتیجہ دیکھیں (بورڈ نہیں دیا گیا — تلاش کے صفحے پر بورڈوں کی فہرست ہے)، پھر اس نتیجے کے لیے دوبارہ جانچ کی درخواست جمع کریں، نتیجے میں دکھایا گیا رجسٹریشن نمبر، اس کا بورڈ اور سال لکھتے ہوئے، مضمون ریاضی کے لیے۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1352566082%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"244479\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"ریاضی\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"ٹیکنیکل\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2021\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=ٹیکنیکل; year=2021; roll_no=244479",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=244479; registration_no=1352566082; board=ٹیکنیکل; year=2021; subjects=ریاضی"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-035",
+  "site": "portal",
+  "intent": "رول نمبر 969953 کا 2023 کا ہائر سیکنڈری (higher-secondary) امتحانی نتیجہ دیکھیں (بورڈ نہیں دیا گیا — تلاش کے صفحے پر بورڈوں کی فہرست ہے)، پھر اس نتیجے کے لیے دوبارہ جانچ کی درخواست جمع کریں، نتیجے میں دکھایا گیا رجسٹریشن نمبر، اس کا بورڈ اور سال لکھتے ہوئے، مضمون انگریزی کے لیے۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1687250440%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"969953\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"انگریزی\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"ٹیکنیکل\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2023\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=ٹیکنیکل; year=2023; roll_no=969953",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=969953; registration_no=1687250440; board=ٹیکنیکل; year=2023; subjects=انگریزی"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-036",
+  "site": "portal",
+  "intent": "پورٹل کے نوٹس بورڈ پر زمین سروس کے نوٹسز چھانٹیں۔ اس سروس نے کون سا زمرہ سب سے زیادہ بار استعمال کیا؟ زمرہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "مرمت"
+   }
+  ],
+  "solution": [
+   "goto /notices/?service=زمین خدمات",
+   "stop مرمت"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-037",
+  "site": "portal",
+  "intent": "TIN 972871718941 کے ساتھ تشخیصی سال 2025-2026 کا انفرادی ای-ریٹرن جمع کریں: کل آمدنی ۶۴۰۰۰۰، کٹوتیاں بالکل آمدنی کا آٹھواں حصہ، اور قابلِ ادا ٹیکس بالکل (آمدنی منفی کٹوتیاں) کا ۱۰٪۔ تمام رقمیں سادہ ہندسوں میں لکھیں، اقرار YES۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"640000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"80000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"56000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=640000; deductions=80000; tax_payable=56000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-038",
+  "site": "portal",
+  "intent": "حوالہ TR/N/2026/001 والا نوٹس پورٹل کے نوٹس بورڈ پر ہے (ہوم پیج سے لنک ہے)۔ معلوم کریں کہ کس سروس نے اسے جاری کیا، اس سروس کی فیس فہرست کھولیں اور وہاں درج سب سے سستی فیس کی رقم بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "200",
+     "۲۰۰"
+    ],
+    "none_of": [
+     "1500",
+     "400",
+     "500",
+     "5000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/",
+   "goto /services/trade-licence/fees/",
+   "stop 200"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-039",
+  "site": "portal",
+  "intent": "دونوں کام کریں: صارف نمبر 08000007 کا بجلی بل BL0000006 ادا کریں، اور پری پیڈ میٹر MTR000006 کو ۷۵۰ سے ری چارج کریں۔ کارڈ سے (card) ادائیگی کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge",
+     "ref": "MTR000006",
+     "amount": 750,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000006; amount=750; method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-040",
+  "site": "portal",
+  "intent": "مکمل فارم کے ذریعے نئی ووٹر رجسٹریشن مکمل کریں (آپ کا نام، والدین کے کوائف، تاریخِ پیدائش، دونوں پتے اور مرکز کے طور پر مولوی بازار شناختی رجسٹریشن دفتر)، اور ساتھ ہی برگونا پاسپورٹ و امیگریشن دفتر میں 2026-06-25 کو 15:00 بجے پاسپورٹ اندراج اپائنٹمنٹ بک کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "nid-voter-registration",
+     "payload": "%\"centre\": \"مولوی بازار شناختی رجسٹریشن دفتر\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-25",
+     "slot_time": "15:00",
+     "office": "برگونا پاسپورٹ و امیگریشن دفتر"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/voter-registration/",
+   "fill 1 name=دلاور حق; father_name=منیر اسلام; dob=1987-08-28; present_addr=مکان 16, روڈ 5, مولوی بازار گنج, مولوی بازار; perm_addr=گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار; centre=مولوی بازار شناختی رجسٹریشن دفتر",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=برگونا پاسپورٹ و امیگریشن دفتر; slot_date=2026-06-25; slot_time=15:00"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-041",
+  "site": "portal",
+  "intent": "یہ دونوں درخواستیں جمع کریں: بیرونِ ملک ملازمت کے لیے پولیس کلیئرنس سرٹیفکیٹ (نام، والدین کے کوائف، تاریخِ پیدائش اور دونوں پتے)، اور ایک حج پیشگی رجسٹریشن (نام، والد کا نام، پاسپورٹ نمبر PPA04000017، موجودہ پتہ، آپ کا موبائل، قریبی رشتہ دار کے طور پر آپ کی والدہ، سرکاری (government) پیکج)۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%بیرونِ ملک ملازمت%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"name\": \"دلاور حق\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"father_name\": \"منیر اسلام\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"passport_no\": \"PPA04000017\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"name\": \"دلاور حق\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"father_name\": \"منیر اسلام\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"package\": \"government\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"next_of_kin\": \"فردوسی بھوئیاں\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/police-clearance/panel/clearance-apply/",
+   "fill 1 name=دلاور حق; father_name=منیر اسلام; dob=1987-08-28; present_addr=مکان 16, روڈ 5, مولوی بازار گنج, مولوی بازار; perm_addr=گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار; purpose=بیرونِ ملک ملازمت",
+   "goto /services/pilgrimage/panel/pre-registration/",
+   "fill 1 name=دلاور حق; father_name=منیر اسلام; passport_no=PPA04000017; address=مکان 16, روڈ 5, مولوی بازار گنج, مولوی بازار; mobile=01853445903; next_of_kin=فردوسی بھوئیاں; package=government"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-042",
+  "site": "portal",
+  "intent": "انتقال کی درخواست دیں (خریدار: آپ خود، آئی ڈی 9999708182203؛ فروخت کنندہ رفیقل اسلام، آئی ڈی 9999000000001؛ کھتیان 4438، پلاٹ 357، رقبہ 25)، اور ساتھ ہی ہولڈنگ HLD00002 کا بقایا زمین ترقیاتی ٹیکس کارڈ سے (card) ادا کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_name\": \"رفیقل اسلام\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"4438\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"357\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"25\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=دلاور حق; buyer_id=9999708182203; seller_name=رفیقل اسلام; seller_id=9999000000001; khatian_no=4438; plot_no=357; area=25",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-043",
+  "site": "portal",
+  "intent": "صارف نمبر 08000007 پر صرف سب سے نیا بقایا بجلی بل کارڈ سے (card) ادا کریں، پرانا بقایا رہنے دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-044",
+  "site": "portal",
+  "intent": "پورٹل کا نوٹس بورڈ کھولیں (ہوم پیج سے لنک ہے)۔ تمام خدمات ملا کر فروری ۲۰۲۶ میں کتنے نوٹسز جاری ہوئے؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "12",
+     "۱۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-02",
+   "stop 12"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-045",
+  "site": "portal",
+  "intent": "پورٹل کے نوٹس بورڈ کے مطابق ۲۰۲۵ میں کس سروس نے سب سے زیادہ نوٹسز جاری کیے؟ سروس کا نام جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "زمین خدمات"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2025",
+   "goto /notices/?period=2025&page=2",
+   "goto /notices/?period=2025&page=3",
+   "stop زمین خدمات"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-046",
+  "site": "portal",
+  "intent": "پورٹل کے نوٹس بورڈ کے سب سے پرانے نوٹس کا بعینہ عنوان بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "پنشن ادائیگی کی ایکسپریس کارروائی معطل"
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "stop پنشن ادائیگی کی ایکسپریس کارروائی معطل"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-047",
+  "site": "portal",
+  "intent": "پورٹل کے نوٹس بورڈ پر ۲۰۲۶ میں جاری کتنے نوٹسز کا زمرہ 'بندش' ہے؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "15",
+     "۱۵"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026&category=بندش",
+   "stop 15"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-048",
+  "site": "portal",
+  "intent": "رول نمبر 496396 کا 2023 کا ہائر سیکنڈری (higher-secondary) امتحانی نتیجہ تلاش کریں — بورڈ نہیں دیا گیا، تلاش کے صفحے پر بورڈوں کی فہرست ہے۔ امیدوار کا GPA اور ادارہ دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4.56",
+     "۴.۵۶"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "آئیڈیل کالج"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=میمن سنگھ; year=2023; roll_no=496396",
+   "stop 4.56, آئیڈیل کالج"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-049",
+  "site": "portal",
+  "intent": "رول نمبر 969525 کا 2021 کا سیکنڈری (secondary) امتحانی نتیجہ تلاش کریں — بورڈ نہیں دیا گیا۔ امیدوار کا نام اور GPA دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "شہناز بھوئیاں"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4.28",
+     "۴.۲۸"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=میمن سنگھ; year=2021; roll_no=969525",
+   "stop شہناز بھوئیاں, 4.28"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-050",
+  "site": "portal",
+  "intent": "لینڈ ریکارڈ تلاش کے ذریعے شریعت پور ضلع (ڈھاکہ ڈویژن؛ تحصیل اور موضع نہیں دیے گئے) میں کہیں واقع کھتیان نمبر 7191 تلاش کریں اور اس میں درج زمین کی قسم بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "باغ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=3&district=29&upazila=116&mouza=43",
+   "fill 1 khatian_no=7191",
+   "stop باغ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-051",
+  "site": "portal",
+  "intent": "ساتکھیرا ضلع (کھلنا ڈویژن؛ تحصیل اور موضع نہیں دیے گئے) میں کہیں واقع کھتیان نمبر 1022 تلاش کریں اور مالک اور درج حصہ دونوں بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "کوہ نور عالم"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1/3",
+     "۱/۳"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=40&upazila=157&mouza=95",
+   "fill 1 khatian_no=1022",
+   "stop کوہ نور عالم, 1/3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-052",
+  "site": "portal",
+  "intent": "پورٹل کے نوٹس بورڈ پر بالکل ایک نوٹس جون ۲۰۲۶ میں جاری ہوا۔ اس کا حوالہ نمبر اور اسے جاری کرنے والی سروس کا نام — دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "PA/N/2026/006",
+     "PA/N/۲۰۲۶/۰۰۶"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "پاسپورٹ خدمات"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop PA/N/2026/006, پاسپورٹ خدمات"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-053",
+  "site": "portal",
+  "intent": "۲۰۲۶ میں کس مہینے میں پورٹل کے نوٹس بورڈ پر سب سے کم نوٹسز آئے؟ مہینہ YYYY-MM کی صورت میں جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2026-06",
+     "۲۰۲۶-۰۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop 2026-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-054",
+  "site": "portal",
+  "intent": "صارف نمبروں 08000021، 08000035 اور 08000049 کا کل بقایا بجلی بل دیکھیں اور تینوں کا مجموعی کل بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "20146",
+     "20,146",
+     "۲۰۱۴۶",
+     "۲۰,۱۴۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000021",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "stop 20146"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-055",
+  "site": "portal",
+  "intent": "ہولڈنگ HLD00003، HLD00004 اور HLD00005 کے تمام بقایا زمین ترقیاتی ٹیکس کا مجموعی کل بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "9292",
+     "9,292",
+     "۹۲۹۲",
+     "۹,۲۹۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop 9292"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-056",
+  "site": "portal",
+  "intent": "آپ کے بجلی بلنگ تاریخچے کی تمام چھ مدتوں میں کل کتنے یونٹ (kWh) استعمال ہوئے؟ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1652",
+     "1,652",
+     "۱۶۵۲",
+     "۱,۶۵۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 1652"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-057",
+  "site": "portal",
+  "intent": "پاسپورٹ فیس فہرست میں سب سے مہنگی فیس اور سب سے سستی غیر صفر فیس کا فرق کیا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6325",
+     "6,325",
+     "۶۳۲۵",
+     "۶,۳۲۵"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "stop 6325"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-058",
+  "site": "portal",
+  "intent": "پاسپورٹ اور ڈرائیونگ لائسنس فیس فہرستوں کو ملا کر کتنی فیس قطاروں کی رقم ۵۰۰۰ سے زیادہ ہے؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "9",
+     "۹"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "goto /services/driving-licence/fees/",
+   "stop 9"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-059",
+  "site": "portal",
+  "intent": "TIN 972871718941 کے ساتھ تشخیصی سال 2025-2026 کا انفرادی ای-ریٹرن جمع کریں: کل آمدنی ۷۲۰۰۰۰، کٹوتیاں بالکل آمدنی کا چوتھائی، اور قابلِ ادا ٹیکس بالکل (آمدنی منفی کٹوتیاں) کا ۱۵٪۔ تمام رقمیں سادہ ہندسوں میں لکھیں، اقرار YES۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"720000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"180000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"81000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=720000; deductions=180000; tax_payable=81000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-060",
+  "site": "portal",
+  "intent": "رجسٹریشن نمبر 20000000000373 والا پیدائش رجسٹریشن ریکارڈ دیکھیں۔ پھر ایک نئے بچے کے لیے پیدائش رجسٹریشن درخواست جمع کریں، جس کا نام بالکل اس ریکارڈ کی والدہ کے نام پر ہو، پیدائش 2026-03-01، اس ریکارڈ میں درج جگہ پر، والد کے طور پر آپ خود اور والدہ کے طور پر آپ کی والدہ۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"child_name\": \"فردوسی بھوئیاں\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"place\": \"گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"dob\": \"2026-03-01\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"father_name\": \"دلاور حق\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"mother_name\": \"فردوسی بھوئیاں\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "goto /services/civil-registration/panel/birth-apply/",
+   "fill 1 child_name=فردوسی بھوئیاں; dob=2026-03-01; place=گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار; father_name=دلاور حق; mother_name=فردوسی بھوئیاں"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-061",
+  "site": "portal",
+  "intent": "پورٹل کے نوٹس بورڈ کا سب سے پرانا نوٹس تلاش کریں، نوٹ کریں کہ کس سروس نے اسے جاری کیا، پھر اس سروس کی فیس فہرست کھولیں اور اس کی سب سے مہنگی فیس کی رقم بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "50",
+     "۵۰"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "goto /services/pension/fees/",
+   "stop 50"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-062",
+  "site": "portal",
+  "intent": "دونوں کریں: بریسال ٹرانسپورٹ لائسنس دفتر میں سب سے پہلی دستیاب تاریخ پر سب سے پہلے وقت کا ڈرائیونگ ٹیسٹ بک کریں، اور تجدید زمرے، پیشہ ور ویرینٹ کا چالان بنا کر (کارڈ سے، card) ادا کریں۔ پھر ادا کی گئی چالان رقم بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 7,
+     "slot_date": "2026-06-23",
+     "slot_time": "09:00",
+     "office": "بریسال ٹرانسپورٹ لائسنس دفتر"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1427,
+     "method": "card"
+    }
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1427",
+     "1,427",
+     "۱۴۲۷",
+     "۱,۴۲۷"
+    ],
+    "none_of": [
+     "1679",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/test-booking/",
+   "fill 1 office=بریسال ٹرانسپورٹ لائسنس دفتر; slot_date=2026-06-23; slot_time=09:00",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=تجدید; variant=پیشہ ور; method=card",
+   "stop 1427"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-063",
+  "site": "portal",
+  "intent": "پاسپورٹ درخواستیں PPA04000034 اور PPA04000068 دیکھ کر ہر ایک کے کتابچے کے صفحات اور میعاد پڑھیں۔ پاسپورٹ فیس فہرست کے مطابق کس درخواست کی معمولی (regular) ڈیلیوری فیس زیادہ ہے؟ درخواست آئی ڈی جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "PPA04000068",
+     "PPA۰۴۰۰۰۰۶۸"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000034",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000068",
+   "goto /services/passport/fees/",
+   "stop PPA04000068"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-064",
+  "site": "portal",
+  "intent": "تینوں کام کریں: صارف 08000007 کا بجلی بل BL0000005 ادا کریں، ہولڈنگ HLD00002 کا بقایا زمین ترقیاتی ٹیکس ادا کریں، اور برگونا پاسپورٹ و امیگریشن دفتر میں 2026-06-24 کو 11:30 بجے پاسپورٹ اندراج اپائنٹمنٹ بک کریں۔ کارڈ سے (card) ادائیگی کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-24",
+     "slot_time": "11:30",
+     "office": "برگونا پاسپورٹ و امیگریشن دفتر"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=برگونا پاسپورٹ و امیگریشن دفتر; slot_date=2026-06-24; slot_time=11:30"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-065",
+  "site": "portal",
+  "intent": "ہولڈنگ HLD00003 پر صرف 2022-2023 کا زمین ترقیاتی ٹیکس بقایا (کارڈ سے، card) ادا کریں، پرانا اور نیا دونوں بقایا غیر ادا شدہ رہنے دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-066",
+  "site": "portal",
+  "intent": "تین تصحیحات جمع کریں: اپنے شناختی ریکارڈ کا موجودہ پتہ 'مکان 9، لیک روڈ، سلہٹ' اور اس کی تاریخِ پیدائش 1987-08-27 کریں، اور اپنے منسلک پیدائش رجسٹریشن ریکارڈ کا نام بدل کر 'دلاور ھق' کریں۔ ہر ایک میں لاکر کی کوئی بھی دستاویز منسلک کریں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "present_addr",
+     "new_value": "مکان 9، لیک روڈ، سلہٹ",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "dob",
+     "new_value": "1987-08-27",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records",
+     "new_value": "دلاور ھق",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/address-correction/",
+   "fill 1 new_value=مکان 9، لیک روڈ، سلہٹ; document=secondary-school-certificate-1.pdf",
+   "goto /services/national-id/panel/dob-correction/",
+   "fill 1 new_value=1987-08-27; document=secondary-school-certificate-1.pdf",
+   "goto /services/civil-registration/panel/birth-correction/",
+   "fill 1 new_value=دلاور ھق; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-067",
+  "site": "portal",
+  "intent": "دونوں پاسپورٹ درخواستیں جمع کریں: ایک نئی درخواست (آپ کا نام، تاریخِ پیدائش اور والد کا نام؛ دونوں پتے؛ 64 صفحات، 10 سال میعاد، ایکسپریس (express) ڈیلیوری)، اور پاسپورٹ نمبر A6053903 کے لیے 'خراب کتابچہ' وجہ کے ساتھ دوبارہ اجرا کی درخواست۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"pages\": \"64\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"validity\": \"10\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"delivery\": \"express\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"passport_no\": \"A6053903\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"reason\": \"خراب کتابچہ\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=دلاور حق; dob=1987-08-28; father_name=منیر اسلام",
+   "fill 1 present_addr=مکان 16, روڈ 5, مولوی بازار گنج, مولوی بازار; perm_addr=گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار",
+   "fill 1 pages=64; validity=10; delivery=express",
+   "goto /services/passport/panel/reissue-application/",
+   "fill 1 passport_no=A6053903; reason=خراب کتابچہ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-068",
+  "site": "portal",
+  "intent": "میٹر MTR000001 کو ۳۰۰ سے کارڈ سے (card) ری چارج کریں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000001; amount=300; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-069",
+  "site": "portal",
+  "intent": "شناختی نمبر 9999708182203، رجسٹریشن 2023-09-16 کا ویکسینیشن سرٹیفکیٹ ڈاؤن لوڈ کریں اور سرٹیفکیٹ نمبر بتائیں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/health/panel/vaccine-certificate/",
+   "fill 1 identity_no=9999708182203; registered_date=2023-09-16",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-070",
+  "site": "portal",
+  "intent": "درخواست PPA04000017 کے پاسپورٹ کی ڈیلیوری حیثیت دیکھیں اور بتائیں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-071",
+  "site": "portal",
+  "intent": "زمرہ لائسنس، ویرینٹ موٹر سائیکل کا فیس چالان بنا کر ادا کریں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=لائسنس; variant=موٹر سائیکل; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-072",
+  "site": "portal",
+  "intent": "اپنے اکاؤنٹ سے منسلک وفات ریکارڈ میں نام کی تصحیح جمع کریں، نام بدل کر 'دلاور حق سینئر' کریں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/death-correction/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-073",
+  "site": "portal",
+  "intent": "برگونا پاسپورٹ و امیگریشن دفتر میں 2026-06-23 کو 10:30 بجے پاسپورٹ اندراج اپائنٹمنٹ بک کریں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-23"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-074",
+  "site": "portal",
+  "intent": "ٹیکس دہندہ شناختی نمبر 111111111111 کی تصدیق کریں اور رجسٹرڈ نام بتائیں۔ اگر پورٹل پر یہ ممکن نہ ہو تو NO_RECORD جواب دیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-verify/",
+   "fill 1 tin_no=111111111111",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-075",
+  "site": "portal",
+  "intent": "اپنے شناختی کارڈ کی قابلِ طباعت نقل کھولیں اور دکھایا گیا والدہ کا نام اور مستقل پتہ — دونوں بتائیں۔ ضرورت ہو تو شہری 9999708182203 (پاس ورڈ: citizen1234) کے طور پر لاگ ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "فردوسی بھوئیاں"
+   },
+   {
+    "type": "answer_match",
+    "answer": "گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/id-card-copy/",
+   "stop فردوسی بھوئیاں, گاؤں شمالی پاڑہ, مولوی بازار گنج, مولوی بازار"
+  ],
+  "max_steps": 30
+ }
+]

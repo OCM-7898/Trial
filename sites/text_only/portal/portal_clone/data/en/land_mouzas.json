@@ -1,0 +1,1202 @@
+[
+ {
+  "id": 1,
+  "upazila_id": 4,
+  "code": "MZ0001",
+  "name": "Dakshin Char",
+  "jl_no": "49",
+  "sort_order": 1
+ },
+ {
+  "id": 2,
+  "upazila_id": 4,
+  "code": "MZ0002",
+  "name": "Noya Bazar",
+  "jl_no": "161",
+  "sort_order": 2
+ },
+ {
+  "id": 3,
+  "upazila_id": 4,
+  "code": "MZ0003",
+  "name": "Madhya Para",
+  "jl_no": "55",
+  "sort_order": 3
+ },
+ {
+  "id": 4,
+  "upazila_id": 12,
+  "code": "MZ0004",
+  "name": "Paschim Para",
+  "jl_no": "294",
+  "sort_order": 1
+ },
+ {
+  "id": 5,
+  "upazila_id": 12,
+  "code": "MZ0005",
+  "name": "Char Kanda",
+  "jl_no": "22",
+  "sort_order": 2
+ },
+ {
+  "id": 6,
+  "upazila_id": 12,
+  "code": "MZ0006",
+  "name": "Dakshin Char",
+  "jl_no": "41",
+  "sort_order": 3
+ },
+ {
+  "id": 7,
+  "upazila_id": 15,
+  "code": "MZ0007",
+  "name": "Char Kanda",
+  "jl_no": "118",
+  "sort_order": 1
+ },
+ {
+  "id": 8,
+  "upazila_id": 15,
+  "code": "MZ0008",
+  "name": "Char Kanda",
+  "jl_no": "84",
+  "sort_order": 2
+ },
+ {
+  "id": 9,
+  "upazila_id": 15,
+  "code": "MZ0009",
+  "name": "Dakshin Char",
+  "jl_no": "35",
+  "sort_order": 3
+ },
+ {
+  "id": 10,
+  "upazila_id": 16,
+  "code": "MZ0010",
+  "name": "Noya Bazar",
+  "jl_no": "289",
+  "sort_order": 1
+ },
+ {
+  "id": 11,
+  "upazila_id": 16,
+  "code": "MZ0011",
+  "name": "Char Kanda",
+  "jl_no": "286",
+  "sort_order": 2
+ },
+ {
+  "id": 12,
+  "upazila_id": 16,
+  "code": "MZ0012",
+  "name": "Noya Bazar",
+  "jl_no": "302",
+  "sort_order": 3
+ },
+ {
+  "id": 13,
+  "upazila_id": 19,
+  "code": "MZ0013",
+  "name": "Dakshin Char",
+  "jl_no": "291",
+  "sort_order": 1
+ },
+ {
+  "id": 14,
+  "upazila_id": 19,
+  "code": "MZ0014",
+  "name": "Char Kanda",
+  "jl_no": "236",
+  "sort_order": 2
+ },
+ {
+  "id": 15,
+  "upazila_id": 19,
+  "code": "MZ0015",
+  "name": "Dakshin Char",
+  "jl_no": "58",
+  "sort_order": 3
+ },
+ {
+  "id": 16,
+  "upazila_id": 26,
+  "code": "MZ0016",
+  "name": "Dakshin Char",
+  "jl_no": "41",
+  "sort_order": 1
+ },
+ {
+  "id": 17,
+  "upazila_id": 26,
+  "code": "MZ0017",
+  "name": "Madhya Para",
+  "jl_no": "152",
+  "sort_order": 2
+ },
+ {
+  "id": 18,
+  "upazila_id": 26,
+  "code": "MZ0018",
+  "name": "Purba Para",
+  "jl_no": "199",
+  "sort_order": 3
+ },
+ {
+  "id": 19,
+  "upazila_id": 31,
+  "code": "MZ0019",
+  "name": "Char Kanda",
+  "jl_no": "65",
+  "sort_order": 1
+ },
+ {
+  "id": 20,
+  "upazila_id": 31,
+  "code": "MZ0020",
+  "name": "Madhya Para",
+  "jl_no": "222",
+  "sort_order": 2
+ },
+ {
+  "id": 21,
+  "upazila_id": 31,
+  "code": "MZ0021",
+  "name": "Char Kanda",
+  "jl_no": "107",
+  "sort_order": 3
+ },
+ {
+  "id": 22,
+  "upazila_id": 32,
+  "code": "MZ0022",
+  "name": "Dakshin Char",
+  "jl_no": "203",
+  "sort_order": 1
+ },
+ {
+  "id": 23,
+  "upazila_id": 32,
+  "code": "MZ0023",
+  "name": "Purano Hat",
+  "jl_no": "25",
+  "sort_order": 2
+ },
+ {
+  "id": 24,
+  "upazila_id": 32,
+  "code": "MZ0024",
+  "name": "Purano Hat",
+  "jl_no": "255",
+  "sort_order": 3
+ },
+ {
+  "id": 25,
+  "upazila_id": 46,
+  "code": "MZ0025",
+  "name": "Noya Bazar",
+  "jl_no": "247",
+  "sort_order": 1
+ },
+ {
+  "id": 26,
+  "upazila_id": 46,
+  "code": "MZ0026",
+  "name": "Char Kanda",
+  "jl_no": "303",
+  "sort_order": 2
+ },
+ {
+  "id": 27,
+  "upazila_id": 46,
+  "code": "MZ0027",
+  "name": "Purano Hat",
+  "jl_no": "62",
+  "sort_order": 3
+ },
+ {
+  "id": 28,
+  "upazila_id": 64,
+  "code": "MZ0028",
+  "name": "Purano Hat",
+  "jl_no": "313",
+  "sort_order": 1
+ },
+ {
+  "id": 29,
+  "upazila_id": 64,
+  "code": "MZ0029",
+  "name": "Purano Hat",
+  "jl_no": "154",
+  "sort_order": 2
+ },
+ {
+  "id": 30,
+  "upazila_id": 64,
+  "code": "MZ0030",
+  "name": "Dakshin Char",
+  "jl_no": "203",
+  "sort_order": 3
+ },
+ {
+  "id": 31,
+  "upazila_id": 74,
+  "code": "MZ0031",
+  "name": "Noya Bazar",
+  "jl_no": "271",
+  "sort_order": 1
+ },
+ {
+  "id": 32,
+  "upazila_id": 74,
+  "code": "MZ0032",
+  "name": "Paschim Para",
+  "jl_no": "299",
+  "sort_order": 2
+ },
+ {
+  "id": 33,
+  "upazila_id": 74,
+  "code": "MZ0033",
+  "name": "Noya Bazar",
+  "jl_no": "24",
+  "sort_order": 3
+ },
+ {
+  "id": 34,
+  "upazila_id": 88,
+  "code": "MZ0034",
+  "name": "Purba Para",
+  "jl_no": "195",
+  "sort_order": 1
+ },
+ {
+  "id": 35,
+  "upazila_id": 88,
+  "code": "MZ0035",
+  "name": "Paschim Para",
+  "jl_no": "303",
+  "sort_order": 2
+ },
+ {
+  "id": 36,
+  "upazila_id": 88,
+  "code": "MZ0036",
+  "name": "Paschim Para",
+  "jl_no": "211",
+  "sort_order": 3
+ },
+ {
+  "id": 37,
+  "upazila_id": 97,
+  "code": "MZ0037",
+  "name": "Purano Hat",
+  "jl_no": "104",
+  "sort_order": 1
+ },
+ {
+  "id": 38,
+  "upazila_id": 97,
+  "code": "MZ0038",
+  "name": "Char Kanda",
+  "jl_no": "186",
+  "sort_order": 2
+ },
+ {
+  "id": 39,
+  "upazila_id": 97,
+  "code": "MZ0039",
+  "name": "Dakshin Char",
+  "jl_no": "44",
+  "sort_order": 3
+ },
+ {
+  "id": 40,
+  "upazila_id": 98,
+  "code": "MZ0040",
+  "name": "Purba Para",
+  "jl_no": "33",
+  "sort_order": 1
+ },
+ {
+  "id": 41,
+  "upazila_id": 98,
+  "code": "MZ0041",
+  "name": "Paschim Para",
+  "jl_no": "45",
+  "sort_order": 2
+ },
+ {
+  "id": 42,
+  "upazila_id": 98,
+  "code": "MZ0042",
+  "name": "Uttar Char",
+  "jl_no": "254",
+  "sort_order": 3
+ },
+ {
+  "id": 43,
+  "upazila_id": 116,
+  "code": "MZ0043",
+  "name": "Madhya Para",
+  "jl_no": "217",
+  "sort_order": 1
+ },
+ {
+  "id": 44,
+  "upazila_id": 116,
+  "code": "MZ0044",
+  "name": "Madhya Para",
+  "jl_no": "46",
+  "sort_order": 2
+ },
+ {
+  "id": 45,
+  "upazila_id": 116,
+  "code": "MZ0045",
+  "name": "Uttar Char",
+  "jl_no": "115",
+  "sort_order": 3
+ },
+ {
+  "id": 46,
+  "upazila_id": 123,
+  "code": "MZ0046",
+  "name": "Char Kanda",
+  "jl_no": "189",
+  "sort_order": 1
+ },
+ {
+  "id": 47,
+  "upazila_id": 123,
+  "code": "MZ0047",
+  "name": "Dakshin Char",
+  "jl_no": "11",
+  "sort_order": 2
+ },
+ {
+  "id": 48,
+  "upazila_id": 123,
+  "code": "MZ0048",
+  "name": "Paschim Para",
+  "jl_no": "114",
+  "sort_order": 3
+ },
+ {
+  "id": 49,
+  "upazila_id": 124,
+  "code": "MZ0049",
+  "name": "Paschim Para",
+  "jl_no": "131",
+  "sort_order": 1
+ },
+ {
+  "id": 50,
+  "upazila_id": 124,
+  "code": "MZ0050",
+  "name": "Purano Hat",
+  "jl_no": "260",
+  "sort_order": 2
+ },
+ {
+  "id": 51,
+  "upazila_id": 124,
+  "code": "MZ0051",
+  "name": "Uttar Char",
+  "jl_no": "269",
+  "sort_order": 3
+ },
+ {
+  "id": 52,
+  "upazila_id": 125,
+  "code": "MZ0052",
+  "name": "Uttar Char",
+  "jl_no": "30",
+  "sort_order": 1
+ },
+ {
+  "id": 53,
+  "upazila_id": 125,
+  "code": "MZ0053",
+  "name": "Char Kanda",
+  "jl_no": "278",
+  "sort_order": 2
+ },
+ {
+  "id": 54,
+  "upazila_id": 125,
+  "code": "MZ0054",
+  "name": "Uttar Char",
+  "jl_no": "206",
+  "sort_order": 3
+ },
+ {
+  "id": 55,
+  "upazila_id": 126,
+  "code": "MZ0055",
+  "name": "Purba Para",
+  "jl_no": "36",
+  "sort_order": 1
+ },
+ {
+  "id": 56,
+  "upazila_id": 126,
+  "code": "MZ0056",
+  "name": "Paschim Para",
+  "jl_no": "160",
+  "sort_order": 2
+ },
+ {
+  "id": 57,
+  "upazila_id": 126,
+  "code": "MZ0057",
+  "name": "Purba Para",
+  "jl_no": "314",
+  "sort_order": 3
+ },
+ {
+  "id": 58,
+  "upazila_id": 127,
+  "code": "MZ0058",
+  "name": "Madhya Para",
+  "jl_no": "183",
+  "sort_order": 1
+ },
+ {
+  "id": 59,
+  "upazila_id": 127,
+  "code": "MZ0059",
+  "name": "Char Kanda",
+  "jl_no": "48",
+  "sort_order": 2
+ },
+ {
+  "id": 60,
+  "upazila_id": 127,
+  "code": "MZ0060",
+  "name": "Noya Bazar",
+  "jl_no": "183",
+  "sort_order": 3
+ },
+ {
+  "id": 61,
+  "upazila_id": 128,
+  "code": "MZ0061",
+  "name": "Noya Bazar",
+  "jl_no": "274",
+  "sort_order": 1
+ },
+ {
+  "id": 62,
+  "upazila_id": 128,
+  "code": "MZ0062",
+  "name": "Dakshin Char",
+  "jl_no": "35",
+  "sort_order": 2
+ },
+ {
+  "id": 63,
+  "upazila_id": 128,
+  "code": "MZ0063",
+  "name": "Purano Hat",
+  "jl_no": "7",
+  "sort_order": 3
+ },
+ {
+  "id": 64,
+  "upazila_id": 130,
+  "code": "MZ0064",
+  "name": "Dakshin Char",
+  "jl_no": "301",
+  "sort_order": 1
+ },
+ {
+  "id": 65,
+  "upazila_id": 130,
+  "code": "MZ0065",
+  "name": "Purano Hat",
+  "jl_no": "173",
+  "sort_order": 2
+ },
+ {
+  "id": 66,
+  "upazila_id": 130,
+  "code": "MZ0066",
+  "name": "Purba Para",
+  "jl_no": "78",
+  "sort_order": 3
+ },
+ {
+  "id": 67,
+  "upazila_id": 131,
+  "code": "MZ0067",
+  "name": "Purba Para",
+  "jl_no": "83",
+  "sort_order": 1
+ },
+ {
+  "id": 68,
+  "upazila_id": 131,
+  "code": "MZ0068",
+  "name": "Paschim Para",
+  "jl_no": "182",
+  "sort_order": 2
+ },
+ {
+  "id": 69,
+  "upazila_id": 131,
+  "code": "MZ0069",
+  "name": "Purba Para",
+  "jl_no": "179",
+  "sort_order": 3
+ },
+ {
+  "id": 70,
+  "upazila_id": 134,
+  "code": "MZ0070",
+  "name": "Dakshin Char",
+  "jl_no": "272",
+  "sort_order": 1
+ },
+ {
+  "id": 71,
+  "upazila_id": 134,
+  "code": "MZ0071",
+  "name": "Char Kanda",
+  "jl_no": "187",
+  "sort_order": 2
+ },
+ {
+  "id": 72,
+  "upazila_id": 134,
+  "code": "MZ0072",
+  "name": "Paschim Para",
+  "jl_no": "240",
+  "sort_order": 3
+ },
+ {
+  "id": 73,
+  "upazila_id": 140,
+  "code": "MZ0073",
+  "name": "Paschim Para",
+  "jl_no": "27",
+  "sort_order": 1
+ },
+ {
+  "id": 74,
+  "upazila_id": 140,
+  "code": "MZ0074",
+  "name": "Uttar Char",
+  "jl_no": "226",
+  "sort_order": 2
+ },
+ {
+  "id": 75,
+  "upazila_id": 140,
+  "code": "MZ0075",
+  "name": "Dakshin Char",
+  "jl_no": "128",
+  "sort_order": 3
+ },
+ {
+  "id": 76,
+  "upazila_id": 143,
+  "code": "MZ0076",
+  "name": "Purba Para",
+  "jl_no": "122",
+  "sort_order": 1
+ },
+ {
+  "id": 77,
+  "upazila_id": 143,
+  "code": "MZ0077",
+  "name": "Paschim Para",
+  "jl_no": "212",
+  "sort_order": 2
+ },
+ {
+  "id": 78,
+  "upazila_id": 143,
+  "code": "MZ0078",
+  "name": "Paschim Para",
+  "jl_no": "75",
+  "sort_order": 3
+ },
+ {
+  "id": 79,
+  "upazila_id": 146,
+  "code": "MZ0079",
+  "name": "Purano Hat",
+  "jl_no": "291",
+  "sort_order": 1
+ },
+ {
+  "id": 80,
+  "upazila_id": 146,
+  "code": "MZ0080",
+  "name": "Purba Para",
+  "jl_no": "267",
+  "sort_order": 2
+ },
+ {
+  "id": 81,
+  "upazila_id": 146,
+  "code": "MZ0081",
+  "name": "Noya Bazar",
+  "jl_no": "312",
+  "sort_order": 3
+ },
+ {
+  "id": 82,
+  "upazila_id": 148,
+  "code": "MZ0082",
+  "name": "Uttar Char",
+  "jl_no": "69",
+  "sort_order": 1
+ },
+ {
+  "id": 83,
+  "upazila_id": 148,
+  "code": "MZ0083",
+  "name": "Paschim Para",
+  "jl_no": "227",
+  "sort_order": 2
+ },
+ {
+  "id": 84,
+  "upazila_id": 148,
+  "code": "MZ0084",
+  "name": "Purano Hat",
+  "jl_no": "14",
+  "sort_order": 3
+ },
+ {
+  "id": 85,
+  "upazila_id": 149,
+  "code": "MZ0085",
+  "name": "Uttar Char",
+  "jl_no": "43",
+  "sort_order": 1
+ },
+ {
+  "id": 86,
+  "upazila_id": 149,
+  "code": "MZ0086",
+  "name": "Purano Hat",
+  "jl_no": "183",
+  "sort_order": 2
+ },
+ {
+  "id": 87,
+  "upazila_id": 149,
+  "code": "MZ0087",
+  "name": "Purba Para",
+  "jl_no": "38",
+  "sort_order": 3
+ },
+ {
+  "id": 88,
+  "upazila_id": 152,
+  "code": "MZ0088",
+  "name": "Paschim Para",
+  "jl_no": "312",
+  "sort_order": 1
+ },
+ {
+  "id": 89,
+  "upazila_id": 152,
+  "code": "MZ0089",
+  "name": "Dakshin Char",
+  "jl_no": "27",
+  "sort_order": 2
+ },
+ {
+  "id": 90,
+  "upazila_id": 152,
+  "code": "MZ0090",
+  "name": "Purba Para",
+  "jl_no": "89",
+  "sort_order": 3
+ },
+ {
+  "id": 91,
+  "upazila_id": 153,
+  "code": "MZ0091",
+  "name": "Uttar Char",
+  "jl_no": "295",
+  "sort_order": 1
+ },
+ {
+  "id": 92,
+  "upazila_id": 153,
+  "code": "MZ0092",
+  "name": "Noya Bazar",
+  "jl_no": "147",
+  "sort_order": 2
+ },
+ {
+  "id": 93,
+  "upazila_id": 153,
+  "code": "MZ0093",
+  "name": "Madhya Para",
+  "jl_no": "310",
+  "sort_order": 3
+ },
+ {
+  "id": 94,
+  "upazila_id": 157,
+  "code": "MZ0094",
+  "name": "Dakshin Char",
+  "jl_no": "182",
+  "sort_order": 1
+ },
+ {
+  "id": 95,
+  "upazila_id": 157,
+  "code": "MZ0095",
+  "name": "Purba Para",
+  "jl_no": "128",
+  "sort_order": 2
+ },
+ {
+  "id": 96,
+  "upazila_id": 157,
+  "code": "MZ0096",
+  "name": "Char Kanda",
+  "jl_no": "267",
+  "sort_order": 3
+ },
+ {
+  "id": 97,
+  "upazila_id": 166,
+  "code": "MZ0097",
+  "name": "Madhya Para",
+  "jl_no": "53",
+  "sort_order": 1
+ },
+ {
+  "id": 98,
+  "upazila_id": 166,
+  "code": "MZ0098",
+  "name": "Purano Hat",
+  "jl_no": "203",
+  "sort_order": 2
+ },
+ {
+  "id": 99,
+  "upazila_id": 166,
+  "code": "MZ0099",
+  "name": "Dakshin Char",
+  "jl_no": "145",
+  "sort_order": 3
+ },
+ {
+  "id": 100,
+  "upazila_id": 181,
+  "code": "MZ0100",
+  "name": "Purba Para",
+  "jl_no": "265",
+  "sort_order": 1
+ },
+ {
+  "id": 101,
+  "upazila_id": 181,
+  "code": "MZ0101",
+  "name": "Paschim Para",
+  "jl_no": "169",
+  "sort_order": 2
+ },
+ {
+  "id": 102,
+  "upazila_id": 181,
+  "code": "MZ0102",
+  "name": "Purba Para",
+  "jl_no": "316",
+  "sort_order": 3
+ },
+ {
+  "id": 103,
+  "upazila_id": 187,
+  "code": "MZ0103",
+  "name": "Dakshin Char",
+  "jl_no": "219",
+  "sort_order": 1
+ },
+ {
+  "id": 104,
+  "upazila_id": 187,
+  "code": "MZ0104",
+  "name": "Uttar Char",
+  "jl_no": "52",
+  "sort_order": 2
+ },
+ {
+  "id": 105,
+  "upazila_id": 187,
+  "code": "MZ0105",
+  "name": "Purba Para",
+  "jl_no": "33",
+  "sort_order": 3
+ },
+ {
+  "id": 106,
+  "upazila_id": 188,
+  "code": "MZ0106",
+  "name": "Purano Hat",
+  "jl_no": "128",
+  "sort_order": 1
+ },
+ {
+  "id": 107,
+  "upazila_id": 188,
+  "code": "MZ0107",
+  "name": "Paschim Para",
+  "jl_no": "266",
+  "sort_order": 2
+ },
+ {
+  "id": 108,
+  "upazila_id": 188,
+  "code": "MZ0108",
+  "name": "Noya Bazar",
+  "jl_no": "134",
+  "sort_order": 3
+ },
+ {
+  "id": 109,
+  "upazila_id": 202,
+  "code": "MZ0109",
+  "name": "Dakshin Char",
+  "jl_no": "317",
+  "sort_order": 1
+ },
+ {
+  "id": 110,
+  "upazila_id": 202,
+  "code": "MZ0110",
+  "name": "Madhya Para",
+  "jl_no": "48",
+  "sort_order": 2
+ },
+ {
+  "id": 111,
+  "upazila_id": 202,
+  "code": "MZ0111",
+  "name": "Char Kanda",
+  "jl_no": "141",
+  "sort_order": 3
+ },
+ {
+  "id": 112,
+  "upazila_id": 203,
+  "code": "MZ0112",
+  "name": "Purano Hat",
+  "jl_no": "21",
+  "sort_order": 1
+ },
+ {
+  "id": 113,
+  "upazila_id": 203,
+  "code": "MZ0113",
+  "name": "Purba Para",
+  "jl_no": "203",
+  "sort_order": 2
+ },
+ {
+  "id": 114,
+  "upazila_id": 203,
+  "code": "MZ0114",
+  "name": "Madhya Para",
+  "jl_no": "188",
+  "sort_order": 3
+ },
+ {
+  "id": 115,
+  "upazila_id": 207,
+  "code": "MZ0115",
+  "name": "Char Kanda",
+  "jl_no": "131",
+  "sort_order": 1
+ },
+ {
+  "id": 116,
+  "upazila_id": 207,
+  "code": "MZ0116",
+  "name": "Madhya Para",
+  "jl_no": "156",
+  "sort_order": 2
+ },
+ {
+  "id": 117,
+  "upazila_id": 207,
+  "code": "MZ0117",
+  "name": "Purano Hat",
+  "jl_no": "311",
+  "sort_order": 3
+ },
+ {
+  "id": 118,
+  "upazila_id": 209,
+  "code": "MZ0118",
+  "name": "Purba Para",
+  "jl_no": "275",
+  "sort_order": 1
+ },
+ {
+  "id": 119,
+  "upazila_id": 209,
+  "code": "MZ0119",
+  "name": "Purano Hat",
+  "jl_no": "126",
+  "sort_order": 2
+ },
+ {
+  "id": 120,
+  "upazila_id": 209,
+  "code": "MZ0120",
+  "name": "Purano Hat",
+  "jl_no": "168",
+  "sort_order": 3
+ },
+ {
+  "id": 121,
+  "upazila_id": 212,
+  "code": "MZ0121",
+  "name": "Char Kanda",
+  "jl_no": "296",
+  "sort_order": 1
+ },
+ {
+  "id": 122,
+  "upazila_id": 212,
+  "code": "MZ0122",
+  "name": "Noya Bazar",
+  "jl_no": "197",
+  "sort_order": 2
+ },
+ {
+  "id": 123,
+  "upazila_id": 212,
+  "code": "MZ0123",
+  "name": "Noya Bazar",
+  "jl_no": "150",
+  "sort_order": 3
+ },
+ {
+  "id": 124,
+  "upazila_id": 213,
+  "code": "MZ0124",
+  "name": "Purba Para",
+  "jl_no": "157",
+  "sort_order": 1
+ },
+ {
+  "id": 125,
+  "upazila_id": 213,
+  "code": "MZ0125",
+  "name": "Purba Para",
+  "jl_no": "18",
+  "sort_order": 2
+ },
+ {
+  "id": 126,
+  "upazila_id": 213,
+  "code": "MZ0126",
+  "name": "Noya Bazar",
+  "jl_no": "132",
+  "sort_order": 3
+ },
+ {
+  "id": 127,
+  "upazila_id": 214,
+  "code": "MZ0127",
+  "name": "Char Kanda",
+  "jl_no": "155",
+  "sort_order": 1
+ },
+ {
+  "id": 128,
+  "upazila_id": 214,
+  "code": "MZ0128",
+  "name": "Dakshin Char",
+  "jl_no": "66",
+  "sort_order": 2
+ },
+ {
+  "id": 129,
+  "upazila_id": 214,
+  "code": "MZ0129",
+  "name": "Purano Hat",
+  "jl_no": "157",
+  "sort_order": 3
+ },
+ {
+  "id": 130,
+  "upazila_id": 215,
+  "code": "MZ0130",
+  "name": "Paschim Para",
+  "jl_no": "124",
+  "sort_order": 1
+ },
+ {
+  "id": 131,
+  "upazila_id": 215,
+  "code": "MZ0131",
+  "name": "Paschim Para",
+  "jl_no": "54",
+  "sort_order": 2
+ },
+ {
+  "id": 132,
+  "upazila_id": 215,
+  "code": "MZ0132",
+  "name": "Char Kanda",
+  "jl_no": "310",
+  "sort_order": 3
+ },
+ {
+  "id": 133,
+  "upazila_id": 224,
+  "code": "MZ0133",
+  "name": "Purba Para",
+  "jl_no": "276",
+  "sort_order": 1
+ },
+ {
+  "id": 134,
+  "upazila_id": 224,
+  "code": "MZ0134",
+  "name": "Madhya Para",
+  "jl_no": "301",
+  "sort_order": 2
+ },
+ {
+  "id": 135,
+  "upazila_id": 224,
+  "code": "MZ0135",
+  "name": "Madhya Para",
+  "jl_no": "279",
+  "sort_order": 3
+ },
+ {
+  "id": 136,
+  "upazila_id": 227,
+  "code": "MZ0136",
+  "name": "Madhya Para",
+  "jl_no": "100",
+  "sort_order": 1
+ },
+ {
+  "id": 137,
+  "upazila_id": 227,
+  "code": "MZ0137",
+  "name": "Char Kanda",
+  "jl_no": "33",
+  "sort_order": 2
+ },
+ {
+  "id": 138,
+  "upazila_id": 227,
+  "code": "MZ0138",
+  "name": "Noya Bazar",
+  "jl_no": "155",
+  "sort_order": 3
+ },
+ {
+  "id": 139,
+  "upazila_id": 228,
+  "code": "MZ0139",
+  "name": "Purba Para",
+  "jl_no": "101",
+  "sort_order": 1
+ },
+ {
+  "id": 140,
+  "upazila_id": 228,
+  "code": "MZ0140",
+  "name": "Uttar Char",
+  "jl_no": "25",
+  "sort_order": 2
+ },
+ {
+  "id": 141,
+  "upazila_id": 228,
+  "code": "MZ0141",
+  "name": "Noya Bazar",
+  "jl_no": "64",
+  "sort_order": 3
+ },
+ {
+  "id": 142,
+  "upazila_id": 229,
+  "code": "MZ0142",
+  "name": "Purano Hat",
+  "jl_no": "224",
+  "sort_order": 1
+ },
+ {
+  "id": 143,
+  "upazila_id": 229,
+  "code": "MZ0143",
+  "name": "Purano Hat",
+  "jl_no": "214",
+  "sort_order": 2
+ },
+ {
+  "id": 144,
+  "upazila_id": 229,
+  "code": "MZ0144",
+  "name": "Char Kanda",
+  "jl_no": "110",
+  "sort_order": 3
+ },
+ {
+  "id": 145,
+  "upazila_id": 232,
+  "code": "MZ0145",
+  "name": "Paschim Para",
+  "jl_no": "170",
+  "sort_order": 1
+ },
+ {
+  "id": 146,
+  "upazila_id": 232,
+  "code": "MZ0146",
+  "name": "Char Kanda",
+  "jl_no": "106",
+  "sort_order": 2
+ },
+ {
+  "id": 147,
+  "upazila_id": 232,
+  "code": "MZ0147",
+  "name": "Uttar Char",
+  "jl_no": "282",
+  "sort_order": 3
+ },
+ {
+  "id": 148,
+  "upazila_id": 235,
+  "code": "MZ0148",
+  "name": "Purba Para",
+  "jl_no": "308",
+  "sort_order": 1
+ },
+ {
+  "id": 149,
+  "upazila_id": 235,
+  "code": "MZ0149",
+  "name": "Noya Bazar",
+  "jl_no": "232",
+  "sort_order": 2
+ },
+ {
+  "id": 150,
+  "upazila_id": 235,
+  "code": "MZ0150",
+  "name": "Paschim Para",
+  "jl_no": "105",
+  "sort_order": 3
+ }
+]

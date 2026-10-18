@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ kind_label }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('help') }}">{{ t("nav.help_centre") }}</a></li>
+        <li>{{ kind_label }}</li></ol>
+  </nav>
+  <h1>{{ t("form.status_title", kind=kind_label) }}</h1>
+  <p>{{ t("form.status_intro") }}</p>
+
+  <form class="searchform" method="get">
+    {{ text_field("reference", "reference", t("form.reference"), "", t("form.reference_hint"), reference, true) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("form.check_status") }}</button></div>
+  </form>
+
+  {% if record %}
+  <div class="table-scroll">
+    <table>
+      <tbody>
+        <tr><th scope="row">{{ t("form.reference") }}</th><td>{{ record.reference_no }}</td></tr>
+        <tr><th scope="row">{{ t("claim.status") }}</th><td>{{ t("form.status_received") }}</td></tr>
+        <tr><th scope="row">{{ t("manage.booked_on", date=fmt_date(record.created_at.date())) }}</th>
+            <td>{{ fmt_date(record.created_at.date()) }}</td></tr>
+        {% if record.quoted_usd %}
+        <tr><th scope="row">{{ t("form.quoted") }}</th><td>{{ fmt_money(record.quoted_usd) }}</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+  {% elif searched %}
+  <div class="notice notice-warn"><div>{{ t("form.status_not_found") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

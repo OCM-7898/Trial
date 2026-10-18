@@ -1,0 +1,940 @@
+[
+ {
+  "id": 1,
+  "holding_id": 1,
+  "fiscal_year": "2023-2024",
+  "amount": 3555,
+  "is_paid": 1
+ },
+ {
+  "id": 2,
+  "holding_id": 1,
+  "fiscal_year": "2024-2025",
+  "amount": 3965,
+  "is_paid": 1
+ },
+ {
+  "id": 3,
+  "holding_id": 1,
+  "fiscal_year": "2025-2026",
+  "amount": 1627,
+  "is_paid": 0
+ },
+ {
+  "id": 4,
+  "holding_id": 2,
+  "fiscal_year": "2023-2024",
+  "amount": 3253,
+  "is_paid": 1
+ },
+ {
+  "id": 5,
+  "holding_id": 2,
+  "fiscal_year": "2024-2025",
+  "amount": 564,
+  "is_paid": 1
+ },
+ {
+  "id": 6,
+  "holding_id": 2,
+  "fiscal_year": "2025-2026",
+  "amount": 3666,
+  "is_paid": 0
+ },
+ {
+  "id": 7,
+  "holding_id": 3,
+  "fiscal_year": "2023-2024",
+  "amount": 2444,
+  "is_paid": 1
+ },
+ {
+  "id": 8,
+  "holding_id": 3,
+  "fiscal_year": "2024-2025",
+  "amount": 1114,
+  "is_paid": 1
+ },
+ {
+  "id": 9,
+  "holding_id": 3,
+  "fiscal_year": "2025-2026",
+  "amount": 1347,
+  "is_paid": 0
+ },
+ {
+  "id": 10,
+  "holding_id": 4,
+  "fiscal_year": "2023-2024",
+  "amount": 2741,
+  "is_paid": 1
+ },
+ {
+  "id": 11,
+  "holding_id": 4,
+  "fiscal_year": "2024-2025",
+  "amount": 489,
+  "is_paid": 1
+ },
+ {
+  "id": 12,
+  "holding_id": 4,
+  "fiscal_year": "2025-2026",
+  "amount": 2496,
+  "is_paid": 0
+ },
+ {
+  "id": 13,
+  "holding_id": 5,
+  "fiscal_year": "2023-2024",
+  "amount": 3413,
+  "is_paid": 1
+ },
+ {
+  "id": 14,
+  "holding_id": 5,
+  "fiscal_year": "2024-2025",
+  "amount": 461,
+  "is_paid": 1
+ },
+ {
+  "id": 15,
+  "holding_id": 5,
+  "fiscal_year": "2025-2026",
+  "amount": 3395,
+  "is_paid": 0
+ },
+ {
+  "id": 16,
+  "holding_id": 6,
+  "fiscal_year": "2023-2024",
+  "amount": 2019,
+  "is_paid": 1
+ },
+ {
+  "id": 17,
+  "holding_id": 6,
+  "fiscal_year": "2024-2025",
+  "amount": 1191,
+  "is_paid": 1
+ },
+ {
+  "id": 18,
+  "holding_id": 6,
+  "fiscal_year": "2025-2026",
+  "amount": 1578,
+  "is_paid": 0
+ },
+ {
+  "id": 19,
+  "holding_id": 7,
+  "fiscal_year": "2023-2024",
+  "amount": 1671,
+  "is_paid": 1
+ },
+ {
+  "id": 20,
+  "holding_id": 7,
+  "fiscal_year": "2024-2025",
+  "amount": 3049,
+  "is_paid": 1
+ },
+ {
+  "id": 21,
+  "holding_id": 7,
+  "fiscal_year": "2025-2026",
+  "amount": 3574,
+  "is_paid": 0
+ },
+ {
+  "id": 22,
+  "holding_id": 8,
+  "fiscal_year": "2023-2024",
+  "amount": 179,
+  "is_paid": 1
+ },
+ {
+  "id": 23,
+  "holding_id": 8,
+  "fiscal_year": "2024-2025",
+  "amount": 2113,
+  "is_paid": 1
+ },
+ {
+  "id": 24,
+  "holding_id": 8,
+  "fiscal_year": "2025-2026",
+  "amount": 2516,
+  "is_paid": 0
+ },
+ {
+  "id": 25,
+  "holding_id": 9,
+  "fiscal_year": "2023-2024",
+  "amount": 1594,
+  "is_paid": 1
+ },
+ {
+  "id": 26,
+  "holding_id": 9,
+  "fiscal_year": "2024-2025",
+  "amount": 1847,
+  "is_paid": 1
+ },
+ {
+  "id": 27,
+  "holding_id": 9,
+  "fiscal_year": "2025-2026",
+  "amount": 1217,
+  "is_paid": 0
+ },
+ {
+  "id": 28,
+  "holding_id": 10,
+  "fiscal_year": "2023-2024",
+  "amount": 2675,
+  "is_paid": 1
+ },
+ {
+  "id": 29,
+  "holding_id": 10,
+  "fiscal_year": "2024-2025",
+  "amount": 812,
+  "is_paid": 1
+ },
+ {
+  "id": 30,
+  "holding_id": 10,
+  "fiscal_year": "2025-2026",
+  "amount": 1362,
+  "is_paid": 0
+ },
+ {
+  "id": 31,
+  "holding_id": 11,
+  "fiscal_year": "2023-2024",
+  "amount": 2949,
+  "is_paid": 1
+ },
+ {
+  "id": 32,
+  "holding_id": 11,
+  "fiscal_year": "2024-2025",
+  "amount": 2308,
+  "is_paid": 1
+ },
+ {
+  "id": 33,
+  "holding_id": 11,
+  "fiscal_year": "2025-2026",
+  "amount": 3189,
+  "is_paid": 0
+ },
+ {
+  "id": 34,
+  "holding_id": 12,
+  "fiscal_year": "2023-2024",
+  "amount": 1127,
+  "is_paid": 1
+ },
+ {
+  "id": 35,
+  "holding_id": 12,
+  "fiscal_year": "2024-2025",
+  "amount": 452,
+  "is_paid": 1
+ },
+ {
+  "id": 36,
+  "holding_id": 12,
+  "fiscal_year": "2025-2026",
+  "amount": 1806,
+  "is_paid": 0
+ },
+ {
+  "id": 37,
+  "holding_id": 13,
+  "fiscal_year": "2023-2024",
+  "amount": 3033,
+  "is_paid": 1
+ },
+ {
+  "id": 38,
+  "holding_id": 13,
+  "fiscal_year": "2024-2025",
+  "amount": 2387,
+  "is_paid": 1
+ },
+ {
+  "id": 39,
+  "holding_id": 13,
+  "fiscal_year": "2025-2026",
+  "amount": 3886,
+  "is_paid": 0
+ },
+ {
+  "id": 40,
+  "holding_id": 14,
+  "fiscal_year": "2023-2024",
+  "amount": 3280,
+  "is_paid": 1
+ },
+ {
+  "id": 41,
+  "holding_id": 14,
+  "fiscal_year": "2024-2025",
+  "amount": 924,
+  "is_paid": 1
+ },
+ {
+  "id": 42,
+  "holding_id": 14,
+  "fiscal_year": "2025-2026",
+  "amount": 1753,
+  "is_paid": 0
+ },
+ {
+  "id": 43,
+  "holding_id": 15,
+  "fiscal_year": "2023-2024",
+  "amount": 2914,
+  "is_paid": 1
+ },
+ {
+  "id": 44,
+  "holding_id": 15,
+  "fiscal_year": "2024-2025",
+  "amount": 557,
+  "is_paid": 1
+ },
+ {
+  "id": 45,
+  "holding_id": 15,
+  "fiscal_year": "2025-2026",
+  "amount": 325,
+  "is_paid": 0
+ },
+ {
+  "id": 46,
+  "holding_id": 16,
+  "fiscal_year": "2023-2024",
+  "amount": 829,
+  "is_paid": 1
+ },
+ {
+  "id": 47,
+  "holding_id": 16,
+  "fiscal_year": "2024-2025",
+  "amount": 2946,
+  "is_paid": 1
+ },
+ {
+  "id": 48,
+  "holding_id": 16,
+  "fiscal_year": "2025-2026",
+  "amount": 336,
+  "is_paid": 0
+ },
+ {
+  "id": 49,
+  "holding_id": 17,
+  "fiscal_year": "2023-2024",
+  "amount": 1277,
+  "is_paid": 1
+ },
+ {
+  "id": 50,
+  "holding_id": 17,
+  "fiscal_year": "2024-2025",
+  "amount": 1314,
+  "is_paid": 1
+ },
+ {
+  "id": 51,
+  "holding_id": 17,
+  "fiscal_year": "2025-2026",
+  "amount": 3814,
+  "is_paid": 0
+ },
+ {
+  "id": 52,
+  "holding_id": 18,
+  "fiscal_year": "2023-2024",
+  "amount": 1487,
+  "is_paid": 1
+ },
+ {
+  "id": 53,
+  "holding_id": 18,
+  "fiscal_year": "2024-2025",
+  "amount": 3422,
+  "is_paid": 1
+ },
+ {
+  "id": 54,
+  "holding_id": 18,
+  "fiscal_year": "2025-2026",
+  "amount": 4101,
+  "is_paid": 0
+ },
+ {
+  "id": 55,
+  "holding_id": 19,
+  "fiscal_year": "2023-2024",
+  "amount": 2508,
+  "is_paid": 1
+ },
+ {
+  "id": 56,
+  "holding_id": 19,
+  "fiscal_year": "2024-2025",
+  "amount": 1439,
+  "is_paid": 1
+ },
+ {
+  "id": 57,
+  "holding_id": 19,
+  "fiscal_year": "2025-2026",
+  "amount": 2762,
+  "is_paid": 0
+ },
+ {
+  "id": 58,
+  "holding_id": 20,
+  "fiscal_year": "2023-2024",
+  "amount": 1358,
+  "is_paid": 1
+ },
+ {
+  "id": 59,
+  "holding_id": 20,
+  "fiscal_year": "2024-2025",
+  "amount": 2791,
+  "is_paid": 1
+ },
+ {
+  "id": 60,
+  "holding_id": 20,
+  "fiscal_year": "2025-2026",
+  "amount": 748,
+  "is_paid": 0
+ },
+ {
+  "id": 61,
+  "holding_id": 21,
+  "fiscal_year": "2023-2024",
+  "amount": 1528,
+  "is_paid": 1
+ },
+ {
+  "id": 62,
+  "holding_id": 21,
+  "fiscal_year": "2024-2025",
+  "amount": 2824,
+  "is_paid": 1
+ },
+ {
+  "id": 63,
+  "holding_id": 21,
+  "fiscal_year": "2025-2026",
+  "amount": 1956,
+  "is_paid": 0
+ },
+ {
+  "id": 64,
+  "holding_id": 22,
+  "fiscal_year": "2023-2024",
+  "amount": 3712,
+  "is_paid": 1
+ },
+ {
+  "id": 65,
+  "holding_id": 22,
+  "fiscal_year": "2024-2025",
+  "amount": 3167,
+  "is_paid": 1
+ },
+ {
+  "id": 66,
+  "holding_id": 22,
+  "fiscal_year": "2025-2026",
+  "amount": 194,
+  "is_paid": 0
+ },
+ {
+  "id": 67,
+  "holding_id": 23,
+  "fiscal_year": "2023-2024",
+  "amount": 2247,
+  "is_paid": 1
+ },
+ {
+  "id": 68,
+  "holding_id": 23,
+  "fiscal_year": "2024-2025",
+  "amount": 1230,
+  "is_paid": 1
+ },
+ {
+  "id": 69,
+  "holding_id": 23,
+  "fiscal_year": "2025-2026",
+  "amount": 869,
+  "is_paid": 0
+ },
+ {
+  "id": 70,
+  "holding_id": 24,
+  "fiscal_year": "2023-2024",
+  "amount": 1692,
+  "is_paid": 1
+ },
+ {
+  "id": 71,
+  "holding_id": 24,
+  "fiscal_year": "2024-2025",
+  "amount": 3061,
+  "is_paid": 1
+ },
+ {
+  "id": 72,
+  "holding_id": 24,
+  "fiscal_year": "2025-2026",
+  "amount": 4022,
+  "is_paid": 0
+ },
+ {
+  "id": 73,
+  "holding_id": 25,
+  "fiscal_year": "2023-2024",
+  "amount": 553,
+  "is_paid": 1
+ },
+ {
+  "id": 74,
+  "holding_id": 25,
+  "fiscal_year": "2024-2025",
+  "amount": 1275,
+  "is_paid": 1
+ },
+ {
+  "id": 75,
+  "holding_id": 25,
+  "fiscal_year": "2025-2026",
+  "amount": 785,
+  "is_paid": 0
+ },
+ {
+  "id": 76,
+  "holding_id": 26,
+  "fiscal_year": "2023-2024",
+  "amount": 2408,
+  "is_paid": 1
+ },
+ {
+  "id": 77,
+  "holding_id": 26,
+  "fiscal_year": "2024-2025",
+  "amount": 2206,
+  "is_paid": 1
+ },
+ {
+  "id": 78,
+  "holding_id": 26,
+  "fiscal_year": "2025-2026",
+  "amount": 1696,
+  "is_paid": 0
+ },
+ {
+  "id": 79,
+  "holding_id": 27,
+  "fiscal_year": "2023-2024",
+  "amount": 374,
+  "is_paid": 1
+ },
+ {
+  "id": 80,
+  "holding_id": 27,
+  "fiscal_year": "2024-2025",
+  "amount": 2854,
+  "is_paid": 1
+ },
+ {
+  "id": 81,
+  "holding_id": 27,
+  "fiscal_year": "2025-2026",
+  "amount": 703,
+  "is_paid": 0
+ },
+ {
+  "id": 82,
+  "holding_id": 28,
+  "fiscal_year": "2023-2024",
+  "amount": 1265,
+  "is_paid": 1
+ },
+ {
+  "id": 83,
+  "holding_id": 28,
+  "fiscal_year": "2024-2025",
+  "amount": 2101,
+  "is_paid": 1
+ },
+ {
+  "id": 84,
+  "holding_id": 28,
+  "fiscal_year": "2025-2026",
+  "amount": 2324,
+  "is_paid": 0
+ },
+ {
+  "id": 85,
+  "holding_id": 29,
+  "fiscal_year": "2023-2024",
+  "amount": 3314,
+  "is_paid": 1
+ },
+ {
+  "id": 86,
+  "holding_id": 29,
+  "fiscal_year": "2024-2025",
+  "amount": 3008,
+  "is_paid": 1
+ },
+ {
+  "id": 87,
+  "holding_id": 29,
+  "fiscal_year": "2025-2026",
+  "amount": 1772,
+  "is_paid": 0
+ },
+ {
+  "id": 88,
+  "holding_id": 30,
+  "fiscal_year": "2023-2024",
+  "amount": 1308,
+  "is_paid": 1
+ },
+ {
+  "id": 89,
+  "holding_id": 30,
+  "fiscal_year": "2024-2025",
+  "amount": 1657,
+  "is_paid": 1
+ },
+ {
+  "id": 90,
+  "holding_id": 30,
+  "fiscal_year": "2025-2026",
+  "amount": 947,
+  "is_paid": 0
+ },
+ {
+  "id": 91,
+  "holding_id": 31,
+  "fiscal_year": "2023-2024",
+  "amount": 997,
+  "is_paid": 1
+ },
+ {
+  "id": 92,
+  "holding_id": 31,
+  "fiscal_year": "2024-2025",
+  "amount": 388,
+  "is_paid": 1
+ },
+ {
+  "id": 93,
+  "holding_id": 31,
+  "fiscal_year": "2025-2026",
+  "amount": 3791,
+  "is_paid": 0
+ },
+ {
+  "id": 94,
+  "holding_id": 32,
+  "fiscal_year": "2023-2024",
+  "amount": 454,
+  "is_paid": 1
+ },
+ {
+  "id": 95,
+  "holding_id": 32,
+  "fiscal_year": "2024-2025",
+  "amount": 3005,
+  "is_paid": 1
+ },
+ {
+  "id": 96,
+  "holding_id": 32,
+  "fiscal_year": "2025-2026",
+  "amount": 3250,
+  "is_paid": 0
+ },
+ {
+  "id": 97,
+  "holding_id": 33,
+  "fiscal_year": "2023-2024",
+  "amount": 3123,
+  "is_paid": 1
+ },
+ {
+  "id": 98,
+  "holding_id": 33,
+  "fiscal_year": "2024-2025",
+  "amount": 3654,
+  "is_paid": 1
+ },
+ {
+  "id": 99,
+  "holding_id": 33,
+  "fiscal_year": "2025-2026",
+  "amount": 206,
+  "is_paid": 0
+ },
+ {
+  "id": 100,
+  "holding_id": 34,
+  "fiscal_year": "2023-2024",
+  "amount": 2722,
+  "is_paid": 1
+ },
+ {
+  "id": 101,
+  "holding_id": 34,
+  "fiscal_year": "2024-2025",
+  "amount": 3309,
+  "is_paid": 1
+ },
+ {
+  "id": 102,
+  "holding_id": 34,
+  "fiscal_year": "2025-2026",
+  "amount": 2760,
+  "is_paid": 0
+ },
+ {
+  "id": 103,
+  "holding_id": 35,
+  "fiscal_year": "2023-2024",
+  "amount": 3341,
+  "is_paid": 1
+ },
+ {
+  "id": 104,
+  "holding_id": 35,
+  "fiscal_year": "2024-2025",
+  "amount": 564,
+  "is_paid": 1
+ },
+ {
+  "id": 105,
+  "holding_id": 35,
+  "fiscal_year": "2025-2026",
+  "amount": 4010,
+  "is_paid": 0
+ },
+ {
+  "id": 106,
+  "holding_id": 36,
+  "fiscal_year": "2023-2024",
+  "amount": 3017,
+  "is_paid": 1
+ },
+ {
+  "id": 107,
+  "holding_id": 36,
+  "fiscal_year": "2024-2025",
+  "amount": 259,
+  "is_paid": 1
+ },
+ {
+  "id": 108,
+  "holding_id": 36,
+  "fiscal_year": "2025-2026",
+  "amount": 1027,
+  "is_paid": 0
+ },
+ {
+  "id": 109,
+  "holding_id": 37,
+  "fiscal_year": "2023-2024",
+  "amount": 1558,
+  "is_paid": 1
+ },
+ {
+  "id": 110,
+  "holding_id": 37,
+  "fiscal_year": "2024-2025",
+  "amount": 2636,
+  "is_paid": 1
+ },
+ {
+  "id": 111,
+  "holding_id": 37,
+  "fiscal_year": "2025-2026",
+  "amount": 3603,
+  "is_paid": 0
+ },
+ {
+  "id": 112,
+  "holding_id": 38,
+  "fiscal_year": "2023-2024",
+  "amount": 3107,
+  "is_paid": 1
+ },
+ {
+  "id": 113,
+  "holding_id": 38,
+  "fiscal_year": "2024-2025",
+  "amount": 2085,
+  "is_paid": 1
+ },
+ {
+  "id": 114,
+  "holding_id": 38,
+  "fiscal_year": "2025-2026",
+  "amount": 2190,
+  "is_paid": 0
+ },
+ {
+  "id": 115,
+  "holding_id": 39,
+  "fiscal_year": "2023-2024",
+  "amount": 4049,
+  "is_paid": 1
+ },
+ {
+  "id": 116,
+  "holding_id": 39,
+  "fiscal_year": "2024-2025",
+  "amount": 157,
+  "is_paid": 1
+ },
+ {
+  "id": 117,
+  "holding_id": 39,
+  "fiscal_year": "2025-2026",
+  "amount": 4199,
+  "is_paid": 0
+ },
+ {
+  "id": 118,
+  "holding_id": 40,
+  "fiscal_year": "2023-2024",
+  "amount": 2623,
+  "is_paid": 1
+ },
+ {
+  "id": 119,
+  "holding_id": 40,
+  "fiscal_year": "2024-2025",
+  "amount": 1360,
+  "is_paid": 1
+ },
+ {
+  "id": 120,
+  "holding_id": 40,
+  "fiscal_year": "2025-2026",
+  "amount": 2947,
+  "is_paid": 0
+ },
+ {
+  "id": 121,
+  "holding_id": 41,
+  "fiscal_year": "2023-2024",
+  "amount": 894,
+  "is_paid": 1
+ },
+ {
+  "id": 122,
+  "holding_id": 41,
+  "fiscal_year": "2024-2025",
+  "amount": 2867,
+  "is_paid": 1
+ },
+ {
+  "id": 123,
+  "holding_id": 41,
+  "fiscal_year": "2025-2026",
+  "amount": 3690,
+  "is_paid": 0
+ },
+ {
+  "id": 124,
+  "holding_id": 42,
+  "fiscal_year": "2023-2024",
+  "amount": 3073,
+  "is_paid": 1
+ },
+ {
+  "id": 125,
+  "holding_id": 42,
+  "fiscal_year": "2024-2025",
+  "amount": 1817,
+  "is_paid": 1
+ },
+ {
+  "id": 126,
+  "holding_id": 42,
+  "fiscal_year": "2025-2026",
+  "amount": 2595,
+  "is_paid": 0
+ },
+ {
+  "id": 127,
+  "holding_id": 43,
+  "fiscal_year": "2023-2024",
+  "amount": 3410,
+  "is_paid": 1
+ },
+ {
+  "id": 128,
+  "holding_id": 43,
+  "fiscal_year": "2024-2025",
+  "amount": 959,
+  "is_paid": 1
+ },
+ {
+  "id": 129,
+  "holding_id": 43,
+  "fiscal_year": "2025-2026",
+  "amount": 1807,
+  "is_paid": 0
+ },
+ {
+  "id": 130,
+  "holding_id": 44,
+  "fiscal_year": "2023-2024",
+  "amount": 1165,
+  "is_paid": 1
+ },
+ {
+  "id": 131,
+  "holding_id": 44,
+  "fiscal_year": "2024-2025",
+  "amount": 3732,
+  "is_paid": 1
+ },
+ {
+  "id": 132,
+  "holding_id": 44,
+  "fiscal_year": "2025-2026",
+  "amount": 3562,
+  "is_paid": 0
+ },
+ {
+  "id": 133,
+  "holding_id": 3,
+  "fiscal_year": "2021-2022",
+  "amount": 850,
+  "is_paid": 0
+ },
+ {
+  "id": 134,
+  "holding_id": 3,
+  "fiscal_year": "2022-2023",
+  "amount": 1204,
+  "is_paid": 0
+ }
+]

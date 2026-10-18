@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{ S.nav_home }}{% endblock %}
+{% block body %}
+<div class="full">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>{{ S.hero_heading }}</h1>
+      <p>{{ S.hero_body }}</p>
+      <a class="btn btn-primary" href="/services/">{{ S.hero_cta }}</a>
+    </div>
+    <div class="hero-signin">
+      <h2>{{ S.signin_heading }}</h2>
+      <p>{{ S.signin_body }}</p>
+      <a class="btn btn-signin-lg" href="/login">{{ S.signin_cta }}</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <dl>
+      <div><dt>{{ S.stats_services }}</dt><dd>{{ stats.services|v2_num }}</dd></div>
+      <div><dt>{{ S.stats_offices }}</dt><dd>{{ stats.offices|v2_num }}</dd></div>
+      <div><dt>{{ S.stats_notices }}</dt><dd>{{ stats.notices|v2_num }}</dd></div>
+      <div><dt>{{ S.stats_fees }}</dt><dd>{{ stats.fees|v2_num }}</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>{{ S.sectors_heading }}</h2>
+    <p class="lede">{{ S.sectors_body }}</p>
+    <div class="sectors">
+      {% for key, members in sectors %}
+      <section class="sector">
+        <h3>{{ S[key] }}</h3>
+        <ul>
+          {% for sv in members %}<li><a href="/services/{{ sv.slug }}/">{{ sv.name }}</a></li>{% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2>{{ S.all_services }}</h2>
+    <ul class="svc-grid">
+      {% for sv in services %}
+      <li><a href="/services/{{ sv.slug }}/">
+        <strong>{{ sv.name }}</strong><span>{{ sv.summary }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2>{{ S.notices }}</h2>
+      <p><a href="/notices/">{{ S.notices_all }}</a></p>
+      <ul class="notice-list">
+        {% for n in notices %}
+        <li>{{ n.title }}<span class="meta">{{ n.date }}</span></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>{{ S.quick_heading }}</h2>
+      <ul class="quick">
+        <li><a href="/login">{{ S.login_title }}</a></li>
+        <li><a href="/accounts">{{ S.accounts_title }}</a></li>
+        <li><a href="/services/">{{ S.all_services }}</a></li>
+      </ul>
+    </section>
+  </div>
+
+</div>
+{% endblock %}

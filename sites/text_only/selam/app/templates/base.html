@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ html_lang }}"{% if html_lang == "ur" %} dir="rtl"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ t("site.title") }}{% endblock %}</title>
+<meta name="description" content="{% block meta_description %}{{ t("site.description") }}{% endblock %}">
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="page">
+<a class="skip-link" href="#main">{{ t("nav.skip_to_content") }}</a>
+{% include "partials/header.html" %}
+<main id="main">
+  {% block breadcrumb %}{% endblock %}
+  {% block content %}{% endblock %}
+</main>
+{% include "partials/footer.html" %}
+<script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>

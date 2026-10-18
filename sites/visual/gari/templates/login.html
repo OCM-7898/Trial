@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ S.login_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.login_title }}</h1>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="panel">
+<form class="stack" method="post">
+  <label>{{ S.email }}</label>
+  <input type="text" name="email">
+  <label>{{ S.password }}</label>
+  <input type="password" name="password">
+  <button type="submit">{{ S.sign_in }}</button>
+</form>
+</div>
+{% endblock %}

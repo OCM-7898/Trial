@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ t("checkin.cancel_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('checkin') }}">{{ t("checkin.title") }}</a></li>
+      <li>{{ t("checkin.cancel_title") }}</li></ol></nav>
+<h1>{{ t("checkin.cancel_title") }}</h1>
+{% if cancelled %}
+<div class="notice notice-ok" role="status"><div>{{ t("checkin.cancel_done") }}</div></div>
+<p><a class="btn btn-primary" href="{{ path('checkin') }}">{{ t("checkin.start") }}</a></p>
+{% else %}
+<div class="notice notice-warn"><div>{{ t("checkin.cancel_warning") }}</div></div>
+<form method="post"><button class="btn btn-primary" type="submit" name="confirm" value="yes">{{ t("checkin.cancel_confirm") }}</button></form>
+{% endif %}
+</div>{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ S.finance_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.finance_title }}</h1>
+<p class="muted">{{ S.finance_intro }}</p>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="panel">
+<form class="stack rowform" method="get" action="/finance">
+  <div><label>{{ S.car_price }}</label>
+    <input type="text" name="price" value="{{ sel.get('price','') }}"></div>
+  <div><label>{{ S.down_pct }}</label>
+    <input type="text" name="down_pct" value="{{ sel.get('down_pct','') }}"></div>
+  <div><label>{{ S.tenure_years }}</label>
+    <input type="text" name="years" value="{{ sel.get('years','') }}"></div>
+  <div><button type="submit">{{ S.calculate }}</button></div>
+</form>
+</div>
+{% if quote %}
+<table class="spec">
+  <tr><th>{{ S.loan_amount }}</th><td>{{ quote.loan | money }}</td></tr>
+  <tr><th>{{ S.total_interest }}</th><td>{{ quote.interest | money }}</td></tr>
+  <tr><th>{{ S.total_payable }}</th><td>{{ quote.total | money }}</td></tr>
+  <tr><th>{{ S.monthly_installment }}</th><td>{{ quote.monthly | money }}</td></tr>
+</table>
+{% endif %}
+{% endblock %}

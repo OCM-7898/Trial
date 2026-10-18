@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}{{ S.unavailable_title }}{% endblock %}
+{% block content %}
+<h2>{{ p.name }}</h2>
+<p class="error">{{ error }}</p>
+<p><a href="/product/{{ p.id }}">{{ S.back_to_product }}</a> · <a href="/">{{ S.keep_shopping }}</a></p>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ t("join.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_account') }}">{{ t("brand.loyalty") }}</a></li>
+        <li>{{ t("join.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("join.title") }}</h1>
+  <p>{{ t("join.intro") }}</p>
+
+  <form class="searchform" method="post" action="{{ path('miles_join') }}" novalidate>
+    <div class="field">
+      <label for="first_name">{{ t("join.first_name") }}</label>
+      <input type="text" id="first_name" name="first_name" value="{{ values.get('first_name', '') }}"
+             {% if errors.get('first_name') %}aria-invalid="true" aria-describedby="first_name-error"{% endif %}>
+      {% if errors.get('first_name') %}<span class="error-text" id="first_name-error">{{ errors['first_name'] }}</span>{% endif %}
+    </div>
+    <div class="field">
+      <label for="last_name">{{ t("join.last_name") }}</label>
+      <input type="text" id="last_name" name="last_name" value="{{ values.get('last_name', '') }}"
+             {% if errors.get('last_name') %}aria-invalid="true" aria-describedby="last_name-error"{% endif %}>
+      {% if errors.get('last_name') %}<span class="error-text" id="last_name-error">{{ errors['last_name'] }}</span>{% endif %}
+    </div>
+    <div class="field">
+      <label for="email">{{ t("join.email") }}</label>
+      <input type="text" id="email" name="email" value="{{ values.get('email', '') }}"
+             {% if errors.get('email') %}aria-invalid="true" aria-describedby="email-error"{% endif %}>
+      {% if errors.get('email') %}<span class="error-text" id="email-error">{{ errors['email'] }}</span>{% endif %}
+    </div>
+    <div class="field">
+      <label for="country_code">{{ t("join.country") }}</label>
+      <input type="text" id="country_code" name="country_code" value="{{ values.get('country_code', '') }}"
+             placeholder="ET">
+      <span class="hint">{{ t("join.country_hint") }}</span>
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("join.submit") }}</button></div>
+  </form>
+</div>
+{% endblock %}

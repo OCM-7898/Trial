@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ S.insp_title }} — {{ car_name(c) }}{% endblock %}
+{% block content %}
+<h1>{{ S.insp_title }}</h1>
+<h2>{{ car_name(c) }}</h2>
+{% if c.insp_overall is not none %}
+<p>{{ S.insp_intro }}</p>
+<table class="spec">
+  <tr><th>{{ S.insp_engine }}</th><td>{{ c.insp_engine | v2_num }} / 10</td></tr>
+  <tr><th>{{ S.insp_body }}</th><td>{{ c.insp_body | v2_num }} / 10</td></tr>
+  <tr><th>{{ S.insp_interior }}</th><td>{{ c.insp_interior | v2_num }} / 10</td></tr>
+  <tr><th>{{ S.insp_tires }}</th><td>{{ c.insp_tires | v2_num }} / 10</td></tr>
+  <tr><th><strong>{{ S.insp_overall }}</strong></th><td><strong>{{ c.insp_overall | v2_num }} / 10</strong></td></tr>
+</table>
+{% else %}
+<div class="error">{{ S.insp_none }}</div>
+{% endif %}
+<p><a href="/car/{{ c.id }}">{{ S.insp_back }}</a></p>
+{% endblock %}

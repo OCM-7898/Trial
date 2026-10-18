@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+<div class="full">
+  <h1>{{ title }}</h1>
+  <div class="result">
+  {% if rows %}
+    <p class="success-line">{{ S.result_title }}</p>
+    <dl class="record">{% for k, v in rows %}<dt>{{ k }}</dt><dd>{{ v }}</dd>{% endfor %}</dl>
+  {% else %}
+    <p class="empty">{{ S.no_record_msg }}</p>
+  {% endif %}
+  </div>
+  <p><a href="{{ back }}">{{ S.back }}</a></p>
+</div>
+{% endblock %}

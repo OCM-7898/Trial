@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("cancel.title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("cancel.title")) }}
+{% if cancelled %}
+<div class="notice notice-ok" role="status"><div>{{ t("cancel.done", pnr=booking.pnr) }}</div></div>
+{% else %}
+<div class="notice notice-warn"><div><strong>{{ t("cancel.warning_title") }}</strong>
+  <p>{{ t("cancel.warning_body") }}</p></div></div>
+<p>{{ refund_label }}</p>
+<p><a class="btn btn-secondary" href="{{ path('refund', pnr=booking.pnr) }}">{{ t("manage.request_refund") }}</a></p>
+<form method="post" style="margin-top:18px">
+  <button class="btn btn-primary" type="submit" name="confirm" value="yes">{{ t("cancel.confirm") }}</button>
+</form>
+{% endif %}
+</div>{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ t("schedules.seasonal_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('schedules') }}">{{ t("schedules.title") }}</a></li>
+        <li>{{ t("schedules.seasonal_title") }}</li></ol>
+  </nav>
+  <h1>{{ t("schedules.seasonal_title") }}</h1>
+  {% if rows %}
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">{{ t("search.origin") }}</th><th scope="col">{{ t("search.destination") }}</th>
+      <th scope="col">{{ t("schedules.season") }}</th></tr></thead>
+    <tbody>{% for row in rows %}<tr>
+      <td>{{ row.origin.city }} ({{ row.origin.iata }})</td>
+      <td>{{ row.destination.city }} ({{ row.destination.iata }})</td>
+      <td>{{ fmt_date(row.route.seasonal_from) }} &ndash; {{ fmt_date(row.route.seasonal_to) }}</td>
+    </tr>{% endfor %}</tbody></table></div>
+  {% else %}
+  <div class="notice notice-info"><div>{{ t("schedules.no_seasonal") }}</div></div>
+  <p><a class="btn btn-secondary" href="{{ path('schedules') }}">{{ t("schedules.title") }}</a></p>
+  {% endif %}
+</div>
+{% endblock %}

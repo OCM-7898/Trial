@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ t.no }} {{ tname(t.no) }}</h1>
+<p class="muted">{{ S.runs_on }}:
+  {% for d in t.days %}{{ S["d_" ~ d] }}{% if not loop.last %}, {% endif %}{% endfor %}
+</p>
+
+<h2>{{ S.schedule }}</h2>
+<table>
+  <tr><th>{{ S.station }}</th><th>{{ S.arr }}</th><th>{{ S.dep }}</th>
+      <th>{{ S.day }}</th><th>{{ S.km }}</th></tr>
+  {% for code, arr, dep, day, km in t.stops %}
+  <tr>
+    <td><a href="/station/{{ code }}">{{ sname(code) }}</a> ({{ code }})</td>
+    <td>{{ nd(arr) if arr else "—" }}</td>
+    <td>{{ nd(dep) if dep else "—" }}</td>
+    <td>{{ nd(day) }}</td>
+    <td>{{ nd(km) }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>{{ S.classes_fares }}</h2>
+{% if segment %}
+  {% if segment.running %}
+    <p class="muted">{{ S.segment_note.format(a=sname(segment.a), b=sname(segment.b), d=segment.date) }}</p>
+  {% else %}
+    <div class="error">{{ S.not_running }}</div>
+  {% endif %}
+{% else %}
+  <p class="muted">{{ S.full_route_note }}</p>
+{% endif %}
+{% set a = segment.a if segment else t.stops[0][0] %}
+{% set b = segment.b if segment else t.stops[-1][0] %}
+<table>
+  <tr><th>{{ S.cls }}</th><th>{{ S.fare }}</th><th>{{ S.availability }}</th>
+      {% if segment and segment.running %}<th></th>{% endif %}</tr>
+  {% for c, seats in classes_of(t.no) %}
+  <tr>
+    <td>{{ c }} — {{ S["cl_" ~ c] }}</td>
+    <td>{{ CUR }}{{ nd(fare(t.no, c, a, b)) }}</td>
+    <td>{% if seats > 0 %}<span class="avl">{{ S.avl.format(n=nd(seats)) }}</span>
+        {% else %}<span class="wl">{{ S.wl.format(n=nd(wl_of(t.no)[c])) }}</span>{% endif %}</td>
+    {% if segment and segment.running %}
+    <td><a href="/book/{{ t.no }}?from={{ segment.a }}&amp;to={{ segment.b }}&amp;date={{ segment.date }}&amp;class={{ c }}">{{ S.book }}</a></td>
+    {% endif %}
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

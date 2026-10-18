@@ -1,0 +1,2189 @@
+[
+ {
+  "id": "rail-001",
+  "site": "rail",
+  "intent": "ट्रेन 12903 सागरमाला एक्सप्रेस को नई दिल्ली से मुंबई सेंट्रल तक कितना समय लगता है? जैसा दिखाया गया है वही अवधि उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "16h 55m",
+     "16 hours 55 minutes",
+     "16 hr 55 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=BCT; date=2026-04-06",
+   "stop 16h 55m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-002",
+  "site": "rail",
+  "intent": "2026-04-06 को नई दिल्ली से कानपुर सेंट्रल की यात्रा का सबसे कम 3A किराया खोजें और रुपये में राशि उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "655",
+     "६५५"
+    ],
+    "none_of": [
+     "870"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "stop 655"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-003",
+  "site": "rail",
+  "intent": "PNR 6201234567 की PNR स्थिति देखें और स्थिति कोड उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CNF"
+    ],
+    "none_of": [
+     "CAN",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "stop CNF"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-004",
+  "site": "rail",
+  "intent": "PNR 6203456789 देखें और यात्री का नाम उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "विक्रम राव"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6203456789",
+   "stop विक्रम राव"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-005",
+  "site": "rail",
+  "intent": "2026-04-06 को ट्रेन 12301 यमुना एक्सप्रेस में नई दिल्ली से हावड़ा जंक्शन तक यात्री कबीर मेहता, आयु 41, पुरुष, ऊपरी (Upper) बर्थ का एक 2A टिकट बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "कबीर मेहता",
+     "date": "2026-04-06",
+     "from_code": "NDLS",
+     "to_code": "HWH"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-06&class=2A",
+   "fill 0 name=कबीर मेहता; age=41; gender=M; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-006",
+  "site": "rail",
+  "intent": "2026-04-07 को ट्रेन 12417 गोमती संपर्क में नई दिल्ली से लखनऊ तक यात्री सुनीता वर्मा, आयु 55, महिला, कोई बर्थ वरीयता नहीं — एक CC (चेयर कार) टिकट बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "सुनीता वर्मा",
+     "class_code": "CC",
+     "train_no": "12417",
+     "date": "2026-04-07",
+     "from_code": "NDLS",
+     "to_code": "LKO"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12417?from=NDLS&to=LKO&date=2026-04-07&class=CC",
+   "fill 0 name=सुनीता वर्मा; age=55; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-007",
+  "site": "rail",
+  "intent": "2026-04-08 को ट्रेन 12841 कोरोमंडल लिंक एक्सप्रेस में हावड़ा जंक्शन से चेन्नई सेंट्रल तक यात्री फ़रहान अली, आयु 23, पुरुष, साइड ऊपरी (Side Upper) बर्थ का एक SL (स्लीपर) टिकट बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "फ़रहान अली",
+     "berth": "Side Upper",
+     "train_no": "12841",
+     "class_code": "SL",
+     "date": "2026-04-08",
+     "from_code": "HWH",
+     "to_code": "MAS"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12841?from=HWH&to=MAS&date=2026-04-08&class=SL",
+   "fill 0 name=फ़रहान अली; age=23; gender=M; berth=Side Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-008",
+  "site": "rail",
+  "intent": "PNR 6203456789 वाली बुकिंग रद्द करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /cancel/6203456789",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-009",
+  "site": "rail",
+  "intent": "ट्रेन 12622 ब्रह्मपुत्र लिंक एक्सप्रेस में हावड़ा जंक्शन से गुवाहाटी तक 2A टिकट 3A टिकट से कितना महँगा है? रुपये में अंतर उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "725",
+     "७२५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "stop 725"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-010",
+  "site": "rail",
+  "intent": "2026-04-07 को प्रस्थान करने वाली सिकंदराबाद जंक्शन से पुणे जंक्शन की सीधी ट्रेन खोजें। उस दिन कोई ट्रेन न चले तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई ट्रेन नहीं",
+     "सीधी ट्रेन नहीं",
+     "नहीं चलती",
+     "उस दिन नहीं चलती",
+     "ट्रेन नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-011",
+  "site": "rail",
+  "intent": "PNR 6299999999 की PNR स्थिति देखें। कोई बुकिंग न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई बुकिंग नहीं",
+     "नहीं मिली",
+     "कोई रिकॉर्ड नहीं",
+     "मौजूद नहीं",
+     "अमान्य pnr"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6299999999",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-012",
+  "site": "rail",
+  "intent": "ग्राहक सहायता को 'रिफ़ंड में देरी' विषय से एक संदेश भेजें, जिसमें बताएँ कि आपका रिफ़ंड नहीं आया है। अपना नाम और ईमेल (प्रिया शर्मा, priya.sharma@example.in) शामिल करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "रिफ़ंड में देरी",
+     "name": "प्रिया शर्मा",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=प्रिया शर्मा; email=priya.sharma@example.in; subject=रिफ़ंड में देरी; message=मेरे रद्द टिकट का रिफ़ंड अभी तक नहीं आया है।"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-013",
+  "site": "rail",
+  "intent": "अपनी प्रोफ़ाइल में मोबाइल नंबर बदलकर 9876501234 करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9876501234"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 mobile=9876501234"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-014",
+  "site": "rail",
+  "intent": "रिफ़ंड नियमों के अनुसार, प्रस्थान से 48 घंटे से अधिक पहले रद्द किए गए पुष्ट AC श्रेणी टिकट पर रुपये में निश्चित रद्दीकरण शुल्क कितना है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "240",
+     "२४०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 240"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-015",
+  "site": "rail",
+  "intent": "क्या 2026-04-09 को जयपुर जंक्शन से लखनऊ की कोई सीधी ट्रेन है? कोई न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई ट्रेन नहीं",
+     "सीधी ट्रेन नहीं",
+     "कोई नहीं",
+     "ट्रेन नहीं",
+     "सेवा नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=JP; to=LKO; date=2026-04-09",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-016",
+  "site": "rail",
+  "intent": "इस साइट की सभी ट्रेनों में कौन सी एक ट्रेन उद्गम से गंतव्य तक सबसे लंबी कुल दूरी तय करती है? ट्रेन नंबर और किमी में दूरी उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2182",
+     "2,182",
+     "२१८२",
+     "२,१८२"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615, 2182 km"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-017",
+  "site": "rail",
+  "intent": "कौन सी ट्रेन कुल सबसे अधिक निर्धारित स्टॉप करती है (उद्गम और गंतव्य सहित)? ट्रेन नंबर और स्टॉप की संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615 with 6 stops"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-018",
+  "site": "rail",
+  "intent": "प्रतिदिन चलने वाली ट्रेनों में कौन सी अपने गंतव्य पर दिन में सबसे देर से (घड़ी के समय से) पहुँचती है? ट्रेन नंबर और आगमन समय उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12417"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "22:35"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12417 at 22:35"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-019",
+  "site": "rail",
+  "intent": "इस साइट पर किस ट्रेन का किसी मध्यवर्ती स्टेशन पर सबसे लंबा ठहराव है? ट्रेन नंबर और मिनटों में ठहराव की अवधि उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12841"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "20"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12841",
+   "stop 12841, 20 minutes at विशाखापत्तनम"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-020",
+  "site": "rail",
+  "intent": "SL (स्लीपर) वाली सभी ट्रेनों में किसका पूरे मार्ग का SL किराया सबसे सस्ता है? ट्रेन नंबर और रुपये में किराया उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12723"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "335",
+     "३३५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12723",
+   "stop 12723, 335"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-021",
+  "site": "rail",
+  "intent": "1A (AC प्रथम श्रेणी) वाली सभी ट्रेनों में किसका पूरे मार्ग का 1A किराया सबसे महँगा है? ट्रेन नंबर और रुपये में किराया उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6615",
+     "6,615",
+     "६६१५",
+     "६,६१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12301",
+   "stop 12301, 6615"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-022",
+  "site": "rail",
+  "intent": "इस साइट पर ठीक दो स्टेशनों पर ठीक 3-3 ट्रेनें रुकती हैं। कौन से दो? दोनों स्टेशनों के नाम उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "मुंबई सेंट्रल",
+     "BCT"
+    ],
+    "none_of": [
+     "अजमेर जंक्शन",
+     "अहमदाबाद जंक्शन",
+     "आगरा कैंट",
+     "आबू रोड",
+     "कानपुर सेंट्रल",
+     "गुवाहाटी",
+     "चेन्नई सेंट्रल",
+     "जयपुर जंक्शन",
+     "नई दिल्ली",
+     "नागपुर जंक्शन",
+     "न्यू जलपाईगुड़ी",
+     "पटना जंक्शन",
+     "पुणे जंक्शन",
+     "भोपाल जंक्शन",
+     "लखनऊ",
+     "वाराणसी जंक्शन",
+     "विशाखापत्तनम",
+     "सिकंदराबाद जंक्शन",
+     "हावड़ा जंक्शन"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "रतलाम जंक्शन",
+     "RTM"
+    ],
+    "none_of": [
+     "अजमेर जंक्शन",
+     "अहमदाबाद जंक्शन",
+     "आगरा कैंट",
+     "आबू रोड",
+     "कानपुर सेंट्रल",
+     "गुवाहाटी",
+     "चेन्नई सेंट्रल",
+     "जयपुर जंक्शन",
+     "नई दिल्ली",
+     "नागपुर जंक्शन",
+     "न्यू जलपाईगुड़ी",
+     "पटना जंक्शन",
+     "पुणे जंक्शन",
+     "भोपाल जंक्शन",
+     "लखनऊ",
+     "वाराणसी जंक्शन",
+     "विशाखापत्तनम",
+     "सिकंदराबाद जंक्शन",
+     "हावड़ा जंक्शन"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop मुंबई सेंट्रल and रतलाम जंक्शन"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-023",
+  "site": "rail",
+  "intent": "प्रतिदिन चलने वाली ट्रेनों में कौन सी सुबह सबसे पहले अपने उद्गम से चलती है? ट्रेन नंबर और प्रस्थान समय उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:15",
+     "6:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12615 at 06:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-024",
+  "site": "rail",
+  "intent": "2026-04-07 को प्रस्थान करके कौन सी ट्रेन आपको पटना जंक्शन से हावड़ा जंक्शन ले जा सकती है? उसका ट्रेन नंबर उत्तर दें (कोई न चले तो N/A)।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=PNBE; to=HWH; date=2026-04-07",
+   "stop 12301"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-025",
+  "site": "rail",
+  "intent": "2026-04-08 को प्रस्थान करने वाली न्यू जलपाईगुड़ी से गुवाहाटी की सीधी ट्रेन खोजें। उसका ट्रेन नंबर उत्तर दें (कोई न चले तो N/A)।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NJP; to=GHY; date=2026-04-08",
+   "stop 12622"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-026",
+  "site": "rail",
+  "intent": "2026-04-06 से 2026-04-12 तक की हर तिथि पर विचार करते हुए, किस तिथि को नई दिल्ली से कानपुर सेंट्रल तक सबसे अधिक सीधी ट्रेनें चलती हैं? तिथि (YYYY-MM-DD) और उस दिन कितनी ट्रेनें चलती हैं, उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2026-04-12",
+     "रविवार"
+    ],
+    "none_of": [
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-11"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "३"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-07",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-10",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-11",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 2026-04-12, 3 trains"
+  ],
+  "max_steps": 40,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-027",
+  "site": "rail",
+  "intent": "सप्ताह के कितने दिन ट्रेन 12301 यमुना एक्सप्रेस पटना जंक्शन पर रुकती है? संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "४"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/PNBE",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-028",
+  "site": "rail",
+  "intent": "आपकी बुकिंग 6203456789 एक पुष्ट AC श्रेणी टिकट है। यदि आप इसे आज (प्रस्थान से 48 घंटे से अधिक पहले) रद्द करें, तो प्रकाशित रिफ़ंड नियमों के अनुसार रुपये में कितना रिफ़ंड देय होगा? राशि उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3665",
+     "3,665",
+     "३६६५",
+     "३,६६५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 3665"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-029",
+  "site": "rail",
+  "intent": "आपकी बुकिंग 6202345678 प्रतीक्षा सूची में है। रिफ़ंड नियमों के अनुसार, प्रस्थान से पहले रद्द करने पर आपको रुपये में कितना रिफ़ंड मिलेगा? राशि उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1335",
+     "1,335",
+     "१३३५",
+     "१,३३५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 1335"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-030",
+  "site": "rail",
+  "intent": "ट्रेन 12615 दक्षिण एक्सप्रेस के पूरे मार्ग (नई दिल्ली से चेन्नई सेंट्रल) का एक पुष्ट 3A टिकट प्रस्थान से 24 घंटे पहले रद्द किया जाता है। रिफ़ंड नियमों के अनुसार रुपये में कितना रिफ़ंड देय है? राशि उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2700",
+     "2,700",
+     "२७००",
+     "२,७००"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "goto /rules",
+   "stop 2700"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-031",
+  "site": "rail",
+  "intent": "यदि आपकी पुष्ट बुकिंग 6205678901 (एक AC श्रेणी टिकट) प्रस्थान से 6 घंटे पहले रद्द की जाए, तो नियम रुपये में कितने रिफ़ंड की अनुमति देंगे? राशि उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "110",
+     "११०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 110"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-032",
+  "site": "rail",
+  "intent": "ट्रेन 12559 काशी एक्सप्रेस में नई दिल्ली से वाराणसी जंक्शन तक दो 2A टिकटों की कुल लागत कितनी होगी? रुपये में कुल उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3690",
+     "3,690",
+     "३६९०",
+     "३,६९०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 3690"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-033",
+  "site": "rail",
+  "intent": "आपकी सभी पुष्ट (CNF) बुकिंग का संयुक्त किराया रुपये में कितना है? कुल उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10800",
+     "10,800",
+     "१०८००",
+     "१०,८००"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 10800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-034",
+  "site": "rail",
+  "intent": "ट्रेन 12615 दक्षिण एक्सप्रेस में आगरा कैंट से सिकंदराबाद जंक्शन की यात्रा के लिए 3A, SL से कितना महँगा है? रुपये में अंतर उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1510",
+     "1,510",
+     "१५१०",
+     "१,५१०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615?from=AGC&to=SC&date=2026-04-06",
+   "stop 1510"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-035",
+  "site": "rail",
+  "intent": "नई दिल्ली से वाराणसी जंक्शन तक सीधी ट्रेन 12559 में SL से यात्रा की तुलना दो SL चरणों में बाँटी यात्रा से करें: ट्रेन 12301 में नई दिल्ली से कानपुर सेंट्रल, फिर ट्रेन 12559 में कानपुर सेंट्रल से वाराणसी जंक्शन। दो-चरण विकल्प की तुलना में सीधा टिकट कितने रुपये बचाता है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "55",
+     "५५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559?from=NDLS&to=BSB&date=2026-04-07",
+   "goto /train/12301?from=NDLS&to=CNB&date=2026-04-06",
+   "goto /train/12559?from=CNB&to=BSB&date=2026-04-07",
+   "stop 55"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-036",
+  "site": "rail",
+  "intent": "ट्रेन 12904 मुंबई संपर्क एक्सप्रेस में सभी श्रेणियाँ मिलाकर कुल कितनी सीटें उपलब्ध हैं? संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "93",
+     "९३"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12904",
+   "stop 93"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-037",
+  "site": "rail",
+  "intent": "आपकी दो बुकिंग यात्री अनीता देसाई और मीरा अय्यर के लिए हैं। किसके टिकट का किराया अधिक है, और कितने रुपये अधिक? यात्री का नाम और अंतर उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "अनीता देसाई",
+     "अनीता"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "325",
+     "३२५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop अनीता देसाई by 325"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-038",
+  "site": "rail",
+  "intent": "ट्रेन 12302 हावड़ा मेल के पूरे मार्ग पर १००० रुपये से अधिक कीमत वाली सबसे सस्ती श्रेणी कौन सी है? श्रेणी कोड और उसका किराया उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3A"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2395",
+     "2,395",
+     "२३९५",
+     "२,३९५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12302",
+   "stop 3A at 2395"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-039",
+  "site": "rail",
+  "intent": "ट्रेन 12659 अरावली एक्सप्रेस में जयपुर जंक्शन से अहमदाबाद जंक्शन तक ५०० रुपये से अधिक न होने वाली सबसे महँगी श्रेणी कौन सी है? श्रेणी कोड और उसका किराया उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SL"
+    ],
+    "none_of": [
+     "2S",
+     "3A",
+     "CC"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "350",
+     "३५०"
+    ],
+    "none_of": [
+     "190",
+     "705",
+     "930"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop SL at 350"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-040",
+  "site": "rail",
+  "intent": "नई दिल्ली से कानपुर सेंट्रल खंड पर चलने वाली सभी ट्रेनों में कौन सी उस खंड का सबसे सस्ता SL (स्लीपर) किराया देती है? ट्रेन नंबर और रुपये में किराया उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12559"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "275",
+     "२७५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 12559 at 275"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-041",
+  "site": "rail",
+  "intent": "कौन सा महँगा है: ट्रेन 12622 ब्रह्मपुत्र लिंक एक्सप्रेस के पूरे मार्ग का 1A टिकट, या ट्रेन 12615 दक्षिण एक्सप्रेस में नई दिल्ली से भोपाल जंक्शन तक का 2A टिकट? जीतने वाला ट्रेन नंबर और वह किराया रुपये में उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3950",
+     "3,950",
+     "३९५०",
+     "३,९५०"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "goto /train/12615?from=NDLS&to=BPL&date=2026-04-06",
+   "stop 12622 at 3950"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-042",
+  "site": "rail",
+  "intent": "रतलाम जंक्शन पर रुकने वाली सभी ट्रेनों में कौन सी दिन में सबसे पहले (घड़ी के समय से) वहाँ से चलती है? ट्रेन नंबर और वहाँ से उसका प्रस्थान समय उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12903"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "03:15",
+     "3:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/RTM",
+   "stop 12903 at 03:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-043",
+  "site": "rail",
+  "intent": "आपकी एक बुकिंग प्रतीक्षा सूची (WL) में है। वह बुकिंग रद्द करें — और केवल वही। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6202345678"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6202345678",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-044",
+  "site": "rail",
+  "intent": "2026-04-10 या उसके बाद की तिथि की यात्राओं की अपनी सभी बुकिंग जो पहले से रद्द नहीं हैं, रद्द करें। हर पहले की यात्रा अछूती रहने दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6206789012"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6203456789",
+   "fill 0",
+   "goto /cancel/6208901234",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-045",
+  "site": "rail",
+  "intent": "अपनी प्रोफ़ाइल में ईमेल पता priya.s@newmail.in और मोबाइल नंबर 9812399999 करें (दोनों, एक ही अद्यतन में)। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "email",
+    "value": "priya.s@newmail.in"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9812399999"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 email=priya.s@newmail.in; mobile=9812399999"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-046",
+  "site": "rail",
+  "intent": "PNR 6204567890 देखकर यात्री का नाम पता करें, फिर ग्राहक सहायता को अपने नाम (प्रिया शर्मा), अपने ईमेल (priya.sharma@example.in), विषय 'PNR प्रश्न' और ठीक इस संदेश के साथ एक संदेश भेजें: 'रिफ़ंड की स्थिति: <यात्री का नाम>' — <यात्री का नाम> की जगह आपको मिला नाम रखते हुए।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "PNR प्रश्न",
+     "message": "रिफ़ंड की स्थिति: मीरा अय्यर",
+     "name": "प्रिया शर्मा",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6204567890",
+   "goto /contact",
+   "fill 0 name=प्रिया शर्मा; email=priya.sharma@example.in; subject=PNR प्रश्न; message=रिफ़ंड की स्थिति: मीरा अय्यर"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-047",
+  "site": "rail",
+  "intent": "PNR 6201234567 देखें, फिर 2026-04-06 को ट्रेन 12049 ताज संपर्क में नई दिल्ली से आगरा कैंट तक उस बुकिंग के उसी यात्री (वही नाम और आयु) के लिए, पुरुष, कोई बर्थ वरीयता नहीं — एक CC टिकट बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "CC",
+     "passenger": "रोहन शर्मा",
+     "age": 34,
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=CC",
+   "fill 0 name=रोहन शर्मा; age=34; gender=M; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-048",
+  "site": "rail",
+  "intent": "2026-04-06 को ट्रेन 12138 नर्मदा मेल में मुंबई सेंट्रल से भोपाल जंक्शन तक यात्री निशा राव, आयु 30, महिला, निचली (Lower) बर्थ का एक SL टिकट बुक करें — और फिर उस नई बुकिंग को रद्द करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "निशा राव",
+     "status": "CAN",
+     "train_no": "12138",
+     "class_code": "SL",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12138?from=BCT&to=BPL&date=2026-04-06&class=SL",
+   "fill 0 name=निशा राव; age=30; gender=F; berth=Lower",
+   "fill 0",
+   "goto /cancel/6210000009",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-049",
+  "site": "rail",
+  "intent": "2026-04-06 को नई दिल्ली से कानपुर सेंट्रल तक सबसे पहले प्रस्थान करने वाली ट्रेन खोजें और उसमें यात्री अनाया कपूर, आयु 27, महिला, कोई बर्थ वरीयता नहीं — एक CC टिकट बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12417",
+     "class_code": "CC",
+     "passenger": "अनाया कपूर",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /book/12417?from=NDLS&to=CNB&date=2026-04-06&class=CC",
+   "fill 0 name=अनाया कपूर; age=27; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-050",
+  "site": "rail",
+  "intent": "2026-04-06 को नई दिल्ली से आगरा कैंट तक जितना सस्ता हो सके यात्रा करें: उस दिन चलने वाली हर ट्रेन की हर श्रेणी की तुलना करें, और यात्री ऋतु सिंह, आयु 24, महिला, कोई बर्थ वरीयता नहीं — के लिए एकमात्र सबसे सस्ता विकल्प बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "2S",
+     "passenger": "ऋतु सिंह",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=AGC; date=2026-04-06",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=2S",
+   "fill 0 name=ऋतु सिंह; age=24; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-051",
+  "site": "rail",
+  "intent": "2026-04-08 को नई दिल्ली से कानपुर सेंट्रल तक सबसे देर से प्रस्थान करने वाली ट्रेन में यात्री मोहन दास, आयु 52, पुरुष, निचली (Lower) बर्थ का एक 3A टिकट बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "3A",
+     "passenger": "मोहन दास",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /book/12301?from=NDLS&to=CNB&date=2026-04-08&class=3A",
+   "fill 0 name=मोहन दास; age=52; gender=M; berth=Lower",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-052",
+  "site": "rail",
+  "intent": "2026-04-09 को नई दिल्ली से हावड़ा जंक्शन तक यात्री सारा ख़ान, आयु 33, महिला, ऊपरी (Upper) बर्थ का एक 2A टिकट बुक करें। उस दिन कोई ट्रेन न चले तो वही यात्रा 2026-04-10 को बुक करें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "सारा ख़ान",
+     "date": "2026-04-10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-10",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-10&class=2A",
+   "fill 0 name=सारा ख़ान; age=33; gender=F; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-053",
+  "site": "rail",
+  "intent": "ट्रेन 12615 दक्षिण एक्सप्रेस के पूरे मार्ग का 1A (AC प्रथम श्रेणी) किराया कितना है? इस ट्रेन में वह श्रेणी न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "उपलब्ध नहीं",
+     "1a नहीं",
+     "नहीं दी जाती",
+     "इस ट्रेन में नहीं",
+     "ac प्रथम नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-054",
+  "site": "rail",
+  "intent": "2026-04-08 को ट्रेन 12904 मुंबई संपर्क एक्सप्रेस में मुंबई सेंट्रल से नई दिल्ली तक यात्री रवि कुमार, आयु 45, पुरुष के लिए एक 2A टिकट बुक करें। यदि ट्रेन उस दिन नहीं चलती, तो कुछ भी बुक न करें और N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं चलती",
+     "उस दिन नहीं चलती",
+     "कोई ट्रेन नहीं",
+     "नहीं चल रही",
+     "बुक नहीं किया"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "bookings",
+    "match": {
+     "train_no": "12904",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /train/12904?from=BCT&to=NDLS&date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-055",
+  "site": "rail",
+  "intent": "2026-04-07 को लखनऊ से आगरा कैंट की सीधी ट्रेन खोजें। इस मार्ग पर कोई सीधी ट्रेन न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई ट्रेन नहीं",
+     "सीधी ट्रेन नहीं",
+     "सेवा नहीं",
+     "ट्रेन नहीं",
+     "इस मार्ग पर नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=LKO; to=AGC; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-056",
+  "site": "rail",
+  "intent": "2026-04-06 को प्रस्थान करने वाली रतलाम जंक्शन से नई दिल्ली की सीधी ट्रेन खोजें। उस दिन कोई ट्रेन न चले तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई ट्रेन नहीं",
+     "नहीं चलती",
+     "उस दिन नहीं चलती",
+     "ट्रेन नहीं",
+     "प्रस्थान नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=RTM; to=NDLS; date=2026-04-06",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-057",
+  "site": "rail",
+  "intent": "2026-04-08 को गुवाहाटी से हावड़ा जंक्शन कौन सी ट्रेन चलती है? उस मार्ग पर कोई न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई ट्रेन नहीं",
+     "कोई नहीं चलती",
+     "सेवा नहीं",
+     "ट्रेन नहीं",
+     "इस मार्ग पर नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=GHY; to=HWH; date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-058",
+  "site": "rail",
+  "intent": "बुकिंग फ़ॉर्म में तत्काल कोटा का विकल्प है। रेलसेतु साइट पर कहीं भी रुपये में कितना अतिरिक्त तत्काल अधिभार बताया गया है? कोई अधिभार राशि न बताई गई हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "उल्लेख नहीं",
+     "कोई अधिभार नहीं",
+     "बताया नहीं",
+     "कहीं नहीं",
+     "तत्काल अधिभार नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /rules",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-059",
+  "site": "rail",
+  "intent": "कानपुर सेंट्रल पर कितनी अलग-अलग ट्रेनें रुकती हैं (किसी भी दिशा में)? संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/CNB",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-060",
+  "site": "rail",
+  "intent": "इस साइट पर कितनी ट्रेनें प्रतिदिन (सातों दिन) चलती हैं? संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-061",
+  "site": "rail",
+  "intent": "PNR 6207890123 की PNR स्थिति देखें और स्थिति कोड उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CAN"
+    ],
+    "none_of": [
+     "CNF",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6207890123",
+   "stop CAN"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-062",
+  "site": "rail",
+  "intent": "ट्रेन 12615 दक्षिण एक्सप्रेस नागपुर जंक्शन पर कितने मिनट रुकती है? मिनटों की संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 10"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-063",
+  "site": "rail",
+  "intent": "कौन सी ट्रेनें अपने उद्गम स्टेशन से 20:00 या उसके बाद चलती हैं? दोनों ट्रेन नंबर उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12138"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12302"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12138 and 12302"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-064",
+  "site": "rail",
+  "intent": "इस साइट पर सबसे छोटे कुल मार्ग वाली दो ट्रेनें खोजें और उन दो मार्गों की संयुक्त लंबाई किमी में उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "707",
+     "७०७"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 707"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-065",
+  "site": "rail",
+  "intent": "आपकी कितनी बुकिंग (किसी भी स्थिति की) 2026-04-09 से पहले की यात्राओं के लिए हैं? संख्या उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-066",
+  "site": "rail",
+  "intent": "आपकी किस बुकिंग का किराया सबसे अधिक है? उसका PNR और रुपये में किराया उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6203456789"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3905",
+     "3,905",
+     "३९०५",
+     "३,९०५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 6203456789 at 3905"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-067",
+  "site": "rail",
+  "intent": "ट्रेन 12559 काशी एक्सप्रेस वाराणसी जंक्शन पर किस समय पहुँचती है, और अपने सफ़र के किस दिन (1 या 2)? समय और दिन की संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:30",
+     "6:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "दो"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 06:30 on day 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-068",
+  "site": "rail",
+  "intent": "ट्रेन 12659 अरावली एक्सप्रेस में अजमेर जंक्शन से आबू रोड कितने किमी है? किमी में दूरी उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "304"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop 304"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-069",
+  "site": "rail",
+  "intent": "ट्रेन 12615 दक्षिण एक्सप्रेस में ट्रेन भोपाल जंक्शन और नागपुर जंक्शन के बीच कितने किमी तय करती है? किमी में दूरी उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "389"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 389"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-070",
+  "site": "rail",
+  "intent": "ट्रेन 12723 दक्कन संपर्क को सिकंदराबाद जंक्शन से पुणे जंक्शन तक कितना समय लगता है? जैसा दिखाया गया है वही अवधि उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10h 15m",
+     "10 hours 15 minutes",
+     "10 hr 15 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-06",
+   "stop 10h 15m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-071",
+  "site": "rail",
+  "intent": "ट्रेन 12301 यमुना एक्सप्रेस में 3A के लिए दिखाया गया प्रतीक्षा सूची नंबर क्या है? संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12301",
+   "stop WL 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-072",
+  "site": "rail",
+  "intent": "ग्राहक सहायता को अपने नाम (प्रिया शर्मा) और ईमेल (priya.sharma@example.in), ठीक 'मार्ग 12659 पर किराया विसंगति' विषय और ठीक 'जयपुर जंक्शन से अजमेर जंक्शन का CC किराया प्रकाशित दर से अधिक लग रहा है।' संदेश के साथ एक संदेश भेजें",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "मार्ग 12659 पर किराया विसंगति",
+     "message": "जयपुर जंक्शन से अजमेर जंक्शन का CC किराया प्रकाशित दर से अधिक लग रहा है।",
+     "name": "प्रिया शर्मा",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=प्रिया शर्मा; email=priya.sharma@example.in; subject=मार्ग 12659 पर किराया विसंगति; message=जयपुर जंक्शन से अजमेर जंक्शन का CC किराया प्रकाशित दर से अधिक लग रहा है।"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-073",
+  "site": "rail",
+  "intent": "आपके बुकिंग इतिहास में कितनी बुकिंग (किसी भी स्थिति की) सूचीबद्ध हैं? संख्या उत्तर दें। ज़रूरत हो तो priya_sharma (पासवर्ड: travel123) के रूप में साइन इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-074",
+  "site": "rail",
+  "intent": "2026-04-06 को ट्रेन 12301 यमुना एक्सप्रेस में नई दिल्ली से हावड़ा जंक्शन तक कितनी 2A सीटें उपलब्ध हैं? संख्या उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-06",
+   "stop 26"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-075",
+  "site": "rail",
+  "intent": "मुंबई सेंट्रल से भोपाल जंक्शन चलने वाली ट्रेन खोजें और उस यात्रा का उसका SL (स्लीपर) किराया रुपये में उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "520",
+     "५२०"
+    ],
+    "none_of": [
+     "1380",
+     "1965"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=BCT; to=BPL; date=2026-04-06",
+   "stop 520"
+  ],
+  "max_steps": 30
+ }
+]

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("dining.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("dining.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("dining.title") }}</h1>
+  <p>{{ t("dining.intro") }}
+     <a href="{{ path('dining_special') }}">{{ t("dining.special_title") }}</a></p>
+
+  {% if requested %}
+  <div class="notice notice-ok" role="status"><div>
+    {{ t("dining.requested", code=requested.code, name=requested.name) }}</div></div>
+  {% endif %}
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+
+  <form class="searchform" method="get" action="{{ path('dining') }}">
+    {{ text_field("pnr", "pnr", t("manage.pnr"), t("manage.pnr_placeholder"), t("dining.pnr_hint"), pnr) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("dining.show") }}</button></div>
+  </form>
+
+  {% if booking and view %}
+  <h2>{{ view.origin.city }} ({{ view.origin.iata }}) &rarr; {{ view.destination.city }} ({{ view.destination.iata }})</h2>
+  <p class="hint">{{ view.flight.flight_no }} &middot; {{ fmt_date(view.flight.date) }} &middot; {{ view.fare_class.name }}</p>
+
+  {% if menu %}
+  <div class="table-scroll">
+    <table>
+      <tbody>
+        <tr><th scope="row">{{ t("dining.service") }}</th><td>{{ menu.courses }}</td></tr>
+        <tr><th scope="row">{{ t("dining.beverages") }}</th><td>{{ menu.beverages }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+
+  <h2>{{ t("dining.request_title") }}</h2>
+  <form class="searchform" method="post" action="{{ path('dining') }}">
+    <input type="hidden" name="pnr" value="{{ booking.pnr }}">
+    <div class="field">
+      <label for="passenger_id">{{ t("boarding.passenger") }}</label>
+      <select id="passenger_id" name="passenger_id">
+        {% for p in booking.passengers if p.pax_type != "infant" %}
+        <option value="{{ p.id }}">{{ p.full_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="meal_code">{{ t("dining.meal") }}</label>
+      <select id="meal_code" name="meal_code">
+        {% for code in codes %}
+        <option value="{{ code.code }}">{{ code.code }} &mdash; {{ code.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("dining.request") }}</button></div>
+  </form>
+  {% elif pnr %}
+  <div class="notice notice-warn"><div>{{ t("dining.retrieve_first") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

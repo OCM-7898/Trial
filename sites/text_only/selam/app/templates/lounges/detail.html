@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ lounge.name }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('lounges') }}">{{ t("lounge.title") }}</a></li>
+        <li>{{ lounge.name }}</li></ol>
+  </nav>
+  <h1>{{ lounge.name }}</h1>
+  <p class="hint">{% if airport %}{{ airport.name }} &middot; {% endif %}{{ lounge.airport_iata }} &middot;
+     {{ t("lounge.terminal") }} {{ lounge.terminal }}</p>
+
+  <div class="split">
+    <div>
+      <div class="table-scroll">
+        <table>
+          <tbody>
+            <tr><th scope="row">{{ t("lounge.hours") }}</th><td>{{ lounge.hours }}</td></tr>
+            <tr><th scope="row">{{ t("lounge.location") }}</th><td>{{ lounge.location }}</td></tr>
+            <tr><th scope="row">{{ t("lounge.amenities") }}</th><td>{{ lounge.amenities }}</td></tr>
+            <tr><th scope="row">{{ t("lounge.capacity") }}</th><td>{{ lounge.capacity }}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <aside class="summary">
+      <h3>{{ t("lounge.who_enters_free") }}</h3>
+      {% if admitted %}
+      <ul>{% for label in admitted %}<li>{{ label }}</li>{% endfor %}</ul>
+      {% else %}
+      <p>{{ t("lounge.paid_only") }}</p>
+      {% endif %}
+      {% if lounge.walk_in_price_usd %}
+      <p class="total">{{ t("lounge.walk_in") }}: {{ fmt_money(lounge.walk_in_price_usd) }}</p>
+      <p><a class="btn btn-primary" href="{{ path('lounge_purchase') }}?lounge_id={{ lounge.id }}">{{ t("lounge.buy_access") }}</a></p>
+      {% endif %}
+      <p><a class="btn-link" href="{{ path('lounge_eligibility') }}?airport={{ lounge.airport_iata }}">{{ t("lounge.check_eligibility") }}</a></p>
+    </aside>
+  </div>
+</div>
+{% endblock %}

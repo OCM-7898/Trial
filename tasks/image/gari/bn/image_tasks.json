@@ -1,0 +1,1958 @@
+[
+ {
+  "id": "image-gari-001",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2023 Buick Envision’ (করাচি), ‘2020 Buick Envision’ (মুলতান), ‘2016 Buick Envision’ (লাহোর), ‘2021 Buick Envision’ (লাহোর)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/78/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1680000",
+     "1,680,000",
+     "১৬৮০০০০",
+     "১,৬৮০,০০০"
+    ],
+    "none_of": [
+     "2448000",
+     "2,448,000",
+     "২৪৪৮০০০",
+     "২,৪৪৮,০০০",
+     "924000",
+     "924,000",
+     "৯২৪০০০",
+     "৯২৪,০০০",
+     "1920000",
+     "1,920,000",
+     "১৯২০০০০",
+     "১,৯২০,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Envision",
+   "goto /car/81",
+   "goto /car/78",
+   "goto /car/80",
+   "goto /car/83",
+   "stop 1680000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-002",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2020 Tesla Model 3’ (ইসলামাবাদ), ‘2017 Tesla Model 3’ (পেশোয়ার), ‘2021 Tesla Model 3’ (করাচি), ‘2015 Tesla Model 3’ (ইসলামাবাদ)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/392/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1872000",
+     "1,872,000",
+     "১৮৭২০০০",
+     "১,৮৭২,০০০"
+    ],
+    "none_of": [
+     "3600000",
+     "3,600,000",
+     "৩৬০০০০০",
+     "৩,৬০০,০০০",
+     "2496000",
+     "2,496,000",
+     "২৪৯৬০০০",
+     "২,৪৯৬,০০০",
+     "3864000",
+     "3,864,000",
+     "৩৮৬৪০০০",
+     "৩,৮৬৪,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Model%203",
+   "goto /car/391",
+   "goto /car/390",
+   "goto /car/393",
+   "goto /car/392",
+   "stop 1872000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-003",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2024 Chevrolet Cruze’ (লাহোর), ‘2023 Chevrolet Cruze’ (রাওয়ালপিন্ডি), ‘2019 Chevrolet Cruze’ (লাহোর), ‘2019 Chevrolet Cruze’ (করাচি)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/115/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1152000",
+     "1,152,000",
+     "১১৫২০০০",
+     "১,১৫২,০০০"
+    ],
+    "none_of": [
+     "1920000",
+     "1,920,000",
+     "১৯২০০০০",
+     "১,৯২০,০০০",
+     "1692000",
+     "1,692,000",
+     "১৬৯২০০০",
+     "১,৬৯২,০০০",
+     "1164000",
+     "1,164,000",
+     "১১৬৪০০০",
+     "১,১৬৪,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Cruze",
+   "goto /car/117",
+   "goto /car/112",
+   "goto /car/113",
+   "goto /car/115",
+   "stop 1152000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-004",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2017 Kia Sportage’ (রাওয়ালপিন্ডি), ‘2024 Kia Sportage’ (লাহোর), ‘2019 Kia Sportage’ (ফয়সালাবাদ), ‘2013 Kia Sportage’ (ইসলামাবাদ)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/247/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "984000",
+     "984,000",
+     "৯৮৪০০০",
+     "৯৮৪,০০০"
+    ],
+    "none_of": [
+     "2544000",
+     "2,544,000",
+     "২৫৪৪০০০",
+     "২,৫৪৪,০০০",
+     "1284000",
+     "1,284,000",
+     "১২৮৪০০০",
+     "১,২৮৪,০০০",
+     "660000",
+     "660,000",
+     "৬৬০০০০",
+     "৬৬০,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Sportage",
+   "goto /car/247",
+   "goto /car/251",
+   "goto /car/250",
+   "goto /car/248",
+   "stop 984000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-005",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2017 Nissan Teana’ (করাচি), ‘2018 Nissan Teana’ (করাচি), ‘2021 Nissan Teana’ (করাচি), ‘2013 Nissan Teana’ (করাচি)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/337/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1380000",
+     "1,380,000",
+     "১৩৮০০০০",
+     "১,৩৮০,০০০"
+    ],
+    "none_of": [
+     "732000",
+     "732,000",
+     "৭৩২০০০",
+     "৭৩২,০০০",
+     "852000",
+     "852,000",
+     "৮৫২০০০",
+     "৮৫২,০০০",
+     "468000",
+     "468,000",
+     "৪৬৮০০০",
+     "৪৬৮,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Teana",
+   "goto /car/338",
+   "goto /car/340",
+   "goto /car/337",
+   "goto /car/339",
+   "stop 1380000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-006",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2021 Mercedes-Benz GLK’ (করাচি), ‘2020 Mercedes-Benz GLK’ (ইসলামাবাদ), ‘2019 Mercedes-Benz GLK’ (মুলতান)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/303/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4716000",
+     "4,716,000",
+     "৪৭১৬০০০",
+     "৪,৭১৬,০০০"
+    ],
+    "none_of": [
+     "4092000",
+     "4,092,000",
+     "৪০৯২০০০",
+     "৪,০৯২,০০০",
+     "3756000",
+     "3,756,000",
+     "৩৭৫৬০০০",
+     "৩,৭৫৬,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=GLK",
+   "goto /car/303",
+   "goto /car/301",
+   "goto /car/302",
+   "stop 4716000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-007",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2018 Buick Regal’ (করাচি), ‘2018 Buick Regal’ (লাহোর), ‘2022 Buick Regal’ (রাওয়ালপিন্ডি)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/92/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "972000",
+     "972,000",
+     "৯৭২০০০",
+     "৯৭২,০০০"
+    ],
+    "none_of": [
+     "1044000",
+     "1,044,000",
+     "১০৪৪০০০",
+     "১,০৪৪,০০০",
+     "1536000",
+     "1,536,000",
+     "১৫৩৬০০০",
+     "১,৫৩৬,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Regal",
+   "goto /car/94",
+   "goto /car/92",
+   "goto /car/98",
+   "stop 972000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-008",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2023 Chevrolet Aveo’ (রাওয়ালপিন্ডি), ‘2019 Chevrolet Aveo’ (লাহোর), ‘2023 Chevrolet Aveo’ (লাহোর)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/109/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1104000",
+     "1,104,000",
+     "১১০৪০০০",
+     "১,১০৪,০০০"
+    ],
+    "none_of": [
+     "1692000",
+     "1,692,000",
+     "১৬৯২০০০",
+     "১,৬৯২,০০০",
+     "1932000",
+     "1,932,000",
+     "১৯৩২০০০",
+     "১,৯৩২,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Aveo",
+   "goto /car/108",
+   "goto /car/109",
+   "goto /car/107",
+   "stop 1104000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-009",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2018 Nissan X-Trail’ (করাচি), ‘2017 Nissan X-Trail’ (মুলতান), ‘2024 Nissan X-Trail’ (শিয়ালকোট)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/350/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1104000",
+     "1,104,000",
+     "১১০৪০০০",
+     "১,১০৪,০০০"
+    ],
+    "none_of": [
+     "1068000",
+     "1,068,000",
+     "১০৬৮০০০",
+     "১,০৬৮,০০০",
+     "2292000",
+     "2,292,000",
+     "২২৯২০০০",
+     "২,২৯২,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=X-Trail",
+   "goto /car/350",
+   "goto /car/351",
+   "goto /car/349",
+   "stop 1104000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-010",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2022 BMW 1 Series’ (ইসলামাবাদ), ‘2017 BMW 1 Series’ (করাচি), ‘2018 BMW 1 Series’ (পেশোয়ার)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/48/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3024000",
+     "3,024,000",
+     "৩০২৪০০০",
+     "৩,০২৪,০০০"
+    ],
+    "none_of": [
+     "1692000",
+     "1,692,000",
+     "১৬৯২০০০",
+     "১,৬৯২,০০০",
+     "2196000",
+     "2,196,000",
+     "২১৯৬০০০",
+     "২,১৯৬,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=1%20Series",
+   "goto /car/48",
+   "goto /car/49",
+   "goto /car/47",
+   "stop 3024000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-011",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2016 Honda Accord’ (ফয়সালাবাদ), ‘2020 Honda Accord’ (লাহোর), ‘2018 Honda Accord’ (লাহোর)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/154/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "912000",
+     "912,000",
+     "৯১২০০০",
+     "৯১২,০০০"
+    ],
+    "none_of": [
+     "1584000",
+     "1,584,000",
+     "১৫৮৪০০০",
+     "১,৫৮৪,০০০",
+     "1212000",
+     "1,212,000",
+     "১২১২০০০",
+     "১,২১২,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Accord",
+   "goto /car/154",
+   "goto /car/158",
+   "goto /car/156",
+   "stop 912000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-012",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই সাইটে তালিকাভুক্ত একটি গাড়ি দেখানো হয়েছে। এটি এগুলোর একটি: ‘2024 BMW 3 Series’ (করাচি), ‘2018 BMW 3 Series’ (লাহোর), ‘2024 BMW 3 Series’ (মুলতান)। এর চাওয়া দাম কত?",
+  "image": "sites/visual/gari/static/cars/55/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4716000",
+     "4,716,000",
+     "৪৭১৬০০০",
+     "৪,৭১৬,০০০"
+    ],
+    "none_of": [
+     "4860000",
+     "4,860,000",
+     "৪৮৬০০০০",
+     "৪,৮৬০,০০০",
+     "2220000",
+     "2,220,000",
+     "২২২০০০০",
+     "২,২২০,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=3%20Series",
+   "goto /car/52",
+   "goto /car/50",
+   "goto /car/55",
+   "stop 4716000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-013",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2023 Hyundai Verna’ (শিয়ালকোট), ‘2021 Hyundai Verna’ (করাচি), ‘2020 Hyundai Verna’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/227/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 227
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 224
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 225
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Verna",
+   "goto /car/224",
+   "goto /car/225",
+   "goto /car/227",
+   "goto /car/227",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-014",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2019 Mercedes-Benz C-Class’ (ইসলামাবাদ), ‘2017 Mercedes-Benz C-Class’ (করাচি), ‘2018 Mercedes-Benz C-Class’ (ইসলামাবাদ)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/284/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 284
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 286
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 285
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=C-Class",
+   "goto /car/286",
+   "goto /car/285",
+   "goto /car/284",
+   "goto /car/284",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-015",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2021 Hyundai Elantra’ (রাওয়ালপিন্ডি), ‘2021 Hyundai Elantra’ (করাচি), ‘2016 Hyundai Elantra’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/209/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 209
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 201
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 202
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Elantra",
+   "goto /car/201",
+   "goto /car/202",
+   "goto /car/209",
+   "goto /car/209",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-016",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2014 Hyundai Sonata’ (করাচি), ‘2021 Hyundai Sonata’ (লাহোর), ‘2017 Hyundai Sonata’ (ফয়সালাবাদ)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/213/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 213
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 212
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 211
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sonata",
+   "goto /car/212",
+   "goto /car/213",
+   "goto /car/211",
+   "goto /car/213",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-017",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2023 Volkswagen Golf’ (করাচি), ‘2019 Volkswagen Golf’ (ইসলামাবাদ), ‘2017 Volkswagen Golf’ (রাওয়ালপিন্ডি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/448/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 448
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 449
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 445
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Golf",
+   "goto /car/449",
+   "goto /car/448",
+   "goto /car/445",
+   "goto /car/448",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-018",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2024 Mazda Mazda6’ (করাচি), ‘2024 Mazda Mazda6’ (লাহোর), ‘2017 Mazda Mazda6’ (করাচি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/277/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 277
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 279
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Mazda6",
+   "goto /car/277",
+   "goto /car/279",
+   "goto /car/278",
+   "goto /car/277",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-019",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2019 Audi A4’ (ইসলামাবাদ), ‘2024 Audi A4’ (ইসলামাবাদ), ‘2017 Audi A4’ (মুলতান)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/9/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 9
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 8
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 14
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=A4",
+   "goto /car/8",
+   "goto /car/14",
+   "goto /car/9",
+   "goto /car/9",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-020",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2022 Nissan Sylphy’ (করাচি), ‘2021 Nissan Sylphy’ (শিয়ালকোট), ‘2016 Nissan Sylphy’ (রাওয়ালপিন্ডি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/324/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 324
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 333
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 328
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sylphy",
+   "goto /car/333",
+   "goto /car/324",
+   "goto /car/328",
+   "goto /car/324",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-021",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2024 Nissan Sylphy’ (লাহোর), ‘2022 Nissan Sylphy’ (পেশোয়ার), ‘2014 Nissan Sylphy’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/322/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 322
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 332
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 327
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sylphy",
+   "goto /car/322",
+   "goto /car/332",
+   "goto /car/327",
+   "goto /car/322",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-022",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2021 Toyota Camry’ (রাওয়ালপিন্ডি), ‘2023 Toyota Camry’ (মুলতান), ‘2023 Toyota Camry’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/403/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 403
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 406
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 407
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Camry",
+   "goto /car/403",
+   "goto /car/406",
+   "goto /car/407",
+   "goto /car/403",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-023",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2016 Hyundai Elantra’ (মুলতান), ‘2018 Hyundai Elantra’ (করাচি), ‘2021 Hyundai Elantra’ (ইসলামাবাদ)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/206/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 206
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 204
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 200
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Elantra",
+   "goto /car/206",
+   "goto /car/204",
+   "goto /car/200",
+   "goto /car/206",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-024",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "ছবিতে দেখানো গাড়িটি আপনার সংরক্ষিত গাড়িতে সেভ করুন। এটি এগুলোর একটি: ‘2019 Ford Mondeo’ (পেশোয়ার), ‘2024 Ford Mondeo’ (রাওয়ালপিন্ডি), ‘2022 Ford Mondeo’ (ইসলামাবাদ)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/146/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 146
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 145
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 149
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Mondeo",
+   "goto /car/145",
+   "goto /car/146",
+   "goto /car/149",
+   "goto /car/146",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-025",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳২,৪৫১,৬০০ অফার দিন। এটি এগুলোর একটি: ‘2014 Volkswagen T-Roc’ (ইসলামাবাদ), ‘2024 Volkswagen T-Roc’ (রাওয়ালপিন্ডি), ‘2024 Volkswagen T-Roc’ (ইসলামাবাদ)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/479/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 479,
+     "amount": 2451600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 481
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 480
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=T-Roc",
+   "goto /car/481",
+   "goto /car/479",
+   "goto /car/480",
+   "goto /car/479",
+   "fill 1 amount=2451600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-026",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳১,৭৯২,৮০০ অফার দিন। এটি এগুলোর একটি: ‘2023 Volkswagen Passat’ (মুলতান), ‘2023 Volkswagen Passat’ (পেশোয়ার), ‘2023 Volkswagen Passat’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/468/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 468,
+     "amount": 1792800
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 467
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 470
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Passat",
+   "goto /car/467",
+   "goto /car/468",
+   "goto /car/470",
+   "goto /car/468",
+   "fill 1 amount=1792800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-027",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳২,৭৯৭,২০০ অফার দিন। এটি এগুলোর একটি: ‘2024 Honda CR-V’ (ইসলামাবাদ), ‘2021 Honda CR-V’ (লাহোর), ‘2017 Honda CR-V’ (রাওয়ালপিন্ডি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/170/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 170,
+     "amount": 2797200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 165
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 163
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=CR-V",
+   "goto /car/170",
+   "goto /car/165",
+   "goto /car/163",
+   "goto /car/170",
+   "fill 1 amount=2797200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-028",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳১,১৭৭,২০০ অফার দিন। এটি এগুলোর একটি: ‘2022 Buick LaCrosse’ (শিয়ালকোট), ‘2018 Buick LaCrosse’ (লাহোর), ‘2020 Buick LaCrosse’ (শিয়ালকোট)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/86/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 86,
+     "amount": 1177200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 84
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 90
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=LaCrosse",
+   "goto /car/84",
+   "goto /car/90",
+   "goto /car/86",
+   "goto /car/86",
+   "fill 1 amount=1177200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-029",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳১,৪৩৬,৪০০ অফার দিন। এটি এগুলোর একটি: ‘2021 Nissan Tiida’ (রাওয়ালপিন্ডি), ‘2023 Nissan Tiida’ (লাহোর), ‘2022 Nissan Tiida’ (করাচি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/346/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 346,
+     "amount": 1436400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 343
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 345
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Tiida",
+   "goto /car/343",
+   "goto /car/345",
+   "goto /car/346",
+   "goto /car/346",
+   "fill 1 amount=1436400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-030",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳৪,৮৮১,৬০০ অফার দিন। এটি এগুলোর একটি: ‘2015 Volvo XC60’ (পেশোয়ার), ‘2024 Volvo XC60’ (করাচি), ‘2014 Volvo XC60’ (মুলতান)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/496/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 496,
+     "amount": 4881600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 494
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 495
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=XC60",
+   "goto /car/494",
+   "goto /car/496",
+   "goto /car/495",
+   "goto /car/496",
+   "fill 1 amount=4881600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-031",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳১,২২০,৪০০ অফার দিন। এটি এগুলোর একটি: ‘2017 Honda CR-V’ (পেশোয়ার), ‘2024 Honda CR-V’ (লাহোর), ‘2017 Honda CR-V’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/162/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 162,
+     "amount": 1220400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 166
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=CR-V",
+   "goto /car/162",
+   "goto /car/164",
+   "goto /car/166",
+   "goto /car/162",
+   "fill 1 amount=1220400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-032",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳৩,৮৮৮,০০০ অফার দিন। এটি এগুলোর একটি: ‘2018 Land Rover Range Rover’ (ফয়সালাবাদ), ‘2024 Land Rover Range Rover Evoque’ (লাহোর), ‘2018 Land Rover Range Rover Evoque’ (ইসলামাবাদ), ‘2021 Land Rover Range Rover Sport’ (লাহোর)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/256/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 256,
+     "amount": 3888000
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 258
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 259
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 262
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Land%20Rover",
+   "goto /car/256",
+   "goto /car/258",
+   "goto /car/259",
+   "goto /car/262",
+   "goto /car/256",
+   "fill 1 amount=3888000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-033",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳২,৬১৩,৬০০ অফার দিন। এটি এগুলোর একটি: ‘2020 Audi Q3’ (করাচি), ‘2016 Audi Q3’ (লাহোর), ‘2023 Audi Q7’ (ইসলামাবাদ), ‘2018 Audi Q5’ (রাওয়ালপিন্ডি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/43/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 43,
+     "amount": 2613600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 37
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 36
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 46
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Audi",
+   "goto /car/37",
+   "goto /car/36",
+   "goto /car/46",
+   "goto /car/43",
+   "goto /car/43",
+   "fill 1 amount=2613600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-034",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "ছবিতে দেখানো গাড়িটির জন্য ৳৮৭৪,৮০০ অফার দিন। এটি এগুলোর একটি: ‘2022 Chevrolet Malibu’ (রাওয়ালপিন্ডি), ‘2018 Chevrolet Malibu’ (শিয়ালকোট), ‘2024 Chevrolet Cruze’ (রাওয়ালপিন্ডি), ‘2019 Chevrolet Epica’ (করাচি)। প্রয়োজনে ahmed.raza@garibazaar.test (পাসওয়ার্ড: garibazaar2026) হিসেবে সাইন ইন করুন।",
+  "image": "sites/visual/gari/static/cars/121/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 121,
+     "amount": 874800
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 122
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 116
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 118
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Chevrolet",
+   "goto /car/122",
+   "goto /car/121",
+   "goto /car/116",
+   "goto /car/118",
+   "goto /car/121",
+   "fill 1 amount=874800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-035",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "ছবিতে দেখানো গাড়িটি কে বিক্রি করছেন? এটি এগুলোর একটি: ‘2020 Mercedes-Benz E-Class’ (করাচি), ‘2015 Mercedes-Benz A-Class’ (রাওয়ালপিন্ডি), ‘2021 Mercedes-Benz S-Class’ (লাহোর), ‘2019 Mercedes-Benz E-Class’ (করাচি)।",
+  "image": "sites/visual/gari/static/cars/292/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "হাসান রাজা"
+    ],
+    "none_of": [
+     "কামরান বেগ",
+     "গ্যালাক্সি কার সেন্টার",
+     "রাবিয়া আনোয়ার"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Mercedes-Benz",
+   "goto /car/292",
+   "goto /car/280",
+   "goto /car/305",
+   "goto /car/291",
+   "stop হাসান রাজা"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-036",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "ছবিতে দেখানো গাড়িটি কে বিক্রি করছেন? এটি এগুলোর একটি: ‘2018 Ford Focus’ (রাওয়ালপিন্ডি), ‘2020 Ford Mondeo’ (লাহোর), ‘2015 Ford Mondeo’ (লাহোর), ‘2022 Ford Focus’ (ইসলামাবাদ)।",
+  "image": "sites/visual/gari/static/cars/136/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "মেহউইশ ইকবাল"
+    ],
+    "none_of": [
+     "ক্যাপিটাল কার পয়েন্ট",
+     "গ্যালাক্সি কার সেন্টার",
+     "হাসান রাজা"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Ford",
+   "goto /car/138",
+   "goto /car/144",
+   "goto /car/148",
+   "goto /car/136",
+   "stop মেহউইশ ইকবাল"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-037",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "ছবিতে দেখানো গাড়িটি কে বিক্রি করছেন? এটি এগুলোর একটি: ‘2013 Volkswagen ID.3’ (করাচি), ‘2023 Volkswagen Golf’ (লাহোর), ‘2021 Volkswagen Golf’ (করাচি), ‘2024 Volkswagen Polo’ (রাওয়ালপিন্ডি)।",
+  "image": "sites/visual/gari/static/cars/446/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "সিটি অটো ট্রেডার্স"
+    ],
+    "none_of": [
+     "আমনা জাভেদ",
+     "কামরান বেগ",
+     "সানা তারিক"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Volkswagen",
+   "goto /car/452",
+   "goto /car/446",
+   "goto /car/451",
+   "goto /car/475",
+   "stop সিটি অটো ট্রেডার্স"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-038",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "ছবিতে দেখানো গাড়িটি কে বিক্রি করছেন? এটি এগুলোর একটি: ‘2018 Nissan Patrol’ (লাহোর), ‘2019 Nissan Qashqai’ (করাচি), ‘2022 Nissan Livina’ (লাহোর), ‘2019 Nissan X-Trail’ (লাহোর)।",
+  "image": "sites/visual/gari/static/cars/313/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "কামরান বেগ"
+    ],
+    "none_of": [
+     "জয়নব আখতার",
+     "বিলাল হুসেইন",
+     "সালমান বাট"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Nissan",
+   "goto /car/313",
+   "goto /car/314",
+   "goto /car/309",
+   "goto /car/348",
+   "stop কামরান বেগ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-039",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "ছবিতে দেখানো গাড়িটি কে বিক্রি করছেন? এটি এগুলোর একটি: ‘2018 Volkswagen ID.3’ (মুলতান), ‘2017 Volkswagen Golf’ (পেশোয়ার), ‘2022 Volkswagen Golf’ (ইসলামাবাদ), ‘2016 Volkswagen Polo’ (ইসলামাবাদ)।",
+  "image": "sites/visual/gari/static/cars/450/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "আয়েশা সিদ্দিকী"
+    ],
+    "none_of": [
+     "জয়নব আখতার",
+     "মেট্রো কারস",
+     "সিটি অটো ট্রেডার্স"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Volkswagen",
+   "goto /car/453",
+   "goto /car/450",
+   "goto /car/447",
+   "goto /car/476",
+   "stop আয়েশা সিদ্দিকী"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-040",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "ছবিতে দেখানো গাড়িটি কে বিক্রি করছেন? এটি এগুলোর একটি: ‘2021 BMW X4’ (ফয়সালাবাদ), ‘2021 BMW X3’ (পেশোয়ার), ‘2014 BMW X2’ (পেশোয়ার), ‘2020 BMW X1’ (রাওয়ালপিন্ডি)।",
+  "image": "sites/visual/gari/static/cars/67/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "স্টার মোটরস"
+    ],
+    "none_of": [
+     "আদিল আকরাম",
+     "উসমান শেখ",
+     "ক্রিসেন্ট অটোমোবাইলস"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=BMW",
+   "goto /car/75",
+   "goto /car/70",
+   "goto /car/67",
+   "goto /car/62",
+   "stop স্টার মোটরস"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-041",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "ছবিতে দেখানো গাড়িটি কত কিলোমিটার চলেছে? এটি এগুলোর একটি: ‘2022 Toyota RAV4’ (ইসলামাবাদ), ‘2022 Toyota Land Cruiser Prado’ (ইসলামাবাদ), ‘2021 Toyota Highlander’ (করাচি)।",
+  "image": "sites/visual/gari/static/cars/421/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "73000",
+     "73,000",
+     "৭৩০০০",
+     "৭৩,০০০"
+    ],
+    "none_of": [
+     "43000",
+     "43,000",
+     "৪৩০০০",
+     "৪৩,০০০",
+     "67000",
+     "67,000",
+     "৬৭০০০",
+     "৬৭,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Toyota",
+   "goto /car/426",
+   "goto /car/422",
+   "goto /car/421",
+   "stop 73000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-042",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "ছবিতে দেখানো গাড়িটি কত কিলোমিটার চলেছে? এটি এগুলোর একটি: ‘2014 Kia Cerato’ (লাহোর), ‘2014 Kia Rio’ (করাচি), ‘2020 Kia Cerato’ (করাচি)।",
+  "image": "sites/visual/gari/static/cars/243/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "107000",
+     "107,000",
+     "১০৭০০০",
+     "১০৭,০০০"
+    ],
+    "none_of": [
+     "214000",
+     "214,000",
+     "২১৪০০০",
+     "২১৪,০০০",
+     "106000",
+     "106,000",
+     "১০৬০০০",
+     "১০৬,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Kia",
+   "goto /car/239",
+   "goto /car/243",
+   "goto /car/240",
+   "stop 107000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-043",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "ছবিতে দেখানো গাড়িটি কত কিলোমিটার চলেছে? এটি এগুলোর একটি: ‘2019 Mercedes-Benz GLE’ (মুলতান), ‘2022 Mercedes-Benz GLA’ (করাচি), ‘2021 Mercedes-Benz GLB’ (মুলতান)।",
+  "image": "sites/visual/gari/static/cars/295/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "50000",
+     "50,000",
+     "৫০০০০",
+     "৫০,০০০"
+    ],
+    "none_of": [
+     "84000",
+     "84,000",
+     "৮৪০০০",
+     "৮৪,০০০",
+     "87000",
+     "87,000",
+     "৮৭০০০",
+     "৮৭,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Mercedes-Benz",
+   "goto /car/299",
+   "goto /car/295",
+   "goto /car/297",
+   "stop 50000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-044",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "ছবিতে দেখানো গাড়িটি কত কিলোমিটার চলেছে? এটি এগুলোর একটি: ‘2024 Citroen C5’ (লাহোর), ‘2023 Citroen C5’ (শিয়ালকোট), ‘2019 Citroen Elysee’ (করাচি)।",
+  "image": "sites/visual/gari/static/cars/128/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "31000",
+     "31,000",
+     "৩১০০০",
+     "৩১,০০০"
+    ],
+    "none_of": [
+     "25000",
+     "25,000",
+     "২৫০০০",
+     "২৫,০০০",
+     "123000",
+     "123,000",
+     "১২৩০০০",
+     "১২৩,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Citroen",
+   "goto /car/128",
+   "goto /car/127",
+   "goto /car/131",
+   "stop 31000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-045",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "ছবিতে দেখানো গাড়িটি কত কিলোমিটার চলেছে? এটি এগুলোর একটি: ‘2024 BMW 3 Series’ (লাহোর), ‘2020 BMW 5 Series’ (ইসলামাবাদ), ‘2015 BMW 3 Series’ (মুলতান)।",
+  "image": "sites/visual/gari/static/cars/58/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "64000",
+     "64,000",
+     "৬৪০০০",
+     "৬৪,০০০"
+    ],
+    "none_of": [
+     "24000",
+     "24,000",
+     "২৪০০০",
+     "২৪,০০০",
+     "176000",
+     "176,000",
+     "১৭৬০০০",
+     "১৭৬,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=BMW",
+   "goto /car/54",
+   "goto /car/58",
+   "goto /car/51",
+   "stop 64000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-046",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "ছবিতে দেখানো গাড়িটি কত কিলোমিটার চলেছে? এটি এগুলোর একটি: ‘2020 Honda Accord’ (ইসলামাবাদ), ‘2018 Honda Crosstour’ (ইসলামাবাদ), ‘2015 Honda Accord’ (মুলতান)।",
+  "image": "sites/visual/gari/static/cars/161/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "81000",
+     "81,000",
+     "৮১০০০",
+     "৮১,০০০"
+    ],
+    "none_of": [
+     "140000",
+     "140,000",
+     "১৪০০০০",
+     "১৪০,০০০",
+     "92000",
+     "92,000",
+     "৯২০০০",
+     "৯২,০০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Honda",
+   "goto /car/161",
+   "goto /car/180",
+   "goto /car/153",
+   "stop 81000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-047",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "ছবিতে দেখানো গাড়িটি এই সাইটে খুঁজে এর চাওয়া দাম জানান। এটি আর বিক্রির জন্য না থাকলে N/A উত্তর দিন।",
+  "image": "sites/visual/gari/static/cars/260/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "বিক্রি হয়ে গেছে"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Range%20Rover%20Sport",
+   "goto /car/261",
+   "goto /car/262",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-048",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "ছবিতে দেখানো গাড়িটি এই সাইটে খুঁজে এর চাওয়া দাম জানান। এটি আর বিক্রির জন্য না থাকলে N/A উত্তর দিন।",
+  "image": "sites/visual/gari/static/cars/383/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "বিক্রি হয়ে গেছে"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Superb",
+   "goto /car/384",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-049",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "ছবিতে দেখানো গাড়িটি এই সাইটে খুঁজে এর চাওয়া দাম জানান। এটি আর বিক্রির জন্য না থাকলে N/A উত্তর দিন।",
+  "image": "sites/visual/gari/static/cars/99/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "বিক্রি হয়ে গেছে"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Regal",
+   "goto /car/91",
+   "goto /car/92",
+   "goto /car/93",
+   "goto /car/94",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-050",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "ছবিতে দেখানো গাড়িটি এই সাইটে খুঁজে এর চাওয়া দাম জানান। এটি আর বিক্রির জন্য না থাকলে N/A উত্তর দিন।",
+  "image": "sites/visual/gari/static/cars/435/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "বিক্রি হয়ে গেছে"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Vios",
+   "goto /car/436",
+   "goto /car/438",
+   "goto /car/439",
+   "goto /car/440",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ }
+]

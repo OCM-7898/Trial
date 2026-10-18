@@ -1,0 +1,62 @@
+{
+  "_note": "HAND-WRITTEN 2026-09-26 Urdu vocabulary for the gari marketplace (Pakistani usage, no lexicon). Same keys as bn.json.",
+  "color": {
+    "Black": "کالی", "Blue": "نیلی", "Brown": "بھوری", "Champagne": "شیمپین",
+    "Gold": "سنہری", "Gray": "سرمئی", "Green": "سبز", "Orange": "نارنجی",
+    "Pink": "گلابی", "Purple": "جامنی", "Red": "سرخ", "Silver": "سلور",
+    "White": "سفید", "Yellow": "پیلی"
+  },
+  "city": {
+    "Karachi": "کراچی", "Lahore": "لاہور", "Islamabad": "اسلام آباد",
+    "Rawalpindi": "راولپنڈی", "Faisalabad": "فیصل آباد", "Multan": "ملتان",
+    "Peshawar": "پشاور", "Sialkot": "سیالکوٹ"
+  },
+  "body_type": {
+    "Sedan": "سیڈان", "SUV": "ایس یو وی", "Hatchback": "ہیچ بیک", "MPV": "ایم پی وی",
+    "Sports car": "اسپورٹس کار", "Van": "وین"
+  },
+  "transmission": {"Manual": "مینوئل", "Automatic": "آٹومیٹک"},
+  "fuel": {"Petrol": "پیٹرول", "Diesel": "ڈیزل", "Hybrid": "ہائبرڈ", "Electric": "الیکٹرک"},
+  "assembly": {"Local": "مقامی اسمبلی", "Imported": "درآمد شدہ"},
+  "features": {
+    "ABS": "اے بی ایس", "Air Conditioning": "ایئر کنڈیشننگ", "Airbags": "ایئر بیگز",
+    "Alloy Rims": "الائے رمز", "Bluetooth": "بلوٹوتھ", "Cruise Control": "کروز کنٹرول",
+    "Fog Lights": "فوگ لائٹس", "Heated Seats": "ہیٹڈ سیٹس", "Immobilizer": "اموبیلائزر",
+    "Keyless Entry": "کی لیس انٹری", "Leather Seats": "لیدر سیٹس", "Navigation": "نیویگیشن",
+    "Parking Sensors": "پارکنگ سینسرز", "Power Steering": "پاور اسٹیئرنگ",
+    "Power Windows": "پاور ونڈوز", "Rear Camera": "ریئر کیمرا", "Sunroof": "سن روف",
+    "USB Port": "یو ایس بی پورٹ"
+  },
+  "description": {
+    "Carefully driven, always garage kept and regularly serviced.": "احتیاط سے چلائی گئی، ہمیشہ گیراج میں رکھی اور باقاعدہ سروس شدہ۔",
+    "Company-maintained until last year, full record available.": "پچھلے سال تک کمپنی مینٹینڈ، مکمل ریکارڈ دستیاب۔",
+    "Complete documents, token tax paid up to date.": "مکمل کاغذات، ٹوکن ٹیکس تازہ ترین ادا شدہ۔",
+    "Doctor-owned vehicle, used sparingly within the city.": "ڈاکٹر کی گاڑی، شہر کے اندر کم ہی چلی۔",
+    "Excellent condition inside and out, all original paint.": "اندر باہر بہترین حالت، سارا پینٹ اصلی۔",
+    "First-class mechanical condition, new tyres fitted recently.": "اعلیٰ درجے کی مکینیکل حالت، حال ہی میں نئے ٹائر لگے۔",
+    "Immaculate interior, chilled AC, smooth long-route drive.": "بے داغ انٹیریئر، ٹھنڈا اے سی، لمبے روٹ پر ہموار ڈرائیو۔",
+    "Non-accidental, engine and suspension in top shape.": "بغیر حادثے کے، انجن اور سسپنشن بہترین حالت میں۔",
+    "Urgent sale, serious buyers only, price slightly negotiable.": "فوری فروخت، صرف سنجیدہ خریدار، قیمت میں معمولی گنجائش۔",
+    "Well-maintained family car with complete service history.": "اچھی طرح رکھی گئی فیملی کار، مکمل سروس ہسٹری کے ساتھ۔"
+  },
+  "sellers": {
+    "Adeel Akram": "عدیل اکرم", "Ahmed Khan": "احمد خان", "Amna Javed": "آمنہ جاوید",
+    "Ayesha Siddiqui": "عائشہ صدیقی", "Bilal Hussain": "بلال حسین", "Faisal Mahmood": "فیصل محمود",
+    "Fatima Malik": "فاطمہ ملک", "Hassan Raza": "حسن رضا", "Hira Farooq": "حرا فاروق",
+    "Imran Qureshi": "عمران قریشی", "Kamran Baig": "کامران بیگ", "Mehwish Iqbal": "مہوش اقبال",
+    "Nadia Hussain": "نادیہ حسین", "Rabia Anwar": "رابعہ انور", "Saad Chaudhry": "سعد چوہدری",
+    "Salman Butt": "سلمان بٹ", "Sana Tariq": "ثنا طارق", "Tariq Jameel": "طارق جمیل",
+    "Usman Sheikh": "عثمان شیخ", "Zainab Akhtar": "زینب اختر"
+  },
+  "dealers": {
+    "Khan Motors": "خان موٹرز", "City Auto Traders": "سٹی آٹو ٹریڈرز", "Prime Wheels": "پرائم وہیلز",
+    "Capital Car Point": "کیپیٹل کار پوائنٹ", "Star Motors": "اسٹار موٹرز", "Elite Auto Gallery": "ایلیٹ آٹو گیلری",
+    "Metro Cars": "میٹرو کارز", "Crescent Automobiles": "کریسنٹ آٹوموبائلز", "Highway Motors": "ہائی وے موٹرز",
+    "Galaxy Car Centre": "گلیکسی کار سینٹر"
+  },
+  "account_name": {"Ahmed Raza": "احمد رضا"},
+  "preseeded_ads": {
+    "Family-used Cultus VXL, first owner, all documents complete.": "فیملی استعمال کی کلٹس VXL، پہلا مالک، تمام کاغذات مکمل۔",
+    "Honda City Aspire, new tyres, sold to a colleague.": "ہونڈا سٹی ایسپائر، نئے ٹائر، ایک ساتھی کو فروخت۔"
+  }
+}

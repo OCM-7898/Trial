@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{ S.all_cars }}{% endblock %}
+{% block content %}
+<h1>{{ S.all_cars }}</h1>
+<div class="panel">
+<form class="stack" method="get" action="/cars">
+  <div class="filterbar">
+    <div><label>{{ S.keyword }}</label>
+      <input type="text" name="q" value="{{ sel.get('q','') }}"></div>
+    <div><label>{{ S.brand }}</label>
+      <select name="brand">
+        <option value="">{{ S.any }}</option>
+        {% for b in brands %}<option value="{{ b }}"{% if sel.get('brand') == b %} selected{% endif %}>{{ b }}</option>{% endfor %}
+      </select></div>
+    <div><label>{{ S.body_type }}</label>
+      <select name="body_type">
+        <option value="">{{ S.any }}</option>
+        {% for b in bodies %}<option value="{{ b }}"{% if sel.get('body_type') == b %} selected{% endif %}>{{ b }}</option>{% endfor %}
+      </select></div>
+    <div><label>{{ S.city }}</label>
+      <select name="city">
+        <option value="">{{ S.any }}</option>
+        {% for c in cities %}<option value="{{ c }}"{% if sel.get('city') == c %} selected{% endif %}>{{ c }}</option>{% endfor %}
+      </select></div>
+    <div><label>{{ S.fuel }}</label>
+      <select name="fuel">
+        <option value="">{{ S.any }}</option>
+        {% for f in fuels %}<option value="{{ f }}"{% if sel.get('fuel') == f %} selected{% endif %}>{{ f }}</option>{% endfor %}
+      </select></div>
+    <div><label>{{ S.transmission }}</label>
+      <select name="transmission">
+        <option value="">{{ S.any }}</option>
+        {% for t in transmissions_browse %}<option value="{{ t }}"{% if sel.get('transmission') == t %} selected{% endif %}>{{ t }}</option>{% endfor %}
+      </select></div>
+    <div><label>{{ S.max_price }}</label>
+      <input type="text" name="max_price" value="{{ sel.get('max_price','') }}"></div>
+    <div><label>{{ S.min_year }}</label>
+      <input type="text" name="min_year" value="{{ sel.get('min_year','') }}"></div>
+    <div><label>{{ S.sort }}</label>
+      <select name="sort">
+        {% for k, lbl in [('newest', S.sort_newest), ('price_asc', S.sort_price_asc), ('price_desc', S.sort_price_desc), ('mileage_asc', S.sort_mileage_asc), ('year_desc', S.sort_year_desc)] %}
+        <option value="{{ k }}"{% if sort == k %} selected{% endif %}>{{ lbl }}</option>
+        {% endfor %}
+      </select></div>
+    <div><button type="submit">{{ S.apply_filters }}</button></div>
+  </div>
+</form>
+</div>
+
+<p class="muted">{{ S.results_count.format(n=(n | grp)) }}</p>
+<div class="grid">
+  {% for c in cars %}
+  <div class="card">
+    <a href="/car/{{ c.id }}"><img src="/static/cars/{{ c.id }}/1.jpg" alt="{{ S.photo_alt.format(name=car_name(c), k=1) }}"></a>
+    <div class="pad">
+      <a href="/car/{{ c.id }}"><strong>{{ car_name(c) }}</strong></a>
+      <div class="price">{{ c.price | money }}</div>
+      <div class="meta">{{ c.mileage_km | grp }} {{ S.km }} · {{ c.transmission }} · {{ c.fuel }}</div>
+      <div class="meta">{{ c.city }} · {{ c.posted_on }}</div>
+    </div>
+  </div>
+  {% else %}<p>{{ S.no_match }}</p>{% endfor %}
+</div>
+
+{% set qs = [] %}
+{% for k in ['q','brand','body_type','city','fuel','transmission','max_price','min_year'] %}{% if sel.get(k) %}{% set _ = qs.append(k ~ '=' ~ (sel.get(k) | urlencode)) %}{% endif %}{% endfor %}
+{% set _ = qs.append('sort=' ~ sort) %}
+{% set base = '/cars?' ~ qs | join('&') %}
+<div class="pager">
+  {% if page > 1 %}<a href="{{ base }}&page={{ page - 1 }}">← {{ S.prev_page }}</a>{% endif %}
+  {{ S.page_of.format(p=(page | v2_num), n=(n_pages | v2_num)) }}
+  {% if page < n_pages %}<a href="{{ base }}&page={{ page + 1 }}">{{ S.next_page }} →</a>{% endif %}
+</div>
+{% endblock %}

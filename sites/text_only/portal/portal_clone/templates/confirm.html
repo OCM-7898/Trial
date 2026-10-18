@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+<div class="full">
+  <h1>{{ title }}</h1>
+  <div class="confirm">
+    <h2>{{ S.result_title }}</h2>
+    <p class="ref">{{ message }}</p>
+  </div>
+  <p><a href="/services/{{ s.slug }}/panel/">{{ S.back }}</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "partner_base.html" %}
+{% block content %}
+<div class="wrap section">
+  <h1>{{ partner.name }}</h1>
+  <p>{{ t("partner.evisa_intro") }}</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("partner.visa_type") }}</th>
+        <th scope="col">{{ t("partner.eligibility") }}</th>
+        <th scope="col">{{ t("partner.validity") }}</th>
+        <th scope="col">{{ t("partner.fee") }}</th>
+        <th scope="col">{{ t("partner.processing") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for visa in visas %}
+        <tr>
+          <td><a href="{{ partner.home }}?code={{ visa.code }}">{{ visa.name }}</a></td>
+          <td>{{ visa.eligibility }}</td>
+          <td>{{ t("partner.days", n=visa.validity_days) }}</td>
+          <td>{{ fmt_money(visa.fee_usd) }}</td>
+          <td>{{ t("partner.days", n=visa.processing_days) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if selected %}
+  <section class="section">
+    <h2>{{ selected.name }}</h2>
+    <h3>{{ t("partner.documents_required") }}</h3>
+    <p>{{ selected.documents }}</p>
+    <p class="hint">{{ t("partner.evisa_note", n=selected.processing_days) }}</p>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<aside class="sidebar">
+  <div class="side-account">
+    <h2>{{ S.side_signin_heading }}</h2>
+    {% if not s.requires_login %}
+      <p class="hint">{{ S.side_nologin_note }}</p>
+      <a class="btn" href="/services/{{ s.slug }}/panel/">{{ S.side_panel_cta }}</a>
+    {% elif account %}
+      <p class="who">{{ S.signed_in_as }} {{ account.display_name }}</p>
+      <a class="btn" href="/services/{{ s.slug }}/panel/">{{ S.side_panel_cta }}</a>
+    {% else %}
+      <a class="btn" href="/login?next=/services/{{ s.slug }}/panel/">{{ S.nav_login }}</a>
+    {% endif %}
+  </div>
+  <h2>{{ S.side_info_heading }}</h2>
+  <ul>
+    <li><a href="/services/{{ s.slug }}/">{{ s.name }}</a></li>
+    <li><a href="/services/{{ s.slug }}/guide/">{{ S.guide }}</a></li>
+    <li><a href="/services/{{ s.slug }}/fees/">{{ S.fees }}</a></li>
+    <li><a href="/services/{{ s.slug }}/offices/">{{ S.offices }}</a></li>
+    <li><a href="/services/{{ s.slug }}/panel/">{{ S.panel_link }}</a></li>
+  </ul>
+</aside>

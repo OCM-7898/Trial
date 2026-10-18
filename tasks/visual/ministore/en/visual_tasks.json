@@ -1,0 +1,2176 @@
+[
+ {
+  "id": "visual-001",
+  "site": "ministore",
+  "intent": "Buy the AmazonBasics HDMI Adapter priced at $12.49 (quantity 1) and have it shipped to '22 Birch Way, Denver, 80014'. Go all the way through checkout so the order is actually placed. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%22 Birch Way, Denver, 80014%",
+    "items": {
+     "1": 1
+    },
+    "total": 12.49
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=22 Birch Way, Denver, 80014",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-002",
+  "site": "ministore",
+  "intent": "I need one unit of the Amazon Brand - Solimo Non Stick Handi priced at $19.99 delivered to '9 Cedar Ct, Portland, 97205'. Place that order — one order, fully checked out. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%9 Cedar Ct, Portland, 97205%",
+    "items": {
+     "301": 1
+    },
+    "total": 19.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/301",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=9 Cedar Ct, Portland, 97205",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-003",
+  "site": "ministore",
+  "intent": "Place an order for the AmazonBasics Vinyl 4 Pound Dumbbells priced at $11.99, quantity 1, using '310 Elm Rd, Madison, 53703' as the shipping address, and finish checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 Elm Rd, Madison, 53703%",
+    "items": {
+     "604": 1
+    },
+    "total": 11.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/604",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 Elm Rd, Madison, 53703",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-004",
+  "site": "ministore",
+  "intent": "Order 1 x the Amazon Basics Area Rug priced at $64.99 in a single order, shipping to '41 Maple St, Reno, 89501'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%41 Maple St, Reno, 89501%",
+    "items": {
+     "852": 1
+    },
+    "total": 64.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/852",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=41 Maple St, Reno, 89501",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-005",
+  "site": "ministore",
+  "intent": "Buy the Wicker Planter in Garden (quantity 1) and have it shipped to '68 Willow Dr, Boise, 83702'. Go all the way through checkout so the order is actually placed. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%68 Willow Dr, Boise, 83702%",
+    "items": {
+     "1261": 1
+    },
+    "total": 29.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1261",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=68 Willow Dr, Boise, 83702",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-006",
+  "site": "ministore",
+  "intent": "I need one unit of the Dog Collar in Pets delivered to '7 Juniper Ave, Salem, 97301'. Place that order — one order, fully checked out. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%7 Juniper Ave, Salem, 97301%",
+    "items": {
+     "1791": 1
+    },
+    "total": 7.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1791",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=7 Juniper Ave, Salem, 97301",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-007",
+  "site": "ministore",
+  "intent": "Place an order for the AmazonBasics Weight Scale whose listed colour is 'Black', quantity 1, using '150 Aspen Pl, Ogden, 84401' as the shipping address, and finish checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%150 Aspen Pl, Ogden, 84401%",
+    "items": {
+     "2026": 1
+    },
+    "total": 9.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2026",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=150 Aspen Pl, Ogden, 84401",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-008",
+  "site": "ministore",
+  "intent": "Order 1 x the AmazonBasics Speaker Cover whose listed colour is 'Orange' in a single order, shipping to '26 Poplar Ln, Fresno, 93650'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%26 Poplar Ln, Fresno, 93650%",
+    "items": {
+     "7": 1
+    },
+    "total": 14.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/7",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=26 Poplar Ln, Fresno, 93650",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-009",
+  "site": "ministore",
+  "intent": "Buy the cheapest product in Sports (sort the category by price) (quantity 1) and have it shipped to '88 Laurel St, Tucson, 85701'. Go all the way through checkout so the order is actually placed. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%88 Laurel St, Tucson, 85701%",
+    "items": {
+     "726": 1
+    },
+    "total": 3.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/Sports?sort=price_asc",
+   "goto /product/726",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=88 Laurel St, Tucson, 85701",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-010",
+  "site": "ministore",
+  "intent": "I need one unit of the most-reviewed product in Pets delivered to '13 Sycamore Rd, Akron, 44301'. Place that order — one order, fully checked out. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%13 Sycamore Rd, Akron, 44301%",
+    "items": {
+     "1911": 1
+    },
+    "total": 3.49
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/Pets?sort=reviews",
+   "goto /product/1911",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=13 Sycamore Rd, Akron, 44301",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-011",
+  "site": "ministore",
+  "intent": "Purchase the AmazonBasics Car Charger priced at $7.49, quantity 2, with '55 Magnolia Ct, Boca, 33427' as the delivery address; make sure the order is actually placed. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%55 Magnolia Ct, Boca, 33427%",
+    "items": {
+     "2": 2
+    },
+    "total": 14.98
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=55 Magnolia Ct, Boca, 33427",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-012",
+  "site": "ministore",
+  "intent": "Order 3 x the Salmon Fillet in Grocery in a single order, shipping to '2 Hickory Way, Provo, 84601'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%2 Hickory Way, Provo, 84601%",
+    "items": {
+     "2277": 3
+    },
+    "total": 29.97
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2277",
+   "fill 1 qty=3",
+   "goto /checkout",
+   "fill 1 address=2 Hickory Way, Provo, 84601",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-013",
+  "site": "ministore",
+  "intent": "Buy 2 units of the AmazonBasics Travel Carrier whose listed colour is 'Grey' in one order, shipped to '71 Alder Dr, Chico, 95926'. Complete checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%71 Alder Dr, Chico, 95926%",
+    "items": {
+     "1792": 2
+    },
+    "total": 45.98
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1792",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=71 Alder Dr, Chico, 95926",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-014",
+  "site": "ministore",
+  "intent": "Put the AmazonBasics Heavy-Weight Plastic Spoons priced at $5.49 and the AmazonFresh Bean Coffee priced at $8.99 (one each) in the cart and check out as one order to '34 Redwood Ave, Davis, 95616'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%34 Redwood Ave, Davis, 95616%",
+    "items": {
+     "302": 1,
+     "2273": 1
+    },
+    "total": 14.48
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/302",
+   "fill 1 qty=1",
+   "goto /product/2273",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=34 Redwood Ave, Davis, 95616",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-015",
+  "site": "ministore",
+  "intent": "I need the Rubber Puzzle Mat in Sports and the Pet Training Pads in Pets, one of each, delivered to '96 Cypress St, Tempe, 85281' in a single shipment; place that order. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%96 Cypress St, Tempe, 85281%",
+    "items": {
+     "607": 1,
+     "1795": 1
+    },
+    "total": 36.98
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/607",
+   "fill 1 qty=1",
+   "goto /product/1795",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=96 Cypress St, Tempe, 85281",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-016",
+  "site": "ministore",
+  "intent": "Order 1 x the Rivet Arm Plug-In whose listed colour is 'White' and 1 x the AmazonBasics Commercial Patio Heater priced at $89.99 in a single order, shipping to '13 Detour Dr, Mobile, 36602'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%13 Detour Dr, Mobile, 36602%",
+    "items": {
+     "871": 1,
+     "1253": 1
+    },
+    "total": 122.98
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/871",
+   "fill 1 qty=1",
+   "goto /product/1253",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=13 Detour Dr, Mobile, 36602",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-017",
+  "site": "ministore",
+  "intent": "Order the fewest units of the AmazonBasics Licensing Inclined Sorter priced at $17.99 needed for the subtotal to reach at least $100.00, shipped to '48 Update Blvd, Springfield'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%48 Update Blvd, Springfield%",
+    "items": {
+     "2039": 6
+    },
+    "total": 107.94
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2039",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=48 Update Blvd, Springfield",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-018",
+  "site": "ministore",
+  "intent": "Order the fewest units of the Bamboo Mezaluna Board in Kitchen needed for the subtotal to reach at least $100.00, shipped to '5 Harbor Ln, Austin, 78701'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%5 Harbor Ln, Austin, 78701%",
+    "items": {
+     "335": 6
+    },
+    "total": 107.94
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/335",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=5 Harbor Ln, Austin, 78701",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-019",
+  "site": "ministore",
+  "intent": "Find the active coupon code on the Deals page, then order 1 x the AmazonBasics Alkaline Batteries priced at $42.99 shipped to '22 Birch Way, Denver, 80014' with that coupon applied. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%22 Birch Way, Denver, 80014%",
+    "items": {
+     "6": 1
+    },
+    "total": 38.69
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%22 Birch Way, Denver, 80014%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/6",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=22 Birch Way, Denver, 80014",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-020",
+  "site": "ministore",
+  "intent": "Find the active coupon code on the Deals page, then order 1 x the Feather Print in Home shipped to '9 Cedar Ct, Portland, 97205' with that coupon applied. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%9 Cedar Ct, Portland, 97205%",
+    "items": {
+     "855": 1
+    },
+    "total": 22.49
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%9 Cedar Ct, Portland, 97205%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/855",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=9 Cedar Ct, Portland, 97205",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-021",
+  "site": "ministore",
+  "intent": "Find the active coupon code on the Deals page, then order 1 x the AmazonBasics Resistance Band Combo whose listed colour is 'Multicolour' shipped to '310 Elm Rd, Madison, 53703' with that coupon applied. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 Elm Rd, Madison, 53703%",
+    "items": {
+     "634": 1
+    },
+    "total": 20.69
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%310 Elm Rd, Madison, 53703%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/634",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 Elm Rd, Madison, 53703",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-022",
+  "site": "ministore",
+  "intent": "Compare the Swirl Flute Glass in Kitchen and the Roti Tawa in Kitchen, and order 1 x whichever is cheaper (only that one), shipped to '41 Maple St, Reno, 89501'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%41 Maple St, Reno, 89501%",
+    "items": {
+     "305": 1
+    },
+    "total": 8.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 307
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/305",
+   "goto /product/307",
+   "goto /product/305",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=41 Maple St, Reno, 89501",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-023",
+  "site": "ministore",
+  "intent": "Order 1 x the Astonica Light Post priced at $49.99 shipped to the default address saved in your account settings (leave the checkout address as suggested). Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%12 Ocean Ave, Tampa, 33601%",
+    "items": {
+     "1264": 1
+    },
+    "total": 49.99
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1264",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-024",
+  "site": "ministore",
+  "intent": "In your account settings, change your default shipping address to '48 Update Blvd, Springfield'. Then order 1 x the AmazonBasics Glass Dry-Erase Board Classic priced at $18.99 shipped to that (new default) address. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%48 Update Blvd, Springfield%",
+    "items": {
+     "1554": 1
+    },
+    "total": 18.99
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "48 Update Blvd, Springfield"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=48 Update Blvd, Springfield",
+   "goto /product/1554",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-025",
+  "site": "ministore",
+  "intent": "Order 1 x the 12\" Trouncer T-Rex Classic in Toys and 2 x the AmazonBasics Canary Legal Pads Classic priced at $5.49 in a single order, shipping to '150 Aspen Pl, Ogden, 84401'. Complete the full checkout. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%150 Aspen Pl, Ogden, 84401%",
+    "items": {
+     "1647": 1,
+     "1559": 2
+    },
+    "total": 26.97
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1647",
+   "fill 1 qty=1",
+   "goto /product/1559",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=150 Aspen Pl, Ogden, 84401",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-026",
+  "site": "ministore",
+  "intent": "Add the AmazonBasics Alkaline Batteries priced at $5.49 to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/4",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-027",
+  "site": "ministore",
+  "intent": "Add the Vacuum Cleaner in Kitchen to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 309
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/309",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-028",
+  "site": "ministore",
+  "intent": "Add the AmazonBasics Kids Chairs whose listed colour is 'Blue' to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 872
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/872",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-029",
+  "site": "ministore",
+  "intent": "Add the Giant 4-In-A-Row Set in Sports and the AmazonFresh Coffee 32oz bundle priced at $15.99 to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 610
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/610",
+   "fill 2",
+   "goto /product/2278",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-030",
+  "site": "ministore",
+  "intent": "Add the Amazon Brand - Jam and Honey Wild Onez Tiger Classic whose listed colour is 'Yellow' and the Magnetic Whiteboard Classic in Books to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1649
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1563
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1649",
+   "fill 2",
+   "goto /product/1563",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-031",
+  "site": "ministore",
+  "intent": "Remove the Charging Cable in Electronics from your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/11",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-032",
+  "site": "ministore",
+  "intent": "Remove the Unbranded Microwave priced at $129.00 from your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/321",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-033",
+  "site": "ministore",
+  "intent": "Sort the Office category by price and add the single cheapest Office product to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2060
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2059
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2072
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2112
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/Office?sort=price_asc",
+   "goto /product/2060",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-034",
+  "site": "ministore",
+  "intent": "Find the most-reviewed product in the Garden category (sort by most reviewed) and add it to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1286
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/Garden?sort=reviews",
+   "goto /product/1286",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-035",
+  "site": "ministore",
+  "intent": "Change the delivery address of order #4 to '13 Detour Dr, Mobile, 36602'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "address",
+    "value": "13 Detour Dr, Mobile, 36602"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/address",
+   "fill 1 address=13 Detour Dr, Mobile, 36602"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-036",
+  "site": "ministore",
+  "intent": "Cancel order #4 (confirming when asked). Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-037",
+  "site": "ministore",
+  "intent": "Change the delivery address of order #3 to '22 Birch Way, Denver, 80014', then cancel that order (confirming when asked). Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "address",
+    "value": "22 Birch Way, Denver, 80014"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/3/address",
+   "fill 1 address=22 Birch Way, Denver, 80014",
+   "goto /order/3/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-038",
+  "site": "ministore",
+  "intent": "Cancel order #4, then use the contact form to send the message 'Order 4 is no longer needed, please confirm the cancellation.' referencing order 4. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "4",
+     "body": "%Order 4 is no longer needed, please confirm the cancellation.%"
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1",
+   "goto /contact",
+   "fill 1 order_ref=4; message=Order 4 is no longer needed, please confirm the cancellation."
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-039",
+  "site": "ministore",
+  "intent": "Change your default shipping address to '9 Cedar Ct, Portland, 97205' in settings, and add the Cooler 25L 100% leakproof in Sports to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "9 Cedar Ct, Portland, 97205"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 613
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=9 Cedar Ct, Portland, 97205",
+   "goto /product/613",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-040",
+  "site": "ministore",
+  "intent": "Order 1 x the Amazon Brand - Solimo Grill Pan whose listed colour is 'Black' shipped to '310 Elm Rd, Madison, 53703', then cancel the order you just placed (confirming when asked). Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 Elm Rd, Madison, 53703%",
+    "items": {
+     "310": 1
+    },
+    "total": 11.99
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 5
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/310",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 Elm Rd, Madison, 53703",
+   "fill 2",
+   "goto /order/5/cancel",
+   "fill 1"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-041",
+  "site": "ministore",
+  "intent": "Add the Amazon Brand - Solimo Wall Sticker priced at $9.99 to your wishlist and post a 4-star review on it saying 'Sturdy frame, easy assembly, colour matches the photo.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 854
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 854,
+     "user_id": 1,
+     "stars": 4,
+     "body": "%Sturdy frame, easy assembly, colour matches the photo.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/854",
+   "fill 2",
+   "goto /product/854",
+   "fill 4 stars=4; body=Sturdy frame, easy assembly, colour matches the photo."
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-042",
+  "site": "ministore",
+  "intent": "How many products does the brand 'Zenithware' sell? If this cannot be determined from the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no such brand",
+     "does not exist",
+     "not listed",
+     "not found",
+     "no products",
+     "0",
+     "zero"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Zenithware",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-043",
+  "site": "ministore",
+  "intent": "What is the price of the 'Self-Watering Titanium Bookshelf'? If this cannot be determined from the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not found",
+     "no such product",
+     "does not exist",
+     "not listed",
+     "not available",
+     "not be found",
+     "could not find",
+     "couldn't find",
+     "cannot find"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Self-Watering%20Titanium%20Bookshelf",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-044",
+  "site": "ministore",
+  "intent": "What percentage discount does the coupon code SAVE25 give at checkout? If this cannot be determined from the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "unknown",
+     "not a valid",
+     "does not exist",
+     "invalid",
+     "not exist",
+     "no such coupon"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-045",
+  "site": "ministore",
+  "intent": "Order 1 x the AmazonBasics CR123a 3V Batteries priced at $6.49. If it cannot be ordered, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "out of stock",
+     "cannot be ordered",
+     "unavailable",
+     "not be added"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/17",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-046",
+  "site": "ministore",
+  "intent": "What star rating did the user 'ghost_gary' give the AmazonBasics Screen Filter priced at $29.99 in their review? If this cannot be determined from the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no review",
+     "did not review",
+     "no such user",
+     "has not reviewed",
+     "not reviewed",
+     "no rating"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-047",
+  "site": "ministore",
+  "intent": "Find any product in the Grocery category priced under $0.50 and report its name. If this cannot be determined from the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no product",
+     "none",
+     "nothing under",
+     "no products"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /category/Grocery?sort=price_asc",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-048",
+  "site": "ministore",
+  "intent": "What is the current status of order #9? If this cannot be determined from the site, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no order",
+     "does not exist",
+     "not found",
+     "no such order",
+     "not exist"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /orders",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-049",
+  "site": "ministore",
+  "intent": "What quantity of the Mini Tins Classic in Toys did you buy in order #2? If this cannot be determined from the site, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not in",
+     "was not",
+     "not part of",
+     "0",
+     "zero",
+     "none",
+     "did not buy",
+     "not included"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/2",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-050",
+  "site": "ministore",
+  "intent": "What percentage discount does the coupon code FREESHIP currently give at checkout? If the coupon is expired or no longer gives a discount, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "expired",
+     "no longer",
+     "not active",
+     "inactive",
+     "0%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-051",
+  "site": "ministore",
+  "intent": "How many units of the 'Cat Scratcher Lounger Ultra' are in stock? If this cannot be determined from the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not found",
+     "no such product",
+     "does not exist",
+     "not listed",
+     "not exist",
+     "not be found",
+     "could not find",
+     "couldn't find",
+     "cannot find"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cat%20Scratcher%20Lounger",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-052",
+  "site": "ministore",
+  "intent": "The product page of the Wireless Computer Mouse in Electronics has a Questions & answers section. According to the seller's answer there, how many months of warranty does it come with?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Wireless%20Computer%20Mouse%20with%20USB%20Nano%20Receiver",
+   "goto /product/52",
+   "stop 3 months"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-053",
+  "site": "ministore",
+  "intent": "According to the Q&A section on the product page of the AmazonBasics Extension Cord whose listed colour is 'Black', how many business days does standard delivery take?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Extension%20Cord-%205%20M%20UK%20Black",
+   "goto /product/31",
+   "stop 4 business days"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-054",
+  "site": "ministore",
+  "intent": "How many questions are listed in the Questions & answers section of the Unbranded BC 700 Set priced at $32.99?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Technoline%20BC%20700%20Set%20Black",
+   "goto /product/38",
+   "stop 4"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-055",
+  "site": "ministore",
+  "intent": "On the product page of the Gas Grill Cover in Garden, use the Q&A form to ask the question 'Does the colour match the photos exactly?'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 1265,
+     "user_id": 1,
+     "question": "Does the colour match the photos exactly?",
+     "answer": ""
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1265",
+   "fill 3 question=Does the colour match the photos exactly?"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-056",
+  "site": "ministore",
+  "intent": "Ask the question 'Are replacement parts available to order?' on the product page of the AmazonBasics Pen Ink whose listed colour is 'black', and also add that product to your wishlist. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 2027,
+     "user_id": 1,
+     "question": "Are replacement parts available to order?"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2027
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2027",
+   "fill 3 question=Are replacement parts available to order?",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-057",
+  "site": "ministore",
+  "intent": "On the product page of the AmazonBasics Wireless Shower Speaker priced at $21.99, which reviewer's review has the most helpful votes? Answer with the username.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "minimal_mia"
+    ],
+    "none_of": [
+     "bargain_ben",
+     "bookish_bea",
+     "kitchen_kat",
+     "outdoor_ollie"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Wireless%20Shower%20Speaker%20with%205W%20Driver",
+   "goto /product/14",
+   "stop minimal_mia"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-058",
+  "site": "ministore",
+  "intent": "On the product page of the Converter Cable in Electronics, how many people found the review by 'gymrat_gus' helpful?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amazon%20Basic%20HDMI%20to%20DVI%20Converter%20Cable%20blk",
+   "goto /product/5",
+   "stop 26"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-059",
+  "site": "ministore",
+  "intent": "On the product page of the AmazonBasics Portable Bluetooth Speaker whose listed colour is 'Black', press the Helpful button on the review written by 'kitchen_kat'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 91,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "reviews",
+    "match": {
+     "id": 91
+    },
+    "field": "helpful",
+    "value": 1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/20",
+   "fill 5"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-060",
+  "site": "ministore",
+  "intent": "On the product page of the AmazonBasics On-Ear Headphones priced at $12.99, find the review with the MOST helpful votes and press its Helpful button. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 103,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/23",
+   "fill 6"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-061",
+  "site": "ministore",
+  "intent": "How many brands does the store list on its Brands page?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop 99"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-062",
+  "site": "ministore",
+  "intent": "According to the Brands page, which brand lists more products: 'Pinzon by Amazon' or 'AmazonCommercial'? Answer with the brand name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonCommercial"
+    ],
+    "none_of": [
+     "Pinzon by Amazon"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop AmazonCommercial"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-063",
+  "site": "ministore",
+  "intent": "According to the Brands page, which of 'UMI' and 'Whole Paws' has the higher average review rating? Answer with the brand name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Whole Paws"
+    ],
+    "none_of": [
+     "UMI"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop Whole Paws"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-064",
+  "site": "ministore",
+  "intent": "What is the price of the AMAZONBASICS Charging Cable in Electronics? Answer with the amount.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "7.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=PlayStation%204%20Controller%20Charging%20Cable",
+   "stop 7.99"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-065",
+  "site": "ministore",
+  "intent": "Which brand sells the Quilt Blanket in Home priced at $39.99?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Arendale%20Microfibre%20Printed%20Quilt%20Blanket",
+   "goto /product/858",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-066",
+  "site": "ministore",
+  "intent": "How many units of the Vinyl 2 Pound Dumbbells in Sports are currently in stock?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Vinyl%202%20Pound%20Dumbbells",
+   "goto /product/617",
+   "stop 12"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-067",
+  "site": "ministore",
+  "intent": "Which is cheaper, the AmazonCommercial Cookware Set in Kitchen or the AmazonCommercial Vinyl Gloves in Kitchen? Answer with the exact product name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Heavy Duty Powder Free Disposable Vinyl Gloves"
+    ],
+    "none_of": [
+     "7-Piece Stainless Steel Induction Ready Cookware Set"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=7-Piece%20Stainless%20Steel%20Induction%20Ready%20Cookware%20Set",
+   "goto /?q=Heavy%20Duty%20Powder%20Free%20Disposable%20Vinyl%20Gloves",
+   "stop Heavy Duty Powder Free Disposable Vinyl Gloves"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-068",
+  "site": "ministore",
+  "intent": "Which of these is the most expensive: the AmazonBasics Ethernet Adapter in Electronics, the AmazonBasics Screw Bulb in Electronics, the Unbranded Audio Splitter in Electronics? Answer with the exact product name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "USB 3.0 to 10/100/1000 Gigabit Ethernet Adapter"
+    ],
+    "none_of": [
+     "LED E27 Edison Screw Bulb",
+     "5-Way Aux Audio Splitter for Headphones Black"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=USB%203.0%20to%2010/100/1000%20Gigabit%20Ethernet%20Adapter",
+   "goto /?q=LED%20E27%20Edison%20Screw%20Bulb",
+   "goto /?q=5-Way%20Aux%20Audio%20Splitter%20for%20Headphones%20Black",
+   "stop USB 3.0 to 10/100/1000 Gigabit Ethernet Adapter"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-069",
+  "site": "ministore",
+  "intent": "How many reviews does the AmazonBasics Screen Filter priced at $29.99 have?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Slim%20Magnetic%20Privacy%20Screen%20Filter%20for%2013%20Inch%20MacBook%20Air%202018",
+   "goto /product/53",
+   "stop 25"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-070",
+  "site": "ministore",
+  "intent": "How many 1-star reviews does the AmazonBasics Bowl Set priced at $22.49 have?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=10-Piece%20Mixing%20Bowl%20Set%20with%20Lids",
+   "goto /product/489",
+   "stop 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-071",
+  "site": "ministore",
+  "intent": "What is the average star rating shown for the AmazonBasics Screen Filter priced at $29.99?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3.4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop 3.4"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-072",
+  "site": "ministore",
+  "intent": "Which has the higher average star rating: the Traditional HighBall Glass in Kitchen or the AmazonBasics Bowl Set priced at $22.49? Answer with the exact product name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10-Piece Mixing Bowl Set with Lids"
+    ],
+    "none_of": [
+     "Traditional HighBall Glass"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/421",
+   "goto /product/489",
+   "stop 10-Piece Mixing Bowl Set with Lids"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-073",
+  "site": "ministore",
+  "intent": "What is the currently active coupon code listed on the Deals page?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SAVE10"
+    ],
+    "none_of": [
+     "WELCOME5",
+     "FREESHIP"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop SAVE10"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-074",
+  "site": "ministore",
+  "intent": "Write a 5-star review saying 'Fresh on arrival and the packaging held up well.' on the Espresso Pods in Grocery. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 2287,
+     "user_id": 1,
+     "stars": 5,
+     "body": "%Fresh on arrival and the packaging held up well.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=50%20Ct.%20Solimo%20Espresso%20Pods",
+   "goto /product/2287",
+   "fill 4 stars=5; body=Fresh on arrival and the packaging held up well."
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-075",
+  "site": "ministore",
+  "intent": "Use the contact form to send the message 'Order 2 arrived with one item missing, please advise.' referencing order 2. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "2",
+     "body": "%Order 2 arrived with one item missing, please advise.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /contact",
+   "fill 1 order_ref=2; message=Order 2 arrived with one item missing, please advise."
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ }
+]

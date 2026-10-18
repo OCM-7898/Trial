@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}{{ t("book.passengers_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('search') }}">{{ t("nav.book_flight") }}</a></li>
+        <li>{{ t("book.passengers_title") }}</li></ol>
+  </nav>
+  <ol class="stepper">
+    <li class="is-done">{{ t("book.step_flights") }}</li>
+    <li class="is-current">{{ t("book.step_passengers") }}</li>
+    <li>{{ t("review.step_review") }}</li>
+    <li>{{ t("review.step_pay") }}</li>
+  </ol>
+  <h1>{{ t("book.passengers_title") }}</h1>
+  {% set also = [
+       (t("book.seats_title"), path("book_seats") ~ "?itinerary=" ~ itinerary),
+       (t("book.extras_title"), path("book_extras") ~ "?itinerary=" ~ itinerary),
+       (t("promo.title"), path("promo_code") ~ "?itinerary=" ~ itinerary),
+       (t("hold.title"), path("hold") ~ "?itinerary=" ~ itinerary)] %}
+  {% include "partials/also.html" %}
+
+  <div class="split">
+    <div>
+      <form class="searchform" method="post" action="{{ path('passengers') }}" novalidate>
+        <input type="hidden" name="itinerary" value="{{ itinerary }}">
+        <input type="hidden" name="adults" value="{{ adults }}">
+
+        {% for index in range(1, adults + 1) %}
+        <fieldset style="grid-column:1/-1">
+          <legend>{{ t("book.passenger_n", n=index) }}</legend>
+          <div class="searchform" style="padding:0">
+            <div class="field">
+              <label for="first_name_{{ index }}">{{ t("join.first_name") }}</label>
+              <input type="text" id="first_name_{{ index }}" name="first_name_{{ index }}"
+                     value="{{ values.get('first_name_' ~ index, '') }}"
+                     {% if errors.get('first_name_' ~ index) %}aria-invalid="true"{% endif %}>
+              {% if errors.get('first_name_' ~ index) %}<span class="error-text">{{ errors['first_name_' ~ index] }}</span>{% endif %}
+            </div>
+            <div class="field">
+              <label for="last_name_{{ index }}">{{ t("join.last_name") }}</label>
+              <input type="text" id="last_name_{{ index }}" name="last_name_{{ index }}"
+                     value="{{ values.get('last_name_' ~ index, '') }}"
+                     {% if errors.get('last_name_' ~ index) %}aria-invalid="true"{% endif %}>
+              {% if errors.get('last_name_' ~ index) %}<span class="error-text">{{ errors['last_name_' ~ index] }}</span>{% endif %}
+            </div>
+          </div>
+        </fieldset>
+        {% endfor %}
+
+        <fieldset style="grid-column:1/-1">
+          <legend>{{ t("book.contact") }}</legend>
+          <div class="searchform" style="padding:0">
+            <div class="field">
+              <label for="contact_email">{{ t("join.email") }}</label>
+              <input type="text" id="contact_email" name="contact_email"
+                     value="{{ values.get('contact_email', '') }}"
+                     {% if errors.get('contact_email') %}aria-invalid="true"{% endif %}>
+              {% if errors.get('contact_email') %}<span class="error-text">{{ errors['contact_email'] }}</span>{% endif %}
+            </div>
+            <div class="field">
+              <label for="contact_phone">{{ t("book.phone") }}</label>
+              <input type="text" id="contact_phone" name="contact_phone"
+                     value="{{ values.get('contact_phone', '') }}"
+                     {% if errors.get('contact_phone') %}aria-invalid="true"{% endif %}>
+              {% if errors.get('contact_phone') %}<span class="error-text">{{ errors['contact_phone'] }}</span>{% endif %}
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="actions"><button class="btn btn-primary" type="submit">{{ t("book.continue_review") }}</button></div>
+      </form>
+    </div>
+
+    <aside class="summary">
+      <h3>{{ t("book.your_flights") }}</h3>
+      {% for view in views %}
+      <p>
+        <strong>{{ view.origin.iata }} &rarr; {{ view.destination.iata }}</strong><br>
+        {{ view.flight.flight_no }} &middot; {{ fmt_date(view.flight.date) }}<br>
+        {{ fmt_time(view.flight.dep_time) }} &middot; {{ view.fare_class.name }}
+      </p>
+      {% endfor %}
+      <dl><dt class="total">{{ t("results.total") }}</dt><dd class="total">{{ fmt_money(total) }}</dd></dl>
+      <p class="hint">{{ t("book.total_for", n=adults) }}</p>
+    </aside>
+  </div>
+</div>
+{% endblock %}

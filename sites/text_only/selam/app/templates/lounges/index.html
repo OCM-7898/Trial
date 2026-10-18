@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("lounge.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("lounge.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("lounge.title") }}</h1>
+  <p>{{ t("lounge.intro") }}</p>
+
+  <form class="searchform" method="get" action="{{ path('lounges') }}">
+    {{ text_field("airport", "airport", t("lounge.airport"), "ADD", t("search.code_hint"), iata) }}
+    <div class="actions">
+      <button class="btn btn-primary" type="submit">{{ t("lounge.show") }}</button>
+      <a class="btn-link" href="{{ path('lounge_eligibility') }}">{{ t("lounge.check_eligibility") }}</a>
+      <a class="btn-link" href="{{ path('lounge_purchase') }}">{{ t("lounge.buy_access") }}</a>
+    </div>
+  </form>
+
+  {% if lounges %}
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("lounge.name") }}</th>
+        <th scope="col">{{ t("lounge.airport") }}</th>
+        <th scope="col">{{ t("lounge.terminal") }}</th>
+        <th scope="col">{{ t("lounge.hours") }}</th>
+        <th scope="col">{{ t("lounge.walk_in") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for lounge in lounges %}
+        <tr>
+          <td><a href="{{ path('lounge_detail', lounge_id=lounge.id) }}">{{ lounge.name }}</a></td>
+          <td>{{ airports[lounge.airport_iata].city if lounge.airport_iata in airports else "" }} ({{ lounge.airport_iata }})</td>
+          <td>{{ lounge.terminal }}</td>
+          <td>{{ lounge.hours }}</td>
+          <td>{% if lounge.walk_in_price_usd %}{{ fmt_money(lounge.walk_in_price_usd) }}{% else %}{{ t("common.none") }}{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="notice notice-warn"><div>{{ t("lounge.none_here") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

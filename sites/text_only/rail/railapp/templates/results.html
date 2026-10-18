@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.results_for.format(a=sname(a), b=sname(b), d=date) }}</h1>
+{% if not nos %}
+<div class="error">{{ S.no_trains }}</div>
+{% endif %}
+{% for no in nos %}
+{% set sg = seg(no, a, b) %}
+<div class="card trainrow">
+  <strong>{{ no }} {{ tname(no) }}</strong>
+  <p class="muted">
+    {{ S.departs }} {{ sname(a) }} {{ nd(sg.dep) }}
+    · {{ S.arrives }} {{ sname(b) }} {{ nd(sg.arr) }}
+    {% if sg.arr_day > sg.dep_day %}{{ S.day_offset.format(n=nd(sg.arr_day)) }}{% endif %}
+    · {{ S.duration }}: {{ nd("%dh %dm" % (sg.dur_min // 60, sg.dur_min % 60)) }}
+    · {{ S.distance }}: {{ nd(sg.dist) }} {{ S.km }}
+  </p>
+  <table>
+    <tr><th>{{ S.cls }}</th><th>{{ S.fare }}</th><th>{{ S.availability }}</th></tr>
+    {% for c, seats in classes_of(no) %}
+    <tr>
+      <td>{{ c }} — {{ S["cl_" ~ c] }}</td>
+      <td>{{ CUR }}{{ nd(fare(no, c, a, b)) }}</td>
+      <td>{% if seats > 0 %}<span class="avl">{{ S.avl.format(n=nd(seats)) }}</span>
+          {% else %}<span class="wl">{{ S.wl.format(n=nd(wl_of(no)[c])) }}</span>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/train/{{ no }}?from={{ a }}&amp;to={{ b }}&amp;date={{ date }}">{{ S.view_book }}</a>
+</div>
+{% endfor %}
+{% endblock %}

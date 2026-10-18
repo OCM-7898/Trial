@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ S.saved_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.saved_title }}</h1>
+<div class="grid">
+  {% for c in cars %}
+  <div class="card">
+    {% if c.status == 'sold' %}<span class="badge-sold">{{ S.sold_badge }}</span>{% endif %}
+    <a href="/car/{{ c.id }}"><img src="/static/cars/{{ c.id }}/1.jpg" alt="{{ S.photo_alt.format(name=car_name(c), k=1) }}"></a>
+    <div class="pad">
+      <a href="/car/{{ c.id }}"><strong>{{ car_name(c) }}</strong></a>
+      <div class="price">{{ c.price | money }}</div>
+      <div class="meta">{{ c.mileage_km | grp }} {{ S.km }} · {{ c.city }}</div>
+      <form method="post" action="/saved/remove/{{ c.id }}">
+        <button type="submit" class="line">{{ S.remove }}</button>
+      </form>
+    </div>
+  </div>
+  {% else %}<p>{{ S.saved_empty }}</p>{% endfor %}
+</div>
+{% endblock %}

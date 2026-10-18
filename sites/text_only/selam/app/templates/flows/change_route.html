@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("change.route_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("change.route_title")) }}
+<p class="hint">{{ view.origin.city }} ({{ view.origin.iata }}) &rarr; {{ view.destination.city }} ({{ view.destination.iata }})</p>
+<div class="notice {{ 'notice-info' if decision.allowed else 'notice-warn' }}"><div>{{ label }}</div></div>
+<p>{{ t("change.route_intro", fee=fmt_money(rerouting_fee)) }}</p>
+<p><a class="btn btn-secondary" href="{{ path('change', pnr=booking.pnr) }}?segment_id={{ view.segment.id }}">{{ t("change.route_vs_date") }}</a></p>
+<p><a class="btn btn-secondary" href="{{ path('help_contact') }}">{{ t("nav.contact_us") }}</a></p>
+</div>{% endblock %}

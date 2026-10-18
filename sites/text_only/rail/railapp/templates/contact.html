@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.contact }}</h1>
+{% if sent %}<div class="ok">{{ S.sent }}</div>{% endif %}
+<div class="card">
+  <form method="post" action="/contact">
+    <label>{{ S.c_name }}</label>
+    <input type="text" name="name">
+    <label>{{ S.c_email }}</label>
+    <input type="text" name="email">
+    <label>{{ S.c_subject }}</label>
+    <input type="text" name="subject">
+    <label>{{ S.c_message }}</label>
+    <textarea name="message" rows="5"></textarea>
+    <button type="submit">{{ S.send }}</button>
+  </form>
+</div>
+{% endblock %}

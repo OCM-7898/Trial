@@ -1,0 +1,124 @@
+{
+ "_note": "HAND-WRITTEN 2026-09-26 Bangla vocabulary for the gari marketplace (no lexicon). Applied by translate_gari_listings.py to listings.json -> listings_bn.json, and by seed.py to the dealer table, the preseeded ads and the account. Brands, models, years, mileage, prices, phones, emails and ISO dates are never translated.",
+ "color": {
+  "Black": "কালো",
+  "Blue": "নীল",
+  "Brown": "বাদামি",
+  "Champagne": "শ্যাম্পেন",
+  "Gold": "সোনালি",
+  "Gray": "ধূসর",
+  "Green": "সবুজ",
+  "Orange": "কমলা",
+  "Pink": "গোলাপি",
+  "Purple": "বেগুনি",
+  "Red": "লাল",
+  "Silver": "সিলভার",
+  "White": "সাদা",
+  "Yellow": "হলুদ"
+ },
+ "city": {
+  "Karachi": "করাচি",
+  "Lahore": "লাহোর",
+  "Islamabad": "ইসলামাবাদ",
+  "Rawalpindi": "রাওয়ালপিন্ডি",
+  "Faisalabad": "ফয়সালাবাদ",
+  "Multan": "মুলতান",
+  "Peshawar": "পেশোয়ার",
+  "Sialkot": "শিয়ালকোট"
+ },
+ "body_type": {
+  "Sedan": "সেডান",
+  "SUV": "এসইউভি",
+  "Hatchback": "হ্যাচব্যাক",
+  "MPV": "এমপিভি",
+  "Sports car": "স্পোর্টস কার",
+  "Van": "ভ্যান"
+ },
+ "transmission": {
+  "Manual": "ম্যানুয়াল",
+  "Automatic": "অটোমেটিক"
+ },
+ "fuel": {
+  "Petrol": "পেট্রল",
+  "Diesel": "ডিজেল",
+  "Hybrid": "হাইব্রিড",
+  "Electric": "ইলেকট্রিক"
+ },
+ "assembly": {
+  "Local": "দেশি সংযোজন",
+  "Imported": "আমদানি করা"
+ },
+ "features": {
+  "ABS": "এবিএস",
+  "Air Conditioning": "এয়ার কন্ডিশনিং",
+  "Airbags": "এয়ারব্যাগ",
+  "Alloy Rims": "অ্যালয় রিম",
+  "Bluetooth": "ব্লুটুথ",
+  "Cruise Control": "ক্রুজ কন্ট্রোল",
+  "Fog Lights": "ফগ লাইট",
+  "Heated Seats": "হিটেড সিট",
+  "Immobilizer": "ইমোবিলাইজার",
+  "Keyless Entry": "কি-লেস এন্ট্রি",
+  "Leather Seats": "লেদার সিট",
+  "Navigation": "নেভিগেশন",
+  "Parking Sensors": "পার্কিং সেন্সর",
+  "Power Steering": "পাওয়ার স্টিয়ারিং",
+  "Power Windows": "পাওয়ার উইন্ডো",
+  "Rear Camera": "রিয়ার ক্যামেরা",
+  "Sunroof": "সানরুফ",
+  "USB Port": "ইউএসবি পোর্ট"
+ },
+ "description": {
+  "Carefully driven, always garage kept and regularly serviced.": "যত্নে চালানো, সবসময় গ্যারেজে রাখা এবং নিয়মিত সার্ভিসিং করা।",
+  "Company-maintained until last year, full record available.": "গত বছর পর্যন্ত কোম্পানি-রক্ষণাবেক্ষণে ছিল, পুরো রেকর্ড আছে।",
+  "Complete documents, token tax paid up to date.": "সব কাগজপত্র সম্পূর্ণ, টোকেন ট্যাক্স হালনাগাদ পরিশোধিত।",
+  "Doctor-owned vehicle, used sparingly within the city.": "ডাক্তারের গাড়ি, শহরের মধ্যে অল্পই ব্যবহৃত।",
+  "Excellent condition inside and out, all original paint.": "ভেতরে-বাইরে চমৎকার অবস্থা, পুরোটাই আসল রং।",
+  "First-class mechanical condition, new tyres fitted recently.": "প্রথম শ্রেণির যান্ত্রিক অবস্থা, সম্প্রতি নতুন টায়ার লাগানো।",
+  "Immaculate interior, chilled AC, smooth long-route drive.": "নিখুঁত ইন্টেরিয়র, ঠান্ডা এসি, লং রুটে মসৃণ চলে।",
+  "Non-accidental, engine and suspension in top shape.": "দুর্ঘটনামুক্ত, ইঞ্জিন ও সাসপেনশন সেরা অবস্থায়।",
+  "Urgent sale, serious buyers only, price slightly negotiable.": "জরুরি বিক্রি, শুধু আগ্রহী ক্রেতা, দাম সামান্য আলোচনাসাপেক্ষ।",
+  "Well-maintained family car with complete service history.": "যত্নে রাখা পারিবারিক গাড়ি, সম্পূর্ণ সার্ভিস ইতিহাসসহ।"
+ },
+ "sellers": {
+  "Adeel Akram": "আদিল আকরাম",
+  "Ahmed Khan": "আহমেদ খান",
+  "Amna Javed": "আমনা জাভেদ",
+  "Ayesha Siddiqui": "আয়েশা সিদ্দিকী",
+  "Bilal Hussain": "বিলাল হুসেইন",
+  "Faisal Mahmood": "ফয়সাল মাহমুদ",
+  "Fatima Malik": "ফাতিমা মালিক",
+  "Hassan Raza": "হাসান রাজা",
+  "Hira Farooq": "হিরা ফারুক",
+  "Imran Qureshi": "ইমরান কুরেশি",
+  "Kamran Baig": "কামরান বেগ",
+  "Mehwish Iqbal": "মেহউইশ ইকবাল",
+  "Nadia Hussain": "নাদিয়া হুসেইন",
+  "Rabia Anwar": "রাবিয়া আনোয়ার",
+  "Saad Chaudhry": "সাদ চৌধুরী",
+  "Salman Butt": "সালমান বাট",
+  "Sana Tariq": "সানা তারিক",
+  "Tariq Jameel": "তারিক জামিল",
+  "Usman Sheikh": "উসমান শেখ",
+  "Zainab Akhtar": "জয়নব আখতার"
+ },
+ "dealers": {
+  "Khan Motors": "খান মোটরস",
+  "City Auto Traders": "সিটি অটো ট্রেডার্স",
+  "Prime Wheels": "প্রাইম হুইলস",
+  "Capital Car Point": "ক্যাপিটাল কার পয়েন্ট",
+  "Star Motors": "স্টার মোটরস",
+  "Elite Auto Gallery": "এলিট অটো গ্যালারি",
+  "Metro Cars": "মেট্রো কারস",
+  "Crescent Automobiles": "ক্রিসেন্ট অটোমোবাইলস",
+  "Highway Motors": "হাইওয়ে মোটরস",
+  "Galaxy Car Centre": "গ্যালাক্সি কার সেন্টার"
+ },
+ "account_name": {
+  "Ahmed Raza": "আহমেদ রাজা"
+ },
+ "preseeded_ads": {
+  "Family-used Cultus VXL, first owner, all documents complete.": "পারিবারিক ব্যবহারের কালটাস VXL, প্রথম মালিক, সব কাগজপত্র সম্পূর্ণ।",
+  "Honda City Aspire, new tyres, sold to a colleague.": "হোন্ডা সিটি অ্যাসপায়ার, নতুন টায়ার, এক সহকর্মীর কাছে বিক্রি।"
+ }
+}

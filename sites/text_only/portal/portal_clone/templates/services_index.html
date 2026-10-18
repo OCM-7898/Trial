@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ S.nav_services }}{% endblock %}
+{% block body %}
+<div class="full">
+  <h1>{{ S.all_services }}</h1>
+  <ul class="svc-grid">
+    {% for sv in services %}
+    <li><a href="/services/{{ sv.slug }}/">
+      <strong>{{ sv.name }}</strong><span>{{ sv.summary }}</span></a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

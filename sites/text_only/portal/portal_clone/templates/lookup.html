@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if intro %}<p class="lede">{{ intro }}</p>{% endif %}
+  {% if error %}<div class="error"><p>{{ error }}</p></div>{% endif %}
+  <form class="form" method="{{ method }}">
+    {% for name, val in (hidden or {}).items() %}<input type="hidden" name="{{ name }}" value="{{ val }}">{% endfor %}
+    {% for name, label in fields %}
+    <div class="field"><label>{{ label }}</label><input name="{{ name }}"></div>
+    {% endfor %}
+    <button class="btn btn-primary">{{ S.submit }}</button>
+  </form>
+</div>
+{% endblock %}

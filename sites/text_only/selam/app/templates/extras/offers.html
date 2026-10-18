@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ t("nav.offers") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("nav.offers") }}</li></ol></nav>
+<h1>{{ t("nav.offers") }}</h1>
+<p>{{ t("offers.intro") }}</p>
+<p><a class="btn-link" href="{{ path('fare_calendar') }}">{{ t("offers.calendar_link") }}</a></p>
+<h2>{{ t("offers.live") }}</h2>
+<div class="cards">{% for row in live %}
+<article class="card"><div class="card-body">
+  <h3>{{ row.promotion.title }}</h3><p>{{ row.promotion.body }}</p>
+  <p class="hint">{{ row.region }} &middot; {{ t("offers.valid_until", date=fmt_date(row.promotion.valid_to)) }}</p></div>
+  <div class="card-foot"><a class="btn btn-secondary" href="{{ path('offer_detail', offer_id=row.promotion.id) }}">{{ t("common.learn_more") }}</a></div>
+</article>{% endfor %}</div>
+<h2>{{ t("offers.other") }}</h2>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("offers.offer") }}</th><th scope="col">{{ t("baggage.region") }}</th>
+    <th scope="col">{{ t("offers.window") }}</th><th scope="col">{{ t("claim.status") }}</th></tr></thead>
+  <tbody>{% for row in other %}<tr>
+    <td><a href="{{ path('offer_detail', offer_id=row.promotion.id) }}">{{ row.promotion.title }}</a></td>
+    <td>{{ row.region }}</td>
+    <td>{{ fmt_date(row.promotion.valid_from) }} &ndash; {{ fmt_date(row.promotion.valid_to) }}</td>
+    <td><span class="badge badge-warn">{% if row.state == "expired" %}{{ t("offers.expired") }}{% else %}{{ t("offers.upcoming") }}{% endif %}</span></td>
+  </tr>{% endfor %}</tbody></table></div>
+</div>{% endblock %}

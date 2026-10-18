@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.sb_title.format(s=sname(code), c=code) }}</h1>
+<p class="muted">{{ S.sb_note }}</p>
+<table>
+  <tr><th>{{ S.train }}</th><th>{{ S.sb_route }}</th>
+      <th>{{ S.arr }}</th><th>{{ S.dep }}</th><th>{{ S.day }}</th>
+      <th>{{ S.sb_days_here }}</th></tr>
+  {% for r in rows %}
+  <tr>
+    <td><a href="/train/{{ r.no }}">{{ r.no }} {{ tname(r.no) }}</a></td>
+    <td>{{ sname(r.origin) }} → {{ sname(r.terminus) }}</td>
+    <td>{{ nd(r.arr) if r.arr else "—" }}</td>
+    <td>{{ nd(r.dep) if r.dep else "—" }}</td>
+    <td>{{ nd(r.day) }}</td>
+    <td>{% for d in r.days %}{{ S["d_" ~ d] }}{% if not loop.last %} {% endif %}{% endfor %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

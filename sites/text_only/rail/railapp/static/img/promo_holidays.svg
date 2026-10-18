@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <rect width="320" height="180" fill="#cfe8f7"/>
+  <circle cx="250" cy="45" r="26" fill="#f7c85c"/>
+  <path d="M0 130 Q80 100 160 125 T320 120 V180 H0 Z" fill="#7ec4e8"/>
+  <path d="M0 150 Q100 130 210 152 T320 148 V180 H0 Z" fill="#f2dcae"/>
+  <!-- palm -->
+  <path d="M70 150 q4 -50 -6 -74" stroke="#8a5a2b" stroke-width="7" fill="none"/>
+  <g fill="#3f9e57">
+    <path d="M64 76 q-30 -14 -48 2 q26 2 48 10 Z"/>
+    <path d="M64 76 q6 -30 30 -36 q-10 24 -18 40 Z"/>
+    <path d="M64 76 q30 -10 46 8 q-26 0 -46 4 Z"/>
+    <path d="M64 76 q-14 -26 -38 -28 q12 22 26 34 Z"/>
+  </g>
+  <circle cx="120" cy="152" r="9" fill="#e05a4e"/>
+  <path d="M111 152 a9 9 0 0 1 18 0 Z" fill="#ffffff"/>
+</svg>

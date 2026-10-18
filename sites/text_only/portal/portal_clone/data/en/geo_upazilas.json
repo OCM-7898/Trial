@@ -1,0 +1,1794 @@
+[
+ {
+  "id": 1,
+  "district_id": 1,
+  "code": "UP0001",
+  "name": "Barguna Sadar",
+  "sort_order": 1
+ },
+ {
+  "id": 2,
+  "district_id": 1,
+  "code": "UP0002",
+  "name": "Barguna Para",
+  "sort_order": 2
+ },
+ {
+  "id": 3,
+  "district_id": 1,
+  "code": "UP0003",
+  "name": "Barguna Sadar",
+  "sort_order": 3
+ },
+ {
+  "id": 4,
+  "district_id": 1,
+  "code": "UP0004",
+  "name": "Barguna Bazar",
+  "sort_order": 4
+ },
+ {
+  "id": 5,
+  "district_id": 2,
+  "code": "UP0005",
+  "name": "Barishal Sadar",
+  "sort_order": 5
+ },
+ {
+  "id": 6,
+  "district_id": 2,
+  "code": "UP0006",
+  "name": "Barishal Bazar",
+  "sort_order": 6
+ },
+ {
+  "id": 7,
+  "district_id": 2,
+  "code": "UP0007",
+  "name": "Barishal Ganj",
+  "sort_order": 7
+ },
+ {
+  "id": 8,
+  "district_id": 2,
+  "code": "UP0008",
+  "name": "Barishal Bazar",
+  "sort_order": 8
+ },
+ {
+  "id": 9,
+  "district_id": 3,
+  "code": "UP0009",
+  "name": "Bhola Sadar",
+  "sort_order": 9
+ },
+ {
+  "id": 10,
+  "district_id": 3,
+  "code": "UP0010",
+  "name": "Bhola Hat",
+  "sort_order": 10
+ },
+ {
+  "id": 11,
+  "district_id": 3,
+  "code": "UP0011",
+  "name": "Bhola Bazar",
+  "sort_order": 11
+ },
+ {
+  "id": 12,
+  "district_id": 3,
+  "code": "UP0012",
+  "name": "Bhola Sadar",
+  "sort_order": 12
+ },
+ {
+  "id": 13,
+  "district_id": 4,
+  "code": "UP0013",
+  "name": "Jhalokati Sadar",
+  "sort_order": 13
+ },
+ {
+  "id": 14,
+  "district_id": 4,
+  "code": "UP0014",
+  "name": "Jhalokati Sadar",
+  "sort_order": 14
+ },
+ {
+  "id": 15,
+  "district_id": 4,
+  "code": "UP0015",
+  "name": "Jhalokati Ganj",
+  "sort_order": 15
+ },
+ {
+  "id": 16,
+  "district_id": 4,
+  "code": "UP0016",
+  "name": "Jhalokati North",
+  "sort_order": 16
+ },
+ {
+  "id": 17,
+  "district_id": 5,
+  "code": "UP0017",
+  "name": "Patuakhali Sadar",
+  "sort_order": 17
+ },
+ {
+  "id": 18,
+  "district_id": 5,
+  "code": "UP0018",
+  "name": "Patuakhali North",
+  "sort_order": 18
+ },
+ {
+  "id": 19,
+  "district_id": 5,
+  "code": "UP0019",
+  "name": "Patuakhali Para",
+  "sort_order": 19
+ },
+ {
+  "id": 20,
+  "district_id": 5,
+  "code": "UP0020",
+  "name": "Patuakhali North",
+  "sort_order": 20
+ },
+ {
+  "id": 21,
+  "district_id": 6,
+  "code": "UP0021",
+  "name": "Pirojpur Sadar",
+  "sort_order": 21
+ },
+ {
+  "id": 22,
+  "district_id": 6,
+  "code": "UP0022",
+  "name": "Pirojpur Hat",
+  "sort_order": 22
+ },
+ {
+  "id": 23,
+  "district_id": 6,
+  "code": "UP0023",
+  "name": "Pirojpur Sadar",
+  "sort_order": 23
+ },
+ {
+  "id": 24,
+  "district_id": 6,
+  "code": "UP0024",
+  "name": "Pirojpur North",
+  "sort_order": 24
+ },
+ {
+  "id": 25,
+  "district_id": 7,
+  "code": "UP0025",
+  "name": "Bandarban Sadar",
+  "sort_order": 25
+ },
+ {
+  "id": 26,
+  "district_id": 7,
+  "code": "UP0026",
+  "name": "Bandarban Bazar",
+  "sort_order": 26
+ },
+ {
+  "id": 27,
+  "district_id": 7,
+  "code": "UP0027",
+  "name": "Bandarban Ganj",
+  "sort_order": 27
+ },
+ {
+  "id": 28,
+  "district_id": 7,
+  "code": "UP0028",
+  "name": "Bandarban Hat",
+  "sort_order": 28
+ },
+ {
+  "id": 29,
+  "district_id": 8,
+  "code": "UP0029",
+  "name": "Brahmanbaria Sadar",
+  "sort_order": 29
+ },
+ {
+  "id": 30,
+  "district_id": 8,
+  "code": "UP0030",
+  "name": "Brahmanbaria South",
+  "sort_order": 30
+ },
+ {
+  "id": 31,
+  "district_id": 8,
+  "code": "UP0031",
+  "name": "Brahmanbaria Para",
+  "sort_order": 31
+ },
+ {
+  "id": 32,
+  "district_id": 8,
+  "code": "UP0032",
+  "name": "Brahmanbaria Ganj",
+  "sort_order": 32
+ },
+ {
+  "id": 33,
+  "district_id": 9,
+  "code": "UP0033",
+  "name": "Chandpur Sadar",
+  "sort_order": 33
+ },
+ {
+  "id": 34,
+  "district_id": 9,
+  "code": "UP0034",
+  "name": "Chandpur South",
+  "sort_order": 34
+ },
+ {
+  "id": 35,
+  "district_id": 9,
+  "code": "UP0035",
+  "name": "Chandpur Bazar",
+  "sort_order": 35
+ },
+ {
+  "id": 36,
+  "district_id": 9,
+  "code": "UP0036",
+  "name": "Chandpur Bazar",
+  "sort_order": 36
+ },
+ {
+  "id": 37,
+  "district_id": 10,
+  "code": "UP0037",
+  "name": "Chattogram Sadar",
+  "sort_order": 37
+ },
+ {
+  "id": 38,
+  "district_id": 10,
+  "code": "UP0038",
+  "name": "Chattogram Hat",
+  "sort_order": 38
+ },
+ {
+  "id": 39,
+  "district_id": 10,
+  "code": "UP0039",
+  "name": "Chattogram Sadar",
+  "sort_order": 39
+ },
+ {
+  "id": 40,
+  "district_id": 10,
+  "code": "UP0040",
+  "name": "Chattogram North",
+  "sort_order": 40
+ },
+ {
+  "id": 41,
+  "district_id": 11,
+  "code": "UP0041",
+  "name": "Cox's Bazar Sadar",
+  "sort_order": 41
+ },
+ {
+  "id": 42,
+  "district_id": 11,
+  "code": "UP0042",
+  "name": "Cox's Bazar South",
+  "sort_order": 42
+ },
+ {
+  "id": 43,
+  "district_id": 11,
+  "code": "UP0043",
+  "name": "Cox's Bazar Ganj",
+  "sort_order": 43
+ },
+ {
+  "id": 44,
+  "district_id": 11,
+  "code": "UP0044",
+  "name": "Cox's Bazar Para",
+  "sort_order": 44
+ },
+ {
+  "id": 45,
+  "district_id": 12,
+  "code": "UP0045",
+  "name": "Cumilla Sadar",
+  "sort_order": 45
+ },
+ {
+  "id": 46,
+  "district_id": 12,
+  "code": "UP0046",
+  "name": "Cumilla Bazar",
+  "sort_order": 46
+ },
+ {
+  "id": 47,
+  "district_id": 12,
+  "code": "UP0047",
+  "name": "Cumilla North",
+  "sort_order": 47
+ },
+ {
+  "id": 48,
+  "district_id": 12,
+  "code": "UP0048",
+  "name": "Cumilla Sadar",
+  "sort_order": 48
+ },
+ {
+  "id": 49,
+  "district_id": 13,
+  "code": "UP0049",
+  "name": "Feni Sadar",
+  "sort_order": 49
+ },
+ {
+  "id": 50,
+  "district_id": 13,
+  "code": "UP0050",
+  "name": "Feni Hat",
+  "sort_order": 50
+ },
+ {
+  "id": 51,
+  "district_id": 13,
+  "code": "UP0051",
+  "name": "Feni South",
+  "sort_order": 51
+ },
+ {
+  "id": 52,
+  "district_id": 13,
+  "code": "UP0052",
+  "name": "Feni South",
+  "sort_order": 52
+ },
+ {
+  "id": 53,
+  "district_id": 14,
+  "code": "UP0053",
+  "name": "Khagrachhari Sadar",
+  "sort_order": 53
+ },
+ {
+  "id": 54,
+  "district_id": 14,
+  "code": "UP0054",
+  "name": "Khagrachhari Ganj",
+  "sort_order": 54
+ },
+ {
+  "id": 55,
+  "district_id": 14,
+  "code": "UP0055",
+  "name": "Khagrachhari Para",
+  "sort_order": 55
+ },
+ {
+  "id": 56,
+  "district_id": 14,
+  "code": "UP0056",
+  "name": "Khagrachhari North",
+  "sort_order": 56
+ },
+ {
+  "id": 57,
+  "district_id": 15,
+  "code": "UP0057",
+  "name": "Lakshmipur Sadar",
+  "sort_order": 57
+ },
+ {
+  "id": 58,
+  "district_id": 15,
+  "code": "UP0058",
+  "name": "Lakshmipur Ganj",
+  "sort_order": 58
+ },
+ {
+  "id": 59,
+  "district_id": 15,
+  "code": "UP0059",
+  "name": "Lakshmipur South",
+  "sort_order": 59
+ },
+ {
+  "id": 60,
+  "district_id": 15,
+  "code": "UP0060",
+  "name": "Lakshmipur Bazar",
+  "sort_order": 60
+ },
+ {
+  "id": 61,
+  "district_id": 16,
+  "code": "UP0061",
+  "name": "Noakhali Sadar",
+  "sort_order": 61
+ },
+ {
+  "id": 62,
+  "district_id": 16,
+  "code": "UP0062",
+  "name": "Noakhali Sadar",
+  "sort_order": 62
+ },
+ {
+  "id": 63,
+  "district_id": 16,
+  "code": "UP0063",
+  "name": "Noakhali North",
+  "sort_order": 63
+ },
+ {
+  "id": 64,
+  "district_id": 16,
+  "code": "UP0064",
+  "name": "Noakhali Para",
+  "sort_order": 64
+ },
+ {
+  "id": 65,
+  "district_id": 17,
+  "code": "UP0065",
+  "name": "Rangamati Sadar",
+  "sort_order": 65
+ },
+ {
+  "id": 66,
+  "district_id": 17,
+  "code": "UP0066",
+  "name": "Rangamati Hat",
+  "sort_order": 66
+ },
+ {
+  "id": 67,
+  "district_id": 17,
+  "code": "UP0067",
+  "name": "Rangamati South",
+  "sort_order": 67
+ },
+ {
+  "id": 68,
+  "district_id": 17,
+  "code": "UP0068",
+  "name": "Rangamati Para",
+  "sort_order": 68
+ },
+ {
+  "id": 69,
+  "district_id": 18,
+  "code": "UP0069",
+  "name": "Dhaka Sadar",
+  "sort_order": 69
+ },
+ {
+  "id": 70,
+  "district_id": 18,
+  "code": "UP0070",
+  "name": "Dhaka Ganj",
+  "sort_order": 70
+ },
+ {
+  "id": 71,
+  "district_id": 18,
+  "code": "UP0071",
+  "name": "Dhaka Sadar",
+  "sort_order": 71
+ },
+ {
+  "id": 72,
+  "district_id": 18,
+  "code": "UP0072",
+  "name": "Dhaka Ganj",
+  "sort_order": 72
+ },
+ {
+  "id": 73,
+  "district_id": 19,
+  "code": "UP0073",
+  "name": "Faridpur Sadar",
+  "sort_order": 73
+ },
+ {
+  "id": 74,
+  "district_id": 19,
+  "code": "UP0074",
+  "name": "Faridpur South",
+  "sort_order": 74
+ },
+ {
+  "id": 75,
+  "district_id": 19,
+  "code": "UP0075",
+  "name": "Faridpur South",
+  "sort_order": 75
+ },
+ {
+  "id": 76,
+  "district_id": 19,
+  "code": "UP0076",
+  "name": "Faridpur Sadar",
+  "sort_order": 76
+ },
+ {
+  "id": 77,
+  "district_id": 20,
+  "code": "UP0077",
+  "name": "Gazipur Sadar",
+  "sort_order": 77
+ },
+ {
+  "id": 78,
+  "district_id": 20,
+  "code": "UP0078",
+  "name": "Gazipur North",
+  "sort_order": 78
+ },
+ {
+  "id": 79,
+  "district_id": 20,
+  "code": "UP0079",
+  "name": "Gazipur Hat",
+  "sort_order": 79
+ },
+ {
+  "id": 80,
+  "district_id": 20,
+  "code": "UP0080",
+  "name": "Gazipur Hat",
+  "sort_order": 80
+ },
+ {
+  "id": 81,
+  "district_id": 21,
+  "code": "UP0081",
+  "name": "Gopalganj Sadar",
+  "sort_order": 81
+ },
+ {
+  "id": 82,
+  "district_id": 21,
+  "code": "UP0082",
+  "name": "Gopalganj Para",
+  "sort_order": 82
+ },
+ {
+  "id": 83,
+  "district_id": 21,
+  "code": "UP0083",
+  "name": "Gopalganj South",
+  "sort_order": 83
+ },
+ {
+  "id": 84,
+  "district_id": 21,
+  "code": "UP0084",
+  "name": "Gopalganj South",
+  "sort_order": 84
+ },
+ {
+  "id": 85,
+  "district_id": 22,
+  "code": "UP0085",
+  "name": "Kishoreganj Sadar",
+  "sort_order": 85
+ },
+ {
+  "id": 86,
+  "district_id": 22,
+  "code": "UP0086",
+  "name": "Kishoreganj Hat",
+  "sort_order": 86
+ },
+ {
+  "id": 87,
+  "district_id": 22,
+  "code": "UP0087",
+  "name": "Kishoreganj Ganj",
+  "sort_order": 87
+ },
+ {
+  "id": 88,
+  "district_id": 22,
+  "code": "UP0088",
+  "name": "Kishoreganj North",
+  "sort_order": 88
+ },
+ {
+  "id": 89,
+  "district_id": 23,
+  "code": "UP0089",
+  "name": "Madaripur Sadar",
+  "sort_order": 89
+ },
+ {
+  "id": 90,
+  "district_id": 23,
+  "code": "UP0090",
+  "name": "Madaripur Hat",
+  "sort_order": 90
+ },
+ {
+  "id": 91,
+  "district_id": 23,
+  "code": "UP0091",
+  "name": "Madaripur Hat",
+  "sort_order": 91
+ },
+ {
+  "id": 92,
+  "district_id": 23,
+  "code": "UP0092",
+  "name": "Madaripur Para",
+  "sort_order": 92
+ },
+ {
+  "id": 93,
+  "district_id": 24,
+  "code": "UP0093",
+  "name": "Manikganj Sadar",
+  "sort_order": 93
+ },
+ {
+  "id": 94,
+  "district_id": 24,
+  "code": "UP0094",
+  "name": "Manikganj North",
+  "sort_order": 94
+ },
+ {
+  "id": 95,
+  "district_id": 24,
+  "code": "UP0095",
+  "name": "Manikganj South",
+  "sort_order": 95
+ },
+ {
+  "id": 96,
+  "district_id": 24,
+  "code": "UP0096",
+  "name": "Manikganj Sadar",
+  "sort_order": 96
+ },
+ {
+  "id": 97,
+  "district_id": 25,
+  "code": "UP0097",
+  "name": "Munshiganj Sadar",
+  "sort_order": 97
+ },
+ {
+  "id": 98,
+  "district_id": 25,
+  "code": "UP0098",
+  "name": "Munshiganj Bazar",
+  "sort_order": 98
+ },
+ {
+  "id": 99,
+  "district_id": 25,
+  "code": "UP0099",
+  "name": "Munshiganj Ganj",
+  "sort_order": 99
+ },
+ {
+  "id": 100,
+  "district_id": 25,
+  "code": "UP0100",
+  "name": "Munshiganj Sadar",
+  "sort_order": 100
+ },
+ {
+  "id": 101,
+  "district_id": 26,
+  "code": "UP0101",
+  "name": "Narayanganj Sadar",
+  "sort_order": 101
+ },
+ {
+  "id": 102,
+  "district_id": 26,
+  "code": "UP0102",
+  "name": "Narayanganj North",
+  "sort_order": 102
+ },
+ {
+  "id": 103,
+  "district_id": 26,
+  "code": "UP0103",
+  "name": "Narayanganj Para",
+  "sort_order": 103
+ },
+ {
+  "id": 104,
+  "district_id": 26,
+  "code": "UP0104",
+  "name": "Narayanganj North",
+  "sort_order": 104
+ },
+ {
+  "id": 105,
+  "district_id": 27,
+  "code": "UP0105",
+  "name": "Narsingdi Sadar",
+  "sort_order": 105
+ },
+ {
+  "id": 106,
+  "district_id": 27,
+  "code": "UP0106",
+  "name": "Narsingdi South",
+  "sort_order": 106
+ },
+ {
+  "id": 107,
+  "district_id": 27,
+  "code": "UP0107",
+  "name": "Narsingdi South",
+  "sort_order": 107
+ },
+ {
+  "id": 108,
+  "district_id": 27,
+  "code": "UP0108",
+  "name": "Narsingdi Bazar",
+  "sort_order": 108
+ },
+ {
+  "id": 109,
+  "district_id": 28,
+  "code": "UP0109",
+  "name": "Rajbari Sadar",
+  "sort_order": 109
+ },
+ {
+  "id": 110,
+  "district_id": 28,
+  "code": "UP0110",
+  "name": "Rajbari Ganj",
+  "sort_order": 110
+ },
+ {
+  "id": 111,
+  "district_id": 28,
+  "code": "UP0111",
+  "name": "Rajbari Para",
+  "sort_order": 111
+ },
+ {
+  "id": 112,
+  "district_id": 28,
+  "code": "UP0112",
+  "name": "Rajbari Para",
+  "sort_order": 112
+ },
+ {
+  "id": 113,
+  "district_id": 29,
+  "code": "UP0113",
+  "name": "Shariatpur Sadar",
+  "sort_order": 113
+ },
+ {
+  "id": 114,
+  "district_id": 29,
+  "code": "UP0114",
+  "name": "Shariatpur Bazar",
+  "sort_order": 114
+ },
+ {
+  "id": 115,
+  "district_id": 29,
+  "code": "UP0115",
+  "name": "Shariatpur South",
+  "sort_order": 115
+ },
+ {
+  "id": 116,
+  "district_id": 29,
+  "code": "UP0116",
+  "name": "Shariatpur Para",
+  "sort_order": 116
+ },
+ {
+  "id": 117,
+  "district_id": 30,
+  "code": "UP0117",
+  "name": "Tangail Sadar",
+  "sort_order": 117
+ },
+ {
+  "id": 118,
+  "district_id": 30,
+  "code": "UP0118",
+  "name": "Tangail Ganj",
+  "sort_order": 118
+ },
+ {
+  "id": 119,
+  "district_id": 30,
+  "code": "UP0119",
+  "name": "Tangail Hat",
+  "sort_order": 119
+ },
+ {
+  "id": 120,
+  "district_id": 30,
+  "code": "UP0120",
+  "name": "Tangail South",
+  "sort_order": 120
+ },
+ {
+  "id": 121,
+  "district_id": 31,
+  "code": "UP0121",
+  "name": "Bagerhat Sadar",
+  "sort_order": 121
+ },
+ {
+  "id": 122,
+  "district_id": 31,
+  "code": "UP0122",
+  "name": "Bagerhat Hat",
+  "sort_order": 122
+ },
+ {
+  "id": 123,
+  "district_id": 31,
+  "code": "UP0123",
+  "name": "Bagerhat Ganj",
+  "sort_order": 123
+ },
+ {
+  "id": 124,
+  "district_id": 31,
+  "code": "UP0124",
+  "name": "Bagerhat Sadar",
+  "sort_order": 124
+ },
+ {
+  "id": 125,
+  "district_id": 32,
+  "code": "UP0125",
+  "name": "Chuadanga Sadar",
+  "sort_order": 125
+ },
+ {
+  "id": 126,
+  "district_id": 32,
+  "code": "UP0126",
+  "name": "Chuadanga North",
+  "sort_order": 126
+ },
+ {
+  "id": 127,
+  "district_id": 32,
+  "code": "UP0127",
+  "name": "Chuadanga Bazar",
+  "sort_order": 127
+ },
+ {
+  "id": 128,
+  "district_id": 32,
+  "code": "UP0128",
+  "name": "Chuadanga South",
+  "sort_order": 128
+ },
+ {
+  "id": 129,
+  "district_id": 33,
+  "code": "UP0129",
+  "name": "Jashore Sadar",
+  "sort_order": 129
+ },
+ {
+  "id": 130,
+  "district_id": 33,
+  "code": "UP0130",
+  "name": "Jashore Hat",
+  "sort_order": 130
+ },
+ {
+  "id": 131,
+  "district_id": 33,
+  "code": "UP0131",
+  "name": "Jashore South",
+  "sort_order": 131
+ },
+ {
+  "id": 132,
+  "district_id": 33,
+  "code": "UP0132",
+  "name": "Jashore South",
+  "sort_order": 132
+ },
+ {
+  "id": 133,
+  "district_id": 34,
+  "code": "UP0133",
+  "name": "Jhenaidah Sadar",
+  "sort_order": 133
+ },
+ {
+  "id": 134,
+  "district_id": 34,
+  "code": "UP0134",
+  "name": "Jhenaidah Bazar",
+  "sort_order": 134
+ },
+ {
+  "id": 135,
+  "district_id": 34,
+  "code": "UP0135",
+  "name": "Jhenaidah South",
+  "sort_order": 135
+ },
+ {
+  "id": 136,
+  "district_id": 34,
+  "code": "UP0136",
+  "name": "Jhenaidah Sadar",
+  "sort_order": 136
+ },
+ {
+  "id": 137,
+  "district_id": 35,
+  "code": "UP0137",
+  "name": "Khulna Sadar",
+  "sort_order": 137
+ },
+ {
+  "id": 138,
+  "district_id": 35,
+  "code": "UP0138",
+  "name": "Khulna Para",
+  "sort_order": 138
+ },
+ {
+  "id": 139,
+  "district_id": 35,
+  "code": "UP0139",
+  "name": "Khulna Hat",
+  "sort_order": 139
+ },
+ {
+  "id": 140,
+  "district_id": 35,
+  "code": "UP0140",
+  "name": "Khulna Sadar",
+  "sort_order": 140
+ },
+ {
+  "id": 141,
+  "district_id": 36,
+  "code": "UP0141",
+  "name": "Kushtia Sadar",
+  "sort_order": 141
+ },
+ {
+  "id": 142,
+  "district_id": 36,
+  "code": "UP0142",
+  "name": "Kushtia Sadar",
+  "sort_order": 142
+ },
+ {
+  "id": 143,
+  "district_id": 36,
+  "code": "UP0143",
+  "name": "Kushtia Ganj",
+  "sort_order": 143
+ },
+ {
+  "id": 144,
+  "district_id": 36,
+  "code": "UP0144",
+  "name": "Kushtia Bazar",
+  "sort_order": 144
+ },
+ {
+  "id": 145,
+  "district_id": 37,
+  "code": "UP0145",
+  "name": "Magura Sadar",
+  "sort_order": 145
+ },
+ {
+  "id": 146,
+  "district_id": 37,
+  "code": "UP0146",
+  "name": "Magura Bazar",
+  "sort_order": 146
+ },
+ {
+  "id": 147,
+  "district_id": 37,
+  "code": "UP0147",
+  "name": "Magura North",
+  "sort_order": 147
+ },
+ {
+  "id": 148,
+  "district_id": 37,
+  "code": "UP0148",
+  "name": "Magura South",
+  "sort_order": 148
+ },
+ {
+  "id": 149,
+  "district_id": 38,
+  "code": "UP0149",
+  "name": "Meherpur Sadar",
+  "sort_order": 149
+ },
+ {
+  "id": 150,
+  "district_id": 38,
+  "code": "UP0150",
+  "name": "Meherpur Bazar",
+  "sort_order": 150
+ },
+ {
+  "id": 151,
+  "district_id": 38,
+  "code": "UP0151",
+  "name": "Meherpur South",
+  "sort_order": 151
+ },
+ {
+  "id": 152,
+  "district_id": 38,
+  "code": "UP0152",
+  "name": "Meherpur Para",
+  "sort_order": 152
+ },
+ {
+  "id": 153,
+  "district_id": 39,
+  "code": "UP0153",
+  "name": "Narail Sadar",
+  "sort_order": 153
+ },
+ {
+  "id": 154,
+  "district_id": 39,
+  "code": "UP0154",
+  "name": "Narail Bazar",
+  "sort_order": 154
+ },
+ {
+  "id": 155,
+  "district_id": 39,
+  "code": "UP0155",
+  "name": "Narail Hat",
+  "sort_order": 155
+ },
+ {
+  "id": 156,
+  "district_id": 39,
+  "code": "UP0156",
+  "name": "Narail Bazar",
+  "sort_order": 156
+ },
+ {
+  "id": 157,
+  "district_id": 40,
+  "code": "UP0157",
+  "name": "Satkhira Sadar",
+  "sort_order": 157
+ },
+ {
+  "id": 158,
+  "district_id": 40,
+  "code": "UP0158",
+  "name": "Satkhira Para",
+  "sort_order": 158
+ },
+ {
+  "id": 159,
+  "district_id": 40,
+  "code": "UP0159",
+  "name": "Satkhira Para",
+  "sort_order": 159
+ },
+ {
+  "id": 160,
+  "district_id": 40,
+  "code": "UP0160",
+  "name": "Satkhira Para",
+  "sort_order": 160
+ },
+ {
+  "id": 161,
+  "district_id": 41,
+  "code": "UP0161",
+  "name": "Jamalpur Sadar",
+  "sort_order": 161
+ },
+ {
+  "id": 162,
+  "district_id": 41,
+  "code": "UP0162",
+  "name": "Jamalpur Bazar",
+  "sort_order": 162
+ },
+ {
+  "id": 163,
+  "district_id": 41,
+  "code": "UP0163",
+  "name": "Jamalpur Hat",
+  "sort_order": 163
+ },
+ {
+  "id": 164,
+  "district_id": 41,
+  "code": "UP0164",
+  "name": "Jamalpur South",
+  "sort_order": 164
+ },
+ {
+  "id": 165,
+  "district_id": 42,
+  "code": "UP0165",
+  "name": "Mymensingh Sadar",
+  "sort_order": 165
+ },
+ {
+  "id": 166,
+  "district_id": 42,
+  "code": "UP0166",
+  "name": "Mymensingh Para",
+  "sort_order": 166
+ },
+ {
+  "id": 167,
+  "district_id": 42,
+  "code": "UP0167",
+  "name": "Mymensingh Sadar",
+  "sort_order": 167
+ },
+ {
+  "id": 168,
+  "district_id": 42,
+  "code": "UP0168",
+  "name": "Mymensingh Para",
+  "sort_order": 168
+ },
+ {
+  "id": 169,
+  "district_id": 43,
+  "code": "UP0169",
+  "name": "Netrokona Sadar",
+  "sort_order": 169
+ },
+ {
+  "id": 170,
+  "district_id": 43,
+  "code": "UP0170",
+  "name": "Netrokona Ganj",
+  "sort_order": 170
+ },
+ {
+  "id": 171,
+  "district_id": 43,
+  "code": "UP0171",
+  "name": "Netrokona Para",
+  "sort_order": 171
+ },
+ {
+  "id": 172,
+  "district_id": 43,
+  "code": "UP0172",
+  "name": "Netrokona Hat",
+  "sort_order": 172
+ },
+ {
+  "id": 173,
+  "district_id": 44,
+  "code": "UP0173",
+  "name": "Sherpur Sadar",
+  "sort_order": 173
+ },
+ {
+  "id": 174,
+  "district_id": 44,
+  "code": "UP0174",
+  "name": "Sherpur Para",
+  "sort_order": 174
+ },
+ {
+  "id": 175,
+  "district_id": 44,
+  "code": "UP0175",
+  "name": "Sherpur North",
+  "sort_order": 175
+ },
+ {
+  "id": 176,
+  "district_id": 44,
+  "code": "UP0176",
+  "name": "Sherpur Hat",
+  "sort_order": 176
+ },
+ {
+  "id": 177,
+  "district_id": 45,
+  "code": "UP0177",
+  "name": "Bogura Sadar",
+  "sort_order": 177
+ },
+ {
+  "id": 178,
+  "district_id": 45,
+  "code": "UP0178",
+  "name": "Bogura Hat",
+  "sort_order": 178
+ },
+ {
+  "id": 179,
+  "district_id": 45,
+  "code": "UP0179",
+  "name": "Bogura North",
+  "sort_order": 179
+ },
+ {
+  "id": 180,
+  "district_id": 45,
+  "code": "UP0180",
+  "name": "Bogura Hat",
+  "sort_order": 180
+ },
+ {
+  "id": 181,
+  "district_id": 46,
+  "code": "UP0181",
+  "name": "Chapainawabganj Sadar",
+  "sort_order": 181
+ },
+ {
+  "id": 182,
+  "district_id": 46,
+  "code": "UP0182",
+  "name": "Chapainawabganj Para",
+  "sort_order": 182
+ },
+ {
+  "id": 183,
+  "district_id": 46,
+  "code": "UP0183",
+  "name": "Chapainawabganj Hat",
+  "sort_order": 183
+ },
+ {
+  "id": 184,
+  "district_id": 46,
+  "code": "UP0184",
+  "name": "Chapainawabganj South",
+  "sort_order": 184
+ },
+ {
+  "id": 185,
+  "district_id": 47,
+  "code": "UP0185",
+  "name": "Joypurhat Sadar",
+  "sort_order": 185
+ },
+ {
+  "id": 186,
+  "district_id": 47,
+  "code": "UP0186",
+  "name": "Joypurhat Bazar",
+  "sort_order": 186
+ },
+ {
+  "id": 187,
+  "district_id": 47,
+  "code": "UP0187",
+  "name": "Joypurhat South",
+  "sort_order": 187
+ },
+ {
+  "id": 188,
+  "district_id": 47,
+  "code": "UP0188",
+  "name": "Joypurhat South",
+  "sort_order": 188
+ },
+ {
+  "id": 189,
+  "district_id": 48,
+  "code": "UP0189",
+  "name": "Naogaon Sadar",
+  "sort_order": 189
+ },
+ {
+  "id": 190,
+  "district_id": 48,
+  "code": "UP0190",
+  "name": "Naogaon South",
+  "sort_order": 190
+ },
+ {
+  "id": 191,
+  "district_id": 48,
+  "code": "UP0191",
+  "name": "Naogaon Ganj",
+  "sort_order": 191
+ },
+ {
+  "id": 192,
+  "district_id": 48,
+  "code": "UP0192",
+  "name": "Naogaon South",
+  "sort_order": 192
+ },
+ {
+  "id": 193,
+  "district_id": 49,
+  "code": "UP0193",
+  "name": "Natore Sadar",
+  "sort_order": 193
+ },
+ {
+  "id": 194,
+  "district_id": 49,
+  "code": "UP0194",
+  "name": "Natore Para",
+  "sort_order": 194
+ },
+ {
+  "id": 195,
+  "district_id": 49,
+  "code": "UP0195",
+  "name": "Natore Para",
+  "sort_order": 195
+ },
+ {
+  "id": 196,
+  "district_id": 49,
+  "code": "UP0196",
+  "name": "Natore North",
+  "sort_order": 196
+ },
+ {
+  "id": 197,
+  "district_id": 50,
+  "code": "UP0197",
+  "name": "Pabna Sadar",
+  "sort_order": 197
+ },
+ {
+  "id": 198,
+  "district_id": 50,
+  "code": "UP0198",
+  "name": "Pabna Ganj",
+  "sort_order": 198
+ },
+ {
+  "id": 199,
+  "district_id": 50,
+  "code": "UP0199",
+  "name": "Pabna Sadar",
+  "sort_order": 199
+ },
+ {
+  "id": 200,
+  "district_id": 50,
+  "code": "UP0200",
+  "name": "Pabna Bazar",
+  "sort_order": 200
+ },
+ {
+  "id": 201,
+  "district_id": 51,
+  "code": "UP0201",
+  "name": "Rajshahi Sadar",
+  "sort_order": 201
+ },
+ {
+  "id": 202,
+  "district_id": 51,
+  "code": "UP0202",
+  "name": "Rajshahi Sadar",
+  "sort_order": 202
+ },
+ {
+  "id": 203,
+  "district_id": 51,
+  "code": "UP0203",
+  "name": "Rajshahi North",
+  "sort_order": 203
+ },
+ {
+  "id": 204,
+  "district_id": 51,
+  "code": "UP0204",
+  "name": "Rajshahi Ganj",
+  "sort_order": 204
+ },
+ {
+  "id": 205,
+  "district_id": 52,
+  "code": "UP0205",
+  "name": "Sirajganj Sadar",
+  "sort_order": 205
+ },
+ {
+  "id": 206,
+  "district_id": 52,
+  "code": "UP0206",
+  "name": "Sirajganj Para",
+  "sort_order": 206
+ },
+ {
+  "id": 207,
+  "district_id": 52,
+  "code": "UP0207",
+  "name": "Sirajganj Hat",
+  "sort_order": 207
+ },
+ {
+  "id": 208,
+  "district_id": 52,
+  "code": "UP0208",
+  "name": "Sirajganj North",
+  "sort_order": 208
+ },
+ {
+  "id": 209,
+  "district_id": 53,
+  "code": "UP0209",
+  "name": "Dinajpur Sadar",
+  "sort_order": 209
+ },
+ {
+  "id": 210,
+  "district_id": 53,
+  "code": "UP0210",
+  "name": "Dinajpur Ganj",
+  "sort_order": 210
+ },
+ {
+  "id": 211,
+  "district_id": 53,
+  "code": "UP0211",
+  "name": "Dinajpur Sadar",
+  "sort_order": 211
+ },
+ {
+  "id": 212,
+  "district_id": 53,
+  "code": "UP0212",
+  "name": "Dinajpur Bazar",
+  "sort_order": 212
+ },
+ {
+  "id": 213,
+  "district_id": 54,
+  "code": "UP0213",
+  "name": "Gaibandha Sadar",
+  "sort_order": 213
+ },
+ {
+  "id": 214,
+  "district_id": 54,
+  "code": "UP0214",
+  "name": "Gaibandha Para",
+  "sort_order": 214
+ },
+ {
+  "id": 215,
+  "district_id": 54,
+  "code": "UP0215",
+  "name": "Gaibandha Bazar",
+  "sort_order": 215
+ },
+ {
+  "id": 216,
+  "district_id": 54,
+  "code": "UP0216",
+  "name": "Gaibandha Sadar",
+  "sort_order": 216
+ },
+ {
+  "id": 217,
+  "district_id": 55,
+  "code": "UP0217",
+  "name": "Kurigram Sadar",
+  "sort_order": 217
+ },
+ {
+  "id": 218,
+  "district_id": 55,
+  "code": "UP0218",
+  "name": "Kurigram Para",
+  "sort_order": 218
+ },
+ {
+  "id": 219,
+  "district_id": 55,
+  "code": "UP0219",
+  "name": "Kurigram Bazar",
+  "sort_order": 219
+ },
+ {
+  "id": 220,
+  "district_id": 55,
+  "code": "UP0220",
+  "name": "Kurigram South",
+  "sort_order": 220
+ },
+ {
+  "id": 221,
+  "district_id": 56,
+  "code": "UP0221",
+  "name": "Lalmonirhat Sadar",
+  "sort_order": 221
+ },
+ {
+  "id": 222,
+  "district_id": 56,
+  "code": "UP0222",
+  "name": "Lalmonirhat Para",
+  "sort_order": 222
+ },
+ {
+  "id": 223,
+  "district_id": 56,
+  "code": "UP0223",
+  "name": "Lalmonirhat Para",
+  "sort_order": 223
+ },
+ {
+  "id": 224,
+  "district_id": 56,
+  "code": "UP0224",
+  "name": "Lalmonirhat Hat",
+  "sort_order": 224
+ },
+ {
+  "id": 225,
+  "district_id": 57,
+  "code": "UP0225",
+  "name": "Nilphamari Sadar",
+  "sort_order": 225
+ },
+ {
+  "id": 226,
+  "district_id": 57,
+  "code": "UP0226",
+  "name": "Nilphamari Ganj",
+  "sort_order": 226
+ },
+ {
+  "id": 227,
+  "district_id": 57,
+  "code": "UP0227",
+  "name": "Nilphamari South",
+  "sort_order": 227
+ },
+ {
+  "id": 228,
+  "district_id": 57,
+  "code": "UP0228",
+  "name": "Nilphamari Hat",
+  "sort_order": 228
+ },
+ {
+  "id": 229,
+  "district_id": 58,
+  "code": "UP0229",
+  "name": "Panchagarh Sadar",
+  "sort_order": 229
+ },
+ {
+  "id": 230,
+  "district_id": 58,
+  "code": "UP0230",
+  "name": "Panchagarh North",
+  "sort_order": 230
+ },
+ {
+  "id": 231,
+  "district_id": 58,
+  "code": "UP0231",
+  "name": "Panchagarh Ganj",
+  "sort_order": 231
+ },
+ {
+  "id": 232,
+  "district_id": 58,
+  "code": "UP0232",
+  "name": "Panchagarh Bazar",
+  "sort_order": 232
+ },
+ {
+  "id": 233,
+  "district_id": 59,
+  "code": "UP0233",
+  "name": "Rangpur Sadar",
+  "sort_order": 233
+ },
+ {
+  "id": 234,
+  "district_id": 59,
+  "code": "UP0234",
+  "name": "Rangpur North",
+  "sort_order": 234
+ },
+ {
+  "id": 235,
+  "district_id": 59,
+  "code": "UP0235",
+  "name": "Rangpur Hat",
+  "sort_order": 235
+ },
+ {
+  "id": 236,
+  "district_id": 59,
+  "code": "UP0236",
+  "name": "Rangpur Para",
+  "sort_order": 236
+ },
+ {
+  "id": 237,
+  "district_id": 60,
+  "code": "UP0237",
+  "name": "Thakurgaon Sadar",
+  "sort_order": 237
+ },
+ {
+  "id": 238,
+  "district_id": 60,
+  "code": "UP0238",
+  "name": "Thakurgaon Para",
+  "sort_order": 238
+ },
+ {
+  "id": 239,
+  "district_id": 60,
+  "code": "UP0239",
+  "name": "Thakurgaon Hat",
+  "sort_order": 239
+ },
+ {
+  "id": 240,
+  "district_id": 60,
+  "code": "UP0240",
+  "name": "Thakurgaon Ganj",
+  "sort_order": 240
+ },
+ {
+  "id": 241,
+  "district_id": 61,
+  "code": "UP0241",
+  "name": "Habiganj Sadar",
+  "sort_order": 241
+ },
+ {
+  "id": 242,
+  "district_id": 61,
+  "code": "UP0242",
+  "name": "Habiganj Para",
+  "sort_order": 242
+ },
+ {
+  "id": 243,
+  "district_id": 61,
+  "code": "UP0243",
+  "name": "Habiganj Bazar",
+  "sort_order": 243
+ },
+ {
+  "id": 244,
+  "district_id": 61,
+  "code": "UP0244",
+  "name": "Habiganj Sadar",
+  "sort_order": 244
+ },
+ {
+  "id": 245,
+  "district_id": 62,
+  "code": "UP0245",
+  "name": "Moulvibazar Sadar",
+  "sort_order": 245
+ },
+ {
+  "id": 246,
+  "district_id": 62,
+  "code": "UP0246",
+  "name": "Moulvibazar Ganj",
+  "sort_order": 246
+ },
+ {
+  "id": 247,
+  "district_id": 62,
+  "code": "UP0247",
+  "name": "Moulvibazar Ganj",
+  "sort_order": 247
+ },
+ {
+  "id": 248,
+  "district_id": 62,
+  "code": "UP0248",
+  "name": "Moulvibazar Ganj",
+  "sort_order": 248
+ },
+ {
+  "id": 249,
+  "district_id": 63,
+  "code": "UP0249",
+  "name": "Sunamganj Sadar",
+  "sort_order": 249
+ },
+ {
+  "id": 250,
+  "district_id": 63,
+  "code": "UP0250",
+  "name": "Sunamganj Hat",
+  "sort_order": 250
+ },
+ {
+  "id": 251,
+  "district_id": 63,
+  "code": "UP0251",
+  "name": "Sunamganj Sadar",
+  "sort_order": 251
+ },
+ {
+  "id": 252,
+  "district_id": 63,
+  "code": "UP0252",
+  "name": "Sunamganj Ganj",
+  "sort_order": 252
+ },
+ {
+  "id": 253,
+  "district_id": 64,
+  "code": "UP0253",
+  "name": "Sylhet Sadar",
+  "sort_order": 253
+ },
+ {
+  "id": 254,
+  "district_id": 64,
+  "code": "UP0254",
+  "name": "Sylhet South",
+  "sort_order": 254
+ },
+ {
+  "id": 255,
+  "district_id": 64,
+  "code": "UP0255",
+  "name": "Sylhet Sadar",
+  "sort_order": 255
+ },
+ {
+  "id": 256,
+  "district_id": 64,
+  "code": "UP0256",
+  "name": "Sylhet Hat",
+  "sort_order": 256
+ }
+]

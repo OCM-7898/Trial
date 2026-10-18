@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}{{ t("manage.detail_title") }} {{ booking.pnr }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol>
+      <li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('manage') }}">{{ t("manage.title") }}</a></li>
+      <li>{{ booking.pnr }}</li>
+    </ol>
+  </nav>
+
+  <h1>{{ t("manage.detail_title") }} {{ booking.pnr }}</h1>
+  <p class="hint">
+    {{ t("manage.booked_on", date=fmt_date(booking.created_on)) }} &middot;
+    {{ channel_label }} &middot;
+    {{ t("manage.total_paid", amount=fmt_money(booking.total_paid)) }}
+  </p>
+
+  <div class="split">
+    <div>
+      <h2>{{ t("manage.itinerary") }}</h2>
+      {% for row in rows %}
+      {% set v = row.view %}
+      <section class="card" style="margin-bottom:18px">
+        <div class="card-body">
+          <h3>{{ v.origin.city }} ({{ v.origin.iata }}) &rarr; {{ v.destination.city }} ({{ v.destination.iata }})</h3>
+          <p class="hint">
+            {{ v.flight.flight_no }} &middot; {{ fmt_date(v.flight.date) }} &middot;
+            {{ fmt_time(v.flight.dep_time) }}&ndash;{{ fmt_time(v.flight.arr_time) }}
+            {%- if v.flight.arr_day_offset %} <sup class="day-offset">+{{ v.flight.arr_day_offset }}</sup>{% endif %}
+            &middot; {{ v.fare_class.name }} ({{ v.fare_class.code }})
+          </p>
+
+          <dl class="summary" style="position:static">
+            <dt>{{ t("manage.status") }}</dt>
+            <dd><span class="badge {{ 'badge-warn' if v.flight.status != 'scheduled' else 'badge-ok' }}">{{ row.status_label }}</span></dd>
+            <dt>{{ t("manage.baggage") }}</dt>
+            <dd>{{ t("manage.kg", n=v.segment.baggage_allowance_kg) }}</dd>
+            <dt>{{ t("manage.seats") }}</dt>
+            <dd>
+              {%- if v.seats %}{% for pid, a in v.seats.items() %}{{ a.seat_no }}{% if not loop.last %}, {% endif %}{% endfor %}
+              {%- else %}{{ t("manage.no_seats") }}{% endif %}
+            </dd>
+            <dt>{{ t("manage.checkin_state") }}</dt>
+            <dd>
+              {%- if row.checkin.allowed %}<span class="badge badge-ok">{{ t("checkin.open") }}</span>
+              {%- else %}<span class="badge badge-warn">{{ row.checkin_label }}</span>{% endif %}
+            </dd>
+          </dl>
+        </div>
+        <div class="card-foot">
+          {% if row.checkin.allowed %}
+          <a class="btn btn-primary" href="{{ path('checkin') }}?pnr={{ booking.pnr }}">{{ t("checkin.start") }}</a>
+          {% endif %}
+          <a class="btn btn-secondary" href="{{ path('seats', pnr=booking.pnr) }}">{{ t("manage.choose_seats") }}</a>
+        </div>
+      </section>
+      {% endfor %}
+
+      <h2>{{ t("manage.passengers") }}</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>
+            <th scope="col">{{ t("manage.passenger_name") }}</th>
+            <th scope="col">{{ t("manage.passenger_type") }}</th>
+            <th scope="col">{{ t("manage.loyalty") }}</th>
+          </tr></thead>
+          <tbody>
+            {% for p in booking.passengers %}
+            <tr>
+              <td>{{ p.full_name }}</td>
+              <td>{{ pax_labels[p.pax_type] }}</td>
+              <td>{{ p.loyalty_number or t("common.none") }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside class="summary">
+      <h3>{{ t("manage.actions") }}</h3>
+      <ul style="list-style:none;padding:0;display:grid;gap:10px">
+        <li><a class="btn btn-secondary" href="{{ path('change', pnr=booking.pnr) }}">{{ t("manage.change_flight") }}</a></li>
+        <li><a class="btn btn-secondary" href="{{ path('refund', pnr=booking.pnr) }}">{{ t("manage.request_refund") }}</a></li>
+        <li><a class="btn btn-secondary" href="{{ path('upgrade', pnr=booking.pnr) }}">{{ t("manage.upgrade") }}</a></li>
+        <li><a class="btn btn-secondary" href="{{ path('bag_add', pnr=booking.pnr) }}">{{ t("manage.add_baggage") }}</a></li>
+        <li><a class="btn btn-secondary" href="{{ path('manage_receipt', pnr=booking.pnr) }}">{{ t("manage.receipt") }}</a></li>
+        <li><a class="btn btn-secondary" href="{{ path('dining') }}?pnr={{ booking.pnr }}">{{ t("dining.title") }}</a></li>
+        <li><a class="btn btn-secondary" href="{{ path('manage_itinerary_pdf', pnr=booking.pnr) }}">{{ t("itinerary.title") }}</a></li>
+      </ul>
+      <p class="hint">
+        {{ refund_label }}
+      </p>
+    </aside>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,2244 @@
+[
+ {
+  "id": "portal-001",
+  "site": "portal",
+  "intent": "Submit a correction to the name recorded on your identity card, changing it to 'Delwara Haque', attaching a supporting document. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "name",
+     "new_value": "Delwara Haque",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/name-correction/",
+   "fill 1 new_value=Delwara Haque; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-002",
+  "site": "portal",
+  "intent": "Fill in and submit a new passport application end to end: personal information, then address, then page count, validity and delivery. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=Delwar Haque; dob=1987-08-28; father_name=Monir Islam",
+   "fill 1 present_addr=House 16, Road 5, Moulvibazar Ganj, Moulvibazar; perm_addr=Village Uttarpara, Moulvibazar Ganj, Moulvibazar",
+   "fill 1 pages=48; validity=5; delivery=regular"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-003",
+  "site": "portal",
+  "intent": "Book a passport enrolment appointment at Barguna Passport and Immigration Office for 22 June 2026 at 10:30. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-22",
+     "slot_time": "10:30",
+     "office": "Barguna Passport and Immigration Office"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=Barguna Passport and Immigration Office; slot_date=2026-06-22; slot_time=10:30"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-004",
+  "site": "portal",
+  "intent": "Pay the outstanding electricity bill BL0000005 on consumer number 08000007. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-005",
+  "site": "portal",
+  "intent": "Register for a new taxpayer identification number through the full application flow. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "tin-registration"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-registration/",
+   "fill 1 name=Delwar Haque; father_name=Monir Islam; dob=1987-08-28; address=House 16, Road 5, Moulvibazar Ganj, Moulvibazar",
+   "fill 1 circle=Circle 1; income_source=Salary"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-006",
+  "site": "portal",
+  "intent": "Open your electricity bill history and note the amount of the 2026-01 bill. In the electricity fee schedule, find the fee whose amount is the highest that is still below that bill amount, and answer with that fee's variant name. Then settle the oldest outstanding bill on your meter. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Domestic three phase"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/electricity/fees/",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "stop Domestic three phase"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-007",
+  "site": "portal",
+  "intent": "Find khatian number 4438 somewhere in Meherpur district through the land record search (the upazila and mouza are not given) and report the plot number recorded on it. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "357",
+    "none_of": [
+     "604"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=4438",
+   "stop 357"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-008",
+  "site": "portal",
+  "intent": "Look up the secondary exam result of 2021 for roll number 763370 (the board is not given — the lookup page lists the boards) and report the candidate's institution.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Model High School"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=Rajshahi; year=2021; roll_no=763370",
+   "stop Model High School"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-009",
+  "site": "portal",
+  "intent": "Verify the birth registration record with registration number 20000000000373 and report its registration date. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "1987-09-06"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "stop 1987-09-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-010",
+  "site": "portal",
+  "intent": "On the electricity service page, three notices share the same title. Report the category of the one issued on 2025-10-12.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "deadline"
+   }
+  ],
+  "solution": [
+   "goto /services/electricity/",
+   "stop deadline"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-011",
+  "site": "portal",
+  "intent": "Check passport application PPA04000017 to read its booklet pages and validity, then use the passport fee schedule to report the express-delivery fee for exactly that pages/validity combination. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "8050",
+     "8,050"
+    ],
+    "none_of": [
+     "10350",
+     "4025",
+     "5750",
+     "6325",
+     "8625"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "goto /services/passport/fees/",
+   "stop 8050"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-012",
+  "site": "portal",
+  "intent": "Open your electricity bill history and report the total amount billed across all six billing periods. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "13576",
+     "13,576"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 13576"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-013",
+  "site": "portal",
+  "intent": "Look up the identity correction request with slip number NI9999999 and report its status. If no such record exists, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/correction-status/",
+   "fill 1 slip_no=NI9999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-014",
+  "site": "portal",
+  "intent": "Look up khatian number 99999 in Dakshin Char mouza (Meherpur Para, Meherpur, Khulna division). If no such record exists, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=99999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-015",
+  "site": "portal",
+  "intent": "Retrieve the secondary result for roll number 999999, Rajshahi board, 2021. If no such result exists, answer NO_RECORD.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=Rajshahi; year=2021; roll_no=999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-016",
+  "site": "portal",
+  "intent": "Open your electricity bill history and note the amount of the 2026-01 bill. On the driving-licence fee schedule, find the MOST expensive fee that is still below that bill amount, then generate and pay the challan for exactly that category/variant (by card) and report the amount you paid. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1679",
+     "1,679"
+    ],
+    "none_of": [
+     "1427",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1679,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/driving-licence/fees/",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=Licence; variant=Professional; method=card",
+   "stop 1679"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-017",
+  "site": "portal",
+  "intent": "Check the total outstanding amount on consumer number 08000049. On the electricity fee schedule, find the MOST expensive fee that is still below HALF of that total, and answer with that fee's variant name. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Commercial"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/fees/",
+   "stop Commercial"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-018",
+  "site": "portal",
+  "intent": "Pay BOTH outstanding electricity bills on your consumer number 08000007, by card. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-019",
+  "site": "portal",
+  "intent": "Consumer number 08000021 has more than one outstanding electricity bill. Pay ONLY the OLDEST one (by card) and leave the rest unpaid. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000011",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000012"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000021",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-020",
+  "site": "portal",
+  "intent": "By how much is the total outstanding amount on consumer number 08000049 larger than on consumer number 08000035? Answer with the difference. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2094",
+     "2,094"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "stop 2094"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-021",
+  "site": "portal",
+  "intent": "Compare two of your outstanding balances: the total unpaid electricity on consumer number 08000007, and the total unpaid land development tax on holding HLD00001. Answer with the LARGER of the two amounts. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4776",
+     "4,776"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000007",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00001",
+   "stop 4776"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-022",
+  "site": "portal",
+  "intent": "In your electricity bill history, how many bills exceeded an amount of 2000? Answer with the number. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "3"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-023",
+  "site": "portal",
+  "intent": "Find khatian number 5265 somewhere in Jhenaidah district (Khulna division; the upazila and mouza are not given) through the land record search and report the owner recorded on it. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Monir Das"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=71",
+   "fill 1 khatian_no=5265",
+   "stop Monir Das"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-024",
+  "site": "portal",
+  "intent": "Look up khatian number 9458 in Char Kanda mouza (Dinajpur Bazar, Dinajpur, Rangpur division) and report THREE things: the owner, the land type, and the area in decimals. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Tofazzal Das"
+   },
+   {
+    "type": "answer_match",
+    "answer": "Pond"
+   },
+   {
+    "type": "answer_match",
+    "answer": "242"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=121",
+   "fill 1 khatian_no=9458",
+   "stop Tofazzal Das, Pond, 242"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-025",
+  "site": "portal",
+  "intent": "Look up khatian number 6743 in Madhya Para mouza (Rajshahi North, Rajshahi, Rajshahi division), then apply for a land mutation COPYING from that record: seller name = the recorded owner, plot number and area as recorded. Use yourself as the buyer (buyer id 9999708182203), seller id 9999000000002. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%Rokeya Karim%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"1332\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"6743\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"buyer_id\": \"9999708182203\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_id\": \"9999000000002\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"185\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=6&district=51&upazila=203&mouza=114",
+   "fill 1 khatian_no=6743",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=Delwar Haque; buyer_id=9999708182203; seller_name=Rokeya Karim; seller_id=9999000000002; khatian_no=6743; plot_no=1332; area=185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-026",
+  "site": "portal",
+  "intent": "Holding HLD00003 has several years of outstanding land development tax. Pay ALL of its outstanding dues, by card. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-027",
+  "site": "portal",
+  "intent": "Which holding owes more in total outstanding land development tax: HLD00003 or HLD00004? Answer with the holding number. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "HLD00003",
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "stop HLD00003"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-028",
+  "site": "portal",
+  "intent": "In the land record search, navigate to Narail Sadar upazila (Narail district, Khulna division) and report the JL number of Uttar Char mouza. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "295",
+    "none_of": [
+     "147",
+     "310"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=39&upazila=153",
+   "stop 295"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-029",
+  "site": "portal",
+  "intent": "Find khatian number 2052 somewhere in Rangpur DIVISION through the land record search (the district, upazila and mouza are not given) and report the owner recorded on it. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Kohinoor Alam"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=123",
+   "fill 1 khatian_no=2052",
+   "stop Kohinoor Alam"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-030",
+  "site": "portal",
+  "intent": "Find khatian number 8630 somewhere in Jhenaidah district (Khulna division; the upazila and mouza are not given) and report BOTH the owner and the area in decimals. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Golam Khan"
+   },
+   {
+    "type": "answer_match",
+    "answer": "185"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=72",
+   "fill 1 khatian_no=8630",
+   "stop Golam Khan, 185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-031",
+  "site": "portal",
+  "intent": "Find khatian number 3232 somewhere in Jhalokati district (Barishal division; the upazila and mouza are not given) through the land record search and report the land type recorded on it. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Fallow"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=1&district=4&upazila=16&mouza=10",
+   "fill 1 khatian_no=3232",
+   "stop Fallow"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-032",
+  "site": "portal",
+  "intent": "On holding HLD00003, pay every outstanding land development tax due EXCEPT the most recent fiscal year, by card — the newest due must remain unpaid. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-033",
+  "site": "portal",
+  "intent": "Which holding owes more in total outstanding land development tax: HLD00004 or HLD00005? Answer with the holding number. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "HLD00005",
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop HLD00005"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-034",
+  "site": "portal",
+  "intent": "Look up the secondary exam result of 2021 for roll number 244479 (the board is not given — the lookup page lists the boards), then submit a rescrutiny application for that result, entering the registration number shown on the result, its board and year, for the subject Mathematics.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1352566082%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"244479\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"Mathematics\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"Technical\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2021\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=Technical; year=2021; roll_no=244479",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=244479; registration_no=1352566082; board=Technical; year=2021; subjects=Mathematics"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-035",
+  "site": "portal",
+  "intent": "Look up the higher-secondary exam result of 2023 for roll number 969953 (the board is not given — the lookup page lists the boards), then submit a rescrutiny application for that result, entering the registration number shown on the result, its board and year, for the subject English.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1687250440%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"969953\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"English\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"Technical\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2023\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=Technical; year=2023; roll_no=969953",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=969953; registration_no=1687250440; board=Technical; year=2023; subjects=English"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-036",
+  "site": "portal",
+  "intent": "On the portal's notice board, filter to the land service's notices. Which category did that service use MOST often? Answer with the category.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "maintenance"
+   }
+  ],
+  "solution": [
+   "goto /notices/?service=Land Services",
+   "stop maintenance"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-037",
+  "site": "portal",
+  "intent": "Submit an individual e-return for assessment year 2025-2026 with TIN 972871718941: total income 640000, deductions of exactly one eighth of the income, and tax payable of exactly 10% of (income minus deductions). Enter all amounts as plain digits, declaration YES. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"640000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"80000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"56000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=640000; deductions=80000; tax_payable=56000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-038",
+  "site": "portal",
+  "intent": "The notice with reference TR/N/2026/001 appears on the portal's notice board (linked from the home page). Find which service issued it, open that service's fee schedule, and report the CHEAPEST fee amount listed there.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "200",
+    "none_of": [
+     "1500",
+     "400",
+     "500",
+     "5000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/",
+   "goto /services/trade-licence/fees/",
+   "stop 200"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-039",
+  "site": "portal",
+  "intent": "Do BOTH of the following: pay electricity bill BL0000006 on consumer number 08000007, and recharge prepaid meter MTR000006 with 750. Pay by card. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge",
+     "ref": "MTR000006",
+     "amount": 750,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000006; amount=750; method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-040",
+  "site": "portal",
+  "intent": "Complete new voter registration through the full form (your name, parentage, date of birth, both addresses and the Moulvibazar Identity Registration Office as centre), and ALSO book a passport enrolment appointment at Barguna Passport and Immigration Office for 2026-06-25 at 15:00. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "nid-voter-registration",
+     "payload": "%\"centre\": \"Moulvibazar Identity Registration Office\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-25",
+     "slot_time": "15:00",
+     "office": "Barguna Passport and Immigration Office"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/voter-registration/",
+   "fill 1 name=Delwar Haque; father_name=Monir Islam; dob=1987-08-28; present_addr=House 16, Road 5, Moulvibazar Ganj, Moulvibazar; perm_addr=Village Uttarpara, Moulvibazar Ganj, Moulvibazar; centre=Moulvibazar Identity Registration Office",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=Barguna Passport and Immigration Office; slot_date=2026-06-25; slot_time=15:00"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-041",
+  "site": "portal",
+  "intent": "Submit BOTH of these applications: a police clearance certificate for employment abroad (name, parentage, date of birth and both addresses), and a pilgrimage pre-registration (name, father's name, passport number PPA04000017, present address, your mobile, your mother as next of kin, government package). Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%employment abroad%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"name\": \"Delwar Haque\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"father_name\": \"Monir Islam\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"passport_no\": \"PPA04000017\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"name\": \"Delwar Haque\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"father_name\": \"Monir Islam\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"package\": \"government\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"next_of_kin\": \"Ferdousi Bhuiyan\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/police-clearance/panel/clearance-apply/",
+   "fill 1 name=Delwar Haque; father_name=Monir Islam; dob=1987-08-28; present_addr=House 16, Road 5, Moulvibazar Ganj, Moulvibazar; perm_addr=Village Uttarpara, Moulvibazar Ganj, Moulvibazar; purpose=employment abroad",
+   "goto /services/pilgrimage/panel/pre-registration/",
+   "fill 1 name=Delwar Haque; father_name=Monir Islam; passport_no=PPA04000017; address=House 16, Road 5, Moulvibazar Ganj, Moulvibazar; mobile=01853445903; next_of_kin=Ferdousi Bhuiyan; package=government"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-042",
+  "site": "portal",
+  "intent": "Apply for a land mutation (buyer: yourself, id 9999708182203; seller Rafiqul Islam, id 9999000000001; khatian 4438, plot 357, area 25), and ALSO pay the outstanding land development tax on holding HLD00002, by card. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_name\": \"Rafiqul Islam\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"4438\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"357\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"25\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=Delwar Haque; buyer_id=9999708182203; seller_name=Rafiqul Islam; seller_id=9999000000001; khatian_no=4438; plot_no=357; area=25",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-043",
+  "site": "portal",
+  "intent": "On consumer number 08000007, pay ONLY the NEWEST outstanding electricity bill by card, leaving the older one unpaid. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-044",
+  "site": "portal",
+  "intent": "Open the portal's notice board (linked from the home page). How many notices were issued in February 2026, across all services? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "12"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-02",
+   "stop 12"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-045",
+  "site": "portal",
+  "intent": "According to the portal's notice board, which service issued the MOST notices during 2025? Answer with the service name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Land Services"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2025",
+   "goto /notices/?period=2025&page=2",
+   "goto /notices/?period=2025&page=3",
+   "stop Land Services"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-046",
+  "site": "portal",
+  "intent": "Report the exact title of the OLDEST notice on the portal's notice board.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Suspension of express processing for pension disbursement"
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "stop Suspension of express processing for pension disbursement"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-047",
+  "site": "portal",
+  "intent": "On the portal's notice board, how many notices issued in 2026 carry the category 'closure'? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "15"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026&category=closure",
+   "stop 15"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-048",
+  "site": "portal",
+  "intent": "Find the higher-secondary exam result of 2023 for roll number 496396 — the board is NOT given, the lookup page lists the boards. Report BOTH the candidate's GPA and their institution.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "4.56"
+   },
+   {
+    "type": "answer_match",
+    "answer": "Ideal College"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=Mymensingh; year=2023; roll_no=496396",
+   "stop 4.56, Ideal College"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-049",
+  "site": "portal",
+  "intent": "Find the secondary exam result of 2021 for roll number 969525 — the board is NOT given. Report BOTH the candidate's name and their GPA.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Shahnaz Bhuiyan"
+   },
+   {
+    "type": "answer_match",
+    "answer": "4.28"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=Mymensingh; year=2021; roll_no=969525",
+   "stop Shahnaz Bhuiyan, 4.28"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-050",
+  "site": "portal",
+  "intent": "Find khatian number 7191 somewhere in Shariatpur district (Dhaka division; the upazila and mouza are not given) through the land record search and report the land type recorded on it. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Orchard"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=3&district=29&upazila=116&mouza=43",
+   "fill 1 khatian_no=7191",
+   "stop Orchard"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-051",
+  "site": "portal",
+  "intent": "Find khatian number 1022 somewhere in Satkhira district (Khulna division; the upazila and mouza are not given) and report BOTH the owner and the share recorded. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Kohinoor Alam"
+   },
+   {
+    "type": "answer_match",
+    "answer": "1/3"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=40&upazila=157&mouza=95",
+   "fill 1 khatian_no=1022",
+   "stop Kohinoor Alam, 1/3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-052",
+  "site": "portal",
+  "intent": "Exactly one notice on the portal's notice board was issued in June 2026. Report BOTH its reference number and the name of the service that issued it.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "PA/N/2026/006"
+   },
+   {
+    "type": "answer_match",
+    "answer": "Passport Services"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop PA/N/2026/006, Passport Services"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-053",
+  "site": "portal",
+  "intent": "During 2026, which month saw the FEWEST notices on the portal's notice board? Answer with the month as YYYY-MM.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "2026-06"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop 2026-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-054",
+  "site": "portal",
+  "intent": "Check the total outstanding electricity on consumer numbers 08000021, 08000035 and 08000049, and report the COMBINED total across all three. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "20146",
+     "20,146"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000021",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "stop 20146"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-055",
+  "site": "portal",
+  "intent": "Report the combined total of ALL outstanding land development tax across holdings HLD00003, HLD00004 and HLD00005. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "9292",
+     "9,292"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop 9292"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-056",
+  "site": "portal",
+  "intent": "Across ALL six periods in your electricity bill history, how many units (kWh) were consumed in total? Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1652",
+     "1,652"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 1652"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-057",
+  "site": "portal",
+  "intent": "On the passport fee schedule, what is the difference between the most expensive fee and the cheapest NONZERO fee?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6325",
+     "6,325"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "stop 6325"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-058",
+  "site": "portal",
+  "intent": "Across the passport AND driving-licence fee schedules combined, how many fee rows carry an amount greater than 5000? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "9"
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "goto /services/driving-licence/fees/",
+   "stop 9"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-059",
+  "site": "portal",
+  "intent": "Submit an individual e-return for assessment year 2025-2026 with TIN 972871718941: total income 720000, deductions of exactly one quarter of the income, and tax payable of exactly 15% of (income minus deductions). Enter all amounts as plain digits, declaration YES. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"720000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"180000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"81000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=720000; deductions=180000; tax_payable=81000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-060",
+  "site": "portal",
+  "intent": "Look up the birth registration record numbered 20000000000373. Then submit a birth registration application for a NEW child named exactly after that record's MOTHER, born 2026-03-01, at the place recorded on that record, with yourself as father and your mother as mother. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"child_name\": \"Ferdousi Bhuiyan\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"place\": \"Village Uttarpara, Moulvibazar Ganj, Moulvibazar\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"dob\": \"2026-03-01\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"father_name\": \"Delwar Haque\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"mother_name\": \"Ferdousi Bhuiyan\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "goto /services/civil-registration/panel/birth-apply/",
+   "fill 1 child_name=Ferdousi Bhuiyan; dob=2026-03-01; place=Village Uttarpara, Moulvibazar Ganj, Moulvibazar; father_name=Delwar Haque; mother_name=Ferdousi Bhuiyan"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-061",
+  "site": "portal",
+  "intent": "Find the OLDEST notice on the portal's notice board, note which service issued it, then open that service's fee schedule and report its MOST expensive fee amount.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "50"
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "goto /services/pension/fees/",
+   "stop 50"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-062",
+  "site": "portal",
+  "intent": "Do BOTH: book a driving test at Barishal Transport Licensing Office on the earliest available date at the earliest time, AND generate and pay the challan for the Renewal category, Professional variant (by card). Then report the challan amount you paid. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 7,
+     "slot_date": "2026-06-23",
+     "slot_time": "09:00",
+     "office": "Barishal Transport Licensing Office"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1427,
+     "method": "card"
+    }
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1427",
+     "1,427"
+    ],
+    "none_of": [
+     "1679",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/test-booking/",
+   "fill 1 office=Barishal Transport Licensing Office; slot_date=2026-06-23; slot_time=09:00",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=Renewal; variant=Professional; method=card",
+   "stop 1427"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-063",
+  "site": "portal",
+  "intent": "Check passport applications PPA04000034 and PPA04000068 to read each one's booklet pages and validity. According to the passport fee schedule, which application's REGULAR-delivery fee is higher? Answer with the application id. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "PPA04000068"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000034",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000068",
+   "goto /services/passport/fees/",
+   "stop PPA04000068"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-064",
+  "site": "portal",
+  "intent": "Do all THREE of the following: pay electricity bill BL0000005 on consumer 08000007, pay the outstanding land development tax on holding HLD00002, and book a passport enrolment appointment at Barguna Passport and Immigration Office for 2026-06-24 at 11:30. Pay by card. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-24",
+     "slot_time": "11:30",
+     "office": "Barguna Passport and Immigration Office"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=Barguna Passport and Immigration Office; slot_date=2026-06-24; slot_time=11:30"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-065",
+  "site": "portal",
+  "intent": "On holding HLD00003, pay ONLY the 2022-2023 land development tax due (by card), leaving both the older and the newer dues unpaid. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-066",
+  "site": "portal",
+  "intent": "Submit THREE corrections: change your identity record's present address to 'House 9, Lake Road, Sylhet' and its date of birth to 1987-08-27, and change the name on your linked BIRTH registration record to 'Delwar Hoque'. Attach any locker document to each. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "present_addr",
+     "new_value": "House 9, Lake Road, Sylhet",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "dob",
+     "new_value": "1987-08-27",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records",
+     "new_value": "Delwar Hoque",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/address-correction/",
+   "fill 1 new_value=House 9, Lake Road, Sylhet; document=secondary-school-certificate-1.pdf",
+   "goto /services/national-id/panel/dob-correction/",
+   "fill 1 new_value=1987-08-27; document=secondary-school-certificate-1.pdf",
+   "goto /services/civil-registration/panel/birth-correction/",
+   "fill 1 new_value=Delwar Hoque; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-067",
+  "site": "portal",
+  "intent": "Submit BOTH passport requests: a new application (your name, date of birth and father's name; both addresses; 64 pages, 10 years validity, express delivery), and a REISSUE application for passport number A6053903 with the reason 'Damaged booklet'. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"pages\": \"64\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"validity\": \"10\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"delivery\": \"express\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"passport_no\": \"A6053903\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"reason\": \"Damaged booklet\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=Delwar Haque; dob=1987-08-28; father_name=Monir Islam",
+   "fill 1 present_addr=House 16, Road 5, Moulvibazar Ganj, Moulvibazar; perm_addr=Village Uttarpara, Moulvibazar Ganj, Moulvibazar",
+   "fill 1 pages=64; validity=10; delivery=express",
+   "goto /services/passport/panel/reissue-application/",
+   "fill 1 passport_no=A6053903; reason=Damaged booklet"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-068",
+  "site": "portal",
+  "intent": "Recharge meter MTR000001 with 300, by card. If this is not possible on the portal, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000001; amount=300; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-069",
+  "site": "portal",
+  "intent": "Download the vaccination certificate for identity number 9999708182203 registered on 2023-09-16 and report the certificate number. If this is not possible on the portal, answer NO_RECORD.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/health/panel/vaccine-certificate/",
+   "fill 1 identity_no=9999708182203; registered_date=2023-09-16",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-070",
+  "site": "portal",
+  "intent": "Look up the delivery status of the passport belonging to application PPA04000017 and report it. If this is not possible on the portal, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-071",
+  "site": "portal",
+  "intent": "Generate and pay a fee challan for category Licence, variant Motorcycle. If this is not possible on the portal, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=Licence; variant=Motorcycle; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-072",
+  "site": "portal",
+  "intent": "Submit a name correction on the death record linked to your account, changing the name to 'Delwar Haque Sr'. If this is not possible on the portal, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/death-correction/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-073",
+  "site": "portal",
+  "intent": "Book a passport enrolment appointment at Barguna Passport and Immigration Office for 2026-06-23 at 10:30. If this is not possible on the portal, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-23"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-074",
+  "site": "portal",
+  "intent": "Verify taxpayer identification number 111111111111 and report the registered name. If this is not possible on the portal, answer NO_RECORD. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-verify/",
+   "fill 1 tin_no=111111111111",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-075",
+  "site": "portal",
+  "intent": "Open the printable copy of your identity card and report BOTH the mother's name and the permanent address shown. Log in as citizen 9999708182203 (password: citizen1234) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Ferdousi Bhuiyan"
+   },
+   {
+    "type": "answer_match",
+    "answer": "Village Uttarpara, Moulvibazar Ganj, Moulvibazar"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/id-card-copy/",
+   "stop Ferdousi Bhuiyan, Village Uttarpara, Moulvibazar Ganj, Moulvibazar"
+  ],
+  "max_steps": 30
+ }
+]

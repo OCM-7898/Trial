@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}{{ t("book.review_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('search') }}">{{ t("nav.book_flight") }}</a></li>
+        <li>{{ t("review.step") }}</li></ol>
+  </nav>
+  <ol class="stepper">
+    <li class="is-done">{{ t("book.step_flights") }}</li>
+    <li class="is-done">{{ t("book.step_passengers") }}</li>
+    <li class="is-current">{{ t("review.step_review") }}</li>
+    <li>{{ t("review.step_pay") }}</li>
+  </ol>
+  <h1>{{ t("book.review_title") }}</h1>
+  <p class="hint">{{ t("book.draft_reference", ref=draft.reference) }}</p>
+
+  {% if notice %}
+  <div class="notice notice-info" role="status" id="payment-notice"><div>{{ notice }}</div></div>
+  {% endif %}
+
+  <div class="split">
+    <div>
+      <h2>{{ t("book.your_flights") }}</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>
+            <th scope="col">{{ t("results.flight") }}</th>
+            <th scope="col">{{ t("status.date") }}</th>
+            <th scope="col">{{ t("results.depart") }}</th>
+            <th scope="col">{{ t("results.fare_family") }}</th>
+          </tr></thead>
+          <tbody>
+            {% for view in views %}
+            <tr>
+              <td>{{ view.flight.flight_no }}<br><span class="hint">{{ view.origin.iata }}&ndash;{{ view.destination.iata }}</span></td>
+              <td>{{ fmt_date(view.flight.date) }}</td>
+              <td>{{ fmt_time(view.flight.dep_time) }}</td>
+              <td>{{ view.fare_class.name }} ({{ view.fare_class.code }})</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>{{ t("manage.passengers") }}</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>
+            <th scope="col">{{ t("manage.passenger_name") }}</th>
+            <th scope="col">{{ t("manage.passenger_type") }}</th>
+          </tr></thead>
+          <tbody>
+            {% for passenger in draft.passengers %}
+            <tr><td>{{ passenger.first_name }} {{ passenger.last_name }}</td>
+                <td>{{ t("pax.adult") }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="hint">{{ draft.contact_email }} &middot; {{ draft.contact_phone }}</p>
+    </div>
+
+    <aside class="summary">
+      <dl>
+        <dt>{{ t("book.fare_total") }}</dt><dd>{{ fmt_money(draft.price_usd) }}</dd>
+        <dt>{{ t("award.taxes") }}</dt><dd>{{ fmt_money(draft.taxes_usd) }}</dd>
+        <dt class="total">{{ t("review.total_due") }}</dt>
+        <dd class="total">{{ fmt_money(draft.total_usd) }}</dd>
+      </dl>
+      <form method="post" style="margin-top:16px">
+        <input type="hidden" name="ref" value="{{ draft.reference }}">
+        <input type="hidden" name="action" value="pay">
+        <button class="btn btn-gold" type="submit" style="width:100%">{{ t("review.pay_now") }}</button>
+      </form>
+      <p class="hint" style="margin-top:10px">{{ t("review.no_card_needed") }}</p>
+    </aside>
+  </div>
+</div>
+{% endblock %}

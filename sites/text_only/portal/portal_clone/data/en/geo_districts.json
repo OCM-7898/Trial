@@ -1,0 +1,450 @@
+[
+ {
+  "id": 1,
+  "division_id": 1,
+  "code": "DS001",
+  "name": "Barguna",
+  "sort_order": 1
+ },
+ {
+  "id": 2,
+  "division_id": 1,
+  "code": "DS002",
+  "name": "Barishal",
+  "sort_order": 2
+ },
+ {
+  "id": 3,
+  "division_id": 1,
+  "code": "DS003",
+  "name": "Bhola",
+  "sort_order": 3
+ },
+ {
+  "id": 4,
+  "division_id": 1,
+  "code": "DS004",
+  "name": "Jhalokati",
+  "sort_order": 4
+ },
+ {
+  "id": 5,
+  "division_id": 1,
+  "code": "DS005",
+  "name": "Patuakhali",
+  "sort_order": 5
+ },
+ {
+  "id": 6,
+  "division_id": 1,
+  "code": "DS006",
+  "name": "Pirojpur",
+  "sort_order": 6
+ },
+ {
+  "id": 7,
+  "division_id": 2,
+  "code": "DS007",
+  "name": "Bandarban",
+  "sort_order": 7
+ },
+ {
+  "id": 8,
+  "division_id": 2,
+  "code": "DS008",
+  "name": "Brahmanbaria",
+  "sort_order": 8
+ },
+ {
+  "id": 9,
+  "division_id": 2,
+  "code": "DS009",
+  "name": "Chandpur",
+  "sort_order": 9
+ },
+ {
+  "id": 10,
+  "division_id": 2,
+  "code": "DS010",
+  "name": "Chattogram",
+  "sort_order": 10
+ },
+ {
+  "id": 11,
+  "division_id": 2,
+  "code": "DS011",
+  "name": "Cox's Bazar",
+  "sort_order": 11
+ },
+ {
+  "id": 12,
+  "division_id": 2,
+  "code": "DS012",
+  "name": "Cumilla",
+  "sort_order": 12
+ },
+ {
+  "id": 13,
+  "division_id": 2,
+  "code": "DS013",
+  "name": "Feni",
+  "sort_order": 13
+ },
+ {
+  "id": 14,
+  "division_id": 2,
+  "code": "DS014",
+  "name": "Khagrachhari",
+  "sort_order": 14
+ },
+ {
+  "id": 15,
+  "division_id": 2,
+  "code": "DS015",
+  "name": "Lakshmipur",
+  "sort_order": 15
+ },
+ {
+  "id": 16,
+  "division_id": 2,
+  "code": "DS016",
+  "name": "Noakhali",
+  "sort_order": 16
+ },
+ {
+  "id": 17,
+  "division_id": 2,
+  "code": "DS017",
+  "name": "Rangamati",
+  "sort_order": 17
+ },
+ {
+  "id": 18,
+  "division_id": 3,
+  "code": "DS018",
+  "name": "Dhaka",
+  "sort_order": 18
+ },
+ {
+  "id": 19,
+  "division_id": 3,
+  "code": "DS019",
+  "name": "Faridpur",
+  "sort_order": 19
+ },
+ {
+  "id": 20,
+  "division_id": 3,
+  "code": "DS020",
+  "name": "Gazipur",
+  "sort_order": 20
+ },
+ {
+  "id": 21,
+  "division_id": 3,
+  "code": "DS021",
+  "name": "Gopalganj",
+  "sort_order": 21
+ },
+ {
+  "id": 22,
+  "division_id": 3,
+  "code": "DS022",
+  "name": "Kishoreganj",
+  "sort_order": 22
+ },
+ {
+  "id": 23,
+  "division_id": 3,
+  "code": "DS023",
+  "name": "Madaripur",
+  "sort_order": 23
+ },
+ {
+  "id": 24,
+  "division_id": 3,
+  "code": "DS024",
+  "name": "Manikganj",
+  "sort_order": 24
+ },
+ {
+  "id": 25,
+  "division_id": 3,
+  "code": "DS025",
+  "name": "Munshiganj",
+  "sort_order": 25
+ },
+ {
+  "id": 26,
+  "division_id": 3,
+  "code": "DS026",
+  "name": "Narayanganj",
+  "sort_order": 26
+ },
+ {
+  "id": 27,
+  "division_id": 3,
+  "code": "DS027",
+  "name": "Narsingdi",
+  "sort_order": 27
+ },
+ {
+  "id": 28,
+  "division_id": 3,
+  "code": "DS028",
+  "name": "Rajbari",
+  "sort_order": 28
+ },
+ {
+  "id": 29,
+  "division_id": 3,
+  "code": "DS029",
+  "name": "Shariatpur",
+  "sort_order": 29
+ },
+ {
+  "id": 30,
+  "division_id": 3,
+  "code": "DS030",
+  "name": "Tangail",
+  "sort_order": 30
+ },
+ {
+  "id": 31,
+  "division_id": 4,
+  "code": "DS031",
+  "name": "Bagerhat",
+  "sort_order": 31
+ },
+ {
+  "id": 32,
+  "division_id": 4,
+  "code": "DS032",
+  "name": "Chuadanga",
+  "sort_order": 32
+ },
+ {
+  "id": 33,
+  "division_id": 4,
+  "code": "DS033",
+  "name": "Jashore",
+  "sort_order": 33
+ },
+ {
+  "id": 34,
+  "division_id": 4,
+  "code": "DS034",
+  "name": "Jhenaidah",
+  "sort_order": 34
+ },
+ {
+  "id": 35,
+  "division_id": 4,
+  "code": "DS035",
+  "name": "Khulna",
+  "sort_order": 35
+ },
+ {
+  "id": 36,
+  "division_id": 4,
+  "code": "DS036",
+  "name": "Kushtia",
+  "sort_order": 36
+ },
+ {
+  "id": 37,
+  "division_id": 4,
+  "code": "DS037",
+  "name": "Magura",
+  "sort_order": 37
+ },
+ {
+  "id": 38,
+  "division_id": 4,
+  "code": "DS038",
+  "name": "Meherpur",
+  "sort_order": 38
+ },
+ {
+  "id": 39,
+  "division_id": 4,
+  "code": "DS039",
+  "name": "Narail",
+  "sort_order": 39
+ },
+ {
+  "id": 40,
+  "division_id": 4,
+  "code": "DS040",
+  "name": "Satkhira",
+  "sort_order": 40
+ },
+ {
+  "id": 41,
+  "division_id": 5,
+  "code": "DS041",
+  "name": "Jamalpur",
+  "sort_order": 41
+ },
+ {
+  "id": 42,
+  "division_id": 5,
+  "code": "DS042",
+  "name": "Mymensingh",
+  "sort_order": 42
+ },
+ {
+  "id": 43,
+  "division_id": 5,
+  "code": "DS043",
+  "name": "Netrokona",
+  "sort_order": 43
+ },
+ {
+  "id": 44,
+  "division_id": 5,
+  "code": "DS044",
+  "name": "Sherpur",
+  "sort_order": 44
+ },
+ {
+  "id": 45,
+  "division_id": 6,
+  "code": "DS045",
+  "name": "Bogura",
+  "sort_order": 45
+ },
+ {
+  "id": 46,
+  "division_id": 6,
+  "code": "DS046",
+  "name": "Chapainawabganj",
+  "sort_order": 46
+ },
+ {
+  "id": 47,
+  "division_id": 6,
+  "code": "DS047",
+  "name": "Joypurhat",
+  "sort_order": 47
+ },
+ {
+  "id": 48,
+  "division_id": 6,
+  "code": "DS048",
+  "name": "Naogaon",
+  "sort_order": 48
+ },
+ {
+  "id": 49,
+  "division_id": 6,
+  "code": "DS049",
+  "name": "Natore",
+  "sort_order": 49
+ },
+ {
+  "id": 50,
+  "division_id": 6,
+  "code": "DS050",
+  "name": "Pabna",
+  "sort_order": 50
+ },
+ {
+  "id": 51,
+  "division_id": 6,
+  "code": "DS051",
+  "name": "Rajshahi",
+  "sort_order": 51
+ },
+ {
+  "id": 52,
+  "division_id": 6,
+  "code": "DS052",
+  "name": "Sirajganj",
+  "sort_order": 52
+ },
+ {
+  "id": 53,
+  "division_id": 7,
+  "code": "DS053",
+  "name": "Dinajpur",
+  "sort_order": 53
+ },
+ {
+  "id": 54,
+  "division_id": 7,
+  "code": "DS054",
+  "name": "Gaibandha",
+  "sort_order": 54
+ },
+ {
+  "id": 55,
+  "division_id": 7,
+  "code": "DS055",
+  "name": "Kurigram",
+  "sort_order": 55
+ },
+ {
+  "id": 56,
+  "division_id": 7,
+  "code": "DS056",
+  "name": "Lalmonirhat",
+  "sort_order": 56
+ },
+ {
+  "id": 57,
+  "division_id": 7,
+  "code": "DS057",
+  "name": "Nilphamari",
+  "sort_order": 57
+ },
+ {
+  "id": 58,
+  "division_id": 7,
+  "code": "DS058",
+  "name": "Panchagarh",
+  "sort_order": 58
+ },
+ {
+  "id": 59,
+  "division_id": 7,
+  "code": "DS059",
+  "name": "Rangpur",
+  "sort_order": 59
+ },
+ {
+  "id": 60,
+  "division_id": 7,
+  "code": "DS060",
+  "name": "Thakurgaon",
+  "sort_order": 60
+ },
+ {
+  "id": 61,
+  "division_id": 8,
+  "code": "DS061",
+  "name": "Habiganj",
+  "sort_order": 61
+ },
+ {
+  "id": 62,
+  "division_id": 8,
+  "code": "DS062",
+  "name": "Moulvibazar",
+  "sort_order": 62
+ },
+ {
+  "id": 63,
+  "division_id": 8,
+  "code": "DS063",
+  "name": "Sunamganj",
+  "sort_order": 63
+ },
+ {
+  "id": 64,
+  "division_id": 8,
+  "code": "DS064",
+  "name": "Sylhet",
+  "sort_order": 64
+ }
+]

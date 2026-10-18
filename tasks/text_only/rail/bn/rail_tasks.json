@@ -1,0 +1,2191 @@
+[
+ {
+  "id": "rail-001",
+  "site": "rail",
+  "intent": "ট্রেন 12903 সাগরমালা এক্সপ্রেস নতুন দিল্লি থেকে মুম্বাই সেন্ট্রাল পর্যন্ত কত সময় নেয়? যেভাবে দেখানো আছে সেই সময়কাল উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "16h 55m",
+     "16 hours 55 minutes",
+     "16 hr 55 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=BCT; date=2026-04-06",
+   "stop 16h 55m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-002",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে নতুন দিল্লি থেকে কানপুর সেন্ট্রাল ভ্রমণের সবচেয়ে কম 3A ভাড়া খুঁজুন এবং টাকায় অঙ্কটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "924",
+     "৯২৪"
+    ],
+    "none_of": [
+     "1228"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "stop 924"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-003",
+  "site": "rail",
+  "intent": "PNR 6201234567-এর PNR অবস্থা দেখুন এবং অবস্থার কোড উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CNF"
+    ],
+    "none_of": [
+     "CAN",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "stop CNF"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-004",
+  "site": "rail",
+  "intent": "PNR 6203456789 দেখুন এবং যাত্রীর নাম উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "বিক্রম রাও"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6203456789",
+   "stop বিক্রম রাও"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-005",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে ট্রেন 12301 যমুনা এক্সপ্রেস-এ নতুন দিল্লি থেকে হাওড়া জংশন পর্যন্ত যাত্রী কবির মেহতা, বয়স 41, পুরুষ, উপরের (Upper) বার্থের একটি 2A টিকিট বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "কবির মেহতা",
+     "date": "2026-04-06",
+     "from_code": "NDLS",
+     "to_code": "HWH"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-06&class=2A",
+   "fill 0 name=কবির মেহতা; age=41; gender=M; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-006",
+  "site": "rail",
+  "intent": "2026-04-07 তারিখে ট্রেন 12417 গোমতী সম্পর্ক-এ নতুন দিল্লি থেকে লখনউ পর্যন্ত যাত্রী সুনীতা ভার্মা, বয়স 55, মহিলা, বার্থ পছন্দ নেই — একটি CC (চেয়ার কার) টিকিট বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "সুনীতা ভার্মা",
+     "class_code": "CC",
+     "train_no": "12417",
+     "date": "2026-04-07",
+     "from_code": "NDLS",
+     "to_code": "LKO"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12417?from=NDLS&to=LKO&date=2026-04-07&class=CC",
+   "fill 0 name=সুনীতা ভার্মা; age=55; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-007",
+  "site": "rail",
+  "intent": "2026-04-08 তারিখে ট্রেন 12841 করমণ্ডল লিংক এক্সপ্রেস-এ হাওড়া জংশন থেকে চেন্নাই সেন্ট্রাল পর্যন্ত যাত্রী ফারহান আলী, বয়স 23, পুরুষ, পাশের উপরের (Side Upper) বার্থের একটি SL (স্লিপার) টিকিট বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "ফারহান আলী",
+     "berth": "Side Upper",
+     "train_no": "12841",
+     "class_code": "SL",
+     "date": "2026-04-08",
+     "from_code": "HWH",
+     "to_code": "MAS"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12841?from=HWH&to=MAS&date=2026-04-08&class=SL",
+   "fill 0 name=ফারহান আলী; age=23; gender=M; berth=Side Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-008",
+  "site": "rail",
+  "intent": "PNR 6203456789-এর বুকিং বাতিল করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /cancel/6203456789",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-009",
+  "site": "rail",
+  "intent": "ট্রেন 12622 ব্রহ্মপুত্র লিংক এক্সপ্রেস-এ হাওড়া জংশন থেকে গুয়াহাটি পর্যন্ত একটি 2A টিকিট 3A টিকিটের চেয়ে কত বেশি দামি? টাকায় পার্থক্যটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1024",
+     "1,024",
+     "১০২৪",
+     "১,০২৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "stop 1024"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-010",
+  "site": "rail",
+  "intent": "2026-04-07 তারিখে ছাড়া সেকেন্দ্রাবাদ জংশন থেকে পুনে জংশন পর্যন্ত একটি সরাসরি ট্রেন খুঁজুন। ওই দিন কোনো ট্রেন না চললে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো ট্রেন নেই",
+     "সরাসরি ট্রেন নেই",
+     "চলে না",
+     "ওই দিন চলে না",
+     "ট্রেন চলে না"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-011",
+  "site": "rail",
+  "intent": "PNR 6299999999-এর PNR অবস্থা দেখুন। কোনো বুকিং না থাকলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো বুকিং নেই",
+     "পাওয়া যায়নি",
+     "কোনো রেকর্ড নেই",
+     "নেই",
+     "অবৈধ pnr"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6299999999",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-012",
+  "site": "rail",
+  "intent": "'রিফান্ডে দেরি' বিষয়ে গ্রাহক সহায়তায় একটি বার্তা পাঠান, যাতে বলা থাকে আপনার রিফান্ড আসেনি। আপনার নাম ও ইমেইল (প্রিয়া শর্মা, priya.sharma@example.in) দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "রিফান্ডে দেরি",
+     "name": "প্রিয়া শর্মা",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=প্রিয়া শর্মা; email=priya.sharma@example.in; subject=রিফান্ডে দেরি; message=আমার বাতিল টিকিটের রিফান্ড এখনও আসেনি।"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-013",
+  "site": "rail",
+  "intent": "আপনার প্রোফাইলের মোবাইল নম্বর 9876501234 করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9876501234"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 mobile=9876501234"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-014",
+  "site": "rail",
+  "intent": "রিফান্ড নিয়ম অনুযায়ী, ছাড়ার 48 ঘণ্টারও বেশি আগে বাতিল করা একটি নিশ্চিত AC শ্রেণির টিকিটে টাকায় নির্দিষ্ট বাতিল চার্জ কত?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "340",
+     "৩৪০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 340"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-015",
+  "site": "rail",
+  "intent": "2026-04-09 তারিখে জয়পুর জংশন থেকে লখনউ পর্যন্ত কোনো সরাসরি ট্রেন আছে কি? না থাকলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো ট্রেন নেই",
+     "সরাসরি ট্রেন নেই",
+     "কোনোটি নেই",
+     "ট্রেন নেই",
+     "সেবা নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=JP; to=LKO; date=2026-04-09",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-016",
+  "site": "rail",
+  "intent": "এই সাইটের সব ট্রেনের মধ্যে কোন একটি ট্রেন উৎস থেকে গন্তব্য পর্যন্ত সবচেয়ে বেশি মোট দূরত্ব অতিক্রম করে? ট্রেন নম্বর ও কিমি-তে দূরত্ব উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2182",
+     "2,182",
+     "২১৮২",
+     "২,১৮২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615, 2182 km"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-017",
+  "site": "rail",
+  "intent": "কোন ট্রেন মোট সবচেয়ে বেশি নির্ধারিত স্টপে থামে (উৎস ও গন্তব্যসহ)? ট্রেন নম্বর ও স্টপের সংখ্যা উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615 with 6 stops"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-018",
+  "site": "rail",
+  "intent": "প্রতিদিন চলা ট্রেনগুলোর মধ্যে কোনটি দিনের সবচেয়ে দেরিতে (ঘড়ির সময় অনুযায়ী) গন্তব্যে পৌঁছায়? ট্রেন নম্বর ও পৌঁছানোর সময় উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12417"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "22:35"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12417 at 22:35"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-019",
+  "site": "rail",
+  "intent": "এই সাইটে কোন ট্রেনের কোনো মধ্যবর্তী স্টেশনে সবচেয়ে দীর্ঘ বিরতি আছে? ট্রেন নম্বর ও মিনিটে বিরতির দৈর্ঘ্য উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12841"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "20"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12841",
+   "stop 12841, 20 minutes at বিশাখাপত্তনম"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-020",
+  "site": "rail",
+  "intent": "SL (স্লিপার) আছে এমন সব ট্রেনের মধ্যে কোনটির পুরো রুটের SL ভাড়া সবচেয়ে সস্তা? ট্রেন নম্বর ও টাকায় ভাড়া উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12723"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "472",
+     "৪৭২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12723",
+   "stop 12723, 472"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-021",
+  "site": "rail",
+  "intent": "1A (AC ফার্স্ট ক্লাস) আছে এমন সব ট্রেনের মধ্যে কোনটির পুরো রুটের 1A ভাড়া সবচেয়ে দামি? ট্রেন নম্বর ও টাকায় ভাড়া উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "9340",
+     "9,340",
+     "৯৩৪০",
+     "৯,৩৪০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12301",
+   "stop 12301, 9340"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-022",
+  "site": "rail",
+  "intent": "এই সাইটে ঠিক দুটি স্টেশনে ঠিক 3টি করে ট্রেন থামে। কোন দুটি? দুটি স্টেশনের নামই উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "মুম্বাই সেন্ট্রাল",
+     "BCT"
+    ],
+    "none_of": [
+     "আগ্রা ক্যান্ট",
+     "আজমের জংশন",
+     "আবু রোড",
+     "আহমেদাবাদ জংশন",
+     "কানপুর সেন্ট্রাল",
+     "গুয়াহাটি",
+     "চেন্নাই সেন্ট্রাল",
+     "জয়পুর জংশন",
+     "নতুন দিল্লি",
+     "নাগপুর জংশন",
+     "নিউ জলপাইগুড়ি",
+     "পাটনা জংশন",
+     "পুনে জংশন",
+     "বারাণসী জংশন",
+     "বিশাখাপত্তনম",
+     "ভোপাল জংশন",
+     "লখনউ",
+     "সেকেন্দ্রাবাদ জংশন",
+     "হাওড়া জংশন"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "রতলাম জংশন",
+     "RTM"
+    ],
+    "none_of": [
+     "আগ্রা ক্যান্ট",
+     "আজমের জংশন",
+     "আবু রোড",
+     "আহমেদাবাদ জংশন",
+     "কানপুর সেন্ট্রাল",
+     "গুয়াহাটি",
+     "চেন্নাই সেন্ট্রাল",
+     "জয়পুর জংশন",
+     "নতুন দিল্লি",
+     "নাগপুর জংশন",
+     "নিউ জলপাইগুড়ি",
+     "পাটনা জংশন",
+     "পুনে জংশন",
+     "বারাণসী জংশন",
+     "বিশাখাপত্তনম",
+     "ভোপাল জংশন",
+     "লখনউ",
+     "সেকেন্দ্রাবাদ জংশন",
+     "হাওড়া জংশন"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop মুম্বাই সেন্ট্রাল and রতলাম জংশন"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-023",
+  "site": "rail",
+  "intent": "প্রতিদিন চলা ট্রেনগুলোর মধ্যে কোনটি সকালে সবচেয়ে আগে উৎস থেকে ছাড়ে? ট্রেন নম্বর ও ছাড়ার সময় উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:15",
+     "6:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12615 at 06:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-024",
+  "site": "rail",
+  "intent": "2026-04-07 তারিখে ছেড়ে কোন ট্রেন আপনাকে পাটনা জংশন থেকে হাওড়া জংশন নিয়ে যেতে পারে? তার ট্রেন নম্বর উত্তর দিন (কোনোটি না চললে N/A)।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=PNBE; to=HWH; date=2026-04-07",
+   "stop 12301"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-025",
+  "site": "rail",
+  "intent": "2026-04-08 তারিখে ছাড়া নিউ জলপাইগুড়ি থেকে গুয়াহাটি পর্যন্ত একটি সরাসরি ট্রেন খুঁজুন। তার ট্রেন নম্বর উত্তর দিন (কোনোটি না চললে N/A)।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NJP; to=GHY; date=2026-04-08",
+   "stop 12622"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-026",
+  "site": "rail",
+  "intent": "2026-04-06 থেকে 2026-04-12 পর্যন্ত প্রতিটি তারিখ বিবেচনা করে, কোন তারিখে নতুন দিল্লি থেকে কানপুর সেন্ট্রাল পর্যন্ত সবচেয়ে বেশি সরাসরি ট্রেন চলে? তারিখ (YYYY-MM-DD) এবং সেদিন কতটি ট্রেন চলে তা উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2026-04-12",
+     "রবিবার"
+    ],
+    "none_of": [
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-11"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-07",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-10",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-11",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 2026-04-12, 3 trains"
+  ],
+  "max_steps": 40,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-027",
+  "site": "rail",
+  "intent": "সপ্তাহের কত দিন ট্রেন 12301 যমুনা এক্সপ্রেস পাটনা জংশন-এ থামে? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/PNBE",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-028",
+  "site": "rail",
+  "intent": "আপনার বুকিং 6203456789 একটি নিশ্চিত AC শ্রেণির টিকিট। আজ বাতিল করলে (ছাড়ার 48 ঘণ্টারও বেশি আগে) প্রকাশিত রিফান্ড নিয়ম অনুযায়ী টাকায় কত রিফান্ড প্রাপ্য হবে? অঙ্কটি উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5172",
+     "5,172",
+     "৫১৭২",
+     "৫,১৭২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 5172"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-029",
+  "site": "rail",
+  "intent": "আপনার বুকিং 6202345678 অপেক্ষমাণ তালিকায়। রিফান্ড নিয়ম অনুযায়ী, ছাড়ার আগে বাতিল করলে টাকায় কত রিফান্ড পাবেন? অঙ্কটি উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1884",
+     "1,884",
+     "১৮৮৪",
+     "১,৮৮৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 1884"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-030",
+  "site": "rail",
+  "intent": "ট্রেন 12615 দক্ষিণ এক্সপ্রেস-এর পুরো রুটের (নতুন দিল্লি থেকে চেন্নাই সেন্ট্রাল) একটি নিশ্চিত 3A টিকিট ছাড়ার 24 ঘণ্টা আগে বাতিল করা হয়। রিফান্ড নিয়ম অনুযায়ী টাকায় কত রিফান্ড প্রাপ্য? অঙ্কটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3813",
+     "3,813",
+     "৩৮১৩",
+     "৩,৮১৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "goto /rules",
+   "stop 3813"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-031",
+  "site": "rail",
+  "intent": "আপনার নিশ্চিত বুকিং 6205678901 (একটি AC শ্রেণির টিকিট) ছাড়ার 6 ঘণ্টা আগে বাতিল করা হলে নিয়ম অনুযায়ী টাকায় কত রিফান্ড মিলবে? অঙ্কটি উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "156",
+     "১৫৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 156"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-032",
+  "site": "rail",
+  "intent": "ট্রেন 12559 কাশী এক্সপ্রেস-এ নতুন দিল্লি থেকে বারাণসী জংশন পর্যন্ত দুটি 2A টিকিটের মোট দাম কত হবে? টাকায় মোট উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5208",
+     "5,208",
+     "৫২০৮",
+     "৫,২০৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 5208"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-033",
+  "site": "rail",
+  "intent": "আপনার সব নিশ্চিত (CNF) বুকিংয়ের সম্মিলিত ভাড়া টাকায় কত? মোট উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "15248",
+     "15,248",
+     "১৫২৪৮",
+     "১৫,২৪৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 15248"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-034",
+  "site": "rail",
+  "intent": "ট্রেন 12615 দক্ষিণ এক্সপ্রেস-এ আগ্রা ক্যান্ট থেকে সেকেন্দ্রাবাদ জংশন ভ্রমণে 3A SL-এর চেয়ে কত বেশি দামি? টাকায় পার্থক্যটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2132",
+     "2,132",
+     "২১৩২",
+     "২,১৩২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615?from=AGC&to=SC&date=2026-04-06",
+   "stop 2132"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-035",
+  "site": "rail",
+  "intent": "নতুন দিল্লি থেকে বারাণসী জংশন সরাসরি ট্রেন 12559-এ SL-এ যাওয়ার সঙ্গে দুটি SL পর্বে ভাগ করা যাত্রার তুলনা করুন: ট্রেন 12301-এ নতুন দিল্লি থেকে কানপুর সেন্ট্রাল, তারপর ট্রেন 12559-এ কানপুর সেন্ট্রাল থেকে বারাণসী জংশন। দুই পর্বের বিকল্পের চেয়ে সরাসরি টিকিট কত টাকা সাশ্রয় করে?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "80",
+     "৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559?from=NDLS&to=BSB&date=2026-04-07",
+   "goto /train/12301?from=NDLS&to=CNB&date=2026-04-06",
+   "goto /train/12559?from=CNB&to=BSB&date=2026-04-07",
+   "stop 80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-036",
+  "site": "rail",
+  "intent": "ট্রেন 12904 মুম্বাই সম্পর্ক এক্সপ্রেস-এ সব শ্রেণি মিলিয়ে মোট কতটি আসন খালি আছে? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "93",
+     "৯৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12904",
+   "stop 93"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-037",
+  "site": "rail",
+  "intent": "আপনার দুটি বুকিং যাত্রী অনিতা দেশাই ও মীরা আইয়ার-র জন্য। কার টিকিটের ভাড়া বেশি, এবং কত টাকা বেশি? যাত্রীর নাম ও পার্থক্য উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "অনিতা দেশাই",
+     "অনিতা"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "456",
+     "৪৫৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop অনিতা দেশাই by 456"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-038",
+  "site": "rail",
+  "intent": "ট্রেন 12302 হাওড়া মেল-এর পুরো রুটে ১৪১২ টাকার বেশি দামের মধ্যে সবচেয়ে সস্তা শ্রেণি কোনটি? শ্রেণির কোড ও তার ভাড়া উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3A"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3380",
+     "3,380",
+     "৩৩৮০",
+     "৩,৩৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12302",
+   "stop 3A at 3380"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-039",
+  "site": "rail",
+  "intent": "ট্রেন 12659 আরাবল্লী এক্সপ্রেস-এ জয়পুর জংশন থেকে আহমেদাবাদ জংশন পর্যন্ত ৭০৪ টাকা না ছাড়ানো সবচেয়ে দামি শ্রেণি কোনটি? শ্রেণির কোড ও তার ভাড়া উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SL"
+    ],
+    "none_of": [
+     "2S",
+     "3A",
+     "CC"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "496",
+     "৪৯৬"
+    ],
+    "none_of": [
+     "1312",
+     "268",
+     "996"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop SL at 496"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-040",
+  "site": "rail",
+  "intent": "নতুন দিল্লি থেকে কানপুর সেন্ট্রাল অংশে চলা সব ট্রেনের মধ্যে কোনটি সেই অংশের জন্য সবচেয়ে সস্তা SL (স্লিপার) ভাড়া দেয়? ট্রেন নম্বর ও টাকায় ভাড়া উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12559"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "388",
+     "৩৮৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 12559 at 388"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-041",
+  "site": "rail",
+  "intent": "কোনটি বেশি দামি: ট্রেন 12622 ব্রহ্মপুত্র লিংক এক্সপ্রেস-এর পুরো রুটের একটি 1A টিকিট, নাকি ট্রেন 12615 দক্ষিণ এক্সপ্রেস-এ নতুন দিল্লি থেকে ভোপাল জংশন পর্যন্ত একটি 2A টিকিট? যে ট্রেন জেতে তার নম্বর ও সেই ভাড়া টাকায় উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5576",
+     "5,576",
+     "৫৫৭৬",
+     "৫,৫৭৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "goto /train/12615?from=NDLS&to=BPL&date=2026-04-06",
+   "stop 12622 at 5576"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-042",
+  "site": "rail",
+  "intent": "রতলাম জংশন-এ থামা সব ট্রেনের মধ্যে কোনটি দিনের সবচেয়ে আগে (ঘড়ির সময় অনুযায়ী) সেখান থেকে ছাড়ে? ট্রেন নম্বর ও সেখান থেকে ছাড়ার সময় উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12903"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "03:15",
+     "3:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/RTM",
+   "stop 12903 at 03:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-043",
+  "site": "rail",
+  "intent": "আপনার একটি বুকিং অপেক্ষমাণ তালিকায় (WL)। সেই বুকিংটি বাতিল করুন — শুধু সেটিই। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6202345678"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6202345678",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-044",
+  "site": "rail",
+  "intent": "2026-04-10 বা তার পরের তারিখের যাত্রার আপনার সব বুকিং, যেগুলো এখনও বাতিল হয়নি, বাতিল করুন। আগের প্রতিটি যাত্রা অপরিবর্তিত রাখুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6206789012"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6203456789",
+   "fill 0",
+   "goto /cancel/6208901234",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-045",
+  "site": "rail",
+  "intent": "আপনার প্রোফাইলে ইমেইল ঠিকানা priya.s@newmail.in এবং মোবাইল নম্বর 9812399999 করুন (দুটিই, এক হালনাগাদে)। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "email",
+    "value": "priya.s@newmail.in"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9812399999"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 email=priya.s@newmail.in; mobile=9812399999"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-046",
+  "site": "rail",
+  "intent": "PNR 6204567890 দেখে যাত্রীর নাম জানুন, তারপর গ্রাহক সহায়তায় আপনার নাম (প্রিয়া শর্মা), আপনার ইমেইল (priya.sharma@example.in), বিষয় 'PNR প্রশ্ন' এবং হুবহু এই বার্তা দিয়ে একটি বার্তা পাঠান: 'রিফান্ডের অবস্থা: <যাত্রীর নাম>' — <যাত্রীর নাম>-এর জায়গায় আপনার পাওয়া নামটি বসিয়ে।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "PNR প্রশ্ন",
+     "message": "রিফান্ডের অবস্থা: মীরা আইয়ার",
+     "name": "প্রিয়া শর্মা",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6204567890",
+   "goto /contact",
+   "fill 0 name=প্রিয়া শর্মা; email=priya.sharma@example.in; subject=PNR প্রশ্ন; message=রিফান্ডের অবস্থা: মীরা আইয়ার"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-047",
+  "site": "rail",
+  "intent": "PNR 6201234567 দেখুন, তারপর 2026-04-06 তারিখে ট্রেন 12049 তাজ সম্পর্ক-এ নতুন দিল্লি থেকে আগ্রা ক্যান্ট পর্যন্ত সেই বুকিংয়ের একই যাত্রীর (একই নাম ও বয়স) জন্য, পুরুষ, বার্থ পছন্দ নেই — একটি CC টিকিট বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "CC",
+     "passenger": "রোহন শর্মা",
+     "age": 34,
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=CC",
+   "fill 0 name=রোহন শর্মা; age=34; gender=M; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-048",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে ট্রেন 12138 নর্মদা মেল-এ মুম্বাই সেন্ট্রাল থেকে ভোপাল জংশন পর্যন্ত যাত্রী নিশা রাও, বয়স 30, মহিলা, নিচের (Lower) বার্থের একটি SL টিকিট বুক করুন — এবং তারপর সেই নতুন বুকিংটি বাতিল করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "নিশা রাও",
+     "status": "CAN",
+     "train_no": "12138",
+     "class_code": "SL",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12138?from=BCT&to=BPL&date=2026-04-06&class=SL",
+   "fill 0 name=নিশা রাও; age=30; gender=F; berth=Lower",
+   "fill 0",
+   "goto /cancel/6210000009",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-049",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে নতুন দিল্লি থেকে কানপুর সেন্ট্রাল পর্যন্ত সবচেয়ে আগে ছাড়া ট্রেনটি খুঁজুন এবং তাতে যাত্রী আনায়া কাপুর, বয়স 27, মহিলা, বার্থ পছন্দ নেই — একটি CC টিকিট বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12417",
+     "class_code": "CC",
+     "passenger": "আনায়া কাপুর",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /book/12417?from=NDLS&to=CNB&date=2026-04-06&class=CC",
+   "fill 0 name=আনায়া কাপুর; age=27; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-050",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে নতুন দিল্লি থেকে আগ্রা ক্যান্ট যতটা সম্ভব সস্তায় ভ্রমণ করুন: সেদিন চলা প্রতিটি ট্রেনের প্রতিটি শ্রেণি তুলনা করুন এবং যাত্রী ঋতু সিং, বয়স 24, মহিলা, বার্থ পছন্দ নেই — এর জন্য একমাত্র সবচেয়ে সস্তা বিকল্পটি বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "2S",
+     "passenger": "ঋতু সিং",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=AGC; date=2026-04-06",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=2S",
+   "fill 0 name=ঋতু সিং; age=24; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-051",
+  "site": "rail",
+  "intent": "2026-04-08 তারিখে নতুন দিল্লি থেকে কানপুর সেন্ট্রাল পর্যন্ত সবচেয়ে দেরিতে ছাড়া ট্রেনে যাত্রী মোহন দাস, বয়স 52, পুরুষ, নিচের (Lower) বার্থের একটি 3A টিকিট বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "3A",
+     "passenger": "মোহন দাস",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /book/12301?from=NDLS&to=CNB&date=2026-04-08&class=3A",
+   "fill 0 name=মোহন দাস; age=52; gender=M; berth=Lower",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-052",
+  "site": "rail",
+  "intent": "2026-04-09 তারিখে নতুন দিল্লি থেকে হাওড়া জংশন পর্যন্ত যাত্রী সারা খান, বয়স 33, মহিলা, উপরের (Upper) বার্থের একটি 2A টিকিট বুক করুন। ওই দিন কোনো ট্রেন না চললে একই যাত্রা 2026-04-10 তারিখে বুক করুন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "সারা খান",
+     "date": "2026-04-10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-10",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-10&class=2A",
+   "fill 0 name=সারা খান; age=33; gender=F; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-053",
+  "site": "rail",
+  "intent": "ট্রেন 12615 দক্ষিণ এক্সপ্রেস-এর পুরো রুটের 1A (AC ফার্স্ট ক্লাস) ভাড়া কত? এই ট্রেনে সেই শ্রেণি না থাকলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "দেওয়া হয় না",
+     "1a নেই",
+     "নেই",
+     "এই ট্রেনে নেই",
+     "ac ফার্স্ট নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-054",
+  "site": "rail",
+  "intent": "2026-04-08 তারিখে ট্রেন 12904 মুম্বাই সম্পর্ক এক্সপ্রেস-এ মুম্বাই সেন্ট্রাল থেকে নতুন দিল্লি পর্যন্ত যাত্রী রবি কুমার, বয়স 45, পুরুষের জন্য একটি 2A টিকিট বুক করুন। ট্রেন ওই দিন না চললে কিছুই বুক করবেন না এবং N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "চলে না",
+     "ওই দিন চলে না",
+     "কোনো ট্রেন নেই",
+     "চলছে না",
+     "বুক করিনি"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "bookings",
+    "match": {
+     "train_no": "12904",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /train/12904?from=BCT&to=NDLS&date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-055",
+  "site": "rail",
+  "intent": "2026-04-07 তারিখে লখনউ থেকে আগ্রা ক্যান্ট পর্যন্ত একটি সরাসরি ট্রেন খুঁজুন। কোনো সরাসরি ট্রেন এই রুটে না চললে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো ট্রেন নেই",
+     "সরাসরি ট্রেন নেই",
+     "সেবা নেই",
+     "ট্রেন নেই",
+     "এই রুটে নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=LKO; to=AGC; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-056",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে ছাড়া রতলাম জংশন থেকে নতুন দিল্লি পর্যন্ত একটি সরাসরি ট্রেন খুঁজুন। ওই দিন কোনো ট্রেন না চললে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো ট্রেন নেই",
+     "চলে না",
+     "ওই দিন চলে না",
+     "ট্রেন নেই",
+     "ছাড়ে না"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=RTM; to=NDLS; date=2026-04-06",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-057",
+  "site": "rail",
+  "intent": "2026-04-08 তারিখে গুয়াহাটি থেকে হাওড়া জংশন পর্যন্ত কোন ট্রেন চলে? কোনোটি সেই রুটে না চললে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "কোনো ট্রেন নেই",
+     "কোনোটি চলে না",
+     "সেবা নেই",
+     "ট্রেন নেই",
+     "এই রুটে নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=GHY; to=HWH; date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-058",
+  "site": "rail",
+  "intent": "বুকিং ফর্মে একটি তৎকাল কোটার বিকল্প আছে। রেলসেতু সাইটের কোথাও টাকায় কত অতিরিক্ত তৎকাল সারচার্জ উল্লেখ করে? কোনো সারচার্জের অঙ্ক উল্লেখ না থাকলে N/A উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "উল্লেখ নেই",
+     "কোনো সারচার্জ নেই",
+     "বলা নেই",
+     "কোথাও নেই",
+     "তৎকাল সারচার্জ নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /rules",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-059",
+  "site": "rail",
+  "intent": "কানপুর সেন্ট্রাল-এ কতটি ভিন্ন ট্রেন থামে (যেকোনো দিকে)? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/CNB",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-060",
+  "site": "rail",
+  "intent": "এই সাইটে কতটি ট্রেন প্রতিদিন (সাত দিনই) চলে? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-061",
+  "site": "rail",
+  "intent": "PNR 6207890123-এর PNR অবস্থা দেখুন এবং অবস্থার কোড উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CAN"
+    ],
+    "none_of": [
+     "CNF",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6207890123",
+   "stop CAN"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-062",
+  "site": "rail",
+  "intent": "ট্রেন 12615 দক্ষিণ এক্সপ্রেস নাগপুর জংশন-এ কত মিনিট থামে? মিনিটের সংখ্যা উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 10"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-063",
+  "site": "rail",
+  "intent": "কোন ট্রেনগুলো 20:00 বা তার পরে উৎস স্টেশন থেকে ছাড়ে? দুটি ট্রেন নম্বরই উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12138"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12302"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12138 and 12302"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-064",
+  "site": "rail",
+  "intent": "এই সাইটে সবচেয়ে ছোট মোট রুটের দুটি ট্রেন খুঁজুন এবং সেই দুটি রুটের সম্মিলিত দৈর্ঘ্য কিমি-তে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "707",
+     "৭০৭"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 707"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-065",
+  "site": "rail",
+  "intent": "আপনার কতটি বুকিং (যেকোনো অবস্থার) 2026-04-09-এর আগের তারিখের যাত্রার? সংখ্যাটি উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-066",
+  "site": "rail",
+  "intent": "আপনার কোন বুকিংয়ের ভাড়া সবচেয়ে বেশি? তার PNR ও টাকায় ভাড়া উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6203456789"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5512",
+     "5,512",
+     "৫৫১২",
+     "৫,৫১২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 6203456789 at 5512"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-067",
+  "site": "rail",
+  "intent": "ট্রেন 12559 কাশী এক্সপ্রেস বারাণসী জংশন-এ কখন পৌঁছায়, এবং তার যাত্রার কোন দিনে (1 বা 2)? সময় ও দিনের সংখ্যা উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:30",
+     "6:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "দুই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 06:30 on day 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-068",
+  "site": "rail",
+  "intent": "ট্রেন 12659 আরাবল্লী এক্সপ্রেস-এ আজমের জংশন থেকে আবু রোড কত কিমি? কিমি-তে দূরত্ব উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "304"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop 304"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-069",
+  "site": "rail",
+  "intent": "ট্রেন 12615 দক্ষিণ এক্সপ্রেস-এ ট্রেনটি ভোপাল জংশন ও নাগপুর জংশন-এর মধ্যে কত কিমি অতিক্রম করে? কিমি-তে দূরত্ব উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "389"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 389"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-070",
+  "site": "rail",
+  "intent": "ট্রেন 12723 ডেকান সম্পর্ক সেকেন্দ্রাবাদ জংশন থেকে পুনে জংশন পর্যন্ত কত সময় নেয়? যেভাবে দেখানো আছে সেই সময়কাল উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10h 15m",
+     "10 hours 15 minutes",
+     "10 hr 15 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-06",
+   "stop 10h 15m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-071",
+  "site": "rail",
+  "intent": "ট্রেন 12301 যমুনা এক্সপ্রেস-এ 3A-র জন্য দেখানো অপেক্ষমাণ তালিকার নম্বর কত? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12301",
+   "stop WL 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-072",
+  "site": "rail",
+  "intent": "গ্রাহক সহায়তায় আপনার নাম (প্রিয়া শর্মা) ও ইমেইল (priya.sharma@example.in), হুবহু বিষয় 'রুট 12659-এ ভাড়ার অসঙ্গতি' এবং হুবহু বার্তা 'জয়পুর জংশন থেকে আজমের জংশন পর্যন্ত CC ভাড়া প্রকাশিত তালিকার চেয়ে বেশি মনে হচ্ছে।' দিয়ে একটি বার্তা পাঠান",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "রুট 12659-এ ভাড়ার অসঙ্গতি",
+     "message": "জয়পুর জংশন থেকে আজমের জংশন পর্যন্ত CC ভাড়া প্রকাশিত তালিকার চেয়ে বেশি মনে হচ্ছে।",
+     "name": "প্রিয়া শর্মা",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=প্রিয়া শর্মা; email=priya.sharma@example.in; subject=রুট 12659-এ ভাড়ার অসঙ্গতি; message=জয়পুর জংশন থেকে আজমের জংশন পর্যন্ত CC ভাড়া প্রকাশিত তালিকার চেয়ে বেশি মনে হচ্ছে।"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-073",
+  "site": "rail",
+  "intent": "আপনার বুকিং ইতিহাসে কতটি বুকিং (যেকোনো অবস্থার) তালিকাভুক্ত? সংখ্যাটি উত্তর দিন। প্রয়োজনে priya_sharma (পাসওয়ার্ড: travel123) হিসেবে সাইন ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-074",
+  "site": "rail",
+  "intent": "2026-04-06 তারিখে ট্রেন 12301 যমুনা এক্সপ্রেস-এ নতুন দিল্লি থেকে হাওড়া জংশন পর্যন্ত কতটি 2A আসন খালি আছে? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-06",
+   "stop 26"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-075",
+  "site": "rail",
+  "intent": "মুম্বাই সেন্ট্রাল থেকে ভোপাল জংশন পর্যন্ত চলা ট্রেনটি খুঁজুন এবং সেই যাত্রার SL (স্লিপার) ভাড়া টাকায় উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "736",
+     "৭৩৬"
+    ],
+    "none_of": [
+     "1948",
+     "2776"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=BCT; to=BPL; date=2026-04-06",
+   "stop 736"
+  ],
+  "max_steps": 30
+ }
+]

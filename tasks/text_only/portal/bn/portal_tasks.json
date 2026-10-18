@@ -1,0 +1,2321 @@
+[
+ {
+  "id": "portal-001",
+  "site": "portal",
+  "intent": "আপনার পরিচয়পত্রে রেকর্ডকৃত নামের সংশোধন দাখিল করুন, নামটি 'দেলোয়ারা হক' করে, একটি সহায়ক দলিল সংযুক্ত করে। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "name",
+     "new_value": "দেলোয়ারা হক",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/name-correction/",
+   "fill 1 new_value=দেলোয়ারা হক; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-002",
+  "site": "portal",
+  "intent": "একটি নতুন পাসপোর্ট আবেদন শুরু থেকে শেষ পর্যন্ত পূরণ করে দাখিল করুন: ব্যক্তিগত তথ্য, তারপর ঠিকানা, তারপর পৃষ্ঠাসংখ্যা, মেয়াদ ও ডেলিভারি। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=দেলোয়ার হক; dob=1987-08-28; father_name=মনির ইসলাম",
+   "fill 1 present_addr=বাড়ি 16, রোড 5, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; perm_addr=গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার",
+   "fill 1 pages=48; validity=5; delivery=regular"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-003",
+  "site": "portal",
+  "intent": "বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়-এ ২০২৬ সালের ২২ জুন 10:30-এ পাসপোর্ট এনরোলমেন্ট অ্যাপয়েন্টমেন্ট বুক করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-22",
+     "slot_time": "10:30",
+     "office": "বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়; slot_date=2026-06-22; slot_time=10:30"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-004",
+  "site": "portal",
+  "intent": "গ্রাহক নম্বর 08000007-এর বকেয়া বিদ্যুৎ বিল BL0000005 পরিশোধ করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-005",
+  "site": "portal",
+  "intent": "সম্পূর্ণ আবেদন প্রক্রিয়ার মাধ্যমে একটি নতুন করদাতা শনাক্তকরণ নম্বরের জন্য নিবন্ধন করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "tin-registration"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-registration/",
+   "fill 1 name=দেলোয়ার হক; father_name=মনির ইসলাম; dob=1987-08-28; address=বাড়ি 16, রোড 5, মৌলভীবাজার গঞ্জ, মৌলভীবাজার",
+   "fill 1 circle=সার্কেল 1; income_source=বেতন"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-006",
+  "site": "portal",
+  "intent": "আপনার বিদ্যুৎ বিলের ইতিহাস খুলে 2026-01 বিলের অঙ্কটি লক্ষ করুন। বিদ্যুৎ ফি তালিকায় সেই বিলের অঙ্কের নিচে থাকা সর্বোচ্চ অঙ্কের ফিটি খুঁজে সেই ফির ভ্যারিয়েন্টের নাম উত্তর দিন। তারপর আপনার মিটারের সবচেয়ে পুরোনো বকেয়া বিলটি মেটান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "আবাসিক থ্রি ফেজ"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/electricity/fees/",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "stop আবাসিক থ্রি ফেজ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-007",
+  "site": "portal",
+  "intent": "ভূমি রেকর্ড অনুসন্ধানের মাধ্যমে মেহেরপুর জেলার কোথাও থাকা খতিয়ান নম্বর 4438 খুঁজুন (উপজেলা ও মৌজা দেওয়া নেই) এবং তাতে রেকর্ডকৃত দাগ নম্বর জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "357",
+     "৩৫৭"
+    ],
+    "none_of": [
+     "604"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=4438",
+   "stop 357"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-008",
+  "site": "portal",
+  "intent": "রোল নম্বর 763370-এর 2021 সালের মাধ্যমিক (secondary) পরীক্ষার ফল দেখুন (বোর্ড দেওয়া নেই — অনুসন্ধান পাতায় বোর্ডগুলোর তালিকা আছে) এবং পরীক্ষার্থীর প্রতিষ্ঠান জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "মডেল হাই স্কুল"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=রাজশাহী; year=2021; roll_no=763370",
+   "stop মডেল হাই স্কুল"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-009",
+  "site": "portal",
+  "intent": "নিবন্ধন নম্বর 20000000000373-এর জন্ম নিবন্ধন রেকর্ডটি যাচাই করে তার নিবন্ধনের তারিখ জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1987-09-06",
+     "১৯৮৭-০৯-০৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "stop 1987-09-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-010",
+  "site": "portal",
+  "intent": "বিদ্যুৎ সেবার পাতায় তিনটি বিজ্ঞপ্তির শিরোনাম একই। 2025-10-12 তারিখে জারি হওয়াটির বিভাগ (ক্যাটাগরি) জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "সময়সীমা"
+   }
+  ],
+  "solution": [
+   "goto /services/electricity/",
+   "stop সময়সীমা"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-011",
+  "site": "portal",
+  "intent": "পাসপোর্ট আবেদন PPA04000017 দেখে তার বইয়ের পৃষ্ঠাসংখ্যা ও মেয়াদ পড়ুন, তারপর পাসপোর্ট ফি তালিকা ব্যবহার করে ঠিক সেই পৃষ্ঠাসংখ্যা/মেয়াদ সমন্বয়ের এক্সপ্রেস (express) ডেলিভারি ফি জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "8050",
+     "8,050",
+     "৮০৫০",
+     "৮,০৫০"
+    ],
+    "none_of": [
+     "10350",
+     "4025",
+     "5750",
+     "6325",
+     "8625"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "goto /services/passport/fees/",
+   "stop 8050"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-012",
+  "site": "portal",
+  "intent": "আপনার বিদ্যুৎ বিলের ইতিহাস খুলে ছয়টি বিলিং সময়কাল মিলিয়ে মোট বিল করা অঙ্ক জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "13576",
+     "13,576",
+     "১৩৫৭৬",
+     "১৩,৫৭৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 13576"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-013",
+  "site": "portal",
+  "intent": "স্লিপ নম্বর NI9999999-এর পরিচয় সংশোধন আবেদনটি খুঁজে তার অবস্থা জানান। এমন কোনো রেকর্ড না থাকলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/correction-status/",
+   "fill 1 slip_no=NI9999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-014",
+  "site": "portal",
+  "intent": "দক্ষিণ চর মৌজায় (মেহেরপুর পাড়া, মেহেরপুর, খুলনা বিভাগ) খতিয়ান নম্বর 99999 খুঁজুন। এমন কোনো রেকর্ড না থাকলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=99999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-015",
+  "site": "portal",
+  "intent": "রোল নম্বর 999999, রাজশাহী বোর্ড, 2021-এর মাধ্যমিক (secondary) ফল সংগ্রহ করুন। এমন কোনো ফল না থাকলে NO_RECORD উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=রাজশাহী; year=2021; roll_no=999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-016",
+  "site": "portal",
+  "intent": "আপনার বিদ্যুৎ বিলের ইতিহাস খুলে 2026-01 বিলের অঙ্কটি লক্ষ করুন। ড্রাইভিং লাইসেন্স ফি তালিকায় সেই বিলের অঙ্কের নিচে থাকা সবচেয়ে দামি ফিটি খুঁজুন, তারপর ঠিক সেই শ্রেণি/ভ্যারিয়েন্টের চালান তৈরি করে (কার্ডে, card) পরিশোধ করুন এবং যে অঙ্ক পরিশোধ করলেন তা জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1679",
+     "1,679",
+     "১৬৭৯",
+     "১,৬৭৯"
+    ],
+    "none_of": [
+     "1427",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1679,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/driving-licence/fees/",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=লাইসেন্স; variant=পেশাদার; method=card",
+   "stop 1679"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-017",
+  "site": "portal",
+  "intent": "গ্রাহক নম্বর 08000049-এর মোট বকেয়া অঙ্ক দেখুন। বিদ্যুৎ ফি তালিকায় সেই মোটের অর্ধেকের নিচে থাকা সবচেয়ে দামি ফিটি খুঁজে সেই ফির ভ্যারিয়েন্টের নাম উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "বাণিজ্যিক"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/fees/",
+   "stop বাণিজ্যিক"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-018",
+  "site": "portal",
+  "intent": "আপনার গ্রাহক নম্বর 08000007-এর দুটি বকেয়া বিদ্যুৎ বিলই কার্ডে (card) পরিশোধ করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-019",
+  "site": "portal",
+  "intent": "গ্রাহক নম্বর 08000021-এর একাধিক বকেয়া বিদ্যুৎ বিল আছে। শুধু সবচেয়ে পুরোনোটি (কার্ডে, card) পরিশোধ করুন এবং বাকিগুলো অপরিশোধিত রাখুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000011",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000012"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000021",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-020",
+  "site": "portal",
+  "intent": "গ্রাহক নম্বর 08000049-এর মোট বকেয়া অঙ্ক গ্রাহক নম্বর 08000035-এর চেয়ে কত বেশি? পার্থক্যটি উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2094",
+     "2,094",
+     "২০৯৪",
+     "২,০৯৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "stop 2094"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-021",
+  "site": "portal",
+  "intent": "আপনার দুটি বকেয়া তুলনা করুন: গ্রাহক নম্বর 08000007-এর মোট অপরিশোধিত বিদ্যুৎ বিল, এবং হোল্ডিং HLD00001-এর মোট অপরিশোধিত ভূমি উন্নয়ন কর। দুটির মধ্যে বড় অঙ্কটি উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4776",
+     "4,776",
+     "৪৭৭৬",
+     "৪,৭৭৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000007",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00001",
+   "stop 4776"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-022",
+  "site": "portal",
+  "intent": "আপনার বিদ্যুৎ বিলের ইতিহাসে কতটি বিলের অঙ্ক ২০০০-এর বেশি ছিল? সংখ্যাটি উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "3",
+     "৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-023",
+  "site": "portal",
+  "intent": "ভূমি রেকর্ড অনুসন্ধানের মাধ্যমে ঝিনাইদহ জেলার (খুলনা বিভাগ; উপজেলা ও মৌজা দেওয়া নেই) কোথাও থাকা খতিয়ান নম্বর 5265 খুঁজুন এবং তাতে রেকর্ডকৃত মালিক জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "মনির দাস"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=71",
+   "fill 1 khatian_no=5265",
+   "stop মনির দাস"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-024",
+  "site": "portal",
+  "intent": "চর কান্দা মৌজায় (দিনাজপুর বাজার, দিনাজপুর, রংপুর বিভাগ) খতিয়ান নম্বর 9458 দেখুন এবং তিনটি জিনিস জানান: মালিক, জমির শ্রেণি এবং শতাংশে পরিমাণ। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "তোফাজ্জল দাস"
+   },
+   {
+    "type": "answer_match",
+    "answer": "পুকুর"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "242",
+     "২৪২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=121",
+   "fill 1 khatian_no=9458",
+   "stop তোফাজ্জল দাস, পুকুর, 242"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-025",
+  "site": "portal",
+  "intent": "মধ্য পাড়া মৌজায় (রাজশাহী উত্তর, রাজশাহী, রাজশাহী বিভাগ) খতিয়ান নম্বর 6743 দেখুন, তারপর সেই রেকর্ড থেকে নকল করে একটি নামজারির আবেদন করুন: বিক্রেতার নাম = রেকর্ডকৃত মালিক, দাগ নম্বর ও পরিমাণ যেমন রেকর্ড আছে। ক্রেতা হিসেবে নিজেকে দিন (ক্রেতার আইডি 9999708182203), বিক্রেতার আইডি 9999000000002। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%রোকেয়া করিম%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"1332\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"6743\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"buyer_id\": \"9999708182203\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_id\": \"9999000000002\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"185\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=6&district=51&upazila=203&mouza=114",
+   "fill 1 khatian_no=6743",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=দেলোয়ার হক; buyer_id=9999708182203; seller_name=রোকেয়া করিম; seller_id=9999000000002; khatian_no=6743; plot_no=1332; area=185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-026",
+  "site": "portal",
+  "intent": "হোল্ডিং HLD00003-এর কয়েক বছরের ভূমি উন্নয়ন কর বকেয়া আছে। এর সব বকেয়া কার্ডে (card) পরিশোধ করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-027",
+  "site": "portal",
+  "intent": "মোট বকেয়া ভূমি উন্নয়ন কর কোন হোল্ডিংয়ের বেশি: HLD00003 না HLD00004? হোল্ডিং নম্বরটি উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "HLD00003",
+     "HLD০০০০৩"
+    ],
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "stop HLD00003"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-028",
+  "site": "portal",
+  "intent": "ভূমি রেকর্ড অনুসন্ধানে নড়াইল সদর উপজেলায় (নড়াইল জেলা, খুলনা বিভাগ) যান এবং উত্তর চর মৌজার জেএল নম্বর জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "295",
+     "২৯৫"
+    ],
+    "none_of": [
+     "147",
+     "310"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=39&upazila=153",
+   "stop 295"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-029",
+  "site": "portal",
+  "intent": "ভূমি রেকর্ড অনুসন্ধানের মাধ্যমে রংপুর বিভাগের কোথাও থাকা খতিয়ান নম্বর 2052 খুঁজুন (জেলা, উপজেলা ও মৌজা দেওয়া নেই) এবং তাতে রেকর্ডকৃত মালিক জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "কোহিনূর আলম"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=123",
+   "fill 1 khatian_no=2052",
+   "stop কোহিনূর আলম"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-030",
+  "site": "portal",
+  "intent": "ঝিনাইদহ জেলার (খুলনা বিভাগ; উপজেলা ও মৌজা দেওয়া নেই) কোথাও থাকা খতিয়ান নম্বর 8630 খুঁজুন এবং মালিক ও শতাংশে পরিমাণ দুটিই জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "গোলাম খান"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "185",
+     "১৮৫"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=72",
+   "fill 1 khatian_no=8630",
+   "stop গোলাম খান, 185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-031",
+  "site": "portal",
+  "intent": "ভূমি রেকর্ড অনুসন্ধানের মাধ্যমে ঝালকাঠি জেলার (বরিশাল বিভাগ; উপজেলা ও মৌজা দেওয়া নেই) কোথাও থাকা খতিয়ান নম্বর 3232 খুঁজুন এবং তাতে রেকর্ডকৃত জমির শ্রেণি জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "পতিত"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=1&district=4&upazila=16&mouza=10",
+   "fill 1 khatian_no=3232",
+   "stop পতিত"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-032",
+  "site": "portal",
+  "intent": "হোল্ডিং HLD00003-এ সবচেয়ে সাম্প্রতিক অর্থবছরটি বাদে প্রতিটি বকেয়া ভূমি উন্নয়ন কর কার্ডে (card) পরিশোধ করুন — সবচেয়ে নতুন বকেয়াটি অপরিশোধিত থাকতে হবে। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-033",
+  "site": "portal",
+  "intent": "মোট বকেয়া ভূমি উন্নয়ন কর কোন হোল্ডিংয়ের বেশি: HLD00004 না HLD00005? হোল্ডিং নম্বরটি উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "HLD00005",
+     "HLD০০০০৫"
+    ],
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop HLD00005"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-034",
+  "site": "portal",
+  "intent": "রোল নম্বর 244479-এর 2021 সালের মাধ্যমিক (secondary) পরীক্ষার ফল দেখুন (বোর্ড দেওয়া নেই — অনুসন্ধান পাতায় বোর্ডগুলোর তালিকা আছে), তারপর সেই ফলের জন্য একটি পুনঃনিরীক্ষণ আবেদন দাখিল করুন, ফলে দেখানো রেজিস্ট্রেশন নম্বর, তার বোর্ড ও বছর লিখে, গণিত বিষয়ের জন্য।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1352566082%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"244479\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"গণিত\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"কারিগরি\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2021\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=কারিগরি; year=2021; roll_no=244479",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=244479; registration_no=1352566082; board=কারিগরি; year=2021; subjects=গণিত"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-035",
+  "site": "portal",
+  "intent": "রোল নম্বর 969953-এর 2023 সালের উচ্চ মাধ্যমিক (higher-secondary) পরীক্ষার ফল দেখুন (বোর্ড দেওয়া নেই — অনুসন্ধান পাতায় বোর্ডগুলোর তালিকা আছে), তারপর সেই ফলের জন্য একটি পুনঃনিরীক্ষণ আবেদন দাখিল করুন, ফলে দেখানো রেজিস্ট্রেশন নম্বর, তার বোর্ড ও বছর লিখে, ইংরেজি বিষয়ের জন্য।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1687250440%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"969953\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"ইংরেজি\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"কারিগরি\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2023\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=কারিগরি; year=2023; roll_no=969953",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=969953; registration_no=1687250440; board=কারিগরি; year=2023; subjects=ইংরেজি"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-036",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ডে ভূমি সেবার বিজ্ঞপ্তিগুলো ছেঁকে নিন। সেই সেবা কোন বিভাগ (ক্যাটাগরি) সবচেয়ে বেশিবার ব্যবহার করেছে? বিভাগটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "রক্ষণাবেক্ষণ"
+   }
+  ],
+  "solution": [
+   "goto /notices/?service=ভূমি সেবা",
+   "stop রক্ষণাবেক্ষণ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-037",
+  "site": "portal",
+  "intent": "টিআইএন 972871718941 দিয়ে কর বছর 2025-2026-এর একটি ব্যক্তিগত ই-রিটার্ন দাখিল করুন: মোট আয় ৬৪০০০০, কর্তন ঠিক আয়ের এক-অষ্টমাংশ, এবং প্রদেয় কর ঠিক (আয় বাদ কর্তন)-এর ১০%। সব অঙ্ক সাধারণ সংখ্যায় লিখুন, ঘোষণা YES। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"640000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"80000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"56000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=640000; deductions=80000; tax_payable=56000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-038",
+  "site": "portal",
+  "intent": "রেফারেন্স TR/N/2026/001-এর বিজ্ঞপ্তিটি পোর্টালের নোটিশ বোর্ডে আছে (হোম পেজ থেকে লিংক করা)। কোন সেবা এটি জারি করেছে খুঁজে বের করুন, সেই সেবার ফি তালিকা খুলুন এবং সেখানে তালিকাভুক্ত সবচেয়ে সস্তা ফির অঙ্ক জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "200",
+     "২০০"
+    ],
+    "none_of": [
+     "1500",
+     "400",
+     "500",
+     "5000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/",
+   "goto /services/trade-licence/fees/",
+   "stop 200"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-039",
+  "site": "portal",
+  "intent": "দুটি কাজই করুন: গ্রাহক নম্বর 08000007-এর বিদ্যুৎ বিল BL0000006 পরিশোধ করুন, এবং প্রিপেইড মিটার MTR000006 ৭৫০ দিয়ে রিচার্জ করুন। কার্ডে (card) পরিশোধ করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge",
+     "ref": "MTR000006",
+     "amount": 750,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000006; amount=750; method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-040",
+  "site": "portal",
+  "intent": "সম্পূর্ণ ফর্মের মাধ্যমে নতুন ভোটার নিবন্ধন সম্পন্ন করুন (আপনার নাম, পিতৃ-মাতৃপরিচয়, জন্মতারিখ, দুই ঠিকানা এবং কেন্দ্র হিসেবে মৌলভীবাজার পরিচয়পত্র নিবন্ধন কার্যালয়), এবং সেই সঙ্গে বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়-এ 2026-06-25 তারিখে 15:00-এ একটি পাসপোর্ট এনরোলমেন্ট অ্যাপয়েন্টমেন্ট বুক করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "nid-voter-registration",
+     "payload": "%\"centre\": \"মৌলভীবাজার পরিচয়পত্র নিবন্ধন কার্যালয়\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-25",
+     "slot_time": "15:00",
+     "office": "বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/voter-registration/",
+   "fill 1 name=দেলোয়ার হক; father_name=মনির ইসলাম; dob=1987-08-28; present_addr=বাড়ি 16, রোড 5, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; perm_addr=গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; centre=মৌলভীবাজার পরিচয়পত্র নিবন্ধন কার্যালয়",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়; slot_date=2026-06-25; slot_time=15:00"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-041",
+  "site": "portal",
+  "intent": "এই দুটি আবেদনই দাখিল করুন: বিদেশে চাকরির জন্য একটি পুলিশ ক্লিয়ারেন্স সনদ (নাম, পিতৃ-মাতৃপরিচয়, জন্মতারিখ ও দুই ঠিকানা), এবং একটি হজ প্রাক-নিবন্ধন (নাম, পিতার নাম, পাসপোর্ট নম্বর PPA04000017, বর্তমান ঠিকানা, আপনার মোবাইল, নিকটাত্মীয় হিসেবে আপনার মা, সরকারি (government) প্যাকেজ)। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%বিদেশে চাকরি%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"name\": \"দেলোয়ার হক\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"father_name\": \"মনির ইসলাম\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"passport_no\": \"PPA04000017\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"name\": \"দেলোয়ার হক\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"father_name\": \"মনির ইসলাম\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"package\": \"government\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"next_of_kin\": \"ফেরদৌসী ভূঁইয়া\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/police-clearance/panel/clearance-apply/",
+   "fill 1 name=দেলোয়ার হক; father_name=মনির ইসলাম; dob=1987-08-28; present_addr=বাড়ি 16, রোড 5, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; perm_addr=গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; purpose=বিদেশে চাকরি",
+   "goto /services/pilgrimage/panel/pre-registration/",
+   "fill 1 name=দেলোয়ার হক; father_name=মনির ইসলাম; passport_no=PPA04000017; address=বাড়ি 16, রোড 5, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; mobile=01853445903; next_of_kin=ফেরদৌসী ভূঁইয়া; package=government"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-042",
+  "site": "portal",
+  "intent": "একটি নামজারির আবেদন করুন (ক্রেতা: আপনি নিজে, আইডি 9999708182203; বিক্রেতা রফিকুল ইসলাম, আইডি 9999000000001; খতিয়ান 4438, দাগ 357, পরিমাণ 25), এবং সেই সঙ্গে হোল্ডিং HLD00002-এর বকেয়া ভূমি উন্নয়ন কর কার্ডে (card) পরিশোধ করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_name\": \"রফিকুল ইসলাম\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"4438\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"357\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"25\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=দেলোয়ার হক; buyer_id=9999708182203; seller_name=রফিকুল ইসলাম; seller_id=9999000000001; khatian_no=4438; plot_no=357; area=25",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-043",
+  "site": "portal",
+  "intent": "গ্রাহক নম্বর 08000007-এ শুধু সবচেয়ে নতুন বকেয়া বিদ্যুৎ বিলটি কার্ডে (card) পরিশোধ করুন, পুরোনোটি অপরিশোধিত রেখে। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-044",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ড খুলুন (হোম পেজ থেকে লিংক করা)। সব সেবা মিলিয়ে ২০২৬ সালের ফেব্রুয়ারিতে কতটি বিজ্ঞপ্তি জারি হয়েছে? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "12",
+     "১২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-02",
+   "stop 12"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-045",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ড অনুযায়ী ২০২৫ সালে কোন সেবা সবচেয়ে বেশি বিজ্ঞপ্তি জারি করেছে? সেবার নামটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ভূমি সেবা"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2025",
+   "goto /notices/?period=2025&page=2",
+   "goto /notices/?period=2025&page=3",
+   "stop ভূমি সেবা"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-046",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ডের সবচেয়ে পুরোনো বিজ্ঞপ্তির হুবহু শিরোনাম জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "পেনশন বিতরণ-এর এক্সপ্রেস প্রক্রিয়াকরণ স্থগিত"
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "stop পেনশন বিতরণ-এর এক্সপ্রেস প্রক্রিয়াকরণ স্থগিত"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-047",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ডে ২০২৬ সালে জারি হওয়া কতটি বিজ্ঞপ্তির বিভাগ (ক্যাটাগরি) 'বন্ধ'? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "15",
+     "১৫"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026&category=বন্ধ",
+   "stop 15"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-048",
+  "site": "portal",
+  "intent": "রোল নম্বর 496396-এর 2023 সালের উচ্চ মাধ্যমিক (higher-secondary) পরীক্ষার ফল খুঁজুন — বোর্ড দেওয়া নেই, অনুসন্ধান পাতায় বোর্ডগুলোর তালিকা আছে। পরীক্ষার্থীর জিপিএ ও প্রতিষ্ঠান দুটিই জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4.56",
+     "৪.৫৬"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "আইডিয়াল কলেজ"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=ময়মনসিংহ; year=2023; roll_no=496396",
+   "stop 4.56, আইডিয়াল কলেজ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-049",
+  "site": "portal",
+  "intent": "রোল নম্বর 969525-এর 2021 সালের মাধ্যমিক (secondary) পরীক্ষার ফল খুঁজুন — বোর্ড দেওয়া নেই। পরীক্ষার্থীর নাম ও জিপিএ দুটিই জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "শাহনাজ ভূঁইয়া"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4.28",
+     "৪.২৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=ময়মনসিংহ; year=2021; roll_no=969525",
+   "stop শাহনাজ ভূঁইয়া, 4.28"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-050",
+  "site": "portal",
+  "intent": "ভূমি রেকর্ড অনুসন্ধানের মাধ্যমে শরীয়তপুর জেলার (ঢাকা বিভাগ; উপজেলা ও মৌজা দেওয়া নেই) কোথাও থাকা খতিয়ান নম্বর 7191 খুঁজুন এবং তাতে রেকর্ডকৃত জমির শ্রেণি জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "বাগান"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=3&district=29&upazila=116&mouza=43",
+   "fill 1 khatian_no=7191",
+   "stop বাগান"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-051",
+  "site": "portal",
+  "intent": "সাতক্ষীরা জেলার (খুলনা বিভাগ; উপজেলা ও মৌজা দেওয়া নেই) কোথাও থাকা খতিয়ান নম্বর 1022 খুঁজুন এবং মালিক ও রেকর্ডকৃত অংশ দুটিই জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "কোহিনূর আলম"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1/3",
+     "১/৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=40&upazila=157&mouza=95",
+   "fill 1 khatian_no=1022",
+   "stop কোহিনূর আলম, 1/3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-052",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ডে ঠিক একটি বিজ্ঞপ্তি ২০২৬ সালের জুনে জারি হয়েছে। তার রেফারেন্স নম্বর এবং যে সেবা এটি জারি করেছে তার নাম — দুটিই জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "PA/N/2026/006",
+     "PA/N/২০২৬/০০৬"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "পাসপোর্ট সেবা"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop PA/N/2026/006, পাসপোর্ট সেবা"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-053",
+  "site": "portal",
+  "intent": "২০২৬ সালে কোন মাসে পোর্টালের নোটিশ বোর্ডে সবচেয়ে কম বিজ্ঞপ্তি এসেছে? মাসটি YYYY-MM আকারে উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2026-06",
+     "২০২৬-০৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop 2026-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-054",
+  "site": "portal",
+  "intent": "গ্রাহক নম্বর 08000021, 08000035 ও 08000049-এর মোট বকেয়া বিদ্যুৎ বিল দেখুন এবং তিনটি মিলিয়ে সম্মিলিত মোট জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "20146",
+     "20,146",
+     "২০১৪৬",
+     "২০,১৪৬"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000021",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "stop 20146"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-055",
+  "site": "portal",
+  "intent": "হোল্ডিং HLD00003, HLD00004 ও HLD00005-এর সব বকেয়া ভূমি উন্নয়ন করের সম্মিলিত মোট জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "9292",
+     "9,292",
+     "৯২৯২",
+     "৯,২৯২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop 9292"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-056",
+  "site": "portal",
+  "intent": "আপনার বিদ্যুৎ বিলের ইতিহাসের ছয়টি সময়কাল মিলিয়ে মোট কত ইউনিট (kWh) ব্যবহৃত হয়েছে? প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1652",
+     "1,652",
+     "১৬৫২",
+     "১,৬৫২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 1652"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-057",
+  "site": "portal",
+  "intent": "পাসপোর্ট ফি তালিকায় সবচেয়ে দামি ফি ও সবচেয়ে সস্তা শূন্য-নয় ফির পার্থক্য কত?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6325",
+     "6,325",
+     "৬৩২৫",
+     "৬,৩২৫"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "stop 6325"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-058",
+  "site": "portal",
+  "intent": "পাসপোর্ট ও ড্রাইভিং লাইসেন্স ফি তালিকা মিলিয়ে কতটি ফি সারির অঙ্ক ৫০০০-এর বেশি? সংখ্যাটি উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "9",
+     "৯"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "goto /services/driving-licence/fees/",
+   "stop 9"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-059",
+  "site": "portal",
+  "intent": "টিআইএন 972871718941 দিয়ে কর বছর 2025-2026-এর একটি ব্যক্তিগত ই-রিটার্ন দাখিল করুন: মোট আয় ৭২০০০০, কর্তন ঠিক আয়ের এক-চতুর্থাংশ, এবং প্রদেয় কর ঠিক (আয় বাদ কর্তন)-এর ১৫%। সব অঙ্ক সাধারণ সংখ্যায় লিখুন, ঘোষণা YES। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"720000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"180000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"81000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=720000; deductions=180000; tax_payable=81000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-060",
+  "site": "portal",
+  "intent": "নিবন্ধন নম্বর 20000000000373-এর জন্ম নিবন্ধন রেকর্ডটি দেখুন। তারপর একটি নতুন শিশুর জন্ম নিবন্ধন আবেদন দাখিল করুন, যার নাম হুবহু সেই রেকর্ডের মায়ের নামে, জন্ম 2026-03-01, সেই রেকর্ডে রেকর্ডকৃত স্থানে, পিতা হিসেবে আপনি নিজে এবং মাতা হিসেবে আপনার মা। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"child_name\": \"ফেরদৌসী ভূঁইয়া\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"place\": \"গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"dob\": \"2026-03-01\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"father_name\": \"দেলোয়ার হক\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"mother_name\": \"ফেরদৌসী ভূঁইয়া\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "goto /services/civil-registration/panel/birth-apply/",
+   "fill 1 child_name=ফেরদৌসী ভূঁইয়া; dob=2026-03-01; place=গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; father_name=দেলোয়ার হক; mother_name=ফেরদৌসী ভূঁইয়া"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-061",
+  "site": "portal",
+  "intent": "পোর্টালের নোটিশ বোর্ডের সবচেয়ে পুরোনো বিজ্ঞপ্তিটি খুঁজুন, কোন সেবা এটি জারি করেছে লক্ষ করুন, তারপর সেই সেবার ফি তালিকা খুলে তার সবচেয়ে দামি ফির অঙ্ক জানান।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "50",
+     "৫০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "goto /services/pension/fees/",
+   "stop 50"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-062",
+  "site": "portal",
+  "intent": "দুটিই করুন: বরিশাল পরিবহন লাইসেন্স কার্যালয়-এ সবচেয়ে আগের খালি তারিখে সবচেয়ে আগের সময়ে একটি ড্রাইভিং টেস্ট বুক করুন, এবং নবায়ন শ্রেণি, পেশাদার ভ্যারিয়েন্টের চালান তৈরি করে (কার্ডে, card) পরিশোধ করুন। তারপর যে চালানের অঙ্ক পরিশোধ করলেন তা জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 7,
+     "slot_date": "2026-06-23",
+     "slot_time": "09:00",
+     "office": "বরিশাল পরিবহন লাইসেন্স কার্যালয়"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1427,
+     "method": "card"
+    }
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1427",
+     "1,427",
+     "১৪২৭",
+     "১,৪২৭"
+    ],
+    "none_of": [
+     "1679",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/test-booking/",
+   "fill 1 office=বরিশাল পরিবহন লাইসেন্স কার্যালয়; slot_date=2026-06-23; slot_time=09:00",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=নবায়ন; variant=পেশাদার; method=card",
+   "stop 1427"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-063",
+  "site": "portal",
+  "intent": "পাসপোর্ট আবেদন PPA04000034 ও PPA04000068 দেখে প্রতিটির বইয়ের পৃষ্ঠাসংখ্যা ও মেয়াদ পড়ুন। পাসপোর্ট ফি তালিকা অনুযায়ী কোন আবেদনের নিয়মিত (regular) ডেলিভারি ফি বেশি? আবেদন আইডিটি উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "PPA04000068",
+     "PPA০৪০০০০৬৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000034",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000068",
+   "goto /services/passport/fees/",
+   "stop PPA04000068"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-064",
+  "site": "portal",
+  "intent": "তিনটি কাজই করুন: গ্রাহক 08000007-এর বিদ্যুৎ বিল BL0000005 পরিশোধ করুন, হোল্ডিং HLD00002-এর বকেয়া ভূমি উন্নয়ন কর পরিশোধ করুন, এবং বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়-এ 2026-06-24 তারিখে 11:30-এ একটি পাসপোর্ট এনরোলমেন্ট অ্যাপয়েন্টমেন্ট বুক করুন। কার্ডে (card) পরিশোধ করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-24",
+     "slot_time": "11:30",
+     "office": "বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়; slot_date=2026-06-24; slot_time=11:30"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-065",
+  "site": "portal",
+  "intent": "হোল্ডিং HLD00003-এ শুধু 2022-2023 অর্থবছরের ভূমি উন্নয়ন কর বকেয়াটি (কার্ডে, card) পরিশোধ করুন, পুরোনো ও নতুন দুই বকেয়াই অপরিশোধিত রেখে। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-066",
+  "site": "portal",
+  "intent": "তিনটি সংশোধন দাখিল করুন: আপনার পরিচয় রেকর্ডের বর্তমান ঠিকানা 'বাড়ি 9, লেক রোড, সিলেট' এবং জন্মতারিখ 1987-08-27 করুন, এবং আপনার যুক্ত জন্ম নিবন্ধন রেকর্ডের নাম 'দেলোয়ার হোক' করুন। প্রতিটিতে লকারের যেকোনো দলিল সংযুক্ত করুন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "present_addr",
+     "new_value": "বাড়ি 9, লেক রোড, সিলেট",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "dob",
+     "new_value": "1987-08-27",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records",
+     "new_value": "দেলোয়ার হোক",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/address-correction/",
+   "fill 1 new_value=বাড়ি 9, লেক রোড, সিলেট; document=secondary-school-certificate-1.pdf",
+   "goto /services/national-id/panel/dob-correction/",
+   "fill 1 new_value=1987-08-27; document=secondary-school-certificate-1.pdf",
+   "goto /services/civil-registration/panel/birth-correction/",
+   "fill 1 new_value=দেলোয়ার হোক; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-067",
+  "site": "portal",
+  "intent": "দুটি পাসপোর্ট অনুরোধই দাখিল করুন: একটি নতুন আবেদন (আপনার নাম, জন্মতারিখ ও পিতার নাম; দুই ঠিকানা; 64 পৃষ্ঠা, 10 বছর মেয়াদ, এক্সপ্রেস (express) ডেলিভারি), এবং পাসপোর্ট নম্বর A6053903-এর জন্য 'ক্ষতিগ্রস্ত বই' কারণ দিয়ে একটি পুনঃপ্রদানের আবেদন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"pages\": \"64\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"validity\": \"10\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"delivery\": \"express\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"passport_no\": \"A6053903\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"reason\": \"ক্ষতিগ্রস্ত বই\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=দেলোয়ার হক; dob=1987-08-28; father_name=মনির ইসলাম",
+   "fill 1 present_addr=বাড়ি 16, রোড 5, মৌলভীবাজার গঞ্জ, মৌলভীবাজার; perm_addr=গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার",
+   "fill 1 pages=64; validity=10; delivery=express",
+   "goto /services/passport/panel/reissue-application/",
+   "fill 1 passport_no=A6053903; reason=ক্ষতিগ্রস্ত বই"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-068",
+  "site": "portal",
+  "intent": "মিটার MTR000001 ৩০০ দিয়ে কার্ডে (card) রিচার্জ করুন। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000001; amount=300; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-069",
+  "site": "portal",
+  "intent": "পরিচয় নম্বর 9999708182203, নিবন্ধন 2023-09-16-এর টিকা সনদ ডাউনলোড করে সনদ নম্বর জানান। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/health/panel/vaccine-certificate/",
+   "fill 1 identity_no=9999708182203; registered_date=2023-09-16",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-070",
+  "site": "portal",
+  "intent": "আবেদন PPA04000017-এর পাসপোর্টের ডেলিভারির অবস্থা দেখে তা জানান। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-071",
+  "site": "portal",
+  "intent": "শ্রেণি লাইসেন্স, ভ্যারিয়েন্ট মোটরসাইকেল-এর একটি ফি চালান তৈরি করে পরিশোধ করুন। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=লাইসেন্স; variant=মোটরসাইকেল; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-072",
+  "site": "portal",
+  "intent": "আপনার অ্যাকাউন্টে যুক্ত মৃত্যু রেকর্ডে নামের সংশোধন দাখিল করুন, নামটি 'দেলোয়ার হক সিনিয়র' করে। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/death-correction/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-073",
+  "site": "portal",
+  "intent": "বরগুনা পাসপোর্ট ও ইমিগ্রেশন কার্যালয়-এ 2026-06-23 তারিখে 10:30-এ একটি পাসপোর্ট এনরোলমেন্ট অ্যাপয়েন্টমেন্ট বুক করুন। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-23"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-074",
+  "site": "portal",
+  "intent": "করদাতা শনাক্তকরণ নম্বর 111111111111 যাচাই করে নিবন্ধিত নাম জানান। পোর্টালে এটি সম্ভব না হলে NO_RECORD উত্তর দিন। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-verify/",
+   "fill 1 tin_no=111111111111",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-075",
+  "site": "portal",
+  "intent": "আপনার পরিচয়পত্রের মুদ্রণযোগ্য কপি খুলে মায়ের নাম ও দেখানো স্থায়ী ঠিকানা দুটিই জানান। প্রয়োজনে নাগরিক 9999708182203 (পাসওয়ার্ড: citizen1234) হিসেবে লগ ইন করুন।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ফেরদৌসী ভূঁইয়া"
+   },
+   {
+    "type": "answer_match",
+    "answer": "গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/id-card-copy/",
+   "stop ফেরদৌসী ভূঁইয়া, গ্রাম উত্তরপাড়া, মৌলভীবাজার গঞ্জ, মৌলভীবাজার"
+  ],
+  "max_steps": 30
+ }
+]

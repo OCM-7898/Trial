@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field, text_field %}
+{% block title %}{{ t("wifi.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("wifi.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("wifi.title") }}</h1>
+  <p>{{ t("wifi.intro") }}</p>
+
+  <form class="searchform" method="get" action="{{ path('wifi') }}">
+    {{ text_field("flight_no", "flight_no", t("status.flight_no"), "SM120", t("status.flight_no_hint"), flight_no) }}
+    {{ date_field("date", "date", t("status.date"), t("common.date_hint"), date_value) }}
+    <div class="actions">
+      <button class="btn btn-primary" type="submit">{{ t("wifi.find") }}</button>
+      <a class="btn-link" href="{{ path('wifi_coverage') }}">{{ t("wifi.coverage_link") }}</a>
+    </div>
+  </form>
+
+  {% if packages %}
+  <h2>{{ flight.flight_no }} &middot; {{ fmt_date(flight.date) }}</h2>
+  <form method="post" action="{{ path('wifi') }}">
+    <input type="hidden" name="flight_no" value="{{ flight.flight_no }}">
+    <input type="hidden" name="date" value="{{ flight.date.isoformat() }}">
+    <div class="table-scroll">
+      <table>
+        <thead><tr>
+          <th scope="col">{{ t("wifi.package") }}</th>
+          <th scope="col">{{ t("wifi.data") }}</th>
+          <th scope="col">{{ t("wifi.duration") }}</th>
+          <th scope="col">{{ t("results.total") }}</th>
+          <th scope="col"><span class="visually-hidden">{{ t("results.select") }}</span></th>
+        </tr></thead>
+        <tbody>
+          {% for package in packages %}
+          <tr>
+            <td>{{ package.name }}</td>
+            <td>{{ t("wifi.mb", n=package.mb) }}</td>
+            <td>{{ t("wifi.minutes", n=package.duration_min) }}</td>
+            <td><strong>{{ fmt_money(package.price_usd) }}</strong></td>
+            <td><button class="btn btn-primary" type="submit" name="package_id" value="{{ package.id }}">{{ t("results.select") }}</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </form>
+  {% elif not_equipped %}
+  <div class="notice notice-warn"><div>{{ t("wifi.not_equipped") }}</div></div>
+  {% elif searched %}
+  <div class="notice notice-warn"><div>{{ t("status.not_found") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

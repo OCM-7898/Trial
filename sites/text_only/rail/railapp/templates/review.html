@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.review }}</h1>
+<div class="card">
+  <table>
+    <tr><th>{{ S.train }}</th>
+        <td>{{ ctx.no }} {{ tname(ctx.no) }}</td></tr>
+    <tr><th>{{ S.station }}</th>
+        <td>{{ sname(ctx.a) }} → {{ sname(ctx.b) }} · {{ ctx.date }}</td></tr>
+    <tr><th>{{ S.cls }}</th>
+        <td>{{ ctx.cls }} — {{ S["cl_" ~ ctx.cls] }}</td></tr>
+    <tr><th>{{ S.passenger }}</th>
+        <td>{{ ctx.passenger.name }}, {{ nd(ctx.passenger.age) }},
+            {{ S.g_m if ctx.passenger.gender == "M" else S.g_f }},
+            {{ ctx.passenger.berth }}</td></tr>
+    <tr><th>{{ S.fare }}</th><td>{{ CUR }}{{ nd(amount) }}</td></tr>
+  </table>
+  <form method="post" action="/book/confirm">
+    <button type="submit">{{ S.confirm }}</button>
+  </form>
+</div>
+{% endblock %}

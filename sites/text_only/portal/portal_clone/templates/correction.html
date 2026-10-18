@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if intro %}<p class="lede">{{ intro }}</p>{% endif %}
+  <p class="current">{{ S.current_value }}: {{ current_value }}</p>
+  <p class="hint">{{ S.your_locker }} {% for d in docs %}{{ d.filename }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+  <form class="form" method="post">
+    <div class="field"><label>{{ S.f_new_value }}</label><input name="new_value"></div>
+    <div class="field"><label>{{ S.f_document }}</label><input name="document"></div>
+    <button class="btn btn-primary">{{ S.submit }}</button>
+  </form>
+</div>
+{% endblock %}

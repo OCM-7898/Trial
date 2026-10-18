@@ -1,0 +1,152 @@
+[
+ {
+  "id": 1,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "مولوی بازار ویکسینیشن سینٹر"
+ },
+ {
+  "id": 2,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "میمن سنگھ ویکسینیشن سینٹر"
+ },
+ {
+  "id": 3,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "کھاگڑاچھڑی ویکسینیشن سینٹر"
+ },
+ {
+  "id": 4,
+  "vaccine_name": "مشترکہ DT",
+  "centre_name": "نیتروکونا ویکسینیشن سینٹر"
+ },
+ {
+  "id": 5,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "گوپال گنج ویکسینیشن سینٹر"
+ },
+ {
+  "id": 6,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "برگونا ویکسینیشن سینٹر"
+ },
+ {
+  "id": 7,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "نیتروکونا ویکسینیشن سینٹر"
+ },
+ {
+  "id": 8,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "بریسال ویکسینیشن سینٹر"
+ },
+ {
+  "id": 9,
+  "vaccine_name": "سہ گانہ A",
+  "centre_name": "ٹانگائل ویکسینیشن سینٹر"
+ },
+ {
+  "id": 10,
+  "vaccine_name": "سہ گانہ A",
+  "centre_name": "کھاگڑاچھڑی ویکسینیشن سینٹر"
+ },
+ {
+  "id": 11,
+  "vaccine_name": "سہ گانہ A",
+  "centre_name": "مولوی بازار ویکسینیشن سینٹر"
+ },
+ {
+  "id": 12,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "میمن سنگھ ویکسینیشن سینٹر"
+ },
+ {
+  "id": 13,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "راج باڑی ویکسینیشن سینٹر"
+ },
+ {
+  "id": 14,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "ٹانگائل ویکسینیشن سینٹر"
+ },
+ {
+  "id": 15,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "کھلنا ویکسینیشن سینٹر"
+ },
+ {
+  "id": 16,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "لکشمی پور ویکسینیشن سینٹر"
+ },
+ {
+  "id": 17,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "غازی پور ویکسینیشن سینٹر"
+ },
+ {
+  "id": 18,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "نیل پھاماری ویکسینیشن سینٹر"
+ },
+ {
+  "id": 19,
+  "vaccine_name": "مشترکہ DT",
+  "centre_name": "کاکس بازار ویکسینیشن سینٹر"
+ },
+ {
+  "id": 20,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "پیروجپور ویکسینیشن سینٹر"
+ },
+ {
+  "id": 21,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "جھالوکاٹھی ویکسینیشن سینٹر"
+ },
+ {
+  "id": 22,
+  "vaccine_name": "سہ گانہ A",
+  "centre_name": "برہمن باڑیہ ویکسینیشن سینٹر"
+ },
+ {
+  "id": 23,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "فریدپور ویکسینیشن سینٹر"
+ },
+ {
+  "id": 24,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "جیسور ویکسینیشن سینٹر"
+ },
+ {
+  "id": 25,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "کشور گنج ویکسینیشن سینٹر"
+ },
+ {
+  "id": 26,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "مداری پور ویکسینیشن سینٹر"
+ },
+ {
+  "id": 27,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "راجشاہی ویکسینیشن سینٹر"
+ },
+ {
+  "id": 28,
+  "vaccine_name": "سہ گانہ B",
+  "centre_name": "نواکھالی ویکسینیشن سینٹر"
+ },
+ {
+  "id": 29,
+  "vaccine_name": "موسمی IV",
+  "centre_name": "نارائن گنج ویکسینیشن سینٹر"
+ },
+ {
+  "id": 30,
+  "vaccine_name": "مشترکہ DT",
+  "centre_name": "فریدپور ویکسینیشن سینٹر"
+ }
+]

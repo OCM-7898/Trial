@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ t("cargo.restrictions_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li><a href="{{ path('cargo') }}">{{ t("nav.cargo") }}</a></li><li>{{ t("cargo.restrictions_title") }}</li></ol></nav>
+<h1>{{ t("cargo.restrictions_title") }}</h1>
+<p>{{ t("cargo.restrictions_intro") }}</p>
+<h2>{{ t("cargo.never") }}</h2>
+<ul><li>{{ t("cargo.never_1") }}</li><li>{{ t("cargo.never_2") }}</li><li>{{ t("cargo.never_3") }}</li></ul>
+<h2>{{ t("cargo.conditions") }}</h2>
+<ul><li>{{ t("cargo.cond_1") }}</li><li>{{ t("cargo.cond_2") }}</li><li>{{ t("cargo.cond_3") }}</li></ul>
+<p class="hint">{{ t("cargo.differs_note") }}</p>
+</div>{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "partner_base.html" %}
+{% from "macros/fields.html" import date_field, text_field, number_field %}
+{% block content %}
+<div class="wrap section">
+  <h1>{{ partner.name }}</h1>
+  {% if record %}
+  <ol class="stepper"><li class="is-done">{{ t("review.step_select") }}</li>
+    <li class="is-current">{{ t("review.step_review") }}</li><li>{{ t("review.step_pay") }}</li></ol>
+  {% if notice %}<div class="notice notice-info" role="status" id="payment-notice"><div>{{ notice }}</div></div>{% endif %}
+  <h2>{{ t("partner.car_review") }}</h2>
+  <div class="split">
+    <div>
+      <div class="table-scroll"><table><tbody>
+        <tr><th scope="row">{{ t("partner.vehicle") }}</th><td>{{ offer_for(record.offer_id).name }}</td></tr>
+        <tr><th scope="row">{{ t("partner.pickup") }}</th><td>{{ fmt_date(record.pickup_date) }}</td></tr>
+        <tr><th scope="row">{{ t("manage.passengers") }}</th><td>{{ record.passengers }}</td></tr>
+      </tbody></table></div>
+      <p class="hint">{{ t("review.reference", ref=record.reference_no) }}</p>
+    </div>
+    <aside class="summary">
+      <dl><dt class="total">{{ t("review.total_due") }}</dt><dd class="total">{{ fmt_money(record.price_usd) }}</dd></dl>
+      <form method="post"><input type="hidden" name="action" value="pay">
+        <button class="btn btn-primary" type="submit" style="width:100%">{{ t("review.pay_now") }}</button></form>
+      <p class="hint" style="margin-top:10px">{{ t("review.no_card_needed") }}</p>
+    </aside>
+  </div>
+  {% else %}
+  <p>{{ t("partner.car_intro") }}</p>
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+  <form class="searchform" method="get" action="{{ partner.home }}">
+    {{ text_field("airport", "airport", t("partner.arrival_airport"), "NBO", t("search.code_hint"), airport) }}
+    {{ number_field("passengers", "passengers", t("manage.passengers"), 1, 9, passengers) }}
+    {{ date_field("pickup", "pickup", t("partner.pickup"), t("common.date_hint"), pickup) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("partner.find_car") }}</button></div>
+  </form>
+
+  {% if offers %}
+  <form method="post" action="{{ partner.home }}">
+    <input type="hidden" name="airport" value="{{ airport }}">
+    <input type="hidden" name="passengers" value="{{ passengers }}">
+    <input type="hidden" name="pickup" value="{{ pickup }}">
+    <div class="table-scroll">
+      <table>
+        <thead><tr>
+          <th scope="col">{{ t("partner.vehicle") }}</th>
+          <th scope="col">{{ t("partner.seats") }}</th>
+          <th scope="col">{{ t("partner.luggage") }}</th>
+          <th scope="col">{{ t("results.total") }}</th>
+          <th scope="col"><span class="visually-hidden">{{ t("results.select") }}</span></th>
+        </tr></thead>
+        <tbody>
+          {% for offer in offers %}
+          <tr>
+            <td>{{ offer.name }}</td><td>{{ offer.seats }}</td><td>{{ offer.luggage }}</td>
+            <td>{{ fmt_money(offer.price_usd) }}{% if offer.per_day %} {{ t("partner.per_day") }}{% endif %}</td>
+            <td><button class="btn btn-primary" type="submit" name="offer_id" value="{{ offer.id }}">{{ t("results.select") }}</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </form>
+  {% elif searched %}
+  <div class="notice notice-warn"><div>{{ t("partner.no_car") }}</div></div>
+  {% endif %}
+  {% endif %}
+</div>
+{% endblock %}

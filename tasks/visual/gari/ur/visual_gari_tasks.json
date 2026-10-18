@@ -1,0 +1,2204 @@
+[
+ {
+  "id": "visualgari-001",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اپنی Honda Vezel ہائبرڈ کا اشتہار پوسٹ کریں: سال 2020، 45000 کلومیٹر، قیمت Rs.۸,۹۰۴,۰۰۰، کراچی میں، نیلی، آٹومیٹک، ہائبرڈ ایندھن، 1500 سی سی، فون 0321-7788990، تفصیل 'تازہ درآمد، آکشن گریڈ ۴.۵۔'۔ اسے شائع کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Honda",
+     "model": "Vezel",
+     "year": 2020,
+     "mileage_km": 45000,
+     "price": 8904000,
+     "city": "کراچی",
+     "color": "نیلی",
+     "transmission": "آٹومیٹک",
+     "fuel": "ہائبرڈ",
+     "engine_cc": 1500,
+     "phone": "0321-7788990",
+     "description": "تازہ درآمد، آکشن گریڈ ۴.۵۔",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Honda; model=Vezel; year=2020; mileage_km=45000; price=8904000; city=کراچی; color=نیلی; transmission=آٹومیٹک; fuel=ہائبرڈ; engine_cc=1500; phone=0321-7788990; description=تازہ درآمد، آکشن گریڈ ۴.۵۔",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-002",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ایک Suzuki Alto VXL کا اشتہار پوسٹ کریں: سال 2022، 18000 کلومیٹر، قیمت Rs.۲,۱۵۶,۰۰۰، اسلام آباد، سلور، آٹومیٹک، پیٹرول، 660 سی سی، فون 0333-4455667، تفصیل 'بالکل نئی جیسی۔'۔ اسے شائع کریں، پھر اشتہار کی قیمت کم کر کے Rs.۲,۰۰۲,۰۰۰ کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Suzuki",
+     "model": "Alto VXL",
+     "year": 2022,
+     "mileage_km": 18000,
+     "price": 2002000,
+     "city": "اسلام آباد",
+     "color": "سلور",
+     "transmission": "آٹومیٹک",
+     "fuel": "پیٹرول",
+     "engine_cc": 660,
+     "phone": "0333-4455667",
+     "description": "بالکل نئی جیسی۔",
+     "status": "active"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "model": "Alto VXL",
+     "price": 2156000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Suzuki; model=Alto VXL; year=2022; mileage_km=18000; price=2156000; city=اسلام آباد; color=سلور; transmission=آٹومیٹک; fuel=پیٹرول; engine_cc=660; phone=0333-4455667; description=بالکل نئی جیسی۔",
+   "fill 0",
+   "fill 0 price=2002000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-003",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ایک Kia Picanto کا اشتہار پوسٹ کرنا شروع کریں: سال 2021، 30000 کلومیٹر، قیمت Rs.۲,۹۱۲,۰۰۰، ملتان، سرخ، مینوئل، پیٹرول، 1000 سی سی، فون 0345-1112233، تفصیل 'پہلا مالک۔'۔ فارم بھر کر جائزے کے صفحے پر جائیں، لیکن اشتہار شائع نہ کریں — جائزے کے صفحے پر ہی رہیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "final_url",
+    "path": "/sell/review"
+   },
+   {
+    "type": "final_page_contains",
+    "strings": [
+     "Kia",
+     "Picanto",
+     "2021",
+     "30000",
+     "ملتان",
+     "سرخ",
+     "مینوئل",
+     "پیٹرول",
+     "1000",
+     "0345-1112233",
+     "پہلا مالک۔",
+     "2,912,000"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "model": "Picanto"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Kia; model=Picanto; year=2021; mileage_km=30000; price=2912000; city=ملتان; color=سرخ; transmission=مینوئل; fuel=پیٹرول; engine_cc=1000; phone=0345-1112233; description=پہلا مالک۔"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-004",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ایک BMW X5 xDrive40i کا اشتہار پوسٹ کریں: سال 2019، 60000 کلومیٹر، قیمت Rs.۲۱,۵۰۴,۰۰۰، لاہور، کالی، آٹومیٹک، پیٹرول، 3000 سی سی، فون 0300-1231234، تفصیل 'فلی لوڈڈ، M اسپورٹ پیکیج۔'۔ اشتہار شائع کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "BMW",
+     "model": "X5 xDrive40i",
+     "year": 2019,
+     "mileage_km": 60000,
+     "price": 21504000,
+     "city": "لاہور",
+     "color": "کالی",
+     "transmission": "آٹومیٹک",
+     "fuel": "پیٹرول",
+     "engine_cc": 3000,
+     "phone": "0300-1231234",
+     "description": "فلی لوڈڈ، M اسپورٹ پیکیج۔",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=BMW; model=X5 xDrive40i; year=2019; mileage_km=60000; price=21504000; city=لاہور; color=کالی; transmission=آٹومیٹک; fuel=پیٹرول; engine_cc=3000; phone=0300-1231234; description=فلی لوڈڈ، M اسپورٹ پیکیج۔",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-005",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "دو الگ الگ اشتہارات پوسٹ کریں: (۱) Hyundai Tucson AWD، سال 2022، 22000 کلومیٹر، Rs.۹,۸۰۰,۰۰۰، کراچی، سرمئی، آٹومیٹک، پیٹرول، 2000 سی سی، فون 0311-5556677، تفصیل 'وارنٹی میں۔'؛ (۲) Kia Sportage Alpha، سال 2021، 41000 کلومیٹر، Rs.۸,۵۱۲,۰۰۰، کراچی، سفید، آٹومیٹک، پیٹرول، 2000 سی سی، وہی فون، تفصیل 'الائے رمز، کروز کنٹرول۔'۔ دونوں شائع کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Hyundai",
+     "model": "Tucson AWD",
+     "year": 2022,
+     "mileage_km": 22000,
+     "price": 9800000,
+     "city": "کراچی",
+     "color": "سرمئی",
+     "transmission": "آٹومیٹک",
+     "fuel": "پیٹرول",
+     "engine_cc": 2000,
+     "phone": "0311-5556677",
+     "description": "وارنٹی میں۔",
+     "status": "active"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Kia",
+     "model": "Sportage Alpha",
+     "year": 2021,
+     "mileage_km": 41000,
+     "price": 8512000,
+     "city": "کراچی",
+     "color": "سفید",
+     "transmission": "آٹومیٹک",
+     "fuel": "پیٹرول",
+     "engine_cc": 2000,
+     "phone": "0311-5556677",
+     "description": "الائے رمز، کروز کنٹرول۔",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Hyundai; model=Tucson AWD; year=2022; mileage_km=22000; price=9800000; city=کراچی; color=سرمئی; transmission=آٹومیٹک; fuel=پیٹرول; engine_cc=2000; phone=0311-5556677; description=وارنٹی میں۔",
+   "fill 0",
+   "goto /sell",
+   "fill 0 brand=Kia; model=Sportage Alpha; year=2021; mileage_km=41000; price=8512000; city=کراچی; color=سفید; transmission=آٹومیٹک; fuel=پیٹرول; engine_cc=2000; phone=0311-5556677; description=الائے رمز، کروز کنٹرول۔",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-006",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 210 کھولیں اور بالکل اسی گاڑی کے لیے اپنا ایک نیا اشتہار پوسٹ کریں: اشتہار کے صفحے سے اس کا برانڈ، ماڈل، ماڈل سال، مائلیج، رنگ، ٹرانسمیشن، ایندھن اور انجن کا سائز نقل کریں، شہر لاہور رکھیں، فون 0307-4041122، تفصیل 'درج شدہ گاڑی کی ہو بہو جڑواں۔'، اور قیمت بالکل اس اشتہار کی مانگی گئی قیمت کا ۹۵% رکھیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ اشتہار شائع کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Hyundai",
+     "model": "Sonata",
+     "year": 2022,
+     "mileage_km": 64000,
+     "color": "کالی",
+     "transmission": "آٹومیٹک",
+     "fuel": "پیٹرول",
+     "engine_cc": 1500,
+     "price": 3458000,
+     "city": "لاہور",
+     "phone": "0307-4041122",
+     "description": "درج شدہ گاڑی کی ہو بہو جڑواں۔",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/210",
+   "goto /sell",
+   "fill 0 brand=Hyundai; model=Sonata; year=2022; mileage_km=64000; price=3458000; city=لاہور; color=کالی; transmission=آٹومیٹک; fuel=پیٹرول; engine_cc=1500; phone=0307-4041122; description=درج شدہ گاڑی کی ہو بہو جڑواں۔",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-007",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "فروخت کے لیے دستیاب تمام BMW گاڑیوں میں سے سب سے سستی وہ تلاش کریں جس کی فیچر فہرست میں سن روف ہو، اور اسے اپنی محفوظ گاڑیوں میں شامل کریں۔ فیچرز ہر گاڑی کے صفحے پر درج ہیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 50
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/50",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-008",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "لاہور میں فروخت کے لیے دستیاب سب سے سستی Toyota تلاش کریں جس کے فیچرز میں لیدر سیٹس ہوں، اور اس پر بالکل مانگی گئی قیمت کے ۹۰% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 399,
+     "amount": 3376800
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/399",
+   "fill 1 amount=3376800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-009",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "کراچی میں فروخت کے لیے دستیاب سب سے سستی ایس یو وی تلاش کریں جس میں نیویگیشن ہو لیکن سن روف نہ ہو، اور اسے اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 119
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/119",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-010",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "فروخت کے لیے دستیاب سب سے سستی Volkswagen تلاش کریں جس کی فیچر فہرست میں سن روف ہو، اور اسے اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 477
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/477",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-011",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "کراچی میں فروخت کے لیے دستیاب سب سے سستی Nissan تلاش کریں جس میں ریئر کیمرا ہو، اور اس پر بالکل مانگی گئی قیمت کے ۹۰% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 315,
+     "amount": 1184400
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/315",
+   "fill 1 amount=1184400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-012",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "فروخت کے لیے دستیاب سب سے سستی Nissan تلاش کریں جس کی فیچر فہرست میں کروز کنٹرول اور سن روف دونوں ہوں، اور اس کی قیمت بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1,624,000",
+     "1624000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/328",
+   "stop Rs.۱,۶۲۴,۰۰۰"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-013",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "فروخت کے لیے دستیاب تمام Tesla اشتہارات میں سے کتنے ڈیلر کے ذریعے بیچے جا رہے ہیں (نجی فرد کے ذریعے نہیں)؟ بیچنے والے کی تفصیل ہر گاڑی کے صفحے پر ہے۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "5"
+   }
+  ],
+  "solution": [
+   "goto /car/390",
+   "goto /car/391",
+   "goto /car/392",
+   "goto /car/393",
+   "goto /car/394",
+   "goto /car/395",
+   "goto /car/396",
+   "goto /car/397",
+   "stop 5"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "visualgari-014",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ڈیلر کے ذریعے فروخت کے لیے دستیاب سب سے سستی Porsche تلاش کریں اور اسے اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 366
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/366",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-015",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "کراچی میں ڈیلر کے ذریعے فروخت کے لیے دستیاب سب سے سستی ایس یو وی تلاش کریں، اور اس پر بالکل مانگی گئی قیمت کے ۸۵% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 350,
+     "amount": 2189600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/350",
+   "fill 1 amount=2189600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-016",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "کراچی میں فروخت کے لیے دستیاب Toyota ایس یو وی کو قیمت کے لحاظ سے کم سے زیادہ ترتیب دیں اور دوسری سب سے سستی لیں۔ اس پر بالکل مانگی گئی قیمت کے ۹۰% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 418,
+     "amount": 3502800
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/418",
+   "fill 1 amount=3502800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-017",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 40 کھولیں، اس کی 'اس برانڈ کی مزید گاڑیاں' تجاویز دیکھیں، تجویز کردہ گاڑیوں میں سے سب سے سستی کھولیں، اور اسے اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 3
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/40",
+   "goto /car/3",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-018",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "لاہور میں فروخت کے لیے دستیاب سب سے سستی ایس یو وی کا کراچی میں فروخت کے لیے دستیاب سب سے سستی ایس یو وی سے موازنہ کریں۔ دونوں میں سے جو سستی ہو، اس پر بالکل مانگی گئی قیمت کے ۸۵% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 315,
+     "amount": 1118600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/315",
+   "fill 1 amount=1118600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-019",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہارات کو اسلام آباد پر فلٹر کریں، انہیں 'نئی پہلے' کی ترتیب میں لگائیں، اور دکھائے گئے تیسرے اشتہار کو اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 463
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/463",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-020",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 55 اور 88 کو اپنی محفوظ گاڑیوں میں شامل کریں، اور اشتہار 25 (جو پہلے سے آپ کی محفوظ فہرست میں ہے) ہٹائیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 55
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 88
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 25
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/55",
+   "fill 0",
+   "goto /car/88",
+   "fill 0",
+   "goto /saved",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-021",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "دو اشتہارات پر آفرز دیں تاکہ ریکارڈ آخر میں یوں ہو: اشتہار 16 پر آپ کی بالکل ایک قائم آفر Rs.۸,۰۸۸,۶۰۰ (ریکارڈ پر Rs.۷,۴۷۳,۲۰۰ نہیں ہونی چاہیے)، اور اشتہار 17 پر بالکل ایک قائم آفر Rs.۳,۱۱۷,۸۰۰۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 16,
+     "amount": 8088600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 16,
+     "amount": 7473200
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 17,
+     "amount": 3117800
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/16",
+   "fill 1 amount=7473200",
+   "goto /car/17",
+   "fill 1 amount=3117800",
+   "goto /car/16",
+   "fill 1 amount=8088600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-022",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ایک Volkswagen Golf GTI کا اشتہار پوسٹ کریں: سال 2018، 88000 کلومیٹر، قیمت Rs.۴,۲۰۰,۰۰۰، لاہور، سرمئی، آٹومیٹک، پیٹرول، 2000 سی سی، فون 0308-6667788، تفصیل 'اسٹیج ۱ ٹیونڈ، تمام اسٹاک پارٹس دستیاب۔'۔ جائزے کے صفحے پر نوٹ کریں کہ قیمت اصل میں Rs.۴,۰۶۰,۰۰۰ ہونی چاہیے — واپس جا کر صرف قیمت کو Rs.۴,۰۶۰,۰۰۰ کریں، پھر شائع کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Volkswagen",
+     "model": "Golf GTI",
+     "year": 2018,
+     "mileage_km": 88000,
+     "price": 4060000,
+     "city": "لاہور",
+     "color": "سرمئی",
+     "transmission": "آٹومیٹک",
+     "fuel": "پیٹرول",
+     "engine_cc": 2000,
+     "phone": "0308-6667788",
+     "description": "اسٹیج ۱ ٹیونڈ، تمام اسٹاک پارٹس دستیاب۔",
+     "status": "active"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "model": "Golf GTI",
+     "price": 4200000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Volkswagen; model=Golf GTI; year=2018; mileage_km=88000; price=4200000; city=لاہور; color=سرمئی; transmission=آٹومیٹک; fuel=پیٹرول; engine_cc=2000; phone=0308-6667788; description=اسٹیج ۱ ٹیونڈ، تمام اسٹاک پارٹس دستیاب۔",
+   "goto /sell",
+   "fill 0 price=4060000",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-023",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 30 (2019 Audi A6) پر Rs.۴,۷۵۵,۵۰۰ کی آفر اور اشتہار 31 (2020 Audi A7) پر Rs.۶,۱۱۰,۷۰۰ کی آفر دیں، پھر صرف اشتہار 30 کی آفر واپس لیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 30
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 31,
+     "amount": 6110700
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/30",
+   "fill 1 amount=4755500",
+   "goto /car/31",
+   "fill 1 amount=6110700",
+   "goto /offers",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-024",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "تین آفرز دیں: اشتہار 44 پر Rs.۴,۱۴۷,۳۰۰، اشتہار 71 پر Rs.۳,۵۳۹,۷۰۰، اور اشتہار 83 پر Rs.۴,۰۳۲,۰۰۰ — پھر صرف اشتہار 71 کی آفر واپس لیں، باقی دو برقرار رہیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 44,
+     "amount": 4147300
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 71
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 83,
+     "amount": 4032000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/44",
+   "fill 1 amount=4147300",
+   "goto /car/71",
+   "fill 1 amount=3539700",
+   "goto /car/83",
+   "fill 1 amount=4032000",
+   "goto /offers",
+   "fill 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-025",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "تینوں کام کریں: (۱) اشتہار 302 (2019 Mercedes-Benz GLK) پر Rs.۷,۸۸۷,۶۰۰ کی آفر دیں؛ (۲) اشتہار 305 کو اپنی محفوظ گاڑیوں میں شامل کریں؛ (۳) 'تصویر میں عدم مطابقت' موضوع اور 'اشتہار ۳۰۲ کی تصاویر میں مختلف انٹیریئر ٹرم نظر آ رہا ہے' پیغام کے ساتھ سپورٹ کو پیغام بھیجیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 302,
+     "amount": 7887600
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 305
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "تصویر میں عدم مطابقت",
+     "body": "%مختلف انٹیریئر ٹرم%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/302",
+   "fill 1 amount=7887600",
+   "goto /car/305",
+   "fill 0",
+   "goto /contact",
+   "fill 0 subject=تصویر میں عدم مطابقت; message=اشتہار ۳۰۲ کی تصاویر میں مختلف انٹیریئر ٹرم نظر آ رہا ہے"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-026",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اپنی محفوظ گاڑیوں کی فہرست صاف کریں: جو گاڑیاں ابھی فروخت کے لیے دستیاب ہیں ان سب کو ہٹائیں، اور صرف وہی رکھیں جو پہلے ہی فروخت ہو چکی ہے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 25
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 210
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 330
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /saved",
+   "fill 0",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-027",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 210 (2022 Hyundai Sonata) کھولیں اور تین چیزیں بتائیں: کلومیٹر میں اس کا مائلیج، اس کے پچھلے مالکان کی تعداد، اور یہ مقامی اسمبلی ہے یا درآمد شدہ۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "64,000",
+     "64000"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "2"
+   },
+   {
+    "type": "answer_match",
+    "answer": "مقامی اسمبلی",
+    "none_of": [
+     "درآمد شدہ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/210",
+   "stop 64,000 km, 2 owner(s), مقامی اسمبلی"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-028",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 297 ایک ڈیلر بیچ رہا ہے۔ مارکیٹ پلیس کے قواعد کے مطابق اس اشتہار کی مانگی گئی قیمت پر فروخت مکمل ہونے پر ڈیلر کتنا کمیشن (روپے میں) ادا کرے گا؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "168,000",
+     "168000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "goto /car/297",
+   "stop Rs.۱۶۸,۰۰۰"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-029",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "موازنہ ٹول سے اشتہار 200 اور 201 کا موازنہ کریں۔ ان کی دونوں مانگی گئی قیمتوں کا کل مجموعہ روپے میں اور کم مائلیج والی کی اشتہار آئی ڈی — دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6,356,000",
+     "6356000"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "200",
+    "none_of": [
+     "201"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /compare",
+   "fill 0 a=200; b=201",
+   "stop combined Rs.۶,۳۵۶,۰۰۰, lower mileage: 200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-030",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "کراچی میں فروخت کے لیے دستیاب کالی 2024 Citroen C5 Aircross تلاش کریں (اس بار اشتہار نمبر نہیں دیا گیا — تلاش کے فلٹرز استعمال کریں) اور اس کی مانگی گئی قیمت اور ٹرانسمیشن کی قسم — دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "5,348,000",
+     "5348000"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "آٹومیٹک",
+    "none_of": [
+     "مینوئل"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/129",
+   "stop Rs.۵,۳۴۸,۰۰۰, آٹومیٹک"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-031",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "Rs.۶,۷۲۰,۰۰۰ قیمت کی گاڑی کے لیے ۲۰% ڈاؤن پیمنٹ کے ساتھ سائٹ کا فنانس کیلکولیٹر استعمال کریں: ۳ سال کی مدت کے مقابلے میں ۵ سال کی مدت میں ماہانہ قسط کتنی کم ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "59,734",
+     "59734"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=6720000; down_pct=20; years=3",
+   "fill 0 price=6720000; down_pct=20; years=5",
+   "stop Rs.۵۹,۷۳۴"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-032",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "Rs.۵,۶۰۰,۰۰۰ کی گاڑی کے لیے ۲۵% ڈاؤن کے ساتھ فنانس کیلکولیٹر استعمال کریں: کم سے کم کتنے پورے سال کی مدت میں ماہانہ قسط زیادہ سے زیادہ Rs.۱۲۶,۰۰۰ رہتی ہے؟ سالوں کی تعداد لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "5",
+     "5 years"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=5600000; down_pct=25; years=4",
+   "fill 0 price=5600000; down_pct=25; years=5",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-033",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "آپ کی محفوظ فہرست کی دو گاڑیاں: اشتہار 210 (2022 Hyundai Sonata) اور اشتہار 25 (2017 Audi A6)۔ ہر مانگی گئی قیمت پر ۲۵% ڈاؤن اور ۴ سال کی مدت کے ساتھ فنانس کیلکولیٹر استعمال کرنے پر کس اشتہار کی ماہانہ قسط کم ہے؟ اس کی اشتہار آئی ڈی لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "210",
+    "none_of": [
+     "25"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/210",
+   "goto /car/25",
+   "goto /finance",
+   "fill 0 price=3640000; down_pct=25; years=4",
+   "fill 0 price=4676000; down_pct=25; years=4",
+   "stop 210"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-034",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 16 اور 17 کی مانگی گئی قیمتیں دیکھیں، پھر ہر ایک پر فنانس کیلکولیٹر (۲۰% ڈاؤن، ۴ سال) استعمال کریں۔ ان کی ماہانہ قسطوں میں روپے میں کیا فرق ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "140,056",
+     "140056"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/16",
+   "goto /car/17",
+   "goto /finance",
+   "fill 0 price=8792000; down_pct=20; years=4",
+   "fill 0 price=3668000; down_pct=20; years=4",
+   "stop Rs.۱۴۰,۰۵۶"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-035",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "Rs.۵,۰۴۰,۰۰۰ کی گاڑی کے لیے ۴ سال کی مدت پر فنانس کیلکولیٹر استعمال کریں: ۱۰% کے مراحل میں (۰%، ۱۰%، ۲۰%، ...) کم سے کم کتنا ڈاؤن پیمنٹ فیصد ہے جس میں ماہانہ قسط زیادہ سے زیادہ Rs.۱۱۲,۰۰۰ رہتی ہے؟ فیصد لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40%"
+    ],
+    "none_of": [
+     "30%",
+     "50%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=5040000; down_pct=30; years=4",
+   "fill 0 price=5040000; down_pct=40; years=4",
+   "stop 40%"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-036",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 55 کی مانگی گئی قیمت دیکھیں، پھر اس قیمت پر ۴ سال کی مدت پر فنانس کیلکولیٹر استعمال کریں: ۱۰% کے مراحل میں (۰%، ۱۰%، ۲۰%، ...) کم سے کم کتنا ڈاؤن پیمنٹ فیصد ہے جس میں ماہانہ قسط زیادہ سے زیادہ Rs.۲۲۵,۵۹۰ رہتی ہے؟ فیصد لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40%"
+    ],
+    "none_of": [
+     "30%",
+     "50%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/55",
+   "goto /finance",
+   "fill 0 price=11004000; down_pct=30; years=4",
+   "fill 0 price=11004000; down_pct=40; years=4",
+   "stop 40%"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-037",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "آپ کی محفوظ گاڑیوں کی فہرست میں دو گاڑیاں اب بھی فروخت کے لیے دستیاب ہیں۔ ان دونوں میں سے سستی پر بالکل مانگی گئی قیمت کے ۹۰% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے، 'نقد خریدار، اسی ہفتے تیار' پیغام کے ساتھ۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 210,
+     "amount": 3276000,
+     "message": "نقد خریدار، اسی ہفتے تیار"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/210",
+   "fill 1 amount=3276000; message=نقد خریدار، اسی ہفتے تیار"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-038",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 62 (مانگی گئی قیمت Rs.۹,۳۵۲,۰۰۰) پر اس کم از کم حد سے بالکل Rs.۴۲,۰۰۰ زیادہ کی آفر دیں: مانگی گئی قیمت کا ۸۰%، قریب ترین سو روپے تک اوپر کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 62,
+     "amount": 7523600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/62",
+   "fill 1 amount=7523600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-039",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 75 (2021 BMW X4) پر Rs.۹,۰۴۶,۸۰۰ کی آفر دیں، پھر اپنے میری آفرز صفحے سے وہ آفر واپس لیں۔ میری آفرز صفحے پر ہی ختم کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 75
+    }
+   },
+   {
+    "type": "final_url",
+    "path": "/offers"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/75",
+   "fill 1 amount=9046800",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-040",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 90 (2018 Buick LaCrosse، مانگی گئی قیمت Rs.۲,۲۱۲,۰۰۰) پر Rs.۱,۳۲۷,۲۰۰ کی آفر دینے کی کوشش کریں۔ اگر سائٹ آفر مسترد کرے تو اس کی بتائی ہوئی وجہ لکھ کر جواب دیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "below 80%",
+     "80%"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 90
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/90",
+   "fill 1 amount=1327200",
+   "stop Offer rejected: offers below 80% of the asking price are not accepted."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-041",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "مارکیٹ پلیس کے قواعد ایک کم از کم قابلِ قبول آفر مقرر کرتے ہیں۔ اشتہار 55 (2024 BMW 3 Series، مانگی گئی قیمت Rs.۱۱,۰۰۴,۰۰۰) پر بالکل اس کم از کم حد کے برابر آفر دیں: مانگی گئی قیمت کا ۸۰%، قریب ترین سو روپے تک اوپر کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 55,
+     "amount": 8803200
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /rules",
+   "goto /car/55",
+   "fill 1 amount=8803200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-042",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 20 (2020 Audi A6) پر اس طرح بھاؤ تاؤ کریں کہ ریکارڈ پر آپ کی بالکل ایک Rs.۶,۴۶۳,۸۰۰ کی آفر قائم رہے۔ راستے میں اگر آپ Rs.۵,۷۸۳,۴۰۰ یا Rs.۶,۱۲۳,۶۰۰ جیسی کم رقمیں آزمائیں تو آخر میں وہ باقی نہیں رہنی چاہئیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 20,
+     "amount": 6463800
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 20,
+     "amount": 5783400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 20,
+     "amount": 6123600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/20",
+   "fill 1 amount=5783400",
+   "goto /car/20",
+   "fill 1 amount=6123600",
+   "goto /car/20",
+   "fill 1 amount=6463800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-043",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "آپ کی Suzuki Cultus کا ایک فعال اشتہار پہلے سے موجود ہے۔ اشتہار 157 کی مانگی گئی قیمت دیکھیں اور اپنے Cultus اشتہار کی قیمت اس اشتہار کی قیمت سے بالکل Rs.۱۴۰,۰۰۰ کم کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "ads",
+    "match": {
+     "id": 1
+    },
+    "field": "price",
+    "value": 6104000
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/157",
+   "goto /account/ads/1",
+   "fill 0 price=6104000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-044",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اپنے Suzuki Cultus اشتہار کو فروخت شدہ نشان زد کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "ads",
+    "match": {
+     "id": 1
+    },
+    "field": "status",
+    "value": "sold"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account/ads/1/sold",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-045",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اپنا پرانا Honda City اشتہار (جو پہلے سے فروخت شدہ نشان زد ہے) حذف کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "id": 2
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account/ads/2/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-046",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اپنے Honda City اشتہار کی مانگی گئی قیمت کم کر کے Rs.۲,۹۴۰,۰۰۰ کریں۔ اگر سائٹ پر یہ ممکن نہ ہو تو N/A جواب دیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "ads",
+    "match": {
+     "id": 2
+    },
+    "field": "price",
+    "value": 3402000
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account/ads/2",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-047",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 205 پر Rs.۱,۵۴۰,۰۰۰ کی آفر دیں۔ اگر سائٹ پر یہ ممکن نہ ہو تو N/A جواب دیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 205
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/205",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-048",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 5 کو اپنی محفوظ گاڑیوں میں شامل کریں۔ اگر سائٹ پر یہ ممکن نہ ہو تو N/A جواب دیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 5
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/5",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-049",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "سائٹ پر فروخت کے لیے دستیاب سب سے سستی Bugatti تلاش کریں اور اس کی قیمت بتائیں۔ اگر سائٹ پر یہ ممکن نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Bugatti",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-050",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 226 کھولیں اور اس کی مانگی گئی قیمت بتائیں۔ اگر سائٹ پر یہ ممکن نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /car/226",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-051",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "آپ کی محفوظ فہرست کی ایک گاڑی پہلے ہی فروخت ہو چکی ہے۔ صرف اسی کو اپنی محفوظ گاڑیوں سے ہٹائیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 330
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 25
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 210
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /saved",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-052",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ڈیلر کے ذریعے فروخت کے لیے دستیاب ہر Tesla کو اپنی محفوظ گاڑیوں میں شامل کریں (نجی افراد کے ذریعے بیچی جانے والی Tesla شمار نہیں ہوں گی)۔ بیچنے والے کی تفصیل ہر گاڑی کے صفحے پر ہے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 392
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 394
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 395
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 396
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 397
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 390
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 391
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 393
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/392",
+   "fill 0",
+   "goto /car/394",
+   "fill 0",
+   "goto /car/395",
+   "fill 0",
+   "goto /car/396",
+   "fill 0",
+   "goto /car/397",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-053",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ڈیلرز صفحہ کھولیں، کراچی میں شو روم والا سب سے زیادہ ریٹنگ والا ڈیلر تلاش کریں، اس ڈیلر کا صفحہ کھولیں، اور ان کی موجودہ انوینٹری کی سب سے سستی گاڑی کو اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 414
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /dealers",
+   "goto /dealer/3",
+   "goto /car/414",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-054",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "کون سا رجسٹرڈ ڈیلر سب سے طویل عرصے سے GariBazaar کا رکن ہے (سب سے پرانا 'رکن بنے' سال)؟ اس کا ڈیلر صفحہ کھولیں اور ڈیلر کا نام اور اس کے شو روم کا فون نمبر — دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ہائی وے موٹرز",
+    "none_of": [
+     "خان موٹرز",
+     "سٹی آٹو ٹریڈرز",
+     "پرائم وہیلز",
+     "کیپیٹل کار پوائنٹ",
+     "اسٹار موٹرز",
+     "ایلیٹ آٹو گیلری",
+     "میٹرو کارز",
+     "کریسنٹ آٹوموبائلز",
+     "گلیکسی کار سینٹر"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "061-45009909"
+   }
+  ],
+  "solution": [
+   "goto /dealers",
+   "goto /dealer/9",
+   "stop ہائی وے موٹرز, phone 061-45009909"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-055",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "دو رجسٹرڈ ڈیلرز کے شو روم اسلام آباد میں ہیں۔ دونوں میں سے کس کے پاس اس وقت زیادہ فعال اشتہارات ہیں؟ ڈیلر کا نام لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "کیپیٹل کار پوائنٹ",
+    "none_of": [
+     "ایلیٹ آٹو گیلری"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /dealers",
+   "goto /dealer/4",
+   "goto /dealer/6",
+   "stop کیپیٹل کار پوائنٹ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-056",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اسٹار موٹرز کا ڈیلر صفحہ کھولیں، ان کی موجودہ انوینٹری کی سب سے سستی گاڑی تلاش کریں، اور اس پر مارکیٹ پلیس کی کم از کم آفر حد کے برابر آفر دیں: مانگی گئی قیمت کا ۸۰%، قریب ترین سو روپے تک اوپر کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 239,
+     "amount": 985600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /dealers",
+   "goto /dealer/5",
+   "goto /car/239",
+   "fill 1 amount=985600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-057",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 144 کھولیں اور اس کے بیچنے والے کے ڈیلر صفحے کے لنک پر جائیں۔ ڈیلر کی ریٹنگ اور ڈیلر کس سال GariBazaar کا رکن بنا — دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "4.3"
+   },
+   {
+    "type": "answer_match",
+    "answer": "2022"
+   }
+  ],
+  "solution": [
+   "goto /car/144",
+   "goto /dealer/10",
+   "stop rating 4.3, member since 2022"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-058",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 100، 101 اور 102 میں سے ہر ایک کی تصدیق شدہ معائنہ رپورٹ ہے۔ تینوں رپورٹس کھولیں اور سب سے زیادہ مجموعی اسکور والی گاڑی کو اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 101
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/100/inspection",
+   "goto /car/101/inspection",
+   "goto /car/102/inspection",
+   "goto /car/101",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-059",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 150 کی تصدیق شدہ معائنہ رپورٹ کھولیں اور اس کا 'انجن اور ڈرائیو ٹرین' اسکور اور 'ٹائر اور بریک' اسکور — دونوں بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "7.9",
+    "none_of": [
+     "6.8",
+     "7.2"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "7.4",
+    "none_of": [
+     "6.8",
+     "7.2"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/150/inspection",
+   "stop engine 7.9, tires 7.4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-060",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 300، 302، 303 اور 304 میں سے بالکل ایک کی تصدیق شدہ معائنہ رپورٹ ہے (رپورٹ کا لنک گاڑی کے صفحے پر ہے)۔ اسے تلاش کریں اور اس گاڑی کو اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 300
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 302
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 303
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/300",
+   "goto /car/302",
+   "goto /car/303",
+   "goto /car/304",
+   "goto /car/300",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-061",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 252 کی تصدیق شدہ معائنہ رپورٹ کا مجموعی اسکور بتائیں۔ اگر سائٹ پر یہ ممکن نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /car/252",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-062",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 204 کی تصدیق شدہ معائنہ رپورٹ میں چاروں زمروں میں سے کس کو سب سے کم اسکور ملا؟ زمرے کا نام لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "انٹیریئر"
+    ],
+    "none_of": [
+     "انجن اور ڈرائیو ٹرین",
+     "انجن",
+     "باڈی اور پینٹ",
+     "باڈی",
+     "ٹائر اور بریک",
+     "ٹائر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/204/inspection",
+   "stop انٹیریئر"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-063",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 128 کے صفحے پر نظر آتا ہے کہ اس کی قیمت حال ہی میں کم کی گئی۔ مانگی گئی قیمت کتنے روپے کم کی گئی؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "140,000",
+     "140000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/128",
+   "stop Rs.۱۴۰,۰۰۰"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-064",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 354، 355 اور 356 میں سے بالکل ایک کے صفحے پر حالیہ قیمت میں کمی نظر آتی ہے۔ اس پر بالکل اس کی موجودہ مانگی گئی قیمت کے ۹۰% کی آفر دیں، قریب ترین سو روپے تک نیچے کی طرف گول کر کے۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 354,
+     "amount": 3931200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 355
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 356
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/354",
+   "goto /car/355",
+   "goto /car/356",
+   "goto /car/354",
+   "fill 1 amount=3931200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-065",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "اشتہار 63 کی قیمت حال ہی میں ایک زیادہ قیمت سے کم کی گئی (دونوں قیمتیں اس کے صفحے پر ہیں)۔ اس پر بالکل موجودہ مانگی گئی قیمت میں سے اس کمی کی رقم نکال کر جو بچے، اتنی آفر دیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 63,
+     "amount": 5068000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/63",
+   "fill 1 amount=5068000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-066",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "اشتہار 42 (2020 Audi Q5) کی مانگی گئی قیمت روپے میں کتنی ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "7,756,000",
+     "7756000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/42",
+   "stop Rs.۷,۷۵۶,۰۰۰"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-067",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "اشتہار کے صفحے کے مطابق اشتہار 303 (2021 Mercedes-Benz GLK) کتنے دنوں سے سائٹ پر ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "39",
+     "39 days"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/303",
+   "stop 39 days"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-068",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "اشتہار 120 (2016 Chevrolet Equinox) کھولیں اور اس کا رنگ اور ایندھن کی قسم بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "سفید"
+   },
+   {
+    "type": "answer_match",
+    "answer": "پیٹرول"
+   }
+  ],
+  "solution": [
+   "goto /car/120",
+   "stop سفید, پیٹرول"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-069",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "سائٹ پر اس وقت فروخت کے لیے کتنے Tesla اشتہارات ہیں؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "8"
+   }
+  ],
+  "solution": [
+   "goto /cars?brand=Tesla",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-070",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "ڈیلرز صفحے کے مطابق ڈیلر میٹرو کارز کی ریٹنگ کیا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "4.1"
+   }
+  ],
+  "solution": [
+   "goto /dealers",
+   "stop 4.1 stars"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-071",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "موازنہ ٹول سے اشتہار 15 اور 16 کا موازنہ کریں۔ کون سی سستی ہے؟ اس کی اشتہار آئی ڈی لکھ کر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "15",
+    "none_of": [
+     "16"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /compare",
+   "fill 0 a=15; b=16",
+   "stop 15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-072",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "سائٹ کا فنانس کیلکولیٹر استعمال کریں: Rs.۵,۶۰۰,۰۰۰ قیمت کی گاڑی کے لیے ۲۵% ڈاؤن پیمنٹ کے ساتھ ۴ سال کی مدت پر ماہانہ قسط کتنی ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "143,500",
+     "143500"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=5600000; down_pct=25; years=4",
+   "stop Rs.۱۴۳,۵۰۰"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-073",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "مارکیٹ پلیس کے قواعد کے مطابق فیچرڈ اشتہار کی جگہ کی لاگت کتنی ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "Rs.۲,۸۰۰",
+     "2,800",
+     "2800"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop Rs.۲,۸۰۰"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-074",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "اشتہار 33 (2017 Audi A8) کو اپنی محفوظ گاڑیوں میں شامل کریں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 33
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/33",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-075",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "اپنا اکاؤنٹ اپ ڈیٹ کریں: رابطہ فون 0345-2223344 اور شہر اسلام آباد رکھیں۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "phone",
+    "value": "0345-2223344"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "city",
+    "value": "اسلام آباد"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account",
+   "fill 0 phone=0345-2223344; city=اسلام آباد"
+  ],
+  "max_steps": 30
+ }
+]

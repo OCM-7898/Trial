@@ -1,0 +1,842 @@
+[
+ {
+  "id": 1,
+  "service_id": 1,
+  "ref_no": "NA/N/2026/001",
+  "title": "Counter closure at selected identity registration offices",
+  "body": "Applicants for identity registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-29",
+  "category": "deadline",
+  "sort_order": 1
+ },
+ {
+  "id": 2,
+  "service_id": 1,
+  "ref_no": "NA/N/2026/002",
+  "title": "Counter closure at selected identity registration offices",
+  "body": "Applicants for identity registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-02",
+  "category": "closure",
+  "sort_order": 2
+ },
+ {
+  "id": 3,
+  "service_id": 1,
+  "ref_no": "NA/N/2026/003",
+  "title": "Revised counter hours for identity registration",
+  "body": "Applicants for identity registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-16",
+  "category": "procedure",
+  "sort_order": 3
+ },
+ {
+  "id": 4,
+  "service_id": 1,
+  "ref_no": "NA/N/2026/004",
+  "title": "Revised counter hours for identity registration",
+  "body": "Applicants for identity registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-12",
+  "category": "closure",
+  "sort_order": 4
+ },
+ {
+  "id": 5,
+  "service_id": 1,
+  "ref_no": "NA/N/2026/005",
+  "title": "System maintenance affecting identity registration",
+  "body": "Applicants for identity registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-06",
+  "category": "maintenance",
+  "sort_order": 5
+ },
+ {
+  "id": 6,
+  "service_id": 2,
+  "ref_no": "PA/N/2026/001",
+  "title": "Counter closure at selected passport issuance offices",
+  "body": "Applicants for passport issuance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-02",
+  "category": "procedure",
+  "sort_order": 1
+ },
+ {
+  "id": 7,
+  "service_id": 2,
+  "ref_no": "PA/N/2026/002",
+  "title": "System maintenance affecting passport issuance",
+  "body": "Applicants for passport issuance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-22",
+  "category": "maintenance",
+  "sort_order": 2
+ },
+ {
+  "id": 8,
+  "service_id": 2,
+  "ref_no": "PA/N/2026/003",
+  "title": "System maintenance affecting passport issuance",
+  "body": "Applicants for passport issuance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-17",
+  "category": "maintenance",
+  "sort_order": 3
+ },
+ {
+  "id": 9,
+  "service_id": 2,
+  "ref_no": "PA/N/2026/004",
+  "title": "Suspension of express processing for passport issuance",
+  "body": "Applicants for passport issuance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-04",
+  "category": "deadline",
+  "sort_order": 4
+ },
+ {
+  "id": 10,
+  "service_id": 2,
+  "ref_no": "PA/N/2026/005",
+  "title": "Counter closure at selected passport issuance offices",
+  "body": "Applicants for passport issuance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-08-31",
+  "category": "closure",
+  "sort_order": 5
+ },
+ {
+  "id": 11,
+  "service_id": 2,
+  "ref_no": "PA/N/2026/006",
+  "title": "Public inspection period for passport issuance records",
+  "body": "Applicants for passport issuance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-06-09",
+  "category": "maintenance",
+  "sort_order": 6
+ },
+ {
+  "id": 12,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/001",
+  "title": "System maintenance affecting civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-14",
+  "category": "closure",
+  "sort_order": 1
+ },
+ {
+  "id": 13,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/002",
+  "title": "Suspension of express processing for civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-05-30",
+  "category": "deadline",
+  "sort_order": 2
+ },
+ {
+  "id": 14,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/003",
+  "title": "Counter closure at selected civil registration offices",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-26",
+  "category": "deadline",
+  "sort_order": 3
+ },
+ {
+  "id": 15,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/004",
+  "title": "System maintenance affecting civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-22",
+  "category": "deadline",
+  "sort_order": 4
+ },
+ {
+  "id": 16,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/005",
+  "title": "Revised counter hours for civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-29",
+  "category": "closure",
+  "sort_order": 5
+ },
+ {
+  "id": 17,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/006",
+  "title": "Revised counter hours for civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-18",
+  "category": "closure",
+  "sort_order": 6
+ },
+ {
+  "id": 18,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/007",
+  "title": "System maintenance affecting civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-23",
+  "category": "deadline",
+  "sort_order": 7
+ },
+ {
+  "id": 19,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/008",
+  "title": "Revised counter hours for civil registration",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-03",
+  "category": "deadline",
+  "sort_order": 8
+ },
+ {
+  "id": 20,
+  "service_id": 3,
+  "ref_no": "CI/N/2026/009",
+  "title": "Public inspection period for civil registration records",
+  "body": "Applicants for civil registration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-08",
+  "category": "procedure",
+  "sort_order": 9
+ },
+ {
+  "id": 21,
+  "service_id": 4,
+  "ref_no": "LA/N/2026/001",
+  "title": "Revised counter hours for land records",
+  "body": "Applicants for land records should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-25",
+  "category": "procedure",
+  "sort_order": 1
+ },
+ {
+  "id": 22,
+  "service_id": 4,
+  "ref_no": "LA/N/2026/002",
+  "title": "Suspension of express processing for land records",
+  "body": "Applicants for land records should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-20",
+  "category": "maintenance",
+  "sort_order": 2
+ },
+ {
+  "id": 23,
+  "service_id": 4,
+  "ref_no": "LA/N/2026/003",
+  "title": "System maintenance affecting land records",
+  "body": "Applicants for land records should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-06",
+  "category": "maintenance",
+  "sort_order": 3
+ },
+ {
+  "id": 24,
+  "service_id": 4,
+  "ref_no": "LA/N/2026/004",
+  "title": "Revised counter hours for land records",
+  "body": "Applicants for land records should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-27",
+  "category": "procedure",
+  "sort_order": 4
+ },
+ {
+  "id": 25,
+  "service_id": 4,
+  "ref_no": "LA/N/2026/005",
+  "title": "Counter closure at selected land records offices",
+  "body": "Applicants for land records should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-17",
+  "category": "deadline",
+  "sort_order": 5
+ },
+ {
+  "id": 26,
+  "service_id": 4,
+  "ref_no": "LA/N/2026/006",
+  "title": "Suspension of express processing for land records",
+  "body": "Applicants for land records should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-26",
+  "category": "maintenance",
+  "sort_order": 6
+ },
+ {
+  "id": 27,
+  "service_id": 5,
+  "ref_no": "EL/N/2026/001",
+  "title": "Suspension of express processing for electricity billing",
+  "body": "Applicants for electricity billing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-22",
+  "category": "maintenance",
+  "sort_order": 1
+ },
+ {
+  "id": 28,
+  "service_id": 5,
+  "ref_no": "EL/N/2026/002",
+  "title": "System maintenance affecting electricity billing",
+  "body": "Applicants for electricity billing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-13",
+  "category": "procedure",
+  "sort_order": 2
+ },
+ {
+  "id": 29,
+  "service_id": 5,
+  "ref_no": "EL/N/2026/003",
+  "title": "Suspension of express processing for electricity billing",
+  "body": "Applicants for electricity billing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-12",
+  "category": "deadline",
+  "sort_order": 3
+ },
+ {
+  "id": 30,
+  "service_id": 5,
+  "ref_no": "EL/N/2026/004",
+  "title": "Revised counter hours for electricity billing",
+  "body": "Applicants for electricity billing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-04",
+  "category": "deadline",
+  "sort_order": 4
+ },
+ {
+  "id": 31,
+  "service_id": 5,
+  "ref_no": "EL/N/2026/005",
+  "title": "System maintenance affecting electricity billing",
+  "body": "Applicants for electricity billing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-08",
+  "category": "deadline",
+  "sort_order": 5
+ },
+ {
+  "id": 32,
+  "service_id": 5,
+  "ref_no": "EL/N/2026/006",
+  "title": "Suspension of express processing for electricity billing",
+  "body": "Applicants for electricity billing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-11",
+  "category": "procedure",
+  "sort_order": 6
+ },
+ {
+  "id": 33,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/001",
+  "title": "Suspension of express processing for examination results",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-10",
+  "category": "closure",
+  "sort_order": 1
+ },
+ {
+  "id": 34,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/002",
+  "title": "Counter closure at selected examination results offices",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-22",
+  "category": "closure",
+  "sort_order": 2
+ },
+ {
+  "id": 35,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/003",
+  "title": "System maintenance affecting examination results",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-14",
+  "category": "deadline",
+  "sort_order": 3
+ },
+ {
+  "id": 36,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/004",
+  "title": "System maintenance affecting examination results",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-07",
+  "category": "closure",
+  "sort_order": 4
+ },
+ {
+  "id": 37,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/005",
+  "title": "Public inspection period for examination results records",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-09",
+  "category": "closure",
+  "sort_order": 5
+ },
+ {
+  "id": 38,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/006",
+  "title": "Counter closure at selected examination results offices",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-23",
+  "category": "maintenance",
+  "sort_order": 6
+ },
+ {
+  "id": 39,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/007",
+  "title": "System maintenance affecting examination results",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-20",
+  "category": "maintenance",
+  "sort_order": 7
+ },
+ {
+  "id": 40,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/008",
+  "title": "Revised counter hours for examination results",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-05-15",
+  "category": "maintenance",
+  "sort_order": 8
+ },
+ {
+  "id": 41,
+  "service_id": 6,
+  "ref_no": "EX/N/2026/009",
+  "title": "Counter closure at selected examination results offices",
+  "body": "Applicants for examination results should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-09",
+  "category": "procedure",
+  "sort_order": 9
+ },
+ {
+  "id": 42,
+  "service_id": 7,
+  "ref_no": "DR/N/2026/001",
+  "title": "Revised counter hours for driver licensing",
+  "body": "Applicants for driver licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-21",
+  "category": "procedure",
+  "sort_order": 1
+ },
+ {
+  "id": 43,
+  "service_id": 7,
+  "ref_no": "DR/N/2026/002",
+  "title": "Counter closure at selected driver licensing offices",
+  "body": "Applicants for driver licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-30",
+  "category": "maintenance",
+  "sort_order": 2
+ },
+ {
+  "id": 44,
+  "service_id": 7,
+  "ref_no": "DR/N/2026/003",
+  "title": "Revised counter hours for driver licensing",
+  "body": "Applicants for driver licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-07",
+  "category": "deadline",
+  "sort_order": 3
+ },
+ {
+  "id": 45,
+  "service_id": 7,
+  "ref_no": "DR/N/2026/004",
+  "title": "Revised counter hours for driver licensing",
+  "body": "Applicants for driver licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-14",
+  "category": "procedure",
+  "sort_order": 4
+ },
+ {
+  "id": 46,
+  "service_id": 7,
+  "ref_no": "DR/N/2026/005",
+  "title": "Revised counter hours for driver licensing",
+  "body": "Applicants for driver licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-09",
+  "category": "closure",
+  "sort_order": 5
+ },
+ {
+  "id": 47,
+  "service_id": 8,
+  "ref_no": "TA/N/2026/001",
+  "title": "Revised counter hours for revenue administration",
+  "body": "Applicants for revenue administration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-29",
+  "category": "closure",
+  "sort_order": 1
+ },
+ {
+  "id": 48,
+  "service_id": 8,
+  "ref_no": "TA/N/2026/002",
+  "title": "Revised counter hours for revenue administration",
+  "body": "Applicants for revenue administration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-15",
+  "category": "maintenance",
+  "sort_order": 2
+ },
+ {
+  "id": 49,
+  "service_id": 8,
+  "ref_no": "TA/N/2026/003",
+  "title": "Public inspection period for revenue administration records",
+  "body": "Applicants for revenue administration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-05",
+  "category": "procedure",
+  "sort_order": 3
+ },
+ {
+  "id": 50,
+  "service_id": 8,
+  "ref_no": "TA/N/2026/004",
+  "title": "Public inspection period for revenue administration records",
+  "body": "Applicants for revenue administration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-04",
+  "category": "maintenance",
+  "sort_order": 4
+ },
+ {
+  "id": 51,
+  "service_id": 8,
+  "ref_no": "TA/N/2026/005",
+  "title": "Suspension of express processing for revenue administration",
+  "body": "Applicants for revenue administration should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-25",
+  "category": "procedure",
+  "sort_order": 5
+ },
+ {
+  "id": 52,
+  "service_id": 9,
+  "ref_no": "PI/N/2026/001",
+  "title": "Counter closure at selected pilgrimage management offices",
+  "body": "Applicants for pilgrimage management should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-31",
+  "category": "procedure",
+  "sort_order": 1
+ },
+ {
+  "id": 53,
+  "service_id": 9,
+  "ref_no": "PI/N/2026/002",
+  "title": "Public inspection period for pilgrimage management records",
+  "body": "Applicants for pilgrimage management should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-01",
+  "category": "maintenance",
+  "sort_order": 2
+ },
+ {
+  "id": 54,
+  "service_id": 9,
+  "ref_no": "PI/N/2026/003",
+  "title": "System maintenance affecting pilgrimage management",
+  "body": "Applicants for pilgrimage management should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-11",
+  "category": "closure",
+  "sort_order": 3
+ },
+ {
+  "id": 55,
+  "service_id": 9,
+  "ref_no": "PI/N/2026/004",
+  "title": "Counter closure at selected pilgrimage management offices",
+  "body": "Applicants for pilgrimage management should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-08",
+  "category": "closure",
+  "sort_order": 4
+ },
+ {
+  "id": 56,
+  "service_id": 9,
+  "ref_no": "PI/N/2026/005",
+  "title": "Suspension of express processing for pilgrimage management",
+  "body": "Applicants for pilgrimage management should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-18",
+  "category": "maintenance",
+  "sort_order": 5
+ },
+ {
+  "id": 57,
+  "service_id": 9,
+  "ref_no": "PI/N/2026/006",
+  "title": "Suspension of express processing for pilgrimage management",
+  "body": "Applicants for pilgrimage management should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-11",
+  "category": "procedure",
+  "sort_order": 6
+ },
+ {
+  "id": 58,
+  "service_id": 10,
+  "ref_no": "HE/N/2026/001",
+  "title": "Revised counter hours for public health services",
+  "body": "Applicants for public health services should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-05-22",
+  "category": "closure",
+  "sort_order": 1
+ },
+ {
+  "id": 59,
+  "service_id": 10,
+  "ref_no": "HE/N/2026/002",
+  "title": "Public inspection period for public health services records",
+  "body": "Applicants for public health services should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-16",
+  "category": "deadline",
+  "sort_order": 2
+ },
+ {
+  "id": 60,
+  "service_id": 10,
+  "ref_no": "HE/N/2026/003",
+  "title": "System maintenance affecting public health services",
+  "body": "Applicants for public health services should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-12-13",
+  "category": "deadline",
+  "sort_order": 3
+ },
+ {
+  "id": 61,
+  "service_id": 10,
+  "ref_no": "HE/N/2026/004",
+  "title": "Revised counter hours for public health services",
+  "body": "Applicants for public health services should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-03",
+  "category": "deadline",
+  "sort_order": 4
+ },
+ {
+  "id": 62,
+  "service_id": 10,
+  "ref_no": "HE/N/2026/005",
+  "title": "System maintenance affecting public health services",
+  "body": "Applicants for public health services should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-21",
+  "category": "deadline",
+  "sort_order": 5
+ },
+ {
+  "id": 63,
+  "service_id": 10,
+  "ref_no": "HE/N/2026/006",
+  "title": "Public inspection period for public health services records",
+  "body": "Applicants for public health services should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-11-23",
+  "category": "deadline",
+  "sort_order": 6
+ },
+ {
+  "id": 64,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/001",
+  "title": "Revised counter hours for police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-20",
+  "category": "maintenance",
+  "sort_order": 1
+ },
+ {
+  "id": 65,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/002",
+  "title": "Revised counter hours for police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-26",
+  "category": "procedure",
+  "sort_order": 2
+ },
+ {
+  "id": 66,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/003",
+  "title": "Suspension of express processing for police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-05-20",
+  "category": "closure",
+  "sort_order": 3
+ },
+ {
+  "id": 67,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/004",
+  "title": "Suspension of express processing for police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-18",
+  "category": "closure",
+  "sort_order": 4
+ },
+ {
+  "id": 68,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/005",
+  "title": "System maintenance affecting police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-02",
+  "category": "procedure",
+  "sort_order": 5
+ },
+ {
+  "id": 69,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/006",
+  "title": "System maintenance affecting police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-01",
+  "category": "procedure",
+  "sort_order": 6
+ },
+ {
+  "id": 70,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/007",
+  "title": "Public inspection period for police clearance records",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-20",
+  "category": "closure",
+  "sort_order": 7
+ },
+ {
+  "id": 71,
+  "service_id": 11,
+  "ref_no": "PO/N/2026/008",
+  "title": "Suspension of express processing for police clearance",
+  "body": "Applicants for police clearance should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-14",
+  "category": "procedure",
+  "sort_order": 8
+ },
+ {
+  "id": 72,
+  "service_id": 12,
+  "ref_no": "TR/N/2026/001",
+  "title": "System maintenance affecting trade licensing",
+  "body": "Applicants for trade licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-05-26",
+  "category": "closure",
+  "sort_order": 1
+ },
+ {
+  "id": 73,
+  "service_id": 12,
+  "ref_no": "TR/N/2026/002",
+  "title": "Revised counter hours for trade licensing",
+  "body": "Applicants for trade licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-13",
+  "category": "deadline",
+  "sort_order": 2
+ },
+ {
+  "id": 74,
+  "service_id": 12,
+  "ref_no": "TR/N/2026/003",
+  "title": "Counter closure at selected trade licensing offices",
+  "body": "Applicants for trade licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-03-16",
+  "category": "closure",
+  "sort_order": 3
+ },
+ {
+  "id": 75,
+  "service_id": 12,
+  "ref_no": "TR/N/2026/004",
+  "title": "System maintenance affecting trade licensing",
+  "body": "Applicants for trade licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-28",
+  "category": "maintenance",
+  "sort_order": 4
+ },
+ {
+  "id": 76,
+  "service_id": 12,
+  "ref_no": "TR/N/2026/005",
+  "title": "Public inspection period for trade licensing records",
+  "body": "Applicants for trade licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-13",
+  "category": "deadline",
+  "sort_order": 5
+ },
+ {
+  "id": 77,
+  "service_id": 12,
+  "ref_no": "TR/N/2026/006",
+  "title": "System maintenance affecting trade licensing",
+  "body": "Applicants for trade licensing should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-10-22",
+  "category": "closure",
+  "sort_order": 6
+ },
+ {
+  "id": 78,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/001",
+  "title": "Counter closure at selected pension disbursement offices",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-09-08",
+  "category": "deadline",
+  "sort_order": 1
+ },
+ {
+  "id": 79,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/002",
+  "title": "Public inspection period for pension disbursement records",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-04-13",
+  "category": "procedure",
+  "sort_order": 2
+ },
+ {
+  "id": 80,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/003",
+  "title": "Suspension of express processing for pension disbursement",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2025-08-30",
+  "category": "procedure",
+  "sort_order": 3
+ },
+ {
+  "id": 81,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/004",
+  "title": "Revised counter hours for pension disbursement",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-22",
+  "category": "closure",
+  "sort_order": 4
+ },
+ {
+  "id": 82,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/005",
+  "title": "Revised counter hours for pension disbursement",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-04",
+  "category": "maintenance",
+  "sort_order": 5
+ },
+ {
+  "id": 83,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/006",
+  "title": "Suspension of express processing for pension disbursement",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-02-07",
+  "category": "deadline",
+  "sort_order": 6
+ },
+ {
+  "id": 84,
+  "service_id": 13,
+  "ref_no": "PE/N/2026/007",
+  "title": "System maintenance affecting pension disbursement",
+  "body": "Applicants for pension disbursement should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.",
+  "issued_date": "2026-01-06",
+  "category": "closure",
+  "sort_order": 7
+ }
+]

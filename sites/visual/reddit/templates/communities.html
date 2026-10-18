@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ S.communities_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.communities_title }}</h1>
+{% for f in forums %}
+<div class="card community-row">
+  <img class="cico" src="/static/community/{{ f.name }}.svg" alt="">
+  <div>
+    <a href="/f/{{ f.name }}"><strong>f/{{ f.name }}</strong></a>
+    <div class="muted">{{ f.description }}</div>
+  </div>
+</div>
+{% endfor %}
+<p><a href="/create_community">{{ S.create_community }} →</a></p>
+{% endblock %}

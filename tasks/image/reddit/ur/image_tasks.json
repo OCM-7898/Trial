@@ -1,0 +1,1578 @@
+[
+ {
+  "id": "image-reddit-001",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1585_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Vedaka کولم چاول"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1585",
+   "stop Vedaka کولم چاول"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-002",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1433_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5-6 شیٹ کراس کٹ پیپر اور کریڈٹ کارڈ شریڈر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1433",
+   "stop 5-6 شیٹ کراس کٹ پیپر اور کریڈٹ کارڈ شریڈر"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-003",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/202_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AC-2.0 AC پاورڈ 2.0 5W بلوٹوتھ کمپیوٹر سپیکر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/202",
+   "stop AC-2.0 AC پاورڈ 2.0 5W بلوٹوتھ کمپیوٹر سپیکر"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-004",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/622_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "گلو ان دی ڈارک لیکوئڈ گلو"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/622",
+   "stop گلو ان دی ڈارک لیکوئڈ گلو"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-005",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/471_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "سٹینلیس سٹیل کیسرول، شیشے کے ڈھکن کے ساتھ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/471",
+   "stop سٹینلیس سٹیل کیسرول، شیشے کے ڈھکن کے ساتھ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-006",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1632_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "میجک ٹیپ اور ری فل ایبل ڈسپنسر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1632",
+   "stop میجک ٹیپ اور ری فل ایبل ڈسپنسر"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-007",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/343_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "بڑا فین-ایمبوسڈ پلانٹر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/343",
+   "stop بڑا فین-ایمبوسڈ پلانٹر"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-008",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/170_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8-کپ بیوریج پاٹ، پمپ ڈسپنسر کے ساتھ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/170",
+   "stop 8-کپ بیوریج پاٹ، پمپ ڈسپنسر کے ساتھ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-009",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/956_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "بلی کا ٹری، بلی کے بچے کا فرنیچر پلیٹ فارم، چھوٹا، سرمئی"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/956",
+   "stop بلی کا ٹری، بلی کے بچے کا فرنیچر پلیٹ فارم، چھوٹا، سرمئی"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-010",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کے پہلے تبصرے کے مطابق یہ کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/375_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Strathwood Sheffield ڈائننگ کلیکشن"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/375",
+   "stop Strathwood Sheffield ڈائننگ کلیکشن"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-011",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کو محفوظ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/943_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 943
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/943",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-012",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کو محفوظ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/887_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 887
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/887",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-013",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کو محفوظ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1553_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1553
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/1553",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-014",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کو محفوظ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/195_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 195
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/195",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-015",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کو محفوظ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1976_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1976
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/1976",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-016",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کو محفوظ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1256_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1256
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/1256",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-017",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اسے کس نے پوسٹ کیا؟ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/1379_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "noodle_ninja"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1379",
+   "stop noodle_ninja"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-018",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اسے کس نے پوسٹ کیا؟ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/128_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "krypton_kiran"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/128",
+   "stop krypton_kiran"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-019",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اسے کس نے پوسٹ کیا؟ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/1064_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "casual_cactus"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1064",
+   "stop casual_cactus"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-020",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اسے کس نے پوسٹ کیا؟ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/1986_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "byte_bandit"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1986",
+   "stop byte_bandit"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-021",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اسے کس نے پوسٹ کیا؟ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/758_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "harbor_hadi"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/758",
+   "stop harbor_hadi"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-022",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/223_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6",
+     "۶",
+     "٦"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/223",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-023",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1109_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "159",
+     "۱۵۹",
+     "١٥٩"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1109",
+   "stop 159"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-024",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1169_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "111",
+     "۱۱۱",
+     "١١١"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1169",
+   "stop 111"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-025",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/220_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "115",
+     "۱۱۵",
+     "١١٥"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/220",
+   "stop 115"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-026",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing کی ایک پوسٹ میں تصویر والی چیز دکھائی گئی ہے۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1897_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "59",
+     "۵۹",
+     "٥٩"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1897",
+   "stop 59"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-027",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "تصویر میں ان پوسٹس میں سے ایک کی گاڑی دکھائی گئی ہے: ‘کراچی میں میرے دفتر کے قریب کھڑی چمکتی 2024 Buick Regal’، ‘اگلے پروجیکٹ کے طور پر ایک 2019 Buick Regal اٹھا لایا’، ‘آج کی سڑک کی دریافت: 2019 Buick Regal’، ‘اگلے پروجیکٹ کے طور پر ایک 2018 Buick Regal اٹھا لایا’۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1417_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "66",
+     "۶۶",
+     "٦٦"
+    ],
+    "none_of": [
+     "217",
+     "۲۱۷",
+     "٢١٧",
+     "105",
+     "۱۰۵",
+     "١٠٥",
+     "161",
+     "۱۶۱",
+     "١٦١"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1417",
+   "goto /post/1445",
+   "goto /post/1673",
+   "goto /post/1012",
+   "goto /post/1417",
+   "stop 66"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-028",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "تصویر میں ان پوسٹس میں سے ایک کی گاڑی دکھائی گئی ہے: ‘Sylphy آخرکار چل پڑی — تصاویر کا ڈھیر’، ‘سردیوں سے پہلے: 2019 Sylphy کو سڑک کے قابل بنانا’، ‘میرا 2021 Nissan Sylphy پروجیکٹ — پیش رفت کی تصاویر’۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/772_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "133",
+     "۱۳۳",
+     "١٣٣"
+    ],
+    "none_of": [
+     "96",
+     "۹۶",
+     "٩٦",
+     "182",
+     "۱۸۲",
+     "١٨٢"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/893",
+   "goto /post/772",
+   "goto /post/1324",
+   "goto /post/772",
+   "stop 133"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-029",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "تصویر میں ان پوسٹس میں سے ایک کی گاڑی دکھائی گئی ہے: ‘A-Class آخرکار چل پڑی — تصاویر کا ڈھیر’، ‘اسلام آباد میں میرے دفتر کے قریب کھڑی چمکتی 2024 Mercedes-Benz E-Class’، ‘میرا 2024 Mercedes-Benz E-Class پروجیکٹ — پیش رفت کی تصاویر’، ‘کراچی میں چلتے چلتے اس Mercedes-Benz CLA نے مجھے روک لیا’۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1419_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "173",
+     "۱۷۳",
+     "١٧٣"
+    ],
+    "none_of": [
+     "40",
+     "۴۰",
+     "٤٠",
+     "466",
+     "۴۶۶",
+     "٤٦٦",
+     "125",
+     "۱۲۵",
+     "١٢٥"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1419",
+   "goto /post/475",
+   "goto /post/1120",
+   "goto /post/1316",
+   "goto /post/1419",
+   "stop 173"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-030",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "تصویر میں ان پوسٹس میں سے ایک کی گاڑی دکھائی گئی ہے: ‘کراچی میں چلتے چلتے اس Chevrolet Cruze نے مجھے روک لیا’، ‘لاہور میں چلتے چلتے اس Chevrolet Aveo نے مجھے روک لیا’، ‘میرا 2022 Chevrolet Malibu پروجیکٹ — پیش رفت کی تصاویر’۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/508_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "144",
+     "۱۴۴",
+     "١٤٤"
+    ],
+    "none_of": [
+     "479",
+     "۴۷۹",
+     "٤٧٩",
+     "218",
+     "۲۱۸",
+     "٢١٨"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1206",
+   "goto /post/1631",
+   "goto /post/508",
+   "goto /post/508",
+   "stop 144"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-031",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "تصویر میں ان پوسٹس میں سے ایک کی گاڑی دکھائی گئی ہے: ‘کراچی میں چلتے چلتے اس Peugeot 3008 نے مجھے روک لیا’، ‘میرا 2016 Cadillac XT5 پروجیکٹ — پیش رفت کی تصاویر’، ‘سردیوں سے پہلے: 2014 X3 کو سڑک کے قابل بنانا’، ‘میرا 2013 Kia Sportage پروجیکٹ — پیش رفت کی تصاویر’۔ اس پوسٹ کا اسکور کیا ہے؟",
+  "image": "sites/visual/reddit/static/post_images/1806_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "58",
+     "۵۸",
+     "٥٨"
+    ],
+    "none_of": [
+     "209",
+     "۲۰۹",
+     "٢٠٩",
+     "25",
+     "۲۵",
+     "٢٥",
+     "124",
+     "۱۲۴",
+     "١٢٤"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1066",
+   "goto /post/1806",
+   "goto /post/1221",
+   "goto /post/116",
+   "goto /post/1806",
+   "stop 58"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-032",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اسے محفوظ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘میرا 2013 Audi A3 پروجیکٹ — پیش رفت کی تصاویر’، ‘آج کی سڑک کی دریافت: 2021 Volkswagen Polo’، ‘آج کی سڑک کی دریافت: 2023 Peugeot 206’، ‘میرا 2016 Volkswagen Polo پروجیکٹ — پیش رفت کی تصاویر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/17_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 17
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 396
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1665
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 388
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/396",
+   "goto /post/17",
+   "goto /post/1665",
+   "goto /post/388",
+   "goto /post/17",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-033",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اسے محفوظ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘سردیوں سے پہلے: 2018 X-Trail کو سڑک کے قابل بنانا’، ‘Atlas آخرکار چل پڑی — تصاویر کا ڈھیر’، ‘Q5 آخرکار چل پڑی — تصاویر کا ڈھیر’، ‘میرا 2017 Honda HR-V پروجیکٹ — پیش رفت کی تصاویر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1568_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1568
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1061
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 618
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 420
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1061",
+   "goto /post/618",
+   "goto /post/420",
+   "goto /post/1568",
+   "goto /post/1568",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-034",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اسے محفوظ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘اگلے پروجیکٹ کے طور پر ایک 2021 Skoda Rapid اٹھا لایا’، ‘میرا 2015 Tesla Model 3 پروجیکٹ — پیش رفت کی تصاویر’، ‘لاہور میں چلتے چلتے اس Hyundai Sonata نے مجھے روک لیا’، ‘Corolla آخرکار چل پڑی — تصاویر کا ڈھیر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1532_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1532
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 931
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1389
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1098
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1532",
+   "goto /post/931",
+   "goto /post/1389",
+   "goto /post/1098",
+   "goto /post/1532",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-035",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اسے محفوظ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘آج کی سڑک کی دریافت: 2020 Buick Envision’، ‘میرا 2023 Infiniti QX50 پروجیکٹ — پیش رفت کی تصاویر’، ‘پشاور میں چلتے چلتے اس BMW X2 نے مجھے روک لیا’، ‘لاہور میں میرے دفتر کے قریب کھڑی چمکتی 2022 Renault Koleos’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/437_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 437
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 542
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 51
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 49
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/542",
+   "goto /post/51",
+   "goto /post/437",
+   "goto /post/49",
+   "goto /post/437",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-036",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اسے محفوظ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘میرا 2024 Lincoln Corsair پروجیکٹ — پیش رفت کی تصاویر’، ‘سردیوں سے پہلے: 2019 Koleos کو سڑک کے قابل بنانا’، ‘میرا 2023 Mitsubishi Outlander پروجیکٹ — پیش رفت کی تصاویر’، ‘سردیوں سے پہلے: 2024 T-Roc کو سڑک کے قابل بنانا’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/4_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 4
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1475
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1936
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 329
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1475",
+   "goto /post/4",
+   "goto /post/1936",
+   "goto /post/329",
+   "goto /post/4",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-037",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اس پر 'زبردست دریافت، شیئر کرنے کا شکریہ!' تبصرہ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘فیصل آباد میں میرے دفتر کے قریب کھڑی چمکتی 2019 Kia Sportage’، ‘آج کی سڑک کی دریافت: 2023 Land Rover Range Rover’، ‘لاہور میں میرے دفتر کے قریب کھڑی چمکتی 2016 Audi Q3’، ‘کراچی میں چلتے چلتے اس Hyundai Tucson نے مجھے روک لیا’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1924_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1924,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 979,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 613,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 268,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/979",
+   "goto /post/613",
+   "goto /post/268",
+   "goto /post/1924",
+   "goto /post/1924",
+   "fill 3 body=زبردست دریافت، شیئر کرنے کا شکریہ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-038",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اس پر 'زبردست دریافت، شیئر کرنے کا شکریہ!' تبصرہ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘آج کی سڑک کی دریافت: 2014 Audi Q5’، ‘سردیوں سے پہلے: 2015 Discovery کو سڑک کے قابل بنانا’، ‘لاہور میں چلتے چلتے اس Chevrolet Captiva نے مجھے روک لیا’، ‘Patrol آخرکار چل پڑی — تصاویر کا ڈھیر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1952_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1952,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 976,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1037,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 746,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/976",
+   "goto /post/1037",
+   "goto /post/746",
+   "goto /post/1952",
+   "goto /post/1952",
+   "fill 3 body=زبردست دریافت، شیئر کرنے کا شکریہ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-039",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اس پر 'زبردست دریافت، شیئر کرنے کا شکریہ!' تبصرہ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘ix35 آخرکار چل پڑی — تصاویر کا ڈھیر’، ‘لاہور میں چلتے چلتے اس Citroen C5 Aircross نے مجھے روک لیا’، ‘میرا 2023 Buick Envision پروجیکٹ — پیش رفت کی تصاویر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1156_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1156,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 284,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 201,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/284",
+   "goto /post/1156",
+   "goto /post/201",
+   "goto /post/1156",
+   "fill 3 body=زبردست دریافت، شیئر کرنے کا شکریہ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-040",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اس پر 'زبردست دریافت، شیئر کرنے کا شکریہ!' تبصرہ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘سردیوں سے پہلے: 2024 3 Series کو سڑک کے قابل بنانا’، ‘پشاور میں میرے دفتر کے قریب کھڑی چمکتی 2023 Volkswagen Passat’، ‘سیالکوٹ میں چلتے چلتے اس Volkswagen Passat نے مجھے روک لیا’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/1626_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1626,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1427,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1504,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1626",
+   "goto /post/1427",
+   "goto /post/1504",
+   "goto /post/1626",
+   "fill 3 body=زبردست دریافت، شیئر کرنے کا شکریہ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-041",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "تصویر والی گاڑی جس پوسٹ میں ہے اس پر 'زبردست دریافت، شیئر کرنے کا شکریہ!' تبصرہ کریں۔ یہ ان پوسٹس میں سے ایک ہے: ‘لاہور میں چلتے چلتے اس Buick LaCrosse نے مجھے روک لیا’، ‘میرا 2016 Mercedes-Benz S-Class پروجیکٹ — پیش رفت کی تصاویر’، ‘راولپنڈی میں میرے دفتر کے قریب کھڑی چمکتی 2016 Toyota Corolla’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/reddit/static/post_images/312_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 312,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1998,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 988,
+     "author_id": 1,
+     "body": "زبردست دریافت، شیئر کرنے کا شکریہ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/312",
+   "goto /post/1998",
+   "goto /post/988",
+   "goto /post/312",
+   "fill 3 body=زبردست دریافت، شیئر کرنے کا شکریہ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-042",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "تصویر والی گاڑی کس نے پوسٹ کی؟ یہ ان پوسٹس میں سے ایک ہے: ‘اسلام آباد میں چلتے چلتے اس Honda Accord نے مجھے روک لیا’، ‘ملتان میں میرے دفتر کے قریب کھڑی چمکتی 2018 Volkswagen Jetta’، ‘سردیوں سے پہلے: 2020 Teana کو سڑک کے قابل بنانا’۔ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/1438_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "basil_baron"
+    ],
+    "none_of": [
+     "dune_darius",
+     "glacier_glen"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1438",
+   "goto /post/1080",
+   "goto /post/551",
+   "goto /post/1438",
+   "stop basil_baron"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-043",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "تصویر والی گاڑی کس نے پوسٹ کی؟ یہ ان پوسٹس میں سے ایک ہے: ‘آج کی سڑک کی دریافت: 2022 Nissan Sylphy’، ‘میرا 2020 Audi A7 پروجیکٹ — پیش رفت کی تصاویر’، ‘Mondeo آخرکار چل پڑی — تصاویر کا ڈھیر’۔ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/141_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "yellow_yakub"
+    ],
+    "none_of": [
+     "cider_cyra",
+     "harbor_hadi"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/141",
+   "goto /post/1893",
+   "goto /post/761",
+   "goto /post/141",
+   "stop yellow_yakub"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-044",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "تصویر والی گاڑی کس نے پوسٹ کی؟ یہ ان پوسٹس میں سے ایک ہے: ‘اسلام آباد میں میرے دفتر کے قریب کھڑی چمکتی 2022 BMW 5 Series’، ‘سردیوں سے پہلے: 2020 A4 کو سڑک کے قابل بنانا’، ‘اگلے پروجیکٹ کے طور پر ایک 2013 Buick LaCrosse اٹھا لایا’۔ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/663_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "opal_omar"
+    ],
+    "none_of": [
+     "ember_elif",
+     "lens_flare"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/336",
+   "goto /post/663",
+   "goto /post/1693",
+   "goto /post/663",
+   "stop opal_omar"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-045",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "تصویر والی گاڑی کس نے پوسٹ کی؟ یہ ان پوسٹس میں سے ایک ہے: ‘اگلے پروجیکٹ کے طور پر ایک 2020 Nissan Sylphy اٹھا لایا’، ‘آج کی سڑک کی دریافت: 2023 Volkswagen Passat’، ‘اسلام آباد میں میرے دفتر کے قریب کھڑی چمکتی 2019 Mercedes-Benz C-Class’۔ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/831_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "lumen_lark"
+    ],
+    "none_of": [
+     "humble_hana",
+     "jolly_jasper"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1029",
+   "goto /post/831",
+   "goto /post/1375",
+   "goto /post/831",
+   "stop lumen_lark"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-046",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "تصویر والی گاڑی کس نے پوسٹ کی؟ یہ ان پوسٹس میں سے ایک ہے: ‘اگلے پروجیکٹ کے طور پر ایک 2022 Honda Civic اٹھا لایا’، ‘سردیوں سے پہلے: 2021 Elantra کو سڑک کے قابل بنانا’، ‘لاہور میں میرے دفتر کے قریب کھڑی چمکتی 2023 Kia Cerato’۔ یوزرنیم سے جواب دیں۔",
+  "image": "sites/visual/reddit/static/post_images/835_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "violet_vega"
+    ],
+    "none_of": [
+     "wasabi_wren",
+     "xenon_xavi"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/835",
+   "goto /post/785",
+   "goto /post/1628",
+   "goto /post/835",
+   "stop violet_vega"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-047",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing میں تصویر والی چیز دکھانے والی پوسٹ تلاش کریں اور بتائیں کہ پہلا تبصرہ اسے کیا کہتا ہے۔ اگر کوئی پوسٹ اسے نہیں دکھاتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-048",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing میں تصویر والی چیز دکھانے والی پوسٹ تلاش کریں اور بتائیں کہ پہلا تبصرہ اسے کیا کہتا ہے۔ اگر کوئی پوسٹ اسے نہیں دکھاتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p75.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-049",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing میں تصویر والی چیز دکھانے والی پوسٹ تلاش کریں اور بتائیں کہ پہلا تبصرہ اسے کیا کہتا ہے۔ اگر کوئی پوسٹ اسے نہیں دکھاتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p239.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-050",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing میں تصویر والی چیز دکھانے والی پوسٹ تلاش کریں اور بتائیں کہ پہلا تبصرہ اسے کیا کہتا ہے۔ اگر کوئی پوسٹ اسے نہیں دکھاتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ }
+]

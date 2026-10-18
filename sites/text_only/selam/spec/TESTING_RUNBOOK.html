@@ -1,0 +1,1378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selam Airways Test Runbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  --ground:#F2F5F3; --surface:#FFFFFF; --sunk:#E9EEEB;
+  --ink:#0F1E1B; --muted:#5C6E6A; --faint:#8B9B96;
+  --line:#D8E1DD; --line-soft:#E6ECE9;
+  --green:#0B5D51; --green-soft:#E2EFEB;
+  --gold:#8A5A0F; --gold-soft:#F5EBD9;
+  --state:#6D4291; --state-soft:#EDE6F4;
+  --focus:#0B5D51;
+  --band:#0B5D51; --on-band:#F0F4F2; --on-green:#FFFFFF;
+  --shadow:0 1px 2px rgba(15,30,27,.06), 0 6px 18px rgba(15,30,27,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1412; --surface:#131E1C; --sunk:#0F1917;
+    --ink:#E4EDE9; --muted:#94A8A2; --faint:#6E827D;
+    --line:#20302C; --line-soft:#1A2825;
+    --green:#5FBCA8; --green-soft:#122B27;
+    --gold:#E0A44A; --gold-soft:#2A2113;
+    --state:#B99BE0; --state-soft:#221A2E;
+    --focus:#5FBCA8;
+    --band:#0A312B; --on-band:#CFE4DE; --on-green:#08110F;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1412; --surface:#131E1C; --sunk:#0F1917;
+  --ink:#E4EDE9; --muted:#94A8A2; --faint:#6E827D;
+  --line:#20302C; --line-soft:#1A2825;
+  --green:#5FBCA8; --green-soft:#122B27;
+  --gold:#E0A44A; --gold-soft:#2A2113;
+  --state:#B99BE0; --state-soft:#221A2E;
+  --focus:#5FBCA8;
+  --band:#0A312B; --on-band:#CFE4DE; --on-green:#08110F;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+code,kbd,.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+h1,h2,h3,.disp{font-family:Archivo,"Source Sans 3",sans-serif; text-wrap:balance}
+a{color:var(--green)}
+:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+
+/* ---------------------------------------------------------------- masthead */
+.masthead{background:var(--band); color:var(--on-band); padding:34px 0 30px}
+.masthead a{color:inherit}
+.masthead .wrap{display:flex; flex-wrap:wrap; gap:26px; align-items:flex-end; justify-content:space-between}
+.brandline{display:flex; align-items:center; gap:14px}
+.roundel{width:38px; height:38px; flex:none}
+.masthead h1{margin:0; font-size:31px; font-weight:700; letter-spacing:-.015em; line-height:1.1}
+.masthead .sub{margin:5px 0 0; font-size:14.5px; opacity:.82; max-width:44ch}
+.stamp{
+  font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.09em;
+  text-transform:uppercase; opacity:.78; text-align:right; line-height:1.9;
+}
+
+/* ------------------------------------------------------------------ setup */
+.setup{padding:30px 0 4px}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:20px}
+.panel{
+  background:var(--surface); border:1px solid var(--line); border-radius:6px;
+  padding:20px 22px 22px;
+}
+.panel h2{
+  margin:0 0 4px; font-size:12px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+}
+.panel p{margin:0 0 14px; font-size:14.5px; color:var(--muted); max-width:52ch}
+.panel p:last-child{margin-bottom:0}
+
+pre{
+  margin:0 0 10px; padding:11px 13px; background:var(--sunk);
+  border:1px solid var(--line-soft); border-radius:4px;
+  font-family:"JetBrains Mono",monospace; font-size:12.8px; line-height:1.75;
+  overflow-x:auto; white-space:pre;
+}
+pre:last-child{margin-bottom:0}
+pre .c{color:var(--faint)}
+
+.pairs{display:grid; grid-template-columns:auto 1fr; gap:4px 16px; font-size:14.5px; margin:0}
+.pairs dt{color:var(--muted)}
+.pairs dd{margin:0; font-family:"JetBrains Mono",monospace; font-size:13px}
+
+/* --------------------------------------------------------- start-here note */
+.startover{
+  margin:20px 0 0; background:var(--gold-soft); border:1px solid var(--gold);
+  border-radius:6px; padding:18px 22px 20px;
+}
+.startover h2{
+  margin:0 0 4px; font-size:12px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--gold); font-weight:600;
+}
+.startover p{margin:0 0 12px; font-size:14.5px; max-width:62ch; color:var(--ink)}
+.startover p:last-child{margin-bottom:0}
+.startover pre{background:var(--surface); border-color:var(--gold)}
+.startover ol{margin:0 0 12px; padding-left:20px; font-size:14.5px; line-height:1.6}
+.startover li{margin-bottom:4px}
+
+/* ------------------------------------------------------------- recheck list */
+.recheck{margin:22px 0 0; border:1px solid var(--line); border-radius:6px;
+         background:var(--surface); padding:18px 22px 20px}
+.recheck h2{
+  margin:0 0 4px; font-size:12px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--muted); font-weight:600;
+}
+.recheck > p{margin:0 0 14px; font-size:14.5px; color:var(--muted); max-width:62ch}
+.recheck ul{list-style:none; margin:0; padding:0; display:grid; gap:9px}
+.recheck li{display:flex; gap:12px; align-items:baseline; font-size:14.5px}
+.recheck a.n{
+  flex:none; font-family:"JetBrains Mono",monospace; font-size:12.5px; font-weight:600;
+  color:var(--green); background:var(--green-soft); padding:3px 8px; border-radius:4px;
+  text-decoration:none; font-variant-numeric:tabular-nums;
+}
+.recheck a.n:hover{text-decoration:underline}
+
+/* ------------------------------------------------------------ credentials */
+.creds{margin:24px 0 0; overflow-x:auto; border:1px solid var(--line); border-radius:6px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14px}
+thead th{
+  text-align:left; padding:10px 16px; font-family:Archivo,sans-serif;
+  font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  font-weight:600; border-bottom:1px solid var(--line); white-space:nowrap;
+}
+tbody td{padding:9px 16px; border-bottom:1px solid var(--line-soft); vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+td.m,th.m{font-family:"JetBrains Mono",monospace; font-size:13px; font-variant-numeric:tabular-nums}
+.note{font-size:13.5px; color:var(--muted); margin:10px 2px 0}
+
+/* --------------------------------------------------------------- controls */
+.bar{
+  position:sticky; top:0; z-index:20; margin-top:34px;
+  background:color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter:blur(8px);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.bar .wrap{display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; padding-top:11px; padding-bottom:11px}
+.bar h2{margin:0; font-size:15px; font-weight:600; letter-spacing:-.01em}
+.spacer{flex:1 1 auto}
+.seg{display:inline-flex; border:1px solid var(--line); border-radius:5px; overflow:hidden; background:var(--surface)}
+.seg button{
+  appearance:none; border:0; background:transparent; color:var(--muted);
+  font:600 12.5px/1 Archivo,sans-serif; letter-spacing:.05em; text-transform:uppercase;
+  padding:8px 13px; cursor:pointer;
+}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--green); color:var(--on-green)}
+.tally{
+  font-family:"JetBrains Mono",monospace; font-size:12.5px; color:var(--muted);
+  font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+.tally b{color:var(--ink); font-weight:600}
+.linkbtn{
+  appearance:none; border:1px solid var(--line); background:var(--surface); color:var(--muted);
+  font:600 12.5px/1 Archivo,sans-serif; letter-spacing:.04em; padding:8px 12px;
+  border-radius:5px; cursor:pointer;
+}
+.linkbtn:hover{color:var(--ink); border-color:var(--muted)}
+
+/* ------------------------------------------------------------------ tasks */
+.tasks{padding:26px 0 60px; display:flex; flex-direction:column; gap:14px}
+.task{
+  background:var(--surface); border:1px solid var(--line); border-radius:6px;
+  overflow:hidden; scroll-margin-top:64px;
+}
+.task > header{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
+  padding:13px 20px; border-bottom:1px solid var(--line-soft); background:var(--surface);
+}
+.num{
+  font-family:"JetBrains Mono",monospace; font-size:12.5px; font-weight:600;
+  color:var(--faint); font-variant-numeric:tabular-nums; letter-spacing:.02em;
+}
+.task h3{margin:0; font-size:17px; font-weight:600; letter-spacing:-.012em; flex:1 1 auto; min-width:180px}
+.chip{
+  font:600 10.5px/1 Archivo,sans-serif; letter-spacing:.08em; text-transform:uppercase;
+  padding:4px 8px; border-radius:3px; white-space:nowrap;
+}
+.chip.state{background:var(--state-soft); color:var(--state)}
+.chip.text{background:var(--green-soft); color:var(--green)}
+.chip.answer{background:var(--gold-soft); color:var(--gold)}
+.chip.cx{background:transparent; color:var(--faint); border:1px solid var(--line); font-weight:500}
+
+.ask{padding:15px 20px; border-bottom:1px dashed var(--line); background:var(--sunk)}
+.ask .lbl{
+  font:600 10.5px/1 Archivo,sans-serif; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--faint); display:block; margin-bottom:6px;
+}
+.ask p{margin:0; font-size:15.5px; line-height:1.5; max-width:76ch}
+.ask p[lang="am"]{font-size:15px; line-height:1.7}
+body[data-lang="en"] .ask p[lang="am"]{display:none}
+body[data-lang="am"] .ask p[lang="en"]{display:none}
+
+.how{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:0}
+@media (max-width:760px){.how{grid-template-columns:1fr}}
+.how > div{padding:15px 20px}
+.how > div + div{border-left:1px solid var(--line-soft)}
+@media (max-width:760px){.how > div + div{border-left:0; border-top:1px solid var(--line-soft)}}
+.how h4{
+  margin:0 0 8px; font:600 10.5px/1 Archivo,sans-serif; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--faint);
+}
+.how ol{margin:0; padding-left:18px; font-size:14.5px; line-height:1.6}
+.how ol li{margin-bottom:5px}
+.how ol li:last-child{margin-bottom:0}
+.how p{margin:0; font-size:14.5px; line-height:1.6}
+.start{
+  display:inline-block; margin-bottom:11px; font-family:"JetBrains Mono",monospace;
+  font-size:13px; padding:4px 9px; border-radius:4px;
+  background:var(--green-soft); color:var(--green); text-decoration:none;
+  border:1px solid transparent;
+}
+.start:hover{border-color:var(--green)}
+.check{margin-top:2px; font-size:14.5px; line-height:1.6; color:var(--ink)}
+.why{
+  margin:10px 0 0; font-size:13px; line-height:1.55; color:var(--muted);
+  font-style:italic; max-width:56ch;
+}
+code{
+  font-size:.9em; background:var(--sunk); padding:1px 5px; border-radius:3px;
+  border:1px solid var(--line-soft); white-space:nowrap;
+}
+.how code, .check code{background:var(--ground)}
+
+.done{display:flex; gap:14px; align-items:center; padding:11px 20px; border-top:1px solid var(--line-soft); background:var(--sunk)}
+.done span.lbl{font:600 10.5px/1 Archivo,sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--faint)}
+.done label{display:inline-flex; gap:6px; align-items:center; font-size:13.5px; color:var(--muted); cursor:pointer}
+.done input{accent-color:var(--green); width:15px; height:15px; cursor:pointer}
+.task.ok{border-color:var(--green)}
+
+footer.end{border-top:1px solid var(--line); padding:26px 0 46px; color:var(--muted); font-size:14px}
+footer.end p{margin:0 0 9px; max-width:70ch}
+footer.end strong{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+</head>
+<body>
+
+
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brandline">
+      <svg class="roundel" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#E8A33D"/>
+        <g fill="#0B5D51" transform="rotate(-18 20 20)">
+          <rect x="7.5" y="15.4" width="25" height="2.7" rx="1.35"/>
+          <rect x="7.5" y="20.4" width="18" height="2.7" rx="1.35"/>
+          <rect x="7.5" y="25.4" width="11" height="2.7" rx="1.35"/>
+        </g>
+      </svg>
+      <div>
+        <h1>Selam Airways Test Runbook</h1>
+        <p class="sub">Thirty tasks, run by hand against both language builds. Every
+           value below is checked against the seeded database.</p>
+      </div>
+    </div>
+    <div class="stamp">
+      English &middot; localhost:7770<br>
+      Amharic &middot; localhost:7771<br>
+      Site date &middot; 16 Mar 2026
+    </div>
+  </div>
+</header>
+
+<section class="setup">
+  <div class="wrap">
+    <div class="grid2">
+      <div class="panel">
+        <h2>Start both sites</h2>
+        <p>Two terminals, from inside the unzipped folder. They run at the same
+           time on separate databases.</p>
+<pre><span class="c"># terminal 1</span>
+source .venv/bin/activate
+python run.py --lang en --port 7770
+
+<span class="c"># terminal 2</span>
+source .venv/bin/activate
+python run.py --lang am --port 7771</pre>
+        <p>Then open <a href="http://localhost:7770">localhost:7770</a> for English
+           and <a href="http://localhost:7771">localhost:7771</a> for Amharic. The
+           two sites are identical in every respect but language &mdash; same pages,
+           same prices, same data.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Reset before every task</h2>
+        <p>Restores the database exactly, in about 7&nbsp;ms. Tasks that write
+           something &mdash; a booking, a claim, a seat &mdash; will not score
+           correctly if the previous run's state is still there.</p>
+<pre>curl -X POST http://localhost:7770/reset
+curl -X POST http://localhost:7771/reset</pre>
+        <p>Then check the result of a task:</p>
+<pre>python -m tasks.score --lang en --task 13 \
+  --final-url "/manage/WGYBNA/baggage/review" \
+  --answer "USD 120"</pre>
+        <p>It prints <span class="mono">PASS</span> or <span class="mono">FAIL</span>
+           with the reason. Pass <span class="mono">--final-url</span> for the page you
+           stopped on and <span class="mono">--answer</span> for what you would have
+           reported.</p>
+      </div>
+    </div>
+
+
+    <section class="startover">
+      <h2>Starting from a new zip</h2>
+      <p>Unzipping over a folder you have already run leaves the old databases
+         behind, and a database written by an older version produces a plain
+         error on whichever page reads a column it lacks &mdash; while the page
+         beside it works. Unpack somewhere fresh, or clear those files first.</p>
+<pre><span class="c"># stop both servers, then, from the folder:</span>
+rm -f data/selam_en.db data/selam_am.db
+python seed.py</pre>
+      <p><code>seed.py</code> must end with this line. Anything else means the
+         seed inputs differ from the ones these tasks were written against:</p>
+<pre>sha256        9567ad62dbb9b16e94dc6cb26d72b3f76374f44f3d1a7d57fe1317265428d55c</pre>
+      <p>The server checks it too: given a database it does not fit, it refuses
+         to start and names the missing column and the fix.</p>
+    </section>
+
+    <section class="recheck">
+      <h2>Fixed since the first run &mdash; worth rechecking</h2>
+      <p>Every one of these came from someone working through this page and
+         finding that the site would not do what the task asked.</p>
+      <ul>
+        <li><a class="n" href="#t2">02</a><span>There is no trip-type tab. One-way
+            is what you get by leaving <b>Returning</b> empty, and the home page
+            now says so &mdash; it did not before.</span></li>
+        <li><a class="n" href="#t10">10</a><span>The seat map showed nothing but
+            seat numbers. It now names which letters are <b>Window</b>,
+            <b>Aisle</b> and <b>Middle</b> on that aircraft.</span></li>
+        <li><a class="n" href="#t11">11</a><span>Rows with extra legroom carry a
+            badge, so the priced rows can be told apart.</span></li>
+        <li><a class="n" href="#t21">21</a><span>On-board Wi-Fi was in the site but
+            in no menu. It is in the footer now, under <b>On board</b>, with
+            dining and entertainment.</span></li>
+        <li><a class="n" href="#t22">22</a><span>In-flight dining is in the
+            booking's own action list and carries the reference through, so
+            there is nothing to retype.</span></li>
+        <li><a class="n" href="#t9">09</a><span>Not a bug &mdash; "Group booking,
+            contact the group desk" is the expected refusal. But the flight
+            beside it said <b>Departed</b> at nine in the morning; 90 flights had
+            the wrong status and now do not.</span></li>
+        <li><a class="n" href="#t30">30</a><span>Not a bug &mdash; the directory
+            shows each country's local line, and the 24-hour line is on the
+            country's own page. Click the country name.</span></li>
+      </ul>
+    </section>
+
+    <div class="creds">
+      <table>
+        <thead><tr>
+          <th>Booking</th><th>Surname, English site</th><th>Surname, Amharic site</th>
+          <th>Booked via</th><th class="m">Used by</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="m">WGYBNA</td><td>Assefa</td><td lang="am">አሰፋ</td><td>website</td><td class="m">5, 8, 11, 13, 15, 22</td></tr>
+          <tr><td class="m">W7JKUF</td><td>Terefe</td><td lang="am">ተረፈ</td><td>website</td><td class="m">6</td></tr>
+          <tr><td class="m">SPMVJC</td><td>Kebede</td><td lang="am">ከበደ</td><td>agent</td><td class="m">7</td></tr>
+          <tr><td class="m">MBX744</td><td>Zeleke</td><td lang="am">ዘለቀ</td><td>website</td><td class="m">9</td></tr>
+          <tr><td class="m">N9JKBF</td><td>Haile</td><td lang="am">ኃይሌ</td><td>website</td><td class="m">10</td></tr>
+          <tr><td class="m">SM00000001</td><td>Wolde</td><td lang="am">ወልደ</td><td>&mdash;</td><td class="m">19</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>There are no passwords anywhere.</strong> A booking opens
+       with its reference plus the surname; a Selam&nbsp;Miles account opens with the
+       membership number plus the surname. On the Amharic site the surname must be
+       typed in Ge&#x2BC;ez &mdash; the same person, the same booking, the other script.
+       Everything else stays Latin in both builds: booking references, flight numbers,
+       airport codes, dates and prices.</p>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="wrap">
+    <h2>The thirty tasks</h2>
+    <div class="seg" role="group" aria-label="Question language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="am" aria-pressed="false">አማርኛ</button>
+    </div>
+    <span class="spacer"></span>
+    <span class="tally">EN <b id="tally-en">0</b>/30 &nbsp;&middot;&nbsp; AM <b id="tally-am">0</b>/30</span>
+    <button type="button" class="linkbtn" id="clear">Clear ticks</button>
+  </div>
+</div>
+
+<main class="tasks wrap">
+<article class="task" id="t1" data-task="1">
+  <header>
+    <span class="num">01</span>
+    <h3>Flight booking</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Find round-trip flights from Addis Ababa (ADD) to Nairobi (NBO) departing 2026-04-12 and returning 2026-04-19 for one adult. Report the flight numbers available on the outbound date and the lowest total price shown.</p>
+    <p lang="am">ለአንድ አዋቂ በ2026-04-12 ተነስቶ በ2026-04-19 የሚመለስ ከአዲስ አበባ (ADD) ወደ ናይሮቢ (NBO) የደርሶ መልስ በረራ ይፈልጉ። በመሄጃው ቀን ያሉትን የበረራ ቁጥሮችና የሚታየውን ዝቅተኛ ጠቅላላ ዋጋ ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/">localhost:7770/</a>
+      <ol><li>On the home page, leave the <b>Round trip</b> tab selected.</li><li>From <code>ADD</code>, To <code>NBO</code>, Departing <code>2026-04-12</code>, Returning <code>2026-04-19</code>, Adults <code>1</code>.</li><li>Search. Read the outbound grid: every flight number, and the lowest Total column.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>SM222</code> and <code>USD 112</code>.</p>
+      <p class="why">concrete route and dates; the outbound date has service in both directions</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="1"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="1"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t2" data-task="2">
+  <header>
+    <span class="num">02</span>
+    <h3>Flight booking</h3>
+    <span class="chip cx">High</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Book a one-way flight from Addis Ababa (ADD) to Dubai (DXB) on 2026-04-20 for one adult, enter passenger details, and stop at the final payment-review page without paying.</p>
+    <p lang="am">በ2026-04-20 ለአንድ አዋቂ ከአዲስ አበባ (ADD) ወደ ዱባይ (DXB) የአንድ አቅጣጫ በረራ ይያዙ፤ የተሳፋሪውን መረጃ ያስገቡ፤ ሳይከፍሉ በመጨረሻው የክፍያ ማጠቃለያ ገጽ ላይ ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/">localhost:7770/</a>
+      <ol><li>From <code>ADD</code>, To <code>DXB</code>, Departing <code>2026-04-20</code>, Adults <code>1</code>. <b>Leave Returning empty</b> — that is what makes it one-way; there is no trip-type tab.</li><li>Search, then <b>Select</b> any fare on the results grid.</li><li>Fill the passenger form: any first and last name, any email, any phone.</li><li>Continue to the review page. <b>Do not press Pay.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">URL ends <code>/book/review</code>, a draft booking exists, nothing paid.</p>
+      <p class="why">payment boundary: a draft booking must exist and nothing may be paid</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="2"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="2"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t3" data-task="3">
+  <header>
+    <span class="num">03</span>
+    <h3>Flight status</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Check the current status of flight SM107 on 2026-03-16. Report its status, scheduled departure and arrival times, and both terminals.</p>
+    <p lang="am">የበረራ SM107ን በ2026-03-16 ወቅታዊ ሁኔታ ያረጋግጡ። ሁኔታውን፣ የታቀዱ የመነሻና የመድረሻ ሰዓቶችን እንዲሁም ሁለቱንም ተርሚናሎች ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/flight-status">localhost:7770/flight-status</a>
+      <ol><li>Flight number <code>SM107</code>, Date <code>2026-03-16</code>.</li><li>Read the status, both times and both terminals.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>Delayed</code> (<span lang=am>የዘገየ</span>), <code>23:20</code>, <code>03:05</code> and the terminal numbers.</p>
+      <p class="why">a delayed flight, so &#x27;scheduled&#x27; is not a free correct answer</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="3"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="3"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t4" data-task="4">
+  <header>
+    <span class="num">04</span>
+    <h3>Flight schedule</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip answer">Answer only</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Find which days of the week flights operate from ADD to ABJ. List every operating day.</p>
+    <p lang="am">ከADD ወደ ABJ በረራዎች በየትኞቹ የሳምንቱ ቀናት እንደሚሠሩ ያግኙ። ሁሉንም የሥራ ቀናት ይዘርዝሩ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/schedules">localhost:7770/schedules</a>
+      <ol><li>From <code>ADD</code>, To <code>ABJ</code>. Show timetable.</li><li>The table lists all seven days with a Yes/No column — read which say Yes.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check"><b>Scored on what you type as the answer</b>, not the page. Must name Monday and Friday.</p>
+      <p class="why">route operates 2 of 7 days, so &#x27;daily&#x27; is wrong; scored on the reported answer, because the page lists every day either way</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="4"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="4"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t5" data-task="5">
+  <header>
+    <span class="num">05</span>
+    <h3>Manage booking</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Open the booking with reference WGYBNA and last name Assefa. Report the flight numbers on the itinerary and the booking status.</p>
+    <p lang="am">ማጣቀሻው WGYBNA እና የአያት ስሙ አሰፋ የሆነውን የቦታ ማስያዣ ይክፈቱ። በጉዞ ዝርዝሩ ላይ ያሉትን የበረራ ቁጥሮችና የቦታ ማስያዣውን ሁኔታ ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Booking reference <code>WGYBNA</code>, Last name <code>Assefa</code> (<span lang=am>አሰፋ</span>).</li><li>Read the itinerary: both flight numbers and the booking status.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>SM111</code> and <code>WGYBNA</code>.</p>
+      <p class="why">round-trip, so a single flight number is an incomplete answer</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="5"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="5"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t6" data-task="6">
+  <header>
+    <span class="num">06</span>
+    <h3>Flight change</h3>
+    <span class="chip cx">High</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Booking W7JKUF (last name Terefe) needs its outbound flight moved to a later date. Select an available alternative, show the fare difference and any change fee, and stop before confirming payment.</p>
+    <p lang="am">የቦታ ማስያዣ W7JKUF (የአያት ስም ተረፈ) የመሄጃ በረራው ወደ ሌላ ቀን መዛወር አለበት። ያለ አማራጭ ይምረጡ፤ የታሪፍ ልዩነቱንና ካለ የለውጥ ክፍያውን ያሳዩ፤ ክፍያውን ከማረጋገጥዎ በፊት ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>W7JKUF</code> / <code>Terefe</code> (<span lang=am>ተረፈ</span>).</li><li>Open <b>Change flight</b> on the outbound segment.</li><li>Pick a later date, choose one of the alternative flights offered.</li><li>Confirm to reach the change review. <b>Stop there.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">URL ends <code>/change/review</code>, a pending change request exists, nothing paid.</p>
+      <p class="why">fare ES is changeable and the flight is far enough out</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="6"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="6"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t7" data-task="7">
+  <header>
+    <span class="num">07</span>
+    <h3>Refund request</h3>
+    <span class="chip cx">High</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Check whether booking SPMVJC (last name Kebede) can be refunded online. If it can, complete the request up to the final submission step. If it cannot, report the reason given.</p>
+    <p lang="am">የቦታ ማስያዣ SPMVJC (የአያት ስም ከበደ) በመስመር ላይ ተመላሽ ሊደረግ እንደሚችል ያረጋግጡ። ከተቻለ እስከ መጨረሻው የማስገቢያ ደረጃ ድረስ ጥያቄውን ይሙሉ። ካልተቻለ የተሰጠውን ምክንያት ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>SPMVJC</code> / <code>Kebede</code> (<span lang=am>ከበደ</span>).</li><li>Open <b>Request a refund</b>.</li><li>Read what the page says. It refuses — report the reason it gives.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">The fare <i>is</i> refundable; the booking was made through an agent, so online refund is blocked. No refund row may be created.</p>
+      <p class="why">the fare IS refundable, so the agent-channel rule is what decides -- an agent that only reads the fare rules gets this wrong</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="7"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="7"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t8" data-task="8">
+  <header>
+    <span class="num">08</span>
+    <h3>Online check-in</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Check in for booking WGYBNA (last name Assefa) and download the boarding pass. Report the seat and the gate shown on it.</p>
+    <p lang="am">ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ቼክ-ኢን ያድርጉ እና የመሳፈሪያ ፈቃዱን ያውርዱ። በላዩ ላይ የሚታየውን መቀመጫና በር ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/checkin">localhost:7770/checkin</a>
+      <ol><li>Booking reference <code>WGYBNA</code>, Last name <code>Assefa</code> (<span lang=am>አሰፋ</span>).</li><li>Select the segment offered and check in.</li><li>Download the boarding pass PDF. Read the seat and gate off it.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">The segment is marked checked in and a boarding pass row exists.</p>
+      <p class="why">check-in window is open and no refusal code applies</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="8"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="8"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t9" data-task="9">
+  <header>
+    <span class="num">09</span>
+    <h3>Online check-in</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Determine whether online check-in is available for booking MBX744 (last name Zeleke). If it is not, explain the reason the website gives.</p>
+    <p lang="am">ለቦታ ማስያዣ MBX744 (የአያት ስም ዘለቀ) የመስመር ላይ ቼክ-ኢን መኖሩን ይወስኑ። ካልተቻለ ድረ ገጹ የሚሰጠውን ምክንያት ያብራሩ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/checkin">localhost:7770/checkin</a>
+      <ol><li>Booking reference <code>MBX744</code>, Last name <code>Zeleke</code> (<span lang=am>ዘለቀ</span>).</li><li>The site refuses. Report the reason shown.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>Group booking</code> (<span lang=am>የቡድን ቦታ ማስያዣ</span>).</p>
+      <p class="why">the flight is inside the check-in window, so the refusal is the group rule rather than a timing rule</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="9"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="9"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t10" data-task="10">
+  <header>
+    <span class="num">10</span>
+    <h3>Seat selection</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Open booking N9JKBF (last name Haile) and select an available aisle seat for the outbound flight. Report the seat number and its price, and stop before payment.</p>
+    <p lang="am">የቦታ ማስያዣ N9JKBF (የአያት ስም ኃይሌ) ይክፈቱ እና ለመሄጃው በረራ ያለ የመተላለፊያ መቀመጫ ይምረጡ። የመቀመጫውን ቁጥርና ዋጋ ያቅርቡ፤ ከክፍያ በፊት ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>N9JKBF</code> / <code>Haile</code> (<span lang=am>ኃይሌ</span>).</li><li>Open <b>Seat selection</b> for the outbound flight.</li><li>Above the map, <b>Window / Aisle / Middle</b> name which seat letters are which on this aircraft. Click any free seat in an aisle column.</li><li>Continue to the seat review. <b>Stop before paying.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">The seat assigned must actually be an aisle seat. A window seat fails.</p>
+      <p class="why">booking starts with no seats, so the validator can assert one was added</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="10"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="10"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t11" data-task="11">
+  <header>
+    <span class="num">11</span>
+    <h3>Preferred seat</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">For booking WGYBNA (last name Assefa), find the extra-legroom seats on the outbound flight and report their price. Do not purchase one.</p>
+    <p lang="am">ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) በመሄጃው በረራ ላይ ተጨማሪ የእግር ቦታ ያላቸውን መቀመጫዎች አግኝተው ዋጋቸውን ያቅርቡ። አይግዙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>WGYBNA</code> / <code>Assefa</code> (<span lang=am>አሰፋ</span>).</li><li>Open <b>Seat selection</b>. Rows with extra legroom carry an <b>Extra legroom</b> badge.</li><li>Report their price. Buy nothing.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>USD 45</code>.</p>
+      <p class="why">extra-legroom seats cost more than standard ones, so the number is specific</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="11"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="11"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t12" data-task="12">
+  <header>
+    <span class="num">12</span>
+    <h3>Baggage allowance</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Report the free checked-baggage and cabin-baggage allowance for an adult travelling in economy from Addis Ababa (ADD) to New York (JFK).</p>
+    <p lang="am">ከአዲስ አበባ (ADD) ወደ ኒው ዮርክ (JFK) በኢኮኖሚ ለሚጓዝ አዋቂ የነጻ የተመዘገበ ሻንጣና የእጅ ሻንጣ ፈቃድን ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/baggage/allowance">localhost:7770/baggage/allowance</a>
+      <ol><li>From <code>ADD</code>, To <code>JFK</code>, Cabin <b>Selam Economy</b>, Passenger <b>Adult</b>.</li><li>Show allowance. Read checked pieces, kg per piece, and cabin allowance.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>2</code>, <code>23</code> and <code>7</code>.</p>
+      <p class="why">a long-haul route, whose allowance differs from the domestic and African tables shown on neighbouring pages</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="12"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="12"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t13" data-task="13">
+  <header>
+    <span class="num">13</span>
+    <h3>Extra baggage</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Add 23 kg of extra checked baggage to booking WGYBNA (last name Assefa) for the outbound flight. Report the total charge and stop before completing payment.</p>
+    <p lang="am">ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ለመሄጃው በረራ 23 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ይጨምሩ። ጠቅላላ ክፍያውን ያቅርቡ፤ ክፍያውን ከማጠናቀቅዎ በፊት ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>WGYBNA</code> / <code>Assefa</code> (<span lang=am>አሰፋ</span>).</li><li>Open <b>Extra baggage</b> for the outbound segment.</li><li>Enter <code>23</code> kg and continue to the review. <b>Stop before paying.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">23 kg pending, priced at the route's own regional rate. 20 kg fails; so does stopping short of review.</p>
+      <p class="why">the per-kg rate is regional, so the total depends on reading the right table</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="13"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="13"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t14" data-task="14">
+  <header>
+    <span class="num">14</span>
+    <h3>Special baggage</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Find the rules and any charges for carrying a bicycle as checked baggage from Addis Ababa to Nairobi. Report how it must be packed and whether advance notice is required.</p>
+    <p lang="am">ብስክሌትን ከአዲስ አበባ ወደ ናይሮቢ እንደ የተመዘገበ ሻንጣ ለመውሰድ ያሉትን ደንቦችና ክፍያዎች ያግኙ። እንዴት መታሸግ እንዳለበትና ቅድሚያ ማሳወቅ የሚያስፈልግ መሆኑን ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/baggage/special">localhost:7770/baggage/special</a>
+      <ol><li>Find the bicycle row in the items table, and read the packing rules in the prose above it.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>handlebars</code>, <code>pedals</code> and <code>48</code>.</p>
+      <p class="why">the packing detail is only on the special-baggage page, not the allowance page</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="14"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="14"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t15" data-task="15">
+  <header>
+    <span class="num">15</span>
+    <h3>Highland Class upgrade</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Check whether the outbound flight on booking WGYBNA (last name Assefa) can be upgraded to Highland Class. Report the outcome and, if an upgrade is not possible, the reason.</p>
+    <p lang="am">በቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ ያለው የመሄጃ በረራ ወደ ሃይላንድ ክላስ ሊሻሻል እንደሚችል ያረጋግጡ። ውጤቱን፣ ማሻሻል ካልተቻለም ምክንያቱን ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>WGYBNA</code> / <code>Assefa</code> (<span lang=am>አሰፋ</span>).</li><li>Open <b>Upgrade to Highland Class</b> on the outbound flight.</li><li>Report the outcome and, if refused, the reason.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>not eligible</code> (<span lang=am>ብቁ አይደለም</span>). The fare class excludes upgrades.</p>
+      <p class="why">fare EP is upgrade-excluded, so the answer is a refusal that must be read rather than a price that could be guessed</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="15"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="15"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t16" data-task="16">
+  <header>
+    <span class="num">16</span>
+    <h3>Lounge access</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Buy lounge access at Addis Ababa Bole International Airport for one passenger with no guests. Select Highland Lounge, verify the price, and stop at the payment page without paying.</p>
+    <p lang="am">በአዲስ አበባ ቦሌ ዓለም አቀፍ አየር ማረፊያ ለአንድ ተሳፋሪ ያለ እንግዳ የላውንጅ መግቢያ ይግዙ። ሃይላንድ ላውንጅን ይምረጡ፣ ዋጋውን ያረጋግጡ፣ ሳይከፍሉ በክፍያ ገጹ ላይ ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/lounges/purchase">localhost:7770/lounges/purchase</a>
+      <ol><li>Choose <b>Highland Lounge</b> — the one at Terminal 1, not the Terminal 2 lounge.</li><li>Passenger name: anything. Guests: <code>0</code>.</li><li>Continue to the payment page. <b>Do not pay.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">A pending purchase for lounge 1 at USD 55. Any other Addis lounge fails.</p>
+      <p class="why">several Addis lounges sell walk-in access at different prices, so the amount depends on choosing the named one</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="16"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="16"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t17" data-task="17">
+  <header>
+    <span class="num">17</span>
+    <h3>Airport lounges</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">A Selam Miles Gold member is flying in economy from Terminal 2 at Addis Ababa. Identify which lounge there they may enter without paying, and report its opening hours and location.</p>
+    <p lang="am">የሰላም ማይልስ ጎልድ አባል በኢኮኖሚ ከአዲስ አበባ ተርሚናል 2 እየተጓዘ ነው። እዚያ ሳይከፍል መግባት የሚችለውን ላውንጅ ይለዩ፤ የሥራ ሰዓቱንና ቦታውን ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/lounges/eligibility">localhost:7770/lounges/eligibility</a>
+      <ol><li>Airport <code>ADD</code>, Cabin <b>Selam Economy</b>, Tier <b>Gold</b>. Check access.</li><li>Find the Terminal 2 lounge marked free with your tier, then open it for its hours and location.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>Highland Lounge Terminal 2</code> and <code>24 hours</code>.</p>
+      <p class="why">one of 3 lounges at the same terminal, only some of which admit a Gold member</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="17"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="17"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t18" data-task="18">
+  <header>
+    <span class="num">18</span>
+    <h3>Selam Miles</h3>
+    <span class="chip cx">High</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Enrol a new Selam Miles member with first name Selamawit, last name Bekele, email selamawit.bekele@example.com and country ET. Report the membership number you are given.</p>
+    <p lang="am">የመጀመሪያ ስም ሰላማዊት፣ የአያት ስም በቀለ፣ ኢሜይል selamawit.bekele@example.com እና አገር ET ያለው አዲስ የሰላም ማይልስ አባል ይመዝግቡ። የተሰጠዎትን የአባልነት ቁጥር ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/miles/join">localhost:7770/miles/join</a>
+      <ol><li>First name <code>Selamawit</code> (<span lang=am>ሰላማዊት</span>), Last name <code>Bekele</code> (<span lang=am>በቀለ</span>).</li><li>Email <code>selamawit.bekele@example.com</code>, Country <code>ET</code>, any date of birth.</li><li>Submit and read the membership number returned.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Must create member <code>SM00000016</code> with that exact email. The number is deterministic after a reset.</p>
+      <p class="why">the sequence is deterministic from the seed high-water mark, so SM00000016 is predictable after a reset</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="18"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="18"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t19" data-task="19">
+  <header>
+    <span class="num">19</span>
+    <h3>Selam Miles</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Member SM00000001 did not receive miles for flight SM246 on 2026-03-15, ticket 0712345678901. Submit a missing-miles claim and report the claim reference number.</p>
+    <p lang="am">አባል SM00000001 በ2026-03-15 ለበረራ SM246፣ ትኬት 0712345678901 ማይሎችን አላገኘም። ያልተመዘገቡ ማይሎች ጥያቄ ያስገቡ እና የጥያቄውን ማጣቀሻ ቁጥር ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/miles/claim">localhost:7770/miles/claim</a>
+      <ol><li>Membership number <code>SM00000001</code>, Ticket <code>0712345678901</code>.</li><li>Flight <code>SM246</code>, Flight date <code>2026-03-15</code>.</li><li>Submit and read the claim reference.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">A claim for SM246 must exist. Reference is <code>MC-100001</code> after a reset.</p>
+      <p class="why">the flight is in the past, which the form requires -- a future date is rejected</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="19"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="19"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t20" data-task="20">
+  <header>
+    <span class="num">20</span>
+    <h3>Selam Miles award ticket</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Search for award seats bookable with miles from ADD to CAI on 2026-03-19 in economy. Report the miles required and the taxes payable.</p>
+    <p lang="am">በ2026-03-19 ከADD ወደ CAI በኢኮኖሚ በማይል ሊያዙ የሚችሉ የሽልማት መቀመጫዎችን ይፈልጉ። የሚያስፈልጉትን ማይሎችና የሚከፈለውን ግብር ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/miles/award-search">localhost:7770/miles/award-search</a>
+      <ol><li>From <code>ADD</code>, To <code>CAI</code>, Departing <code>2026-03-19</code>, Cabin <b>Selam Economy</b>.</li><li>Read the miles required and the taxes.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>25000</code> and <code>USD 60</code>.</p>
+      <p class="why">a date with seats remaining; sold-out rows are not listed, so the figure is real</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="20"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="20"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t21" data-task="21">
+  <header>
+    <span class="num">21</span>
+    <h3>On-board Wi-Fi</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Flight SM106 on 2026-03-19 has Wi-Fi. Compare the available internet packages, select the largest data allowance, and stop before payment.</p>
+    <p lang="am">በ2026-03-19 በረራ SM106 ዋይ-ፋይ አለው። ያሉትን የኢንተርኔት ፓኬጆች ያወዳድሩ፤ ትልቁን የዳታ መጠን ይምረጡ፤ ከክፍያ በፊት ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/onboard/wifi">localhost:7770/onboard/wifi</a>
+      <ol><li>Flight <code>SM106</code>, Date <code>2026-03-19</code>.</li><li>Compare the packages, then select the one with the <b>largest</b> data allowance.</li><li>Continue to review. <b>Stop before paying.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">The pending purchase must be the largest package on that flight. The smallest fails.</p>
+      <p class="why">only some aircraft are equipped, so the flight must be one that is</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="21"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="21"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t22" data-task="22">
+  <header>
+    <span class="num">22</span>
+    <h3>In-flight meals</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Check the meal options for the outbound flight on booking WGYBNA (last name Assefa), then request a gluten-free meal for the passenger.</p>
+    <p lang="am">በቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ ላለው የመሄጃ በረራ የምግብ አማራጮችን ያረጋግጡ፤ ከዚያም ለተሳፋሪው ግሉተን-አልባ ምግብ ይጠይቁ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/manage">localhost:7770/manage</a>
+      <ol><li>Retrieve <code>WGYBNA</code> / <code>Assefa</code> (<span lang=am>አሰፋ</span>).</li><li>In the booking's action list, open <b>In-flight dining</b> — it carries the booking through, so there is nothing to retype.</li><li>From the special-meal list pick the gluten-free code, <code>GFML</code>, and request it.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">A meal request with code GFML. Any of the other thirteen codes fails.</p>
+      <p class="why">GFML is one of fourteen codes, so the right one must be looked up</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="22"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="22"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t23" data-task="23">
+  <header>
+    <span class="num">23</span>
+    <h3>Allergy policy</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">A passenger with a severe peanut allergy is travelling next week. Find the airline&#x27;s allergy guidance and summarise what they must do before travel and what the airline will and will not guarantee on board.</p>
+    <p lang="am">ከባድ የለውዝ አለርጂ ያለው ተሳፋሪ በሚቀጥለው ሳምንት ይጓዛል። የአየር መንገዱን የአለርጂ መመሪያ ያግኙ፤ ከጉዞ በፊት ማድረግ ያለበትንና አየር መንገዱ በበረራ ላይ የሚያረጋግጠውንና የማያረጋግጠውን ያጠቃልሉ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/help/allergies">localhost:7770/help/allergies</a>
+      <ol><li>Read the page and summarise: what to do before travel, and what the airline will and will not guarantee.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>48 hours</code>, <code>24 hours</code> and <code>allergen-free</code>.</p>
+      <p class="why">the page states two different cut-offs and an explicit non-guarantee; a summary that omits the non-guarantee is wrong. The strings were bare numerals and &#x27;cannot&#x27; until a near-miss run showed the special-meals page satisfying all three</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="23"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="23"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t24" data-task="24">
+  <header>
+    <span class="num">24</span>
+    <h3>Addis Ababa stopover</h3>
+    <span class="chip cx">High</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">A passenger is connecting from Nairobi (NBO) to London (LHR) through Addis Ababa on 2026-04-12, on a single booking. Determine whether they qualify for the stopover programme and list the services available.</p>
+    <p lang="am">ተሳፋሪ በ2026-04-12 በአንድ የቦታ ማስያዣ ከናይሮቢ (NBO) ወደ ለንደን (LHR) በአዲስ አበባ በኩል ይሸጋገራል። ለማቆያ መርሐ ግብሩ ብቁ መሆኑን ይወስኑ እና ያሉትን አገልግሎቶች ይዘርዝሩ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/stopover">localhost:7770/stopover</a>
+      <ol><li>From <code>NBO</code>, To <code>LHR</code>, Departing <code>2026-04-12</code>. Check my connection.</li><li>Read whether it qualifies and list the services offered.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">The eligible connection's flight numbers must be on the page — the landing page alone fails. Layover is 21h, inside the 8–72h window.</p>
+      <p class="why">the connection is 21 hours, inside the 8-72 hour window, so eligibility turns on reading the layover rather than assuming</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="24"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="24"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t25" data-task="25">
+  <header>
+    <span class="num">25</span>
+    <h3>Terminal hotel</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Check room availability at the Zena Transit Hotel inside Addis Ababa airport for a layover on 2026-04-12 and proceed to the booking review page without paying.</p>
+    <p lang="am">በ2026-04-12 ለሚኖር የመሸጋገሪያ ጊዜ በአዲስ አበባ አየር ማረፊያ ውስጥ ባለው ዜና ትራንዚት ሆቴል የክፍል መኖርን ያረጋግጡ እና ሳይከፍሉ እስከ ቦታ ማስያዣ ማጠቃለያ ገጽ ይቀጥሉ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/partners">localhost:7770/partners</a>
+      <ol><li>Open <b>Zena Transit Hotel</b> from the partner hub.</li><li>Arrival <code>2026-04-12</code>, hours <code>12</code>, any guest name, pick a room.</li><li>Continue to the review. <b>Do not pay.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">A pending hotel booking on the partner site, nothing paid.</p>
+      <p class="why">the hotel is a partner site with its own layout; leaving the airline site is part of what is measured</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="25"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="25"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t26" data-task="26">
+  <header>
+    <span class="num">26</span>
+    <h3>National eVisa Service</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">From the airline website, open the National eVisa Service, select the visa type for a seven-day tourist visit, and report the documents required before applying.</p>
+    <p lang="am">ከአየር መንገዱ ድረ ገጽ ብሔራዊ ኢ-ቪዛ አገልግሎትን ይክፈቱ፤ ለሰባት ቀን የቱሪስት ጉብኝት የቪዛ ዓይነቱን ይምረጡ፤ ከማመልከትዎ በፊት የሚያስፈልጉትን ሰነዶች ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/partners">localhost:7770/partners</a>
+      <ol><li>Open <b>National eVisa Service</b> from the partner hub.</li><li>Pick the visa type that covers a seven-day tourist visit.</li><li>Report the documents it lists as required.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Final URL must be on the eVisa partner site, with the visa type's documents shown.</p>
+      <p class="why">requires navigating off the airline site, which the URL check verifies</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="26"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="26"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t27" data-task="27">
+  <header>
+    <span class="num">27</span>
+    <h3>EuroRail Connect</h3>
+    <span class="chip cx">High</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Find a combined flight-and-rail connection from Frankfurt (FRA) onward to Cologne by train, and report how it can be booked.</p>
+    <p lang="am">ከፍራንክፈርት (FRA) ወደ ኮሎኝ በባቡር የሚቀጥል የበረራና የባቡር ጥምር ግንኙነት ያግኙ፤ እንዴት ቦታ ማስያዝ እንደሚቻልም ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/partners">localhost:7770/partners</a>
+      <ol><li>Open <b>EuroRail Connect</b> from the partner hub.</li><li>Arrival airport <code>FRA</code>. Find connections.</li><li>Read the Cologne row and its How-to-book note.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Final URL on the rail partner site, with the Cologne leg's booking note displayed.</p>
+      <p class="why">cross-service: the flight arrives, the rail leg is a partner product</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="27"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="27"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t28" data-task="28">
+  <header>
+    <span class="num">28</span>
+    <h3>Car rental / airport transfer</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Reserve an airport transfer with RiftDrive for two passengers arriving at Nairobi (NBO) on 2026-04-12, and proceed to the booking review page without paying.</p>
+    <p lang="am">በ2026-04-12 ናይሮቢ (NBO) ለሚደርሱ ሁለት ተሳፋሪዎች በሪፍት ድራይቭ የአየር ማረፊያ ትራንስፖርት ያስይዙ፤ ሳይከፍሉ እስከ ቦታ ማስያዣ ማጠቃለያ ገጽ ይቀጥሉ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/partners">localhost:7770/partners</a>
+      <ol><li>Open <b>RiftDrive</b> from the partner hub.</li><li>Airport <code>NBO</code> — not ADD. Passengers <code>2</code>, Pickup <code>2026-04-12</code>.</li><li>Reserve a vehicle and continue to the review. <b>Do not pay.</b></li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">A pending transfer at NBO. Reserving at ADD fails.</p>
+      <p class="why">partner booking flow that still stops at a review page</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="28"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="28"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t29" data-task="29">
+  <header>
+    <span class="num">29</span>
+    <h3>Travel insurance</h3>
+    <span class="chip cx">Medium</span>
+    <span class="chip state">State check</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">Review the SafeVoyage travel insurance option for a round trip to Europe, report the coverage limits and the price, and stop before purchase.</p>
+    <p lang="am">ወደ አውሮፓ ለሚደረግ የደርሶ መልስ ጉዞ የሴፍቮያጅ የጉዞ መድን አማራጭን ይገምግሙ፤ የሽፋን ገደቦችንና ዋጋውን ያቅርቡ፤ ከግዢ በፊት ያቁሙ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/partners">localhost:7770/partners</a>
+      <ol><li>Open <b>SafeVoyage Travel Cover</b> from the partner hub.</li><li>Enter a fare of <code>900</code> to price the cover.</li><li>Report the coverage limits and the price. Buy nothing.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">The products must be priced against a fare — an unpriced page fails.</p>
+      <p class="why">coverage comparison, priced as a percentage of the fare</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="29"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="29"> Amharic</label>
+  </div>
+</article>
+<article class="task" id="t30" data-task="30">
+  <header>
+    <span class="num">30</span>
+    <h3>Help and contact</h3>
+    <span class="chip cx">Low</span>
+    <span class="chip text">Text match</span>
+  </header>
+  <div class="ask">
+    <span class="lbl">The question put to the agent</span>
+    <p lang="en">A passenger in Austria has an urgent problem with a booking outside local office hours. Find the contact options for that country and report the number to call and the local office hours.</p>
+    <p lang="am">በኦስትሪያ ያለ ተሳፋሪ ከአካባቢው ቢሮ የሥራ ሰዓት ውጭ አስቸኳይ የቦታ ማስያዣ ችግር አለበት። ለዚያ አገር ያሉትን የመገናኛ አማራጮች አግኝተው የሚደወልበትን ቁጥርና የአካባቢውን የቢሮ ሰዓት ያቅርቡ።</p>
+  </div>
+  <div class="how">
+    <div>
+      <h4>Do this</h4>
+      <a class="start" href="http://localhost:7770/help/contact">localhost:7770/help/contact</a>
+      <ol><li>Find <b>Austria</b> in the directory and open its office page.</li><li>The local office closes at night, so report the 24-hour line, not the Vienna number.</li></ol>
+    </div>
+    <div>
+      <h4>It passes when</h4>
+      <p class="check">Answer must contain <code>+251 11 517 8888</code> and <code>Daily 07:00-20:00</code>. Quoting only the Vienna number fails.</p>
+      <p class="why">the office has no ticket desk and closes at night, so the 24-hour line is the only correct answer -- quoting the local number fails</p>
+    </div>
+  </div>
+  <div class="done">
+    <span class="lbl">Ran it</span>
+    <label><input type="checkbox" data-lang="en" data-task="30"> English</label>
+    <label><input type="checkbox" data-lang="am" data-task="30"> Amharic</label>
+  </div>
+</article>
+</main>
+
+<footer class="end">
+  <div class="wrap">
+    <p><strong>If a task will not complete, that is a finding, not a mistake on your
+       part.</strong> Every one of these was solved end to end through the site in both
+       languages before this page was written, and each was also run <em>wrongly</em> on
+       purpose to confirm the scorer rejects it. Note which task, which language, and
+       what the page did.</p>
+    <p>Reset between tasks. Several of them write to the database &mdash; task&nbsp;18
+       expects to create membership <span class="mono">SM00000016</span>, task&nbsp;19
+       expects reference <span class="mono">MC-100001</span> &mdash; and those numbers
+       are only right when the run starts from seed state.</p>
+    <p>The ticks above are stored in this browser only. They are for your own progress
+       through sixty runs; nothing is sent anywhere.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var body = document.body;
+  body.dataset.lang = "en";
+
+  document.querySelectorAll(".seg button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var lang = btn.dataset.lang;
+      body.dataset.lang = lang;
+      document.querySelectorAll(".seg button").forEach(function(b){
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      var port = lang === "am" ? "7771" : "7770";
+      document.querySelectorAll("a.start").forEach(function(a){
+        a.setAttribute("href", a.getAttribute("href").replace(/:(7770|7771)/, ":" + port));
+        a.textContent = a.textContent.replace(/:(7770|7771)/, ":" + port);
+      });
+    });
+  });
+
+  var KEY = "selam-runbook-progress";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+
+  function paint(){
+    var counts = {en: 0, am: 0};
+    document.querySelectorAll(".done input").forEach(function(box){
+      box.checked = !!state[box.dataset.lang + ":" + box.dataset.task];
+      if (box.checked) counts[box.dataset.lang]++;
+    });
+    document.querySelectorAll(".task").forEach(function(task){
+      var n = task.dataset.task;
+      task.classList.toggle("ok", !!state["en:" + n] && !!state["am:" + n]);
+    });
+    document.getElementById("tally-en").textContent = counts.en;
+    document.getElementById("tally-am").textContent = counts.am;
+  }
+
+  document.querySelectorAll(".done input").forEach(function(box){
+    box.addEventListener("change", function(){
+      state[box.dataset.lang + ":" + box.dataset.task] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      paint();
+    });
+  });
+
+  document.getElementById("clear").addEventListener("click", function(){
+    state = {};
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    paint();
+  });
+
+  paint();
+})();
+</script>
+</body>
+</html>

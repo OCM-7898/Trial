@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ S.rules_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.rules_title }}</h1>
+<div class="card">
+<ol style="list-style:none;padding-left:0">
+  {% for r in rules %}<li>{{ loop.index | v2_num }}. {{ r }}</li>{% endfor %}
+</ol>
+</div>
+{% endblock %}

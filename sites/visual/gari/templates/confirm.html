@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ S.ad_title.format(id=a.id) }}{% endblock %}
+{% block content %}
+<h1>{{ S.ad_title.format(id=(a.id | v2_num)) }} — {{ a.year | v2_num }} {{ a.brand }} {{ a.model }}</h1>
+<div class="error">{{ q }}</div>
+<form method="post" action="{{ action }}">
+  <button type="submit">{{ S.confirm }}</button>
+</form>
+<p><a href="/account/ads/{{ a.id }}">{{ S.go_back }}</a></p>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}{{ car_name(c) }}{% endblock %}
+{% block content %}
+<h1>{{ car_name(c) }}
+  {% if c.status == 'sold' %}<span class="badge-sold" style="position:static">{{ S.sold_badge }}</span>{% endif %}
+</h1>
+<p class="price" style="font-size:22px;font-weight:700;color:var(--brand-dark)">{{ c.price | money }}</p>
+{% if c.prev_price %}<p class="meta">{{ S.reduced_from }} {{ c.prev_price | money }}</p>{% endif %}
+
+<div class="gallery">
+  {% for k in range(1, c.n_images + 1) %}
+  <img{% if loop.first %} class="hero"{% endif %} src="/static/cars/{{ c.id }}/{{ k }}.jpg" alt="{{ S.photo_alt.format(name=car_name(c), k=k) }}">
+  {% endfor %}
+</div>
+
+{% if offer_error %}<div class="error">{{ offer_error }}</div>{% endif %}
+
+<h2>{{ S.specs }}</h2>
+<table class="spec">
+  <tr><th>{{ S.spec_price }}</th><td>{{ c.price | money }}</td></tr>
+  <tr><th>{{ S.spec_year }}</th><td>{{ c.year | v2_num }}</td></tr>
+  <tr><th>{{ S.spec_mileage }}</th><td>{{ c.mileage_km | grp }} {{ S.km }}</td></tr>
+  <tr><th>{{ S.spec_engine }}</th><td>{% if c.fuel == 'Electric' %}{{ S.electric }}{% else %}{{ c.engine_cc | grp }} {{ S.cc }}{% endif %}</td></tr>
+  <tr><th>{{ S.spec_transmission }}</th><td>{{ c.transmission }}</td></tr>
+  <tr><th>{{ S.spec_fuel }}</th><td>{{ c.fuel }}</td></tr>
+  <tr><th>{{ S.spec_color }}</th><td>{{ c.color }}</td></tr>
+  <tr><th>{{ S.spec_body }}</th><td>{{ c.body_type }}</td></tr>
+  <tr><th>{{ S.spec_city }}</th><td>{{ c.city }}</td></tr>
+  <tr><th>{{ S.spec_reg }}</th><td>{{ c.reg_city }}</td></tr>
+  <tr><th>{{ S.spec_assembly }}</th><td>{{ c.assembly }}</td></tr>
+  <tr><th>{{ S.spec_owners }}</th><td>{{ c.owners | v2_num }}</td></tr>
+  <tr><th>{{ S.spec_posted }}</th><td>{{ c.posted_on }}</td></tr>
+  <tr><th>{{ S.spec_days }}</th><td>{{ c.days_listed | v2_num }} {{ S.days_unit }}</td></tr>
+  <tr><th>{{ S.spec_status }}</th><td>{% if c.status == 'active' %}{{ S.status_active }}{% else %}{{ S.status_sold }}{% endif %}</td></tr>
+</table>
+
+{% if c.insp_overall is not none %}
+<p><a href="/car/{{ c.id }}/inspection">{{ S.insp_link }}</a></p>
+{% endif %}
+
+<h2>{{ S.features }}</h2>
+<div class="chips">{% for f in c.features.split(', ') %}<span>{{ f }}</span>{% endfor %}</div>
+
+<h2>{{ S.description }}</h2>
+<p>{{ c.description }}</p>
+
+<div class="panel">
+  <strong>{{ S.seller }}:</strong>
+  {% if c.dealer_id %}<a href="/dealer/{{ c.dealer_id }}">{{ c.seller_name }}</a>{% else %}{{ c.seller_name }}{% endif %}
+  ({% if c.seller_type == 'Dealer' %}{{ S.seller_dealer }}{% else %}{{ S.seller_individual }}{% endif %})
+  · {{ c.city }}
+</div>
+
+<form method="post" action="/car/{{ c.id }}/save">
+  <button type="submit" class="line">{% if is_saved %}{{ S.unsave_car }}{% else %}{{ S.save_car }}{% endif %}</button>
+</form>
+
+{% if c.status == 'active' %}
+<div class="panel">
+  <h2 style="margin-top:0">{{ S.make_offer }}</h2>
+  <form class="stack" method="post" action="/car/{{ c.id }}/offer">
+    <label>{{ S.offer_amount }}</label>
+    <input type="text" name="amount">
+    <label>{{ S.offer_message }}</label>
+    <textarea name="message"></textarea>
+    <button type="submit">{{ S.send_offer }}</button>
+  </form>
+</div>
+{% else %}
+<div class="error">{{ S.offer_sold }}</div>
+{% endif %}
+
+{% if similar %}
+<h2>{{ S.similar }}</h2>
+<div class="grid">
+  {% for s in similar %}
+  <div class="card">
+    <a href="/car/{{ s.id }}"><img src="/static/cars/{{ s.id }}/1.jpg" alt="{{ S.photo_alt.format(name=car_name(s), k=1) }}"></a>
+    <div class="pad">
+      <a href="/car/{{ s.id }}"><strong>{{ car_name(s) }}</strong></a>
+      <div class="price">{{ s.price | money }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

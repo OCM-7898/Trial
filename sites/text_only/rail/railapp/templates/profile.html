@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.profile }}</h1>
+{% if saved %}<div class="ok">{{ S.saved }}</div>{% endif %}
+<div class="card">
+  <form method="post" action="/account/profile">
+    <label>{{ S.full_name }}</label>
+    <input type="text" name="full_name" value="{{ u.full_name }}">
+    <label>{{ S.email }}</label>
+    <input type="text" name="email" value="{{ u.email }}">
+    <label>{{ S.mobile }}</label>
+    <input type="text" name="mobile" value="{{ u.mobile }}">
+    <button type="submit">{{ S.save }}</button>
+  </form>
+</div>
+{% endblock %}

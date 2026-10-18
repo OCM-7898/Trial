@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+dist/
+data/*.db
+!data/seed.db
+app/static/generated/
+.DS_Store

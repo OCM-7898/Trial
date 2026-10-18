@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ t("status.subscribe_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li><a href="{{ path('flight_status') }}">{{ t("status.title") }}</a></li><li>{{ t("status.subscribe_title") }}</li></ol></nav>
+<h1>{{ t("status.subscribe_title") }}</h1>
+{% from "macros/fields.html" import text_field %}
+{% if record %}
+<div class="notice notice-ok" role="status"><div>{{ t("status.subscribe_done") }}</div></div>
+<p class="hint">{{ t("form.reference") }}: {{ record.reference_no }}</p>
+{% else %}
+<p>{{ t("status.subscribe_intro") }}</p>
+{% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+<form class="searchform" method="post">
+  {{ text_field("flight_no", "flight_no", t("status.flight_no"), "SM120", t("status.flight_no_hint"), "", true) }}
+  {{ text_field("email", "email", t("join.email"), "", t("form.email_hint"), "", true) }}
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("status.subscribe_submit") }}</button></div>
+</form>
+{% endif %}
+</div>{% endblock %}

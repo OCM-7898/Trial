@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("upgrade.miles_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("upgrade.miles_title")) }}
+<div class="notice {{ 'notice-info' if offer.allowed else 'notice-warn' }}"><div>{{ label }}</div></div>
+{% if offer.allowed %}
+<p>{{ t("upgrade.miles_intro", n=miles, amount=fmt_money(offer.detail.price_usd)) }}</p>
+<p><a class="btn btn-secondary" href="{{ path('miles_account') }}">{{ t("nav.miles_account") }}</a>
+   <a class="btn btn-secondary" href="{{ path('upgrade', pnr=booking.pnr) }}?segment_id={{ view.segment.id }}">{{ t("upgrade.pay_cash") }}</a></p>
+{% endif %}
+</div>{% endblock %}

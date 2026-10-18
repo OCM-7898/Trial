@@ -1,0 +1,2153 @@
+[
+ {
+  "id": "rail-001",
+  "site": "rail",
+  "intent": "How long does train 12903 Sagarmala Express take from New Delhi to Mumbai Central? Answer with the duration as shown.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "16h 55m",
+     "16 hours 55 minutes",
+     "16 hr 55 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=BCT; date=2026-04-06",
+   "stop 16h 55m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-002",
+  "site": "rail",
+  "intent": "Find the lowest 3A fare for a journey from New Delhi to Kanpur Central on 2026-04-06 and answer with the amount in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "655"
+    ],
+    "none_of": [
+     "870"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "stop 655"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-003",
+  "site": "rail",
+  "intent": "Check the PNR status of PNR 6201234567 and answer with the status code.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CNF"
+    ],
+    "none_of": [
+     "CAN",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "stop CNF"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-004",
+  "site": "rail",
+  "intent": "Look up PNR 6203456789 and answer with the passenger's name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Vikram Rao"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6203456789",
+   "stop Vikram Rao"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-005",
+  "site": "rail",
+  "intent": "Book a 2A ticket on train 12301 Yamuna Express from New Delhi to Howrah Jn on 2026-04-06 for passenger Kabir Mehta, age 41, male, Upper berth. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "Kabir Mehta",
+     "date": "2026-04-06",
+     "from_code": "NDLS",
+     "to_code": "HWH"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-06&class=2A",
+   "fill 0 name=Kabir Mehta; age=41; gender=M; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-006",
+  "site": "rail",
+  "intent": "Book a CC (chair car) ticket on train 12417 Gomti Sampark from New Delhi to Lucknow on 2026-04-07 for passenger Sunita Verma, age 55, female, no berth preference. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "Sunita Verma",
+     "class_code": "CC",
+     "train_no": "12417",
+     "date": "2026-04-07",
+     "from_code": "NDLS",
+     "to_code": "LKO"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12417?from=NDLS&to=LKO&date=2026-04-07&class=CC",
+   "fill 0 name=Sunita Verma; age=55; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-007",
+  "site": "rail",
+  "intent": "Book an SL (sleeper) ticket on train 12841 Coromandel Link Express from Howrah Jn to Chennai Central on 2026-04-08 for passenger Farhan Ali, age 23, male, Side Upper berth. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "Farhan Ali",
+     "berth": "Side Upper",
+     "train_no": "12841",
+     "class_code": "SL",
+     "date": "2026-04-08",
+     "from_code": "HWH",
+     "to_code": "MAS"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12841?from=HWH&to=MAS&date=2026-04-08&class=SL",
+   "fill 0 name=Farhan Ali; age=23; gender=M; berth=Side Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-008",
+  "site": "rail",
+  "intent": "Cancel the booking with PNR 6203456789. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /cancel/6203456789",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-009",
+  "site": "rail",
+  "intent": "On train 12622 Brahmaputra Link Express from Howrah Jn to Guwahati, how much more does a 2A ticket cost than a 3A ticket? Answer with the difference in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "725"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "stop 725"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-010",
+  "site": "rail",
+  "intent": "Find a direct train from Secunderabad Jn to Pune Jn departing on 2026-04-07. If no train runs that day, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no train",
+     "no direct train",
+     "does not run",
+     "not run on",
+     "no trains"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-011",
+  "site": "rail",
+  "intent": "Check the PNR status of PNR 6299999999. If no booking exists, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no booking",
+     "not found",
+     "no record",
+     "does not exist",
+     "invalid pnr"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6299999999",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-012",
+  "site": "rail",
+  "intent": "Send a message to customer support with the subject 'Refund delay' explaining that your refund has not arrived. Include your name and email (Priya Sharma, priya.sharma@example.in).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "Refund delay",
+     "name": "Priya Sharma",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=Priya Sharma; email=priya.sharma@example.in; subject=Refund delay; message=My refund for a cancelled ticket has not arrived."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-013",
+  "site": "rail",
+  "intent": "Update the mobile number in your profile to 9876501234. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9876501234"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 mobile=9876501234"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-014",
+  "site": "rail",
+  "intent": "According to the refund rules, what is the flat cancellation charge in rupees for a confirmed AC class ticket cancelled more than 48 hours before departure?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "240"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 240"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-015",
+  "site": "rail",
+  "intent": "Is there any direct train from Jaipur Jn to Lucknow on 2026-04-09? If none exists, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no train",
+     "no direct train",
+     "none exists",
+     "no trains",
+     "not served"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=JP; to=LKO; date=2026-04-09",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-016",
+  "site": "rail",
+  "intent": "Across ALL trains on this site, which single train covers the longest total distance from its origin to its terminus? Answer with the train number and the distance in km.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2182",
+     "2,182"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615, 2182 km"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-017",
+  "site": "rail",
+  "intent": "Which train makes the most scheduled stops in total (including its origin and terminus)? Answer with the train number and the number of stops.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615 with 6 stops"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-018",
+  "site": "rail",
+  "intent": "Among trains that run DAILY, which one arrives at its terminus latest in the day (by clock time)? Answer with the train number and the arrival time.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12417"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "22:35"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12417 at 22:35"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-019",
+  "site": "rail",
+  "intent": "Which train has the LONGEST halt at any intermediate station on this site? Answer with the train number and the halt length in minutes.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12841"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "20"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12841",
+   "stop 12841, 20 minutes at Visakhapatnam"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-020",
+  "site": "rail",
+  "intent": "Across all trains that offer SL (Sleeper), which has the cheapest full-route SL fare? Answer with the train number and the fare in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12723"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "335"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12723",
+   "stop 12723, 335"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-021",
+  "site": "rail",
+  "intent": "Across all trains that offer 1A (AC First Class), which has the most expensive full-route 1A fare? Answer with the train number and the fare in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6615",
+     "6,615"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12301",
+   "stop 12301, 6615"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-022",
+  "site": "rail",
+  "intent": "Exactly two stations on this site are each served by exactly 3 trains. Which two? Answer with both station names.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Mumbai Central",
+     "BCT"
+    ],
+    "none_of": [
+     "Abu Road",
+     "Agra Cantt",
+     "Ahmedabad Jn",
+     "Ajmer Jn",
+     "Bhopal Jn",
+     "Chennai Central",
+     "Guwahati",
+     "Howrah Jn",
+     "Jaipur Jn",
+     "Kanpur Central",
+     "Lucknow",
+     "Nagpur Jn",
+     "New Delhi",
+     "New Jalpaiguri",
+     "Patna Jn",
+     "Pune Jn",
+     "Secunderabad Jn",
+     "Varanasi Jn",
+     "Visakhapatnam"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ratlam Jn",
+     "RTM"
+    ],
+    "none_of": [
+     "Abu Road",
+     "Agra Cantt",
+     "Ahmedabad Jn",
+     "Ajmer Jn",
+     "Bhopal Jn",
+     "Chennai Central",
+     "Guwahati",
+     "Howrah Jn",
+     "Jaipur Jn",
+     "Kanpur Central",
+     "Lucknow",
+     "Nagpur Jn",
+     "New Delhi",
+     "New Jalpaiguri",
+     "Patna Jn",
+     "Pune Jn",
+     "Secunderabad Jn",
+     "Varanasi Jn",
+     "Visakhapatnam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop Mumbai Central and Ratlam Jn"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-023",
+  "site": "rail",
+  "intent": "Among trains that run DAILY, which departs its origin earliest in the morning? Answer with the train number and the departure time.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:15",
+     "6:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12615 at 06:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-024",
+  "site": "rail",
+  "intent": "Which train can take you from Patna Jn to Howrah Jn departing on 2026-04-07? Answer with its train number (or N/A if none runs).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=PNBE; to=HWH; date=2026-04-07",
+   "stop 12301"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-025",
+  "site": "rail",
+  "intent": "Find a direct train from New Jalpaiguri to Guwahati departing on 2026-04-08. Answer with its train number (or N/A if none runs).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NJP; to=GHY; date=2026-04-08",
+   "stop 12622"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-026",
+  "site": "rail",
+  "intent": "Considering every date from 2026-04-06 through 2026-04-12, on which date do the MOST direct trains run from New Delhi to Kanpur Central? Answer with the date (YYYY-MM-DD) and how many trains run that day.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2026-04-12",
+     "Sunday"
+    ],
+    "none_of": [
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-11"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-07",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-10",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-11",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 2026-04-12, 3 trains"
+  ],
+  "max_steps": 40,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-027",
+  "site": "rail",
+  "intent": "On how many days of the week does train 12301 Yamuna Express call at Patna Jn? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/PNBE",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-028",
+  "site": "rail",
+  "intent": "Your booking 6203456789 is a confirmed AC class ticket. If you cancelled it today (more than 48 hours before departure), what refund in rupees would be due per the published refund rules? Answer with the amount. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3665",
+     "3,665"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 3665"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-029",
+  "site": "rail",
+  "intent": "Your booking 6202345678 is waitlisted. Per the refund rules, what refund in rupees would you receive if you cancelled it before departure? Answer with the amount. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1335",
+     "1,335"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 1335"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-030",
+  "site": "rail",
+  "intent": "A confirmed 3A ticket for the full route of train 12615 Dakshin Express (New Delhi to Chennai Central) is cancelled 24 hours before departure. Per the refund rules, what refund in rupees is due? Answer with the amount.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2700",
+     "2,700"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "goto /rules",
+   "stop 2700"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-031",
+  "site": "rail",
+  "intent": "If your confirmed booking 6205678901 (an AC class ticket) were cancelled 6 hours before departure, what refund in rupees would the rules allow? Answer with the amount. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "110"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 110"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-032",
+  "site": "rail",
+  "intent": "What would TWO 2A tickets cost in total on train 12559 Kashi Express from New Delhi to Varanasi Jn? Answer with the total in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3690",
+     "3,690"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 3690"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-033",
+  "site": "rail",
+  "intent": "What is the combined fare in rupees of all your CONFIRMED (CNF) bookings? Answer with the total. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10800",
+     "10,800"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 10800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-034",
+  "site": "rail",
+  "intent": "For a journey on train 12615 Dakshin Express from Agra Cantt to Secunderabad Jn, how much more does 3A cost than SL? Answer with the difference in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1510",
+     "1,510"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615?from=AGC&to=SC&date=2026-04-06",
+   "stop 1510"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-035",
+  "site": "rail",
+  "intent": "Compare travelling New Delhi to Varanasi Jn by SL on the direct train 12559 against splitting the trip into two SL legs: New Delhi to Kanpur Central on train 12301, then Kanpur Central to Varanasi Jn on train 12559. How many rupees does the direct ticket save over the two-leg option?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "55"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559?from=NDLS&to=BSB&date=2026-04-07",
+   "goto /train/12301?from=NDLS&to=CNB&date=2026-04-06",
+   "goto /train/12559?from=CNB&to=BSB&date=2026-04-07",
+   "stop 55"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-036",
+  "site": "rail",
+  "intent": "How many seats are available on train 12904 Mumbai Sampark Express in total, adding up all its classes? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "93"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12904",
+   "stop 93"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-037",
+  "site": "rail",
+  "intent": "Two of your bookings are for passengers Anita Desai and Meera Iyer. Whose ticket fare is higher, and by how many rupees? Answer with the passenger's name and the difference. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Anita Desai",
+     "Anita"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "325"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop Anita Desai by 325"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-038",
+  "site": "rail",
+  "intent": "On train 12302 Howrah Mail for its full route, which is the CHEAPEST class that still costs more than 1000 rupees? Answer with the class code and its fare.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3A"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2395",
+     "2,395"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12302",
+   "stop 3A at 2395"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-039",
+  "site": "rail",
+  "intent": "On train 12659 Aravalli Express from Jaipur Jn to Ahmedabad Jn, which is the MOST expensive class that does not exceed 500 rupees? Answer with the class code and its fare.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SL"
+    ],
+    "none_of": [
+     "2S",
+     "3A",
+     "CC"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "350"
+    ],
+    "none_of": [
+     "190",
+     "705",
+     "930"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop SL at 350"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-040",
+  "site": "rail",
+  "intent": "Among ALL trains that serve the New Delhi to Kanpur Central segment, which offers the cheapest SL (Sleeper) fare for that segment? Answer with the train number and the fare in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12559"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "275"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 12559 at 275"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-041",
+  "site": "rail",
+  "intent": "Which costs more: a full-route 1A ticket on train 12622 Brahmaputra Link Express, or a 2A ticket on train 12615 Dakshin Express from New Delhi to Bhopal Jn? Answer with the winning train number and that fare in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3950",
+     "3,950"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "goto /train/12615?from=NDLS&to=BPL&date=2026-04-06",
+   "stop 12622 at 3950"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-042",
+  "site": "rail",
+  "intent": "Of all trains calling at Ratlam Jn, which departs it earliest in the day (by clock time)? Answer with the train number and its departure time from there.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12903"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "03:15",
+     "3:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/RTM",
+   "stop 12903 at 03:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-043",
+  "site": "rail",
+  "intent": "One of your bookings is waitlisted (WL). Cancel that booking — and ONLY that one. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6202345678"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6202345678",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-044",
+  "site": "rail",
+  "intent": "Cancel ALL of your bookings for journeys dated 2026-04-10 or later that are not already cancelled. Leave every earlier journey untouched. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6206789012"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6203456789",
+   "fill 0",
+   "goto /cancel/6208901234",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-045",
+  "site": "rail",
+  "intent": "In your profile, change the email address to priya.s@newmail.in AND the mobile number to 9812399999 (both, in one update). Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "email",
+    "value": "priya.s@newmail.in"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9812399999"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 email=priya.s@newmail.in; mobile=9812399999"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-046",
+  "site": "rail",
+  "intent": "Look up PNR 6204567890 to find the passenger's name, then send a message to customer support with your name (Priya Sharma), your email (priya.sharma@example.in), the subject 'PNR query' and the message exactly: 'Refund status for <passenger name>' — replacing <passenger name> with the name you found.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "PNR query",
+     "message": "Refund status for Meera Iyer",
+     "name": "Priya Sharma",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6204567890",
+   "goto /contact",
+   "fill 0 name=Priya Sharma; email=priya.sharma@example.in; subject=PNR query; message=Refund status for Meera Iyer"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-047",
+  "site": "rail",
+  "intent": "Look up PNR 6201234567, then book a CC ticket on train 12049 Taj Sampark from New Delhi to Agra Cantt on 2026-04-06 for the SAME passenger (same name and age) as that booking, male, no berth preference. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "CC",
+     "passenger": "Rohan Sharma",
+     "age": 34,
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=CC",
+   "fill 0 name=Rohan Sharma; age=34; gender=M; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-048",
+  "site": "rail",
+  "intent": "Book an SL ticket on train 12138 Narmada Mail from Mumbai Central to Bhopal Jn on 2026-04-06 for passenger Nisha Rao, age 30, female, Lower berth — and then CANCEL that new booking. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "Nisha Rao",
+     "status": "CAN",
+     "train_no": "12138",
+     "class_code": "SL",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12138?from=BCT&to=BPL&date=2026-04-06&class=SL",
+   "fill 0 name=Nisha Rao; age=30; gender=F; berth=Lower",
+   "fill 0",
+   "goto /cancel/6210000009",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-049",
+  "site": "rail",
+  "intent": "Find the EARLIEST-departing train from New Delhi to Kanpur Central on 2026-04-06 and book a CC ticket on it for passenger Anaya Kapoor, age 27, female, no berth preference. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12417",
+     "class_code": "CC",
+     "passenger": "Anaya Kapoor",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /book/12417?from=NDLS&to=CNB&date=2026-04-06&class=CC",
+   "fill 0 name=Anaya Kapoor; age=27; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-050",
+  "site": "rail",
+  "intent": "Travel from New Delhi to Agra Cantt on 2026-04-06 as CHEAPLY as possible: compare every class on every train serving that day, and book the single cheapest option for passenger Ritu Singh, age 24, female, no berth preference. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "2S",
+     "passenger": "Ritu Singh",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=AGC; date=2026-04-06",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=2S",
+   "fill 0 name=Ritu Singh; age=24; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-051",
+  "site": "rail",
+  "intent": "Book a 3A ticket on the LATEST-departing train from New Delhi to Kanpur Central on 2026-04-08 for passenger Mohan Das, age 52, male, Lower berth. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "3A",
+     "passenger": "Mohan Das",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /book/12301?from=NDLS&to=CNB&date=2026-04-08&class=3A",
+   "fill 0 name=Mohan Das; age=52; gender=M; berth=Lower",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-052",
+  "site": "rail",
+  "intent": "Book a 2A ticket from New Delhi to Howrah Jn on 2026-04-09 for passenger Sara Khan, age 33, female, Upper berth. If no train runs that day, book the same journey on 2026-04-10 instead. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "Sara Khan",
+     "date": "2026-04-10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-10",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-10&class=2A",
+   "fill 0 name=Sara Khan; age=33; gender=F; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-053",
+  "site": "rail",
+  "intent": "What is the 1A (AC First Class) fare on train 12615 Dakshin Express for its full route? If that class is not offered on this train, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not offered",
+     "no 1a",
+     "does not offer",
+     "not available on this train",
+     "no ac first"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-054",
+  "site": "rail",
+  "intent": "Book a 2A ticket on train 12904 Mumbai Sampark Express from Mumbai Central to New Delhi on 2026-04-08 for passenger Ravi Kumar, age 45, male. If the train does not run that day, do NOT book anything and answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "does not run",
+     "not run on",
+     "no train",
+     "not running",
+     "did not book"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "bookings",
+    "match": {
+     "train_no": "12904",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /train/12904?from=BCT&to=NDLS&date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-055",
+  "site": "rail",
+  "intent": "Find a direct train from Lucknow to Agra Cantt on 2026-04-07. If no direct train serves this route, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no train",
+     "no direct train",
+     "not served",
+     "no trains",
+     "does not serve"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=LKO; to=AGC; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-056",
+  "site": "rail",
+  "intent": "Find a direct train from Ratlam Jn to New Delhi departing on 2026-04-06. If no train runs that day, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no train",
+     "does not run",
+     "not run on",
+     "no trains",
+     "does not depart"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=RTM; to=NDLS; date=2026-04-06",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-057",
+  "site": "rail",
+  "intent": "Which train runs from Guwahati to Howrah Jn on 2026-04-08? If none serves that route, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "no train",
+     "none serves",
+     "not served",
+     "no trains",
+     "does not serve"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=GHY; to=HWH; date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-058",
+  "site": "rail",
+  "intent": "The booking form offers a TATKAL quota option. What extra Tatkal surcharge in rupees does RailSetu state anywhere on the site? If no surcharge amount is stated, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not stated",
+     "no surcharge",
+     "does not state",
+     "not mentioned",
+     "no tatkal surcharge"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /rules",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-059",
+  "site": "rail",
+  "intent": "How many different trains call at Kanpur Central (in either direction)? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/CNB",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-060",
+  "site": "rail",
+  "intent": "How many trains on this site run DAILY (all seven days)? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-061",
+  "site": "rail",
+  "intent": "Check the PNR status of PNR 6207890123 and answer with the status code.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CAN"
+    ],
+    "none_of": [
+     "CNF",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6207890123",
+   "stop CAN"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-062",
+  "site": "rail",
+  "intent": "For how many minutes does train 12615 Dakshin Express halt at Nagpur Jn? Answer with the number of minutes.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 10"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-063",
+  "site": "rail",
+  "intent": "Which trains depart their ORIGIN station at 20:00 or later? Answer with both train numbers.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12138"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12302"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12138 and 12302"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-064",
+  "site": "rail",
+  "intent": "Find the two trains with the SHORTEST total routes on this site and answer with the combined length of those two routes in km.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "707"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 707"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-065",
+  "site": "rail",
+  "intent": "How many of your bookings (any status) are for journeys dated BEFORE 2026-04-09? Answer with the number. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-066",
+  "site": "rail",
+  "intent": "Which of your bookings has the HIGHEST fare? Answer with its PNR and the fare in rupees. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6203456789"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3905",
+     "3,905"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 6203456789 at 3905"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-067",
+  "site": "rail",
+  "intent": "At what time does train 12559 Kashi Express arrive at Varanasi Jn, and on which day of its run (1 or 2)? Answer with the time and the day number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:30",
+     "6:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "two"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 06:30 on day 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-068",
+  "site": "rail",
+  "intent": "On train 12659 Aravalli Express, how many km is it from Ajmer Jn to Abu Road? Answer with the distance in km.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "304"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop 304"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-069",
+  "site": "rail",
+  "intent": "On train 12615 Dakshin Express, how many km does the train cover between Bhopal Jn and Nagpur Jn? Answer with the distance in km.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "389"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 389"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-070",
+  "site": "rail",
+  "intent": "How long does train 12723 Deccan Sampark take from Secunderabad Jn to Pune Jn? Answer with the duration as shown.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10h 15m",
+     "10 hours 15 minutes",
+     "10 hr 15 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-06",
+   "stop 10h 15m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-071",
+  "site": "rail",
+  "intent": "On train 12301 Yamuna Express, what is the waitlist number shown for 3A? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12301",
+   "stop WL 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-072",
+  "site": "rail",
+  "intent": "Send a message to customer support with your name (Priya Sharma) and email (priya.sharma@example.in), the subject exactly 'Fare anomaly on route 12659' and the message exactly 'The CC fare from Jaipur Jn to Ajmer Jn appears higher than the published tariff.'",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "Fare anomaly on route 12659",
+     "message": "The CC fare from Jaipur Jn to Ajmer Jn appears higher than the published tariff.",
+     "name": "Priya Sharma",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=Priya Sharma; email=priya.sharma@example.in; subject=Fare anomaly on route 12659; message=The CC fare from Jaipur Jn to Ajmer Jn appears higher than the published tariff."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-073",
+  "site": "rail",
+  "intent": "How many bookings (of any status) are listed in your booking history? Answer with the number. Sign in as priya_sharma (password: travel123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-074",
+  "site": "rail",
+  "intent": "How many 2A seats are available on train 12301 Yamuna Express from New Delhi to Howrah Jn on 2026-04-06? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-06",
+   "stop 26"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-075",
+  "site": "rail",
+  "intent": "Find the train that runs from Mumbai Central to Bhopal Jn and answer with its SL (sleeper) fare for that journey in rupees.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "520"
+    ],
+    "none_of": [
+     "1380",
+     "1965"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=BCT; to=BPL; date=2026-04-06",
+   "stop 520"
+  ],
+  "max_steps": 30
+ }
+]

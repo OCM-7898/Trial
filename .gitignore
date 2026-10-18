@@ -1,0 +1,29 @@
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# raw gari photo dataset (~6 GB) — build-time source only; the
+# downscaled images the site serves are vendored in assets/gari_cars/
+frames/
+
+# runtime databases (recreated by every /__reset__); the airline's seed database is data
+*.db
+!sites/text_only/selam/data/seed.db
+
+# static images are BUILD PRODUCTS of the vendored assets — a fresh
+# clone restores them with:
+#   python assets/abo/sync_images.py
+#   python assets/gari_cars/sync_images.py
+#   python sites/visual/sync_reddit_images.py
+sites/visual/ministore/static/img/products/
+sites/visual/gari/static/cars/
+sites/visual/reddit/static/post_images/
+
+# trial (LIMIT=N) runs of scripts/run_*.sh
+trial/
+
+# local runs: vLLM server logs, GRPO checkpoints
+logs/
+checkpoints/

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ S.sell_review_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.sell_review_title }}</h1>
+<p class="muted">{{ S.sell_review_note }}</p>
+<table class="spec">
+  <tr><th>{{ S.brand }}</th><td>{{ d.brand }}</td></tr>
+  <tr><th>{{ S.model }}</th><td>{{ d.model }}</td></tr>
+  <tr><th>{{ S.year }}</th><td>{{ d.year | v2_num }}</td></tr>
+  <tr><th>{{ S.mileage_km }}</th><td>{{ d.mileage_km | v2_num }}</td></tr>
+  <tr><th>{{ S.price_pkr }}</th><td>{{ (d.price | int) | money }}</td></tr>
+  <tr><th>{{ S.city }}</th><td>{{ d.city }}</td></tr>
+  <tr><th>{{ S.color }}</th><td>{{ d.color }}</td></tr>
+  <tr><th>{{ S.transmission }}</th><td>{{ d.transmission }}</td></tr>
+  <tr><th>{{ S.fuel }}</th><td>{{ d.fuel }}</td></tr>
+  <tr><th>{{ S.engine_cc }}</th><td>{{ d.engine_cc | v2_num }}</td></tr>
+  <tr><th>{{ S.phone }}</th><td>{{ d.phone }}</td></tr>
+  <tr><th>{{ S.ad_description }}</th><td>{{ d.description }}</td></tr>
+</table>
+<p><a href="/sell">{{ S.edit_details }}</a></p>
+<form method="post" action="/sell/confirm">
+  <button type="submit">{{ S.publish_ad }}</button>
+</form>
+{% endblock %}

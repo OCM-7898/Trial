@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ S.delete }}{% endblock %}
+{% block content %}
+<h1>{{ S.delete }}</h1>
+<div class="card">
+  {% if kind == 'post' %}<h2>{{ item.title }}</h2>
+  {% else %}<p>{{ item.body }}</p><p class="muted">{{ item.post_title }}</p>{% endif %}
+</div>
+<div class="error">{{ q }}</div>
+<form method="post" action="{{ action }}">
+  <button>{{ S.confirm }}</button>
+</form>
+<p><a href="{% if kind == 'post' %}/post/{{ item.id }}{% else %}/post/{{ item.post_id }}{% endif %}">{{ S.go_back }}</a></p>
+{% endblock %}

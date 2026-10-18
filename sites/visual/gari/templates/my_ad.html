@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ S.ad_title.format(id=a.id) }}{% endblock %}
+{% block content %}
+<h1>{{ S.ad_title.format(id=(a.id | v2_num)) }} — {{ a.year | v2_num }} {{ a.brand }} {{ a.model }}</h1>
+{% if published %}<div class="notice">{{ S.ad_published }}</div>{% endif %}
+{% if updated %}<div class="notice">{{ S.price_updated }}</div>{% endif %}
+<table class="spec">
+  <tr><th>{{ S.spec_status }}</th><td>{% if a.status == 'active' %}{{ S.status_active }}{% else %}{{ S.status_sold }}{% endif %}</td></tr>
+  <tr><th>{{ S.price_pkr }}</th><td>{{ a.price | money }}</td></tr>
+  <tr><th>{{ S.mileage_km }}</th><td>{{ a.mileage_km | grp }}</td></tr>
+  <tr><th>{{ S.color }}</th><td>{{ a.color }}</td></tr>
+  <tr><th>{{ S.transmission }}</th><td>{{ a.transmission }}</td></tr>
+  <tr><th>{{ S.fuel }}</th><td>{{ a.fuel }}</td></tr>
+  <tr><th>{{ S.engine_cc }}</th><td>{{ a.engine_cc | v2_num }}</td></tr>
+  <tr><th>{{ S.city }}</th><td>{{ a.city }}</td></tr>
+  <tr><th>{{ S.phone }}</th><td>{{ a.phone }}</td></tr>
+  <tr><th>{{ S.ad_description }}</th><td>{{ a.description }}</td></tr>
+  <tr><th>{{ S.spec_posted }}</th><td>{{ a.posted_on }}</td></tr>
+</table>
+{% if a.status == 'active' %}
+<div class="panel">
+  <form class="stack" method="post" action="/account/ads/{{ a.id }}/price">
+    <label>{{ S.new_price }}</label>
+    <input type="text" name="price">
+    <button type="submit">{{ S.update_price }}</button>
+  </form>
+</div>
+<p><a href="/account/ads/{{ a.id }}/sold">{{ S.mark_sold }}</a> ·
+   <a href="/account/ads/{{ a.id }}/delete">{{ S.delete_ad }}</a></p>
+{% else %}
+<p><a href="/account/ads/{{ a.id }}/delete">{{ S.delete_ad }}</a></p>
+{% endif %}
+<p><a href="/account/ads">← {{ S.my_ads_title }}</a></p>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% macro segment_header(view) %}
+<p class="hint">
+  {{ view.origin.city }} ({{ view.origin.iata }}) &rarr; {{ view.destination.city }} ({{ view.destination.iata }})
+  &middot; {{ view.flight.flight_no }} &middot; {{ fmt_date(view.flight.date) }}
+  &middot; {{ fmt_time(view.flight.dep_time) }}
+</p>
+{% endmacro %}

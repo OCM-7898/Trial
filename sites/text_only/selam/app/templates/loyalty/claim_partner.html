@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ t("claim.partner_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_claim') }}">{{ t("claim.title") }}</a></li>
+        <li>{{ t("claim.partner_title") }}</li></ol>
+  </nav>
+  <h1>{{ t("claim.partner_title") }}</h1>
+  {% if record %}
+  <div class="notice notice-ok" role="status"><div><strong>{{ t("claim.done_title") }}</strong>
+    <p>{{ t("claim.partner_done_body") }}</p></div></div>
+  <dl class="summary" style="position:static;max-width:520px">
+    <dt>{{ t("claim.reference") }}</dt><dd><strong>{{ record.reference_no }}</strong></dd>
+    <dt>{{ t("claim.status") }}</dt><dd>{{ t("claim.status_under_review") }}</dd>
+  </dl>
+  {% else %}
+  <p>{{ t("claim.partner_intro") }}</p>
+  <form class="searchform" method="post" novalidate>
+    <div class="field">
+      <label for="member_no">{{ t("miles.member_no") }}</label>
+      <input type="text" id="member_no" name="member_no" value="{{ values.get('member_no','') }}"
+             {% if errors.get('member_no') %}aria-invalid="true"{% endif %}>
+      {% if errors.get('member_no') %}<span class="error-text">{{ errors['member_no'] }}</span>{% endif %}
+    </div>
+    <div class="field">
+      <label for="partner">{{ t("claim.partner_airline") }}</label>
+      <select id="partner" name="partner">
+        {% for code, name in partners %}<option value="{{ code }}">{{ name }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="partner_reference">{{ t("claim.partner_reference") }}</label>
+      <input type="text" id="partner_reference" name="partner_reference"
+             value="{{ values.get('partner_reference','') }}"
+             {% if errors.get('partner_reference') %}aria-invalid="true"{% endif %}>
+      {% if errors.get('partner_reference') %}<span class="error-text">{{ errors['partner_reference'] }}</span>
+      {% else %}<span class="hint">{{ t("claim.partner_reference_hint") }}</span>{% endif %}
+    </div>
+    <div class="field">
+      <label for="flight_date">{{ t("claim.flight_date") }}</label>
+      <input type="text" id="flight_date" name="flight_date" value="{{ values.get('flight_date','') }}"
+             inputmode="numeric" placeholder="2026-02-14" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+             {% if errors.get('flight_date') %}aria-invalid="true"{% endif %}>
+      {% if errors.get('flight_date') %}<span class="error-text">{{ errors['flight_date'] }}</span>
+      {% else %}<span class="hint">{{ t("common.date_hint") }}</span>{% endif %}
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("claim.submit") }}</button></div>
+  </form>
+  <p class="hint">{{ t("claim.partner_cutoff") }}</p>
+  {% endif %}
+</div>
+{% endblock %}

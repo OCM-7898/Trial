@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field, text_field %}
+{% block title %}{{ t("search.flexible_dates") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('search') }}">{{ t("nav.book_flight") }}</a></li>
+      <li>{{ t("search.flexible_dates") }}</li></ol></nav>
+<h1>{{ t("search.flexible_dates") }}</h1>
+<p>{{ t("flexible.intro") }}</p>
+<form class="searchform" method="get">
+  {{ text_field("origin", "origin", t("search.origin"), "ADD", t("search.code_hint"), origin) }}
+  {{ text_field("destination", "destination", t("search.destination"), "NBO", t("search.code_hint"), destination) }}
+  {{ date_field("depart", "depart", t("search.depart"), t("common.date_hint"), date_value) }}
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("flexible.show") }}</button></div>
+</form>
+{% if rows %}
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("status.date") }}</th><th scope="col">{{ t("flexible.cheapest") }}</th>
+    <th scope="col">{{ t("flexible.options") }}</th></tr></thead>
+  <tbody>{% for row in rows %}<tr{% if row.is_chosen %} class="is-current"{% endif %}>
+    <td>{{ fmt_date(row.day) }} ({{ fmt_weekday(row.day) }}){% if row.is_chosen %} &mdash; {{ t("flexible.your_date") }}{% endif %}</td>
+    <td>{% if row.cheapest %}<a href="{{ path('results') }}?origin={{ origin }}&amp;destination={{ destination }}&amp;depart={{ row.day.isoformat() }}&amp;adults=1">{{ fmt_money(row.cheapest) }}</a>{% else %}&mdash;{% endif %}</td>
+    <td>{{ row.count }}</td>
+  </tr>{% endfor %}</tbody></table></div>
+{% elif searched %}<div class="notice notice-warn"><div>{{ t("results.none_body") }}</div></div>{% endif %}
+</div>{% endblock %}

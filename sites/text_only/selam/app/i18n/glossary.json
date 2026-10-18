@@ -1,0 +1,405 @@
+{
+  "adult": {
+    "am": "አዋቂ",
+    "exempt": {},
+    "forms": [
+      "አዋቂ"
+    ],
+    "source": "generated"
+  },
+  "airport": {
+    "am": "አየር ማረፊያ",
+    "exempt": {},
+    "forms": [
+      "አየር ማረፊያ"
+    ],
+    "source": "generated"
+  },
+  "aisle seat": {
+    "am": "የመተላለፊያ መቀመጫ",
+    "exempt": {},
+    "forms": [
+      "የመተላለፊያ መቀመጫ"
+    ],
+    "source": "spreadsheet"
+  },
+  "allergy": {
+    "am": "አለርጂ",
+    "exempt": {},
+    "forms": [
+      "አለርጂ"
+    ],
+    "source": "generated"
+  },
+  "arrival": {
+    "am": "መድረሻ",
+    "exempt": {},
+    "forms": [
+      "መድረሻ"
+    ],
+    "source": "generated"
+  },
+  "assistance": {
+    "am": "ድጋፍ",
+    "exempt": {},
+    "forms": [
+      "ድጋፍ"
+    ],
+    "source": "generated"
+  },
+  "award ticket": {
+    "am": "የሽልማት ትኬት",
+    "exempt": {},
+    "forms": [
+      "የሽልማት ትኬት"
+    ],
+    "source": "generated"
+  },
+  "baggage allowance": {
+    "am": "የሻንጣ ፈቃድ",
+    "exempt": {},
+    "forms": [
+      "የሻንጣ ፈቃድ"
+    ],
+    "source": "generated"
+  },
+  "boarding pass": {
+    "am": "የመሳፈሪያ ፈቃድ",
+    "exempt": {},
+    "forms": [
+      "የመሳፈሪያ ፈቃድ"
+    ],
+    "source": "spreadsheet"
+  },
+  "booking reference": {
+    "am": "የቦታ ማስያዣ ማጣቀሻ",
+    "exempt": {},
+    "forms": [
+      "የቦታ ማስያዣ ማጣቀሻ"
+    ],
+    "source": "spreadsheet"
+  },
+  "cabin baggage": {
+    "am": "የእጅ ሻንጣ",
+    "exempt": {},
+    "forms": [
+      "የእጅ ሻንጣ"
+    ],
+    "source": "spreadsheet"
+  },
+  "cabin class": {
+    "am": "የጉዞ ክፍል",
+    "exempt": {},
+    "forms": [
+      "የጉዞ ክፍል"
+    ],
+    "source": "spreadsheet"
+  },
+  "change fee": {
+    "am": "የለውጥ ክፍያ",
+    "exempt": {},
+    "forms": [
+      "የለውጥ ክፍያ"
+    ],
+    "source": "generated"
+  },
+  "checked baggage": {
+    "am": "የተመዘገበ ሻንጣ",
+    "exempt": {},
+    "forms": [
+      "የተመዘገበ ሻንጣ"
+    ],
+    "source": "spreadsheet"
+  },
+  "child": {
+    "am": "ሕፃን",
+    "exempt": {
+      "miles.relationship_hint": "offspring in a family relationship (ልጅ), not the passenger type aged 2-11 (ሕፃን)"
+    },
+    "forms": [
+      "ሕፃን"
+    ],
+    "source": "generated"
+  },
+  "connection": {
+    "am": "መሸጋገሪያ",
+    "exempt": {
+      "partner.no_rail": "a rail link between places, not a transfer between flights",
+      "partner.rail_intro": "as above"
+    },
+    "forms": [
+      "መሸጋገሪያ"
+    ],
+    "source": "generated"
+  },
+  "contact office": {
+    "am": "የመገናኛ ቢሮ",
+    "exempt": {},
+    "forms": [
+      "የመገናኛ ቢሮ"
+    ],
+    "source": "generated"
+  },
+  "date": {
+    "am": "ቀን",
+    "exempt": {},
+    "forms": [
+      "ቀን",
+      "ቀናት"
+    ],
+    "source": "generated"
+  },
+  "departure": {
+    "am": "መነሻ",
+    "exempt": {},
+    "forms": [
+      "መነሻ"
+    ],
+    "source": "generated"
+  },
+  "economy": {
+    "am": "ኢኮኖሚ",
+    "exempt": {},
+    "forms": [
+      "ኢኮኖሚ"
+    ],
+    "source": "generated"
+  },
+  "excess baggage": {
+    "am": "ትርፍ ሻንጣ",
+    "exempt": {},
+    "forms": [
+      "ትርፍ ሻንጣ"
+    ],
+    "source": "generated"
+  },
+  "extra legroom": {
+    "am": "ተጨማሪ የእግር ቦታ",
+    "exempt": {},
+    "forms": [
+      "ተጨማሪ የእግር ቦታ"
+    ],
+    "source": "spreadsheet"
+  },
+  "fare difference": {
+    "am": "የታሪፍ ልዩነት",
+    "exempt": {},
+    "forms": [
+      "የታሪፍ ልዩነት"
+    ],
+    "source": "spreadsheet"
+  },
+  "flight": {
+    "am": "በረራ",
+    "exempt": {},
+    "forms": [
+      "በረራ",
+      "በረራዎች"
+    ],
+    "source": "generated"
+  },
+  "flight number": {
+    "am": "የበረራ ቁጥር",
+    "exempt": {},
+    "forms": [
+      "የበረራ ቁጥር"
+    ],
+    "source": "generated"
+  },
+  "flight status": {
+    "am": "የበረራ ሁኔታ",
+    "exempt": {},
+    "forms": [
+      "የበረራ ሁኔታ"
+    ],
+    "source": "spreadsheet"
+  },
+  "gate": {
+    "am": "በር",
+    "exempt": {},
+    "forms": [
+      "በር"
+    ],
+    "source": "generated"
+  },
+  "infant": {
+    "am": "ጨቅላ",
+    "exempt": {},
+    "forms": [
+      "ጨቅላ"
+    ],
+    "source": "generated"
+  },
+  "itinerary": {
+    "am": "የጉዞ ዝርዝር",
+    "exempt": {},
+    "forms": [
+      "የጉዞ ዝርዝር"
+    ],
+    "source": "spreadsheet"
+  },
+  "lounge": {
+    "am": "ላውንጅ",
+    "exempt": {},
+    "forms": [
+      "ላውንጅ",
+      "ላውንጆች"
+    ],
+    "source": "spreadsheet"
+  },
+  "membership number": {
+    "am": "የአባልነት ቁጥር",
+    "exempt": {},
+    "forms": [
+      "የአባልነት ቁጥር"
+    ],
+    "source": "generated"
+  },
+  "miles": {
+    "am": "ማይሎች",
+    "exempt": {},
+    "forms": [
+      "ማይሎች",
+      "ማይል"
+    ],
+    "source": "generated"
+  },
+  "one-way": {
+    "am": "የአንድ አቅጣጫ",
+    "exempt": {},
+    "forms": [
+      "የአንድ አቅጣጫ"
+    ],
+    "source": "generated"
+  },
+  "online check-in": {
+    "am": "የመስመር ላይ ቼክ-ኢን",
+    "exempt": {},
+    "forms": [
+      "የመስመር ላይ ቼክ-ኢን"
+    ],
+    "source": "spreadsheet"
+  },
+  "opening hours": {
+    "am": "የሥራ ሰዓቶች",
+    "exempt": {},
+    "forms": [
+      "የሥራ ሰዓቶች"
+    ],
+    "source": "generated"
+  },
+  "passenger": {
+    "am": "ተሳፋሪ",
+    "exempt": {},
+    "forms": [
+      "ተሳፋሪ",
+      "ተሳፋሪዎች"
+    ],
+    "source": "spreadsheet"
+  },
+  "price": {
+    "am": "ዋጋ",
+    "exempt": {},
+    "forms": [
+      "ዋጋ"
+    ],
+    "source": "generated"
+  },
+  "refund": {
+    "am": "ተመላሽ ክፍያ",
+    "exempt": {},
+    "forms": [
+      "ተመላሽ ክፍያ",
+      "ተመላሽ"
+    ],
+    "source": "spreadsheet"
+  },
+  "reservation": {
+    "am": "የቦታ ማስያዣ",
+    "exempt": {},
+    "forms": [
+      "የቦታ ማስያዣ"
+    ],
+    "source": "spreadsheet"
+  },
+  "round-trip": {
+    "am": "የደርሶ መልስ",
+    "exempt": {},
+    "forms": [
+      "የደርሶ መልስ"
+    ],
+    "source": "spreadsheet"
+  },
+  "seat": {
+    "am": "መቀመጫ",
+    "exempt": {
+      "partner.car_intro": "'seat' used as a verb -- vehicles that carry a party",
+      "partner.car_too_small": "'seat' used as a verb"
+    },
+    "forms": [
+      "መቀመጫ",
+      "መቀመጫዎች"
+    ],
+    "source": "generated"
+  },
+  "special meal": {
+    "am": "ልዩ ምግብ",
+    "exempt": {},
+    "forms": [
+      "ልዩ ምግብ"
+    ],
+    "source": "generated"
+  },
+  "stopover": {
+    "am": "ማቆያ",
+    "exempt": {},
+    "forms": [
+      "ማቆያ"
+    ],
+    "source": "spreadsheet"
+  },
+  "surname": {
+    "am": "የአያት ስም",
+    "exempt": {},
+    "forms": [
+      "የአያት ስም"
+    ],
+    "source": "generated"
+  },
+  "terminal": {
+    "am": "ተርሚናል",
+    "exempt": {},
+    "forms": [
+      "ተርሚናል"
+    ],
+    "source": "generated"
+  },
+  "ticket number": {
+    "am": "የትኬት ቁጥር",
+    "exempt": {},
+    "forms": [
+      "የትኬት ቁጥር"
+    ],
+    "source": "generated"
+  },
+  "travel insurance": {
+    "am": "የጉዞ መድን",
+    "exempt": {},
+    "forms": [
+      "የጉዞ መድን"
+    ],
+    "source": "spreadsheet"
+  },
+  "upgrade": {
+    "am": "ማሻሻያ",
+    "exempt": {},
+    "forms": [
+      "ማሻሻያ",
+      "ማሻሻል",
+      "ያሻሽሉ",
+      "ሊሻሻል",
+      "ተሻሽሏል"
+    ],
+    "source": "generated"
+  }
+}

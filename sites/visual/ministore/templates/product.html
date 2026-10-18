@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ p.name }}{% endblock %}
+{% block content %}
+<img class="hero-img" src="/static/img/products/p{{ p.id }}.jpg" alt="">
+<h2>{{ p.name }}</h2>
+<div class="meta"><a href="/category/{{ p.category }}">{{ p.category }}</a> · {{ S.brand_label }} <a href="/brand/{{ p.brand }}">{{ p.brand }}</a></div>
+<p class="price">{{ S.cur }}{{ ('%.2f' % p.price) | v2_num }}</p>
+<p>{{ p.description }}</p>
+<p class="meta">{% if p.stock > 0 %}{{ S.in_stock.format(n=(p.stock | v2_num)) }}{% else %}{{ S.out_of_stock }}{% endif %}</p>
+{% if p.stock > 0 %}
+<form method="post" action="/cart/add/{{ p.id }}">
+  <label>{{ S.quantity }} <input type="number" name="qty" value="1" min="1" style="width:70px"></label>
+  <button class="btn">{{ S.add_to_cart }}</button>
+</form>
+{% else %}
+<p class="error">{{ S.unavailable }}</p>
+{% endif %}
+<p>
+{% if in_wishlist %}
+  <form class="inline" method="post" action="/wishlist/remove/{{ p.id }}"><button class="btn grey">{{ S.remove_wishlist }}</button></form>
+{% else %}
+  <form class="inline" method="post" action="/wishlist/add/{{ p.id }}"><button class="btn grey">{{ S.add_wishlist }}</button></form>
+{% endif %}
+</p>
+<h3>{{ S.qa_h }} ({{ (qas | length) | v2_num }})</h3>
+{% for qa in qas %}
+  <p><strong>{{ S.qa_q }}</strong> {{ qa.question }} <span class="meta">— {{ S.qa_asked_by }} {{ qa.username }}</span><br>
+  <strong>{{ S.qa_a }}</strong> {% if qa.answer %}{{ qa.answer }}{% else %}<em class="meta">{{ S.qa_unanswered }}</em>{% endif %}</p>
+{% else %}<p>{{ S.qa_none }}</p>{% endfor %}
+{% if user %}
+<form method="post" action="/product/{{ p.id }}/ask">
+  <input name="question" size="50" placeholder="{{ S.ask_placeholder }}">
+  <button class="btn grey">{{ S.ask_btn }}</button>
+</form>
+{% endif %}
+
+<h3>{{ S.reviews_h }} {% if p.n_reviews %}<span class="meta">{{ S.avg_from.format(a=(p.avg_stars | v2_num), n=(p.n_reviews | v2_num)) }}</span>{% endif %}</h3>
+{% if user %}
+<h4>{{ S.write_review }}</h4>
+<form method="post" action="/product/{{ p.id }}/review">
+  <label>{{ S.stars_label }}
+    <select name="stars">{% for n in [5,4,3,2,1] %}<option value="{{ n }}">{{ n }}</option>{% endfor %}</select>
+  </label><br><br>
+  <textarea name="body" rows="3" cols="50" placeholder="{{ S.review_placeholder }}"></textarea><br>
+  <button class="btn">{{ S.submit_review }}</button>
+</form>
+{% else %}<p><a href="/login?next=/product/{{ p.id }}">{{ S.log_in }}</a> {{ S.login_to_review }}</p>{% endif %}
+{% for r in reviews %}
+  <p><strong><a href="/shopper/{{ r.username }}">{{ r.username }}</a></strong> — {{ r.stars | v2_num }}{{ S.stars_suffix }}<br>{{ r.body }}<br>
+  <span class="meta">{{ S.found_helpful.format(n=(r.helpful | v2_num)) }}</span>
+  {% if user %}<form class="inline" method="post" action="/review/{{ r.id }}/helpful"><button class="btn grey">{{ S.helpful_btn }}</button></form>{% endif %}</p>
+{% else %}<p>{{ S.no_reviews_dot }}</p>{% endfor %}
+{% endblock %}

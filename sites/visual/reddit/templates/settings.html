@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ S.settings_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.settings_title }}</h1>
+{% if saved_ok %}<div class="notice">{{ S.settings_saved }}</div>{% endif %}
+<div class="card">
+<form class="stack" method="post" action="/settings">
+  <label>{{ S.bio_label }}</label>
+  <textarea name="bio">{{ profile.bio }}</textarea>
+  <button>{{ S.save_changes }}</button>
+</form>
+</div>
+{% endblock %}

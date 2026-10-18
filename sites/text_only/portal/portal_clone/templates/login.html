@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ S.login_title }}{% endblock %}
+{% block body %}
+<div class="full">
+  <div class="signin-panel" style="max-width:520px">
+    <h2>{{ S.login_title }}</h2>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form class="form" method="post">
+      <div class="field"><label>{{ S.f_citizen_id }}</label><input name="citizen_id"></div>
+      <div class="field"><label>{{ S.f_password }}</label><input type="password" name="password"></div>
+      <button class="btn btn-primary">{{ S.login_btn }}</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

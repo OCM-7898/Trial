@@ -1,0 +1,2163 @@
+[
+ {
+  "id": "visual-001",
+  "site": "ministore",
+  "intent": "በብር 1623.70 የሚሸጠው የAmazonBasics ታይፕ-C ወደ HDMI አዳፕተር ምርት 1 ገዝተው ወደ '22 በርች ዌይ, ዴንቨር, 80014' ያስላኩ። ትዕዛዙ በእርግጥ እንዲመዘገብ ቼክአውቱን እስከ መጨረሻው ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%22 በርች ዌይ, ዴንቨር, 80014%",
+    "items": {
+     "1": 1
+    },
+    "total": 1623.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=22 በርች ዌይ, ዴንቨር, 80014",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-002",
+  "site": "ministore",
+  "intent": "በብር 2598.70 የሚሸጠው የAmazon Brand - Solimo ኖን ስቲክ ሃንዲ ምርት አንድ ያስፈልገኛል፣ ማድረሻው '9 ሲዳር ኮርት, ፖርትላንድ, 97205' ነው። በአንድ ትዕዛዝ ሙሉውን ቼክአውት አጠናቅቀው ትዕዛዙን ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%9 ሲዳር ኮርት, ፖርትላንድ, 97205%",
+    "items": {
+     "301": 1
+    },
+    "total": 2598.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/301",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=9 ሲዳር ኮርት, ፖርትላንድ, 97205",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-003",
+  "site": "ministore",
+  "intent": "'310 ኤልም ሮድ, ማዲሰን, 53703'ን የመላኪያ አድራሻ አድርገው በብር 1558.70 የሚሸጠው የAmazonBasics ቪኒል 4 ፓውንድ ዳምቤሎች ምርት አንድ ይዘዙ እና ቼክአውቱን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 ኤልም ሮድ, ማዲሰን, 53703%",
+    "items": {
+     "604": 1
+    },
+    "total": 1558.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/604",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 ኤልም ሮድ, ማዲሰን, 53703",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-004",
+  "site": "ministore",
+  "intent": "በብር 8448.70 የሚሸጠው የAmazon Basics ኤሪያ ምንጣፍ ምርት 1 በአንድ ትዕዛዝ ይዘዙ፣ ወደ '41 ሜፕል ስትሪት, ሪኖ, 89501' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%41 ሜፕል ስትሪት, ሪኖ, 89501%",
+    "items": {
+     "852": 1
+    },
+    "total": 8448.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/852",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=41 ሜፕል ስትሪት, ሪኖ, 89501",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-005",
+  "site": "ministore",
+  "intent": "በአትክልት ምድብ ያለው ዊከር የአበባ ማሰሮ ምርት 1 ገዝተው ወደ '68 ዊሎው ድራይቭ, ቦይዚ, 83702' ያስላኩ። ትዕዛዙ በእርግጥ እንዲመዘገብ ቼክአውቱን እስከ መጨረሻው ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%68 ዊሎው ድራይቭ, ቦይዚ, 83702%",
+    "items": {
+     "1261": 1
+    },
+    "total": 3898.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1261",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=68 ዊሎው ድራይቭ, ቦይዚ, 83702",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-006",
+  "site": "ministore",
+  "intent": "በየቤት እንስሳት ምድብ ያለው የውሻ አንገትጌ ምርት አንድ ያስፈልገኛል፣ ማድረሻው '7 ጁኒፐር አቬኑ, ሴለም, 97301' ነው። በአንድ ትዕዛዝ ሙሉውን ቼክአውት አጠናቅቀው ትዕዛዙን ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%7 ጁኒፐር አቬኑ, ሴለም, 97301%",
+    "items": {
+     "1791": 1
+    },
+    "total": 1038.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1791",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=7 ጁኒፐር አቬኑ, ሴለም, 97301",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-007",
+  "site": "ministore",
+  "intent": "'150 አስፐን ፕሌስ, ኦግደን, 84401'ን የመላኪያ አድራሻ አድርገው 'ጥቁር' ቀለም ያለው የAmazonBasics የኪስ ሚዛን ምርት አንድ ይዘዙ እና ቼክአውቱን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%150 አስፐን ፕሌስ, ኦግደን, 84401%",
+    "items": {
+     "2026": 1
+    },
+    "total": 1298.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2026",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=150 አስፐን ፕሌስ, ኦግደን, 84401",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-008",
+  "site": "ministore",
+  "intent": "'ብርቱካናማ' ቀለም ያለው የAmazonBasics የስፒከር ሽፋን ምርት 1 በአንድ ትዕዛዝ ይዘዙ፣ ወደ '26 ፖፕላር ሌን, ፍሬዝኖ, 93650' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%26 ፖፕላር ሌን, ፍሬዝኖ, 93650%",
+    "items": {
+     "7": 1
+    },
+    "total": 1948.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/7",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=26 ፖፕላር ሌን, ፍሬዝኖ, 93650",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-009",
+  "site": "ministore",
+  "intent": "በስፖርት ምድብ ውስጥ በጣም ርካሹ ምርት (ምድቡን በዋጋ ደርድሩ) 1 ገዝተው ወደ '88 ሎሬል ስትሪት, ቱሰን, 85701' ያስላኩ። ትዕዛዙ በእርግጥ እንዲመዘገብ ቼክአውቱን እስከ መጨረሻው ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%88 ሎሬል ስትሪት, ቱሰን, 85701%",
+    "items": {
+     "726": 1
+    },
+    "total": 518.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E1%88%B5%E1%8D%96%E1%88%AD%E1%89%B5?sort=price_asc",
+   "goto /product/726",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=88 ሎሬል ስትሪት, ቱሰን, 85701",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-010",
+  "site": "ministore",
+  "intent": "በየቤት እንስሳት ምድብ ውስጥ በጣም የተገመገመው ምርት አንድ ያስፈልገኛል፣ ማድረሻው '13 ሲካሞር ሮድ, አክሮን, 44301' ነው። በአንድ ትዕዛዝ ሙሉውን ቼክአውት አጠናቅቀው ትዕዛዙን ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%13 ሲካሞር ሮድ, አክሮን, 44301%",
+    "items": {
+     "1911": 1
+    },
+    "total": 453.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E1%8B%A8%E1%89%A4%E1%89%B5%20%E1%8A%A5%E1%8A%95%E1%88%B5%E1%88%B3%E1%89%B5?sort=reviews",
+   "goto /product/1911",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=13 ሲካሞር ሮድ, አክሮን, 44301",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-011",
+  "site": "ministore",
+  "intent": "በብር 973.70 የሚሸጠው የAmazonBasics የመኪና ቻርጀር ምርት ይግዙ፣ ብዛት 2፣ የማድረሻ አድራሻ '55 ማግኖሊያ ኮርት, ቦካ, 33427'፤ ትዕዛዙ በእርግጥ መመዝገቡን ያረጋግጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%55 ማግኖሊያ ኮርት, ቦካ, 33427%",
+    "items": {
+     "2": 2
+    },
+    "total": 1947.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=55 ማግኖሊያ ኮርት, ቦካ, 33427",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-012",
+  "site": "ministore",
+  "intent": "በሸቀጣሸቀጥ ምድብ ያለው ሳልመን ፊሌ ምርት 3 በአንድ ትዕዛዝ ይዘዙ፣ ወደ '2 ሂኮሪ ዌይ, ፕሮቮ, 84601' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%2 ሂኮሪ ዌይ, ፕሮቮ, 84601%",
+    "items": {
+     "2277": 3
+    },
+    "total": 3896.1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2277",
+   "fill 1 qty=3",
+   "goto /checkout",
+   "fill 1 address=2 ሂኮሪ ዌይ, ፕሮቮ, 84601",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-013",
+  "site": "ministore",
+  "intent": "'ግራጫ' ቀለም ያለው የAmazonBasics የጉዞ መሸከሚያ ምርት 2 ቁርጥራጭ በአንድ ትዕዛዝ ይግዙ፣ ወደ '71 አልደር ድራይቭ, ቺኮ, 95926' ይላክ። ቼክአውቱን ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%71 አልደር ድራይቭ, ቺኮ, 95926%",
+    "items": {
+     "1792": 2
+    },
+    "total": 5977.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1792",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=71 አልደር ድራይቭ, ቺኮ, 95926",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-014",
+  "site": "ministore",
+  "intent": "በብር 713.70 የሚሸጠው የAmazonBasics ሄቪ-ዌት ፕላስቲክ ማንኪያዎች ምርት እና በብር 1168.70 የሚሸጠው የAmazonFresh ፍሬ ቡና ምርት (እያንዳንዱ 1) ወደ ጋሪ ያስገቡ እና እንደ አንድ ትዕዛዝ ወደ '34 ሬድዉድ አቬኑ, ዴቪስ, 95616' ቼክአውት ያድርጉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%34 ሬድዉድ አቬኑ, ዴቪስ, 95616%",
+    "items": {
+     "302": 1,
+     "2273": 1
+    },
+    "total": 1882.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/302",
+   "fill 1 qty=1",
+   "goto /product/2273",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=34 ሬድዉድ አቬኑ, ዴቪስ, 95616",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-015",
+  "site": "ministore",
+  "intent": "በስፖርት ምድብ ያለው ላስቲክ ፐዝል ምንጣፍ ምርት እና በየቤት እንስሳት ምድብ ያለው የስልጠና ፓዶች ምርት እያንዳንዱ 1 ወደ '96 ሳይፕረስ ስትሪት, ቴምፒ, 85281' በአንድ ጭነት ያስፈልገኛል፤ ያንን ትዕዛዝ ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%96 ሳይፕረስ ስትሪት, ቴምፒ, 85281%",
+    "items": {
+     "607": 1,
+     "1795": 1
+    },
+    "total": 4807.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/607",
+   "fill 1 qty=1",
+   "goto /product/1795",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=96 ሳይፕረስ ስትሪት, ቴምፒ, 85281",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-016",
+  "site": "ministore",
+  "intent": "'ነጭ' ቀለም ያለው የRivet ፕላግ-ኢን መብራት ምርት 1 እና በብር 11698.70 የሚሸጠው የAmazonBasics ኮሜርሻል ፓቲዮ ማሞቂያ ምርት 1 በአንድ ትዕዛዝ ይዘዙ፣ ወደ '13 ዲቱር ድራይቭ, ሞቢል, 36602' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%13 ዲቱር ድራይቭ, ሞቢል, 36602%",
+    "items": {
+     "871": 1,
+     "1253": 1
+    },
+    "total": 15987.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/871",
+   "fill 1 qty=1",
+   "goto /product/1253",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=13 ዲቱር ድራይቭ, ሞቢል, 36602",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-017",
+  "site": "ministore",
+  "intent": "ንዑስ ድምሩ ቢያንስ ብር 13000.00 እንዲደርስ የሚያስፈልገውን ያህል ብቻ (ትንሹን ቁጥር) በብር 2338.70 የሚሸጠው የAmazonBasics Licensing ኢንክላይንድ መለያ ምርት ይዘዙ፣ ወደ '48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ%",
+    "items": {
+     "2039": 6
+    },
+    "total": 14032.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2039",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-018",
+  "site": "ministore",
+  "intent": "ንዑስ ድምሩ ቢያንስ ብር 13000.00 እንዲደርስ የሚያስፈልገውን ያህል ብቻ (ትንሹን ቁጥር) በወጥ ቤት ምድብ ያለው የቀርከሃ ሜዛሉና ሰሌዳ ምርት ይዘዙ፣ ወደ '5 ሃርበር ሌን, ኦስቲን, 78701' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%5 ሃርበር ሌን, ኦስቲን, 78701%",
+    "items": {
+     "335": 6
+    },
+    "total": 14032.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/335",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=5 ሃርበር ሌን, ኦስቲን, 78701",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-019",
+  "site": "ministore",
+  "intent": "በቅናሾች ገጽ ላይ ንቁውን የኩፖን ኮድ ያግኙ፣ ከዚያ ያንን ኩፖን ተግብረው በብር 5588.70 የሚሸጠው የAmazonBasics አልካላይን ባትሪዎች ምርት 1 ወደ '22 በርች ዌይ, ዴንቨር, 80014' ይዘዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%22 በርች ዌይ, ዴንቨር, 80014%",
+    "items": {
+     "6": 1
+    },
+    "total": 5029.83
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%22 በርች ዌይ, ዴንቨር, 80014%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/6",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=22 በርች ዌይ, ዴንቨር, 80014",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-020",
+  "site": "ministore",
+  "intent": "በቅናሾች ገጽ ላይ ንቁውን የኩፖን ኮድ ያግኙ፣ ከዚያ ያንን ኩፖን ተግብረው በቤት ምድብ ያለው ላባ ፕሪንት ምርት 1 ወደ '9 ሲዳር ኮርት, ፖርትላንድ, 97205' ይዘዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%9 ሲዳር ኮርት, ፖርትላንድ, 97205%",
+    "items": {
+     "855": 1
+    },
+    "total": 2923.83
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%9 ሲዳር ኮርት, ፖርትላንድ, 97205%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/855",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=9 ሲዳር ኮርት, ፖርትላንድ, 97205",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-021",
+  "site": "ministore",
+  "intent": "በቅናሾች ገጽ ላይ ንቁውን የኩፖን ኮድ ያግኙ፣ ከዚያ ያንን ኩፖን ተግብረው 'ባለብዙ ቀለም' ቀለም ያለው የAmazonBasics ሬዚስታንስ ባንድ ኮምቦ ምርት 1 ወደ '310 ኤልም ሮድ, ማዲሰን, 53703' ይዘዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 ኤልም ሮድ, ማዲሰን, 53703%",
+    "items": {
+     "634": 1
+    },
+    "total": 2689.83
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%310 ኤልም ሮድ, ማዲሰን, 53703%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/634",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 ኤልም ሮድ, ማዲሰን, 53703",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-022",
+  "site": "ministore",
+  "intent": "በወጥ ቤት ምድብ ያለው ስዊርል ፍሉት ብርጭቆ ምርት እና በወጥ ቤት ምድብ ያለው ሮቲ ታዋ ምርትን ያነጻጽሩ፣ እና ርካሹን ብቻ 1 ይዘዙ፣ ወደ '41 ሜፕል ስትሪት, ሪኖ, 89501' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%41 ሜፕል ስትሪት, ሪኖ, 89501%",
+    "items": {
+     "305": 1
+    },
+    "total": 1168.7
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 307
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/305",
+   "goto /product/307",
+   "goto /product/305",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=41 ሜፕል ስትሪት, ሪኖ, 89501",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-023",
+  "site": "ministore",
+  "intent": "በብር 6498.70 የሚሸጠው የAstonica የመብራት ምሰሶ ምርት 1 በመለያ ቅንብሮችዎ ውስጥ ወደተቀመጠው ነባሪ አድራሻ ይዘዙ (በቼክአውት የተጠቆመውን አድራሻ እንዳለ ይተዉት)። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%12 ኦሽን አቬኑ, ታምፓ, 33601%",
+    "items": {
+     "1264": 1
+    },
+    "total": 6498.7
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1264",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-024",
+  "site": "ministore",
+  "intent": "በመለያ ቅንብሮችዎ ውስጥ ነባሪ የመላኪያ አድራሻዎን ወደ '48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ' ይቀይሩ። ከዚያ በብር 2468.70 የሚሸጠው የAmazonBasics የመስታወት ድራይ-ኢሬዝ ቦርድ ክላሲክ ምርት 1 ወደዚያ (አዲሱ ነባሪ) አድራሻ ይዘዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ%",
+    "items": {
+     "1554": 1
+    },
+    "total": 2468.7
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=48 አፕዴት ቡሌቫርድ, ስፕሪንግፊልድ",
+   "goto /product/1554",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-025",
+  "site": "ministore",
+  "intent": "በመጫወቻዎች ምድብ ያለው 12\" Trouncer ቲ-ሬክስ ክላሲክ ምርት 1 እና በብር 713.70 የሚሸጠው የAmazonBasics ካናሪ ሊጋል ፓዶች ክላሲክ ምርት 2 በአንድ ትዕዛዝ ይዘዙ፣ ወደ '150 አስፐን ፕሌስ, ኦግደን, 84401' ይላክ። ሙሉውን ቼክአውት ያጠናቅቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%150 አስፐን ፕሌስ, ኦግደን, 84401%",
+    "items": {
+     "1647": 1,
+     "1559": 2
+    },
+    "total": 3506.1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1647",
+   "fill 1 qty=1",
+   "goto /product/1559",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=150 አስፐን ፕሌስ, ኦግደን, 84401",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-026",
+  "site": "ministore",
+  "intent": "በብር 713.70 የሚሸጠው የAmazonBasics አልካላይን ባትሪዎች ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/4",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-027",
+  "site": "ministore",
+  "intent": "በወጥ ቤት ምድብ ያለው ቫኪዩም ክሊነር ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 309
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/309",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-028",
+  "site": "ministore",
+  "intent": "'ሰማያዊ' ቀለም ያለው የAmazonBasics የልጆች ወንበሮች ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 872
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/872",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-029",
+  "site": "ministore",
+  "intent": "በስፖርት ምድብ ያለው ጃያንት 4-ኢን-አ-ሮው ሴት ምርት እና በብር 2078.70 የሚሸጠው የAmazonFresh ቡና 32oz ጥቅል ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 610
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/610",
+   "fill 2",
+   "goto /product/2278",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-030",
+  "site": "ministore",
+  "intent": "'ቢጫ' ቀለም ያለው የAmazon Brand - Jam and Honey 12\" Wild Onez ነብር ክላሲክ ምርት እና በመጻሕፍትና ወረቀት ምድብ ያለው ነጭ ሰሌዳ ክላሲክ ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1649
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1563
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1649",
+   "fill 2",
+   "goto /product/1563",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-031",
+  "site": "ministore",
+  "intent": "በኤሌክትሮኒክስ ምድብ ያለው ቻርጂንግ ኬብል ምርት ከዊሽሊስትዎ ያስወግዱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/11",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-032",
+  "site": "ministore",
+  "intent": "በብር 16770.00 የሚሸጠው የUnbranded ማይክሮዌቭ ምርት ከዊሽሊስትዎ ያስወግዱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/321",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-033",
+  "site": "ministore",
+  "intent": "የቢሮ ምድብን በዋጋ ደርድረው በጣም ርካሹን የቢሮ ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2060
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2059
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2072
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2112
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E1%89%A2%E1%88%AE?sort=price_asc",
+   "goto /product/2060",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-034",
+  "site": "ministore",
+  "intent": "በአትክልት ምድብ ውስጥ በጣም የተገመገመውን ምርት ያግኙ (በጣም የተገመገመ በሚለው ደርድሩ) እና ወደ ዊሽሊስትዎ ይጨምሩት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1286
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E1%8A%A0%E1%89%B5%E1%8A%AD%E1%88%8D%E1%89%B5?sort=reviews",
+   "goto /product/1286",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-035",
+  "site": "ministore",
+  "intent": "የትዕዛዝ #4 የመላኪያ አድራሻ ወደ '13 ዲቱር ድራይቭ, ሞቢል, 36602' ይቀይሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "address",
+    "value": "13 ዲቱር ድራይቭ, ሞቢል, 36602"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/address",
+   "fill 1 address=13 ዲቱር ድራይቭ, ሞቢል, 36602"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-036",
+  "site": "ministore",
+  "intent": "ትዕዛዝ #4 ይሰርዙ (ሲጠየቁ ያረጋግጡ)። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-037",
+  "site": "ministore",
+  "intent": "የትዕዛዝ #3 የመላኪያ አድራሻ ወደ '22 በርች ዌይ, ዴንቨር, 80014' ይቀይሩ፣ ከዚያ ያንን ትዕዛዝ ይሰርዙ (ሲጠየቁ ያረጋግጡ)። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "address",
+    "value": "22 በርች ዌይ, ዴንቨር, 80014"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/3/address",
+   "fill 1 address=22 በርች ዌይ, ዴንቨር, 80014",
+   "goto /order/3/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-038",
+  "site": "ministore",
+  "intent": "ትዕዛዝ #4 ይሰርዙ፣ ከዚያ የአግኙን ቅጹን ተጠቅመው ትዕዛዝ 4ን በመጥቀስ 'ትዕዛዝ 4 ከእንግዲህ አያስፈልግም፣ እባክዎ ስረዛውን ያረጋግጡ።' የሚለውን መልዕክት ይላኩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "4",
+     "body": "%ትዕዛዝ 4 ከእንግዲህ አያስፈልግም፣ እባክዎ ስረዛውን ያረጋግጡ።%"
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1",
+   "goto /contact",
+   "fill 1 order_ref=4; message=ትዕዛዝ 4 ከእንግዲህ አያስፈልግም፣ እባክዎ ስረዛውን ያረጋግጡ።"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-039",
+  "site": "ministore",
+  "intent": "በቅንብሮች ውስጥ ነባሪ የመላኪያ አድራሻዎን ወደ '9 ሲዳር ኮርት, ፖርትላንድ, 97205' ይቀይሩ፣ እና በስፖርት ምድብ ያለው Hopper ፖርታብል ኩለር ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "9 ሲዳር ኮርት, ፖርትላንድ, 97205"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 613
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=9 ሲዳር ኮርት, ፖርትላንድ, 97205",
+   "goto /product/613",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-040",
+  "site": "ministore",
+  "intent": "'ጥቁር' ቀለም ያለው የAmazon Brand - Solimo ግሪል ፓን ምርት 1 ወደ '310 ኤልም ሮድ, ማዲሰን, 53703' ይዘዙ፣ ከዚያ አሁን ያስገቡትን ትዕዛዝ ይሰርዙ (ሲጠየቁ ያረጋግጡ)። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 ኤልም ሮድ, ማዲሰን, 53703%",
+    "items": {
+     "310": 1
+    },
+    "total": 1558.7
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 5
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/310",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 ኤልም ሮድ, ማዲሰን, 53703",
+   "fill 2",
+   "goto /order/5/cancel",
+   "fill 1"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-041",
+  "site": "ministore",
+  "intent": "በብር 1298.70 የሚሸጠው የAmazon Brand - Solimo የግድግዳ ስቲከር ምርት ወደ ዊሽሊስትዎ ይጨምሩ እና 'ጠንካራ ፍሬም፣ ለመገጣጠም ቀላል፣ ቀለሙ ከፎቶው ጋር ይዛመዳል።' የሚል የ4-ኮከብ ግምገማ በላዩ ላይ ይለጥፉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 854
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 854,
+     "user_id": 1,
+     "stars": 4,
+     "body": "%ጠንካራ ፍሬም፣ ለመገጣጠም ቀላል፣ ቀለሙ ከፎቶው ጋር ይዛመዳል።%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/854",
+   "fill 2",
+   "goto /product/854",
+   "fill 4 stars=4; body=ጠንካራ ፍሬም፣ ለመገጣጠም ቀላል፣ ቀለሙ ከፎቶው ጋር ይዛመዳል።"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-042",
+  "site": "ministore",
+  "intent": "'Zenithware' ብራንድ ስንት ምርቶችን ይሸጣል? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "እንደዚህ ያለ ብራንድ የለም",
+     "ብራንድ የለም",
+     "አልተገኘም",
+     "ምንም ምርት የለም",
+     "0",
+     "ዜሮ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Zenithware",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-043",
+  "site": "ministore",
+  "intent": "የ'ራስ-ውሃ ማጠጫ ታይታኒየም መጽሐፍ መደርደሪያ' ዋጋ ስንት ነው? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገኘም",
+     "እንደዚህ ያለ ምርት የለም",
+     "የለም",
+     "አልተዘረዘረም",
+     "አይገኝም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%88%AB%E1%88%B5-%E1%8B%8D%E1%88%83%20%E1%88%9B%E1%8C%A0%E1%8C%AB%20%E1%89%B3%E1%8B%AD%E1%89%B3%E1%8A%92%E1%8B%A8%E1%88%9D%20%E1%88%98%E1%8C%BD%E1%88%90%E1%8D%8D%20%E1%88%98%E1%8B%B0%E1%88%AD%E1%8B%B0%E1%88%AA%E1%8B%AB",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-044",
+  "site": "ministore",
+  "intent": "የኩፖን ኮድ SAVE25 በቼክአውት ስንት በመቶ ቅናሽ ይሰጣል? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ያልታወቀ",
+     "ልክ ያልሆነ",
+     "እንደዚህ ያለ ኩፖን የለም",
+     "ኩፖን የለም",
+     "አልተገኘም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-045",
+  "site": "ministore",
+  "intent": "በብር 843.70 የሚሸጠው የAmazonBasics ሊቲየም CR123a 3V ባትሪዎች ምርት 1 ይዘዙ። ማዘዝ ካልተቻለ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ከክምችት ውጪ",
+     "ማዘዝ አይቻልም",
+     "አይገኝም",
+     "ሊጨመር አይችልም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/17",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-046",
+  "site": "ministore",
+  "intent": "ተጠቃሚ 'ghost_gary' በግምገማው ውስጥ በብር 3898.70 የሚሸጠው የAmazonBasics ስክሪን ፊልተር ምርት ስንት ኮከብ ሰጠው? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ግምገማ የለም",
+     "አልገመገመም",
+     "እንደዚህ ያለ ተጠቃሚ የለም",
+     "ደረጃ አልሰጠም",
+     "ግምገማ አልሰጠም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-047",
+  "site": "ministore",
+  "intent": "በሸቀጣሸቀጥ ምድብ ውስጥ ከብር 65.00 በታች ዋጋ ያለው ማንኛውንም ምርት ያግኙና ስሙን ይግለጹ። ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ምንም ምርት የለም",
+     "አንድም የለም",
+     "አልተገኘም",
+     "ምርት የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /category/%E1%88%B8%E1%89%80%E1%8C%A3%E1%88%B8%E1%89%80%E1%8C%A5?sort=price_asc",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-048",
+  "site": "ministore",
+  "intent": "የትዕዛዝ #9 የአሁኑ ሁኔታ ምንድን ነው? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "እንደዚህ ያለ ትዕዛዝ የለም",
+     "ትዕዛዝ የለም",
+     "አልተገኘም",
+     "የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /orders",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-049",
+  "site": "ministore",
+  "intent": "በትዕዛዝ #2 ውስጥ በመጫወቻዎች ምድብ ያለው ሚኒ ቆርቆሮዎች ክላሲክ ምርት ስንት ገዙ? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልነበረም",
+     "አልገዙም",
+     "0",
+     "ዜሮ",
+     "አልተካተተም",
+     "በትዕዛዙ ውስጥ የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/2",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-050",
+  "site": "ministore",
+  "intent": "የኩፖን ኮድ FREESHIP በአሁኑ ጊዜ በቼክአውት ስንት በመቶ ቅናሽ ይሰጣል? ኩፖኑ ጊዜው ካለፈ ወይም ቅናሽ ካልሰጠ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ጊዜው አልፏል",
+     "ጊዜው ያለፈ",
+     "ከእንግዲህ ቅናሽ",
+     "ንቁ አይደለም",
+     "0%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-051",
+  "site": "ministore",
+  "intent": "የ'የድመት መቧጠጫ ላውንጀር Ultra' ስንት ክፍሎች በክምችት አሉ? ይህ ከድረ-ገጹ ሊታወቅ ካልቻለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገኘም",
+     "እንደዚህ ያለ ምርት የለም",
+     "የለም",
+     "አልተዘረዘረም",
+     "ምርት የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8B%A8%E1%8B%B5%E1%88%98%E1%89%B5%20%E1%88%98%E1%89%A7%E1%8C%A0%E1%8C%AB%20%E1%88%8B%E1%8B%8D%E1%8A%95%E1%8C%80%E1%88%AD",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-052",
+  "site": "ministore",
+  "intent": "በኤሌክትሮኒክስ ምድብ ያለው ዋየርለስ የኮምፒውተር ማውስ ምርት የምርት ገጽ የጥያቄዎችና መልሶች ክፍል አለው። እዚያ ባለው የሻጩ መልስ መሠረት የስንት ወር ዋስትና አለው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8B%8B%E1%8B%A8%E1%88%AD%E1%88%88%E1%88%B5%20%E1%8B%A8%E1%8A%AE%E1%88%9D%E1%8D%92%E1%8B%8D%E1%89%B0%E1%88%AD%20%E1%88%9B%E1%8B%8D%E1%88%B5%E1%8D%A3%20%E1%8A%A8%E1%8B%A9%E1%8A%A4%E1%88%B5%E1%89%A2%20%E1%8A%93%E1%8A%96%20%E1%88%AA%E1%88%B2%E1%89%A8%E1%88%AD%20%E1%8C%8B%E1%88%AD",
+   "goto /product/52",
+   "stop 3 months"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-053",
+  "site": "ministore",
+  "intent": "'ጥቁር' ቀለም ያለው የAmazonBasics ኤክስቴንሽን ኮርድ ምርት የምርት ገጽ የጥያቄዎችና መልሶች ክፍል መሠረት መደበኛ መላኪያ ስንት የስራ ቀናት ይወስዳል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8A%A4%E1%8A%AD%E1%88%B5%E1%89%B4%E1%8A%95%E1%88%BD%E1%8A%95%20%E1%8A%AE%E1%88%AD%E1%8B%B5-%205%20M%20UK%E1%8D%A3%20%E1%8C%A5%E1%89%81%E1%88%AD",
+   "goto /product/31",
+   "stop 4 business days"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-054",
+  "site": "ministore",
+  "intent": "በብር 4288.70 የሚሸጠው የUnbranded Technoline BC 700 ሴት ምርት የጥያቄዎችና መልሶች ክፍል ውስጥ ስንት ጥያቄዎች ተዘርዝረዋል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Technoline%20BC%20700%20%E1%88%B4%E1%89%B5%E1%8D%A3%20%E1%8C%A5%E1%89%81%E1%88%AD",
+   "goto /product/38",
+   "stop 4"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-055",
+  "site": "ministore",
+  "intent": "በአትክልት ምድብ ያለው የጋዝ ግሪል ሽፋን ምርት የምርት ገጽ ላይ የጥያቄና መልስ ቅጹን ተጠቅመው 'ቀለሙ ከፎቶዎቹ ጋር በትክክል ይዛመዳል?' የሚለውን ጥያቄ ይጠይቁ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 1265,
+     "user_id": 1,
+     "question": "ቀለሙ ከፎቶዎቹ ጋር በትክክል ይዛመዳል?",
+     "answer": ""
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1265",
+   "fill 3 question=ቀለሙ ከፎቶዎቹ ጋር በትክክል ይዛመዳል?"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-056",
+  "site": "ministore",
+  "intent": "'ጥቁር' ቀለም ያለው የAmazonBasics ፔን ቀለም ምርት የምርት ገጽ ላይ 'መለዋወጫ ክፍሎች ማዘዝ ይቻላል?' የሚለውን ጥያቄ ይጠይቁ፣ እንዲሁም ያንን ምርት ወደ ዊሽሊስትዎ ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 2027,
+     "user_id": 1,
+     "question": "መለዋወጫ ክፍሎች ማዘዝ ይቻላል?"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2027
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2027",
+   "fill 3 question=መለዋወጫ ክፍሎች ማዘዝ ይቻላል?",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-057",
+  "site": "ministore",
+  "intent": "በብር 2858.70 የሚሸጠው የAmazonBasics ዋየርለስ የሻወር ስፒከር ምርት የምርት ገጽ ላይ የየትኛው ገምጋሚ ግምገማ በጣም ብዙ የ'ጠቃሚ' ድምጾች አሉት? የተጠቃሚ ስሙን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "minimal_mia"
+    ],
+    "none_of": [
+     "bargain_ben",
+     "bookish_bea",
+     "kitchen_kat",
+     "outdoor_ollie"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%8B%8B%E1%8B%A8%E1%88%AD%E1%88%88%E1%88%B5%20%E1%8B%A8%E1%88%BB%E1%8B%88%E1%88%AD%20%E1%88%B5%E1%8D%92%E1%8A%A8%E1%88%AD%E1%8D%A3%20%E1%8A%A85W%20%E1%8B%B5%E1%88%AB%E1%8B%AD%E1%89%A8%E1%88%AD%20%E1%8C%8B%E1%88%AD",
+   "goto /product/14",
+   "stop minimal_mia"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-058",
+  "site": "ministore",
+  "intent": "በኤሌክትሮኒክስ ምድብ ያለው ኮንቨርተር ኬብል ምርት የምርት ገጽ ላይ የ'gymrat_gus' ግምገማን ስንት ሰዎች ጠቃሚ ሆኖ አገኙት?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amazon%20Basic%20HDMI%20%E1%8B%88%E1%8B%B0%20DVI%20%E1%8A%AE%E1%8A%95%E1%89%A8%E1%88%AD%E1%89%B0%E1%88%AD%20%E1%8A%AC%E1%89%A5%E1%88%8D%E1%8D%A3%20%E1%8C%A5%E1%89%81%E1%88%AD",
+   "goto /product/5",
+   "stop 26"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-059",
+  "site": "ministore",
+  "intent": "'ጥቁር' ቀለም ያለው የAmazonBasics ፖርታብል ብሉቱዝ ስፒከር ምርት የምርት ገጽ ላይ 'kitchen_kat' በጻፈው ግምገማ ላይ የ'ጠቃሚ' ቁልፉን ይጫኑ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 91,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "reviews",
+    "match": {
+     "id": 91
+    },
+    "field": "helpful",
+    "value": 1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/20",
+   "fill 5"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-060",
+  "site": "ministore",
+  "intent": "በብር 1688.70 የሚሸጠው የAmazonBasics ኦን-ኢር የጆሮ ማዳመጫዎች ምርት የምርት ገጽ ላይ በጣም ብዙ የ'ጠቃሚ' ድምጾች ያለውን ግምገማ አግኝተው የ'ጠቃሚ' ቁልፉን ይጫኑ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 103,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/23",
+   "fill 6"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-061",
+  "site": "ministore",
+  "intent": "መደብሩ በብራንዶች ገጹ ላይ ስንት ብራንዶችን ይዘረዝራል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop 99"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-062",
+  "site": "ministore",
+  "intent": "በብራንዶች ገጽ መሠረት የትኛው ብራንድ ብዙ ምርቶችን ይዘረዝራል፡ 'Pinzon by Amazon' ወይስ 'AmazonCommercial'? የብራንዱን ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonCommercial"
+    ],
+    "none_of": [
+     "Pinzon by Amazon"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop AmazonCommercial"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-063",
+  "site": "ministore",
+  "intent": "በብራንዶች ገጽ መሠረት ከ'UMI' እና 'Whole Paws' የትኛው ከፍ ያለ አማካይ የግምገማ ደረጃ አለው? የብራንዱን ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Whole Paws"
+    ],
+    "none_of": [
+     "UMI"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop Whole Paws"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-064",
+  "site": "ministore",
+  "intent": "በኤሌክትሮኒክስ ምድብ ያለው የAMAZONBASICS ቻርጂንግ ኬብል ምርት ዋጋው ስንት ነው? መጠኑን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1038.70",
+     "1,038.70"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=PlayStation%204%20%E1%88%98%E1%89%86%E1%8C%A3%E1%8C%A0%E1%88%AA%E1%8B%AB%20%E1%89%BB%E1%88%AD%E1%8C%82%E1%8A%95%E1%8C%8D%20%E1%8A%AC%E1%89%A5%E1%88%8D",
+   "stop 1038.70"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-065",
+  "site": "ministore",
+  "intent": "በቤት ምድብ በብር 5198.70 የሚሸጠው ብርድ ልብስ ምርት የየትኛው ብራንድ ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Arendale%20%E1%88%9B%E1%8B%AD%E1%8A%AD%E1%88%AE%E1%8D%8B%E1%8B%AD%E1%89%A0%E1%88%AD%20%E1%8D%95%E1%88%AA%E1%8A%95%E1%89%B5%E1%8B%B5%20%E1%8A%A9%E1%8B%8A%E1%88%8D%E1%89%B5%20%E1%89%A5%E1%88%AD%E1%8B%B5%20%E1%88%8D%E1%89%A5%E1%88%B5",
+   "goto /product/858",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-066",
+  "site": "ministore",
+  "intent": "በስፖርት ምድብ ያለው ቪኒል 2 ፓውንድ ዳምቤሎች ምርት በአሁኑ ጊዜ ስንት ክፍሎች በክምችት አሉት?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%89%AA%E1%8A%92%E1%88%8D%202%20%E1%8D%93%E1%8B%8D%E1%8A%95%E1%8B%B5%20%E1%8B%B3%E1%88%9D%E1%89%A4%E1%88%8E%E1%89%BD",
+   "goto /product/617",
+   "stop 12"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-067",
+  "site": "ministore",
+  "intent": "የትኛው ርካሽ ነው፣ በወጥ ቤት ምድብ ያለው የAmazonCommercial ዕቃ ሴት ምርት ወይስ በወጥ ቤት ምድብ ያለው የAmazonCommercial ቪኒል ጓንቶች ምርት? ትክክለኛውን የምርት ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ሄቪ ዲዩቲ ፓውደር ፍሪ ዲስፖዘብል ቪኒል ጓንቶች"
+    ],
+    "none_of": [
+     "7-ፒስ ስቴንለስ ስቲል ኢንዳክሽን ሬዲ የማብሰያ ዕቃ ሴት"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=7-%E1%8D%92%E1%88%B5%20%E1%88%B5%E1%89%B4%E1%8A%95%E1%88%88%E1%88%B5%20%E1%88%B5%E1%89%B2%E1%88%8D%20%E1%8A%A2%E1%8A%95%E1%8B%B3%E1%8A%AD%E1%88%BD%E1%8A%95%20%E1%88%AC%E1%8B%B2%20%E1%8B%A8%E1%88%9B%E1%89%A5%E1%88%B0%E1%8B%AB%20%E1%8B%95%E1%89%83%20%E1%88%B4%E1%89%B5",
+   "goto /?q=%E1%88%84%E1%89%AA%20%E1%8B%B2%E1%8B%A9%E1%89%B2%20%E1%8D%93%E1%8B%8D%E1%8B%B0%E1%88%AD%20%E1%8D%8D%E1%88%AA%20%E1%8B%B2%E1%88%B5%E1%8D%96%E1%8B%98%E1%89%A5%E1%88%8D%20%E1%89%AA%E1%8A%92%E1%88%8D%20%E1%8C%93%E1%8A%95%E1%89%B6%E1%89%BD",
+   "stop ሄቪ ዲዩቲ ፓውደር ፍሪ ዲስፖዘብል ቪኒል ጓንቶች"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-068",
+  "site": "ministore",
+  "intent": "ከእነዚህ ውስጥ በጣም ውዱ የትኛው ነው፡ በኤሌክትሮኒክስ ምድብ ያለው የAmazonBasics ኢተርኔት አዳፕተር ምርት, በኤሌክትሮኒክስ ምድብ ያለው የAmazonBasics ስክሩ አምፖል ምርት, በኤሌክትሮኒክስ ምድብ ያለው የUnbranded ኦዲዮ ስፕሊተር ምርት? ትክክለኛውን የምርት ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "USB 3.0 ወደ 10/100/1000 ጊጋቢት ኢተርኔት አዳፕተር"
+    ],
+    "none_of": [
+     "ኤልኢዲ E27 ኤዲሰን ስክሩ አምፖል",
+     "5-ዌይ ኦክስ ኦዲዮ ስፕሊተር፣ ለጆሮ ማዳመጫዎች፣ ጥቁር"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=USB%203.0%20%E1%8B%88%E1%8B%B0%2010/100/1000%20%E1%8C%8A%E1%8C%8B%E1%89%A2%E1%89%B5%20%E1%8A%A2%E1%89%B0%E1%88%AD%E1%8A%94%E1%89%B5%20%E1%8A%A0%E1%8B%B3%E1%8D%95%E1%89%B0%E1%88%AD",
+   "goto /?q=%E1%8A%A4%E1%88%8D%E1%8A%A2%E1%8B%B2%20E27%20%E1%8A%A4%E1%8B%B2%E1%88%B0%E1%8A%95%20%E1%88%B5%E1%8A%AD%E1%88%A9%20%E1%8A%A0%E1%88%9D%E1%8D%96%E1%88%8D",
+   "goto /?q=5-%E1%8B%8C%E1%8B%AD%20%E1%8A%A6%E1%8A%AD%E1%88%B5%20%E1%8A%A6%E1%8B%B2%E1%8B%AE%20%E1%88%B5%E1%8D%95%E1%88%8A%E1%89%B0%E1%88%AD%E1%8D%A3%20%E1%88%88%E1%8C%86%E1%88%AE%20%E1%88%9B%E1%8B%B3%E1%88%98%E1%8C%AB%E1%8B%8E%E1%89%BD%E1%8D%A3%20%E1%8C%A5%E1%89%81%E1%88%AD",
+   "stop USB 3.0 ወደ 10/100/1000 ጊጋቢት ኢተርኔት አዳፕተር"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-069",
+  "site": "ministore",
+  "intent": "በብር 3898.70 የሚሸጠው የAmazonBasics ስክሪን ፊልተር ምርት ስንት ግምገማዎች አሉት?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E1%88%B5%E1%88%8A%E1%88%9D%20%E1%88%9B%E1%8C%8D%E1%8A%94%E1%89%B2%E1%8A%AD%20%E1%8D%95%E1%88%AB%E1%8B%AD%E1%89%AC%E1%88%B2%20%E1%88%B5%E1%8A%AD%E1%88%AA%E1%8A%95%20%E1%8D%8A%E1%88%8D%E1%89%B0%E1%88%AD%E1%8D%A3%20%E1%88%8813%20%E1%8A%A2%E1%8A%95%E1%89%BD%20MacBook%20Air%202018",
+   "goto /product/53",
+   "stop 25"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-070",
+  "site": "ministore",
+  "intent": "በብር 2923.70 የሚሸጠው የAmazonBasics ሳህን ሴት ምርት ስንት የ1-ኮከብ ግምገማዎች አሉት?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=10-%E1%8D%92%E1%88%B5%20%E1%8B%A8%E1%88%9B%E1%8B%B0%E1%89%A3%E1%88%88%E1%89%82%E1%8B%AB%20%E1%88%B3%E1%88%85%E1%8A%95%20%E1%88%B4%E1%89%B5%E1%8D%A3%20%E1%8A%A8%E1%8A%AD%E1%8B%B3%E1%8A%96%E1%89%BD%20%E1%8C%8B%E1%88%AD",
+   "goto /product/489",
+   "stop 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-071",
+  "site": "ministore",
+  "intent": "በብር 3898.70 የሚሸጠው የAmazonBasics ስክሪን ፊልተር ምርት የሚታየው አማካይ የኮከብ ደረጃ ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3.4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop 3.4"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-072",
+  "site": "ministore",
+  "intent": "የትኛው ከፍ ያለ አማካይ የኮከብ ደረጃ አለው፡ በወጥ ቤት ምድብ ያለው ትራዲሽናል ሃይቦል ብርጭቆ ምርት ወይስ በብር 2923.70 የሚሸጠው የAmazonBasics ሳህን ሴት ምርት? ትክክለኛውን የምርት ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10-ፒስ የማደባለቂያ ሳህን ሴት፣ ከክዳኖች ጋር"
+    ],
+    "none_of": [
+     "ትራዲሽናል ሃይቦል ብርጭቆ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/421",
+   "goto /product/489",
+   "stop 10-ፒስ የማደባለቂያ ሳህን ሴት፣ ከክዳኖች ጋር"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-073",
+  "site": "ministore",
+  "intent": "በቅናሾች ገጽ ላይ የተዘረዘረው በአሁኑ ጊዜ ንቁ የሆነው የኩፖን ኮድ ምንድን ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SAVE10"
+    ],
+    "none_of": [
+     "WELCOME5",
+     "FREESHIP"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop SAVE10"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-074",
+  "site": "ministore",
+  "intent": "በሸቀጣሸቀጥ ምድብ ያለው ኤስፕሬሶ ፖዶች ምርት ላይ 'ትኩስ ሆኖ ደረሰ እና ማሸጊያው በደንብ ቆይቷል።' የሚል የ5-ኮከብ ግምገማ ይጻፉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 2287,
+     "user_id": 1,
+     "stars": 5,
+     "body": "%ትኩስ ሆኖ ደረሰ እና ማሸጊያው በደንብ ቆይቷል።%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=50%20Ct.%20Solimo%20%E1%8A%A4%E1%88%B5%E1%8D%95%E1%88%AC%E1%88%B6%20%E1%8D%96%E1%8B%B6%E1%89%BD",
+   "goto /product/2287",
+   "fill 4 stars=5; body=ትኩስ ሆኖ ደረሰ እና ማሸጊያው በደንብ ቆይቷል።"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-075",
+  "site": "ministore",
+  "intent": "የአግኙን ቅጹን ተጠቅመው ትዕዛዝ 2ን በመጥቀስ 'ትዕዛዝ 2 አንድ ዕቃ ጎድሎት መጣ፣ እባክዎ ይመክሩ።' የሚለውን መልዕክት ይላኩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "2",
+     "body": "%ትዕዛዝ 2 አንድ ዕቃ ጎድሎት መጣ፣ እባክዎ ይመክሩ።%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /contact",
+   "fill 1 order_ref=2; message=ትዕዛዝ 2 አንድ ዕቃ ጎድሎት መጣ፣ እባክዎ ይመክሩ።"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ }
+]

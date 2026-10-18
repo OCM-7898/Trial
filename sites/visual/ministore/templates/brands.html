@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ S.brands_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.brands_title }}</h2>
+<p class="meta">{{ S.brands_intro }}</p>
+<table>
+  <tr><th>{{ S.th_brand }}</th><th>{{ S.th_products }}</th><th>{{ S.th_avg_rating }}</th></tr>
+  {% for r in rows %}
+  <tr>
+    <td><a href="/brand/{{ r.brand | urlencode }}">{{ r.brand }}</a></td>
+    <td>{{ r.n_products | v2_num }}</td>
+    <td>{% if r.avg_stars is not none %}{{ r.avg_stars | v2_num }}{% else %}{{ S.no_rating }}{% endif %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

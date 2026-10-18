@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if intro %}<p class="lede">{{ intro }}</p>{% endif %}
+  {% if error %}<div class="error"><p>{{ error }}</p></div>{% endif %}
+  <p class="hint">{{ S.office_list }} {% for o in offices %}{{ o.name }}{% if not loop.last %}; {% endif %}{% endfor %}</p>
+  <p class="hint">{{ S.available_dates }} {{ dates|join(', ') }}</p>
+  <p class="hint">{{ S.available_times }} {{ times|join(', ') }}</p>
+  <form class="form" method="post">
+    <div class="field"><label>{{ S.offices }}</label><input name="office"></div>
+    <div class="field"><label>{{ S.available_dates }}</label><input name="slot_date"></div>
+    <div class="field"><label>{{ S.available_times }}</label><input name="slot_time"></div>
+    <button class="btn btn-primary">{{ S.book }}</button>
+  </form>
+</div>
+{% endblock %}

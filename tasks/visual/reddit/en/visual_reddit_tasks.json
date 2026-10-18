@@ -1,0 +1,2086 @@
+[
+ {
+  "id": "visualreddit-001",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Submit a post to f/technology titled 'Draft: keyboard thoughts' with body 'Writing this up properly later.', then EDIT that post so its title is 'Sixty percent keyboards, one year in' (keep the body). Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "Sixty percent keyboards, one year in",
+     "body": "Writing this up properly later.",
+     "forum_id": 9,
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "posts",
+    "match": {
+     "title": "Draft: keyboard thoughts"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=technology; title=Draft: keyboard thoughts; body=Writing this up properly later.",
+   "goto /post/2001/edit",
+   "fill 0 title=Sixty percent keyboards, one year in"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-002",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Submit a post to f/movies titled 'Wrong sub, ignore' with body 'Posted by mistake.', then permanently DELETE that same post. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "deletions",
+    "match": {
+     "kind": "post",
+     "title": "Wrong sub, ignore",
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "posts",
+    "match": {
+     "title": "Wrong sub, ignore"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=movies; title=Wrong sub, ignore; body=Posted by mistake.",
+   "goto /post/2001/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-003",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Submit a post to f/askanything titled 'Does anyone else triple-check locked doors?' with body 'Asking for me.', then add the FIRST comment on your own new post: 'Update: yes, just did it again.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "Does anyone else triple-check locked doors?",
+     "body": "Asking for me.",
+     "forum_id": 6,
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 2001,
+     "author_id": 1,
+     "body": "Update: yes, just did it again."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=askanything; title=Does anyone else triple-check locked doors?; body=Asking for me.",
+   "fill 3 body=Update: yes, just did it again."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-004",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Create a new community named 'espresso' with the description 'Home espresso: machines, beans and technique.', then submit its first post titled 'Dialing in without wasting a kilo' with body 'Start coarse, move fast.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "forums",
+    "match": {
+     "name": "espresso",
+     "description": "Home espresso: machines, beans and technique."
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "Dialing in without wasting a kilo",
+     "body": "Start coarse, move fast.",
+     "forum_id": 13,
+     "author_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /create_community",
+   "fill 0 name=espresso; description=Home espresso: machines, beans and technique.",
+   "goto /submit",
+   "fill 0 forum=espresso; title=Dialing in without wasting a kilo; body=Start coarse, move fast."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-005",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the highest-scored post in f/technology (sort by Top), then submit a NEW post of your own to f/technology whose title is that post's title prefixed with 'RE: ', with the body 'Continuing the discussion from the top thread.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "%RE: Does anyone else keep a vertical monitors just in case?%",
+     "body": "Continuing the discussion from the top thread.",
+     "forum_id": 9,
+     "author_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/15",
+   "goto /submit",
+   "fill 0 forum=technology; title=RE: Does anyone else keep a vertical monitors just in case? (62); body=Continuing the discussion from the top thread."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-006",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Submit a post to f/personalfinance titled 'The envelope month: results' with body 'Spreadsheet in the comments.', then SAVE your own new post to your saved list. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "The envelope month: results",
+     "body": "Spreadsheet in the comments.",
+     "forum_id": 11,
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 2001
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=personalfinance; title=The envelope month: results; body=Spreadsheet in the comments.",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-007",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Make sure your recorded vote on post 33 ends up as a DOWNVOTE — if you have already upvoted it, switch the vote. Your final recorded vote must be the downvote and the score must reflect it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 33,
+     "user_id": 1,
+     "dir": -1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "posts",
+    "match": {
+     "id": 33
+    },
+    "field": "score",
+    "value": 182
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/33",
+   "fill 0",
+   "fill 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-008",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "On post 2, find the TOP-LEVEL comment with the highest score and upvote that comment. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comment_votes",
+    "match": {
+     "comment_id": 11,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/2",
+   "fill 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-009",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Sort f/technology by Top and open the SECOND post shown. Downvote it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 880,
+     "user_id": 1,
+     "dir": -1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/880",
+   "fill 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-010",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Use the site search to find the post titled exactly 'My succulents finally flowered — patience pays' and upvote it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 43,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/43",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-011",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Upvote all three of these posts: 53, 63 and 73. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 53,
+     "user_id": 1,
+     "dir": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 63,
+     "user_id": 1,
+     "dir": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 73,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/53",
+   "fill 0",
+   "goto /post/63",
+   "fill 0",
+   "goto /post/73",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-012",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Comment on post 83 with exactly: 'Adding this to my weekend list.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 83,
+     "author_id": 1,
+     "body": "Adding this to my weekend list."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/83",
+   "fill 3 body=Adding this to my weekend list."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-013",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "On post 4, find the top-level comment written by u/lumen_lark and REPLY to that comment with 'Came here to say this too.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 4,
+     "author_id": 1,
+     "parent_id": 24,
+     "body": "Came here to say this too."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/4",
+   "fill 7 body=Came here to say this too."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-014",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "On post 8, reply to the highest-scored TOP-LEVEL comment with 'The thread delivered, as always.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "parent_id": 53,
+     "author_id": 1,
+     "body": "The thread delivered, as always."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/8",
+   "fill 17 body=The thread delivered, as always."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-015",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "On post 93, add a top-level comment 'Two-part question incoming.' and then REPLY to your own new comment with 'Part two: never mind, solved it.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 93,
+     "author_id": 1,
+     "body": "Two-part question incoming."
+    }
+   },
+   {
+    "type": "db_reply_to",
+    "author_id": 1,
+    "post_id": 93,
+    "parent_body": "Two-part question incoming.",
+    "child_body": "Part two: never mind, solved it."
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/93",
+   "fill 3 body=Two-part question incoming.",
+   "fill 27 body=Part two: never mind, solved it."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-016",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Post 12 in f/whatisthisthing asks what a mystery object is. One of the comments identifies it. REPLY to that identifying comment with 'Thank you, mystery solved!'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "parent_id": 66,
+     "author_id": 1,
+     "body": "Thank you, mystery solved!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/12",
+   "fill 5 body=Thank you, mystery solved!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-017",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Find the MOST-COMMENTED post in f/askanything (sort by Most commented) and add the comment 'This thread is the real FAQ.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1969,
+     "author_id": 1,
+     "body": "This thread is the real FAQ."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1969",
+   "fill 3 body=This thread is the real FAQ."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-018",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "You are currently subscribed to three communities. Unsubscribe ONLY from f/carspotting, keeping the other subscriptions. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 7
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 9
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/carspotting",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-019",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Clean up your subscriptions: unsubscribe from every community EXCEPT f/cooking, which you keep. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 7
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 9
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/technology",
+   "fill 0",
+   "goto /f/carspotting",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-020",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Save posts 113, 123 and 133 to your saved list. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 113
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 123
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 133
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/113",
+   "fill 2",
+   "goto /post/123",
+   "fill 2",
+   "goto /post/133",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-021",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Exactly one of the posts in your saved list belongs to f/gardening. Remove ONLY that one from your saved posts. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 43
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 254
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1376
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1847
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /saved",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-022",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Empty your saved list completely, then save ONLY post 143 to it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 43
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 254
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1847
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 143
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /saved",
+   "fill 0",
+   "fill 0",
+   "fill 0",
+   "fill 0",
+   "goto /post/143",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-023",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Do all three: save post 163, save post 174, and unsubscribe from f/technology. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 163
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 174
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 9
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/163",
+   "fill 2",
+   "goto /post/174",
+   "fill 2",
+   "goto /f/technology",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-024",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Among the posts in your saved list, find the one with the MOST comments and upvote it. A number in parentheses at the end of a post title is part of the title, not its comment count. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 254,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/254",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-025",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the profile of u/lotus_leila. How many of their posts are IMAGE posts? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "7"
+   }
+  ],
+  "solution": [
+   "goto /u/lotus_leila",
+   "stop 7"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-026",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "How many posts in f/askanything are marked LOCKED? Check every page of the community. Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "6"
+   }
+  ],
+  "solution": [
+   "goto /f/askanything?sort=new",
+   "stop 6"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "visualreddit-027",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Among the first FIVE posts shown when f/carspotting is sorted by Top, save the one with the most comments. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1320
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1320",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-028",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the highest-scored post in f/buyitforlife (sort by Top), then upvote ITS highest-scored top-level comment. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comment_votes",
+    "match": {
+     "comment_id": 11907,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1970",
+   "fill 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-029",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Post 52 in f/whatisthisthing shows a mystery object. According to the comment that identifies it, what is the object? Answer with its name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "1\" Round Ring Binder"
+   }
+  ],
+  "solution": [
+   "goto /post/52",
+   "stop 1\" Round Ring Binder"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-030",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "From the profile of u/lotus_leila, find their HIGHEST-scored post and save it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 472
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /u/lotus_leila",
+   "goto /post/472",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-031",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the post with ID 184 (its page is /post/184) and report BOTH its score and its number of comments.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "218"
+   },
+   {
+    "type": "answer_match",
+    "answer": "4"
+   }
+  ],
+  "solution": [
+   "goto /post/184",
+   "stop score 218, 4 comments"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-032",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Compare posts 204 and 214. Report BOTH the ID of the higher-scored one AND the difference between their scores.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "204",
+    "none_of": [
+     "214"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "462"
+   }
+  ],
+  "solution": [
+   "goto /post/204",
+   "goto /post/214",
+   "stop 204 is higher by 462"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-033",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "What is the post karma shown on the profile of u/gearhead_gia?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4,885",
+     "4885"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /u/gearhead_gia",
+   "stop 4885"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-034",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Use the site search to find the post titled exactly 'The Cappadocia itinerary I wish someone had given me (93)'. Report BOTH its score and the community it is in.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "706"
+   },
+   {
+    "type": "answer_match",
+    "answer": "travel"
+   }
+  ],
+  "solution": [
+   "goto /post/225",
+   "stop 706, f/travel"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-035",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the post with ID 4 (its page is /post/4; it is in f/projectcars) and report BOTH how many photos it has and the date it was posted (YYYY-MM-DD).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "3"
+   },
+   {
+    "type": "answer_match",
+    "answer": "2026-04-01"
+   }
+  ],
+  "solution": [
+   "goto /post/4",
+   "stop 3 photos, posted 2026-04-01"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-036",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "How many posts does f/homegadgets contain in total? Use the page navigation to count across all pages.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "40"
+   }
+  ],
+  "solution": [
+   "goto /f/homegadgets",
+   "stop 40"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-037",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Across how many pages do the posts of f/askanything run (the site shows 15 posts per page)?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "17"
+   }
+  ],
+  "solution": [
+   "goto /f/askanything",
+   "stop 17"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-038",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open posts 235 and 245 and report the SUM of their two scores.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "743"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/235",
+   "goto /post/245",
+   "stop 743"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-039",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "How many comments do posts 255 and 265 have COMBINED?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "17"
+   }
+  ],
+  "solution": [
+   "goto /post/255",
+   "goto /post/265",
+   "stop 17"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-040",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Report post 275 for Spam with the details 'Same link posted in four communities'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reports",
+    "match": {
+     "post_id": 275,
+     "user_id": 1,
+     "reason": "Spam",
+     "details": "Same link posted in four communities"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/275/report",
+   "fill 0 reason=Spam; details=Same link posted in four communities"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-041",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "On post 285: first SAVE it, then report it for Misinformation with details 'Claims are contradicted in the comments'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 285
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reports",
+    "match": {
+     "post_id": 285,
+     "user_id": 1,
+     "reason": "Misinformation",
+     "details": "Claims are contradicted in the comments"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/285",
+   "fill 2",
+   "goto /post/285/report",
+   "fill 0 reason=Misinformation; details=Claims are contradicted in the comments"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-042",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Set your profile bio to exactly: 'Benchmark agent. Mostly here for the car photos.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "bio",
+    "value": "Benchmark agent. Mostly here for the car photos."
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 0 bio=Benchmark agent. Mostly here for the car photos."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-043",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Your profile currently has a bio. Open Settings and clear it so your bio ends up completely EMPTY. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "bio",
+    "value": ""
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 0 bio="
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-044",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Post a comment saying 'Late to this thread.' on post 166. If this is not possible on the site, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 166,
+     "author_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/166",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-045",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Upvote post 215. If this is not possible on the site, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 215,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/215",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-046",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open post 2001 and report its score. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /post/2001",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-047",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Subscribe to the community f/cryptocurrency. If this is not possible on the site, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /communities",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-048",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Delete post 295 (posted by u/sana_codes). If this is not possible on the site, answer N/A. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "id": 295
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/295",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-049",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "You are the author of the post titled '8 days in Tbilisi: honest trip report'. Edit it so the title becomes 'Updated: 8 days in Tbilisi: honest trip report' (keep the body). Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "id": 1,
+     "title": "Updated: 8 days in Tbilisi: honest trip report",
+     "body": "Book the first night only and stay flexible. Book the first night only and stay flexible. Budget travellers: lunch menus are your best friend."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1/edit",
+   "fill 0 title=Updated: 8 days in Tbilisi: honest trip report"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-050",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Permanently delete YOUR OWN post titled 'How do you handle money talks with family? (179)'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "posts",
+    "match": {
+     "id": 3
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/3/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-051",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "You previously commented \"This is the itinerary I'm stealing, thanks.\" on the post titled 'Overnight trains vs flights for Cappadocia? (85)'. Edit that comment to say 'Revisited this — still holds up.'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "id": 5702,
+     "body": "Revisited this — still holds up."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /comment/5702/edit",
+   "fill 0 body=Revisited this — still holds up."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-052",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Delete YOUR OWN comment \"Trains every time. The view IS the trip.\" on the post titled 'Packing list that survived 10 days in Tbilisi'. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "id": 6458
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "id": 5444
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "id": 5702
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /comment/6458/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-053",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Profiles show both post karma and comment karma. Which of u/chai_addict and u/midnight_owl has the HIGHER comment karma? Answer with the username.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "chai_addict",
+    "none_of": [
+     "midnight_owl"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /u/chai_addict",
+   "goto /u/midnight_owl",
+   "stop chai_addict"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-054",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open post 98, then open its author's profile and report the month the author joined Redora (YYYY-MM).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "2020-05"
+   }
+  ],
+  "solution": [
+   "goto /post/98",
+   "goto /u/apex_anders",
+   "stop 2020-05"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-055",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Which of u/salty_sailor and u/quiet_quokka joined Redora EARLIER (profiles show the join month)? Answer with the username.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "quiet_quokka",
+    "none_of": [
+     "salty_sailor"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /u/salty_sailor",
+   "goto /u/quiet_quokka",
+   "stop quiet_quokka"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-056",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the profile of u/pixel_pusher, find their HIGHEST-scored comment, open the post that comment was made on, and upvote that comment there. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comment_votes",
+    "match": {
+     "comment_id": 844,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /u/pixel_pusher",
+   "goto /post/144",
+   "fill 22"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-057",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the About page of f/cooking and report its community rule number 2, word for word.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Credit the source when sharing someone else's recipe."
+   }
+  ],
+  "solution": [
+   "goto /f/cooking/about",
+   "stop Credit the source when sharing someone else's recipe."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-058",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "According to their About pages, which community has MORE members: f/travel or f/movies? Answer with the community name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "movies",
+    "none_of": [
+     "travel"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/travel/about",
+   "goto /f/movies/about",
+   "stop f/movies"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-059",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the About page of f/personalfinance and find its FIRST listed moderator. Open that moderator's profile and report their POST karma.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4,093",
+     "4093"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/personalfinance/about",
+   "goto /u/gravel_guru",
+   "stop 4093"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-060",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "u/bokeh_bilal moderates exactly ONE community (moderators are listed on each community's About page). Find that community and subscribe to it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 5
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 6
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 3
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 12
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 10
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 11
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 2
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 8
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/homegadgets/about",
+   "goto /f/homegadgets",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-061",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Open the About page of f/technology and report BOTH its member count and the month it was created (YYYY-MM).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "27,184",
+     "27184"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "2022-02"
+   }
+  ],
+  "solution": [
+   "goto /f/technology/about",
+   "stop 27,184 members, created 2022-02"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-062",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Each community's About page shows its pinned post. Save the pinned post of f/travel to your saved list. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 666
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/travel/about",
+   "goto /post/666",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-063",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Posts can carry a flair. Using the flair filter on f/cooking, how many of its posts carry the 'Recipe' flair? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "34"
+   }
+  ],
+  "solution": [
+   "goto /f/cooking?flair=Recipe",
+   "stop 34"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-064",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Sort f/carspotting by Top. Among the posts on the FIRST page, which one has the most awards? Answer with its post ID.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "1318"
+   }
+  ],
+  "solution": [
+   "goto /f/carspotting?sort=top",
+   "stop 1318"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-065",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "Sort f/gardening by Top. Among the first FIVE posts shown, exactly one carries the 'Harvest' flair — upvote it. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 673,
+     "user_id": 1,
+     "dir": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 1736,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 877,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 1769,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 1929,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/673",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-066",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "What flair does post 305 carry?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Harvest",
+    "none_of": [
+     "Help",
+     "Tip"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/305",
+   "stop Harvest"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-067",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "How many comments does post 315 have?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "7"
+   }
+  ],
+  "solution": [
+   "goto /post/315",
+   "stop 7"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-068",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "According to its About page, how many members does f/movies have?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "24,400",
+     "24400"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/movies/about",
+   "stop 24,400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-069",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "Subscribe to f/movies. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 10
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/movies",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-070",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "Save post 335 to your saved list. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 335
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/335",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-071",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "Comment 'Nice one.' on post 345. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 345,
+     "author_id": 1,
+     "body": "Nice one."
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/345",
+   "fill 3 body=Nice one."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-072",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "According to the site rules, within how many hours do moderators review reports?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "48"
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 48 hours"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-073",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "Across how many pages do the posts of f/cooking run (15 posts per page)?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "15"
+   }
+  ],
+  "solution": [
+   "goto /f/cooking",
+   "stop 15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-074",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "Use the search to find the post titled exactly 'Switched to dumb phones after years of resisting — verdict (32)' and end on that post's page.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "final_url",
+    "path": "/post/357"
+   }
+  ],
+  "solution": [
+   "goto /post/357"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-075",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "Upvote post 366. Log in as agent_smith (password: password123) if needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 366,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/366",
+   "fill 0"
+  ],
+  "max_steps": 30
+ }
+]

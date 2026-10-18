@@ -1,0 +1,2147 @@
+[
+ {
+  "id": "selam-001",
+  "site": "selam",
+  "intent": "एक वयस्क के लिए 2026-04-20 को अदीस अबाबा (ADD) से दुबई (DXB) की एकतरफ़ा उड़ान बुक करें, यात्री विवरण दर्ज करें, और भुगतान किए बिना अंतिम भुगतान-समीक्षा पृष्ठ पर रुकें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 2,
+    "lang": "hi"
+   }
+  ],
+  "solution": [
+   "goto /book/results?origin=ADD&destination=DXB&depart=2026-04-20&adults=1",
+   "goto /book/passengers?itinerary=103435.1",
+   "fill 0 first_name_1=टेस्ट; last_name_1=पैसेंजर; contact_email=test.passenger@example.com; contact_phone=+251911000000",
+   "goto /book/review",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-002",
+  "site": "selam",
+  "intent": "संदर्भ WGYBNA और उपनाम असेफ़ा वाली बुकिंग खोलें। यात्रा-योजना की उड़ान संख्याएँ बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 5,
+    "lang": "hi"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM111"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM110"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "goto /manage/WGYBNA",
+   "stop SM111, SM110"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-003",
+  "site": "selam",
+  "intent": "बुकिंग W7JKUF (उपनाम तेरेफ़े) की आउटबाउंड उड़ान को बाद की तिथि पर ले जाना है। एक उपलब्ध विकल्प चुनें, किराया अंतर और कोई परिवर्तन शुल्क दिखाएँ, और भुगतान की पुष्टि से पहले रुकें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 6,
+    "lang": "hi"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "change_requests",
+    "match": {
+     "booking_id": 16,
+     "new_flight_id": [
+      100688,
+      100689,
+      100690,
+      100691,
+      100692,
+      100693,
+      100694,
+      100695,
+      100696,
+      100697,
+      100698,
+      100699,
+      100700,
+      100701,
+      100702,
+      100703,
+      100704,
+      100705,
+      100706,
+      100707,
+      100708,
+      100709,
+      100710,
+      100711,
+      100712,
+      100713,
+      100714,
+      100715
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=W7JKUF; surname=तेरेफ़े",
+   "goto /manage/W7JKUF/change",
+   "fill 0 new_flight_id=100688",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-004",
+  "site": "selam",
+  "intent": "जाँचें कि बुकिंग SPMVJC (उपनाम केबेदे) ऑनलाइन रिफ़ंड की जा सकती है या नहीं। यदि हाँ, तो अंतिम जमा चरण तक अनुरोध पूरा करें। यदि नहीं, तो दिया गया कारण बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "वेबसाइट पर नहीं की गई",
+     "जिसने इसे जारी किया"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 21
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=SPMVJC; surname=केबेदे",
+   "goto /manage/SPMVJC/refund",
+   "stop यह बुकिंग वेबसाइट पर नहीं की गई थी, इसलिए रिफ़ंड का अनुरोध उस कार्यालय के ज़रिए करना होगा जिसने इसे जारी किया।"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-005",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA (उपनाम असेफ़ा) के लिए चेक-इन करें और बोर्डिंग पास डाउनलोड करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 8,
+    "lang": "hi"
+   }
+  ],
+  "solution": [
+   "goto /checkin",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "fill 0",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-006",
+  "site": "selam",
+  "intent": "बुकिंग N9JKBF (उपनाम हाइले) खोलें और आउटबाउंड उड़ान के लिए एक उपलब्ध आइल सीट चुनें। सीट संख्या और उसकी कीमत बताएँ, और भुगतान से पहले रुकें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 10,
+    "lang": "hi"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1B",
+     "1C",
+     "1D",
+     "1E",
+     "2B",
+     "2C",
+     "2D",
+     "2E",
+     "3B",
+     "3C",
+     "3D",
+     "3E",
+     "4B",
+     "4C",
+     "4D",
+     "4E",
+     "5B",
+     "5C",
+     "5D",
+     "5E",
+     "6B",
+     "6C",
+     "6D",
+     "6E",
+     "7C",
+     "7D",
+     "7F",
+     "7G",
+     "8C",
+     "8D",
+     "8F",
+     "8G",
+     "9C",
+     "9D",
+     "9F",
+     "9G",
+     "10C",
+     "10D",
+     "10F",
+     "10G",
+     "11C",
+     "11D",
+     "11F",
+     "11G",
+     "12C",
+     "12D",
+     "12F",
+     "12G",
+     "13C",
+     "13D",
+     "13F",
+     "13G",
+     "14C",
+     "14D",
+     "14F",
+     "14G",
+     "15C",
+     "15D",
+     "15F",
+     "15G",
+     "16C",
+     "16D",
+     "16F",
+     "16G",
+     "17C",
+     "17D",
+     "17F",
+     "17G",
+     "18C",
+     "18D",
+     "18F",
+     "18G",
+     "19C",
+     "19D",
+     "19F",
+     "19G",
+     "20C",
+     "20D",
+     "20F",
+     "20G",
+     "21C",
+     "21D",
+     "21F",
+     "21G",
+     "22C",
+     "22D",
+     "22F",
+     "22G",
+     "23C",
+     "23D",
+     "23F",
+     "23G",
+     "24C",
+     "24D",
+     "24F",
+     "24G",
+     "25C",
+     "25D",
+     "25F",
+     "25G",
+     "26C",
+     "26D",
+     "26F",
+     "26G",
+     "27C",
+     "27D",
+     "27F",
+     "27G",
+     "28C",
+     "28D",
+     "28F",
+     "28G",
+     "29C",
+     "29D",
+     "29F",
+     "29G",
+     "30C",
+     "30D",
+     "30F",
+     "30G",
+     "31C",
+     "31D",
+     "31F",
+     "31G",
+     "32C",
+     "32D",
+     "32F",
+     "32G",
+     "33C",
+     "33D",
+     "33F",
+     "33G",
+     "34C",
+     "34D",
+     "34F",
+     "34G",
+     "35C",
+     "35D",
+     "35F",
+     "35G",
+     "36C",
+     "36D",
+     "36F",
+     "36G"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=हाइले",
+   "goto /manage/N9JKBF/seats",
+   "fill 0 seat_no=1B",
+   "stop 1B"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-007",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA (उपनाम असेफ़ा) में आउटबाउंड उड़ान के लिए 23 kg अतिरिक्त चेक्ड बैगेज जोड़ें। कुल शुल्क बताएँ और भुगतान पूरा करने से पहले रुकें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 13,
+    "lang": "hi"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "276",
+     "276.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "goto /manage/WGYBNA/baggage",
+   "fill 0 extra_kg=23",
+   "stop 276"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-008",
+  "site": "selam",
+  "intent": "अदीस अबाबा बोले अंतरराष्ट्रीय हवाई अड्डे पर बिना अतिथि के एक यात्री के लिए लाउंज प्रवेश खरीदें। हाइलैंड लाउंज चुनें, कीमत सत्यापित करें, और भुगतान किए बिना भुगतान पृष्ठ पर रुकें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 16,
+    "lang": "hi"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "55",
+     "55.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges/purchase",
+   "fill 0 lounge_id=1; passenger_name=टेस्ट पैसेंजर; guests=0",
+   "stop 55"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-009",
+  "site": "selam",
+  "intent": "पहला नाम सेलामावित, उपनाम बेकेले, ईमेल selamawit.bekele@example.com और देश ET के साथ एक नया सेलाम माइल्स सदस्य नामांकित करें। आपको दिया गया सदस्यता नंबर बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 18,
+    "lang": "hi"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM00000016"
+   }
+  ],
+  "solution": [
+   "goto /miles/join",
+   "fill 0 first_name=सेलामावित; last_name=बेकेले; email=selamawit.bekele@example.com; country_code=ET; dob=1992-05-14",
+   "stop SM00000016"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-010",
+  "site": "selam",
+  "intent": "सदस्य SM00000001 को 2026-03-15 की उड़ान SM246, टिकट 0712345678901 के मील नहीं मिले। मिसिंग-माइल्स दावा जमा करें और दावा संदर्भ संख्या बताएँ। उत्तर देते समय दावे का संदर्भ दिखाने वाले पुष्टि पृष्ठ पर ही रहें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 19,
+    "lang": "hi"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "missing_miles_claims",
+    "match": {
+     "member_no": "SM00000001",
+     "flight_no": "SM246",
+     "flight_date": "2026-03-15"
+    }
+   }
+  ],
+  "solution": [
+   "goto /miles/claim",
+   "fill 0 member_no=SM00000001; ticket_no=0712345678901; flight_no=SM246; flight_date=2026-03-15",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-011",
+  "site": "selam",
+  "intent": "2026-03-19 की उड़ान SM106 में वाई-फ़ाई है। उपलब्ध इंटरनेट पैकेजों की तुलना करें, सबसे बड़ा डेटा अलाउंस चुनें, और भुगतान से पहले रुकें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 21,
+    "lang": "hi"
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM106&date=2026-03-19",
+   "fill 1 package_id=1038",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-012",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA (उपनाम असेफ़ा) की आउटबाउंड उड़ान के भोजन विकल्प देखें, फिर यात्री के लिए ग्लूटेन-मुक्त भोजन का अनुरोध करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 22,
+    "lang": "hi"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "goto /onboard/dining?pnr=WGYBNA",
+   "fill 1 meal_code=GFML",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-013",
+  "site": "selam",
+  "intent": "2026-04-12 के लेओवर के लिए अदीस अबाबा हवाई अड्डे के भीतर ज़ेना ट्रांज़िट होटल में कमरे की उपलब्धता जाँचें और भुगतान किए बिना बुकिंग समीक्षा पृष्ठ पर आगे बढ़ें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 25,
+    "lang": "hi"
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "fill 0 arrival=2026-04-12; hours=12; guest_name=टेस्ट पैसेंजर",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-014",
+  "site": "selam",
+  "intent": "एयरलाइन की वेबसाइट से नेशनल ई-वीज़ा सर्विस खोलें, सात दिन की पर्यटक यात्रा के लिए वीज़ा प्रकार चुनें, और आवेदन से पहले आवश्यक दस्तावेज़ बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 26,
+    "lang": "hi"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "छह महीने",
+     "6 महीने"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/evisa",
+   "goto /partners/evisa?code=EV-T30",
+   "stop आगमन के बाद छह महीने तक वैध पासपोर्ट; हाल की पासपोर्ट फ़ोटो; पुष्ट वापसी टिकट; ठहरने का प्रमाण।"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-015",
+  "site": "selam",
+  "intent": "2026-04-12 को नैरोबी (NBO) पहुँचने वाले दो यात्रियों के लिए रिफ़्टड्राइव के साथ हवाई अड्डा ट्रांसफ़र आरक्षित करें, और भुगतान किए बिना बुकिंग समीक्षा पृष्ठ पर आगे बढ़ें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 28,
+    "lang": "hi"
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "fill 1 offer_id=3",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-016",
+  "site": "selam",
+  "intent": "इकोनॉमी ग्रुप (EG) और इकोनॉमी स्टैंडर्ड (ES) फ़ेयर क्लास के किराया नियम खोलें (किराया-नियम पृष्ठ /book/fare-rules/<code> पर हैं, जैसे /book/fare-rules/EG)। ES की तुलना में EG पर रिफ़ंड शुल्क कितना अधिक है? अंतर बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "70",
+     "70.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EG",
+   "goto /book/fare-rules/ES",
+   "stop 70"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-017",
+  "site": "selam",
+  "intent": "इकोनॉमी फ़ेयर क्लासों के नियम पृष्ठों में (/book/fare-rules/<code> पर; हर पृष्ठ अन्य क्लासों के लिंक देता है) कौन-सी फ़ेयर क्लास सबसे अधिक परिवर्तन शुल्क लेती है? उसका दो-अक्षर का कोड बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "EG",
+    "none_of": [
+     "EB",
+     "EF",
+     "EL",
+     "EP",
+     "ES"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EG",
+   "stop EG"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-018",
+  "site": "selam",
+  "intent": "1200 की लागत वाली यात्रा के लिए सेफ़वॉयेज का कोटेशन लें। ट्रैवलर कवर (SV-PLUS) स्तर का प्रीमियम कितना है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "66",
+     "66.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=1200",
+   "stop 66"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-019",
+  "site": "selam",
+  "intent": "400 की लागत वाली यात्रा के लिए सेफ़वॉयेज का कोटेशन लें। कॉम्प्रिहेंसिव कवर (SV-MAX) स्तर का प्रीमियम कितना है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "55",
+     "55.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=400",
+   "stop 55"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-020",
+  "site": "selam",
+  "intent": "अतिरिक्त-बैगेज शुल्क पृष्ठ के अनुसार, यूरोप क्षेत्र के इकोनॉमी टिकट पर 15 kg अतिरिक्त चेक्ड बैगेज की लागत कितनी होगी? कुल राशि बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "270",
+     "270.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /baggage/fees",
+   "stop 270"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-021",
+  "site": "selam",
+  "intent": "सदस्य SM00000004 (उपनाम नेगाश) 2026-03-19 को ADD से NBO की इकोनॉमी अवार्ड सीट चाहते हैं। आवश्यक मील के लिए अवार्ड खोज और वर्तमान शेष के लिए उनका खाता देखें। उन्हें और कितने मील चाहिए?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "12099",
+     "12099.00",
+     "12,099"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-search?origin=ADD&destination=NBO&date=2026-03-19&cabin=economy",
+   "goto /miles/account",
+   "fill 0 member_no=SM00000004; surname=नेगाश",
+   "stop 12099"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-022",
+  "site": "selam",
+  "intent": "ऑफ़र पृष्ठ पर प्रमोशन कोड AFRICA15 सूचीबद्ध है। इसकी प्रतिशत छूट 600 के किराए पर लागू करने पर छूट के बाद की कीमत क्या होगी?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "510",
+     "510.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /offers",
+   "stop 510"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-023",
+  "site": "selam",
+  "intent": "इकोनॉमी बेसिक (EB) किराया नियमों के अनुसार (पृष्ठ /book/fare-rules/EB है), उड़ी गई दूरी के एक प्रतिशत के रूप में मील अर्जित होते हैं। 2000 मील की यात्रा पर एक EB टिकट कितने सेलाम माइल्स अर्जित करेगा?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1000",
+     "1000.00",
+     "1,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EB",
+   "stop 1000"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-024",
+  "site": "selam",
+  "intent": "अदीस अबाबा टर्मिनल 2 के लाउंजों में से सबसे सस्ते का वॉक-इन प्रवेश यात्री 'टेस्ट पैसेंजर' के लिए, बिना किसी अतिथि के, खरीदें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "lounge_purchases",
+    "match": {
+     "lounge_id": 4,
+     "guests": 0,
+     "passenger_name": "टेस्ट पैसेंजर"
+    }
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/4",
+   "goto /lounges/purchase",
+   "fill 0 lounge_id=4; passenger_name=टेस्ट पैसेंजर; guests=0"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-025",
+  "site": "selam",
+  "intent": "सेलाम NBO, JNB, DAR और LOS पर हाइलैंड लाउंज चलाता है। किस हवाई अड्डे पर वॉक-इन कीमत सबसे कम है? हवाई अड्डे का कोड बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "DAR",
+    "none_of": [
+     "JNB",
+     "LOS",
+     "NBO"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop DAR"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-026",
+  "site": "selam",
+  "intent": "इकोनॉमी में यात्रा कर रहा एक गोल्ड-टियर सदस्य अदीस अबाबा टर्मिनल 2 पर है। वहाँ के तीन लाउंजों में से कौन-सा एक गोल्ड सदस्यों को निःशुल्क प्रवेश देता है? लाउंज का नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "हाइलैंड लाउंज टर्मिनल 2",
+    "none_of": [
+     "ट्रांज़िट रेस्ट लाउंज",
+     "सेलाम स्काई लाउंज"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/2",
+   "stop हाइलैंड लाउंज टर्मिनल 2"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-027",
+  "site": "selam",
+  "intent": "उड़ान SM106 और उड़ान SM220 के ऑनबोर्ड वाई-फ़ाई की तुलना करें, दोनों 2026-03-19 को। किस उड़ान का सबसे बड़ा डेटा पैकेज सस्ता है, और उसकी कीमत क्या है? उड़ान संख्या और कीमत बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "SM106",
+    "none_of": [
+     "SM220"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "22",
+     "22.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM106&date=2026-03-19",
+   "goto /onboard/wifi?flight_no=SM220&date=2026-03-19",
+   "stop SM106, 22"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-028",
+  "site": "selam",
+  "intent": "चार लोगों के एक परिवार का 12 घंटे का लेओवर है। ज़ेना ट्रांज़िट होटल में कमरों की कीमत प्रति 6-घंटे के ब्लॉक पर है। चार लोगों वाले कमरे की पूरे 12 घंटे की लागत कितनी होगी?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "240",
+     "240.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "stop 240"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-029",
+  "site": "selam",
+  "intent": "रिफ़्टड्राइव NBO और ADD दोनों पर प्राइवेट वैन ट्रांसफ़र चलाता है। किस हवाई अड्डे की वैन सस्ती है, और कितनी? हवाई अड्डे का कोड और अंतर बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ADD",
+    "none_of": [
+     "NBO"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "7",
+     "7.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "goto /partners/riftdrive?airport=ADD&passengers=2&pickup=2026-04-12",
+   "stop ADD, 7"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-030",
+  "site": "selam",
+  "intent": "2026-04-12 को नैरोबी (NBO) पहुँचने वाले दो यात्रियों के लिए रिफ़्टड्राइव का शेयर्ड शटल ट्रांसफ़र बुक करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "car_bookings",
+    "match": {
+     "offer_id": 3,
+     "passengers": 2,
+     "pickup_date": "2026-04-12"
+    }
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "fill 1 offer_id=3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-031",
+  "site": "selam",
+  "intent": "किस अदीस अबाबा स्टॉपओवर पैकेज के लिए सबसे लंबा न्यूनतम लेओवर आवश्यक है? पैकेज का नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "पूरे दिन का हाइलैंड्स भ्रमण",
+    "none_of": [
+     "आधे दिन का सिटी टूर",
+     "ज़ेना ट्रांज़िट होटल, टर्मिनल के भीतर",
+     "सिटी होटल, चार सितारा",
+     "हवाई अड्डा ट्रांसफ़र, दोनों ओर",
+     "हाइलैंड क्लास अराइवल्स सुइट",
+     "हाइलैंड लाउंज प्रवेश"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /stopover/packages",
+   "stop पूरे दिन का हाइलैंड्स भ्रमण"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-032",
+  "site": "selam",
+  "intent": "सदस्य SM00000006 (उपनाम ज़ेलेके) सिल्वर टियर में हैं। उनका टियर-प्रगति पृष्ठ खोलें: अगले टियर तक पहुँचने के लिए उन्हें और कितने क्वालिफ़ाइंग मील चाहिए?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "23634",
+     "23634.00",
+     "23,634"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000006; surname=ज़ेलेके",
+   "goto /miles/account/tier-progress",
+   "stop 23634"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-033",
+  "site": "selam",
+  "intent": "खाते SM00000009 (उपनाम वोल्दे) पर वर्तमान मील शेष कितना है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "18730",
+     "18730.00",
+     "18,730"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000009; surname=वोल्दे",
+   "stop 18730"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-034",
+  "site": "selam",
+  "intent": "सदस्य SM00000010 (उपनाम तेरेफ़े) का हाल की गतिविधि वाला माइलेज विवरण खोलें। किस एक लेनदेन में सबसे अधिक मील जमा हुए? वह उड़ान संख्या और मील की राशि बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "SM172",
+    "none_of": [
+     "SM116",
+     "SM137",
+     "SM148",
+     "SM150",
+     "SM171",
+     "SM179",
+     "SM185",
+     "SM193",
+     "SM205",
+     "SM213",
+     "SM218",
+     "SM226"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "29516",
+     "29516.00",
+     "29,516"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000010; surname=तेरेफ़े",
+   "goto /miles/account/statement",
+   "stop SM172, 29516"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-035",
+  "site": "selam",
+  "intent": "सदस्य SM00000003 के लिए मिसिंग-माइल्स दावा जमा करें: टिकट 0709876543210, उड़ान SM188, 2026-02-20 को उड़ी गई।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "missing_miles_claims",
+    "match": {
+     "member_no": "SM00000003",
+     "ticket_no": "0709876543210",
+     "flight_no": "SM188",
+     "flight_date": "2026-02-20"
+    }
+   }
+  ],
+  "solution": [
+   "goto /miles/claim",
+   "fill 0 member_no=SM00000003; ticket_no=0709876543210; flight_no=SM188; flight_date=2026-02-20"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-036",
+  "site": "selam",
+  "intent": "अवार्ड चार्ट के अनुसार, उत्तर अमेरिका के लिए एकतरफ़ा इकोनॉमी अवार्ड में कितने मील लगते हैं?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "60000",
+     "60000.00",
+     "60,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-chart",
+   "stop 60000"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-037",
+  "site": "selam",
+  "intent": "सदस्य SM00000011 (उपनाम अलेमु) अपना टियर और शेष जानना चाहते हैं। दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "gold",
+    "none_of": [
+     "blue",
+     "platinum",
+     "silver"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "88971",
+     "88971.00",
+     "88,971"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000011; surname=अलेमु",
+   "stop gold, 88971"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-038",
+  "site": "selam",
+  "intent": "सदस्य SM00000004 (उपनाम नेगाश, शेष उनके खाते पर दिखाया गया है) 25,000-मील का अवार्ड रिडीम करना चाहते हैं। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "अपर्याप्त मील",
+     "पर्याप्त मील नहीं",
+     "रिडीम नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000004; surname=नेगाश",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-039",
+  "site": "selam",
+  "intent": "2026-03-16 के लिए अदीस अबाबा (ADD) का प्रस्थान बोर्ड खोलें (बोर्ड /flight-status/departures/ADD पर है)। बोर्ड में कितने प्रस्थान सूचीबद्ध हैं? संख्या बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "74",
+     "74.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /flight-status/departures/ADD",
+   "stop 74"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-040",
+  "site": "selam",
+  "intent": "2026-03-16 की उड़ान SM152 देर से चल रही है। यह कितने मिनट विलंबित है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /flight-status?flight_no=SM152&date=2026-03-16",
+   "stop 40"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-041",
+  "site": "selam",
+  "intent": "2026-03-16 की उड़ान SM107 के लिए प्रस्थान गेट और प्रस्थान टर्मिनल दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "B20"
+   },
+   {
+    "type": "answer_match",
+    "answer": "1"
+   }
+  ],
+  "solution": [
+   "goto /flight-status?flight_no=SM107&date=2026-03-16",
+   "stop gate B20, terminal 1"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-042",
+  "site": "selam",
+  "intent": "मौसमी मार्गों का पृष्ठ देखें: कौन-से मार्ग साल के कुछ हिस्से में रुकते हैं? यदि कोई नहीं, तो ऐसा बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "साल भर",
+     "सालभर",
+     "पूरे साल",
+     "हर मार्ग",
+     "कोई नहीं",
+     "कोई मार्ग नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /schedules/seasonal",
+   "stop हमारे नेटवर्क का हर मार्ग साल भर संचालित होता है।"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-043",
+  "site": "selam",
+  "intent": "ADD से ABJ सेवा सप्ताह में कितने दिन चलती है? संख्या बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2",
+     "2.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /schedules?origin=ADD&destination=ABJ",
+   "stop 2"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-044",
+  "site": "selam",
+  "intent": "बुकिंग N9JKBF (उपनाम हाइले) में आउटबाउंड उड़ान के लिए एक उपलब्ध खिड़की वाली सीट चुनें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "seat_assignments",
+    "match": {
+     "segment_id": 19,
+     "seat_no": [
+      "1A",
+      "1F",
+      "2A",
+      "2F",
+      "3A",
+      "3F",
+      "4A",
+      "4F",
+      "5A",
+      "5F",
+      "6A",
+      "6F",
+      "7A",
+      "7J",
+      "8A",
+      "8J",
+      "9A",
+      "9J",
+      "10A",
+      "10J",
+      "11A",
+      "11J",
+      "12A",
+      "12J",
+      "13A",
+      "13J",
+      "14A",
+      "14J",
+      "15A",
+      "15J",
+      "16A",
+      "16J",
+      "17A",
+      "17J",
+      "18A",
+      "18J",
+      "19A",
+      "19J",
+      "20A",
+      "20J",
+      "21A",
+      "21J",
+      "22A",
+      "22J",
+      "23A",
+      "23J",
+      "24A",
+      "24J",
+      "25A",
+      "25J",
+      "26A",
+      "26J",
+      "27A",
+      "27J",
+      "28A",
+      "28J",
+      "29A",
+      "29J",
+      "30A",
+      "30J",
+      "31A",
+      "31J",
+      "32A",
+      "32J",
+      "33A",
+      "33J",
+      "34A",
+      "34J",
+      "35A",
+      "35J",
+      "36A",
+      "36J"
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=हाइले",
+   "goto /manage/N9JKBF/seats",
+   "fill 0 seat_no=1A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-045",
+  "site": "selam",
+  "intent": "बुकिंग MDQKTR (उपनाम गिर्मा) में आउटबाउंड उड़ान के लिए 10 kg अतिरिक्त चेक्ड बैगेज जोड़ें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 11,
+     "extra_kg": 10,
+     "segment_id": 20
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=MDQKTR; surname=गिर्मा",
+   "goto /manage/MDQKTR/baggage",
+   "fill 0 extra_kg=10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-046",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA (उपनाम असेफ़ा) के संपर्क विवरण उसके संपर्क-विवरण पृष्ठ (/manage/WGYBNA/contact-details, बुकिंग पृष्ठ से लिंक नहीं है) पर अपडेट करें: ईमेल assefa.new@example.com और फ़ोन +251911222333 सेट करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "WGYBNA"
+    },
+    "field": "email",
+    "value": "assefa.new@example.com"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "WGYBNA"
+    },
+    "field": "phone",
+    "value": "+251911222333"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "goto /manage/WGYBNA/contact-details",
+   "fill 0 email=assefa.new@example.com; phone=+251911222333"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-047",
+  "site": "selam",
+  "intent": "बुकिंग EFC78Z (उपनाम तेरेफ़े) को उसके रद्दीकरण पृष्ठ (/manage/EFC78Z/cancel, बुकिंग पृष्ठ से लिंक नहीं है) के ज़रिए पूरी तरह रद्द करें, पूछे जाने पर पुष्टि करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "EFC78Z"
+    },
+    "field": "status",
+    "value": "cancelled"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=EFC78Z; surname=तेरेफ़े",
+   "goto /manage/EFC78Z/cancel",
+   "fill 0 confirm=yes"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-048",
+  "site": "selam",
+  "intent": "बुकिंग J4KC9R (उपनाम वोल्दे) रिफ़ंड योग्य किराए पर है। ऑनलाइन रिफ़ंड शुरू करें और उसे समीक्षा चरण तक जमा करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=J4KC9R; surname=वोल्दे",
+   "goto /manage/J4KC9R/refund",
+   "fill 0 confirm=1"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-049",
+  "site": "selam",
+  "intent": "बुकिंग N9JKBF (उपनाम हाइले) के लिए एशियाई शाकाहारी भोजन (AVML) का अनुरोध करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "segment_id": 19,
+     "meal_code": "AVML"
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=हाइले",
+   "goto /onboard/dining?pnr=N9JKBF",
+   "fill 1 meal_code=AVML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-050",
+  "site": "selam",
+  "intent": "बुकिंग VF6ZBW (उपनाम तेस्फ़ाये) अपग्रेड के योग्य है। आउटबाउंड उड़ान के लिए नकद अपग्रेड का अनुरोध समीक्षा चरण तक करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "upgrade_purchases",
+    "match": {
+     "segment_id": 5
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=VF6ZBW; surname=तेस्फ़ाये",
+   "goto /manage/VF6ZBW/upgrade",
+   "fill 0 segment_id=5"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-051",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA (उपनाम असेफ़ा) में दोनों करें: आउटबाउंड उड़ान के लिए 5 kg अतिरिक्त चेक्ड बैगेज जोड़ें, और कम नमक वाले भोजन (LSML) का अनुरोध करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 1,
+     "extra_kg": 5,
+     "segment_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "meal_code": "LSML",
+     "segment_id": [
+      1,
+      2
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "goto /manage/WGYBNA/baggage",
+   "fill 0 extra_kg=5",
+   "goto /onboard/dining?pnr=WGYBNA",
+   "fill 1 meal_code=LSML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-052",
+  "site": "selam",
+  "intent": "बुकिंग VF6ZBW (उपनाम तेस्फ़ाये) में दोनों करें: आउटबाउंड उड़ान के लिए 15 kg अतिरिक्त चेक्ड बैगेज जोड़ें, और मधुमेह भोजन (DBML) का अनुरोध करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 3,
+     "extra_kg": 15,
+     "segment_id": 5
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "meal_code": "DBML",
+     "segment_id": [
+      5,
+      6
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=VF6ZBW; surname=तेस्फ़ाये",
+   "goto /manage/VF6ZBW/baggage",
+   "fill 0 extra_kg=15",
+   "goto /onboard/dining?pnr=VF6ZBW",
+   "fill 1 meal_code=DBML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-053",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA के लिए विशेष-सहायता फ़ॉर्म के ज़रिए व्हीलचेयर सहायता अनुरोध (सेवा कोड WCHR) जमा करें, नाम 'टेस्ट पैसेंजर', ईमेल test.passenger@example.com, नोट 'आइल चेयर चाहिए'।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "kind": "assistance",
+     "payload": "%WCHR%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%WGYBNA%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%टेस्ट पैसेंजर%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%test.passenger@example.com%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%आइल चेयर चाहिए%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/assistance/wheelchair",
+   "fill 0 full_name=टेस्ट पैसेंजर; email=test.passenger@example.com; booking_reference=WGYBNA; service_code=WCHR; notes=आइल चेयर चाहिए"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-054",
+  "site": "selam",
+  "intent": "अदीस अबाबा (ADD) से लंदन (LHR) की उड़ान के लिए यात्रा आवश्यकताएँ खोलें — मार्ग-विशेष पृष्ठ /travel-requirements/ADD/LHR है। आवश्यक पासपोर्ट वैधता (महीनों में) और आवश्यक खाली पृष्ठों की संख्या दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6",
+     "6.00"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2",
+     "2.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /travel-requirements/ADD/LHR",
+   "stop 6 months, 2 pages"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-055",
+  "site": "selam",
+  "intent": "जर्मनी का संपर्क पृष्ठ खोलें। 24-घंटे की आपातकालीन फ़ोन लाइन और कार्यालय जिस शहर में है, दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "+251 11 517 8888",
+    "none_of": [
+     "+214 38 836 7484"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "फ़्रैंकफ़र्ट"
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "goto /help/contact/DE",
+   "stop +251 11 517 8888, फ़्रैंकफ़र्ट"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-056",
+  "site": "selam",
+  "intent": "ऑस्ट्रिया के स्थानीय कार्यालय का फ़ोन नंबर बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "+203 13 510 5079"
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "goto /help/contact/AT",
+   "stop +203 13 510 5079"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-057",
+  "site": "selam",
+  "intent": "अधिकांश विशेष भोजन प्रस्थान से 24 घंटे पहले बंद हो जाते हैं, लेकिन कुछ के लिए अधिक समय चाहिए। किन विशेष भोजनों के लिए 48 घंटे आवश्यक हैं? दोनों के नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "जैन शाकाहारी",
+    "none_of": [
+     "एशियाई शाकाहारी",
+     "ऑर्थोडॉक्स उपवास",
+     "कम नमक",
+     "कम वसा",
+     "ग्लूटेन-असहिष्णु",
+     "फलों की थाली",
+     "बच्चा",
+     "मधुमेह",
+     "मुस्लिम",
+     "शिशु",
+     "हिंदू"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "कोशर",
+    "none_of": [
+     "एशियाई शाकाहारी",
+     "ऑर्थोडॉक्स उपवास",
+     "कम नमक",
+     "कम वसा",
+     "ग्लूटेन-असहिष्णु",
+     "फलों की थाली",
+     "बच्चा",
+     "मधुमेह",
+     "मुस्लिम",
+     "शिशु",
+     "हिंदू"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/dining/special-meals",
+   "stop जैन शाकाहारी, कोशर"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-058",
+  "site": "selam",
+  "intent": "ई-वीज़ा सेवा पर 90-दिन के पर्यटक ई-वीज़ा की तुलना बिज़नेस ई-वीज़ा से करें। किसकी लागत अधिक है, और कितनी? वीज़ा का नाम और अंतर बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "पर्यटक ई-वीज़ा, 90 दिन",
+     "90 दिन का पर्यटक",
+     "90-दिन का पर्यटक",
+     "90 दिन का टूरिस्ट",
+     "90-दिवसीय",
+     "पर्यटक ई-वीज़ा, 90",
+     "टूरिस्ट ई-वीज़ा, 90",
+     "पर्यटक (90",
+     "टूरिस्ट (90"
+    ],
+    "none_of": [
+     "बिज़नेस ई-वीज़ा"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "10",
+     "10.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/evisa",
+   "stop पर्यटक ई-वीज़ा, 90 दिन, 10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-059",
+  "site": "selam",
+  "intent": "फ़्रैंकफ़र्ट (FRA) से दिए गए रेल कनेक्शनों में से किस गंतव्य की यात्रा अवधि सबसे कम है, और वह कितने मिनट है? दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "कोलोन",
+    "none_of": [
+     "म्यूनिख",
+     "श्टुटगार्ट"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "62",
+     "62.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/eurorail?arrival=FRA",
+   "stop कोलोन, 62"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-060",
+  "site": "selam",
+  "intent": "अक्रा (ACC) पर एक यात्री के लिए वॉक-इन लाउंज प्रवेश खरीदें। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "कोई लाउंज नहीं",
+     "लाउंज नहीं"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "lounge_purchases",
+    "match": {
+     "guests": 0
+    }
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-061",
+  "site": "selam",
+  "intent": "2026-03-17 की उड़ान SM114 के लिए सबसे बड़ा वाई-फ़ाई पैकेज खरीदें। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "वाई-फ़ाई नहीं",
+     "वाईफ़ाई नहीं",
+     "वाई-फ़ाई उपलब्ध नहीं",
+     "सुसज्जित नहीं"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wifi_purchases",
+    "match": {
+     "status": "pending"
+    }
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM114&date=2026-03-17",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-062",
+  "site": "selam",
+  "intent": "2026-03-19 को ADD से ABJ इकोनॉमी में मील से बुक की जा सकने वाली अवार्ड सीटें खोजें और आवश्यक मील बताएँ। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "कोई अवार्ड सीट नहीं",
+     "सीट नहीं",
+     "उपलब्धता नहीं",
+     "उपलब्ध नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-search?origin=ADD&destination=ABJ&date=2026-03-19&cabin=economy",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-063",
+  "site": "selam",
+  "intent": "बुकिंग WGYBNA (उपनाम असेफ़ा) अब यात्री के काम की नहीं है। इसके लिए ऑनलाइन रिफ़ंड पूरा करें। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "रिफ़ंड योग्य नहीं",
+     "नॉन-रिफ़ंडेबल",
+     "रिफ़ंड नहीं",
+     "पात्र नहीं"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=असेफ़ा",
+   "goto /manage/WGYBNA/refund",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-064",
+  "site": "selam",
+  "intent": "बुकिंग J4KC9R (उपनाम वोल्दे) की आउटबाउंड उड़ान को हाइलैंड क्लास में अपग्रेड करें। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "पात्र नहीं",
+     "अपग्रेड योग्य नहीं",
+     "अपग्रेड के योग्य नहीं",
+     "अपग्रेड नहीं"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "upgrade_purchases",
+    "match": {
+     "booking_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=J4KC9R; surname=वोल्दे",
+   "goto /manage/J4KC9R/upgrade",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-065",
+  "site": "selam",
+  "intent": "जापान में सेलाम एयरवेज़ कार्यालय का फ़ोन नंबर खोजें। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "कोई कार्यालय नहीं",
+     "कार्यालय नहीं",
+     "सेलाम एयरवेज़ का कोई कार्यालय नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-066",
+  "site": "selam",
+  "intent": "2026-04-12 को 6 घंटे के ठहराव के लिए ज़ेना ट्रांज़िट होटल में छह लोगों वाला कमरा बुक करें। यदि साइट पर यह संभव न हो तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "संभव नहीं",
+     "कोई कमरा नहीं",
+     "कमरा नहीं",
+     "कमरे नहीं",
+     "ठहराने की व्यवस्था नहीं",
+     "उपलब्ध नहीं"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "hotel_bookings",
+    "match": {
+     "arrival": "2026-04-12"
+    }
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-067",
+  "site": "selam",
+  "intent": "सेलाम एयरवेज़ अदीस अबाबा (ADD) पर सभी टर्मिनलों को मिलाकर कितने लाउंज सूचीबद्ध करता है? संख्या बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4",
+     "4.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop 4"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-068",
+  "site": "selam",
+  "intent": "अदीस अबाबा के दोनों हाइलैंड लाउंजों (टर्मिनल 1 और टर्मिनल 2) का वॉक-इन प्रवेश खरीदने में कितनी लागत आएगी? संयुक्त कुल बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "120",
+     "120.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop 120"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-069",
+  "site": "selam",
+  "intent": "विशेष-भोजन पृष्ठ पर कितने विशेष भोजन कोड सूचीबद्ध हैं? संख्या बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "14",
+     "14.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/dining/special-meals",
+   "stop 14"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-070",
+  "site": "selam",
+  "intent": "यूरोरेल पार्टनर पृष्ठ पर फ़्रैंकफ़र्ट (FRA) से आगे के कितने रेल गंतव्य सूचीबद्ध हैं? संख्या बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "3",
+     "3.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/eurorail?arrival=FRA",
+   "stop 3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-071",
+  "site": "selam",
+  "intent": "वेबसाइट के फ़ीडबैक फ़ॉर्म के ज़रिए ठीक इस संदेश के साथ फ़ीडबैक भेजें: 'टर्मिनल 2 पर लाउंज के साइनबोर्ड भ्रामक हैं।'",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%टर्मिनल 2 पर लाउंज के साइनबोर्ड भ्रामक हैं।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /help/feedback",
+   "fill 0 full_name=टेस्ट पैसेंजर; email=test.passenger@example.com; category=complaint; message=टर्मिनल 2 पर लाउंज के साइनबोर्ड भ्रामक हैं।"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-072",
+  "site": "selam",
+  "intent": "बुकिंग MBX744 (उपनाम ज़ेलेके) खोलें। कुल भुगतान की गई राशि और बुकिंग में कितने यात्री हैं, दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1780",
+     "1780.00",
+     "1,780"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "10",
+     "10.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=MBX744; surname=ज़ेलेके",
+   "goto /manage/MBX744",
+   "stop 1780, 10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-073",
+  "site": "selam",
+  "intent": "अदीस अबाबा टर्मिनल 1 का हाइलैंड लाउंज खोलें और लाउंज पृष्ठ पर दिए गए उसके खुलने के समय और सटीक स्थान (यह किस गेट के सामने है, सहित) दोनों बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "प्रतिदिन 04:00-23:30",
+     "04:00-23:30",
+     "04:00 to 23:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "गेट A6 के सामने"
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/1",
+   "stop प्रतिदिन 04:00-23:30; टर्मिनल 1, एयरसाइड, ड्यूटी-फ़्री हॉल से एक मंज़िल ऊपर, गेट A6 के सामने।"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-074",
+  "site": "selam",
+  "intent": "अफ़्रीका-क्षेत्र के मार्ग पर यात्रा कर रहा एक इकोनॉमी वयस्क 30 kg का एक बैग चेक करना चाहता है। अलाउंस पृष्ठ (प्रति बैग अधिकतम वज़न) और अतिरिक्त-शुल्क पृष्ठ का उपयोग करके, उस अधिकतम से ऊपर के अतिरिक्त वज़न की लागत कितनी होगी?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "84",
+     "84.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /baggage/allowance?origin=ADD&destination=NBO&cabin=economy&pax_type=adult",
+   "goto /baggage/fees",
+   "stop 84"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-075",
+  "site": "selam",
+  "intent": "एक यात्री 250 की यात्रा बुक करता है और सेफ़वॉयेज कवर चाहता है। 250 के लिए कोटेशन लें: कौन-सा कवर स्तर सबसे सस्ता है, और उसका प्रीमियम कितना है? स्तर का नाम और राशि बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "एसेंशियल कवर",
+    "none_of": [
+     "कॉम्प्रिहेंसिव कवर",
+     "ट्रैवलर कवर"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "18",
+     "18.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=250",
+   "stop एसेंशियल कवर, 18"
+  ],
+  "max_steps": 40
+ }
+]

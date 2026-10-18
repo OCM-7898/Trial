@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ S.order_h.format(id=o.id) }}{% endblock %}
+{% block content %}
+<h2>{{ S.order_h.format(id=o.id) }}</h2>
+<p>{{ S.status_label }} <strong>{{ o.status }}</strong> · {{ S.placed_word }} {{ o.placed_on }} · {{ S.ship_to }} {{ o.address }}</p>
+{% if o.coupon_code %}<p class="notice">{{ S.coupon_used }} {{ o.coupon_code }}</p>{% endif %}
+<table>
+  {% for it in items %}<tr><td><a href="/product/{{ it.product_id }}">{{ it.name }}</a></td><td>x{{ it.qty }}</td>
+  <td>{{ S.cur }}{{ ('%.2f' % (it.price * it.qty)) | v2_num }}</td></tr>{% endfor %}
+</table>
+<p><strong>{{ S.total }} {{ S.cur }}{{ ('%.2f' % o.total) | v2_num }}</strong></p>
+{% if o.status in ['placed', 'shipped'] %}
+<p><a href="/order/{{ o.id }}/cancel" class="btn grey">{{ S.cancel_order_btn }}</a>
+   <a href="/order/{{ o.id }}/address" class="btn grey">{{ S.change_addr_btn }}</a></p>
+{% endif %}
+<p><a href="/orders">{{ S.back_to_orders }}</a></p>
+{% endblock %}

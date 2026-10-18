@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ t("network.new_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('network') }}">{{ t("network.title") }}</a></li>
+        <li>{{ t("network.new_title") }}</li></ol>
+  </nav>
+  <h1>{{ t("network.new_title") }}</h1>
+  <p>{{ t("network.new_intro") }}</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">{{ t("search.origin") }}</th><th scope="col">{{ t("search.destination") }}</th>
+      <th scope="col">{{ t("network.distance") }}</th><th scope="col">{{ t("schedules.operates") }}</th></tr></thead>
+    <tbody>{% for row in rows %}<tr>
+      <td>{{ row.origin.city }} ({{ row.origin.iata }})</td>
+      <td>{{ row.destination.city }} ({{ row.destination.iata }})</td>
+      <td>{{ row.route.distance_km }} {{ t("network.km") }}</td><td>{{ row.route.operating_days }}</td>
+    </tr>{% endfor %}</tbody></table></div>
+</div>
+{% endblock %}

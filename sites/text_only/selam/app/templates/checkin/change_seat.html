@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ t("checkin.change_seat") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('checkin_pax', checkin_id=record.id) }}">{{ t("boarding.title") }}</a></li>
+      <li>{{ t("checkin.change_seat") }}</li></ol></nav>
+<h1>{{ t("checkin.change_seat") }}</h1>
+{% if changed %}<div class="notice notice-ok" role="status"><div>{{ t("checkin.seat_changed", seat=changed) }}</div></div>{% endif %}
+{% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+<p class="hint">{{ t("boarding.seat") }}: {{ record.seat_no or "--" }}</p>
+
+{% if guide.is_useful %}
+<dl class="seatguide">
+  {% if guide.window %}<dt>{{ t("seats.window") }}</dt><dd>{{ guide.window | join(", ") }}</dd>{% endif %}
+  {% if guide.aisle %}<dt>{{ t("seats.aisle") }}</dt><dd>{{ guide.aisle | join(", ") }}</dd>{% endif %}
+  {% if guide.middle %}<dt>{{ t("seats.middle") }}</dt><dd>{{ guide.middle | join(", ") }}</dd>{% endif %}
+</dl>
+{% endif %}
+
+<form method="post">
+<div class="table-scroll"><table class="seatmap">
+  <thead><tr><th scope="col">{{ t("seats.row") }}</th><th scope="col">{{ t("seats.seats") }}</th></tr></thead>
+  <tbody>{% for row in rows %}<tr>
+    <th scope="row">{{ row.number }}{% if row.is_exit %}
+      <span class="badge badge-warn">{{ t("seats.exit_row") }}</span>{% endif %}{% if row.has_extra_legroom %}
+      <span class="badge badge-info">{{ t("seats.legroom_badge") }}</span>{% endif %}</th>
+    <td>{% for cell in row.cells %}
+      {%- if cell is none %}<span class="seat-gap" aria-hidden="true"></span>
+      {%- elif cell.taken %}<span class="seat is-taken" aria-label="{{ t('seats.taken') }}">{{ cell.seat.seat_no }}</span>
+      {%- else %}<button class="seat{% if cell.seat.is_aisle %} is-aisle{% endif %}{% if cell.seat.is_window %} is-window{% endif %}{% if cell.seat.extra_legroom %} is-legroom{% endif %}"
+          type="submit" name="seat_no" value="{{ cell.seat.seat_no }}"
+          title="{{ cell.seat.seat_no }}, {{ seat_position(cell.seat) }}"
+          aria-label="{{ cell.seat.seat_no }}, {{ seat_position(cell.seat) }}">{{ cell.seat.seat_no }}</button>{% endif %}
+    {% endfor %}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+</form>
+</div>{% endblock %}

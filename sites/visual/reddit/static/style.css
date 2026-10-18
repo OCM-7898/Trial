@@ -1,0 +1,90 @@
+:root {
+  --ink: #1a1a1b; --ink-soft: #6b7280;
+  --line: #e2e5e9; --bg: #f3f4f6; --panel: #ffffff;
+  --accent: #d93a00; --accent-dark: #a82d00; --accent-tint: #fdebe4;
+  --blue: #0f5aa8; --radius: 6px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.5 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topbar { background: var(--panel); border-bottom: 1px solid var(--line);
+  padding: 8px 0; }
+.topbar .wrap { display: flex; flex-wrap: wrap; align-items: center;
+  gap: 6px 16px; }
+.logo { font-size: 20px; font-weight: 800; color: var(--accent); }
+.logo-mark { display: inline-block; background: var(--accent); color: #fff;
+  border-radius: 50%; width: 26px; height: 26px; text-align: center;
+  line-height: 26px; margin-right: 6px; }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; }
+.usernav { margin-left: auto; align-items: center; }
+.ava { width: 20px; height: 20px; border-radius: 50%; vertical-align: -5px;
+  border: 1px solid var(--line); }
+
+h1 { font-size: 22px; margin: 18px 0 10px; }
+h2 { font-size: 18px; margin: 16px 0 8px; }
+h3 { font-size: 16px; }
+.muted { color: var(--ink-soft); }
+.notice { background: #e8f3ee; border: 1px solid #0d6b4f;
+  border-radius: var(--radius); padding: 8px 12px; margin: 12px 0; }
+.error { background: var(--accent-tint); border: 1px solid var(--accent);
+  border-radius: var(--radius); padding: 8px 12px; margin: 12px 0;
+  color: var(--accent-dark); }
+
+.card { background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 10px 14px; margin: 10px 0; }
+.card .meta { font-size: 13px; color: var(--ink-soft); }
+.card h2 { margin: 4px 0 6px; }
+.card h2 a { color: var(--ink); }
+.score { color: var(--accent-dark); font-weight: 700; font-size: 13px;
+  margin-right: 10px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700;
+  border-radius: 3px; padding: 1px 6px; vertical-align: 1px; }
+.badge.img { background: #e0edfb; color: var(--blue); }
+.badge.lock { background: #fbe9c8; color: #8a5a00; }
+.thumb { float: right; width: 96px; height: 72px; object-fit: cover;
+  border-radius: 4px; border: 1px solid var(--line); margin-left: 12px; }
+html[dir="rtl"] .thumb { float: left; margin: 0 12px 0 0; }
+
+.sortbar { font-size: 14px; margin: 10px 0; }
+.sortbar a { margin-right: 10px; }
+.sortbar a.on { font-weight: 700; color: var(--accent-dark); }
+.pager { margin: 16px 0; }
+.pager a { margin: 0 8px; }
+
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  margin: 10px 0; max-width: 720px; }
+.gallery img { width: 100%; border-radius: var(--radius);
+  border: 1px solid var(--line); display: block; }
+.gallery img.hero { grid-column: 1 / -1; }
+
+form.stack label { display: block; margin: 9px 0 3px; font-weight: 600;
+  font-size: 13px; }
+input[type=text], input[type=password], select, textarea {
+  width: 100%; max-width: 460px; padding: 7px 9px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  font: inherit; background: #fff; }
+textarea { min-height: 64px; }
+button { background: var(--accent); color: #fff; border: 0;
+  padding: 7px 15px; border-radius: 14px; font: inherit; font-weight: 600;
+  cursor: pointer; margin-top: 8px; }
+button:hover { background: var(--accent-dark); }
+button.line { background: #fff; color: var(--accent-dark);
+  border: 1px solid var(--accent); }
+form.inline { display: inline-block; margin-right: 6px; }
+form.inline button { margin-top: 4px; padding: 4px 12px; font-size: 13px; }
+
+.comment { border-top: 1px solid var(--line); padding: 8px 0 4px; }
+.reply { margin-left: 26px; border-left: 2px solid var(--line);
+  padding-left: 10px; }
+html[dir="rtl"] .reply { margin: 0 26px 0 0; border-left: 0;
+  border-right: 2px solid var(--line); padding: 0 10px 0 0; }
+.cava { width: 18px; height: 18px; border-radius: 50%;
+  vertical-align: -4px; border: 1px solid var(--line); }
+
+.community-row { display: flex; gap: 12px; align-items: center; }
+.cico { width: 36px; height: 36px; }
+.foot { color: var(--ink-soft); font-size: 13px; padding: 24px 16px; }

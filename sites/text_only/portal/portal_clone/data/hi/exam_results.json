@@ -1,0 +1,422 @@
+[
+ {
+  "id": 1,
+  "candidate_name": "देलवार हक़",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 2,
+  "candidate_name": "देलवार हक़",
+  "institution": "सरकारी कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 3,
+  "candidate_name": "तोफ़ज्जल दास",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 4,
+  "candidate_name": "तोफ़ज्जल दास",
+  "institution": "सिटी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 5,
+  "candidate_name": "शहनाज़ भुइयाँ",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 6,
+  "candidate_name": "शहनाज़ भुइयाँ",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 7,
+  "candidate_name": "मुनीर दास",
+  "institution": "आइडियल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 8,
+  "candidate_name": "मुनीर दास",
+  "institution": "सिटी कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 9,
+  "candidate_name": "अमीनुल चौधरी",
+  "institution": "आइडियल हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 10,
+  "candidate_name": "अमीनुल चौधरी",
+  "institution": "सिटी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 11,
+  "candidate_name": "सबीना ख़ान",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 12,
+  "candidate_name": "सबीना ख़ान",
+  "institution": "सरकारी कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 13,
+  "candidate_name": "ग़ुलाम ख़ान",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 14,
+  "candidate_name": "ग़ुलाम ख़ान",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 15,
+  "candidate_name": "यास्मीन गुप्ता",
+  "institution": "आइडियल हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 16,
+  "candidate_name": "यास्मीन गुप्ता",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 17,
+  "candidate_name": "रेहाना दास",
+  "institution": "आइडियल हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 18,
+  "candidate_name": "रेहाना दास",
+  "institution": "सरकारी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 19,
+  "candidate_name": "सबीना साहा",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 20,
+  "candidate_name": "सबीना साहा",
+  "institution": "सिटी कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 21,
+  "candidate_name": "मुस्तफ़ा हुसैन",
+  "institution": "सरकारी हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 22,
+  "candidate_name": "मुस्तफ़ा हुसैन",
+  "institution": "मॉडल कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 23,
+  "candidate_name": "अशरफ़ुल बेगम",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 24,
+  "candidate_name": "अशरफ़ुल बेगम",
+  "institution": "मॉडल कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 25,
+  "candidate_name": "अब्दुल भुइयाँ",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 26,
+  "candidate_name": "अब्दुल भुइयाँ",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 27,
+  "candidate_name": "जहाँगीर हक़",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 28,
+  "candidate_name": "जहाँगीर हक़",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 29,
+  "candidate_name": "तोफ़ज्जल करीम",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 30,
+  "candidate_name": "तोफ़ज्जल करीम",
+  "institution": "मॉडल कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 31,
+  "candidate_name": "ख़ालिद अख़्तर",
+  "institution": "सरकारी हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 32,
+  "candidate_name": "ख़ालिद अख़्तर",
+  "institution": "सिटी कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 33,
+  "candidate_name": "जहाँआरा बरुआ",
+  "institution": "सरकारी हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 34,
+  "candidate_name": "जहाँआरा बरुआ",
+  "institution": "सिटी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 35,
+  "candidate_name": "रुक़ैया करीम",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 36,
+  "candidate_name": "रुक़ैया करीम",
+  "institution": "सिटी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 37,
+  "candidate_name": "कोहिनूर आलम",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 38,
+  "candidate_name": "कोहिनूर आलम",
+  "institution": "सरकारी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 39,
+  "candidate_name": "फ़ारूक़ रॉय",
+  "institution": "सरकारी हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 40,
+  "candidate_name": "फ़ारूक़ रॉय",
+  "institution": "सिटी कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 41,
+  "candidate_name": "लुत्फ़ा महमूद",
+  "institution": "आइडियल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 42,
+  "candidate_name": "लुत्फ़ा महमूद",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 43,
+  "candidate_name": "शहीदुल हक़",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 44,
+  "candidate_name": "शहीदुल हक़",
+  "institution": "मॉडल कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 45,
+  "candidate_name": "रेज़ाउल हक़",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 46,
+  "candidate_name": "रेज़ाउल हक़",
+  "institution": "सरकारी कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 47,
+  "candidate_name": "रेज़ाउल ख़ान",
+  "institution": "सरकारी हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 48,
+  "candidate_name": "रेज़ाउल ख़ान",
+  "institution": "मॉडल कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 49,
+  "candidate_name": "कोहिनूर गुप्ता",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 50,
+  "candidate_name": "कोहिनूर गुप्ता",
+  "institution": "सरकारी कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 51,
+  "candidate_name": "अनवर सिद्दीक़",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 52,
+  "candidate_name": "अनवर सिद्दीक़",
+  "institution": "सिटी कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 53,
+  "candidate_name": "रेहाना रहमान",
+  "institution": "मॉडल हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 54,
+  "candidate_name": "रेहाना रहमान",
+  "institution": "सिटी कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 55,
+  "candidate_name": "अब्दुल आलम",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 56,
+  "candidate_name": "अब्दुल आलम",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 57,
+  "candidate_name": "दिलरुबा आलम",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "विज्ञान",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 58,
+  "candidate_name": "दिलरुबा आलम",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 59,
+  "candidate_name": "ज़ाहिद रहमान",
+  "institution": "सिटी हाई स्कूल",
+  "group_name": "वाणिज्य",
+  "result_status": "उत्तीर्ण"
+ },
+ {
+  "id": 60,
+  "candidate_name": "ज़ाहिद रहमान",
+  "institution": "आइडियल कॉलेज",
+  "group_name": "मानविकी",
+  "result_status": "उत्तीर्ण"
+ }
+]

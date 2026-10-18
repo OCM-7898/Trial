@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}{{ p.title }}{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="meta"><a href="/f/{{ p.forum_name }}">f/{{ p.forum_name }}</a>
+    · {{ S.posted_by }} <a href="/u/{{ p.username }}"><img class="cava" src="/static/avatars/{{ p.username }}.svg" alt="">{{ p.username }}</a>
+    · {{ p.posted_on }}
+    {% if p.locked %}<span class="badge lock">{{ S.locked_badge }}</span>{% endif %}
+    {% if p.flair %}<a class="badge" href="/f/{{ p.forum_name }}?flair={{ p.flair | urlencode }}">{{ p.flair }}</a>{% endif %}
+    {% if p.awards %}<span class="badge">{{ S.awards_label }} {{ p.awards | v2_num }}</span>{% endif %}</div>
+  <h1>{{ p.title }}</h1>
+  {% if p.n_images %}
+  <div class="gallery">
+    {% for k in range(1, p.n_images + 1) %}
+    <img{% if loop.first %} class="hero"{% endif %} src="/static/post_images/{{ p.id }}_{{ k }}.jpg" alt="{{ S.photo_alt.format(k=k, title=p.title) }}">
+    {% endfor %}
+  </div>
+  {% endif %}
+  <p>{{ p.body }}</p>
+  <span class="score">{{ S.score_label }} {{ p.score | v2_num }}{% if my_vote == 1 %} {{ S.you_upvoted }}{% elif my_vote == -1 %} {{ S.you_downvoted }}{% endif %}</span>
+  {% if p.locked %}<div class="error">{{ S.locked_notice }}</div>{% endif %}
+  {% if user %}
+    {% if not p.locked %}
+    <form class="inline" method="post" action="/post/{{ p.id }}/vote">
+      <input type="hidden" name="dir" value="up"><button>{{ S.upvote }}</button>
+    </form>
+    <form class="inline" method="post" action="/post/{{ p.id }}/vote">
+      <input type="hidden" name="dir" value="down"><button class="line">{{ S.downvote }}</button>
+    </form>
+    {% endif %}
+    <form class="inline" method="post" action="/post/{{ p.id }}/save">
+      <button class="line">{% if is_saved %}{{ S.unsave_post }}{% else %}{{ S.save_post }}{% endif %}</button>
+    </form>
+    · <a href="/post/{{ p.id }}/report">{{ S.report_post }}</a>
+    {% if p.author_id == user.id %}
+      · <a href="/post/{{ p.id }}/edit">{{ S.edit }}</a>
+      · <a href="/post/{{ p.id }}/delete">{{ S.delete_this_post }}</a>
+    {% endif %}
+  {% endif %}
+</div>
+
+<div class="card">
+  <h3>{{ S.comments_title }} ({{ p.n_comments | v2_num }})</h3>
+  {% if user and not p.locked %}
+  <form class="stack" method="post" action="/post/{{ p.id }}/comment">
+    <textarea name="body" placeholder="{{ S.comment_placeholder }}"></textarea>
+    <button>{{ S.comment_btn }}</button>
+  </form>
+  {% elif not user %}
+    <p><a href="/login?next=/post/{{ p.id }}">{{ S.sign_in }}</a> {{ S.login_to_comment }}</p>
+  {% endif %}
+  {% for c in comments %}
+  <div class="comment">
+    <p><strong><a href="/u/{{ c.username }}"><img class="cava" src="/static/avatars/{{ c.username }}.svg" alt="">{{ c.username }}</a></strong>: {{ c.body }}
+    <span class="score">▲ {{ c.score | v2_num }}</span>
+    {% if user and c.author_id == user.id %}
+      <a href="/comment/{{ c.id }}/edit">{{ S.edit }}</a>
+      <a href="/comment/{{ c.id }}/delete">{{ S.delete }}</a>
+    {% endif %}</p>
+    {% for r in replies.get(c.id, []) %}
+    <p class="reply">↳ {{ S.reply_marker }} <strong><a href="/u/{{ r.username }}"><img class="cava" src="/static/avatars/{{ r.username }}.svg" alt="">{{ r.username }}</a></strong>: {{ r.body }}
+    <span class="score">▲ {{ r.score | v2_num }}</span>
+    {% if user and r.author_id == user.id %}
+      <a href="/comment/{{ r.id }}/edit">{{ S.edit }}</a>
+      <a href="/comment/{{ r.id }}/delete">{{ S.delete }}</a>
+    {% endif %}</p>
+    {% endfor %}
+    {% if user and not p.locked %}
+    <form class="inline" method="post" action="/comment/{{ c.id }}/vote">
+      <button class="line">{{ S.upvote_comment }}</button>
+    </form>
+    <form class="inline" method="post" action="/comment/{{ c.id }}/reply">
+      <input type="text" name="body" placeholder="{{ S.reply_to.format(name=c.username) }}" style="width:240px">
+      <button class="line">{{ S.reply_btn }}</button>
+    </form>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

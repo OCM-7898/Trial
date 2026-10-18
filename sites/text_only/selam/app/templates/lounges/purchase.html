@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field, number_field %}
+{% block title %}{{ t("lounge.buy_access") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('lounges') }}">{{ t("lounge.title") }}</a></li>
+        <li>{{ t("lounge.buy_access") }}</li></ol>
+  </nav>
+  <h1>{{ t("lounge.buy_access") }}</h1>
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+
+  <form class="searchform" method="post" action="{{ path('lounge_purchase') }}">
+    <div class="field">
+      <label for="lounge_id">{{ t("lounge.name") }}</label>
+      <select id="lounge_id" name="lounge_id">
+        {% for option in options %}
+        <option value="{{ option.id }}" {% if lounge and option.id == lounge.id %}selected{% endif %}>
+          {{ option.name }} &mdash; {{ option.airport_iata }} {{ t("lounge.terminal") }} {{ option.terminal }}
+          ({{ fmt_money(option.walk_in_price_usd) }})
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    {{ text_field("passenger_name", "passenger_name", t("boarding.passenger"), "", "", "", true) }}
+    {{ number_field("guests", "guests", t("lounge.guests"), 0, 4, 0) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("lounge.continue") }}</button></div>
+  </form>
+</div>
+{% endblock %}

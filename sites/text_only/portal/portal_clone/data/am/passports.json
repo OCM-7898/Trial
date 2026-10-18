@@ -1,0 +1,152 @@
+[
+ {
+  "id": 1,
+  "delivery": "አስቸኳይ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 2,
+  "delivery": "አስቸኳይ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 3,
+  "delivery": "መደበኛ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 4,
+  "delivery": "ፈጣን",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 5,
+  "delivery": "መደበኛ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 6,
+  "delivery": "አስቸኳይ",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 7,
+  "delivery": "መደበኛ",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 8,
+  "delivery": "መደበኛ",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 9,
+  "delivery": "አስቸኳይ",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 10,
+  "delivery": "አስቸኳይ",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 11,
+  "delivery": "መደበኛ",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 12,
+  "delivery": "አስቸኳይ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 13,
+  "delivery": "መደበኛ",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 14,
+  "delivery": "አስቸኳይ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 15,
+  "delivery": "ፈጣን",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 16,
+  "delivery": "ፈጣን",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 17,
+  "delivery": "አስቸኳይ",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 18,
+  "delivery": "ፈጣን",
+  "status": "ተልኳል"
+ },
+ {
+  "id": 19,
+  "delivery": "ፈጣን",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 20,
+  "delivery": "አስቸኳይ",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 21,
+  "delivery": "መደበኛ",
+  "status": "ተልኳል"
+ },
+ {
+  "id": 22,
+  "delivery": "ፈጣን",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 23,
+  "delivery": "አስቸኳይ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 24,
+  "delivery": "መደበኛ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 25,
+  "delivery": "መደበኛ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 26,
+  "delivery": "አስቸኳይ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 27,
+  "delivery": "አስቸኳይ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 28,
+  "delivery": "ፈጣን",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 29,
+  "delivery": "መደበኛ",
+  "status": "ተልኳል"
+ },
+ {
+  "id": 30,
+  "delivery": "አስቸኳይ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ }
+]

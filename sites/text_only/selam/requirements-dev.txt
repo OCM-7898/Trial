@@ -1,0 +1,9 @@
+# Test-only dependencies. Not shipped in the exported artifacts.
+#
+# Pinned to the versions the suite is actually verified against. They drifted
+# once -- the file said pytest 8.4.2 while the environment that green-lit every
+# commit had 9.1.1 -- which means a co-worker following the README would have
+# been running a different test runner than the one the results came from.
+-r requirements.txt
+pytest==9.1.1
+pypdf==6.16.2

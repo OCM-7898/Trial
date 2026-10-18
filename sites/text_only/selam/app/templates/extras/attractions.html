@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ airport.city }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li><a href="{{ path('network') }}">{{ t("network.title") }}</a></li><li>{{ airport.city }}</li></ol></nav>
+<h1>{{ airport.city }}</h1>
+<p class="hint">{{ t("destination.attractions") }}</p>
+<p>{{ t("destination.attractions_intro", city=airport.city) }}</p>
+<div class="cards">
+  <article class="card"><div class="card-body"><h3>{{ t("destination.museums") }}</h3>
+    <p>{{ t("destination.museums_body") }}</p></div></article>
+  <article class="card"><div class="card-body"><h3>{{ t("destination.markets") }}</h3>
+    <p>{{ t("destination.markets_body") }}</p></div></article>
+  <article class="card"><div class="card-body"><h3>{{ t("destination.outdoors") }}</h3>
+    <p>{{ t("destination.outdoors_body") }}</p></div></article>
+</div>
+<p><a class="btn btn-secondary" href="{{ path('destination', city=airport.iata) }}">{{ t("destination.getting_there") }}</a></p>
+</div>{% endblock %}

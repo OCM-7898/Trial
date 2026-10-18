@@ -1,0 +1,2143 @@
+[
+ {
+  "id": "selam-001",
+  "site": "selam",
+  "intent": "Book a one-way flight from Addis Ababa (ADD) to Dubai (DXB) on 2026-04-20 for one adult, enter passenger details, and stop at the final payment-review page without paying.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 2,
+    "lang": "en"
+   }
+  ],
+  "solution": [
+   "goto /book/results?origin=ADD&destination=DXB&depart=2026-04-20&adults=1",
+   "goto /book/passengers?itinerary=103435.1",
+   "fill 0 first_name_1=Test; last_name_1=Passenger; contact_email=test.passenger@example.com; contact_phone=+251911000000",
+   "goto /book/review",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-002",
+  "site": "selam",
+  "intent": "Open the booking with reference WGYBNA and last name Assefa. Report the flight numbers on the itinerary.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 5,
+    "lang": "en"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM111"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM110"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "goto /manage/WGYBNA",
+   "stop SM111, SM110"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-003",
+  "site": "selam",
+  "intent": "Booking W7JKUF (last name Terefe) needs its outbound flight moved to a later date. Select an available alternative, show the fare difference and any change fee, and stop before confirming payment.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 6,
+    "lang": "en"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "change_requests",
+    "match": {
+     "booking_id": 16,
+     "new_flight_id": [
+      100688,
+      100689,
+      100690,
+      100691,
+      100692,
+      100693,
+      100694,
+      100695,
+      100696,
+      100697,
+      100698,
+      100699,
+      100700,
+      100701,
+      100702,
+      100703,
+      100704,
+      100705,
+      100706,
+      100707,
+      100708,
+      100709,
+      100710,
+      100711,
+      100712,
+      100713,
+      100714,
+      100715
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=W7JKUF; surname=Terefe",
+   "goto /manage/W7JKUF/change",
+   "fill 0 new_flight_id=100688",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-004",
+  "site": "selam",
+  "intent": "Check whether booking SPMVJC (last name Kebede) can be refunded online. If it can, complete the request up to the final submission step. If it cannot, report the reason given.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "not made on the website",
+     "through the office that issued it"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 21
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=SPMVJC; surname=Kebede",
+   "goto /manage/SPMVJC/refund",
+   "stop This booking was not made on the website, so a refund must be requested through the office that issued it."
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-005",
+  "site": "selam",
+  "intent": "Check in for booking WGYBNA (last name Assefa) and download the boarding pass.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 8,
+    "lang": "en"
+   }
+  ],
+  "solution": [
+   "goto /checkin",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "fill 0",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-006",
+  "site": "selam",
+  "intent": "Open booking N9JKBF (last name Haile) and select an available aisle seat for the outbound flight. Report the seat number and its price, and stop before payment.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 10,
+    "lang": "en"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1B",
+     "1C",
+     "1D",
+     "1E",
+     "2B",
+     "2C",
+     "2D",
+     "2E",
+     "3B",
+     "3C",
+     "3D",
+     "3E",
+     "4B",
+     "4C",
+     "4D",
+     "4E",
+     "5B",
+     "5C",
+     "5D",
+     "5E",
+     "6B",
+     "6C",
+     "6D",
+     "6E",
+     "7C",
+     "7D",
+     "7F",
+     "7G",
+     "8C",
+     "8D",
+     "8F",
+     "8G",
+     "9C",
+     "9D",
+     "9F",
+     "9G",
+     "10C",
+     "10D",
+     "10F",
+     "10G",
+     "11C",
+     "11D",
+     "11F",
+     "11G",
+     "12C",
+     "12D",
+     "12F",
+     "12G",
+     "13C",
+     "13D",
+     "13F",
+     "13G",
+     "14C",
+     "14D",
+     "14F",
+     "14G",
+     "15C",
+     "15D",
+     "15F",
+     "15G",
+     "16C",
+     "16D",
+     "16F",
+     "16G",
+     "17C",
+     "17D",
+     "17F",
+     "17G",
+     "18C",
+     "18D",
+     "18F",
+     "18G",
+     "19C",
+     "19D",
+     "19F",
+     "19G",
+     "20C",
+     "20D",
+     "20F",
+     "20G",
+     "21C",
+     "21D",
+     "21F",
+     "21G",
+     "22C",
+     "22D",
+     "22F",
+     "22G",
+     "23C",
+     "23D",
+     "23F",
+     "23G",
+     "24C",
+     "24D",
+     "24F",
+     "24G",
+     "25C",
+     "25D",
+     "25F",
+     "25G",
+     "26C",
+     "26D",
+     "26F",
+     "26G",
+     "27C",
+     "27D",
+     "27F",
+     "27G",
+     "28C",
+     "28D",
+     "28F",
+     "28G",
+     "29C",
+     "29D",
+     "29F",
+     "29G",
+     "30C",
+     "30D",
+     "30F",
+     "30G",
+     "31C",
+     "31D",
+     "31F",
+     "31G",
+     "32C",
+     "32D",
+     "32F",
+     "32G",
+     "33C",
+     "33D",
+     "33F",
+     "33G",
+     "34C",
+     "34D",
+     "34F",
+     "34G",
+     "35C",
+     "35D",
+     "35F",
+     "35G",
+     "36C",
+     "36D",
+     "36F",
+     "36G"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=Haile",
+   "goto /manage/N9JKBF/seats",
+   "fill 0 seat_no=1B",
+   "stop 1B"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-007",
+  "site": "selam",
+  "intent": "Add 23 kg of extra checked baggage to booking WGYBNA (last name Assefa) for the outbound flight. Report the total charge and stop before completing payment.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 13,
+    "lang": "en"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "276",
+     "276.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "goto /manage/WGYBNA/baggage",
+   "fill 0 extra_kg=23",
+   "stop 276"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-008",
+  "site": "selam",
+  "intent": "Buy lounge access at Addis Ababa Bole International Airport for one passenger with no guests. Select Highland Lounge, verify the price, and stop at the payment page without paying.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 16,
+    "lang": "en"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "55",
+     "55.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges/purchase",
+   "fill 0 lounge_id=1; passenger_name=Test Passenger; guests=0",
+   "stop 55"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-009",
+  "site": "selam",
+  "intent": "Enrol a new Selam Miles member with first name Selamawit, last name Bekele, email selamawit.bekele@example.com and country ET. Report the membership number you are given.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 18,
+    "lang": "en"
+   },
+   {
+    "type": "answer_match",
+    "answer": "SM00000016"
+   }
+  ],
+  "solution": [
+   "goto /miles/join",
+   "fill 0 first_name=Selamawit; last_name=Bekele; email=selamawit.bekele@example.com; country_code=ET; dob=1992-05-14",
+   "stop SM00000016"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-010",
+  "site": "selam",
+  "intent": "Member SM00000001 did not receive miles for flight SM246 on 2026-03-15, ticket 0712345678901. Submit a missing-miles claim and report the claim reference number. Stay on the confirmation page that shows the claim reference when you answer.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 19,
+    "lang": "en"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "missing_miles_claims",
+    "match": {
+     "member_no": "SM00000001",
+     "flight_no": "SM246",
+     "flight_date": "2026-03-15"
+    }
+   }
+  ],
+  "solution": [
+   "goto /miles/claim",
+   "fill 0 member_no=SM00000001; ticket_no=0712345678901; flight_no=SM246; flight_date=2026-03-15",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-011",
+  "site": "selam",
+  "intent": "Flight SM106 on 2026-03-19 has Wi-Fi. Compare the available internet packages, select the largest data allowance, and stop before payment.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 21,
+    "lang": "en"
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM106&date=2026-03-19",
+   "fill 1 package_id=1038",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-012",
+  "site": "selam",
+  "intent": "Check the meal options for the outbound flight on booking WGYBNA (last name Assefa), then request a gluten-free meal for the passenger.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 22,
+    "lang": "en"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "goto /onboard/dining?pnr=WGYBNA",
+   "fill 1 meal_code=GFML",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-013",
+  "site": "selam",
+  "intent": "Check room availability at the Zena Transit Hotel inside Addis Ababa airport for a layover on 2026-04-12 and proceed to the booking review page without paying.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 25,
+    "lang": "en"
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "fill 0 arrival=2026-04-12; hours=12; guest_name=Test Passenger",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-014",
+  "site": "selam",
+  "intent": "From the airline website, open the National eVisa Service, select the visa type for a seven-day tourist visit, and report the documents required before applying.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 26,
+    "lang": "en"
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "six months",
+     "6 months"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/evisa",
+   "goto /partners/evisa?code=EV-T30",
+   "stop Passport valid six months beyond arrival; a recent passport photograph; a confirmed return ticket; proof of accommodation."
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-015",
+  "site": "selam",
+  "intent": "Reserve an airport transfer with RiftDrive for two passengers arriving at Nairobi (NBO) on 2026-04-12, and proceed to the booking review page without paying.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "selam_score",
+    "task_id": 28,
+    "lang": "en"
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "fill 1 offer_id=3",
+   "stop done"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-016",
+  "site": "selam",
+  "intent": "Open the fare rules for the Economy Group (EG) and Economy Standard (ES) fare classes (the fare-rules pages are at /book/fare-rules/<code>, e.g. /book/fare-rules/EG). How much HIGHER is the refund fee on EG than on ES? Answer with the difference.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "70",
+     "70.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EG",
+   "goto /book/fare-rules/ES",
+   "stop 70"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-017",
+  "site": "selam",
+  "intent": "Across the ECONOMY fare classes' rules pages (at /book/fare-rules/<code>; each page links the other classes), which fare class charges the highest change fee? Answer with its two-letter code.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "EG",
+    "none_of": [
+     "EB",
+     "EF",
+     "EL",
+     "EP",
+     "ES"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EG",
+   "stop EG"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-018",
+  "site": "selam",
+  "intent": "Get a SafeVoyage quote for a trip costing 1200. What is the premium for the Traveller cover (SV-PLUS) level?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "66",
+     "66.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=1200",
+   "stop 66"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-019",
+  "site": "selam",
+  "intent": "Get a SafeVoyage quote for a trip costing 400. What is the premium for the Comprehensive cover (SV-MAX) level?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "55",
+     "55.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=400",
+   "stop 55"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-020",
+  "site": "selam",
+  "intent": "Per the excess-baggage fee page, what would 15 kg of extra checked baggage cost on a EUROPE-region economy ticket? Answer with the total.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "270",
+     "270.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /baggage/fees",
+   "stop 270"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-021",
+  "site": "selam",
+  "intent": "Member SM00000004 (last name Negash) wants the economy award seat from ADD to NBO on 2026-03-19. Check the award search for the miles required and their account for the current balance. How many MORE miles do they need?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "12099",
+     "12099.00",
+     "12,099"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-search?origin=ADD&destination=NBO&date=2026-03-19&cabin=economy",
+   "goto /miles/account",
+   "fill 0 member_no=SM00000004; surname=Negash",
+   "stop 12099"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-022",
+  "site": "selam",
+  "intent": "The offers page lists promotion code AFRICA15. Applying its percentage discount to a 600 fare, what would the discounted price be?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "510",
+     "510.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /offers",
+   "stop 510"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-023",
+  "site": "selam",
+  "intent": "Per the Economy Basic (EB) fare rules (the page is /book/fare-rules/EB), miles are earned at a percentage of distance flown. On a 2000-mile journey, how many Selam Miles would an EB ticket earn?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1000",
+     "1000.00",
+     "1,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /book/fare-rules/EB",
+   "stop 1000"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-024",
+  "site": "selam",
+  "intent": "Of the lounges at Addis Ababa Terminal 2, buy walk-in access to the CHEAPEST one for passenger 'Test Passenger' with no guests.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "lounge_purchases",
+    "match": {
+     "lounge_id": 4,
+     "guests": 0,
+     "passenger_name": "Test Passenger"
+    }
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/4",
+   "goto /lounges/purchase",
+   "fill 0 lounge_id=4; passenger_name=Test Passenger; guests=0"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-025",
+  "site": "selam",
+  "intent": "Selam runs a Highland Lounge at NBO, JNB, DAR and LOS. At which airport is the walk-in price the LOWEST? Answer with the airport code.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "DAR",
+    "none_of": [
+     "JNB",
+     "LOS",
+     "NBO"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop DAR"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-026",
+  "site": "selam",
+  "intent": "A GOLD-tier member flying economy is at Addis Ababa Terminal 2. Of the three lounges there, which ONE admits gold members free of charge? Answer with the lounge name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Highland Lounge Terminal 2",
+    "none_of": [
+     "Selam Sky Lounge",
+     "Transit Rest Lounge"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/2",
+   "stop Highland Lounge Terminal 2"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-027",
+  "site": "selam",
+  "intent": "Compare the onboard Wi-Fi on flight SM106 and flight SM220, both on 2026-03-19. Which flight's LARGEST data package is cheaper, and what does it cost? Answer with the flight number and the price.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "SM106",
+    "none_of": [
+     "SM220"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "22",
+     "22.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM106&date=2026-03-19",
+   "goto /onboard/wifi?flight_no=SM220&date=2026-03-19",
+   "stop SM106, 22"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-028",
+  "site": "selam",
+  "intent": "A family of four has a 12-hour layover. At the Zena Transit Hotel, rooms are priced per 6-hour block. What would the room that sleeps four cost for the full 12 hours?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "240",
+     "240.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "stop 240"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-029",
+  "site": "selam",
+  "intent": "RiftDrive runs a private van transfer at both NBO and ADD. Which airport's van is cheaper, and by how much? Answer with the airport code and the difference.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ADD",
+    "none_of": [
+     "NBO"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "7",
+     "7.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "goto /partners/riftdrive?airport=ADD&passengers=2&pickup=2026-04-12",
+   "stop ADD, 7"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-030",
+  "site": "selam",
+  "intent": "Book the SHARED SHUTTLE transfer with RiftDrive for two passengers arriving at Nairobi (NBO) on 2026-04-12.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "car_bookings",
+    "match": {
+     "offer_id": 3,
+     "passengers": 2,
+     "pickup_date": "2026-04-12"
+    }
+   }
+  ],
+  "solution": [
+   "goto /partners/riftdrive?airport=NBO&passengers=2&pickup=2026-04-12",
+   "fill 1 offer_id=3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-031",
+  "site": "selam",
+  "intent": "Which Addis Ababa stopover package requires the LONGEST minimum layover? Answer with the package name.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Full-day highlands excursion",
+    "none_of": [
+     "Airport transfer, both ways",
+     "City hotel, four star",
+     "Half-day city tour",
+     "Highland Class arrivals suite",
+     "Highland Lounge access",
+     "Zena Transit Hotel, in-terminal"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /stopover/packages",
+   "stop Full-day highlands excursion"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-032",
+  "site": "selam",
+  "intent": "Member SM00000006 (last name Zeleke) is Silver tier. Open their tier-progress page: how many more QUALIFYING miles do they need to reach the next tier?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "23634",
+     "23634.00",
+     "23,634"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000006; surname=Zeleke",
+   "goto /miles/account/tier-progress",
+   "stop 23634"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-033",
+  "site": "selam",
+  "intent": "What is the current miles balance on account SM00000009 (last name Wolde)?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "18730",
+     "18730.00",
+     "18,730"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000009; surname=Wolde",
+   "stop 18730"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-034",
+  "site": "selam",
+  "intent": "Open the recent-activity mileage statement of member SM00000010 (last name Terefe). Which single transaction credited the MOST miles? Answer with that flight number and the miles amount.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "SM172",
+    "none_of": [
+     "SM116",
+     "SM137",
+     "SM148",
+     "SM150",
+     "SM171",
+     "SM179",
+     "SM185",
+     "SM193",
+     "SM205",
+     "SM213",
+     "SM218",
+     "SM226"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "29516",
+     "29516.00",
+     "29,516"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000010; surname=Terefe",
+   "goto /miles/account/statement",
+   "stop SM172, 29516"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-035",
+  "site": "selam",
+  "intent": "Submit a missing-miles claim for member SM00000003: ticket 0709876543210, flight SM188 flown on 2026-02-20.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "missing_miles_claims",
+    "match": {
+     "member_no": "SM00000003",
+     "ticket_no": "0709876543210",
+     "flight_no": "SM188",
+     "flight_date": "2026-02-20"
+    }
+   }
+  ],
+  "solution": [
+   "goto /miles/claim",
+   "fill 0 member_no=SM00000003; ticket_no=0709876543210; flight_no=SM188; flight_date=2026-02-20"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-036",
+  "site": "selam",
+  "intent": "Per the award chart, how many miles does a one-way ECONOMY award to North America require?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "60000",
+     "60000.00",
+     "60,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-chart",
+   "stop 60000"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-037",
+  "site": "selam",
+  "intent": "Member SM00000011 (last name Alemu) wants to know their tier and balance. Report BOTH.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "gold",
+    "none_of": [
+     "blue",
+     "platinum",
+     "silver"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "88971",
+     "88971.00",
+     "88,971"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000011; surname=Alemu",
+   "stop gold, 88971"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-038",
+  "site": "selam",
+  "intent": "Member SM00000004 (last name Negash, balance shown on their account) wants to redeem a 25,000-mile award. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "insufficient miles",
+     "not enough miles",
+     "cannot redeem"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/account",
+   "fill 0 member_no=SM00000004; surname=Negash",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-039",
+  "site": "selam",
+  "intent": "Open the departures board for Addis Ababa (ADD) for 2026-03-16 (the board is at /flight-status/departures/ADD). How many departures does the board list? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "74",
+     "74.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /flight-status/departures/ADD",
+   "stop 74"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-040",
+  "site": "selam",
+  "intent": "Flight SM152 on 2026-03-16 is running late. By how many minutes is it delayed?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /flight-status?flight_no=SM152&date=2026-03-16",
+   "stop 40"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-041",
+  "site": "selam",
+  "intent": "For flight SM107 on 2026-03-16, report BOTH the departure gate and the departure terminal.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "B20"
+   },
+   {
+    "type": "answer_match",
+    "answer": "1"
+   }
+  ],
+  "solution": [
+   "goto /flight-status?flight_no=SM107&date=2026-03-16",
+   "stop gate B20, terminal 1"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-042",
+  "site": "selam",
+  "intent": "Check the seasonal-routes page: which routes pause for part of the year? If none do, say so.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "year round",
+     "year-round",
+     "every route",
+     "none of"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /schedules/seasonal",
+   "stop Every route in our network operates year round."
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-043",
+  "site": "selam",
+  "intent": "How many days per week does the ADD to ABJ service operate? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2",
+     "2.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /schedules?origin=ADD&destination=ABJ",
+   "stop 2"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-044",
+  "site": "selam",
+  "intent": "On booking N9JKBF (last name Haile), select an available WINDOW seat for the outbound flight.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "seat_assignments",
+    "match": {
+     "segment_id": 19,
+     "seat_no": [
+      "1A",
+      "1F",
+      "2A",
+      "2F",
+      "3A",
+      "3F",
+      "4A",
+      "4F",
+      "5A",
+      "5F",
+      "6A",
+      "6F",
+      "7A",
+      "7J",
+      "8A",
+      "8J",
+      "9A",
+      "9J",
+      "10A",
+      "10J",
+      "11A",
+      "11J",
+      "12A",
+      "12J",
+      "13A",
+      "13J",
+      "14A",
+      "14J",
+      "15A",
+      "15J",
+      "16A",
+      "16J",
+      "17A",
+      "17J",
+      "18A",
+      "18J",
+      "19A",
+      "19J",
+      "20A",
+      "20J",
+      "21A",
+      "21J",
+      "22A",
+      "22J",
+      "23A",
+      "23J",
+      "24A",
+      "24J",
+      "25A",
+      "25J",
+      "26A",
+      "26J",
+      "27A",
+      "27J",
+      "28A",
+      "28J",
+      "29A",
+      "29J",
+      "30A",
+      "30J",
+      "31A",
+      "31J",
+      "32A",
+      "32J",
+      "33A",
+      "33J",
+      "34A",
+      "34J",
+      "35A",
+      "35J",
+      "36A",
+      "36J"
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=Haile",
+   "goto /manage/N9JKBF/seats",
+   "fill 0 seat_no=1A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-045",
+  "site": "selam",
+  "intent": "Add 10 kg of extra checked baggage to booking MDQKTR (last name Girma) for the outbound flight.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 11,
+     "extra_kg": 10,
+     "segment_id": 20
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=MDQKTR; surname=Girma",
+   "goto /manage/MDQKTR/baggage",
+   "fill 0 extra_kg=10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-046",
+  "site": "selam",
+  "intent": "Update the contact details on booking WGYBNA (last name Assefa) on its contact-details page (/manage/WGYBNA/contact-details, not linked from the booking page): set the email to assefa.new@example.com and the phone to +251911222333.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "WGYBNA"
+    },
+    "field": "email",
+    "value": "assefa.new@example.com"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "WGYBNA"
+    },
+    "field": "phone",
+    "value": "+251911222333"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "goto /manage/WGYBNA/contact-details",
+   "fill 0 email=assefa.new@example.com; phone=+251911222333"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-047",
+  "site": "selam",
+  "intent": "Cancel booking EFC78Z (last name Terefe) entirely through its cancellation page (/manage/EFC78Z/cancel, not linked from the booking page), confirming when asked.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "EFC78Z"
+    },
+    "field": "status",
+    "value": "cancelled"
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=EFC78Z; surname=Terefe",
+   "goto /manage/EFC78Z/cancel",
+   "fill 0 confirm=yes"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-048",
+  "site": "selam",
+  "intent": "Booking J4KC9R (last name Wolde) is on a refundable fare. Start the online refund and submit it through the review step.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=J4KC9R; surname=Wolde",
+   "goto /manage/J4KC9R/refund",
+   "fill 0 confirm=1"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-049",
+  "site": "selam",
+  "intent": "Request an Asian vegetarian meal (AVML) for booking N9JKBF (last name Haile).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "segment_id": 19,
+     "meal_code": "AVML"
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=N9JKBF; surname=Haile",
+   "goto /onboard/dining?pnr=N9JKBF",
+   "fill 1 meal_code=AVML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-050",
+  "site": "selam",
+  "intent": "Booking VF6ZBW (last name Tesfaye) is upgrade-eligible. Request the cash upgrade for the OUTBOUND flight through the review step.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "upgrade_purchases",
+    "match": {
+     "segment_id": 5
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=VF6ZBW; surname=Tesfaye",
+   "goto /manage/VF6ZBW/upgrade",
+   "fill 0 segment_id=5"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-051",
+  "site": "selam",
+  "intent": "On booking WGYBNA (last name Assefa), do BOTH: add 5 kg of extra checked baggage for the outbound flight, and request a low-salt meal (LSML).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 1,
+     "extra_kg": 5,
+     "segment_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "meal_code": "LSML",
+     "segment_id": [
+      1,
+      2
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "goto /manage/WGYBNA/baggage",
+   "fill 0 extra_kg=5",
+   "goto /onboard/dining?pnr=WGYBNA",
+   "fill 1 meal_code=LSML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-052",
+  "site": "selam",
+  "intent": "On booking VF6ZBW (last name Tesfaye), do BOTH: add 15 kg of extra checked baggage for the outbound flight, and request a diabetic meal (DBML).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "baggage_purchases",
+    "match": {
+     "booking_id": 3,
+     "extra_kg": 15,
+     "segment_id": 5
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "meal_requests",
+    "match": {
+     "meal_code": "DBML",
+     "segment_id": [
+      5,
+      6
+     ]
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=VF6ZBW; surname=Tesfaye",
+   "goto /manage/VF6ZBW/baggage",
+   "fill 0 extra_kg=15",
+   "goto /onboard/dining?pnr=VF6ZBW",
+   "fill 1 meal_code=DBML"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-053",
+  "site": "selam",
+  "intent": "Submit a wheelchair assistance request (service code WCHR) for booking WGYBNA through the special-assistance form, in the name 'Test Passenger', email test.passenger@example.com, note 'Aisle chair needed'.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "kind": "assistance",
+     "payload": "%WCHR%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%WGYBNA%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%Test Passenger%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%test.passenger@example.com%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%Aisle chair needed%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/assistance/wheelchair",
+   "fill 0 full_name=Test Passenger; email=test.passenger@example.com; booking_reference=WGYBNA; service_code=WCHR; notes=Aisle chair needed"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-054",
+  "site": "selam",
+  "intent": "Open the travel requirements for flying from Addis Ababa (ADD) to London (LHR) — the per-route page is /travel-requirements/ADD/LHR. Report BOTH the required passport validity in months and the number of blank pages needed.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6",
+     "6.00"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2",
+     "2.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /travel-requirements/ADD/LHR",
+   "stop 6 months, 2 pages"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-055",
+  "site": "selam",
+  "intent": "Open the contact page for Germany. Report BOTH the 24-hour urgent phone line and the city the office is in.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "+251 11 517 8888",
+    "none_of": [
+     "+214 38 836 7484"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "Frankfurt"
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "goto /help/contact/DE",
+   "stop +251 11 517 8888, Frankfurt"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-056",
+  "site": "selam",
+  "intent": "Report the local office phone number for Austria.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "+203 13 510 5079"
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "goto /help/contact/AT",
+   "stop +203 13 510 5079"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-057",
+  "site": "selam",
+  "intent": "Most special meals close 24 hours before departure, but some need MORE notice. Which special meals require 48 hours? Name both.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Jain vegetarian",
+    "none_of": [
+     "Asian vegetarian",
+     "Child",
+     "Diabetic",
+     "Fruit platter",
+     "Gluten intolerant",
+     "Hindu",
+     "Infant",
+     "Low fat",
+     "Low salt",
+     "Muslim",
+     "Orthodox fasting"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "Kosher",
+    "none_of": [
+     "Asian vegetarian",
+     "Child",
+     "Diabetic",
+     "Fruit platter",
+     "Gluten intolerant",
+     "Hindu",
+     "Infant",
+     "Low fat",
+     "Low salt",
+     "Muslim",
+     "Orthodox fasting"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/dining/special-meals",
+   "stop Jain vegetarian, Kosher"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-058",
+  "site": "selam",
+  "intent": "On the eVisa service, compare the 90-day tourist e-visa with the business e-visa. Which costs more, and by how much? Answer with the visa name and the difference.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "Tourist e-Visa, 90 days",
+     "90-day tourist",
+     "90 day tourist",
+     "tourist e-visa, 90",
+     "tourist e-visa (90",
+     "tourist visa, 90",
+     "tourist (90"
+    ],
+    "none_of": [
+     "Business e-Visa"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "10",
+     "10.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/evisa",
+   "stop Tourist e-Visa, 90 days, 10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-059",
+  "site": "selam",
+  "intent": "Of the rail connections offered from Frankfurt (FRA), which destination has the SHORTEST journey time, and how many minutes is it? Answer with both.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Cologne",
+    "none_of": [
+     "Munich",
+     "Stuttgart"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "62",
+     "62.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/eurorail?arrival=FRA",
+   "stop Cologne, 62"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-060",
+  "site": "selam",
+  "intent": "Buy walk-in lounge access at Accra (ACC) for one passenger. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "no lounge",
+     "no lounges",
+     "does not have a lounge"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "lounge_purchases",
+    "match": {
+     "guests": 0
+    }
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-061",
+  "site": "selam",
+  "intent": "Buy the largest Wi-Fi package for flight SM114 on 2026-03-17. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "no wi-fi",
+     "no wifi",
+     "does not have wi-fi",
+     "not equipped"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wifi_purchases",
+    "match": {
+     "status": "pending"
+    }
+   }
+  ],
+  "solution": [
+   "goto /onboard/wifi?flight_no=SM114&date=2026-03-17",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-062",
+  "site": "selam",
+  "intent": "Search for award seats bookable with miles from ADD to ABJ on 2026-03-19 in economy and report the miles required. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "no award seats",
+     "no seats",
+     "no availability",
+     "not available"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /miles/award-search?origin=ADD&destination=ABJ&date=2026-03-19&cabin=economy",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-063",
+  "site": "selam",
+  "intent": "Booking WGYBNA (last name Assefa) no longer suits the passenger. Complete an online refund for it. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "not refundable",
+     "non-refundable",
+     "cannot be refunded",
+     "not eligible"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "refund_requests",
+    "match": {
+     "booking_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=WGYBNA; surname=Assefa",
+   "goto /manage/WGYBNA/refund",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-064",
+  "site": "selam",
+  "intent": "Upgrade the outbound flight on booking J4KC9R (last name Wolde) to Highland Class. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "not eligible",
+     "not upgradeable",
+     "not upgrade-eligible",
+     "cannot be upgraded"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "upgrade_purchases",
+    "match": {
+     "booking_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=J4KC9R; surname=Wolde",
+   "goto /manage/J4KC9R/upgrade",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-065",
+  "site": "selam",
+  "intent": "Find the phone number of the Selam Airways office in Japan. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "no office",
+     "does not have an office",
+     "no selam airways office"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /help/contact",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-066",
+  "site": "selam",
+  "intent": "Book a room at the Zena Transit Hotel that sleeps SIX people for a 6-hour stay on 2026-04-12. If this is not possible on the site, answer N/A.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "N/A",
+     "not possible",
+     "no room",
+     "no rooms",
+     "cannot accommodate",
+     "does not offer"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "hotel_bookings",
+    "match": {
+     "arrival": "2026-04-12"
+    }
+   }
+  ],
+  "solution": [
+   "goto /partners/zena-hotel",
+   "stop N/A"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-067",
+  "site": "selam",
+  "intent": "How many lounges does Selam Airways list at Addis Ababa (ADD), across all terminals? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4",
+     "4.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop 4"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-068",
+  "site": "selam",
+  "intent": "What would it cost to buy walk-in access to BOTH Highland Lounges at Addis Ababa (Terminal 1 and Terminal 2)? Answer with the combined total.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "120",
+     "120.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "stop 120"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-069",
+  "site": "selam",
+  "intent": "How many special meal codes does the special-meals page list? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "14",
+     "14.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /onboard/dining/special-meals",
+   "stop 14"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-070",
+  "site": "selam",
+  "intent": "How many onward rail destinations does the EuroRail partner page list from Frankfurt (FRA)? Answer with the number.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "3",
+     "3.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/eurorail?arrival=FRA",
+   "stop 3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-071",
+  "site": "selam",
+  "intent": "Send feedback through the website's feedback form with the exact message 'The Terminal 2 signage for lounges is confusing.'",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "service_requests",
+    "match": {
+     "payload": "%The Terminal 2 signage for lounges is confusing.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /help/feedback",
+   "fill 0 full_name=Test Passenger; email=test.passenger@example.com; category=complaint; message=The Terminal 2 signage for lounges is confusing."
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-072",
+  "site": "selam",
+  "intent": "Open booking MBX744 (last name Zeleke). Report BOTH the total paid and how many passengers are on the booking.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1780",
+     "1780.00",
+     "1,780"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "10",
+     "10.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /manage",
+   "fill 0 pnr=MBX744; surname=Zeleke",
+   "goto /manage/MBX744",
+   "stop 1780, 10"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-073",
+  "site": "selam",
+  "intent": "Open the Highland Lounge at Addis Ababa Terminal 1 and report BOTH its opening hours and its precise location as given on the lounge page (including which gate it faces).",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "04:00-23:30 daily",
+     "04:00-23:30",
+     "04:00 to 23:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "opposite Gate A6"
+   }
+  ],
+  "solution": [
+   "goto /lounges",
+   "goto /lounges/1",
+   "stop 04:00-23:30 daily; Terminal 1, airside, one level above the duty-free hall, opposite Gate A6."
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-074",
+  "site": "selam",
+  "intent": "An economy adult flying an AFRICA-region route wants to check ONE bag weighing 30 kg. Using the allowance page (the maximum weight per bag) and the excess-fee page, how much would the excess weight beyond that maximum cost?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "84",
+     "84.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /baggage/allowance?origin=ADD&destination=NBO&cabin=economy&pax_type=adult",
+   "goto /baggage/fees",
+   "stop 84"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "selam-075",
+  "site": "selam",
+  "intent": "A traveller books a 250 trip and wants SafeVoyage cover. Get a quote for 250: which cover level is the CHEAPEST, and what is its premium? Answer with the level name and the amount.",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "Essential cover",
+    "none_of": [
+     "Comprehensive cover",
+     "Traveller cover"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "18",
+     "18.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /partners/safevoyage?fare=250",
+   "stop Essential cover, 18"
+  ],
+  "max_steps": 40
+ }
+]

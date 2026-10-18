@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ S.submit_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.submit_title }}</h1>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="card">
+<form class="stack" method="post" action="/submit">
+  <label>{{ S.community_label }}</label>
+  <select name="forum">
+    {% for f in forums %}<option value="{{ f.name }}"{% if preselect == f.name %} selected{% endif %}>f/{{ f.name }}</option>{% endfor %}
+  </select>
+  <label>{{ S.title_label }}</label>
+  <input type="text" name="title">
+  <label>{{ S.body_label }}</label>
+  <textarea name="body"></textarea>
+  <button>{{ S.submit_btn }}</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ t("dining.special_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('dining') }}">{{ t("dining.title") }}</a></li>
+        <li>{{ t("dining.special_title") }}</li></ol>
+  </nav>
+  <h1>{{ t("dining.special_title") }}</h1>
+  <p>{{ t("dining.special_intro") }}</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("dining.code") }}</th>
+        <th scope="col">{{ t("dining.meal") }}</th>
+        <th scope="col">{{ t("dining.description") }}</th>
+        <th scope="col">{{ t("dining.cutoff") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for code in codes %}
+        <tr>
+          <td>{{ code.code }}</td>
+          <td>{{ code.name }}</td>
+          <td>{{ code.description }}</td>
+          <td>{{ t("dining.hours_before", n=code.cutoff_hours) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

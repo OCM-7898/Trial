@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.login }}</h1>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="card">
+  <form method="post" action="/login">
+    <input type="hidden" name="next" value="{{ next }}">
+    <label>{{ S.username }}</label>
+    <input type="text" name="username">
+    <label>{{ S.password }}</label>
+    <input type="password" name="password">
+    <button type="submit">{{ S.sign_in }}</button>
+  </form>
+  <p class="muted">{{ S.login_hint }}</p>
+</div>
+{% endblock %}

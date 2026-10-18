@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ S.cancel_q.format(id=o.id) }}{% endblock %}
+{% block content %}
+<h2>{{ S.cancel_q.format(id=o.id) }}</h2>
+<p>{{ S.status_label }} <strong>{{ o.status }}</strong> · {{ S.total }} {{ S.cur }}{{ ('%.2f' % o.total) | v2_num }} · {{ S.ship_to }} {{ o.address }}</p>
+{% if o.status in ['placed', 'shipped'] %}
+<p>{{ S.cancel_sure }}</p>
+<form class="inline" method="post" action="/order/{{ o.id }}/cancel"><button class="btn">{{ S.yes_cancel }}</button></form>
+<a href="/order/{{ o.id }}" class="btn grey">{{ S.no_keep }}</a>
+{% else %}
+<p class="error">{{ S.cannot_cancel }}</p>
+<p><a href="/order/{{ o.id }}">{{ S.back_to_order }}</a></p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,152 @@
+[
+ {
+  "id": 1,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ሞውልቪባዛር የክትባት ማዕከል"
+ },
+ {
+  "id": 2,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ማይመንሲንግ የክትባት ማዕከል"
+ },
+ {
+  "id": 3,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ካግራቻሪ የክትባት ማዕከል"
+ },
+ {
+  "id": 4,
+  "vaccine_name": "ጥምር DT",
+  "centre_name": "ኔትሮኮና የክትባት ማዕከል"
+ },
+ {
+  "id": 5,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ጎፓልጋንጅ የክትባት ማዕከል"
+ },
+ {
+  "id": 6,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ባርጉና የክትባት ማዕከል"
+ },
+ {
+  "id": 7,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ኔትሮኮና የክትባት ማዕከል"
+ },
+ {
+  "id": 8,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ባሪሻል የክትባት ማዕከል"
+ },
+ {
+  "id": 9,
+  "vaccine_name": "ባለሶስት A",
+  "centre_name": "ታንጋይል የክትባት ማዕከል"
+ },
+ {
+  "id": 10,
+  "vaccine_name": "ባለሶስት A",
+  "centre_name": "ካግራቻሪ የክትባት ማዕከል"
+ },
+ {
+  "id": 11,
+  "vaccine_name": "ባለሶስት A",
+  "centre_name": "ሞውልቪባዛር የክትባት ማዕከል"
+ },
+ {
+  "id": 12,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ማይመንሲንግ የክትባት ማዕከል"
+ },
+ {
+  "id": 13,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ራጅባሪ የክትባት ማዕከል"
+ },
+ {
+  "id": 14,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ታንጋይል የክትባት ማዕከል"
+ },
+ {
+  "id": 15,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ኩልና የክትባት ማዕከል"
+ },
+ {
+  "id": 16,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ላክሽሚፑር የክትባት ማዕከል"
+ },
+ {
+  "id": 17,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ጋዚፑር የክትባት ማዕከል"
+ },
+ {
+  "id": 18,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ኒልፋማሪ የክትባት ማዕከል"
+ },
+ {
+  "id": 19,
+  "vaccine_name": "ጥምር DT",
+  "centre_name": "ኮክስ ባዛር የክትባት ማዕከል"
+ },
+ {
+  "id": 20,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ፒሮጅፑር የክትባት ማዕከል"
+ },
+ {
+  "id": 21,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ጃሎካቲ የክትባት ማዕከል"
+ },
+ {
+  "id": 22,
+  "vaccine_name": "ባለሶስት A",
+  "centre_name": "ብራህማንባሪያ የክትባት ማዕከል"
+ },
+ {
+  "id": 23,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ፋሪድፑር የክትባት ማዕከል"
+ },
+ {
+  "id": 24,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ጃሾር የክትባት ማዕከል"
+ },
+ {
+  "id": 25,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ኪሾርጋንጅ የክትባት ማዕከል"
+ },
+ {
+  "id": 26,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ማዳሪፑር የክትባት ማዕከል"
+ },
+ {
+  "id": 27,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ራጅሻሂ የክትባት ማዕከል"
+ },
+ {
+  "id": 28,
+  "vaccine_name": "ባለሶስት B",
+  "centre_name": "ኖዋካሊ የክትባት ማዕከል"
+ },
+ {
+  "id": 29,
+  "vaccine_name": "ወቅታዊ IV",
+  "centre_name": "ናራያንጋንጅ የክትባት ማዕከል"
+ },
+ {
+  "id": 30,
+  "vaccine_name": "ጥምር DT",
+  "centre_name": "ፋሪድፑር የክትባት ማዕከል"
+ }
+]

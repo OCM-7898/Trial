@@ -1,0 +1,665 @@
+{
+ "civil-registration": {
+  "name": "Birth and Death Registration",
+  "summary": "Register a birth or a death, obtain a certificate, correct an entry, and check the status of an application.",
+  "description": "The Office of the Registrar General maintains the registers of births and deaths. Registration is compulsory for every birth and every death occurring in the Republic, and the birth registration certificate is the primary proof of age for every other public service.",
+  "guide_title": "How to apply",
+  "guide_body": "Every birth and every death must be registered with the registrar of the union or municipality in which it occurred. Registration is free within forty-five days of the event; a late fee applies thereafter.\n\n## Registering a birth\n\n1. Sign in and open **Birth registration** in the service panel.\n2. Enter the child's name, date and place of birth.\n3. Enter both parents' names and their identity card numbers.\n4. Choose the registrar office covering the place of birth, not your present address.\n5. Submit and keep the application number shown on the confirmation screen.\n\n## Documents required\n\n- Certificate of birth issued by the hospital, or a declaration by the attending midwife\n- Both parents' identity cards\n- Immunisation card, where one has been issued\n- For a birth registered after five years, an affidavit and the school admission record\n\n## Registering a death\n\nThe procedure mirrors birth registration exactly, and the same time limits and late fees apply. A death is registered by a relative, or by the head of the institution where the death occurred.\n\n> The birth and death registers are separate. An application made against the wrong register cannot be transferred and must be submitted again.\n\n## Correcting an entry\n\nA correction amends the existing entry and preserves the superseded value. Corrections to a date of birth or a date of death require the original event certificate and are referred to the district registrar.",
+  "fees_title": "Fees",
+  "fees_intro": "Registration is free within forty-five days of the event. After that a late fee applies, rising with the delay. Corrections and certified copies carry their own fees, identical for the birth and death registers.",
+  "panel": {
+   "birth-apply": {
+    "title": "Birth registration",
+    "summary": "Register a birth and apply for the certificate, giving the child's details and both parents' particulars."
+   },
+   "birth-status": {
+    "title": "Birth application status",
+    "summary": "Check the progress of a birth registration application using the application number. Searches the birth register only."
+   },
+   "birth-correction": {
+    "title": "Correct a birth entry",
+    "summary": "Apply to amend a name, date of birth or parentage recorded in the birth register, with supporting evidence."
+   },
+   "death-status": {
+    "title": "Death registration status",
+    "summary": "Check the progress of a death registration application using the application number. Searches the death register only."
+   },
+   "registrar-offices": {
+    "title": "Registrar offices",
+    "summary": "Addresses, telephone numbers and counter hours for union, municipal and city corporation registrars."
+   },
+   "death-apply": {
+    "title": "Death registration",
+    "summary": "Register a death and apply for the certificate, giving the deceased's details and the informant's particulars."
+   },
+   "death-correction": {
+    "title": "Correct a death entry",
+    "summary": "Apply to amend a name, date of death or parentage recorded in the death register, with supporting evidence."
+   },
+   "birth-reprint": {
+    "title": "Reprint a birth certificate",
+    "summary": "Obtain a further certified copy of a birth entry already registered."
+   },
+   "death-reprint": {
+    "title": "Reprint a death certificate",
+    "summary": "Obtain a further certified copy of a death entry already registered."
+   },
+   "marriage-registration": {
+    "title": "Marriage registration",
+    "summary": "Register a marriage and obtain the certificate from the registrar of the place of solemnisation."
+   }
+  }
+ },
+ "police-clearance": {
+  "name": "Police Clearance",
+  "summary": "Apply for a police clearance certificate, track an application, and register a tenant or report lost property.",
+  "description": "The Police Verification Bureau issues clearance certificates stating whether a criminal record exists against an applicant. A certificate is issued for a stated purpose and is valid for six months from issue.",
+  "guide_title": "How to apply",
+  "guide_body": "A clearance certificate records whether a criminal case or conviction stands against the applicant. It is issued for a stated purpose and cannot be used for another.\n\n## Applying\n\n1. Open **Apply for clearance** in the service panel.\n2. Give your personal particulars as recorded on your identity card.\n3. Give your present and permanent addresses. Verification is conducted at both.\n4. State the purpose: employment abroad, higher education, visa, adoption or licensing.\n5. Submit and keep the reference number.\n\n## Verification\n\nAn officer visits the addresses given and enquires of the station covering each. Where an applicant has lived at the present address for less than two years, the previous address is verified as well.\n\n- Identity card\n- Passport, where the certificate is for use abroad\n- Proof of the present address dated within six months\n- The offer letter or admission letter, where the purpose requires one\n\n> Give an address at which you can actually be found. A verification officer who cannot find the applicant reports accordingly, and the application is refused rather than delayed.\n\n## Validity\n\nA certificate is valid for six months from issue. A certificate issued for employment abroad cannot be used for a visa application; apply again stating the correct purpose.",
+  "fees_title": "Fees",
+  "fees_intro": "The fee is the same whatever the purpose, but express processing is available only for certificates intended for use abroad. A refused application is not refunded, because the verification has been carried out either way.",
+  "panel": {
+   "clearance-apply": {
+    "title": "Apply for clearance",
+    "summary": "Apply for a police clearance certificate, giving both addresses and the purpose it is required for."
+   },
+   "clearance-status": {
+    "title": "Clearance application status",
+    "summary": "Track a clearance application using the reference number from your acknowledgement."
+   },
+   "police-stations": {
+    "title": "Clearance cells and stations",
+    "summary": "Addresses, telephone numbers and counter hours for every district clearance cell."
+   },
+   "verification-status": {
+    "title": "Verification visit status",
+    "summary": "See whether the station covering your address has completed its enquiry."
+   },
+   "general-diary": {
+    "title": "General diary entry",
+    "summary": "Record a general diary entry at the station covering the place of the incident."
+   },
+   "lost-report": {
+    "title": "Report lost property",
+    "summary": "Report property lost or stolen and obtain the report required for a replacement."
+   },
+   "tenant-registration": {
+    "title": "Tenant registration",
+    "summary": "Register a tenant with the station covering the premises, as a landlord is required to do."
+   },
+   "character-certificate": {
+    "title": "Character certificate",
+    "summary": "Apply for a character certificate, which is a different document from a clearance certificate."
+   },
+   "travel-clearance": {
+    "title": "Foreign travel clearance",
+    "summary": "Obtain clearance required before travel where a case is pending against the applicant."
+   },
+   "arms-licence-verify": {
+    "title": "Arms licence verification",
+    "summary": "Verify that an arms licence presented to you is valid and current."
+   }
+  }
+ },
+ "passport": {
+  "name": "Passport Services",
+  "summary": "Apply for a passport, book an enrolment appointment, and track an application to delivery.",
+  "description": "The Department of Passports and Immigration issues machine-readable and electronic passports to citizens of the Republic. Applications are made online, biometrics are captured at an enrolment centre, and police verification is completed before a passport is printed.",
+  "guide_title": "How to apply",
+  "guide_body": "A passport is issued in two page counts and two validity terms, and the fee depends on the combination you choose together with the delivery class.\n\n## Applying\n\n1. Sign in and open **New passport application** in the service panel.\n2. Complete the personal information step. Your name must match your identity card exactly; a mismatch is the single most common cause of rejection.\n3. Complete the address step. Police verification is carried out at your permanent address.\n4. Choose page count, validity and delivery class. The fee is calculated from all three.\n5. Book an enrolment appointment and attend it in person.\n\n## At the enrolment centre\n\nFingerprints of all ten fingers, an iris scan and a photograph are captured. Attendance is compulsory and cannot be delegated. Bring the originals of every document listed below.\n\n- Identity card, or birth registration certificate for an applicant under eighteen\n- Previous passport, where one has been issued\n- Proof of profession, for applicants claiming a concessional category\n- Parental consent, for an applicant under eighteen\n\n> An applicant under eighteen is issued a five-year passport only, whatever term is selected.\n\n## Delivery classes\n\nRegular delivery is twenty-one working days from enrolment. Express is ten. Emergency is three and is available only where the applicant produces evidence of urgent travel, medical treatment or bereavement.",
+  "fees_title": "Fees",
+  "fees_intro": "The fee depends on page count, validity term and delivery class together. Fees are payable when the application is submitted and are not refunded if an application is refused after police verification.",
+  "panel": {
+   "application-status": {
+    "title": "Application status",
+    "summary": "Track a passport application from submission through verification to printing, using the application identifier."
+   },
+   "new-application": {
+    "title": "New passport application",
+    "summary": "Apply for a passport: personal information, address, then page count, validity and delivery."
+   },
+   "appointment-booking": {
+    "title": "Enrolment appointment",
+    "summary": "Book the in-person appointment at which your fingerprints, iris and photograph are captured."
+   },
+   "delivery-status": {
+    "title": "Delivery status",
+    "summary": "Track a printed booklet from dispatch to the collecting office. Applications not yet printed do not appear here."
+   },
+   "office-directory": {
+    "title": "Passport offices",
+    "summary": "Addresses, telephone numbers and counter hours for every regional passport office."
+   },
+   "reissue-application": {
+    "title": "Reissue application",
+    "summary": "Apply for a replacement booklet on expiry, on exhaustion of pages, or after a change of particulars."
+   },
+   "lost-passport-report": {
+    "title": "Report a lost passport",
+    "summary": "Report a booklet lost or stolen so that it can be cancelled before it is misused."
+   },
+   "correction-request": {
+    "title": "Correct passport particulars",
+    "summary": "Apply to amend a name, date of birth or parentage recorded in an issued passport."
+   },
+   "enrolment-reschedule": {
+    "title": "Reschedule enrolment",
+    "summary": "Move a booked biometric appointment to another date or another enrolment centre."
+   },
+   "police-verification": {
+    "title": "Police verification status",
+    "summary": "See the stage reached by the police verification carried out at your permanent address."
+   }
+  }
+ },
+ "pension": {
+  "name": "Pension and Welfare",
+  "summary": "Check a pension payment, see the schemes register, find a disbursement office and apply for welfare benefits.",
+  "description": "The Pension and Welfare Directorate disburses pensions to retired public servants and administers the welfare schemes for elderly, widowed and disabled citizens. Payment is made monthly to a nominated bank account.",
+  "guide_title": "How to apply",
+  "guide_body": "A pension is sanctioned on retirement and paid monthly thereafter. Welfare allowances are granted on application and are subject to the eligibility conditions of each scheme.\n\n## Claiming a pension\n\n1. Obtain the service book and the last pay certificate from your department.\n2. Apply with the pension papers countersigned by your head of office.\n3. Nominate the bank account to which payment is to be made.\n4. Collect the payment order once the claim is sanctioned.\n\n## What you need\n\n- Service book, complete and countersigned\n- Last pay certificate\n- Identity card and three photographs\n- Bank account details in the pensioner's own name\n- Nomination for family pension, witnessed by two persons\n\n> Payment is made only to an account in the pensioner's own name. A joint account is accepted only where the joint holder is the nominee.\n\n## The life certificate\n\nA pensioner must submit a life certificate once a year in November. Payment is suspended, not cancelled, if it is not received, and resumes with arrears once it is.\n\n## Welfare allowances\n\nOld age, widow and disability allowances are granted by the union or municipal committee against a quota. Applications are received throughout the year and considered when a place falls vacant.",
+  "fees_title": "Fees",
+  "fees_intro": "Pension sanction, life certificates and nomination changes carry no fee. A charge is made only for a duplicate payslip and for certified copies of the service record.",
+  "panel": {
+   "payment-status": {
+    "title": "Pension payment status",
+    "summary": "Check the month last credited and the account paid to, using your payment order number."
+   },
+   "pension-offices": {
+    "title": "Disbursement offices",
+    "summary": "Addresses, telephone numbers and counter hours for every district pension office."
+   },
+   "scheme-fees": {
+    "title": "Welfare schemes",
+    "summary": "Every scheme with its eligibility conditions and the allowance payable under it."
+   },
+   "new-application": {
+    "title": "Claim a pension",
+    "summary": "Submit a pension claim with the service book and last pay certificate."
+   },
+   "nominee-change": {
+    "title": "Change your nominee",
+    "summary": "Change the nominee for family pension. Takes effect from the date it is recorded."
+   },
+   "life-certificate": {
+    "title": "Submit a life certificate",
+    "summary": "Submit the annual certificate due in November to keep payment running."
+   },
+   "arrear-claim": {
+    "title": "Claim arrears",
+    "summary": "Claim arrears for a period during which payment was suspended or underpaid."
+   },
+   "account-change": {
+    "title": "Change your bank account",
+    "summary": "Change the account to which your pension is credited. Must be in your own name."
+   },
+   "grievance-filing": {
+    "title": "File a grievance",
+    "summary": "Raise a grievance about sanction, payment or a welfare allowance decision."
+   },
+   "payslip-download": {
+    "title": "Download a payslip",
+    "summary": "Obtain the monthly payslip showing gross pension, deductions and net credited."
+   }
+  }
+ },
+ "driving-licence": {
+  "name": "Driving Licence",
+  "summary": "Check a licence application, generate and pay a fee challan, and book a driving test.",
+  "description": "The Transport Licensing Authority issues learner permits and driving licences, conducts driving tests, and maintains the register of licensed drivers. A licence is issued as a smart card and is identified by a reference number until the card is printed.",
+  "guide_title": "How to apply",
+  "guide_body": "A driving licence is obtained in three stages: a learner permit, a driving test, and issue of the smart card. Each stage has its own fee.\n\n## Stage one, the learner permit\n\nApply with your identity card, a medical certificate stating blood group and eyesight, and a passport photograph. The permit is valid for two years and allows practice only when accompanied by a licence holder.\n\n## Stage two, the driving test\n\n1. Generate a fee challan for the licence class you are testing for.\n2. Pay the challan. A test cannot be booked until the challan is paid.\n3. Book a test at a centre and slot of your choosing.\n\nThe test has three parts: a written examination on signs and rules, a practical test on a marked course, and a road test. Failing any part fails the test, and a fresh challan is required for a retest.\n\n## Stage three, issue\n\nThe smart card is printed after the test is passed and biometrics are captured. Track progress under **Licence status** using the reference number from your acknowledgement.\n\n- Professional licences require the applicant to be at least twenty years old\n- Non-professional licences require the applicant to be at least eighteen\n- A licence held for three years is required before a heavy vehicle endorsement\n\n> A learner permit is not a licence. Driving unaccompanied on a learner permit is an offence and disqualifies the holder from testing for six months.",
+  "fees_title": "Fees",
+  "fees_intro": "Fees differ by licence class and by whether the licence is professional or non-professional. A professional licence is cheaper but is valid for five years rather than ten, so the cost per year of validity is higher.",
+  "panel": {
+   "licence-status": {
+    "title": "Licence status",
+    "summary": "Track a licence application using the reference number from your acknowledgement."
+   },
+   "fee-challan": {
+    "title": "Licence fee challan",
+    "summary": "Generate and pay the fee for a licence class. A test cannot be booked until the challan is paid."
+   },
+   "test-booking": {
+    "title": "Driving test booking",
+    "summary": "Book a driving test at a centre and slot of your choosing, against a paid challan."
+   },
+   "endorsement-status": {
+    "title": "Endorsement status",
+    "summary": "Check whether an endorsement application has been recorded against a licence."
+   },
+   "test-centres": {
+    "title": "Test centres",
+    "summary": "Addresses, telephone numbers and counter hours for every licensing office and test centre."
+   },
+   "licence-fees": {
+    "title": "Licence fee schedule",
+    "summary": "Every fee charged by the Authority, by licence class and by validity term."
+   },
+   "learner-permit": {
+    "title": "Apply for a learner permit",
+    "summary": "Apply for the permit that allows accompanied practice before a driving test."
+   },
+   "licence-renewal": {
+    "title": "Renew a licence",
+    "summary": "Renew a licence approaching expiry, with a current medical certificate."
+   },
+   "duplicate-licence": {
+    "title": "Duplicate licence",
+    "summary": "Replace a lost or damaged smart card. The duplicate keeps the original licence number."
+   },
+   "address-change": {
+    "title": "Change your address",
+    "summary": "Update the address recorded against a licence after a move."
+   }
+  }
+ },
+ "health": {
+  "name": "Health Services",
+  "summary": "Download a vaccination certificate, verify a certificate, register for vaccination and book a booster dose.",
+  "description": "The Directorate General of Health Services runs the national immunisation programme and issues vaccination certificates. A certificate is identified by the recipient's identity number together with the date on which they registered for the programme.",
+  "guide_title": "How to apply",
+  "guide_body": "Vaccination under the national programme is free at every government centre, and a certificate is issued once the course is complete.\n\n## Registering\n\nRegister with your identity card number. You are assigned to a centre by the address recorded against your identity card, and told the date of your first dose.\n\n## Obtaining your certificate\n\n1. Open **Vaccination certificate** in the service panel.\n2. Enter your identity number and the date on which you registered.\n3. The certificate is displayed and can be printed.\n\nBoth values are required. The registration date is what distinguishes two courses taken by the same person under different programmes.\n\n## What the certificate shows\n\n- The recipient's name and identity number\n- The vaccine administered and the number of doses\n- The dates of the first and last doses\n- The centre at which the course was given\n\n> A certificate is issued only once a course is complete. A partially completed course shows the doses given but does not produce a certificate.\n\n## Correcting a certificate\n\nA name or identity number printed wrongly is corrected at the centre that administered the course, on production of the identity card. The certificate is reissued rather than amended.",
+  "fees_title": "Fees",
+  "fees_intro": "Vaccination under the national programme and the certificate that follows it are free. Charges apply only to certificate corrections, health cards and medical board assessments.",
+  "panel": {
+   "vaccine-certificate": {
+    "title": "Vaccination certificate",
+    "summary": "View and print your certificate. Requires your identity number and the date you registered."
+   },
+   "certificate-verification": {
+    "title": "Verify a certificate",
+    "summary": "Confirm that a certificate number is genuine. Discloses no clinical detail and does not display the certificate."
+   },
+   "vaccination-centres": {
+    "title": "Vaccination centres",
+    "summary": "Addresses, telephone numbers and hours for civil surgeon offices and vaccination centres."
+   },
+   "vaccine-registration": {
+    "title": "Register for vaccination",
+    "summary": "Register for the national immunisation programme and be assigned to a centre."
+   },
+   "booster-booking": {
+    "title": "Book a booster dose",
+    "summary": "Book an appointment for a booster where one is due under the schedule."
+   },
+   "test-result-lookup": {
+    "title": "Laboratory test result",
+    "summary": "Retrieve the result of a test carried out at a government laboratory."
+   },
+   "health-card-apply": {
+    "title": "Apply for a health card",
+    "summary": "Apply for the card that records your entitlement at government facilities."
+   },
+   "immunisation-record": {
+    "title": "Childhood immunisation record",
+    "summary": "Obtain the routine immunisation record of a child registered under the programme."
+   },
+   "hospital-referral": {
+    "title": "Hospital referral",
+    "summary": "Request referral from a district facility to a specialist hospital."
+   },
+   "medical-board-application": {
+    "title": "Medical board assessment",
+    "summary": "Apply for assessment by a medical board where a fitness certificate is required."
+   }
+  }
+ },
+ "pilgrimage": {
+  "name": "Pilgrimage Management",
+  "summary": "Pre-register for the annual pilgrimage, check your serial position, and see package costs and offices.",
+  "description": "The Office of Pilgrimage Affairs manages participation in the annual pilgrimage. Places are limited by quota, so pre-registration establishes a serial number and applicants are called forward in serial order as places become available.",
+  "guide_title": "How to apply",
+  "guide_body": "Participation is by quota. Pre-registration does not guarantee a place in the current year; it establishes your position in the queue.\n\n## Pre-registering\n\n1. Open **Pre-registration** in the service panel.\n2. Give your personal particulars as recorded on your identity card and passport.\n3. Give your contact details and next of kin.\n4. Choose the package category, government or private.\n5. Pay the pre-registration deposit and keep the serial number issued on the confirmation.\n\nThe serial number is your position in the queue. It is permanent and is not affected by when you complete the remaining formalities.\n\n## What you need\n\n- A passport valid for at least twelve months beyond the intended date of travel\n- Identity card\n- Medical fitness certificate from a registered practitioner\n- A guardian's consent where the applicant is under eighteen\n\n> The deposit is refundable if you withdraw before being called forward. Once called forward it is applied to the package cost and is no longer refundable.\n\n## Being called forward\n\nApplicants are called in serial order when the quota is announced. You are notified and must complete registration and pay the balance within the period stated, failing which the place passes to the next serial.",
+  "fees_title": "Fees",
+  "fees_intro": "The pre-registration deposit is the same for both package categories; the package cost is not. Costs shown are the ceiling set by the Office, and a private operator may not charge above it.",
+  "panel": {
+   "pre-registration": {
+    "title": "Pre-registration",
+    "summary": "Register for the annual pilgrimage and obtain the serial number that fixes your position in the queue."
+   },
+   "registration-status": {
+    "title": "Registration status",
+    "summary": "Check your position in the serial register and whether you have been called forward."
+   },
+   "pilgrim-offices": {
+    "title": "Pilgrimage offices",
+    "summary": "Addresses, telephone numbers and counter hours for every district pilgrimage office."
+   },
+   "package-fees": {
+    "title": "Package costs",
+    "summary": "The deposit and the ceiling cost for each package category. Operators may charge less but never more."
+   },
+   "package-selection": {
+    "title": "Select a package",
+    "summary": "Choose between the government package and a licensed private operator after being called forward."
+   },
+   "refund-request": {
+    "title": "Request a refund",
+    "summary": "Withdraw before call-forward and claim a full refund of the pre-registration deposit."
+   },
+   "substitute-nomination": {
+    "title": "Nominate a substitute",
+    "summary": "Nominate a substitute on the death or permanent incapacity of the registered applicant."
+   },
+   "medical-clearance": {
+    "title": "Medical clearance",
+    "summary": "Submit the medical fitness certificate required before travel is confirmed."
+   },
+   "group-transfer": {
+    "title": "Transfer between groups",
+    "summary": "Move to a different travel group where places are available, without changing your serial."
+   },
+   "cancellation": {
+    "title": "Cancel a registration",
+    "summary": "Cancel a confirmed registration after call-forward, subject to the deposit being forfeited."
+   }
+  }
+ },
+ "land": {
+  "name": "Land Services",
+  "summary": "Search land records, apply for a mutation, pay development tax, and obtain a certified copy of a khatian.",
+  "description": "The Directorate of Land Records and Survey maintains the record of rights for every mouza in the Republic. Records are searched by administrative area down to mouza level, and the khatian is the authoritative statement of who holds what land and in what share.",
+  "guide_title": "How to apply",
+  "guide_body": "Land records are organised by area, not by owner. To find a record you must know the division, district, sub-district and mouza in which the land lies, and then the khatian number.\n\n## Searching for a record\n\n1. Sign in and open **Search land records** in the service panel.\n2. Choose division, then district, then sub-district, then mouza. Each choice narrows the next.\n3. Enter the khatian number and search. The owner, plot number, land type, area and share are returned.\n\n## Applying for a mutation\n\nA mutation records a change of ownership after a sale, gift, inheritance or court decree. Apply in three steps: buyer particulars, seller particulars, then the land itself.\n\n- Registered deed of transfer, with the registration number and date\n- The current khatian, or a certified copy of it\n- Identity cards of both parties\n- Receipt showing development tax paid to the current year\n- Succession certificate, where the transfer is by inheritance\n\n> A mutation cannot be granted while development tax is outstanding. Pay the tax first; the two applications are separate and the tax payment does not create a mutation case.\n\n## Paying development tax\n\nTax is assessed per holding and charged per year. Select the outstanding year and pay. The receipt is issued immediately and the holding shows as clear once payment is recorded.\n\n## Obtaining a certified copy\n\nA certified copy is produced from the record of rights and carries the mouza name and JL number. It is accepted as evidence of title; an uncertified print is not.",
+  "fees_title": "Fees",
+  "fees_intro": "Fees for mutation, certified copies, record inspection and development tax. Development tax is charged per decimal of land and differs by land type; the mutation fee is flat and does not vary with the value of the land.",
+  "panel": {
+   "record-search": {
+    "title": "Search land records",
+    "summary": "Find a khatian by division, district, sub-district and mouza, then by khatian number."
+   },
+   "mutation-apply": {
+    "title": "Apply for a mutation",
+    "summary": "Record a change of ownership after a sale, gift or inheritance, giving buyer, seller and land particulars."
+   },
+   "tax-payment": {
+    "title": "Land development tax",
+    "summary": "Pay the development tax outstanding on a holding and obtain the receipt immediately."
+   },
+   "certified-copy": {
+    "title": "Certified khatian copy",
+    "summary": "View and print a certified copy of a khatian in which you are recorded as an owner."
+   },
+   "mutation-status": {
+    "title": "Mutation case status",
+    "summary": "Track a mutation case already filed, using the case reference from your acknowledgement."
+   },
+   "land-offices": {
+    "title": "Land offices",
+    "summary": "Addresses, telephone numbers and counter hours for sub-district and district land offices."
+   },
+   "holding-search": {
+    "title": "Search by holding number",
+    "summary": "Look up a holding directly by its holding number, where the number is already known."
+   },
+   "tax-receipt-reprint": {
+    "title": "Reprint a tax receipt",
+    "summary": "Obtain a further copy of a development tax receipt already issued."
+   },
+   "transfer-deed": {
+    "title": "Transfer deed registration",
+    "summary": "Register a deed of transfer before applying for the mutation that follows it."
+   },
+   "survey-objection": {
+    "title": "Object to a survey entry",
+    "summary": "File an objection to an entry in a draft record of rights during the publication period."
+   }
+  }
+ },
+ "exam-results": {
+  "name": "Examination Results",
+  "summary": "Look up a secondary or higher-secondary result, apply for rescrutiny, and request certificates and transcripts.",
+  "description": "The Inter-Board Coordination Committee publishes the results of the secondary and higher-secondary examinations conducted by the nine education boards of the Republic. A result is identified by board, examination, year and roll number together; a roll number alone is not unique across boards.",
+  "guide_title": "How to apply",
+  "guide_body": "Results are published simultaneously by every board on the declared date and remain available indefinitely in the archive.\n\n## Looking up a result\n\n1. Open **Examination result** in the service panel.\n2. Choose the board, then the examination, then the year. Each choice narrows the next.\n3. Enter the roll number and search. The candidate name, institution, group, grade point average and subject grades are returned.\n\nA roll number is unique only within a board, examination and year. The same roll number exists in every board, which is why all four values are required.\n\n## Applying for rescrutiny\n\nRescrutiny is a re-check of the addition and transcription of marks. It is not a re-examination and the answer script is not marked again.\n\n1. Enter the result particulars.\n2. Select the subjects to be rechecked. The fee is charged per subject.\n3. Submit and keep the reference number.\n\n- Applications close thirty days after the result is published\n- A grade may go up, go down, or stay the same\n- The revised result replaces the original in full\n\n> Rescrutiny cannot be applied for on a result declared more than one year earlier. Apply for a certificate correction instead.",
+  "fees_title": "Fees",
+  "fees_intro": "Rescrutiny is charged per subject, so an application covering four subjects costs four times the single-subject fee. Certificate reissue, transcripts and equivalence certificates are charged per copy.",
+  "panel": {
+   "result-lookup": {
+    "title": "Examination result",
+    "summary": "Find a result by board, examination and year, then by roll number. All four are required."
+   },
+   "rescrutiny-apply": {
+    "title": "Apply for rescrutiny",
+    "summary": "Ask for the totalling and transcription of marks to be rechecked. Charged per subject; a grade may fall."
+   },
+   "registration-verify": {
+    "title": "Verify a registration number",
+    "summary": "Confirm that a board registration number is valid and matches the candidate on record."
+   },
+   "exam-centres": {
+    "title": "Examination centres",
+    "summary": "Addresses, telephone numbers and counter hours for every board office and examination centre."
+   },
+   "board-fees": {
+    "title": "Board fee schedule",
+    "summary": "Every fee charged by the boards, including the per-subject rescrutiny fee and certificate charges."
+   },
+   "certificate-reissue": {
+    "title": "Certificate reissue",
+    "summary": "Apply for a replacement certificate where the original has been lost or damaged."
+   },
+   "transcript-request": {
+    "title": "Request a transcript",
+    "summary": "Obtain an official statement of marks for admission or employment abroad."
+   },
+   "marksheet-correction": {
+    "title": "Correct a marksheet",
+    "summary": "Apply to correct a clerical error in a name, parentage or date of birth on a marksheet."
+   },
+   "equivalence-certificate": {
+    "title": "Equivalence certificate",
+    "summary": "Obtain a certificate of equivalence for a qualification awarded outside the Republic."
+   },
+   "duplicate-admit-card": {
+    "title": "Duplicate admit card",
+    "summary": "Obtain a replacement admit card before an examination where the original has been lost."
+   }
+  }
+ },
+ "national-id": {
+  "name": "National Identity Services",
+  "summary": "Apply for an identity card, correct your recorded details, register as a voter, and download a copy of your card.",
+  "description": "The National Identity Registration Directorate maintains the citizen register and issues the identity card used to access most other public services. Corrections to name, date of birth and address are made through this service, as is first-time voter registration.",
+  "guide_title": "How to apply",
+  "guide_body": "Every citizen aged eighteen or above is entitled to one identity card. The card is issued once; later changes are recorded as corrections against the existing record rather than as a new card.\n\n## Registering for the first time\n\n1. Sign in to your citizen account and open **Voter registration** in the service panel.\n2. Enter your name exactly as it appears on your secondary school certificate, your date of birth, and your parents' names.\n3. Give both your present and permanent addresses. Where they differ, the permanent address determines the office that will process your file.\n4. Choose the enrolment centre where you will give fingerprints and a photograph.\n5. Submit the form and keep the slip number shown on the confirmation screen.\n\n## Documents required at the enrolment centre\n\n- Original secondary school certificate, or a birth registration certificate if you did not sit the examination\n- Certificate of citizenship issued by your union or municipal council\n- Utility bill or holding tax receipt showing the present address, dated within the last six months\n- Both parents' identity card numbers, or their death registration numbers where applicable\n\n> Photocopies are not accepted at the enrolment counter. Bring originals; the centre will take its own copies free of charge.\n\n## Applying for a correction\n\nCorrections are grouped by field, and each group has its own evidence requirement. A name-spelling correction needs documentary proof that the spelling you are asking for is the one used in your educational records. A date-of-birth correction needs the birth registration certificate and is referred to the divisional office for approval.\n\nAttach the supporting document when you submit the correction form. You may upload a new file, or reuse a document already stored in your account.",
+  "fees_title": "Fees",
+  "fees_intro": "Every fee charged by this Directorate, with the regular and express rate for each service. First issue of an identity card is free; corrections, reissues and duplicates are not. Express processing shortens the decision time but does not change the evidence required.",
+  "panel": {
+   "correction-status": {
+    "title": "Correction request status",
+    "summary": "Track a correction you have already submitted, using the slip number from the acknowledgement."
+   },
+   "name-correction": {
+    "title": "Correct the name on your identity card",
+    "summary": "Apply to change the spelling of your name, attaching documentary evidence of the correct spelling."
+   },
+   "id-card-copy": {
+    "title": "Identity card copy",
+    "summary": "View and print a copy of your identity card as currently recorded."
+   },
+   "voter-registration": {
+    "title": "Voter registration",
+    "summary": "Register for the first time and choose the enrolment centre where you will give biometrics."
+   },
+   "card-status-track": {
+    "title": "Card production and dispatch status",
+    "summary": "Track the printing and dispatch of a card that has already been approved."
+   },
+   "enrolment-centres": {
+    "title": "Enrolment centres",
+    "summary": "Addresses, telephone numbers and counter hours for every enrolment centre."
+   },
+   "address-correction": {
+    "title": "Correct your address",
+    "summary": "Change the present or permanent address recorded against your identity card."
+   },
+   "dob-correction": {
+    "title": "Correct your date of birth",
+    "summary": "Apply to amend your recorded date of birth. Permitted once, on the evidence of a birth registration certificate."
+   },
+   "duplicate-card": {
+    "title": "Apply for a duplicate card",
+    "summary": "Request a replacement for a card that has been lost or damaged."
+   },
+   "transfer-voter-area": {
+    "title": "Transfer your voter area",
+    "summary": "Move your entry on the voter roll to the area covering your new address."
+   }
+  }
+ },
+ "electricity": {
+  "name": "Electricity Billing",
+  "summary": "Pay an electricity bill, check an outstanding amount, recharge a prepaid meter, and review your billing history.",
+  "description": "The Electricity Distribution Authority bills domestic and commercial consumers and operates both postpaid and prepaid metering. A consumer number identifies the connection; a meter number identifies the device installed on it.",
+  "guide_title": "How to apply",
+  "guide_body": "Every connection is billed under one of two metering arrangements, and which one you have determines what you can do online.\n\n## Postpaid metering\n\nA meter reading is taken monthly and a bill is issued for the units consumed. Payment is due on the date printed on the bill; a surcharge accrues afterwards.\n\n1. Open **Pay electricity bill** in the service panel.\n2. Select the outstanding bill. Bills are listed oldest first, and older bills must be settled before newer ones.\n3. Choose a payment method and pay. The challan number on the confirmation is your receipt.\n\n## Prepaid metering\n\nA prepaid meter carries a balance which is consumed as electricity is used. Supply is interrupted when the balance is exhausted.\n\n1. Open **Recharge prepaid meter**.\n2. Select the meter, enter the amount and pay. The credited balance is shown on the confirmation.\n\n> A prepaid meter has no bill and a postpaid meter has no balance. Checking a due on a prepaid meter will show nothing outstanding, which is correct rather than an error.\n\n## Checking what is outstanding\n\n**Check outstanding due** takes a consumer number or a meter number and returns the total unpaid across every bill on that connection. It does not include the surcharge, which is calculated at the counter.\n\n## Applying for a new connection\n\nNew connections, load changes and meter relocations are handled at the distribution office. Bring the holding tax receipt or tenancy agreement, the identity card of the applicant, and the wiring completion certificate from a licensed electrician.",
+  "fees_title": "Fees",
+  "fees_intro": "Connection charges by phase and category, meter replacement and relocation charges, and the reconnection fee after disconnection. Tariff rates per unit are published separately in the tariff schedule.",
+  "panel": {
+   "bill-payment": {
+    "title": "Pay electricity bill",
+    "summary": "Settle an outstanding postpaid bill. Bills are listed oldest first and must be paid in that order."
+   },
+   "due-check": {
+    "title": "Check outstanding due",
+    "summary": "Enter a consumer number or meter number to see the total amount unpaid on that connection."
+   },
+   "prepaid-recharge": {
+    "title": "Recharge prepaid meter",
+    "summary": "Add credit to a prepaid meter. The updated balance is shown on the confirmation."
+   },
+   "bill-history": {
+    "title": "Billing history",
+    "summary": "Every bill issued on your connections, most recent first, with period, units, amount and due date."
+   },
+   "complaint-status": {
+    "title": "Billing complaint status",
+    "summary": "Track a billing complaint already filed, using the reference from your acknowledgement."
+   },
+   "billing-offices": {
+    "title": "Distribution offices",
+    "summary": "Addresses, telephone numbers and counter hours for every distribution office."
+   },
+   "new-connection": {
+    "title": "Apply for a new connection",
+    "summary": "Request supply to premises not currently connected, with the wiring completion certificate."
+   },
+   "meter-relocation": {
+    "title": "Meter relocation",
+    "summary": "Ask for an installed meter to be moved to another point on the same premises."
+   },
+   "load-change": {
+    "title": "Change sanctioned load",
+    "summary": "Increase or reduce the load sanctioned for a connection, with a revised wiring certificate."
+   },
+   "receipt-reprint": {
+    "title": "Reprint a payment receipt",
+    "summary": "Obtain a further copy of a receipt for a payment already made."
+   }
+  }
+ },
+ "trade-licence": {
+  "name": "Trade Licence",
+  "summary": "Apply for and renew a trade licence, check a licence, and see the fee schedule for each trade category.",
+  "description": "The Municipal Trade Licensing Office issues the licence every business must hold to trade within a municipality. A licence is granted for one category of trade at one address and must be renewed annually.",
+  "guide_title": "How to apply",
+  "guide_body": "Every business trading within a municipality must hold a trade licence for the category of trade it carries on, at the address from which it trades.\n\n## Applying\n\n1. Establish which category your trade falls into. The fee depends on it.\n2. Obtain the holding tax receipt for the premises, or the tenancy agreement with the owner's consent.\n3. Apply at the municipal office with the taxpayer identification number of the proprietor.\n4. Pay the fee for the category and collect the licence.\n\n## What you need\n\n- Holding tax receipt or tenancy agreement with the owner's written consent\n- Taxpayer identification number of the proprietor or of the company\n- Identity card of the proprietor\n- Trade-specific clearance, where the category requires one\n\n> A licence covers one category at one address. A business trading in two categories, or from two premises, requires a licence for each.\n\n## Renewal\n\nA licence expires at the end of the financial year whatever month it was granted in. Renew before expiry; trading on an expired licence attracts a penalty calculated per month of default.",
+  "fees_title": "Fees",
+  "fees_intro": "The annual fee for every category of trade, from small retail to manufacturing. Fees are fixed before the beginning of each financial year and do not change within it.",
+  "panel": {
+   "licence-status": {
+    "title": "Check a trade licence",
+    "summary": "Confirm whether a licence number is current, and see the category and address it covers."
+   },
+   "licence-offices": {
+    "title": "Municipal offices",
+    "summary": "Addresses, telephone numbers and counter hours for every municipal licensing office."
+   },
+   "fee-schedule": {
+    "title": "Fee schedule",
+    "summary": "The annual fee for every category of trade, fixed before the beginning of the financial year."
+   },
+   "new-application": {
+    "title": "Apply for a trade licence",
+    "summary": "Apply for a licence for one category of trade at one address."
+   },
+   "renewal-application": {
+    "title": "Renew a licence",
+    "summary": "Renew before the end of the financial year to avoid the monthly penalty."
+   },
+   "category-change": {
+    "title": "Change trade category",
+    "summary": "Apply to change the category of trade recorded against a licence."
+   },
+   "closure-notice": {
+    "title": "Notify closure",
+    "summary": "Notify the office that a licensed business has ceased trading."
+   },
+   "duplicate-licence": {
+    "title": "Duplicate licence",
+    "summary": "Obtain a replacement where the original licence has been lost or damaged."
+   },
+   "inspection-booking": {
+    "title": "Book an inspection",
+    "summary": "Book the premises inspection required for categories that need clearance."
+   },
+   "appeal-filing": {
+    "title": "Appeal a refusal",
+    "summary": "Appeal a refusal or suspension to the municipal chief executive within thirty days."
+   }
+  }
+ },
+ "tax": {
+  "name": "Revenue and Taxation",
+  "summary": "Register as a taxpayer, verify a taxpayer identification number, and file an individual return.",
+  "description": "The Board of Revenue registers taxpayers, receives returns and issues clearance certificates. A taxpayer identification number is issued once and is used for every dealing with the Board thereafter.",
+  "guide_title": "How to apply",
+  "guide_body": "Registration as a taxpayer is free and is required of every person with taxable income, and of every person entering certain transactions regardless of income.\n\n## Registering\n\n1. Open **Taxpayer registration** in the service panel.\n2. Give your personal particulars exactly as they appear on your identity card.\n3. Give your address and the circle in which you will be assessed.\n4. Declare your source of income and submit.\n\nThe number is issued immediately on the confirmation screen. There is no fee and no waiting period.\n\n## Who must register\n\n- Any person with income above the exemption threshold\n- Any person applying for a trade licence, importing goods, or registering land above the prescribed value\n- Every company, partnership and society, whatever its income\n\n## Filing a return\n\nThe individual return is filed in four steps: income, deductions and allowances, tax computed, and declaration. A return for an assessment year may be filed from the first day of the following July.\n\n> A return once submitted cannot be withdrawn. An error is corrected by filing a revised return, not by resubmitting the original.\n\n## Verifying a number\n\n**Verify a taxpayer number** confirms that a number is valid and returns the registered name. It is used by third parties who need to confirm that a number quoted to them is genuine.",
+  "fees_title": "Fees",
+  "fees_intro": "Registration and the filing of a return are free. Fees are charged only for a clearance certificate, for late filing, and for lodging an appeal against an assessment.",
+  "panel": {
+   "tin-registration": {
+    "title": "Taxpayer registration",
+    "summary": "Register as a taxpayer and obtain an identification number. Free, and issued immediately."
+   },
+   "tin-verify": {
+    "title": "Verify a taxpayer number",
+    "summary": "Confirm that a taxpayer identification number is valid and see the name registered against it."
+   },
+   "ereturn-submit": {
+    "title": "Submit an individual return",
+    "summary": "File a return for an assessment year: income, deductions, computed tax and declaration."
+   },
+   "return-status": {
+    "title": "Return status",
+    "summary": "Track a return already filed, using the acknowledgement reference rather than the taxpayer number."
+   },
+   "tax-offices": {
+    "title": "Circle and zone offices",
+    "summary": "Addresses, telephone numbers and counter hours for every circle and zone office."
+   },
+   "tin-correction": {
+    "title": "Correct taxpayer particulars",
+    "summary": "Apply to amend a name, address or circle recorded against a taxpayer number."
+   },
+   "clearance-certificate": {
+    "title": "Tax clearance certificate",
+    "summary": "Apply for a certificate confirming that returns are filed and no tax is outstanding."
+   },
+   "withholding-return": {
+    "title": "Withholding return",
+    "summary": "File the periodic return of tax deducted at source by a person required to withhold."
+   },
+   "payment-challan": {
+    "title": "Tax payment challan",
+    "summary": "Generate a challan for tax payable and pay it against your assessment."
+   },
+   "refund-application": {
+    "title": "Claim a refund",
+    "summary": "Apply for a refund where tax paid exceeds the amount finally assessed."
+   }
+  }
+ }
+}

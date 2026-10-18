@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}u/{{ profile_user.username }}{% endblock %}
+{% block content %}
+<h1><img class="ava" src="/static/avatars/{{ profile_user.username }}.svg" alt=""> u/{{ profile_user.username }}</h1>
+<p class="muted">{{ S.profile_karma }} {{ karma | v2_num }}
+  · {{ S.profile_comment_karma }} {{ ckarma | v2_num }}
+  {% if profile_user.joined %} · {{ S.profile_joined }} {{ profile_user.joined }}{% endif %}</p>
+{% if profile_user.about %}<p class="muted">{{ S.profile_about }} {{ profile_user.about }}</p>{% endif %}
+{% if profile_user.bio %}<p class="muted">{{ S.profile_bio }} {{ profile_user.bio }}</p>{% endif %}
+
+<h2>{{ S.profile_posts }}</h2>
+{% for p in posts %}
+<div class="card">
+  <div class="meta"><a href="/f/{{ p.forum_name }}">f/{{ p.forum_name }}</a> · {{ p.posted_on }}
+    {% if p.n_images %}<span class="badge img">{{ S.image_badge }}</span>{% endif %}
+    {% if p.locked %}<span class="badge lock">{{ S.locked_badge }}</span>{% endif %}</div>
+  <h2><a href="/post/{{ p.id }}">{{ p.title }}</a></h2>
+  <span class="score">{{ S.score_label }} {{ p.score | v2_num }}</span>
+  <a href="/post/{{ p.id }}">{{ p.n_comments | v2_num }} {{ S.comments_label }}</a>
+</div>
+{% else %}<p class="muted">{{ S.no_posts }}</p>{% endfor %}
+<div class="pager">
+  {% if page > 1 %}<a href="/u/{{ profile_user.username }}?page={{ page - 1 }}">← {{ S.prev_page }}</a>{% endif %}
+  {{ S.page_of.format(p=(page | v2_num), n=(n_pages | v2_num)) }}
+  {% if page < n_pages %}<a href="/u/{{ profile_user.username }}?page={{ page + 1 }}">{{ S.next_page }} →</a>{% endif %}
+</div>
+
+<h2>{{ S.profile_comments }}</h2>
+{% if n_all_comments > (comments | length) %}
+<p class="muted">{{ S.profile_comments_top.format(shown=(comments | length | v2_num), total=(n_all_comments | v2_num)) }}</p>
+{% endif %}
+{% for c in comments %}
+<div class="card">
+  <div class="meta"><a href="/post/{{ c.post_id }}">{{ c.post_title }}</a></div>
+  {{ c.body }} <span class="score">▲ {{ c.score | v2_num }}</span>
+</div>
+{% endfor %}
+{% endblock %}

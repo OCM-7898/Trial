@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.cancel_q }}</h1>
+<div class="card">
+  <table>
+    <tr><th>PNR</th><td>{{ b.pnr }}</td></tr>
+    <tr><th>{{ S.train }}</th>
+        <td>{{ b.train_no }} {{ tname(b.train_no) }}</td></tr>
+    <tr><th>{{ S.station }}</th>
+        <td>{{ sname(b.from_code) }} → {{ sname(b.to_code) }} · {{ b.date }}</td></tr>
+    <tr><th>{{ S.passenger }}</th><td>{{ b.passenger }}</td></tr>
+    <tr><th>{{ S.fare }}</th><td>{{ CUR }}{{ nd(b.fare) }}</td></tr>
+    <tr><th>{{ S.status }}</th>
+        <td><span class="st-{{ b.status }}">{{ b.status }}</span></td></tr>
+  </table>
+  <p class="muted">{{ S.cancel_note }}</p>
+  <form method="post" action="/cancel/{{ b.pnr }}">
+    <button type="submit">{{ S.yes_cancel }}</button>
+  </form>
+  <p><a href="/account/bookings">{{ S.keep }}</a></p>
+</div>
+{% endblock %}

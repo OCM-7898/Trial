@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block title %}{{ t("results.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol>
+      <li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('search') }}">{{ t("nav.book_flight") }}</a></li>
+      <li>{{ t("results.title") }}</li>
+    </ol>
+  </nav>
+
+  <h1>{{ origin }} &ndash; {{ destination }}</h1>
+  <p class="hint">
+    {{ fmt_date(depart) }}{% if return_on %} &ndash; {{ fmt_date(return_on) }}{% endif %}
+    &middot; {{ t("results.adults_count", n=adults) }}
+  </p>
+
+  <form class="searchform" method="get" action="{{ path('results') }}">
+    <input type="hidden" name="origin" value="{{ origin }}">
+    <input type="hidden" name="destination" value="{{ destination }}">
+    <input type="hidden" name="depart" value="{{ depart.isoformat() }}">
+    {% if return_on %}<input type="hidden" name="return" value="{{ return_on.isoformat() }}">{% endif %}
+    <input type="hidden" name="adults" value="{{ adults }}">
+    {% if cabin %}<input type="hidden" name="cabin" value="{{ cabin }}">{% endif %}
+    <div class="field">
+      <label for="sort">{{ t("results.sort_by") }}</label>
+      <select id="sort" name="sort">
+        {% for value, label in sort_options %}
+        <option value="{{ value }}" {% if value == sort %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="stops">{{ t("results.stops") }}</label>
+      <select id="stops" name="stops">
+        {% for value, label in stop_options %}
+        <option value="{{ value }}" {% if value == (stops or "") %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="depart_band">{{ t("results.depart_time") }}</label>
+      <select id="depart_band" name="depart_band">
+        {% for value, label in band_options %}
+        <option value="{{ value }}" {% if value == (band or "") %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="actions"><button class="btn btn-secondary" type="submit">{{ t("results.apply") }}</button></div>
+  </form>
+
+  {{ fare_list(outbound, outbound_alternatives, t("results.outbound"), origin, destination, adults) }}
+  {% if return_on %}
+    {{ fare_list(inbound, inbound_alternatives, t("results.inbound"), destination, origin, adults) }}
+  {% endif %}
+</div>
+{% endblock %}
+
+{% macro fare_list(itineraries, alternatives, heading, from_iata, to_iata, adults) %}
+<section class="section">
+  <div class="section-head"><h2>{{ heading }}</h2></div>
+
+  {% if itineraries %}
+  <div class="table-scroll">
+    <table>
+      <caption class="visually-hidden">{{ heading }}</caption>
+      <thead>
+        <tr>
+          <th scope="col">{{ t("results.flight") }}</th>
+          <th scope="col">{{ t("results.depart") }}</th>
+          <th scope="col">{{ t("results.arrive") }}</th>
+          <th scope="col">{{ t("results.duration") }}</th>
+          <th scope="col">{{ t("results.stops") }}</th>
+          <th scope="col">{{ t("results.fare_family") }}</th>
+          <th scope="col">{{ t("results.total") }}</th>
+          <th scope="col"><span class="visually-hidden">{{ t("results.select") }}</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in itineraries %}
+        <tr>
+          <td>{{ i.flight_numbers | join(" + ") }}</td>
+          <td>{{ fmt_time(i.depart_at) }}<br><span class="hint">{{ from_iata }}</span></td>
+          <td>{{ fmt_time(i.arrive_at) }}{% if i.arrival_day_offset %}<sup class="day-offset">+{{ i.arrival_day_offset }}</sup>{% endif %}<br>
+              <span class="hint">{{ to_iata }}{% if i.arrival_day_offset %} &middot; {{ fmt_date(i.arrive_at.date()) }}{% endif %}</span></td>
+          <td>{{ t("results.hours_minutes", h=i.duration_min // 60, m="%02d" % (i.duration_min % 60)) }}</td>
+          <td>
+            {% if i.stops == 0 %}{{ t("results.nonstop") }}
+            {% else %}{{ t("results.via_hub", h=i.layover_min // 60) }}
+              {% if i.stopover_eligible %}<br><span class="badge">{{ t("results.stopover_eligible") }}</span>{% endif %}
+            {% endif %}
+          </td>
+          <td>{{ i.fare_class.name }}<br><span class="hint">{{ i.fare_class.code }}</span></td>
+          <td><strong>{{ fmt_money(i.total_usd) }}</strong><br>
+              <span class="hint">{{ t("results.seats_left", n=i.seats_available) }}</span></td>
+          <td><a class="btn btn-primary" href="{{ path('passengers') }}?itinerary={{ i.key }}">{{ t("results.select") }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="notice notice-warn">
+    <div>
+      <p><strong>{{ t("results.none_title") }}</strong></p>
+      <p>{{ t("results.none_body") }}</p>
+      {% if alternatives %}
+      <p>{{ t("results.nearest_dates") }}</p>
+      <ul>
+        {% for day, price in alternatives[:5] %}
+        <li><a href="{{ path('results') }}?origin={{ from_iata }}&amp;destination={{ to_iata }}&amp;depart={{ day.isoformat() }}&amp;adults={{ adults }}">{{ fmt_date(day) }} ({{ fmt_weekday(day) }})</a> &mdash; {{ t("results.from_price", price=fmt_money(price)) }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+</section>
+{% endmacro %}

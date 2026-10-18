@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.nav_trains }}</h1>
+<table>
+  <tr><th>{{ S.train }}</th><th>{{ S.dep }}</th><th>{{ S.arr }}</th>
+      <th>{{ S.runs_on }}</th></tr>
+  {% for t in trains %}
+  <tr>
+    <td><a href="/train/{{ t.no }}">{{ t.no }} {{ tname(t.no) }}</a></td>
+    <td>{{ sname(t.stops[0][0]) }} {{ nd(t.stops[0][2]) }}</td>
+    <td>{{ sname(t.stops[-1][0]) }} {{ nd(t.stops[-1][1]) }}</td>
+    <td>{% for d in t.days %}{{ S["d_" ~ d] }}{% if not loop.last %} {% endif %}{% endfor %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

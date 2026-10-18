@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "flows/_segment_header.html" import segment_header %}
+{% block title %}{{ t("change.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('manage_pnr', pnr=booking.pnr) }}">{{ booking.pnr }}</a></li>
+        <li>{{ t("change.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("change.title") }}</h1>
+  {{ segment_header(view) }}
+
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+  <div class="notice {{ 'notice-info' if decision.allowed else 'notice-warn' }}"><div>
+    {{ label }}
+    {% if decision.allowed %}
+      {% if decision.detail.fee_waived %}<p>{{ t("change.fee_waived") }}</p>
+      {% elif decision.detail.fee_usd %}<p>{{ t("change.fee_applies", amount=fmt_money(decision.detail.fee_usd)) }}</p>{% endif %}
+    {% endif %}
+  </div></div>
+
+  {% if decision.allowed %}
+  <h2>{{ t("change.available_dates") }}</h2>
+  <form method="post" action="{{ path('change', pnr=booking.pnr) }}">
+    <input type="hidden" name="segment_id" value="{{ view.segment.id }}">
+    <div class="table-scroll">
+      <table>
+        <thead><tr>
+          <th scope="col">{{ t("results.flight") }}</th>
+          <th scope="col">{{ t("status.date") }}</th>
+          <th scope="col">{{ t("results.depart") }}</th>
+          <th scope="col">{{ t("results.total") }}</th>
+          <th scope="col"><span class="visually-hidden">{{ t("results.select") }}</span></th>
+        </tr></thead>
+        <tbody>
+          {% for alt in alternatives[:20] %}
+          <tr>
+            <td>{{ alt.flight.flight_no }}</td>
+            <td>{{ fmt_date(alt.flight.date) }} ({{ fmt_weekday(alt.flight.date) }})</td>
+            <td>{{ fmt_time(alt.flight.dep_time) }}</td>
+            <td>{{ fmt_money(alt.fare.price_usd) }}</td>
+            <td><button class="btn btn-primary" type="submit" name="new_flight_id" value="{{ alt.flight.id }}">{{ t("results.select") }}</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if not alternatives %}<p>{{ t("change.no_alternatives") }}</p>{% endif %}
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

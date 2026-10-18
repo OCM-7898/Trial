@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import date_field, text_field, number_field %}
+{% block title %}{{ t("search.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol>
+      <li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li>{{ t("nav.book_flight") }}</li>
+    </ol>
+  </nav>
+  <h1>{{ t("search.title") }}</h1>
+  <p>{{ t("search.window_notice", start=fmt_date(window_start), end=fmt_date(window_end)) }}</p>
+
+  <form class="searchform" method="get" action="{{ path('results') }}">
+    {{ text_field("origin", "origin", t("search.origin"), t("search.code_placeholder"), t("search.code_hint")) }}
+    {{ text_field("destination", "destination", t("search.destination"), t("search.code_placeholder"), t("search.code_hint")) }}
+    {{ date_field("depart", "depart", t("search.depart"), t("common.date_hint")) }}
+    {{ date_field("return", "return", t("search.return"), t("search.return_hint")) }}
+    {{ number_field("adults", "adults", t("search.adults"), 1, 9, 1) }}
+    <div class="field">
+      <label for="cabin">{{ t("search.cabin") }}</label>
+      <select id="cabin" name="cabin">
+        <option value="">{{ t("search.cabin_any") }}</option>
+        <option value="economy">{{ t("brand.cabin_economy") }}</option>
+        <option value="business">{{ t("brand.cabin_business") }}</option>
+      </select>
+    </div>
+    <div class="actions">
+      <button class="btn btn-gold" type="submit">{{ t("search.submit") }}</button>
+      <a class="btn-link" href="{{ path('multi_city') }}">{{ t("search.multi_city") }}</a>
+      <a class="btn-link" href="{{ path('flexible_dates') }}">{{ t("search.flexible_dates") }}</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

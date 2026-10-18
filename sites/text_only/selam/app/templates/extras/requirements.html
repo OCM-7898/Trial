@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ t("nav.travel_requirements") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("nav.travel_requirements") }}</li></ol></nav>
+<h1>{{ t("nav.travel_requirements") }}</h1>
+<p>{{ t("requirements.intro") }}</p>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("contact.country") }}</th><th scope="col">{{ t("requirements.visa") }}</th>
+    <th scope="col">{{ t("requirements.passport") }}</th><th scope="col">{{ t("requirements.health") }}</th></tr></thead>
+  <tbody>{% for row in rows %}<tr>
+    <td>{% if row.country_code in offices %}{{ offices[row.country_code].country }}{% else %}{{ row.country_code }}{% endif %}</td>
+    <td>{{ row.visa_required }}</td>
+    <td>{{ t("requirements.passport_months", n=row.passport_months) }}</td>
+    <td>{{ row.health }}</td>
+  </tr>{% endfor %}</tbody></table></div>
+<p class="hint">{{ t("requirements.note") }}</p>
+<p class="hint">{{ t("requirements.evisa_note") }} <a href="{{ path('partner_evisa') }}">{{ t("brand.evisa") }}</a></p>
+</div>{% endblock %}

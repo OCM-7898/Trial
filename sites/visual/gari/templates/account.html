@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ S.account_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.account_title }}</h1>
+{% if saved_ok %}<div class="notice">{{ S.account_saved }}</div>{% endif %}
+<p class="muted">{{ S.email }}: {{ profile.email }}</p>
+<div class="panel">
+<form class="stack" method="post" action="/account">
+  <label>{{ S.name }}</label>
+  <input type="text" name="name" value="{{ profile.name }}">
+  <label>{{ S.phone }}</label>
+  <input type="text" name="phone" value="{{ profile.phone }}">
+  <label>{{ S.city }}</label>
+  <select name="city">
+    {% for c in cities %}<option value="{{ c }}"{% if profile.city == c %} selected{% endif %}>{{ c }}</option>{% endfor %}
+  </select>
+  <button type="submit">{{ S.save_changes }}</button>
+</form>
+</div>
+{% endblock %}

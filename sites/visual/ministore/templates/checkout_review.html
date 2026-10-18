@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ S.co_review_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.co_step2 }}</h2>
+<table>
+  {% for it in items %}<tr><td>{{ it.p.name }}</td><td>x{{ it.qty }}</td>
+  <td>{{ S.cur }}{{ ('%.2f' % it.subtotal) | v2_num }}</td></tr>{% endfor %}
+</table>
+<p>{{ S.ship_to }} <strong>{{ address }}</strong> (<a href="/checkout">{{ S.change }}</a>)</p>
+<p>{{ S.items_total }} {{ S.cur }}{{ ('%.2f' % total) | v2_num }}</p>
+{% if coupon_code %}
+<p class="notice">{{ S.coupon_applied.format(c=coupon_code, p=coupon_pct) }}</p>
+{% endif %}
+{% if coupon_error %}<p class="error">{{ coupon_error }}</p>{% endif %}
+<form method="post" action="/checkout/coupon">
+  <label>{{ S.coupon_label }} <input name="code" style="width:140px"></label>
+  <button class="btn grey">{{ S.apply_coupon }}</button>
+</form>
+<p><strong>{{ S.order_total }} {{ S.cur }}{{ ('%.2f' % final_total) | v2_num }}</strong></p>
+<form method="post" action="/checkout/confirm">
+  <button class="btn">{{ S.place_order }}</button>
+</form>
+{% endblock %}

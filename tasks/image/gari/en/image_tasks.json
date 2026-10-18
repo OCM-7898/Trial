@@ -1,0 +1,1840 @@
+[
+ {
+  "id": "image-gari-001",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2023 Buick Envision’ (Karachi), ‘2020 Buick Envision’ (Multan), ‘2016 Buick Envision’ (Lahore), ‘2021 Buick Envision’ (Lahore). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/78/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "14000",
+     "14,000"
+    ],
+    "none_of": [
+     "20400",
+     "20,400",
+     "7700",
+     "7,700",
+     "16000",
+     "16,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Envision",
+   "goto /car/81",
+   "goto /car/78",
+   "goto /car/80",
+   "goto /car/83",
+   "stop 14000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-002",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2020 Tesla Model 3’ (Islamabad), ‘2017 Tesla Model 3’ (Peshawar), ‘2021 Tesla Model 3’ (Karachi), ‘2015 Tesla Model 3’ (Islamabad). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/392/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "15600",
+     "15,600"
+    ],
+    "none_of": [
+     "30000",
+     "30,000",
+     "20800",
+     "20,800",
+     "32200",
+     "32,200"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Model%203",
+   "goto /car/391",
+   "goto /car/390",
+   "goto /car/393",
+   "goto /car/392",
+   "stop 15600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-003",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2024 Chevrolet Cruze’ (Lahore), ‘2023 Chevrolet Cruze’ (Rawalpindi), ‘2019 Chevrolet Cruze’ (Lahore), ‘2019 Chevrolet Cruze’ (Karachi). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/115/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "9600",
+     "9,600"
+    ],
+    "none_of": [
+     "16000",
+     "16,000",
+     "14100",
+     "14,100",
+     "9700",
+     "9,700"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Cruze",
+   "goto /car/117",
+   "goto /car/112",
+   "goto /car/113",
+   "goto /car/115",
+   "stop 9600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-004",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2017 Kia Sportage’ (Rawalpindi), ‘2024 Kia Sportage’ (Lahore), ‘2019 Kia Sportage’ (Faisalabad), ‘2013 Kia Sportage’ (Islamabad). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/247/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8200",
+     "8,200"
+    ],
+    "none_of": [
+     "21200",
+     "21,200",
+     "10700",
+     "10,700",
+     "5500",
+     "5,500"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Sportage",
+   "goto /car/247",
+   "goto /car/251",
+   "goto /car/250",
+   "goto /car/248",
+   "stop 8200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-005",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2017 Nissan Teana’ (Karachi), ‘2018 Nissan Teana’ (Karachi), ‘2021 Nissan Teana’ (Karachi), ‘2013 Nissan Teana’ (Karachi). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/337/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "11500",
+     "11,500"
+    ],
+    "none_of": [
+     "6100",
+     "6,100",
+     "7100",
+     "7,100",
+     "3900",
+     "3,900"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Teana",
+   "goto /car/338",
+   "goto /car/340",
+   "goto /car/337",
+   "goto /car/339",
+   "stop 11500"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-006",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2021 Mercedes-Benz GLK’ (Karachi), ‘2020 Mercedes-Benz GLK’ (Islamabad), ‘2019 Mercedes-Benz GLK’ (Multan). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/303/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "39300",
+     "39,300"
+    ],
+    "none_of": [
+     "34100",
+     "34,100",
+     "31300",
+     "31,300"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=GLK",
+   "goto /car/303",
+   "goto /car/301",
+   "goto /car/302",
+   "stop 39300"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-007",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2018 Buick Regal’ (Karachi), ‘2018 Buick Regal’ (Lahore), ‘2022 Buick Regal’ (Rawalpindi). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/92/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8100",
+     "8,100"
+    ],
+    "none_of": [
+     "8700",
+     "8,700",
+     "12800",
+     "12,800"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Regal",
+   "goto /car/94",
+   "goto /car/92",
+   "goto /car/98",
+   "stop 8100"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-008",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2023 Chevrolet Aveo’ (Rawalpindi), ‘2019 Chevrolet Aveo’ (Lahore), ‘2023 Chevrolet Aveo’ (Lahore). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/109/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "9200",
+     "9,200"
+    ],
+    "none_of": [
+     "14100",
+     "14,100",
+     "16100",
+     "16,100"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Aveo",
+   "goto /car/108",
+   "goto /car/109",
+   "goto /car/107",
+   "stop 9200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-009",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2018 Nissan X-Trail’ (Karachi), ‘2017 Nissan X-Trail’ (Multan), ‘2024 Nissan X-Trail’ (Sialkot). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/350/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "9200",
+     "9,200"
+    ],
+    "none_of": [
+     "8900",
+     "8,900",
+     "19100",
+     "19,100"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=X-Trail",
+   "goto /car/350",
+   "goto /car/351",
+   "goto /car/349",
+   "stop 9200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-010",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2022 BMW 1 Series’ (Islamabad), ‘2017 BMW 1 Series’ (Karachi), ‘2018 BMW 1 Series’ (Peshawar). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/48/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25200",
+     "25,200"
+    ],
+    "none_of": [
+     "14100",
+     "14,100",
+     "18300",
+     "18,300"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=1%20Series",
+   "goto /car/48",
+   "goto /car/49",
+   "goto /car/47",
+   "stop 25200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-011",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2016 Honda Accord’ (Faisalabad), ‘2020 Honda Accord’ (Lahore), ‘2018 Honda Accord’ (Lahore). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/154/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "7600",
+     "7,600"
+    ],
+    "none_of": [
+     "13200",
+     "13,200",
+     "10100",
+     "10,100"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Accord",
+   "goto /car/154",
+   "goto /car/158",
+   "goto /car/156",
+   "stop 7600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-012",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "The photo shows a car listed on this site. It is one of: ‘2024 BMW 3 Series’ (Karachi), ‘2018 BMW 3 Series’ (Lahore), ‘2024 BMW 3 Series’ (Multan). What is its asking price?",
+  "image": "sites/visual/gari/static/cars/55/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "39300",
+     "39,300"
+    ],
+    "none_of": [
+     "40500",
+     "40,500",
+     "18500",
+     "18,500"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=3%20Series",
+   "goto /car/52",
+   "goto /car/50",
+   "goto /car/55",
+   "stop 39300"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-013",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2023 Hyundai Verna’ (Sialkot), ‘2021 Hyundai Verna’ (Karachi), ‘2020 Hyundai Verna’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/227/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 227
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 224
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 225
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Verna",
+   "goto /car/224",
+   "goto /car/225",
+   "goto /car/227",
+   "goto /car/227",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-014",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2019 Mercedes-Benz C-Class’ (Islamabad), ‘2017 Mercedes-Benz C-Class’ (Karachi), ‘2018 Mercedes-Benz C-Class’ (Islamabad). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/284/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 284
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 286
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 285
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=C-Class",
+   "goto /car/286",
+   "goto /car/285",
+   "goto /car/284",
+   "goto /car/284",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-015",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2021 Hyundai Elantra’ (Rawalpindi), ‘2021 Hyundai Elantra’ (Karachi), ‘2016 Hyundai Elantra’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/209/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 209
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 201
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 202
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Elantra",
+   "goto /car/201",
+   "goto /car/202",
+   "goto /car/209",
+   "goto /car/209",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-016",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2014 Hyundai Sonata’ (Karachi), ‘2021 Hyundai Sonata’ (Lahore), ‘2017 Hyundai Sonata’ (Faisalabad). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/213/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 213
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 212
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 211
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sonata",
+   "goto /car/212",
+   "goto /car/213",
+   "goto /car/211",
+   "goto /car/213",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-017",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2023 Volkswagen Golf’ (Karachi), ‘2019 Volkswagen Golf’ (Islamabad), ‘2017 Volkswagen Golf’ (Rawalpindi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/448/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 448
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 449
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 445
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Golf",
+   "goto /car/449",
+   "goto /car/448",
+   "goto /car/445",
+   "goto /car/448",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-018",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2024 Mazda Mazda6’ (Karachi), ‘2024 Mazda Mazda6’ (Lahore), ‘2017 Mazda Mazda6’ (Karachi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/277/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 277
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 279
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Mazda6",
+   "goto /car/277",
+   "goto /car/279",
+   "goto /car/278",
+   "goto /car/277",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-019",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2019 Audi A4’ (Islamabad), ‘2024 Audi A4’ (Islamabad), ‘2017 Audi A4’ (Multan). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/9/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 9
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 8
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 14
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=A4",
+   "goto /car/8",
+   "goto /car/14",
+   "goto /car/9",
+   "goto /car/9",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-020",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2022 Nissan Sylphy’ (Karachi), ‘2021 Nissan Sylphy’ (Sialkot), ‘2016 Nissan Sylphy’ (Rawalpindi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/324/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 324
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 333
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 328
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sylphy",
+   "goto /car/333",
+   "goto /car/324",
+   "goto /car/328",
+   "goto /car/324",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-021",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2024 Nissan Sylphy’ (Lahore), ‘2022 Nissan Sylphy’ (Peshawar), ‘2014 Nissan Sylphy’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/322/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 322
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 332
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 327
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sylphy",
+   "goto /car/322",
+   "goto /car/332",
+   "goto /car/327",
+   "goto /car/322",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-022",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2021 Toyota Camry’ (Rawalpindi), ‘2023 Toyota Camry’ (Multan), ‘2023 Toyota Camry’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/403/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 403
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 406
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 407
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Camry",
+   "goto /car/403",
+   "goto /car/406",
+   "goto /car/407",
+   "goto /car/403",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-023",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2016 Hyundai Elantra’ (Multan), ‘2018 Hyundai Elantra’ (Karachi), ‘2021 Hyundai Elantra’ (Islamabad). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/206/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 206
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 204
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 200
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Elantra",
+   "goto /car/206",
+   "goto /car/204",
+   "goto /car/200",
+   "goto /car/206",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-024",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "Save the car shown in the photo to your saved cars. It is one of: ‘2019 Ford Mondeo’ (Peshawar), ‘2024 Ford Mondeo’ (Rawalpindi), ‘2022 Ford Mondeo’ (Islamabad). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/146/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 146
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 145
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 149
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Mondeo",
+   "goto /car/145",
+   "goto /car/146",
+   "goto /car/149",
+   "goto /car/146",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-025",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $20,400 on the car shown in the photo. It is one of: ‘2014 Volkswagen T-Roc’ (Islamabad), ‘2024 Volkswagen T-Roc’ (Rawalpindi), ‘2024 Volkswagen T-Roc’ (Islamabad). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/479/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 479,
+     "amount": 20400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 481
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 480
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=T-Roc",
+   "goto /car/481",
+   "goto /car/479",
+   "goto /car/480",
+   "goto /car/479",
+   "fill 1 amount=20400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-026",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $14,900 on the car shown in the photo. It is one of: ‘2023 Volkswagen Passat’ (Multan), ‘2023 Volkswagen Passat’ (Peshawar), ‘2023 Volkswagen Passat’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/468/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 468,
+     "amount": 14900
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 467
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 470
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Passat",
+   "goto /car/467",
+   "goto /car/468",
+   "goto /car/470",
+   "goto /car/468",
+   "fill 1 amount=14900"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-027",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $23,300 on the car shown in the photo. It is one of: ‘2024 Honda CR-V’ (Islamabad), ‘2021 Honda CR-V’ (Lahore), ‘2017 Honda CR-V’ (Rawalpindi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/170/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 170,
+     "amount": 23300
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 165
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 163
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=CR-V",
+   "goto /car/170",
+   "goto /car/165",
+   "goto /car/163",
+   "goto /car/170",
+   "fill 1 amount=23300"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-028",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $9,800 on the car shown in the photo. It is one of: ‘2022 Buick LaCrosse’ (Sialkot), ‘2018 Buick LaCrosse’ (Lahore), ‘2020 Buick LaCrosse’ (Sialkot). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/86/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 86,
+     "amount": 9800
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 84
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 90
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=LaCrosse",
+   "goto /car/84",
+   "goto /car/90",
+   "goto /car/86",
+   "goto /car/86",
+   "fill 1 amount=9800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-029",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $11,900 on the car shown in the photo. It is one of: ‘2021 Nissan Tiida’ (Rawalpindi), ‘2023 Nissan Tiida’ (Lahore), ‘2022 Nissan Tiida’ (Karachi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/346/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 346,
+     "amount": 11900
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 343
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 345
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Tiida",
+   "goto /car/343",
+   "goto /car/345",
+   "goto /car/346",
+   "goto /car/346",
+   "fill 1 amount=11900"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-030",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $40,600 on the car shown in the photo. It is one of: ‘2015 Volvo XC60’ (Peshawar), ‘2024 Volvo XC60’ (Karachi), ‘2014 Volvo XC60’ (Multan). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/496/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 496,
+     "amount": 40600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 494
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 495
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=XC60",
+   "goto /car/494",
+   "goto /car/496",
+   "goto /car/495",
+   "goto /car/496",
+   "fill 1 amount=40600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-031",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $10,100 on the car shown in the photo. It is one of: ‘2017 Honda CR-V’ (Peshawar), ‘2024 Honda CR-V’ (Lahore), ‘2017 Honda CR-V’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/162/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 162,
+     "amount": 10100
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 166
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=CR-V",
+   "goto /car/162",
+   "goto /car/164",
+   "goto /car/166",
+   "goto /car/162",
+   "fill 1 amount=10100"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-032",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $32,400 on the car shown in the photo. It is one of: ‘2018 Land Rover Range Rover’ (Faisalabad), ‘2024 Land Rover Range Rover Evoque’ (Lahore), ‘2018 Land Rover Range Rover Evoque’ (Islamabad), ‘2021 Land Rover Range Rover Sport’ (Lahore). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/256/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 256,
+     "amount": 32400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 258
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 259
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 262
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Land%20Rover",
+   "goto /car/256",
+   "goto /car/258",
+   "goto /car/259",
+   "goto /car/262",
+   "goto /car/256",
+   "fill 1 amount=32400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-033",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $21,700 on the car shown in the photo. It is one of: ‘2020 Audi Q3’ (Karachi), ‘2016 Audi Q3’ (Lahore), ‘2023 Audi Q7’ (Islamabad), ‘2018 Audi Q5’ (Rawalpindi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/43/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 43,
+     "amount": 21700
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 37
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 36
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 46
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Audi",
+   "goto /car/37",
+   "goto /car/36",
+   "goto /car/46",
+   "goto /car/43",
+   "goto /car/43",
+   "fill 1 amount=21700"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-034",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "Make an offer of $7,200 on the car shown in the photo. It is one of: ‘2022 Chevrolet Malibu’ (Rawalpindi), ‘2018 Chevrolet Malibu’ (Sialkot), ‘2024 Chevrolet Cruze’ (Rawalpindi), ‘2019 Chevrolet Epica’ (Karachi). Sign in as ahmed.raza@garibazaar.test (password: garibazaar2026) if needed.",
+  "image": "sites/visual/gari/static/cars/121/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 121,
+     "amount": 7200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 122
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 116
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 118
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Chevrolet",
+   "goto /car/122",
+   "goto /car/121",
+   "goto /car/116",
+   "goto /car/118",
+   "goto /car/121",
+   "fill 1 amount=7200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-035",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "Who is selling the car shown in the photo? It is one of: ‘2020 Mercedes-Benz E-Class’ (Karachi), ‘2015 Mercedes-Benz A-Class’ (Rawalpindi), ‘2021 Mercedes-Benz S-Class’ (Lahore), ‘2019 Mercedes-Benz E-Class’ (Karachi).",
+  "image": "sites/visual/gari/static/cars/292/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Hassan Raza"
+    ],
+    "none_of": [
+     "Galaxy Car Centre",
+     "Kamran Baig",
+     "Rabia Anwar"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Mercedes-Benz",
+   "goto /car/292",
+   "goto /car/280",
+   "goto /car/305",
+   "goto /car/291",
+   "stop Hassan Raza"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-036",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "Who is selling the car shown in the photo? It is one of: ‘2018 Ford Focus’ (Rawalpindi), ‘2020 Ford Mondeo’ (Lahore), ‘2015 Ford Mondeo’ (Lahore), ‘2022 Ford Focus’ (Islamabad).",
+  "image": "sites/visual/gari/static/cars/136/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Mehwish Iqbal"
+    ],
+    "none_of": [
+     "Capital Car Point",
+     "Galaxy Car Centre",
+     "Hassan Raza"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Ford",
+   "goto /car/138",
+   "goto /car/144",
+   "goto /car/148",
+   "goto /car/136",
+   "stop Mehwish Iqbal"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-037",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "Who is selling the car shown in the photo? It is one of: ‘2013 Volkswagen ID.3’ (Karachi), ‘2023 Volkswagen Golf’ (Lahore), ‘2021 Volkswagen Golf’ (Karachi), ‘2024 Volkswagen Polo’ (Rawalpindi).",
+  "image": "sites/visual/gari/static/cars/446/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "City Auto Traders"
+    ],
+    "none_of": [
+     "Amna Javed",
+     "Kamran Baig",
+     "Sana Tariq"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Volkswagen",
+   "goto /car/452",
+   "goto /car/446",
+   "goto /car/451",
+   "goto /car/475",
+   "stop City Auto Traders"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-038",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "Who is selling the car shown in the photo? It is one of: ‘2018 Nissan Patrol’ (Lahore), ‘2019 Nissan Qashqai’ (Karachi), ‘2022 Nissan Livina’ (Lahore), ‘2019 Nissan X-Trail’ (Lahore).",
+  "image": "sites/visual/gari/static/cars/313/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Kamran Baig"
+    ],
+    "none_of": [
+     "Bilal Hussain",
+     "Salman Butt",
+     "Zainab Akhtar"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Nissan",
+   "goto /car/313",
+   "goto /car/314",
+   "goto /car/309",
+   "goto /car/348",
+   "stop Kamran Baig"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-039",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "Who is selling the car shown in the photo? It is one of: ‘2018 Volkswagen ID.3’ (Multan), ‘2017 Volkswagen Golf’ (Peshawar), ‘2022 Volkswagen Golf’ (Islamabad), ‘2016 Volkswagen Polo’ (Islamabad).",
+  "image": "sites/visual/gari/static/cars/450/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ayesha Siddiqui"
+    ],
+    "none_of": [
+     "City Auto Traders",
+     "Metro Cars",
+     "Zainab Akhtar"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Volkswagen",
+   "goto /car/453",
+   "goto /car/450",
+   "goto /car/447",
+   "goto /car/476",
+   "stop Ayesha Siddiqui"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-040",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "Who is selling the car shown in the photo? It is one of: ‘2021 BMW X4’ (Faisalabad), ‘2021 BMW X3’ (Peshawar), ‘2014 BMW X2’ (Peshawar), ‘2020 BMW X1’ (Rawalpindi).",
+  "image": "sites/visual/gari/static/cars/67/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Star Motors"
+    ],
+    "none_of": [
+     "Adeel Akram",
+     "Crescent Automobiles",
+     "Usman Sheikh"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=BMW",
+   "goto /car/75",
+   "goto /car/70",
+   "goto /car/67",
+   "goto /car/62",
+   "stop Star Motors"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-041",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "What is the mileage of the car shown in the photo? It is one of: ‘2022 Toyota RAV4’ (Islamabad), ‘2022 Toyota Land Cruiser Prado’ (Islamabad), ‘2021 Toyota Highlander’ (Karachi).",
+  "image": "sites/visual/gari/static/cars/421/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "73000",
+     "73,000"
+    ],
+    "none_of": [
+     "43000",
+     "43,000",
+     "67000",
+     "67,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Toyota",
+   "goto /car/426",
+   "goto /car/422",
+   "goto /car/421",
+   "stop 73000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-042",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "What is the mileage of the car shown in the photo? It is one of: ‘2014 Kia Cerato’ (Lahore), ‘2014 Kia Rio’ (Karachi), ‘2020 Kia Cerato’ (Karachi).",
+  "image": "sites/visual/gari/static/cars/243/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "107000",
+     "107,000"
+    ],
+    "none_of": [
+     "214000",
+     "214,000",
+     "106000",
+     "106,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Kia",
+   "goto /car/239",
+   "goto /car/243",
+   "goto /car/240",
+   "stop 107000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-043",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "What is the mileage of the car shown in the photo? It is one of: ‘2019 Mercedes-Benz GLE’ (Multan), ‘2022 Mercedes-Benz GLA’ (Karachi), ‘2021 Mercedes-Benz GLB’ (Multan).",
+  "image": "sites/visual/gari/static/cars/295/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "50000",
+     "50,000"
+    ],
+    "none_of": [
+     "84000",
+     "84,000",
+     "87000",
+     "87,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Mercedes-Benz",
+   "goto /car/299",
+   "goto /car/295",
+   "goto /car/297",
+   "stop 50000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-044",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "What is the mileage of the car shown in the photo? It is one of: ‘2024 Citroen C5’ (Lahore), ‘2023 Citroen C5’ (Sialkot), ‘2019 Citroen Elysee’ (Karachi).",
+  "image": "sites/visual/gari/static/cars/128/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "31000",
+     "31,000"
+    ],
+    "none_of": [
+     "25000",
+     "25,000",
+     "123000",
+     "123,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Citroen",
+   "goto /car/128",
+   "goto /car/127",
+   "goto /car/131",
+   "stop 31000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-045",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "What is the mileage of the car shown in the photo? It is one of: ‘2024 BMW 3 Series’ (Lahore), ‘2020 BMW 5 Series’ (Islamabad), ‘2015 BMW 3 Series’ (Multan).",
+  "image": "sites/visual/gari/static/cars/58/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "64000",
+     "64,000"
+    ],
+    "none_of": [
+     "24000",
+     "24,000",
+     "176000",
+     "176,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=BMW",
+   "goto /car/54",
+   "goto /car/58",
+   "goto /car/51",
+   "stop 64000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-046",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "What is the mileage of the car shown in the photo? It is one of: ‘2020 Honda Accord’ (Islamabad), ‘2018 Honda Crosstour’ (Islamabad), ‘2015 Honda Accord’ (Multan).",
+  "image": "sites/visual/gari/static/cars/161/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "81000",
+     "81,000"
+    ],
+    "none_of": [
+     "140000",
+     "140,000",
+     "92000",
+     "92,000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Honda",
+   "goto /car/161",
+   "goto /car/180",
+   "goto /car/153",
+   "stop 81000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-047",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "Find the car shown in the photo on this site and report its asking price. If it is no longer for sale, answer N/A.",
+  "image": "sites/visual/gari/static/cars/260/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "SOLD"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Range%20Rover%20Sport",
+   "goto /car/261",
+   "goto /car/262",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-048",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "Find the car shown in the photo on this site and report its asking price. If it is no longer for sale, answer N/A.",
+  "image": "sites/visual/gari/static/cars/383/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "SOLD"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Superb",
+   "goto /car/384",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-049",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "Find the car shown in the photo on this site and report its asking price. If it is no longer for sale, answer N/A.",
+  "image": "sites/visual/gari/static/cars/99/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "SOLD"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Regal",
+   "goto /car/91",
+   "goto /car/92",
+   "goto /car/93",
+   "goto /car/94",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-050",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "Find the car shown in the photo on this site and report its asking price. If it is no longer for sale, answer N/A.",
+  "image": "sites/visual/gari/static/cars/435/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "SOLD"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Vios",
+   "goto /car/436",
+   "goto /car/438",
+   "goto /car/439",
+   "goto /car/440",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ }
+]

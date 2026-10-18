@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ d.name }}{% endblock %}
+{% block content %}
+<h1>{{ d.name }}</h1>
+<table class="spec">
+  <tr><th>{{ S.dealer_city }}</th><td>{{ d.city }}</td></tr>
+  <tr><th>{{ S.dealer_rating }}</th><td>{{ d.rating | v2_num }} ★</td></tr>
+  <tr><th>{{ S.dealer_member_since }}</th><td>{{ d.member_since | v2_num }}</td></tr>
+  <tr><th>{{ S.dealer_phone }}</th><td>{{ d.phone }}</td></tr>
+  <tr><th>{{ S.dealer_active_count }}</th><td>{{ cars | length | v2_num }}</td></tr>
+</table>
+
+<h2>{{ S.dealer_inventory }}</h2>
+{% if cars %}
+<div class="grid">
+  {% for c in cars %}
+  <div class="card">
+    <a href="/car/{{ c.id }}"><img src="/static/cars/{{ c.id }}/1.jpg" alt="{{ S.photo_alt.format(name=car_name(c), k=1) }}"></a>
+    <div class="pad">
+      <a href="/car/{{ c.id }}"><strong>{{ car_name(c) }}</strong></a>
+      <div class="price">{{ c.price | money }}</div>
+      <div class="meta">{{ c.mileage_km | grp }} {{ S.km }} · {{ c.city }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>{{ S.dealer_empty }}</p>
+{% endif %}
+{% endblock %}

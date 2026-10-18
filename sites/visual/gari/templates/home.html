@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ S.nav_home }}{% endblock %}
+{% block content %}
+<div class="hero-band">
+  <h1>{{ S.site_name }}</h1>
+  <p>{{ S.tagline }}. {{ S.home_intro }}</p>
+  <p><a style="color:#fff;font-weight:700" href="/cars">{{ S.view_all }} →</a></p>
+</div>
+
+<h2>{{ S.browse_by_body }}</h2>
+<div class="chips">
+  {% for b in bodies %}<a href="/cars?body_type={{ b | urlencode }}">{{ b }}</a>{% endfor %}
+</div>
+
+<h2>{{ S.browse_by_city }}</h2>
+<div class="chips">
+  {% for c in cities %}<a href="/cars?city={{ c }}">{{ c }}</a>{% endfor %}
+</div>
+
+<h2>{{ S.featured }}</h2>
+<div class="grid">
+  {% for c in featured %}
+  <div class="card">
+    <a href="/car/{{ c.id }}"><img src="/static/cars/{{ c.id }}/1.jpg" alt="{{ S.photo_alt.format(name=car_name(c), k=1) }}"></a>
+    <div class="pad">
+      <a href="/car/{{ c.id }}"><strong>{{ car_name(c) }}</strong></a>
+      <div class="price">{{ c.price | money }}</div>
+      <div class="meta">{{ c.mileage_km | grp }} {{ S.km }} · {{ c.city }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>{{ S.browse_by_brand }}</h2>
+<div class="chips">
+  {% for b in brands %}<a href="/cars?brand={{ b | urlencode }}">{{ b }}</a>{% endfor %}
+</div>
+{% endblock %}

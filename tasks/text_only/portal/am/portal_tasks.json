@@ -1,0 +1,2244 @@
+[
+ {
+  "id": "portal-001",
+  "site": "portal",
+  "intent": "በመታወቂያ ካርድዎ ላይ የተመዘገበውን ስም ወደ 'ደልዋራ ሀቅ' በመቀየር እርማት ያስገቡ፤ ደጋፊ ሰነድ ያያይዙ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "name",
+     "new_value": "ደልዋራ ሀቅ",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/name-correction/",
+   "fill 1 new_value=ደልዋራ ሀቅ; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-002",
+  "site": "portal",
+  "intent": "አዲስ የፓስፖርት ማመልከቻ ከመጀመሪያ እስከ መጨረሻ ሞልተው ያስገቡ፡ የግል መረጃ፣ ከዚያ አድራሻ፣ ከዚያ የገጽ ብዛት፣ ተቀባይነትና አቅርቦት። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=ደልዋር ሀቅ; dob=1987-08-28; father_name=ሞኒር ኢስላም",
+   "fill 1 present_addr=ቤት 16, መንገድ 5, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; perm_addr=መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር",
+   "fill 1 pages=48; validity=5; delivery=regular"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-003",
+  "site": "portal",
+  "intent": "በባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት ለ22 ሰኔ 2026 በ10:30 የፓስፖርት ምዝገባ ቀጠሮ ይያዙ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-22",
+     "slot_time": "10:30",
+     "office": "ባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=ባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት; slot_date=2026-06-22; slot_time=10:30"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-004",
+  "site": "portal",
+  "intent": "በደንበኛ ቁጥር 08000007 ላይ ያልተከፈለውን የኤሌክትሪክ ሂሳብ BL0000005 ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-005",
+  "site": "portal",
+  "intent": "በሙሉ የማመልከቻ ሂደት አዲስ የግብር ከፋይ መለያ ቁጥር ይመዝገቡ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "tin-registration"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-registration/",
+   "fill 1 name=ደልዋር ሀቅ; father_name=ሞኒር ኢስላም; dob=1987-08-28; address=ቤት 16, መንገድ 5, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር",
+   "fill 1 circle=ክበብ 1; income_source=ደመወዝ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-006",
+  "site": "portal",
+  "intent": "የኤሌክትሪክ ሂሳብ ታሪክዎን ከፍተው የ2026-01 ሂሳብ መጠን ያስተውሉ። በኤሌክትሪክ ክፍያ ዝርዝር ውስጥ ከዚያ የሂሳብ መጠን በታች ሆኖ ከፍተኛውን ክፍያ ያግኙና የዚያን ክፍያ የዓይነት ስም ይመልሱ። ከዚያ በቆጣሪዎ ላይ ያለውን በጣም አሮጌ ያልተከፈለ ሂሳብ ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የቤት ሶስት ፌዝ"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/electricity/fees/",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "stop የቤት ሶስት ፌዝ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-007",
+  "site": "portal",
+  "intent": "በመሬት መዝገብ ፍለጋ በኩል በሜሄርፑር ወረዳ ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 4438 ያግኙ (ንዑስ ወረዳውና ሙዛው አልተሰጡም) እና በላዩ የተመዘገበውን የቦታ ቁጥር ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "357",
+    "none_of": [
+     "604"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=4438",
+   "stop 357"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-008",
+  "site": "portal",
+  "intent": "የሮል ቁጥር 763370 የ2021 የሁለተኛ ደረጃ (secondary) ፈተና ውጤት ይመልከቱ (ቦርዱ አልተሰጠም — የፍለጋ ገጹ ቦርዶቹን ይዘረዝራል) እና የተፈታኙን ተቋም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ሞዴል ሁለተኛ ደረጃ ት/ቤት"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=ራጅሻሂ; year=2021; roll_no=763370",
+   "stop ሞዴል ሁለተኛ ደረጃ ት/ቤት"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-009",
+  "site": "portal",
+  "intent": "የምዝገባ ቁጥር 20000000000373 ያለውን የልደት ምዝገባ መዝገብ አረጋግጠው የምዝገባ ቀኑን ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "1987-09-06"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "stop 1987-09-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-010",
+  "site": "portal",
+  "intent": "በኤሌክትሪክ አገልግሎት ገጽ ላይ ሦስት ማስታወቂያዎች አንድ ርዕስ አላቸው። በ2025-10-12 የወጣውን ምድብ ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የመጨረሻ ቀን"
+   }
+  ],
+  "solution": [
+   "goto /services/electricity/",
+   "stop የመጨረሻ ቀን"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-011",
+  "site": "portal",
+  "intent": "የፓስፖርት ማመልከቻ PPA04000017ን ተመልክተው የደብተሩን ገጾችና ተቀባይነት ያንብቡ፤ ከዚያ የፓስፖርት ክፍያ ዝርዝርን ተጠቅመው ለዚያው የገጽ/ተቀባይነት ጥምረት የፈጣን (express) አቅርቦት ክፍያ ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "8050",
+     "8,050"
+    ],
+    "none_of": [
+     "10350",
+     "4025",
+     "5750",
+     "6325",
+     "8625"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "goto /services/passport/fees/",
+   "stop 8050"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-012",
+  "site": "portal",
+  "intent": "የኤሌክትሪክ ሂሳብ ታሪክዎን ከፍተው በስድስቱም የሂሳብ ጊዜያት የተጠየቀውን ጠቅላላ መጠን ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "13576",
+     "13,576"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 13576"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-013",
+  "site": "portal",
+  "intent": "የስሊፕ ቁጥር NI9999999 ያለውን የመታወቂያ እርማት ጥያቄ ይመልከቱና ሁኔታውን ይግለጹ። እንዲህ ያለ መዝገብ ከሌለ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/correction-status/",
+   "fill 1 slip_no=NI9999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-014",
+  "site": "portal",
+  "intent": "በደቡብ ቻር ሙዛ (ሜሄርፑር ፓራ፣ ሜሄርፑር፣ ኩልና ክልል) የካቲያን ቁጥር 99999 ይመልከቱ። እንዲህ ያለ መዝገብ ከሌለ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=38&upazila=152&mouza=89",
+   "fill 1 khatian_no=99999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-015",
+  "site": "portal",
+  "intent": "የሮል ቁጥር 999999፣ ራጅሻሂ ቦርድ፣ 2021 የሁለተኛ ደረጃ (secondary) ውጤት ያግኙ። እንዲህ ያለ ውጤት ከሌለ NO_RECORD ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=ራጅሻሂ; year=2021; roll_no=999999",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-016",
+  "site": "portal",
+  "intent": "የኤሌክትሪክ ሂሳብ ታሪክዎን ከፍተው የ2026-01 ሂሳብ መጠን ያስተውሉ። በመንጃ ፈቃድ ክፍያ ዝርዝር ውስጥ ከዚያ የሂሳብ መጠን በታች ሆኖ በጣም ውድ የሆነውን ክፍያ ያግኙ፤ ከዚያ ለዚያው ምድብ/ዓይነት ቻላን አዘጋጅተው (በካርድ፣ card) ይክፈሉና የከፈሉትን መጠን ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1679",
+     "1,679"
+    ],
+    "none_of": [
+     "1427",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1679,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "goto /services/driving-licence/fees/",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=ፈቃድ; variant=ሙያዊ; method=card",
+   "stop 1679"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-017",
+  "site": "portal",
+  "intent": "በደንበኛ ቁጥር 08000049 ላይ ያለውን ጠቅላላ ያልተከፈለ መጠን ይመልከቱ። በኤሌክትሪክ ክፍያ ዝርዝር ውስጥ ከዚያ ጠቅላላ ግማሽ በታች ሆኖ በጣም ውድ የሆነውን ክፍያ ያግኙና የዚያን ክፍያ የዓይነት ስም ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ንግድ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/fees/",
+   "stop ንግድ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-018",
+  "site": "portal",
+  "intent": "በደንበኛ ቁጥርዎ 08000007 ላይ ያሉትን ሁለቱንም ያልተከፈሉ የኤሌክትሪክ ሂሳቦች በካርድ (card) ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-019",
+  "site": "portal",
+  "intent": "ደንበኛ ቁጥር 08000021 ከአንድ በላይ ያልተከፈለ የኤሌክትሪክ ሂሳብ አለው። በጣም አሮጌውን ብቻ (በካርድ፣ card) ይክፈሉና ቀሪዎቹን ሳይከፈሉ ይተዉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000011",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000012"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000021",
+   "fill 1 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-020",
+  "site": "portal",
+  "intent": "በደንበኛ ቁጥር 08000049 ላይ ያለው ጠቅላላ ያልተከፈለ መጠን ከደንበኛ ቁጥር 08000035 በምን ያህል ይበልጣል? ልዩነቱን ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2094",
+     "2,094"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "stop 2094"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-021",
+  "site": "portal",
+  "intent": "ሁለት ያልተከፈሉ ሂሳቦችዎን ያወዳድሩ፡ በደንበኛ ቁጥር 08000007 ላይ ያለው ጠቅላላ ያልተከፈለ ኤሌክትሪክ፣ እና በይዞታ HLD00001 ላይ ያለው ጠቅላላ ያልተከፈለ የመሬት ልማት ግብር። ከሁለቱ መጠኖች ትልቁን ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4776",
+     "4,776"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000007",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00001",
+   "stop 4776"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-022",
+  "site": "portal",
+  "intent": "በኤሌክትሪክ ሂሳብ ታሪክዎ ውስጥ ስንት ሂሳቦች ከ2000 መጠን በላይ ነበሩ? ቁጥሩን ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "3"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-023",
+  "site": "portal",
+  "intent": "በመሬት መዝገብ ፍለጋ በኩል በጄናይዳህ ወረዳ (ኩልና ክልል፤ ንዑስ ወረዳውና ሙዛው አልተሰጡም) ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 5265 ያግኙና በላዩ የተመዘገበውን ባለቤት ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ሞኒር ዳስ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=71",
+   "fill 1 khatian_no=5265",
+   "stop ሞኒር ዳስ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-024",
+  "site": "portal",
+  "intent": "በቻር ካንዳ ሙዛ (ዲናጅፑር ባዛር፣ ዲናጅፑር፣ ራንግፑር ክልል) የካቲያን ቁጥር 9458 ይመልከቱና ሦስት ነገሮች ይግለጹ፡ ባለቤቱን፣ የመሬት ዓይነቱን እና ስፋቱን በዴሲማል። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ቶፋዛል ዳስ"
+   },
+   {
+    "type": "answer_match",
+    "answer": "ኩሬ"
+   },
+   {
+    "type": "answer_match",
+    "answer": "242"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=121",
+   "fill 1 khatian_no=9458",
+   "stop ቶፋዛል ዳስ, ኩሬ, 242"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-025",
+  "site": "portal",
+  "intent": "በመካከለኛ ፓራ ሙዛ (ራጅሻሂ ሰሜን፣ ራጅሻሂ፣ ራጅሻሂ ክልል) የካቲያን ቁጥር 6743 ይመልከቱ፤ ከዚያ ከዚያ መዝገብ በመቅዳት ለመሬት ባለቤትነት ዝውውር ያመልክቱ፡ የሻጭ ስም = የተመዘገበው ባለቤት፣ የቦታ ቁጥርና ስፋት እንደተመዘገበው። ራስዎን እንደ ገዢ ይጠቀሙ (የገዢ መታወቂያ 9999708182203)፣ የሻጭ መታወቂያ 9999000000002። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%ሮኬያ ካሪም%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"1332\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"6743\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"buyer_id\": \"9999708182203\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_id\": \"9999000000002\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"185\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=6&district=51&upazila=203&mouza=114",
+   "fill 1 khatian_no=6743",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=ደልዋር ሀቅ; buyer_id=9999708182203; seller_name=ሮኬያ ካሪም; seller_id=9999000000002; khatian_no=6743; plot_no=1332; area=185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-026",
+  "site": "portal",
+  "intent": "ይዞታ HLD00003 የበርካታ ዓመታት ያልተከፈለ የመሬት ልማት ግብር አለበት። ሁሉንም ያልተከፈሉ ዕዳዎቹን በካርድ (card) ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-027",
+  "site": "portal",
+  "intent": "በጠቅላላ ያልተከፈለ የመሬት ልማት ግብር የትኛው ይዞታ የበለጠ ዕዳ አለበት፡ HLD00003 ወይስ HLD00004? የይዞታ ቁጥሩን ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "HLD00003",
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "stop HLD00003"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-028",
+  "site": "portal",
+  "intent": "በመሬት መዝገብ ፍለጋ ውስጥ ወደ ናራይል ሳደር ንዑስ ወረዳ (ናራይል ወረዳ፣ ኩልና ክልል) ሄደው የሰሜን ቻር ሙዛ JL ቁጥር ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "295",
+    "none_of": [
+     "147",
+     "310"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=39&upazila=153",
+   "stop 295"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-029",
+  "site": "portal",
+  "intent": "በመሬት መዝገብ ፍለጋ በኩል በራንግፑር ክልል ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 2052 ያግኙ (ወረዳው፣ ንዑስ ወረዳውና ሙዛው አልተሰጡም) እና በላዩ የተመዘገበውን ባለቤት ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ኮሂኑር አላም"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=7&district=53&upazila=212&mouza=123",
+   "fill 1 khatian_no=2052",
+   "stop ኮሂኑር አላም"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-030",
+  "site": "portal",
+  "intent": "በጄናይዳህ ወረዳ (ኩልና ክልል፤ ንዑስ ወረዳውና ሙዛው አልተሰጡም) ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 8630 ያግኙና ባለቤቱንም ስፋቱንም በዴሲማል ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ጎላም ኻን"
+   },
+   {
+    "type": "answer_match",
+    "answer": "185"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=34&upazila=134&mouza=72",
+   "fill 1 khatian_no=8630",
+   "stop ጎላም ኻን, 185"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-031",
+  "site": "portal",
+  "intent": "በመሬት መዝገብ ፍለጋ በኩል በጃሎካቲ ወረዳ (ባሪሻል ክልል፤ ንዑስ ወረዳውና ሙዛው አልተሰጡም) ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 3232 ያግኙና በላዩ የተመዘገበውን የመሬት ዓይነት ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ጦም ያደረ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=1&district=4&upazila=16&mouza=10",
+   "fill 1 khatian_no=3232",
+   "stop ጦም ያደረ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-032",
+  "site": "portal",
+  "intent": "በይዞታ HLD00003 ላይ ከቅርቡ የበጀት ዓመት በስተቀር እያንዳንዱን ያልተከፈለ የመሬት ልማት ግብር ዕዳ በካርድ (card) ይክፈሉ — በጣም አዲሱ ዕዳ ሳይከፈል መቆየት አለበት። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-033",
+  "site": "portal",
+  "intent": "በጠቅላላ ያልተከፈለ የመሬት ልማት ግብር የትኛው ይዞታ የበለጠ ዕዳ አለበት፡ HLD00004 ወይስ HLD00005? የይዞታ ቁጥሩን ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "HLD00005",
+    "none_of": [
+     "HLD00004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop HLD00005"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-034",
+  "site": "portal",
+  "intent": "የሮል ቁጥር 244479 የ2021 የሁለተኛ ደረጃ (secondary) ፈተና ውጤት ይመልከቱ (ቦርዱ አልተሰጠም — የፍለጋ ገጹ ቦርዶቹን ይዘረዝራል)፤ ከዚያ ለዚያ ውጤት የዳግም ምርመራ ማመልከቻ ያስገቡ፤ በውጤቱ ላይ የሚታየውን የምዝገባ ቁጥር፣ ቦርዱንና ዓመቱን በማስገባት፣ ለትምህርት ሒሳብ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1352566082%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"244479\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"ሒሳብ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"ቴክኒክ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2021\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=ቴክኒክ; year=2021; roll_no=244479",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=244479; registration_no=1352566082; board=ቴክኒክ; year=2021; subjects=ሒሳብ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-035",
+  "site": "portal",
+  "intent": "የሮል ቁጥር 969953 የ2023 የከፍተኛ ሁለተኛ ደረጃ (higher-secondary) ፈተና ውጤት ይመልከቱ (ቦርዱ አልተሰጠም — የፍለጋ ገጹ ቦርዶቹን ይዘረዝራል)፤ ከዚያ ለዚያ ውጤት የዳግም ምርመራ ማመልከቻ ያስገቡ፤ በውጤቱ ላይ የሚታየውን የምዝገባ ቁጥር፣ ቦርዱንና ዓመቱን በማስገባት፣ ለትምህርት እንግሊዝኛ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%1687250440%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"roll_no\": \"969953\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"subjects\": \"እንግሊዝኛ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"board\": \"ቴክኒክ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "exam-rescrutiny",
+     "payload": "%\"year\": \"2023\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=ቴክኒክ; year=2023; roll_no=969953",
+   "goto /services/exam-results/panel/rescrutiny-apply/",
+   "fill 1 roll_no=969953; registration_no=1687250440; board=ቴክኒክ; year=2023; subjects=እንግሊዝኛ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-036",
+  "site": "portal",
+  "intent": "በፖርታሉ የማስታወቂያ ሰሌዳ ላይ ወደ መሬት አገልግሎት ማስታወቂያዎች ያጣሩ። ያ አገልግሎት የትኛውን ምድብ በብዛት ተጠቀመ? ምድቡን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ጥገና"
+   }
+  ],
+  "solution": [
+   "goto /notices/?service=የመሬት አገልግሎቶች",
+   "stop ጥገና"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-037",
+  "site": "portal",
+  "intent": "በTIN 972871718941 ለግምገማ ዓመት 2025-2026 የግል ኢ-ሪተርን ያስገቡ፡ ጠቅላላ ገቢ 640000፣ ተቀናሾች በትክክል የገቢው አንድ ስምንተኛ፣ እና የሚከፈል ግብር በትክክል የ(ገቢ ሲቀነስ ተቀናሾች) 10%። ሁሉንም መጠኖች እንደ ተራ አሃዞች ያስገቡ፣ መግለጫ YES። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"640000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"80000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"56000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=640000; deductions=80000; tax_payable=56000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-038",
+  "site": "portal",
+  "intent": "ማጣቀሻ TR/N/2026/001 ያለው ማስታወቂያ በፖርታሉ የማስታወቂያ ሰሌዳ ላይ ይገኛል (ከመነሻ ገጹ ተያይዟል)። የትኛው አገልግሎት እንዳወጣው ያግኙ፣ የዚያን አገልግሎት የክፍያ ዝርዝር ይክፈቱ፣ እና እዚያ የተዘረዘረውን በጣም ርካሽ የክፍያ መጠን ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "200",
+    "none_of": [
+     "1500",
+     "400",
+     "500",
+     "5000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /notices/",
+   "goto /services/trade-licence/fees/",
+   "stop 200"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-039",
+  "site": "portal",
+  "intent": "ሁለቱንም ያድርጉ፡ በደንበኛ ቁጥር 08000007 ላይ የኤሌክትሪክ ሂሳብ BL0000006 ይክፈሉ፣ እና የቅድመ ክፍያ ቆጣሪ MTR000006ን በ750 ይሙሉ። በካርድ (card) ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge",
+     "ref": "MTR000006",
+     "amount": 750,
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000006; amount=750; method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-040",
+  "site": "portal",
+  "intent": "አዲስ የመራጭ ምዝገባን በሙሉ ቅጹ ያጠናቅቁ (ስምዎ፣ የወላጅነት መረጃ፣ የልደት ቀን፣ ሁለቱም አድራሻዎችና እንደ ማዕከል ሞውልቪባዛር የመታወቂያ ምዝገባ ጽሕፈት ቤት)፣ እንዲሁም በባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት ለ2026-06-25 በ15:00 የፓስፖርት ምዝገባ ቀጠሮ ይያዙ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "nid-voter-registration",
+     "payload": "%\"centre\": \"ሞውልቪባዛር የመታወቂያ ምዝገባ ጽሕፈት ቤት\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-25",
+     "slot_time": "15:00",
+     "office": "ባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/voter-registration/",
+   "fill 1 name=ደልዋር ሀቅ; father_name=ሞኒር ኢስላም; dob=1987-08-28; present_addr=ቤት 16, መንገድ 5, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; perm_addr=መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; centre=ሞውልቪባዛር የመታወቂያ ምዝገባ ጽሕፈት ቤት",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=ባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት; slot_date=2026-06-25; slot_time=15:00"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-041",
+  "site": "portal",
+  "intent": "እነዚህን ሁለቱንም ማመልከቻዎች ያስገቡ፡ ለውጭ አገር ሥራ የፖሊስ ክሊራንስ ምስክር ወረቀት (ስም፣ የወላጅነት መረጃ፣ የልደት ቀንና ሁለቱም አድራሻዎች)፣ እና የሐጅ ቅድመ ምዝገባ (ስም፣ የአባት ስም፣ የፓስፖርት ቁጥር PPA04000017፣ የአሁን አድራሻ፣ ሞባይልዎ፣ እናትዎ እንደ ቅርብ ዘመድ፣ የመንግሥት (government) ፓኬጅ)። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%በውጭ አገር ሥራ%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"name\": \"ደልዋር ሀቅ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "police-clearance",
+     "payload": "%\"father_name\": \"ሞኒር ኢስላም\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"passport_no\": \"PPA04000017\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"name\": \"ደልዋር ሀቅ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"father_name\": \"ሞኒር ኢስላም\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"package\": \"government\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "pilgrimage-pre-registration",
+     "payload": "%\"next_of_kin\": \"ፈርዶውሲ ብሁይያን\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/police-clearance/panel/clearance-apply/",
+   "fill 1 name=ደልዋር ሀቅ; father_name=ሞኒር ኢስላም; dob=1987-08-28; present_addr=ቤት 16, መንገድ 5, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; perm_addr=መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; purpose=በውጭ አገር ሥራ",
+   "goto /services/pilgrimage/panel/pre-registration/",
+   "fill 1 name=ደልዋር ሀቅ; father_name=ሞኒር ኢስላም; passport_no=PPA04000017; address=ቤት 16, መንገድ 5, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; mobile=01853445903; next_of_kin=ፈርዶውሲ ብሁይያን; package=government"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-042",
+  "site": "portal",
+  "intent": "ለመሬት ባለቤትነት ዝውውር ያመልክቱ (ገዢ፡ ራስዎ፣ መታወቂያ 9999708182203፤ ሻጭ ራፊቁል ኢስላም፣ መታወቂያ 9999000000001፤ ካቲያን 4438፣ ቦታ 357፣ ስፋት 25)፣ እንዲሁም በይዞታ HLD00002 ላይ ያልተከፈለውን የመሬት ልማት ግብር በካርድ (card) ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"seller_name\": \"ራፊቁል ኢስላም\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"khatian_no\": \"4438\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"plot_no\": \"357\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "land-mutation",
+     "payload": "%\"area\": \"25\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/mutation-apply/",
+   "fill 1 buyer_name=ደልዋር ሀቅ; buyer_id=9999708182203; seller_name=ራፊቁል ኢስላም; seller_id=9999000000001; khatian_no=4438; plot_no=357; area=25",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-043",
+  "site": "portal",
+  "intent": "በደንበኛ ቁጥር 08000007 ላይ በጣም አዲሱን ያልተከፈለ የኤሌክትሪክ ሂሳብ ብቻ በካርድ (card) ይክፈሉ፤ አሮጌውን ሳይከፈል ይተዉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000006",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-044",
+  "site": "portal",
+  "intent": "የፖርታሉን የማስታወቂያ ሰሌዳ ይክፈቱ (ከመነሻ ገጹ ተያይዟል)። በሁሉም አገልግሎቶች በየካቲት 2026 ስንት ማስታወቂያዎች ወጡ? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "12"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-02",
+   "stop 12"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-045",
+  "site": "portal",
+  "intent": "በፖርታሉ የማስታወቂያ ሰሌዳ መሠረት በ2025 የትኛው አገልግሎት ብዙ ማስታወቂያዎችን አወጣ? የአገልግሎቱን ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የመሬት አገልግሎቶች"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2025",
+   "goto /notices/?period=2025&page=2",
+   "goto /notices/?period=2025&page=3",
+   "stop የመሬት አገልግሎቶች"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-046",
+  "site": "portal",
+  "intent": "በፖርታሉ የማስታወቂያ ሰሌዳ ላይ ያለውን በጣም አሮጌ ማስታወቂያ ትክክለኛ ርዕስ ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የየጡረታ ክፍያ ፈጣን አገልግሎት መታገድ"
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "stop የየጡረታ ክፍያ ፈጣን አገልግሎት መታገድ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-047",
+  "site": "portal",
+  "intent": "በፖርታሉ የማስታወቂያ ሰሌዳ ላይ በ2026 የወጡ ስንት ማስታወቂያዎች 'መዘጋት' ምድብ አላቸው? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "15"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026&category=መዘጋት",
+   "stop 15"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-048",
+  "site": "portal",
+  "intent": "የሮል ቁጥር 496396 የ2023 የከፍተኛ ሁለተኛ ደረጃ (higher-secondary) ፈተና ውጤት ያግኙ — ቦርዱ አልተሰጠም፤ የፍለጋ ገጹ ቦርዶቹን ይዘረዝራል። የተፈታኙን GPA እና ተቋም ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "4.56"
+   },
+   {
+    "type": "answer_match",
+    "answer": "አይዲያል ኮሌጅ"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=higher-secondary; board=ማይመንሲንግ; year=2023; roll_no=496396",
+   "stop 4.56, አይዲያል ኮሌጅ"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-049",
+  "site": "portal",
+  "intent": "የሮል ቁጥር 969525 የ2021 የሁለተኛ ደረጃ (secondary) ፈተና ውጤት ያግኙ — ቦርዱ አልተሰጠም። የተፈታኙን ስምና GPA ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ሻህናዝ ብሁይያን"
+   },
+   {
+    "type": "answer_match",
+    "answer": "4.28"
+   }
+  ],
+  "solution": [
+   "goto /services/exam-results/panel/result-lookup/",
+   "fill 1 exam=secondary; board=ማይመንሲንግ; year=2021; roll_no=969525",
+   "stop ሻህናዝ ብሁይያን, 4.28"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-050",
+  "site": "portal",
+  "intent": "በመሬት መዝገብ ፍለጋ በኩል በሻሪያትፑር ወረዳ (ዳካ ክልል፤ ንዑስ ወረዳውና ሙዛው አልተሰጡም) ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 7191 ያግኙና በላዩ የተመዘገበውን የመሬት ዓይነት ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የፍራፍሬ አትክልት"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=3&district=29&upazila=116&mouza=43",
+   "fill 1 khatian_no=7191",
+   "stop የፍራፍሬ አትክልት"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-051",
+  "site": "portal",
+  "intent": "በሳትኪራ ወረዳ (ኩልና ክልል፤ ንዑስ ወረዳውና ሙዛው አልተሰጡም) ውስጥ የሆነ ቦታ ያለውን የካቲያን ቁጥር 1022 ያግኙና ባለቤቱንም የተመዘገበውን ድርሻም ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ኮሂኑር አላም"
+   },
+   {
+    "type": "answer_match",
+    "answer": "1/3"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/record-search/?division=4&district=40&upazila=157&mouza=95",
+   "fill 1 khatian_no=1022",
+   "stop ኮሂኑር አላም, 1/3"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-052",
+  "site": "portal",
+  "intent": "በፖርታሉ የማስታወቂያ ሰሌዳ ላይ በሰኔ 2026 የወጣው ማስታወቂያ አንድ ብቻ ነው። የማጣቀሻ ቁጥሩንና ያወጣውን አገልግሎት ስም ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "PA/N/2026/006"
+   },
+   {
+    "type": "answer_match",
+    "answer": "የፓስፖርት አገልግሎቶች"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop PA/N/2026/006, የፓስፖርት አገልግሎቶች"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-053",
+  "site": "portal",
+  "intent": "በ2026 በፖርታሉ የማስታወቂያ ሰሌዳ ላይ በጣም ጥቂት ማስታወቂያዎች የወጡት በየትኛው ወር ነው? ወሩን በYYYY-MM ቅርጽ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "2026-06"
+   }
+  ],
+  "solution": [
+   "goto /notices/?period=2026-06",
+   "stop 2026-06"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-054",
+  "site": "portal",
+  "intent": "በደንበኛ ቁጥሮች 08000021፣ 08000035 እና 08000049 ላይ ያለውን ጠቅላላ ያልተከፈለ ኤሌክትሪክ ይመልከቱና በሦስቱም ላይ ያለውን የተጣመረ ጠቅላላ ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "20146",
+     "20,146"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000021",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000035",
+   "goto /services/electricity/panel/due-check/",
+   "fill 1 consumer_no=08000049",
+   "stop 20146"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-055",
+  "site": "portal",
+  "intent": "በይዞታዎች HLD00003፣ HLD00004 እና HLD00005 ላይ ያለውን ሁሉንም ያልተከፈለ የመሬት ልማት ግብር የተጣመረ ጠቅላላ ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "9292",
+     "9,292"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00004",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00005",
+   "stop 9292"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-056",
+  "site": "portal",
+  "intent": "በኤሌክትሪክ ሂሳብ ታሪክዎ ውስጥ በስድስቱም ጊዜያት በጠቅላላ ስንት ዩኒት (kWh) ተጠቅመዋል? ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1652",
+     "1,652"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-history/",
+   "stop 1652"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-057",
+  "site": "portal",
+  "intent": "በፓስፖርት ክፍያ ዝርዝር ላይ በጣም ውዱ ክፍያና በጣም ርካሹ ዜሮ ያልሆነ ክፍያ ልዩነት ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "6325",
+     "6,325"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "stop 6325"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-058",
+  "site": "portal",
+  "intent": "የፓስፖርትና የመንጃ ፈቃድ ክፍያ ዝርዝሮችን አጣምረው ስንት የክፍያ ረድፎች ከ5000 በላይ መጠን አላቸው? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "9"
+   }
+  ],
+  "solution": [
+   "goto /services/passport/fees/",
+   "goto /services/driving-licence/fees/",
+   "stop 9"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-059",
+  "site": "portal",
+  "intent": "በTIN 972871718941 ለግምገማ ዓመት 2025-2026 የግል ኢ-ሪተርን ያስገቡ፡ ጠቅላላ ገቢ 720000፣ ተቀናሾች በትክክል የገቢው አንድ አራተኛ፣ እና የሚከፈል ግብር በትክክል የ(ገቢ ሲቀነስ ተቀናሾች) 15%። ሁሉንም መጠኖች እንደ ተራ አሃዞች ያስገቡ፣ መግለጫ YES። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tin_no\": \"972871718941\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"assessment_year\": \"2025-2026\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"declaration\": \"YES\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"total_income\": \"720000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"deductions\": \"180000\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "individual-return",
+     "payload": "%\"tax_payable\": \"81000\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/ereturn-submit/",
+   "fill 1 assessment_year=2025-2026; tin_no=972871718941; total_income=720000; deductions=180000; tax_payable=81000; declaration=YES"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-060",
+  "site": "portal",
+  "intent": "ቁጥሩ 20000000000373 የሆነውን የልደት ምዝገባ መዝገብ ይመልከቱ። ከዚያ በዚያ መዝገብ እናት ስም በትክክል የተሰየመ አዲስ ልጅ፣ በ2026-03-01 የተወለደ፣ በዚያ መዝገብ በተመዘገበው ቦታ፣ ራስዎ እንደ አባትና እናትዎ እንደ እናት ሆነው የልደት ምዝገባ ማመልከቻ ያስገቡ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"child_name\": \"ፈርዶውሲ ብሁይያን\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"place\": \"መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"dob\": \"2026-03-01\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"father_name\": \"ደልዋር ሀቅ\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "birth-registration",
+     "payload": "%\"mother_name\": \"ፈርዶውሲ ብሁይያን\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/birth-status/",
+   "fill 1 registration_no=20000000000373",
+   "goto /services/civil-registration/panel/birth-apply/",
+   "fill 1 child_name=ፈርዶውሲ ብሁይያን; dob=2026-03-01; place=መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; father_name=ደልዋር ሀቅ; mother_name=ፈርዶውሲ ብሁይያን"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-061",
+  "site": "portal",
+  "intent": "በፖርታሉ የማስታወቂያ ሰሌዳ ላይ ያለውን በጣም አሮጌ ማስታወቂያ ያግኙ፣ የትኛው አገልግሎት እንዳወጣው ያስተውሉ፣ ከዚያ የዚያን አገልግሎት የክፍያ ዝርዝር ከፍተው በጣም ውዱን የክፍያ መጠን ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "50"
+   }
+  ],
+  "solution": [
+   "goto /notices/?page=5",
+   "goto /services/pension/fees/",
+   "stop 50"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-062",
+  "site": "portal",
+  "intent": "ሁለቱንም ያድርጉ፡ በባሪሻል የትራንስፖርት ፈቃድ ጽሕፈት ቤት በመጀመሪያው በሚገኝ ቀን በመጀመሪያው ሰዓት የመንዳት ፈተና ይያዙ፣ እና ለእድሳት ምድብ፣ ሙያዊ ዓይነት ቻላን አዘጋጅተው (በካርድ፣ card) ይክፈሉ። ከዚያ የከፈሉትን የቻላን መጠን ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 7,
+     "slot_date": "2026-06-23",
+     "slot_time": "09:00",
+     "office": "ባሪሻል የትራንስፖርት ፈቃድ ጽሕፈት ቤት"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee",
+     "amount": 1427,
+     "method": "card"
+    }
+   },
+   {
+    "type": "answer_match",
+    "any_of": [
+     "1427",
+     "1,427"
+    ],
+    "none_of": [
+     "1679",
+     "345",
+     "4152",
+     "518",
+     "5652",
+     "875"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/test-booking/",
+   "fill 1 office=ባሪሻል የትራንስፖርት ፈቃድ ጽሕፈት ቤት; slot_date=2026-06-23; slot_time=09:00",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=እድሳት; variant=ሙያዊ; method=card",
+   "stop 1427"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-063",
+  "site": "portal",
+  "intent": "የፓስፖርት ማመልከቻዎች PPA04000034 እና PPA04000068ን ተመልክተው የእያንዳንዱን የደብተር ገጾችና ተቀባይነት ያንብቡ። በፓስፖርት ክፍያ ዝርዝር መሠረት የትኛው ማመልከቻ የመደበኛ (regular) አቅርቦት ክፍያ ከፍ ያለ ነው? የማመልከቻ መለያውን ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "PPA04000068"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000034",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000068",
+   "goto /services/passport/fees/",
+   "stop PPA04000068"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-064",
+  "site": "portal",
+  "intent": "ሦስቱንም ያድርጉ፡ በደንበኛ 08000007 ላይ የኤሌክትሪክ ሂሳብ BL0000005 ይክፈሉ፣ በይዞታ HLD00002 ላይ ያልተከፈለውን የመሬት ልማት ግብር ይክፈሉ፣ እና በባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት ለ2026-06-24 በ11:30 የፓስፖርት ምዝገባ ቀጠሮ ይያዙ። በካርድ (card) ይክፈሉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "bill",
+     "ref": "BL0000005",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00002",
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-24",
+     "slot_time": "11:30",
+     "office": "ባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/bill-payment/?consumer_no=08000007",
+   "fill 1 method=card",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00002",
+   "fill 1 method=card",
+   "goto /services/passport/panel/appointment-booking/",
+   "fill 1 office=ባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት; slot_date=2026-06-24; slot_time=11:30"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-065",
+  "site": "portal",
+  "intent": "በይዞታ HLD00003 ላይ የ2022-2023 የመሬት ልማት ግብር ዕዳ ብቻ (በካርድ፣ card) ይክፈሉ፤ አሮጌውንም አዲሱንም ዕዳ ሳይከፈሉ ይተዉ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1204,
+     "method": "card"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 850
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "tax",
+     "ref": "HLD00003",
+     "amount": 1347
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/land/panel/tax-payment/?holding_no=HLD00003",
+   "fill 2 method=card"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-066",
+  "site": "portal",
+  "intent": "ሦስት እርማቶች ያስገቡ፡ የመታወቂያ መዝገብዎን የአሁን አድራሻ ወደ 'ቤት 9፣ ሌክ መንገድ፣ ሲልሄት' እና የልደት ቀኑን ወደ 1987-08-27 ይቀይሩ፣ እና በተያያዘው የልደት ምዝገባ መዝገብዎ ላይ ያለውን ስም ወደ 'ደልዋር ሆቅ' ይቀይሩ። ለእያንዳንዱ ማንኛውንም የሎከር ሰነድ ያያይዙ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "present_addr",
+     "new_value": "ቤት 9፣ ሌክ መንገድ፣ ሲልሄት",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "citizens",
+     "field_name": "dob",
+     "new_value": "1987-08-27",
+     "document": "%.%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records",
+     "new_value": "ደልዋር ሆቅ",
+     "document": "%.%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/address-correction/",
+   "fill 1 new_value=ቤት 9፣ ሌክ መንገድ፣ ሲልሄት; document=secondary-school-certificate-1.pdf",
+   "goto /services/national-id/panel/dob-correction/",
+   "fill 1 new_value=1987-08-27; document=secondary-school-certificate-1.pdf",
+   "goto /services/civil-registration/panel/birth-correction/",
+   "fill 1 new_value=ደልዋር ሆቅ; document=secondary-school-certificate-1.pdf"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-067",
+  "site": "portal",
+  "intent": "ሁለቱንም የፓስፖርት ጥያቄዎች ያስገቡ፡ አዲስ ማመልከቻ (ስምዎ፣ የልደት ቀንና የአባት ስም፤ ሁለቱም አድራሻዎች፤ 64 ገጽ፣ 10 ዓመት ተቀባይነት፣ ፈጣን (express) አቅርቦት)፣ እና ለፓስፖርት ቁጥር A6053903 በምክንያት 'የተበላሸ ደብተር' የዳግም ማውጣት ማመልከቻ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"pages\": \"64\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"validity\": \"10\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-new",
+     "payload": "%\"delivery\": \"express\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"passport_no\": \"A6053903\"%"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "submissions",
+    "match": {
+     "kind": "passport-reissue",
+     "payload": "%\"reason\": \"የተበላሸ ደብተር\"%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/new-application/",
+   "fill 1 name=ደልዋር ሀቅ; dob=1987-08-28; father_name=ሞኒር ኢስላም",
+   "fill 1 present_addr=ቤት 16, መንገድ 5, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር; perm_addr=መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር",
+   "fill 1 pages=64; validity=10; delivery=express",
+   "goto /services/passport/panel/reissue-application/",
+   "fill 1 passport_no=A6053903; reason=የተበላሸ ደብተር"
+  ],
+  "max_steps": 40
+ },
+ {
+  "id": "portal-068",
+  "site": "portal",
+  "intent": "ቆጣሪ MTR000001ን በ300 በካርድ (card) ይሙሉ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "target_kind": "recharge"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/electricity/panel/prepaid-recharge/",
+   "fill 1 meter_no=MTR000001; amount=300; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-069",
+  "site": "portal",
+  "intent": "የመታወቂያ ቁጥር 9999708182203፣ በ2023-09-16 የተመዘገበውን የክትባት ምስክር ወረቀት አውርደው የምስክር ወረቀቱን ቁጥር ይግለጹ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /services/health/panel/vaccine-certificate/",
+   "fill 1 identity_no=9999708182203; registered_date=2023-09-16",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-070",
+  "site": "portal",
+  "intent": "የማመልከቻ PPA04000017 ፓስፖርት የአቅርቦት ሁኔታ ተመልክተው ይግለጹ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/application-status/",
+   "fill 1 application_id=PPA04000017",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-071",
+  "site": "portal",
+  "intent": "ለምድብ ፈቃድ፣ ዓይነት ሞተር ሳይክል የክፍያ ቻላን አዘጋጅተው ይክፈሉ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "payments",
+    "match": {
+     "service_id": 7,
+     "target_kind": "fee"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/driving-licence/panel/fee-challan/",
+   "fill 1 category=ፈቃድ; variant=ሞተር ሳይክል; method=card",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-072",
+  "site": "portal",
+  "intent": "ከመለያዎ ጋር በተያያዘው የሞት መዝገብ ላይ ስሙን ወደ 'ደልዋር ሀቅ ታላቁ' በመቀየር የስም እርማት ያስገቡ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "record_overrides",
+    "match": {
+     "table_name": "civil_records"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/civil-registration/panel/death-correction/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-073",
+  "site": "portal",
+  "intent": "በባርጉና የፓስፖርትና ኢሚግሬሽን ጽሕፈት ቤት ለ2026-06-23 በ10:30 የፓስፖርት ምዝገባ ቀጠሮ ይያዙ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "appointments",
+    "match": {
+     "service_id": 2,
+     "slot_date": "2026-06-23"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/passport/panel/appointment-booking/",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-074",
+  "site": "portal",
+  "intent": "የግብር ከፋይ መለያ ቁጥር 111111111111ን አረጋግጠው የተመዘገበውን ስም ይግለጹ። በፖርታሉ ላይ ይህ የማይቻል ከሆነ NO_RECORD ብለው ይመልሱ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "NO_RECORD"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/tax/panel/tin-verify/",
+   "fill 1 tin_no=111111111111",
+   "stop NO_RECORD"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "portal-075",
+  "site": "portal",
+  "intent": "የመታወቂያ ካርድዎን ሊታተም የሚችል ቅጂ ከፍተው የሚታየውን የእናት ስምና ቋሚ አድራሻ ሁለቱንም ይግለጹ። ካስፈለገ እንደ ዜጋ 9999708182203 (የይለፍ ቃል፡ citizen1234) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ፈርዶውሲ ብሁይያን"
+   },
+   {
+    "type": "answer_match",
+    "answer": "መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 citizen_id=9999708182203; password=citizen1234",
+   "goto /services/national-id/panel/id-card-copy/",
+   "stop ፈርዶውሲ ብሁይያን, መንደር ኡታርፓራ, ሞውልቪባዛር ጋንጅ, ሞውልቪባዛር"
+  ],
+  "max_steps": 30
+ }
+]

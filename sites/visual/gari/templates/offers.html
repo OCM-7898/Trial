@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ S.my_offers }}{% endblock %}
+{% block content %}
+<h1>{{ S.my_offers }}</h1>
+{% for o in offers %}
+<div class="panel">
+  <strong>{{ S.offer_on }} <a href="/car/{{ o.listing_id }}">{{ o.year | v2_num }} {{ o.brand }} {{ o.model }}</a> ({{ S.listing_ref.format(id=(o.listing_id | v2_num)) }})</strong>
+  <div class="muted">{{ o.amount | money }} ({{ S.spec_price }}: {{ o.asking | money }}) ·
+    {{ S.offer_status_pending if o.status == 'pending' else o.status }} · {{ o.made_on }}</div>
+  {% if o.message %}<div class="muted">“{{ o.message }}”</div>{% endif %}
+  <form method="post" action="/offers/{{ o.id }}/withdraw">
+    <button type="submit" class="line">{{ S.withdraw }}</button>
+  </form>
+</div>
+{% else %}<p>{{ S.offers_empty }}</p>{% endfor %}
+{% endblock %}

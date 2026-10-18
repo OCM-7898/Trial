@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if khatians %}
+  <p class="lede">{{ S.certified_intro }}</p>
+  {% for k in khatians %}
+  <div class="certificate">
+    <div class="cert-head">
+      <div class="seal"></div>
+      <p class="cert-issuer">{{ S.govt }}</p>
+      <p class="cert-title">{{ title }}</p>
+    </div>
+    <dl class="record">
+      <dt>{{ S.f_khatian_no }}</dt><dd>{{ k.khatian_no }} ({{ k.khatian_type }})</dd>
+      <dt>{{ S.r_owner }}</dt><dd>{{ k.owner_name }}</dd>
+      <dt>{{ S.r_father }}</dt><dd>{{ k.father_name }}</dd>
+      <dt>{{ S.f_plot_no }}</dt><dd>{{ k.plot_no }}</dd>
+      <dt>{{ S.r_land_type }}</dt><dd>{{ k.land_type }}</dd>
+      <dt>{{ S.f_area }}</dt><dd>{{ k.area_decimal }}</dd>
+      <dt>{{ S.r_share }}</dt><dd>{{ k.share }}</dd>
+    </dl>
+    <p class="cert-mark">{{ S.cert_mark }}</p>
+  </div>
+  {% endfor %}
+  {% else %}<p class="empty">{{ S.no_khatian }}</p>{% endif %}
+</div>
+{% endblock %}

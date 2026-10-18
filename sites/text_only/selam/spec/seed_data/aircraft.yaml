@@ -1,0 +1,79 @@
+# Aircraft types and their cabin geometry (CLAUDE.md 12: 6 types).
+# Layout strings use "-" for an aisle and one letter per seat, so seat
+# characteristics are derived rather than hand-listed: the letters either side
+# of a dash are aisle seats, the first and last letters are windows. seed.py
+# expands these into the seat_maps table.
+# Type codes stay Latin in both builds (CLAUDE.md 11.1).
+aircraft:
+- id: 1
+  code: Q40
+  name_en: Dash 8-400
+  name_am: ዳሽ 8-400
+  rows_business: 0
+  rows_economy: 19
+  business_layout: ''
+  economy_layout: AB-CD
+  has_wifi: false
+  name_bn: ড্যাশ 8-400
+  name_hi: डैश 8-400
+  name_ur: ڈیش 8-400
+- id: 2
+  code: E75
+  name_en: Embraer 175
+  name_am: ኤምብራየር 175
+  rows_business: 2
+  rows_economy: 18
+  business_layout: AB-CD
+  economy_layout: AB-CD
+  has_wifi: false
+  name_bn: এমব্রায়ার 175
+  name_hi: एम्ब्रायर 175
+  name_ur: ایمبریئر 175
+- id: 3
+  code: 73H
+  name_en: Boeing 737-800
+  name_am: ቦይንግ 737-800
+  rows_business: 4
+  rows_economy: 27
+  business_layout: AB-CD
+  economy_layout: ABC-DEF
+  has_wifi: true
+  name_bn: বোয়িং 737-800
+  name_hi: बोइंग 737-800
+  name_ur: بوئنگ 737-800
+- id: 4
+  code: 32N
+  name_en: Airbus A320neo
+  name_am: ኤርባስ A320neo
+  rows_business: 3
+  rows_economy: 26
+  business_layout: AB-CD
+  economy_layout: ABC-DEF
+  has_wifi: true
+  name_bn: এয়ারবাস A320neo
+  name_hi: एयरबस A320neo
+  name_ur: ایئربس A320neo
+- id: 5
+  code: '788'
+  name_en: Boeing 787-8
+  name_am: ቦይንግ 787-8
+  rows_business: 6
+  rows_economy: 30
+  business_layout: AB-CD-EF
+  economy_layout: ABC-DEF-GHJ
+  has_wifi: true
+  name_bn: বোয়িং 787-8
+  name_hi: बोइंग 787-8
+  name_ur: بوئنگ 787-8
+- id: 6
+  code: '359'
+  name_en: Airbus A350-900
+  name_am: ኤርባስ A350-900
+  rows_business: 8
+  rows_economy: 36
+  business_layout: A-BC-D
+  economy_layout: ABC-DEF-GHJ
+  has_wifi: true
+  name_bn: এয়ারবাস A350-900
+  name_hi: एयरबस A350-900
+  name_ur: ایئربس A350-900

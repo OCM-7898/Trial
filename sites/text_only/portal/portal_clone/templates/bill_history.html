@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  <table class="register">
+    <thead><tr><th>{{ S.r_bill }}</th><th>{{ S.period_col }}</th><th>{{ S.units_col }}</th><th>{{ S.amount_col }}</th><th>{{ S.status_col }}</th></tr></thead>
+    <tbody>
+    {% for b in bills %}
+    <tr><td>{{ b.bill_no }}</td><td>{{ b.period }}</td><td>{{ b.units_kwh|v2_num }}</td><td>{{ b.amount|v2_num }}</td><td>{% if b.is_paid %}{{ S.paid }}{% else %}{{ S.unpaid }}{% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

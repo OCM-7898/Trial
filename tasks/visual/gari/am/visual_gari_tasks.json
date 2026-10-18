@@ -1,0 +1,2205 @@
+[
+ {
+  "id": "visualgari-001",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለእርስዎ Honda Vezel ሃይብሪድ ማስታወቂያ ይለጥፉ፡ ዓመት 2020፣ 45000 ኪሜ፣ ዋጋ ብር 4,134,000፣ በካራቺ፣ ሰማያዊ፣ አውቶማቲክ፣ ሃይብሪድ ነዳጅ፣ 1500 ሲሲ፣ ስልክ 0321-7788990፣ መግለጫ 'አዲስ ከውጭ የገባ፣ የጨረታ ደረጃ 4.5።'። ያትሙት። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Honda",
+     "model": "Vezel",
+     "year": 2020,
+     "mileage_km": 45000,
+     "price": 4134000,
+     "city": "ካራቺ",
+     "color": "ሰማያዊ",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ሃይብሪድ",
+     "engine_cc": 1500,
+     "phone": "0321-7788990",
+     "description": "አዲስ ከውጭ የገባ፣ የጨረታ ደረጃ 4.5።",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Honda; model=Vezel; year=2020; mileage_km=45000; price=4134000; city=ካራቺ; color=ሰማያዊ; transmission=አውቶማቲክ; fuel=ሃይብሪድ; engine_cc=1500; phone=0321-7788990; description=አዲስ ከውጭ የገባ፣ የጨረታ ደረጃ 4.5።",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-002",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለአንድ Suzuki Alto VXL ማስታወቂያ ይለጥፉ፡ ዓመት 2022፣ 18000 ኪሜ፣ ዋጋ ብር 1,001,000፣ ኢስላማባድ፣ ብር፣ አውቶማቲክ፣ ቤንዚን፣ 660 ሲሲ፣ ስልክ 0333-4455667፣ መግለጫ 'እንደ አዲስ።'። ያትሙት፣ ከዚያ የማስታወቂያውን ዋጋ ወደ ብር 929,500 ዝቅ ያድርጉ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Suzuki",
+     "model": "Alto VXL",
+     "year": 2022,
+     "mileage_km": 18000,
+     "price": 929500,
+     "city": "ኢስላማባድ",
+     "color": "ብር",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ቤንዚን",
+     "engine_cc": 660,
+     "phone": "0333-4455667",
+     "description": "እንደ አዲስ።",
+     "status": "active"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "model": "Alto VXL",
+     "price": 1001000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Suzuki; model=Alto VXL; year=2022; mileage_km=18000; price=1001000; city=ኢስላማባድ; color=ብር; transmission=አውቶማቲክ; fuel=ቤንዚን; engine_cc=660; phone=0333-4455667; description=እንደ አዲስ።",
+   "fill 0",
+   "fill 0 price=929500"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-003",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለአንድ Kia Picanto ማስታወቂያ መለጠፍ ይጀምሩ፡ ዓመት 2021፣ 30000 ኪሜ፣ ዋጋ ብር 1,352,000፣ ሙልታን፣ ቀይ፣ ማንዋል፣ ቤንዚን፣ 1000 ሲሲ፣ ስልክ 0345-1112233፣ መግለጫ 'የመጀመሪያ ባለቤት።'። ቅጹን ሞልተው ወደ ግምገማው ገጽ ይሂዱ፣ ግን ማስታወቂያውን አያትሙ — በግምገማው ገጽ ላይ ይቆዩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "final_url",
+    "path": "/sell/review"
+   },
+   {
+    "type": "final_page_contains",
+    "strings": [
+     "Kia",
+     "Picanto",
+     "2021",
+     "30000",
+     "ሙልታን",
+     "ቀይ",
+     "ማንዋል",
+     "ቤንዚን",
+     "1000",
+     "0345-1112233",
+     "የመጀመሪያ ባለቤት።",
+     "1,352,000"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "model": "Picanto"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Kia; model=Picanto; year=2021; mileage_km=30000; price=1352000; city=ሙልታን; color=ቀይ; transmission=ማንዋል; fuel=ቤንዚን; engine_cc=1000; phone=0345-1112233; description=የመጀመሪያ ባለቤት።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-004",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለአንድ BMW X5 xDrive40i ማስታወቂያ ይለጥፉ፡ ዓመት 2019፣ 60000 ኪሜ፣ ዋጋ ብር 9,984,000፣ ላሆር፣ ጥቁር፣ አውቶማቲክ፣ ቤንዚን፣ 3000 ሲሲ፣ ስልክ 0300-1231234፣ መግለጫ 'ሙሉ የተሟላ፣ M ስፖርት ጥቅል።'። ማስታወቂያውን ያትሙ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "BMW",
+     "model": "X5 xDrive40i",
+     "year": 2019,
+     "mileage_km": 60000,
+     "price": 9984000,
+     "city": "ላሆር",
+     "color": "ጥቁር",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ቤንዚን",
+     "engine_cc": 3000,
+     "phone": "0300-1231234",
+     "description": "ሙሉ የተሟላ፣ M ስፖርት ጥቅል።",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=BMW; model=X5 xDrive40i; year=2019; mileage_km=60000; price=9984000; city=ላሆር; color=ጥቁር; transmission=አውቶማቲክ; fuel=ቤንዚን; engine_cc=3000; phone=0300-1231234; description=ሙሉ የተሟላ፣ M ስፖርት ጥቅል።",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-005",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ሁለት የተለያዩ ማስታወቂያዎችን ይለጥፉ፡ (1) Hyundai Tucson AWD፣ ዓመት 2022፣ 22000 ኪሜ፣ ብር 4,550,000፣ ካራቺ፣ ግራጫ፣ አውቶማቲክ፣ ቤንዚን፣ 2000 ሲሲ፣ ስልክ 0311-5556677፣ መግለጫ 'በዋስትና ውስጥ።'፤ (2) Kia Sportage Alpha፣ ዓመት 2021፣ 41000 ኪሜ፣ ብር 3,952,000፣ ካራቺ፣ ነጭ፣ አውቶማቲክ፣ ቤንዚን፣ 2000 ሲሲ፣ ተመሳሳይ ስልክ፣ መግለጫ 'አሎይ ሪም፣ ክሩዝ ኮንትሮል።'። ሁለቱንም ያትሙ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Hyundai",
+     "model": "Tucson AWD",
+     "year": 2022,
+     "mileage_km": 22000,
+     "price": 4550000,
+     "city": "ካራቺ",
+     "color": "ግራጫ",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ቤንዚን",
+     "engine_cc": 2000,
+     "phone": "0311-5556677",
+     "description": "በዋስትና ውስጥ።",
+     "status": "active"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Kia",
+     "model": "Sportage Alpha",
+     "year": 2021,
+     "mileage_km": 41000,
+     "price": 3952000,
+     "city": "ካራቺ",
+     "color": "ነጭ",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ቤንዚን",
+     "engine_cc": 2000,
+     "phone": "0311-5556677",
+     "description": "አሎይ ሪም፣ ክሩዝ ኮንትሮል።",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Hyundai; model=Tucson AWD; year=2022; mileage_km=22000; price=4550000; city=ካራቺ; color=ግራጫ; transmission=አውቶማቲክ; fuel=ቤንዚን; engine_cc=2000; phone=0311-5556677; description=በዋስትና ውስጥ።",
+   "fill 0",
+   "goto /sell",
+   "fill 0 brand=Kia; model=Sportage Alpha; year=2021; mileage_km=41000; price=3952000; city=ካራቺ; color=ነጭ; transmission=አውቶማቲክ; fuel=ቤንዚን; engine_cc=2000; phone=0311-5556677; description=አሎይ ሪም፣ ክሩዝ ኮንትሮል።",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-006",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 210 ን ከፍተው ለዚያው መኪና የራስዎን አዲስ ማስታወቂያ ይለጥፉ፡ ብራንዱን፣ ሞዴሉን፣ የሞዴል ዓመቱን፣ ማይሌጁን፣ ቀለሙን፣ ትራንስሚሽኑን፣ ነዳጁን እና የሞተር መጠኑን ከማስታወቂያው ገጽ ይቅዱ፣ ከተማውን ላሆር ያድርጉ፣ ስልክ 0307-4041122፣ መግለጫ 'የተዘረዘረ መኪና ትክክለኛ መንትያ።'፣ ዋጋውንም በትክክል የዚያ ማስታወቂያ የተጠየቀ ዋጋ 95% ያድርጉ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። ማስታወቂያውን ያትሙ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Hyundai",
+     "model": "Sonata",
+     "year": 2022,
+     "mileage_km": 64000,
+     "color": "ጥቁር",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ቤንዚን",
+     "engine_cc": 1500,
+     "price": 1605500,
+     "city": "ላሆር",
+     "phone": "0307-4041122",
+     "description": "የተዘረዘረ መኪና ትክክለኛ መንትያ።",
+     "status": "active"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/210",
+   "goto /sell",
+   "fill 0 brand=Hyundai; model=Sonata; year=2022; mileage_km=64000; price=1605500; city=ላሆር; color=ጥቁር; transmission=አውቶማቲክ; fuel=ቤንዚን; engine_cc=1500; phone=0307-4041122; description=የተዘረዘረ መኪና ትክክለኛ መንትያ።",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-007",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለሽያጭ ከቀረቡ ሁሉም BMW መኪኖች መካከል በባህሪያት ዝርዝሩ ሰንሩፍ ያለውን በጣም ርካሹን ፈልገው ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። ባህሪያት በእያንዳንዱ መኪና ገጽ ላይ ተዘርዝረዋል። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 50
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/50",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-008",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በላሆር ለሽያጭ ከቀረቡት በባህሪያቱ የቆዳ ወንበር ያለውን በጣም ርካሹን Toyota ፈልገው በትክክል የተጠየቀው ዋጋ 90% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 399,
+     "amount": 1567800
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/399",
+   "fill 1 amount=1567800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-009",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በካራቺ ለሽያጭ ከቀረቡት ናቪጌሽን ያለው ግን ሰንሩፍ የሌለውን በጣም ርካሹን ኤስዩቪ ፈልገው ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 119
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/119",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-010",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በባህሪያት ዝርዝሩ ሰንሩፍ ያለውን ለሽያጭ የቀረበ በጣም ርካሽ Volkswagen ፈልገው ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 477
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/477",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-011",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በካራቺ ለሽያጭ ከቀረቡት የኋላ ካሜራ ያለውን በጣም ርካሹን Nissan ፈልገው በትክክል የተጠየቀው ዋጋ 90% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 315,
+     "amount": 549900
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/315",
+   "fill 1 amount=549900"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-012",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በባህሪያት ዝርዝሩ ክሩዝ ኮንትሮል እና ሰንሩፍ ሁለቱንም ያለውን ለሽያጭ የቀረበ በጣም ርካሽ Nissan ፈልገው ዋጋውን ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "754,000",
+     "754000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/328",
+   "stop ብር 754,000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-013",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለሽያጭ ከቀረቡት ሁሉም የ Tesla ማስታወቂያዎች ስንቱ በነጋዴ ይሸጣል (በግለሰብ ሳይሆን)? የሻጭ ዝርዝሮች በእያንዳንዱ መኪና ገጽ ላይ አሉ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "5"
+   }
+  ],
+  "solution": [
+   "goto /car/390",
+   "goto /car/391",
+   "goto /car/392",
+   "goto /car/393",
+   "goto /car/394",
+   "goto /car/395",
+   "goto /car/396",
+   "goto /car/397",
+   "stop 5"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "visualgari-014",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በነጋዴ ለሽያጭ የቀረበ በጣም ርካሹን Porsche ፈልገው ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 366
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/366",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-015",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በካራቺ በነጋዴ ለሽያጭ የቀረበ በጣም ርካሹን ኤስዩቪ ፈልገው በትክክል የተጠየቀው ዋጋ 85% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 350,
+     "amount": 1016600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/350",
+   "fill 1 amount=1016600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-016",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በካራቺ ለሽያጭ የቀረቡትን Toyota ኤስዩቪዎች በዋጋ ከዝቅተኛ ወደ ከፍተኛ ደርድረው ሁለተኛውን ርካሽ ይውሰዱ። በእሱ ላይ በትክክል የተጠየቀው ዋጋ 90% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 418,
+     "amount": 1626300
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/418",
+   "fill 1 amount=1626300"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-017",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 40 ን ይክፈቱ፣ የ'ከዚህ ብራንድ ተጨማሪ' ጥቆማዎቹን ይመልከቱ፣ ከተጠቆሙት መኪኖች በጣም ርካሹን ከፍተው ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 3
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/40",
+   "goto /car/3",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-018",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በላሆር ለሽያጭ የቀረበውን በጣም ርካሽ ኤስዩቪ በካራቺ ለሽያጭ ከቀረበው በጣም ርካሽ ኤስዩቪ ጋር ያወዳድሩ። ከሁለቱ ርካሹ በሆነው ላይ በትክክል የተጠየቀው ዋጋ 85% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 315,
+     "amount": 519300
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/315",
+   "fill 1 amount=519300"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-019",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያዎቹን በኢስላማባድ ያጣሩ፣ በ'አዲሱ መጀመሪያ' ደርድሩ፣ እና የሚታየውን ሦስተኛ ማስታወቂያ ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 463
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/463",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-020",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 55 እና 88 ን ወደ የተቀመጡ መኪኖችዎ ያስቀምጡ፣ እና ማስታወቂያ 25 ን (አስቀድሞ በተቀመጡ ዝርዝርዎ ውስጥ ያለውን) ያስወግዱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 55
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 88
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 25
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/55",
+   "fill 0",
+   "goto /car/88",
+   "fill 0",
+   "goto /saved",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-021",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "መዝገቦቹ እንዲህ እንዲጠናቀቁ በሁለት ማስታወቂያዎች ላይ ቅናሽ ያቅርቡ፡ ማስታወቂያ 16 ከእርስዎ በትክክል አንድ የቆመ ቅናሽ ብር 3,755,400 (ብር 3,469,700 በመዝገብ ላይ መሆን የለበትም)፣ እና ማስታወቂያ 17 በትክክል አንድ የቆመ ቅናሽ ብር 1,447,500። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 16,
+     "amount": 3755400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 16,
+     "amount": 3469700
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 17,
+     "amount": 1447500
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/16",
+   "fill 1 amount=3469700",
+   "goto /car/17",
+   "fill 1 amount=1447500",
+   "goto /car/16",
+   "fill 1 amount=3755400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-022",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለአንድ Volkswagen Golf GTI ማስታወቂያ ይለጥፉ፡ ዓመት 2018፣ 88000 ኪሜ፣ ዋጋ ብር 1,950,000፣ ላሆር፣ ግራጫ፣ አውቶማቲክ፣ ቤንዚን፣ 2000 ሲሲ፣ ስልክ 0308-6667788፣ መግለጫ 'ደረጃ 1 የተስተካከለ፣ ሁሉም ኦሪጅናል ክፍሎች አሉ።'። በግምገማው ገጽ ላይ ዋጋው በእውነት ብር 1,885,000 መሆን እንዳለበት ያስተውሉ — ተመልሰው ዋጋውን ብቻ ወደ ብር 1,885,000 ያስተካክሉ፣ ከዚያ ያትሙ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "brand": "Volkswagen",
+     "model": "Golf GTI",
+     "year": 2018,
+     "mileage_km": 88000,
+     "price": 1885000,
+     "city": "ላሆር",
+     "color": "ግራጫ",
+     "transmission": "አውቶማቲክ",
+     "fuel": "ቤንዚን",
+     "engine_cc": 2000,
+     "phone": "0308-6667788",
+     "description": "ደረጃ 1 የተስተካከለ፣ ሁሉም ኦሪጅናል ክፍሎች አሉ።",
+     "status": "active"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "model": "Golf GTI",
+     "price": 1950000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /sell",
+   "fill 0 brand=Volkswagen; model=Golf GTI; year=2018; mileage_km=88000; price=1950000; city=ላሆር; color=ግራጫ; transmission=አውቶማቲክ; fuel=ቤንዚን; engine_cc=2000; phone=0308-6667788; description=ደረጃ 1 የተስተካከለ፣ ሁሉም ኦሪጅናል ክፍሎች አሉ።",
+   "goto /sell",
+   "fill 0 price=1885000",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-023",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 30 (2019 Audi A6) ላይ ብር 2,207,900 እና በማስታወቂያ 31 (2020 Audi A7) ላይ ብር 2,837,100 ቅናሽ ያቅርቡ፣ ከዚያ የማስታወቂያ 30 ቅናሽን ብቻ ያንሱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 30
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 31,
+     "amount": 2837100
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/30",
+   "fill 1 amount=2207900",
+   "goto /car/31",
+   "fill 1 amount=2837100",
+   "goto /offers",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-024",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ሦስት ቅናሾችን ያቅርቡ፡ በማስታወቂያ 44 ላይ ብር 1,925,500፣ በማስታወቂያ 71 ላይ ብር 1,643,400፣ እና በማስታወቂያ 83 ላይ ብር 1,872,000 — ከዚያ የማስታወቂያ 71 ቅናሽን ብቻ ያንሱ፣ ሌሎቹን ሁለት እንዳሉ ይተዉ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 44,
+     "amount": 1925500
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 71
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 83,
+     "amount": 1872000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/44",
+   "fill 1 amount=1925500",
+   "goto /car/71",
+   "fill 1 amount=1643400",
+   "goto /car/83",
+   "fill 1 amount=1872000",
+   "goto /offers",
+   "fill 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-025",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ሦስቱንም ያድርጉ፡ (1) በማስታወቂያ 302 (2019 Mercedes-Benz GLK) ላይ ብር 3,662,100 ቅናሽ ያቅርቡ፤ (2) ማስታወቂያ 305 ን ወደ የተቀመጡ መኪኖችዎ ይጨምሩ፤ (3) ርዕሰ ጉዳይ 'የፎቶ አለመጣጣም' እና መልእክት 'የማስታወቂያ 302 ፎቶዎች የተለየ የውስጥ ማስጌጫ ያሳያሉ' ያለው የድጋፍ መልእክት ይላኩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 302,
+     "amount": 3662100
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 305
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "የፎቶ አለመጣጣም",
+     "body": "%የተለየ የውስጥ ማስጌጫ%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/302",
+   "fill 1 amount=3662100",
+   "goto /car/305",
+   "fill 0",
+   "goto /contact",
+   "fill 0 subject=የፎቶ አለመጣጣም; message=የማስታወቂያ 302 ፎቶዎች የተለየ የውስጥ ማስጌጫ ያሳያሉ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-026",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የተቀመጡ መኪኖችዎን ዝርዝር ያጽዱ፡ አሁንም ለሽያጭ የቀረቡትን ሁሉንም መኪኖች ያስወግዱ፣ እና አስቀድሞ የተሸጠውን ብቻ ያቆዩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 25
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 210
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 330
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /saved",
+   "fill 0",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-027",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 210 ን (2022 Hyundai Sonata) ከፍተው ሦስት ነገሮችን ይግለጹ፡ ማይሌጁን በኪሎሜትር፣ የቀድሞ ባለቤቶቹን ብዛት፣ እና የአገር ውስጥ ስብሰባ ወይስ ከውጭ የገባ መሆኑን።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "64,000",
+     "64000"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "2"
+   },
+   {
+    "type": "answer_match",
+    "answer": "የአገር ውስጥ ስብሰባ",
+    "none_of": [
+     "ከውጭ የገባ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/210",
+   "stop 64,000 km, 2 owner(s), የአገር ውስጥ ስብሰባ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-028",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 297 በነጋዴ ይሸጣል። በገበያ ቦታው ደንቦች መሠረት በዚያ ማስታወቂያ የተጠየቀ ዋጋ ሽያጩ ቢጠናቀቅ ነጋዴው ምን ያህል ኮሚሽን (በብር) ይከፍላል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "78,000",
+     "78000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "goto /car/297",
+   "stop ብር 78,000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-029",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የማወዳደሪያ መሣሪያውን ተጠቅመው ማስታወቂያ 200 እና 201 ን ያወዳድሩ። የሁለቱን የተጠየቁ ዋጋዎች ጠቅላላ ድምር በብር እና ዝቅተኛ ማይሌጅ ያለውን የማስታወቂያ መታወቂያ ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2,951,000",
+     "2951000"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "200",
+    "none_of": [
+     "201"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /compare",
+   "fill 0 a=200; b=201",
+   "stop combined ብር 2,951,000, lower mileage: 200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-030",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በካራቺ ለሽያጭ የቀረበውን ጥቁር 2024 Citroen C5 Aircross ይፈልጉ (በዚህ ጊዜ የማስታወቂያ ቁጥር የለም — የፍለጋ ማጣሪያዎችን ይጠቀሙ) እና የተጠየቀ ዋጋውን እና የትራንስሚሽን ዓይነቱን ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "2,483,000",
+     "2483000"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "አውቶማቲክ",
+    "none_of": [
+     "ማንዋል"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/129",
+   "stop ብር 2,483,000, አውቶማቲክ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-031",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለ ብር 3,120,000 የመኪና ዋጋ በ20% ቅድመ ክፍያ የድረ-ገጹን የፋይናንስ ማስያ ይጠቀሙ፡ የ5 ዓመት የክፍያ ጊዜ ወርሃዊ ክፍያ ከ3 ዓመት በምን ያህል ያንሳል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "27,734",
+     "27734"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=3120000; down_pct=20; years=3",
+   "fill 0 price=3120000; down_pct=20; years=5",
+   "stop ብር 27,734"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-032",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለ ብር 2,600,000 መኪና በ25% ቅድመ ክፍያ የፋይናንስ ማስያውን ይጠቀሙ፡ ወርሃዊ ክፍያው ቢበዛ ብር 58,500 የሚሆንበት አጭሩ ሙሉ-ዓመት የክፍያ ጊዜ ስንት ነው? በዓመታት ብዛት ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "5",
+     "5 years"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=2600000; down_pct=25; years=4",
+   "fill 0 price=2600000; down_pct=25; years=5",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-033",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ከተቀመጡ ዝርዝርዎ ሁለት መኪኖች፡ ማስታወቂያ 210 (2022 Hyundai Sonata) እና ማስታወቂያ 25 (2017 Audi A6)። በእያንዳንዱ የተጠየቀ ዋጋ ላይ በ25% ቅድመ ክፍያ ለ4 ዓመት የፋይናንስ ማስያውን ሲጠቀሙ የትኛው ማስታወቂያ ዝቅተኛ ወርሃዊ ክፍያ አለው? በማስታወቂያ መታወቂያው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "210",
+    "none_of": [
+     "25"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/210",
+   "goto /car/25",
+   "goto /finance",
+   "fill 0 price=1690000; down_pct=25; years=4",
+   "fill 0 price=2171000; down_pct=25; years=4",
+   "stop 210"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-034",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የማስታወቂያ 16 እና 17 የተጠየቁ ዋጋዎችን ይመልከቱ፣ ከዚያ በእያንዳንዱ ላይ የፋይናንስ ማስያውን (20% ቅድመ ክፍያ፣ 4 ዓመት) ይጠቀሙ። የወርሃዊ ክፍያዎቻቸው ልዩነት በብር ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "65,026",
+     "65026"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/16",
+   "goto /car/17",
+   "goto /finance",
+   "fill 0 price=4082000; down_pct=20; years=4",
+   "fill 0 price=1703000; down_pct=20; years=4",
+   "stop ብር 65,026"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-035",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለ ብር 2,340,000 መኪና ለ4 ዓመት የፋይናንስ ማስያውን ይጠቀሙ፡ በ10% ደረጃዎች (0%፣ 10%፣ 20%፣ ...) ወርሃዊ ክፍያው ቢበዛ ብር 52,000 የሚሆንበት ዝቅተኛው የቅድመ ክፍያ መቶኛ ስንት ነው? በመቶኛው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40%"
+    ],
+    "none_of": [
+     "30%",
+     "50%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=2340000; down_pct=30; years=4",
+   "fill 0 price=2340000; down_pct=40; years=4",
+   "stop 40%"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-036",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የማስታወቂያ 55 የተጠየቀ ዋጋን ይመልከቱ፣ ከዚያ በዚያ ዋጋ ላይ ለ4 ዓመት የፋይናንስ ማስያውን ይጠቀሙ፡ በ10% ደረጃዎች (0%፣ 10%፣ 20%፣ ...) ወርሃዊ ክፍያው ቢበዛ ብር 104,740 የሚሆንበት ዝቅተኛው የቅድመ ክፍያ መቶኛ ስንት ነው? በመቶኛው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "40",
+     "40%"
+    ],
+    "none_of": [
+     "30%",
+     "50%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/55",
+   "goto /finance",
+   "fill 0 price=5109000; down_pct=30; years=4",
+   "fill 0 price=5109000; down_pct=40; years=4",
+   "stop 40%"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-037",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የተቀመጡ መኪኖችዎ ዝርዝር አሁንም ለሽያጭ የቀረቡ ሁለት መኪኖችን ይዟል። ከሁለቱ ርካሹ ላይ በትክክል የተጠየቀው ዋጋ 90% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ፣ 'በጥሬ ገንዘብ ገዥ፣ በዚህ ሳምንት ዝግጁ' በሚል መልእክት። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 210,
+     "amount": 1521000,
+     "message": "በጥሬ ገንዘብ ገዥ፣ በዚህ ሳምንት ዝግጁ"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/210",
+   "fill 1 amount=1521000; message=በጥሬ ገንዘብ ገዥ፣ በዚህ ሳምንት ዝግጁ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-038",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 62 (የተጠየቀ ብር 4,342,000) ላይ ከዚህ ወለል በትክክል ብር 19,500 የበለጠ ቅናሽ ያቅርቡ፡ የተጠየቀው ዋጋ 80%፣ ወደ ቅርቡ መቶ ብር ወደ ላይ የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 62,
+     "amount": 3493100
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/62",
+   "fill 1 amount=3493100"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-039",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 75 (2021 BMW X4) ላይ ብር 4,200,300 ቅናሽ ያቅርቡ፣ ከዚያ ያንን ቅናሽ ከየእኔ ቅናሾች ገጽዎ ያንሱ። በየእኔ ቅናሾች ገጽ ላይ ይጨርሱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 75
+    }
+   },
+   {
+    "type": "final_url",
+    "path": "/offers"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/75",
+   "fill 1 amount=4200300",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-040",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 90 (2018 Buick LaCrosse፣ የተጠየቀ ብር 1,027,000) ላይ ብር 616,200 ቅናሽ ለማቅረብ ይሞክሩ። ድረ-ገጹ ቅናሹን ውድቅ ካደረገ፣ በሚሰጠው ምክንያት ይመልሱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "below 80%",
+     "80%"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 90
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/90",
+   "fill 1 amount=616200",
+   "stop Offer rejected: offers below 80% of the asking price are not accepted."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-041",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የገበያ ቦታው ደንቦች ዝቅተኛ ተቀባይነት ያለው ቅናሽ ያስቀምጣሉ። በማስታወቂያ 55 (2024 BMW 3 Series፣ የተጠየቀ ብር 5,109,000) ላይ ከዚህ ወለል ጋር እኩል ቅናሽ ያቅርቡ፡ የተጠየቀው ዋጋ 80%፣ ወደ ቅርቡ መቶ ብር ወደ ላይ የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 55,
+     "amount": 4087200
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /rules",
+   "goto /car/55",
+   "fill 1 amount=4087200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-042",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 20 (2020 Audi A6) ላይ ከእርስዎ በትክክል አንድ ብር 3,001,000 ቅናሽ በመዝገብ እንዲቆም ይደራደሩ። በመንገዱ ላይ እንደ ብር 2,685,100 ወይም ብር 2,843,100 ያሉ ዝቅተኛ መጠኖችን ቢሞክሩ፣ በመጨረሻ የሚቀሩት እነሱ መሆን የለባቸውም። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 20,
+     "amount": 3001000
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 20,
+     "amount": 2685100
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 20,
+     "amount": 2843100
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/20",
+   "fill 1 amount=2685100",
+   "goto /car/20",
+   "fill 1 amount=2843100",
+   "goto /car/20",
+   "fill 1 amount=3001000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-043",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ለ Suzuki Cultus ዎ አስቀድሞ ንቁ ማስታወቂያ አለዎት። የማስታወቂያ 157 የተጠየቀ ዋጋን ይመልከቱ እና የ Cultus ማስታወቂያዎን ዋጋ ከዚያ ማስታወቂያ ዋጋ በትክክል ብር 65,000 ዝቅ ወዳለ ይቀይሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "ads",
+    "match": {
+     "id": 1
+    },
+    "field": "price",
+    "value": 2834000
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/157",
+   "goto /account/ads/1",
+   "fill 0 price=2834000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-044",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የ Suzuki Cultus ማስታወቂያዎን እንደተሸጠ ምልክት ያድርጉ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "ads",
+    "match": {
+     "id": 1
+    },
+    "field": "status",
+    "value": "sold"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account/ads/1/sold",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-045",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የቆየውን Honda City ማስታወቂያዎን (አስቀድሞ እንደተሸጠ ምልክት የተደረገበትን) ይሰርዙ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "ads",
+    "match": {
+     "id": 2
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "ads",
+    "match": {
+     "id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account/ads/2/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-046",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የ Honda City ማስታወቂያዎን የተጠየቀ ዋጋ ወደ ብር 1,365,000 ዝቅ ያድርጉ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "ads",
+    "match": {
+     "id": 2
+    },
+    "field": "price",
+    "value": 1579500
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account/ads/2",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-047",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 205 ላይ ብር 715,000 ቅናሽ ያቅርቡ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 205
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/205",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-048",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 5 ን ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 5
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/5",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-049",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በድረ-ገጹ ላይ ለሽያጭ የቀረበውን በጣም ርካሽ Bugatti ፈልገው ዋጋውን ይግለጹ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Bugatti",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-050",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 226 ን ከፍተው የተጠየቀ ዋጋውን ይግለጹ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /car/226",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-051",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በተቀመጡ ዝርዝርዎ ውስጥ ካሉት መኪኖች አንዱ አስቀድሞ ተሽጧል። ያንን ብቻ ከተቀመጡ መኪኖችዎ ያስወግዱ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 330
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 25
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 210
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /saved",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-052",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በነጋዴ ለሽያጭ የቀረበውን እያንዳንዱን Tesla ወደ የተቀመጡ መኪኖችዎ ያስቀምጡ (በግለሰቦች የሚሸጡ Tesla ዎች አይቆጠሩም)። የሻጭ ዝርዝሮች በእያንዳንዱ መኪና ገጽ ላይ አሉ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 392
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 394
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 395
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 396
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 397
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 390
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 391
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 393
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/392",
+   "fill 0",
+   "goto /car/394",
+   "fill 0",
+   "goto /car/395",
+   "fill 0",
+   "goto /car/396",
+   "fill 0",
+   "goto /car/397",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-053",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የነጋዴዎች ገጽን ይክፈቱ፣ ማሳያ ክፍሉ በካራቺ የሆነውን ከፍተኛ ደረጃ ያለው ነጋዴ ይፈልጉ፣ የዚያን ነጋዴ ገጽ ይክፈቱ፣ እና በአሁኑ ክምችታቸው ውስጥ ያለውን በጣም ርካሽ መኪና ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 414
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /dealers",
+   "goto /dealer/3",
+   "goto /car/414",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-054",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የትኛው የተመዘገበ ነጋዴ ረጅሙን ጊዜ የGariBazaar አባል ሆኖ ቆይቷል (ቀደምቱ 'አባል ከሆነበት' ዓመት)? የነጋዴውን ገጽ ከፍተው የነጋዴውን ስም እና የማሳያ ክፍሉን ስልክ ቁጥር ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ሃይዌይ ሞተርስ",
+    "none_of": [
+     "ካን ሞተርስ",
+     "ሲቲ አውቶ ትሬደርስ",
+     "ፕራይም ዊልስ",
+     "ካፒታል ካር ፖይንት",
+     "ስታር ሞተርስ",
+     "ኤሊት አውቶ ጋለሪ",
+     "ሜትሮ ካርስ",
+     "ክሬሰንት አውቶሞቢልስ",
+     "ጋላክሲ ካር ሴንተር"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "061-45009909"
+   }
+  ],
+  "solution": [
+   "goto /dealers",
+   "goto /dealer/9",
+   "stop ሃይዌይ ሞተርስ, phone 061-45009909"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-055",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ሁለት የተመዘገቡ ነጋዴዎች ማሳያ ክፍላቸው በኢስላማባድ ነው። ከሁለቱ የትኛው በአሁኑ ጊዜ ብዙ ንቁ ማስታወቂያዎች አሉት? በነጋዴው ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ካፒታል ካር ፖይንት",
+    "none_of": [
+     "ኤሊት አውቶ ጋለሪ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /dealers",
+   "goto /dealer/4",
+   "goto /dealer/6",
+   "stop ካፒታል ካር ፖይንት"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-056",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የስታር ሞተርስ የነጋዴ ገጽን ይክፈቱ፣ በአሁኑ ክምችታቸው ውስጥ ያለውን በጣም ርካሽ መኪና ይፈልጉ፣ እና በእሱ ላይ ከገበያ ቦታው ዝቅተኛ የቅናሽ ወለል ጋር እኩል ቅናሽ ያቅርቡ፡ የተጠየቀው ዋጋ 80%፣ ወደ ቅርቡ መቶ ብር ወደ ላይ የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 239,
+     "amount": 457600
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /dealers",
+   "goto /dealer/5",
+   "goto /car/239",
+   "fill 1 amount=457600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-057",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 144 ን ከፍተው ወደ ሻጩ የነጋዴ ገጽ አገናኙን ይከተሉ። የነጋዴውን ደረጃ እና ነጋዴው የGariBazaar አባል የሆነበትን ዓመት ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "4.3"
+   },
+   {
+    "type": "answer_match",
+    "answer": "2022"
+   }
+  ],
+  "solution": [
+   "goto /car/144",
+   "goto /dealer/10",
+   "stop rating 4.3, member since 2022"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-058",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 100፣ 101 እና 102 እያንዳንዳቸው የተረጋገጠ የምርመራ ሪፖርት አላቸው። ሦስቱንም ሪፖርቶች ከፍተው ከፍተኛ አጠቃላይ ነጥብ ያለውን መኪና ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 101
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/100/inspection",
+   "goto /car/101/inspection",
+   "goto /car/102/inspection",
+   "goto /car/101",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-059",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የማስታወቂያ 150 የተረጋገጠ የምርመራ ሪፖርት ከፍተው የ'ሞተርና ድራይቭትሬን' ነጥቡን እና የ'ጎማዎችና ፍሬኖች' ነጥቡን ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "7.9",
+    "none_of": [
+     "6.8",
+     "7.2"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "7.4",
+    "none_of": [
+     "6.8",
+     "7.2"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/150/inspection",
+   "stop engine 7.9, tires 7.4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-060",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ከማስታወቂያ 300፣ 302፣ 303 እና 304 በትክክል አንዱ የተረጋገጠ የምርመራ ሪፖርት አለው (የሪፖርቱ አገናኝ በመኪናው ገጽ ላይ ነው)። ያንን ፈልገው ያንን መኪና ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 300
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 302
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 303
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/300",
+   "goto /car/302",
+   "goto /car/303",
+   "goto /car/304",
+   "goto /car/300",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-061",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የማስታወቂያ 252 የተረጋገጠ የምርመራ ሪፖርት አጠቃላይ ነጥብን ይግለጹ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /car/252",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-062",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "በማስታወቂያ 204 የተረጋገጠ የምርመራ ሪፖርት ላይ ከአራቱ ምድቦች የትኛው ዝቅተኛውን ነጥብ አገኘ? በምድቡ ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "ውስጠኛ ክፍል",
+     "ውስጠኛ"
+    ],
+    "none_of": [
+     "ሞተርና ድራይቭትሬን",
+     "ሞተርና",
+     "አካልና ቀለም",
+     "አካልና",
+     "ጎማዎችና ፍሬኖች",
+     "ጎማዎችና"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/204/inspection",
+   "stop ውስጠኛ ክፍል"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-063",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "የማስታወቂያ 128 ገጽ ዋጋው በቅርቡ እንደቀነሰ ያሳያል። የተጠየቀው ዋጋ በስንት ብር ቀነሰ?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "65,000",
+     "65000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/128",
+   "stop ብር 65,000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-064",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ከማስታወቂያ 354፣ 355 እና 356 በትክክል አንዱ በገጹ ላይ የቅርብ ጊዜ የዋጋ ቅናሽ ያሳያል። በዚያ ላይ በትክክል የአሁኑ የተጠየቀ ዋጋ 90% ቅናሽ ያቅርቡ፣ ወደ ቅርቡ መቶ ብር ወደ ታች የተጠጋ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 354,
+     "amount": 1825200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 355
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 356
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/354",
+   "goto /car/355",
+   "goto /car/356",
+   "goto /car/354",
+   "fill 1 amount=1825200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-065",
+  "site": "gari",
+  "difficulty": "hard",
+  "intent": "ማስታወቂያ 63 በቅርቡ ከከፍተኛ ዋጋ ቀንሷል (ሁለቱም ዋጋዎች በገጹ ላይ ናቸው)። በእሱ ላይ በትክክል የአሁኑ የተጠየቀ ዋጋ ሲቀነስ የዚያ ቅናሽ መጠን የሆነ ቅናሽ ያቅርቡ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 63,
+     "amount": 2353000
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/63",
+   "fill 1 amount=2353000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-066",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "የማስታወቂያ 42 (2020 Audi Q5) የተጠየቀ ዋጋ በብር ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "3,601,000",
+     "3601000"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/42",
+   "stop ብር 3,601,000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-067",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "በማስታወቂያው ገጽ መሠረት ማስታወቂያ 303 (2021 Mercedes-Benz GLK) በድረ-ገጹ ላይ ስንት ቀናት ቆይቷል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "39",
+     "39 days"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /car/303",
+   "stop 39 days"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-068",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "ማስታወቂያ 120 ን (2016 Chevrolet Equinox) ከፍተው ቀለሙን እና የነዳጅ ዓይነቱን ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "ነጭ"
+   },
+   {
+    "type": "answer_match",
+    "answer": "ቤንዚን"
+   }
+  ],
+  "solution": [
+   "goto /car/120",
+   "stop ነጭ, ቤንዚን"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-069",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "በድረ-ገጹ ላይ አሁን ለሽያጭ የቀረቡ የ Tesla ማስታወቂያዎች ስንት ናቸው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "8"
+   }
+  ],
+  "solution": [
+   "goto /cars?brand=Tesla",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-070",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "በነጋዴዎች ገጽ መሠረት የነጋዴ ሜትሮ ካርስ ደረጃ ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "4.1"
+   }
+  ],
+  "solution": [
+   "goto /dealers",
+   "stop 4.1 stars"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-071",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "የማወዳደሪያ መሣሪያውን ተጠቅመው ማስታወቂያ 15 እና 16 ን ያወዳድሩ። የትኛው ርካሽ ነው? በማስታወቂያ መታወቂያው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "15",
+    "none_of": [
+     "16"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /compare",
+   "fill 0 a=15; b=16",
+   "stop 15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-072",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "የድረ-ገጹን የፋይናንስ ማስያ ይጠቀሙ፡ ለ ብር 2,600,000 የመኪና ዋጋ በ25% ቅድመ ክፍያ ለ4 ዓመት ወርሃዊ ክፍያው ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "66,625",
+     "66625"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /finance",
+   "fill 0 price=2600000; down_pct=25; years=4",
+   "stop ብር 66,625"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-073",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "በገበያ ቦታው ደንቦች መሠረት ተመራጭ የማስታወቂያ ቦታ ምን ያህል ያስከፍላል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "ብር 1,300",
+     "1,300",
+     "1300"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop ብር 1,300"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-074",
+  "site": "gari",
+  "difficulty": "easy",
+  "intent": "ማስታወቂያ 33 ን (2017 Audi A8) ወደ የተቀመጡ መኪኖችዎ ይጨምሩ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 33
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /car/33",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualgari-075",
+  "site": "gari",
+  "difficulty": "medium",
+  "intent": "መለያዎን ያዘምኑ፡ የመገናኛ ስልኩን 0345-2223344 እና ከተማውን ኢስላማባድ ያድርጉ። አስፈላጊ ከሆነ በ ahmed.raza@garibazaar.test (የይለፍ ቃል፡ garibazaar2026) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "phone",
+    "value": "0345-2223344"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "city",
+    "value": "ኢስላማባድ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /account",
+   "fill 0 phone=0345-2223344; city=ኢስላማባድ"
+  ],
+  "max_steps": 30
+ }
+]

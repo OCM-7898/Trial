@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if error %}<div class="error"><p>{{ error }}</p></div>{% endif %}
+  <table class="register">
+    <thead><tr>{% for c in S.fee_table_cols %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for f in fees %}
+    <tr><td>{{ f.category }}</td><td>{{ f.variant }}</td><td>{{ f.validity }}</td><td>{{ f.delivery }}</td><td>{{ f.amount|v2_num }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <form class="form" method="post">
+    <div class="field"><label>{{ S.fee_table_cols[0] }}</label><input name="category"></div>
+    <div class="field"><label>{{ S.fee_table_cols[1] }}</label><input name="variant"></div>
+    <div class="field"><label>{{ S.f_method }}</label><input name="method"></div>
+    <button class="btn btn-primary">{{ S.pay }}</button>
+  </form>
+</div>
+{% endblock %}

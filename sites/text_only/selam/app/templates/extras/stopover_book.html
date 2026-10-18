@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ t("stopover.book_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li><a href="{{ path('stopover') }}">{{ t("stopover.title") }}</a></li><li>{{ t("stopover.book_title") }}</li></ol></nav>
+<h1>{{ t("stopover.book_title") }}</h1>
+{% from "macros/fields.html" import text_field %}
+{% if record %}
+<div class="notice notice-ok" role="status"><div>{{ t("stopover.book_done") }}</div></div>
+<p class="hint">{{ t("form.reference") }}: {{ record.reference_no }}</p>
+{% else %}
+<p>{{ t("stopover.book_intro") }}</p>
+{% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+<form class="searchform" method="post">
+  {{ text_field("pnr", "pnr", t("manage.pnr"), t("manage.pnr_placeholder"), "", "", true) }}
+  <div class="field"><label for="package_id">{{ t("stopover.service") }}</label>
+    <select id="package_id" name="package_id">
+      {% for package in packages %}<option value="{{ package.id }}">{{ package.name }}</option>{% endfor %}
+    </select></div>
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("stopover.book_submit") }}</button></div>
+</form>
+{% endif %}
+</div>{% endblock %}

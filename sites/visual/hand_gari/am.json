@@ -1,0 +1,62 @@
+{
+  "_note": "HAND-WRITTEN 2026-09-26 Amharic vocabulary for the gari marketplace (no lexicon). Same keys as bn.json.",
+  "color": {
+    "Black": "ጥቁር", "Blue": "ሰማያዊ", "Brown": "ቡናማ", "Champagne": "ሻምፓኝ",
+    "Gold": "ወርቃማ", "Gray": "ግራጫ", "Green": "አረንጓዴ", "Orange": "ብርቱካናማ",
+    "Pink": "ሮዝ", "Purple": "ሐምራዊ", "Red": "ቀይ", "Silver": "ብር",
+    "White": "ነጭ", "Yellow": "ቢጫ"
+  },
+  "city": {
+    "Karachi": "ካራቺ", "Lahore": "ላሆር", "Islamabad": "ኢስላማባድ",
+    "Rawalpindi": "ራዋልፒንዲ", "Faisalabad": "ፋይሳላባድ", "Multan": "ሙልታን",
+    "Peshawar": "ፔሻዋር", "Sialkot": "ሲያልኮት"
+  },
+  "body_type": {
+    "Sedan": "ሴዳን", "SUV": "ኤስዩቪ", "Hatchback": "ሃችባክ", "MPV": "ኤምፒቪ",
+    "Sports car": "ስፖርት መኪና", "Van": "ቫን"
+  },
+  "transmission": {"Manual": "ማንዋል", "Automatic": "አውቶማቲክ"},
+  "fuel": {"Petrol": "ቤንዚን", "Diesel": "ናፍጣ", "Hybrid": "ሃይብሪድ", "Electric": "ኤሌክትሪክ"},
+  "assembly": {"Local": "የአገር ውስጥ ስብሰባ", "Imported": "ከውጭ የገባ"},
+  "features": {
+    "ABS": "ኤቢኤስ", "Air Conditioning": "ኤር ኮንዲሽነር", "Airbags": "ኤርባግ",
+    "Alloy Rims": "አሎይ ሪም", "Bluetooth": "ብሉቱዝ", "Cruise Control": "ክሩዝ ኮንትሮል",
+    "Fog Lights": "የጭጋግ መብራት", "Heated Seats": "የሚሞቅ ወንበር", "Immobilizer": "ኢሞቢላይዘር",
+    "Keyless Entry": "ያለ ቁልፍ መግቢያ", "Leather Seats": "የቆዳ ወንበር", "Navigation": "ናቪጌሽን",
+    "Parking Sensors": "የፓርኪንግ ሴንሰር", "Power Steering": "ፓወር ስቲሪንግ",
+    "Power Windows": "ፓወር መስኮት", "Rear Camera": "የኋላ ካሜራ", "Sunroof": "ሰንሩፍ",
+    "USB Port": "ዩኤስቢ ወደብ"
+  },
+  "description": {
+    "Carefully driven, always garage kept and regularly serviced.": "በጥንቃቄ የተነዳ፣ ሁልጊዜ በጋራዥ የተቀመጠ እና በመደበኛነት የተጠገነ።",
+    "Company-maintained until last year, full record available.": "እስከ ባለፈው ዓመት በኩባንያ የተጠበቀ፣ ሙሉ መዝገብ አለ።",
+    "Complete documents, token tax paid up to date.": "ሙሉ ሰነዶች፣ የቶከን ግብር እስከ ዛሬ የተከፈለ።",
+    "Doctor-owned vehicle, used sparingly within the city.": "የዶክተር መኪና፣ በከተማ ውስጥ በጥቂቱ የተጠቀሙበት።",
+    "Excellent condition inside and out, all original paint.": "ውስጥም ውጭም ምርጥ ሁኔታ፣ ሙሉ ኦሪጅናል ቀለም።",
+    "First-class mechanical condition, new tyres fitted recently.": "አንደኛ ደረጃ የሜካኒክ ሁኔታ፣ በቅርቡ አዲስ ጎማዎች የተገጠሙ።",
+    "Immaculate interior, chilled AC, smooth long-route drive.": "ንጹህ ውስጠኛ ክፍል፣ ቀዝቃዛ ኤሲ፣ ለረጅም መንገድ ለስላሳ ጉዞ።",
+    "Non-accidental, engine and suspension in top shape.": "አደጋ ያልደረሰበት፣ ሞተርና ሰስፔንሽን በምርጥ ሁኔታ።",
+    "Urgent sale, serious buyers only, price slightly negotiable.": "አስቸኳይ ሽያጭ፣ ቁርጠኛ ገዥዎች ብቻ፣ ዋጋው በጥቂቱ ይደራደራል።",
+    "Well-maintained family car with complete service history.": "በጥሩ የተጠበቀ የቤተሰብ መኪና፣ ሙሉ የአገልግሎት ታሪክ ያለው።"
+  },
+  "sellers": {
+    "Adeel Akram": "አዲል አክራም", "Ahmed Khan": "አህመድ ካን", "Amna Javed": "አምና ጃቬድ",
+    "Ayesha Siddiqui": "አይሻ ሲዲቂ", "Bilal Hussain": "ቢላል ሁሴን", "Faisal Mahmood": "ፋይሳል መሕሙድ",
+    "Fatima Malik": "ፋጢማ ማሊክ", "Hassan Raza": "ሀሰን ራዛ", "Hira Farooq": "ሂራ ፋሩቅ",
+    "Imran Qureshi": "ኢምራን ቁረይሺ", "Kamran Baig": "ካምራን ቤግ", "Mehwish Iqbal": "መህዊሽ ኢቅባል",
+    "Nadia Hussain": "ናዲያ ሁሴን", "Rabia Anwar": "ራቢያ አንዋር", "Saad Chaudhry": "ሳድ ቻውድሪ",
+    "Salman Butt": "ሳልማን ቡት", "Sana Tariq": "ሳና ጣሪቅ", "Tariq Jameel": "ጣሪቅ ጀሚል",
+    "Usman Sheikh": "ኡስማን ሼክ", "Zainab Akhtar": "ዘይነብ አኽታር"
+  },
+  "dealers": {
+    "Khan Motors": "ካን ሞተርስ", "City Auto Traders": "ሲቲ አውቶ ትሬደርስ", "Prime Wheels": "ፕራይም ዊልስ",
+    "Capital Car Point": "ካፒታል ካር ፖይንት", "Star Motors": "ስታር ሞተርስ", "Elite Auto Gallery": "ኤሊት አውቶ ጋለሪ",
+    "Metro Cars": "ሜትሮ ካርስ", "Crescent Automobiles": "ክሬሰንት አውቶሞቢልስ", "Highway Motors": "ሃይዌይ ሞተርስ",
+    "Galaxy Car Centre": "ጋላክሲ ካር ሴንተር"
+  },
+  "account_name": {"Ahmed Raza": "አህመድ ራዛ"},
+  "preseeded_ads": {
+    "Family-used Cultus VXL, first owner, all documents complete.": "የቤተሰብ አገልግሎት የሰጠ ካልተስ VXL፣ የመጀመሪያ ባለቤት፣ ሁሉም ሰነዶች ሙሉ።",
+    "Honda City Aspire, new tyres, sold to a colleague.": "ሆንዳ ሲቲ አስፓየር፣ አዲስ ጎማዎች፣ ለሥራ ባልደረባ የተሸጠ።"
+  }
+}

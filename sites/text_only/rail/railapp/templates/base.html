@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ DIR }}">
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{{ S.title }}{% endblock %}</title>
+<link rel="stylesheet" href="/static/css/rail.css">
+<link rel="icon" href="/static/img/logo.svg">
+</head>
+<body>
+<div class="utilbar">
+  <div class="wrap util-flex">
+    <span>{{ S.util_helpline }}</span>
+    <span class="util-links">
+      <span>{{ S.util_ask }}</span>
+      <span>{{ S.util_alerts }}</span>
+      <span>{{ S.util_agents }}</span>
+      <a href="/contact">{{ S.nav_contact }}</a>
+    </span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="wrap mast-flex">
+    <a class="logo" href="/">
+      <img src="/static/img/logo.svg" alt="{{ S.brand }}" class="logo-img">
+      <span class="logo-text">
+        <span class="logo-name">{{ S.brand }}</span>
+        <span class="logo-sub">{{ S.tagline }}</span>
+      </span>
+    </a>
+    <span class="mast-right">
+      <span class="corp">{{ S.corp }}</span>
+      <img src="/static/img/emblem.svg" alt="" class="emblem-img">
+    </span>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="wrap nav-flex">
+    <span class="nav-left">
+      <a href="/" class="active">{{ S.nav_home }}</a>
+      <a href="/trains">{{ S.m_trains }}</a>
+      <a href="/pnr">{{ S.nav_pnr }}</a>
+      <span class="deco">{{ S.m_ewallet }}</span>
+      <span class="deco">{{ S.m_buses }}</span>
+      <span class="deco">{{ S.m_flights }}</span>
+      <span class="deco">{{ S.m_hotels }}</span>
+      <span class="deco">{{ S.m_holidays }}</span>
+      <span class="deco">{{ S.m_meals }}</span>
+      <span class="deco">{{ S.m_loyalty }}</span>
+      <a href="/rules">{{ S.nav_rules }}</a>
+    </span>
+    <span class="nav-right">
+      {% if user() %}
+        <a href="/account/bookings">{{ S.nav_bookings }}</a>
+        <a href="/account/profile">{{ S.nav_profile }}</a>
+        <a href="/logout">{{ S.nav_logout }}</a>
+        <span class="who">{{ S.welcome }} {{ user()['full_name'] }}</span>
+      {% else %}
+        <a href="/login" class="loginbtn">{{ S.nav_login }}</a>
+      {% endif %}
+    </span>
+  </div>
+</nav>
+<main{% if not full_bleed %} class="wrap page-pad"{% endif %}>
+{% block content %}{% endblock %}
+</main>
+<footer>
+  <div class="wrap foot-cols">
+    <div>
+      <h4>{{ S.f_services }}</h4>
+      <a href="/trains">{{ S.f_schedules }}</a>
+      <a href="/pnr">{{ S.f_pnr }}</a>
+      <span>{{ S.m_holidays }}</span>
+      <span>{{ S.m_hotels }}</span>
+      <span>{{ S.m_meals }}</span>
+    </div>
+    <div>
+      <h4>{{ S.f_info }}</h4>
+      <a href="/rules">{{ S.f_refunds }}</a>
+      <span>{{ S.f_terms }}</span>
+      <span>{{ S.f_privacy }}</span>
+      <span>{{ S.f_press }}</span>
+    </div>
+    <div>
+      <h4>{{ S.f_help }}</h4>
+      <a href="/contact">{{ S.f_contact }}</a>
+      <span>{{ S.f_faq }}</span>
+      <span>{{ S.util_helpline }}</span>
+      <span>{{ S.f_careers }}</span>
+    </div>
+    <div class="foot-brand">
+      <img src="/static/img/logo.svg" alt="" class="foot-logo">
+      <span>{{ S.corp }}</span>
+    </div>
+  </div>
+  <div class="foot-bottom"><div class="wrap">{{ S.footer }}</div></div>
+</footer>
+</body>
+</html>

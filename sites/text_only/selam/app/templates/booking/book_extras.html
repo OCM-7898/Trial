@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ t("book.extras_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('search') }}">{{ t("nav.book_flight") }}</a></li>
+      <li>{{ t("book.extras_title") }}</li></ol></nav>
+<h1>{{ t("book.extras_title") }}</h1>
+<p>{{ t("book.extras_intro") }}</p>
+<div class="cards">
+  {% for extra in extras %}
+  <article class="card"><div class="card-body">
+    <h3>{{ extra.title }}</h3><p>{{ extra.body }}</p></div>
+    <div class="card-foot"><a class="btn btn-secondary" href="{{ extra.url }}">{{ t("common.learn_more") }}</a></div>
+  </article>
+  {% endfor %}
+</div>
+<p style="margin-top:20px"><a class="btn btn-primary" href="{{ path('passengers') }}?itinerary={{ itinerary }}&amp;adults=1">{{ t("book.continue_passengers") }}</a></p>
+</div>{% endblock %}

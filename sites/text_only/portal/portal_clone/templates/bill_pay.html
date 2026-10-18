@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  <p class="lede">{{ S.f_consumer_no }}: {{ meter.consumer_no }} ({{ meter.tariff }})</p>
+  <h2>{{ S.unpaid_bills }}</h2>
+  {% for b in bills %}
+  <div class="card">
+    <p><strong>{{ S.r_bill }} {{ b.bill_no }}</strong> — {{ S.period_col }} {{ b.period }} — {{ S.amount_col }} {{ b.amount|v2_num }}</p>
+    <form class="form" method="post">
+      <input type="hidden" name="bill_no" value="{{ b.bill_no }}">
+      <div class="field"><label>{{ S.f_method }}</label><input name="method"></div>
+      <button class="btn btn-primary">{{ S.pay }}</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

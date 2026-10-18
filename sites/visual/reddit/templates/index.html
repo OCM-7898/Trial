@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+{% if active_forum %}
+  <p class="muted">{{ active_forum.description }}
+    · <a href="/f/{{ active_forum.name }}/about">{{ S.about_link }}</a></p>
+  {% if flair %}
+    <p class="muted">{{ S.flair_results.format(n=(n_results | v2_num), f=flair) }}
+      · <a href="/f/{{ active_forum.name }}">{{ S.clear_flair }}</a></p>
+  {% endif %}
+  {% if user %}
+    {% if subscribed %}
+      <p class="muted">{{ S.subscribed_note }}</p>
+      <form class="inline" method="post" action="/f/{{ active_forum.name }}/unsubscribe">
+        <button class="line">{{ S.unsubscribe }}</button>
+      </form>
+    {% else %}
+      <form class="inline" method="post" action="/f/{{ active_forum.name }}/subscribe">
+        <button>{{ S.subscribe }}</button>
+      </form>
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% set sep = '&' if '?' in base_path else '?' %}
+<p class="sortbar">{{ S.sort_by }}
+  {% for s, label in [('top', S.sort_top), ('new', S.sort_new), ('old', S.sort_old), ('comments', S.sort_comments)] %}
+    <a class="{{ 'on' if sort == s }}" href="{{ base_path }}{{ sep }}sort={{ s }}">{{ label }}</a>
+  {% endfor %}
+</p>
+
+{% for p in posts %}
+<div class="card">
+  {% if p.n_images %}<a href="/post/{{ p.id }}"><img class="thumb" src="/static/post_images/{{ p.id }}_1.jpg" alt="{{ S.photo_alt.format(k=1, title=p.title) }}"></a>{% endif %}
+  <div class="meta"><a href="/f/{{ p.forum_name }}">f/{{ p.forum_name }}</a>
+    · {{ S.posted_by }} <a href="/u/{{ p.username }}"><img class="cava" src="/static/avatars/{{ p.username }}.svg" alt="">{{ p.username }}</a>
+    · {{ p.posted_on }}
+    {% if p.n_images %}<span class="badge img">{{ S.image_badge }}</span>{% endif %}
+    {% if p.locked %}<span class="badge lock">{{ S.locked_badge }}</span>{% endif %}
+    {% if p.flair %}<a class="badge" href="/f/{{ p.forum_name }}?flair={{ p.flair | urlencode }}">{{ p.flair }}</a>{% endif %}</div>
+  <h2><a href="/post/{{ p.id }}">{{ p.title }}</a></h2>
+  <span class="score">{{ S.score_label }} {{ p.score | v2_num }}</span>
+  <a href="/post/{{ p.id }}">{{ p.n_comments | v2_num }} {{ S.comments_label }}</a>
+  {% if p.awards %}<span class="score">{{ S.awards_label }} {{ p.awards | v2_num }}</span>{% endif %}
+</div>
+{% else %}<p>{{ S.no_posts }}</p>{% endfor %}
+
+<div class="pager">
+  {% if page > 1 %}<a href="{{ base_path }}{{ sep }}sort={{ sort }}&page={{ page - 1 }}">← {{ S.prev_page }}</a>{% endif %}
+  {{ S.page_of.format(p=(page | v2_num), n=(n_pages | v2_num)) }}
+  {% if page < n_pages %}<a href="{{ base_path }}{{ sep }}sort={{ sort }}&page={{ page + 1 }}">{{ S.next_page }} →</a>{% endif %}
+</div>
+{% endblock %}

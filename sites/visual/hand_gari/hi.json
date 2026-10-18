@@ -1,0 +1,62 @@
+{
+  "_note": "HAND-WRITTEN 2026-09-26 Hindi vocabulary for the gari marketplace (no lexicon). Same keys as bn.json.",
+  "color": {
+    "Black": "काला", "Blue": "नीला", "Brown": "भूरा", "Champagne": "शैम्पेन",
+    "Gold": "सुनहरा", "Gray": "स्लेटी", "Green": "हरा", "Orange": "नारंगी",
+    "Pink": "गुलाबी", "Purple": "बैंगनी", "Red": "लाल", "Silver": "सिल्वर",
+    "White": "सफ़ेद", "Yellow": "पीला"
+  },
+  "city": {
+    "Karachi": "कराची", "Lahore": "लाहौर", "Islamabad": "इस्लामाबाद",
+    "Rawalpindi": "रावलपिंडी", "Faisalabad": "फ़ैसलाबाद", "Multan": "मुल्तान",
+    "Peshawar": "पेशावर", "Sialkot": "सियालकोट"
+  },
+  "body_type": {
+    "Sedan": "सेडान", "SUV": "एसयूवी", "Hatchback": "हैचबैक", "MPV": "एमपीवी",
+    "Sports car": "स्पोर्ट्स कार", "Van": "वैन"
+  },
+  "transmission": {"Manual": "मैनुअल", "Automatic": "ऑटोमैटिक"},
+  "fuel": {"Petrol": "पेट्रोल", "Diesel": "डीज़ल", "Hybrid": "हाइब्रिड", "Electric": "इलेक्ट्रिक"},
+  "assembly": {"Local": "स्थानीय असेंबली", "Imported": "आयातित"},
+  "features": {
+    "ABS": "एबीएस", "Air Conditioning": "एयर कंडीशनिंग", "Airbags": "एयरबैग",
+    "Alloy Rims": "अलॉय रिम", "Bluetooth": "ब्लूटूथ", "Cruise Control": "क्रूज़ कंट्रोल",
+    "Fog Lights": "फ़ॉग लाइट", "Heated Seats": "हीटेड सीट", "Immobilizer": "इमोबिलाइज़र",
+    "Keyless Entry": "कीलेस एंट्री", "Leather Seats": "लेदर सीट", "Navigation": "नेविगेशन",
+    "Parking Sensors": "पार्किंग सेंसर", "Power Steering": "पावर स्टीयरिंग",
+    "Power Windows": "पावर विंडो", "Rear Camera": "रियर कैमरा", "Sunroof": "सनरूफ़",
+    "USB Port": "यूएसबी पोर्ट"
+  },
+  "description": {
+    "Carefully driven, always garage kept and regularly serviced.": "सावधानी से चलाई गई, हमेशा गैराज में रखी और नियमित सर्विस की हुई।",
+    "Company-maintained until last year, full record available.": "पिछले साल तक कंपनी द्वारा मेंटेन, पूरा रिकॉर्ड उपलब्ध।",
+    "Complete documents, token tax paid up to date.": "सभी दस्तावेज़ पूरे, टोकन टैक्स अद्यतन तक भरा हुआ।",
+    "Doctor-owned vehicle, used sparingly within the city.": "डॉक्टर की गाड़ी, शहर के भीतर कम ही चली।",
+    "Excellent condition inside and out, all original paint.": "अंदर-बाहर बेहतरीन हालत, पूरा पेंट ओरिजिनल।",
+    "First-class mechanical condition, new tyres fitted recently.": "प्रथम श्रेणी की मैकेनिकल हालत, हाल ही में नए टायर लगे।",
+    "Immaculate interior, chilled AC, smooth long-route drive.": "बेदाग़ इंटीरियर, ठंडा एसी, लंबे रूट पर स्मूद ड्राइव।",
+    "Non-accidental, engine and suspension in top shape.": "बिना दुर्घटना, इंजन और सस्पेंशन बेहतरीन हालत में।",
+    "Urgent sale, serious buyers only, price slightly negotiable.": "तुरंत बिक्री, केवल गंभीर ख़रीदार, क़ीमत में थोड़ी गुंजाइश।",
+    "Well-maintained family car with complete service history.": "अच्छी तरह रखी गई फ़ैमिली कार, पूरी सर्विस हिस्ट्री के साथ।"
+  },
+  "sellers": {
+    "Adeel Akram": "अदील अकरम", "Ahmed Khan": "अहमद ख़ान", "Amna Javed": "आमना जावेद",
+    "Ayesha Siddiqui": "आयशा सिद्दीक़ी", "Bilal Hussain": "बिलाल हुसैन", "Faisal Mahmood": "फ़ैसल महमूद",
+    "Fatima Malik": "फ़ातिमा मलिक", "Hassan Raza": "हसन रज़ा", "Hira Farooq": "हिरा फ़ारूक़",
+    "Imran Qureshi": "इमरान क़ुरैशी", "Kamran Baig": "कामरान बेग", "Mehwish Iqbal": "मेहविश इक़बाल",
+    "Nadia Hussain": "नादिया हुसैन", "Rabia Anwar": "राबिया अनवर", "Saad Chaudhry": "साद चौधरी",
+    "Salman Butt": "सलमान बट", "Sana Tariq": "सना तारिक़", "Tariq Jameel": "तारिक़ जमील",
+    "Usman Sheikh": "उस्मान शेख़", "Zainab Akhtar": "ज़ैनब अख़्तर"
+  },
+  "dealers": {
+    "Khan Motors": "ख़ान मोटर्स", "City Auto Traders": "सिटी ऑटो ट्रेडर्स", "Prime Wheels": "प्राइम व्हील्स",
+    "Capital Car Point": "कैपिटल कार पॉइंट", "Star Motors": "स्टार मोटर्स", "Elite Auto Gallery": "एलीट ऑटो गैलरी",
+    "Metro Cars": "मेट्रो कार्स", "Crescent Automobiles": "क्रेसेंट ऑटोमोबाइल्स", "Highway Motors": "हाईवे मोटर्स",
+    "Galaxy Car Centre": "गैलेक्सी कार सेंटर"
+  },
+  "account_name": {"Ahmed Raza": "अहमद रज़ा"},
+  "preseeded_ads": {
+    "Family-used Cultus VXL, first owner, all documents complete.": "पारिवारिक इस्तेमाल की कल्टस VXL, पहला मालिक, सभी दस्तावेज़ पूरे।",
+    "Honda City Aspire, new tyres, sold to a colleague.": "होंडा सिटी एस्पायर, नए टायर, एक सहकर्मी को बेची।"
+  }
+}

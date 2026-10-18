@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ S.offices }} · {{ s.name }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/">{{ s.name }}</a></p>
+  <h1>{{ S.offices }}</h1>
+  <table class="register">
+    <thead><tr><th>{{ S.f_name }}</th><th>{{ S.f_address }}</th></tr></thead>
+    <tbody>{% for r in rows %}<tr><td>{{ r.name }}</td><td>{{ r.address }}</td></tr>{% endfor %}</tbody>
+  </table>
+</div>
+{% endblock %}

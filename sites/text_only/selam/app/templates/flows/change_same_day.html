@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("change.same_day_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("change.same_day_title")) }}
+<p class="hint">{{ view.flight.flight_no }} &middot; {{ fmt_date(view.flight.date) }}</p>
+<p>{{ t("change.same_day_intro", fee=fmt_money(fee)) }}</p>
+{% if eligible %}
+<div class="notice notice-info"><div>{{ t("change.same_day_open", n=hours) }}</div></div>
+{% else %}
+<div class="notice notice-warn"><div>{{ t("change.same_day_closed", n=hours) }}</div></div>
+{% endif %}
+</div>{% endblock %}

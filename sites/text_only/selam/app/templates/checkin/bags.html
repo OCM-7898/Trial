@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ t("checkin.declare_bags") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('checkin_pax', checkin_id=record.id) }}">{{ t("boarding.title") }}</a></li>
+      <li>{{ t("checkin.declare_bags") }}</li></ol></nav>
+<h1>{{ t("checkin.declare_bags") }}</h1>
+{% if saved %}<div class="notice notice-ok" role="status"><div>{{ t("checkin.bags_saved", n=count) }}</div></div>{% endif %}
+<p>{{ t("checkin.bags_intro", n=segment.baggage_allowance_kg) }}</p>
+<form class="searchform" method="post">
+  <div class="field"><label for="bags">{{ t("checkin.bags_count") }}</label>
+    <input type="number" id="bags" name="bags" min="0" max="9" value="{{ count }}"></div>
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("contact_details.save") }}</button></div>
+</form>
+<p class="hint">{{ t("checkin.bags_note") }}</p>
+</div>{% endblock %}

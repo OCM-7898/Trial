@@ -1,0 +1,422 @@
+[
+ {
+  "id": 1,
+  "candidate_name": "দেলোয়ার হক",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 2,
+  "candidate_name": "দেলোয়ার হক",
+  "institution": "সরকারি কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 3,
+  "candidate_name": "তোফাজ্জল দাস",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 4,
+  "candidate_name": "তোফাজ্জল দাস",
+  "institution": "সিটি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 5,
+  "candidate_name": "শাহনাজ ভূঁইয়া",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 6,
+  "candidate_name": "শাহনাজ ভূঁইয়া",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 7,
+  "candidate_name": "মনির দাস",
+  "institution": "আইডিয়াল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 8,
+  "candidate_name": "মনির দাস",
+  "institution": "সিটি কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 9,
+  "candidate_name": "আমিনুল চৌধুরী",
+  "institution": "আইডিয়াল হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 10,
+  "candidate_name": "আমিনুল চৌধুরী",
+  "institution": "সিটি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 11,
+  "candidate_name": "সাবিনা খান",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 12,
+  "candidate_name": "সাবিনা খান",
+  "institution": "সরকারি কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 13,
+  "candidate_name": "গোলাম খান",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 14,
+  "candidate_name": "গোলাম খান",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 15,
+  "candidate_name": "ইয়াসমিন গুপ্ত",
+  "institution": "আইডিয়াল হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 16,
+  "candidate_name": "ইয়াসমিন গুপ্ত",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 17,
+  "candidate_name": "রেহানা দাস",
+  "institution": "আইডিয়াল হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 18,
+  "candidate_name": "রেহানা দাস",
+  "institution": "সরকারি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 19,
+  "candidate_name": "সাবিনা সাহা",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 20,
+  "candidate_name": "সাবিনা সাহা",
+  "institution": "সিটি কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 21,
+  "candidate_name": "মোস্তফা হোসেন",
+  "institution": "সরকারি হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 22,
+  "candidate_name": "মোস্তফা হোসেন",
+  "institution": "মডেল কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 23,
+  "candidate_name": "আশরাফুল বেগম",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 24,
+  "candidate_name": "আশরাফুল বেগম",
+  "institution": "মডেল কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 25,
+  "candidate_name": "আবদুল ভূঁইয়া",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 26,
+  "candidate_name": "আবদুল ভূঁইয়া",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 27,
+  "candidate_name": "জাহাঙ্গীর হক",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 28,
+  "candidate_name": "জাহাঙ্গীর হক",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 29,
+  "candidate_name": "তোফাজ্জল করিম",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 30,
+  "candidate_name": "তোফাজ্জল করিম",
+  "institution": "মডেল কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 31,
+  "candidate_name": "খালেদ আক্তার",
+  "institution": "সরকারি হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 32,
+  "candidate_name": "খালেদ আক্তার",
+  "institution": "সিটি কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 33,
+  "candidate_name": "জাহানারা বড়ুয়া",
+  "institution": "সরকারি হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 34,
+  "candidate_name": "জাহানারা বড়ুয়া",
+  "institution": "সিটি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 35,
+  "candidate_name": "রোকেয়া করিম",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 36,
+  "candidate_name": "রোকেয়া করিম",
+  "institution": "সিটি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 37,
+  "candidate_name": "কোহিনূর আলম",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 38,
+  "candidate_name": "কোহিনূর আলম",
+  "institution": "সরকারি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 39,
+  "candidate_name": "ফারুক রায়",
+  "institution": "সরকারি হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 40,
+  "candidate_name": "ফারুক রায়",
+  "institution": "সিটি কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 41,
+  "candidate_name": "লুৎফা মাহমুদ",
+  "institution": "আইডিয়াল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 42,
+  "candidate_name": "লুৎফা মাহমুদ",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 43,
+  "candidate_name": "শহীদুল হক",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 44,
+  "candidate_name": "শহীদুল হক",
+  "institution": "মডেল কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 45,
+  "candidate_name": "রেজাউল হক",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 46,
+  "candidate_name": "রেজাউল হক",
+  "institution": "সরকারি কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 47,
+  "candidate_name": "রেজাউল খান",
+  "institution": "সরকারি হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 48,
+  "candidate_name": "রেজাউল খান",
+  "institution": "মডেল কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 49,
+  "candidate_name": "কোহিনূর গুপ্ত",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 50,
+  "candidate_name": "কোহিনূর গুপ্ত",
+  "institution": "সরকারি কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 51,
+  "candidate_name": "আনোয়ার সিদ্দিক",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 52,
+  "candidate_name": "আনোয়ার সিদ্দিক",
+  "institution": "সিটি কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 53,
+  "candidate_name": "রেহানা রহমান",
+  "institution": "মডেল হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 54,
+  "candidate_name": "রেহানা রহমান",
+  "institution": "সিটি কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 55,
+  "candidate_name": "আবদুল আলম",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 56,
+  "candidate_name": "আবদুল আলম",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 57,
+  "candidate_name": "দিলরুবা আলম",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "বিজ্ঞান",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 58,
+  "candidate_name": "দিলরুবা আলম",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 59,
+  "candidate_name": "জাহিদ রহমান",
+  "institution": "সিটি হাই স্কুল",
+  "group_name": "ব্যবসায় শিক্ষা",
+  "result_status": "উত্তীর্ণ"
+ },
+ {
+  "id": 60,
+  "candidate_name": "জাহিদ রহমান",
+  "institution": "আইডিয়াল কলেজ",
+  "group_name": "মানবিক",
+  "result_status": "উত্তীর্ণ"
+ }
+]

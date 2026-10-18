@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ heading }}</li></ol>
+  </nav>
+  <h1>{{ heading }}</h1>
+  <div class="notice notice-warn" role="alert"><div><p>{{ body }}</p></div></div>
+  <p>
+    <a class="btn btn-primary" href="{{ path('home') }}">{{ t("error.go_home") }}</a>
+    <a class="btn btn-secondary" href="{{ path('help') }}">{{ t("nav.help_centre") }}</a>
+  </p>
+</div>
+{% endblock %}

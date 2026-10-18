@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("miles.signin_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("brand.loyalty") }}</li></ol>
+  </nav>
+  <h1>{{ t("miles.signin_title") }}</h1>
+  <p>{{ t("miles.signin_intro") }}</p>
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+  <form class="searchform" method="post" action="{{ path('miles_account') }}">
+    {{ text_field("member_no", "member_no", t("miles.member_no"), "SM00000001", "", member_no, true) }}
+    {{ text_field("surname", "surname", t("manage.surname"), "", t("manage.surname_hint"), "", true) }}
+    <div class="actions">
+      <button class="btn btn-primary" type="submit">{{ t("miles.signin") }}</button>
+      <a class="btn-link" href="{{ path('miles_join') }}">{{ t("nav.miles_join") }}</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

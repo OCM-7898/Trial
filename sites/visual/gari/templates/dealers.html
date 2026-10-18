@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ S.dealers_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.dealers_title }}</h1>
+<p>{{ S.dealers_intro }}</p>
+<table class="spec">
+  <tr>
+    <th>{{ S.name }}</th>
+    <th>{{ S.dealer_city }}</th>
+    <th>{{ S.dealer_rating }}</th>
+    <th>{{ S.dealer_member_since }}</th>
+  </tr>
+  {% for d in dealers %}
+  <tr>
+    <td><a href="/dealer/{{ d.id }}">{{ d.name }}</a></td>
+    <td>{{ d.city }}</td>
+    <td>{{ d.rating | v2_num }} ★</td>
+    <td>{{ d.member_since | v2_num }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

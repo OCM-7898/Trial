@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ t("miles.statement") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('miles_account') }}">{{ t("nav.miles_account") }}</a></li>
+        <li>{{ t("miles.statement") }}</li></ol>
+  </nav>
+  <h1>{{ t("miles.statement") }}</h1>
+  <p class="hint">{{ member.full_name }} &middot; {{ member.member_no }}</p>
+  <div class="split">
+    <div>
+      <div class="table-scroll"><table>
+        <thead><tr><th scope="col">{{ t("status.date") }}</th><th scope="col">{{ t("miles.activity") }}</th>
+          <th scope="col">{{ t("results.flight") }}</th><th scope="col">{{ t("miles.miles") }}</th></tr></thead>
+        <tbody>{% for row in rows %}<tr>
+          <td>{{ fmt_date(row.posted_on) }}</td><td>{{ row.description }}</td>
+          <td>{{ row.flight_no or "--" }}</td><td>{{ row.miles }}</td>
+        </tr>{% endfor %}</tbody></table></div>
+    </div>
+    <aside class="summary">
+      <dl>
+        <dt>{{ t("miles.total_earned") }}</dt><dd>{{ earned }}</dd>
+        <dt>{{ t("miles.total_spent") }}</dt><dd>{{ spent }}</dd>
+        <dt class="total">{{ t("miles.balance") }}</dt><dd class="total">{{ member.miles_balance }}</dd>
+      </dl>
+      <p><a class="btn btn-secondary" href="{{ path('miles_tier') }}">{{ t("miles.tier_progress") }}</a></p>
+    </aside>
+  </div>
+</div>
+{% endblock %}

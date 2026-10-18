@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="{{ S.html_lang }}"{% if S.html_lang == "ur" %} dir="rtl"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ S.site_name }}{% endblock %} · {{ S.site_name }}</title>
+<link rel="stylesheet" href="/static/css/portal.css">
+<link rel="icon" href="/static/img/emblem.svg" type="image/svg+xml">
+</head>
+<body>
+
+<div class="utility">
+  <div class="wrap">
+    <span class="nation">{{ S.govt }}</span>
+    <span class="util-links">
+      <a href="/accounts">{{ S.nav_accounts }}</a>
+    </span>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <nav class="topnav">
+      <a href="/">{{ S.nav_home }}</a>
+      <a href="/services/">{{ S.nav_services }}</a>
+      <a href="/accounts">{{ S.nav_accounts }}</a>
+    </nav>
+    <div class="account-strip">
+      {% if account %}
+        <span class="who">{{ S.signed_in_as }} {{ account.display_name }}</span>
+        <a class="btn-signin" href="/logout">{{ S.nav_logout }}</a>
+      {% else %}
+        <a class="btn-signin" href="/login">{{ S.nav_login }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="ident" href="/">
+      <img class="emblem" src="/static/img/emblem.svg" alt="" width="66" height="66">
+      <span class="ident-text">
+        <span class="sitename">{{ S.site_name }}</span>
+        <span class="tagline">{{ S.tagline }}</span>
+      </span>
+    </a>
+    <form class="search" action="/search" method="get" role="search">
+      <input name="q" type="search" placeholder="{{ S.search_placeholder }}">
+      <button type="submit">{{ S.search_btn }}</button>
+    </form>
+  </div>
+</header>
+
+<nav class="servicebar">
+  <div class="wrap">
+    {% for sv in nav_services %}
+      <a href="/services/{{ sv.slug }}/"
+         class="{{ 'here' if (s is defined and s and s.slug == sv.slug) else '' }}">{{ sv.name }}</a>
+    {% endfor %}
+  </div>
+</nav>
+
+<main id="main" class="wrap layout">
+{% block body %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-cols">
+    <section>
+      <h2>{{ S.footer_portal }}</h2>
+      <ul>
+        <li><a href="/">{{ S.nav_home }}</a></li>
+        <li><a href="/services/">{{ S.nav_services }}</a></li>
+        <li><a href="/accounts">{{ S.accounts_title }}</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>{{ S.footer_services }}</h2>
+      <ul>
+        {% for sv in nav_services[:5] %}<li><a href="/services/{{ sv.slug }}/">{{ sv.name }}</a></li>{% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>{{ S.footer_hotline }}</h2>
+      <ul class="hotlines">
+        <li>{{ S.hot_emergency }} <strong>999</strong></li>
+        <li>{{ S.hot_citizen }} <strong>333</strong></li>
+        <li>{{ S.hot_grievance }} <strong>16103</strong></li>
+      </ul>
+    </section>
+  </div>
+  <div class="wrap foot-note">
+    <p>{{ S.footer_built }}</p>
+    <p class="note">{{ S.footer_rights }}</p>
+  </div>
+</footer>
+</body>
+</html>

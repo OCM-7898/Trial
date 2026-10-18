@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ S.edit_post_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.edit_post_title }}</h1>
+<div class="card">
+<form class="stack" method="post" action="/post/{{ p.id }}/edit">
+  <label>{{ S.title_label }}</label>
+  <input type="text" name="title" value="{{ p.title }}">
+  <label>{{ S.body_label }}</label>
+  <textarea name="body">{{ p.body }}</textarea>
+  <button>{{ S.save_changes }}</button>
+</form>
+</div>
+{% endblock %}

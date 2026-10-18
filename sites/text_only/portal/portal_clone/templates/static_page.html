@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/">{{ s.name }}</a></p>
+  <h1>{{ title }}</h1>
+  <div class="prose">
+  {% for para in body.split('\n\n') %}<p>{{ para }}</p>{% endfor %}
+  </div>
+</div>
+{% endblock %}

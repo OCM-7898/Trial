@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/panel/">{{ S.panel_title }}</a></p>
+  <h1>{{ title }}</h1>
+  {% if intro %}<p class="lede">{{ intro }}</p>{% endif %}
+  <h2>{{ level }}</h2>
+  <ul class="page-grid">
+  {% for text, href in links %}<li><a href="{{ href }}">{{ text }}</a></li>{% endfor %}
+  </ul>
+</div>
+{% endblock %}

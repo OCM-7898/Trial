@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ S.search_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.search_title }}</h1>
+<div class="card">
+<form class="stack" method="get" action="/search">
+  <input type="text" name="q" value="{{ q }}" placeholder="{{ S.search_placeholder }}">
+  <button>{{ S.search_btn }}</button>
+</form>
+</div>
+{% if q %}<h2>{{ S.results_for.format(q=q) }}</h2>{% endif %}
+{% for p in posts %}
+<div class="card">
+  {% if p.n_images %}<a href="/post/{{ p.id }}"><img class="thumb" src="/static/post_images/{{ p.id }}_1.jpg" alt="{{ S.photo_alt.format(k=1, title=p.title) }}"></a>{% endif %}
+  <div class="meta"><a href="/f/{{ p.forum_name }}">f/{{ p.forum_name }}</a>
+    · {{ S.posted_by }} <a href="/u/{{ p.username }}">{{ p.username }}</a> · {{ p.posted_on }}
+    {% if p.locked %}<span class="badge lock">{{ S.locked_badge }}</span>{% endif %}</div>
+  <h2><a href="/post/{{ p.id }}">{{ p.title }}</a></h2>
+  <span class="score">{{ S.score_label }} {{ p.score | v2_num }}</span>
+  <a href="/post/{{ p.id }}">{{ p.n_comments | v2_num }} {{ S.comments_label }}</a>
+</div>
+{% endfor %}
+<div class="pager">
+  {% if page > 1 %}<a href="/search?q={{ q | urlencode }}&page={{ page - 1 }}">← {{ S.prev_page }}</a>{% endif %}
+  {% if q %}{{ S.page_of.format(p=(page | v2_num), n=(n_pages | v2_num)) }}{% endif %}
+  {% if page < n_pages %}<a href="/search?q={{ q | urlencode }}&page={{ page + 1 }}">{{ S.next_page }} →</a>{% endif %}
+</div>
+{% endblock %}

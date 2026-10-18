@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ S.about_title.format(name=f.name) }}{% endblock %}
+{% block content %}
+<h1><img class="ava" src="/static/community/{{ f.name }}.svg" alt=""> {{ S.about_title.format(name=f.name) }}</h1>
+<p class="muted">{{ f.description }}</p>
+<table class="spec">
+  {% if f.created_on %}<tr><th>{{ S.created_label }}</th><td>{{ f.created_on }}</td></tr>{% endif %}
+  {% if f.members is not none %}<tr><th>{{ S.members_label }}</th><td>{{ "{:,}".format(f.members) | v2_num }}</td></tr>{% endif %}
+  {% if f.mod1 %}<tr><th>{{ S.mods_label }}</th><td><a href="/u/{{ f.mod1 }}">u/{{ f.mod1 }}</a>, <a href="/u/{{ f.mod2 }}">u/{{ f.mod2 }}</a></td></tr>{% endif %}
+</table>
+
+{% if frules %}
+<h2>{{ S.community_rules_title }}</h2>
+<ol style="list-style:none;padding-left:0">
+  {% for r in frules %}<li>{{ loop.index | v2_num }}. {{ r }}</li>{% endfor %}
+</ol>
+{% endif %}
+
+{% if pinned %}
+<h2>{{ S.pinned_label }}</h2>
+<p>📌 <a href="/post/{{ pinned.id }}">{{ pinned.title }}</a>
+  · {{ S.posted_by }} u/{{ pinned.username }} · {{ pinned.posted_on }}</p>
+{% endif %}
+
+<p><a href="/f/{{ f.name }}">f/{{ f.name }}</a></p>
+{% endblock %}

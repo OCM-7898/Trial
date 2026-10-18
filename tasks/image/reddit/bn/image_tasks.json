@@ -1,0 +1,1555 @@
+[
+ {
+  "id": "image-reddit-001",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/1585_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Vedaka কোলাম চাল"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1585",
+   "stop Vedaka কোলাম চাল"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-002",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/1433_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5-6 শিট ক্রস কাট পেপার ও ক্রেডিট কার্ড শ্রেডার"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1433",
+   "stop 5-6 শিট ক্রস কাট পেপার ও ক্রেডিট কার্ড শ্রেডার"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-003",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/202_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AC-2.0 AC পাওয়ার্ড 2.0 5W ব্লুটুথ কম্পিউটার স্পিকার"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/202",
+   "stop AC-2.0 AC পাওয়ার্ড 2.0 5W ব্লুটুথ কম্পিউটার স্পিকার"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-004",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/622_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "গ্লো ইন দ্য ডার্ক লিকুইড গ্লু"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/622",
+   "stop গ্লো ইন দ্য ডার্ক লিকুইড গ্লু"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-005",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/471_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "স্টেইনলেস স্টিল ক্যাসারোল, কাচের ঢাকনা সহ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/471",
+   "stop স্টেইনলেস স্টিল ক্যাসারোল, কাচের ঢাকনা সহ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-006",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/1632_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ম্যাজিক টেপ ও রিফিলেবল ডিসপেনসার"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1632",
+   "stop ম্যাজিক টেপ ও রিফিলেবল ডিসপেনসার"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-007",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/343_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "বড় ফ্যান-এমবসড প্ল্যান্টার"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/343",
+   "stop বড় ফ্যান-এমবসড প্ল্যান্টার"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-008",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/170_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8-কাপ বেভারেজ পট, পাম্প ডিসপেনসার সহ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/170",
+   "stop 8-কাপ বেভারেজ পট, পাম্প ডিসপেনসার সহ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-009",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/956_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "বিড়ালের ট্রি, বিড়ালছানার ফার্নিচার প্ল্যাটফর্ম, ছোট, ধূসর"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/956",
+   "stop বিড়ালের ট্রি, বিড়ালছানার ফার্নিচার প্ল্যাটফর্ম, ছোট, ধূসর"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-010",
+  "site": "reddit",
+  "kind": "W1_what",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের প্রথম মন্তব্য অনুযায়ী এটি কী?",
+  "image": "sites/visual/reddit/static/post_images/375_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Strathwood Sheffield ডাইনিং কালেকশন"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/375",
+   "stop Strathwood Sheffield ডাইনিং কালেকশন"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-011",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টটি সেভ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/943_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 943
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/943",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-012",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টটি সেভ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/887_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 887
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/887",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-013",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টটি সেভ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1553_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1553
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/1553",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-014",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টটি সেভ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/195_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 195
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/195",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-015",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টটি সেভ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1976_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1976
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/1976",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-016",
+  "site": "reddit",
+  "kind": "W2_save",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টটি সেভ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1256_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1256
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/whatisthisthing",
+   "goto /post/1256",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-017",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। এটি কে পোস্ট করেছেন? ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/1379_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "noodle_ninja"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1379",
+   "stop noodle_ninja"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-018",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। এটি কে পোস্ট করেছেন? ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/128_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "krypton_kiran"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/128",
+   "stop krypton_kiran"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-019",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। এটি কে পোস্ট করেছেন? ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/1064_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "casual_cactus"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1064",
+   "stop casual_cactus"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-020",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। এটি কে পোস্ট করেছেন? ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/1986_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "byte_bandit"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1986",
+   "stop byte_bandit"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-021",
+  "site": "reddit",
+  "kind": "W3_author",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। এটি কে পোস্ট করেছেন? ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/758_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "harbor_hadi"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/758",
+   "stop harbor_hadi"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-022",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/223_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6",
+     "৬"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/223",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-023",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/1109_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "159",
+     "১৫৯"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1109",
+   "stop 159"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-024",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/1169_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "111",
+     "১১১"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1169",
+   "stop 111"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-025",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/220_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "115",
+     "১১৫"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/220",
+   "stop 115"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-026",
+  "site": "reddit",
+  "kind": "W4_score",
+  "intent": "f/whatisthisthing-এর একটি পোস্টে ছবির জিনিসটি দেখানো হয়েছে। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/1897_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "59",
+     "৫৯"
+    ],
+    "none_of": []
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "goto /post/1897",
+   "stop 59"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-027",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "ছবিতে এই পোস্টগুলোর একটির গাড়ি দেখানো হয়েছে: ‘করাচি-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2024 Buick Regal’, ‘পরের প্রজেক্ট হিসেবে একটা 2019 Buick Regal নিলাম’, ‘আজকের রাস্তার খোঁজ: 2019 Buick Regal’, ‘পরের প্রজেক্ট হিসেবে একটা 2018 Buick Regal নিলাম’। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/1417_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "66",
+     "৬৬"
+    ],
+    "none_of": [
+     "217",
+     "২১৭",
+     "105",
+     "১০৫",
+     "161",
+     "১৬১"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1417",
+   "goto /post/1445",
+   "goto /post/1673",
+   "goto /post/1012",
+   "goto /post/1417",
+   "stop 66"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-028",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "ছবিতে এই পোস্টগুলোর একটির গাড়ি দেখানো হয়েছে: ‘Sylphy-টা অবশেষে চালু হলো — ছবির ঢল’, ‘শীতের আগে: 2019 Sylphy-টাকে রাস্তার উপযোগী করা’, ‘আমার 2021 Nissan Sylphy প্রজেক্ট — অগ্রগতির ছবি’। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/772_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "133",
+     "১৩৩"
+    ],
+    "none_of": [
+     "96",
+     "৯৬",
+     "182",
+     "১৮২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/893",
+   "goto /post/772",
+   "goto /post/1324",
+   "goto /post/772",
+   "stop 133"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-029",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "ছবিতে এই পোস্টগুলোর একটির গাড়ি দেখানো হয়েছে: ‘A-Class-টা অবশেষে চালু হলো — ছবির ঢল’, ‘ইসলামাবাদ-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2024 Mercedes-Benz E-Class’, ‘আমার 2024 Mercedes-Benz E-Class প্রজেক্ট — অগ্রগতির ছবি’, ‘করাচি-তে হাঁটতে হাঁটতে এই Mercedes-Benz CLA-টা দেখে থমকে গেলাম’। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/1419_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "173",
+     "১৭৩"
+    ],
+    "none_of": [
+     "40",
+     "৪০",
+     "466",
+     "৪৬৬",
+     "125",
+     "১২৫"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1419",
+   "goto /post/475",
+   "goto /post/1120",
+   "goto /post/1316",
+   "goto /post/1419",
+   "stop 173"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-030",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "ছবিতে এই পোস্টগুলোর একটির গাড়ি দেখানো হয়েছে: ‘করাচি-তে হাঁটতে হাঁটতে এই Chevrolet Cruze-টা দেখে থমকে গেলাম’, ‘লাহোর-তে হাঁটতে হাঁটতে এই Chevrolet Aveo-টা দেখে থমকে গেলাম’, ‘আমার 2022 Chevrolet Malibu প্রজেক্ট — অগ্রগতির ছবি’। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/508_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "144",
+     "১৪৪"
+    ],
+    "none_of": [
+     "479",
+     "৪৭৯",
+     "218",
+     "২১৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1206",
+   "goto /post/1631",
+   "goto /post/508",
+   "goto /post/508",
+   "stop 144"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-031",
+  "site": "reddit",
+  "kind": "C1_score",
+  "intent": "ছবিতে এই পোস্টগুলোর একটির গাড়ি দেখানো হয়েছে: ‘করাচি-তে হাঁটতে হাঁটতে এই Peugeot 3008-টা দেখে থমকে গেলাম’, ‘আমার 2016 Cadillac XT5 প্রজেক্ট — অগ্রগতির ছবি’, ‘শীতের আগে: 2014 X3-টাকে রাস্তার উপযোগী করা’, ‘আমার 2013 Kia Sportage প্রজেক্ট — অগ্রগতির ছবি’। সেই পোস্টের স্কোর কত?",
+  "image": "sites/visual/reddit/static/post_images/1806_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "58",
+     "৫৮"
+    ],
+    "none_of": [
+     "209",
+     "২০৯",
+     "25",
+     "২৫",
+     "124",
+     "১২৪"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1066",
+   "goto /post/1806",
+   "goto /post/1221",
+   "goto /post/116",
+   "goto /post/1806",
+   "stop 58"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-032",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেটি সেভ করুন। এটি এই পোস্টগুলোর একটি: ‘আমার 2013 Audi A3 প্রজেক্ট — অগ্রগতির ছবি’, ‘আজকের রাস্তার খোঁজ: 2021 Volkswagen Polo’, ‘আজকের রাস্তার খোঁজ: 2023 Peugeot 206’, ‘আমার 2016 Volkswagen Polo প্রজেক্ট — অগ্রগতির ছবি’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/17_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 17
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 396
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1665
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 388
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/396",
+   "goto /post/17",
+   "goto /post/1665",
+   "goto /post/388",
+   "goto /post/17",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-033",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেটি সেভ করুন। এটি এই পোস্টগুলোর একটি: ‘শীতের আগে: 2018 X-Trail-টাকে রাস্তার উপযোগী করা’, ‘Atlas-টা অবশেষে চালু হলো — ছবির ঢল’, ‘Q5-টা অবশেষে চালু হলো — ছবির ঢল’, ‘আমার 2017 Honda HR-V প্রজেক্ট — অগ্রগতির ছবি’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1568_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1568
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1061
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 618
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 420
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1061",
+   "goto /post/618",
+   "goto /post/420",
+   "goto /post/1568",
+   "goto /post/1568",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-034",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেটি সেভ করুন। এটি এই পোস্টগুলোর একটি: ‘পরের প্রজেক্ট হিসেবে একটা 2021 Skoda Rapid নিলাম’, ‘আমার 2015 Tesla Model 3 প্রজেক্ট — অগ্রগতির ছবি’, ‘লাহোর-তে হাঁটতে হাঁটতে এই Hyundai Sonata-টা দেখে থমকে গেলাম’, ‘Corolla-টা অবশেষে চালু হলো — ছবির ঢল’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1532_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1532
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 931
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1389
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1098
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1532",
+   "goto /post/931",
+   "goto /post/1389",
+   "goto /post/1098",
+   "goto /post/1532",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-035",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেটি সেভ করুন। এটি এই পোস্টগুলোর একটি: ‘আজকের রাস্তার খোঁজ: 2020 Buick Envision’, ‘আমার 2023 Infiniti QX50 প্রজেক্ট — অগ্রগতির ছবি’, ‘পেশোয়ার-তে হাঁটতে হাঁটতে এই BMW X2-টা দেখে থমকে গেলাম’, ‘লাহোর-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2022 Renault Koleos’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/437_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 437
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 542
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 51
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 49
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/542",
+   "goto /post/51",
+   "goto /post/437",
+   "goto /post/49",
+   "goto /post/437",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-036",
+  "site": "reddit",
+  "kind": "C2_save",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেটি সেভ করুন। এটি এই পোস্টগুলোর একটি: ‘আমার 2024 Lincoln Corsair প্রজেক্ট — অগ্রগতির ছবি’, ‘শীতের আগে: 2019 Koleos-টাকে রাস্তার উপযোগী করা’, ‘আমার 2023 Mitsubishi Outlander প্রজেক্ট — অগ্রগতির ছবি’, ‘শীতের আগে: 2024 T-Roc-টাকে রাস্তার উপযোগী করা’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/4_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 4
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1475
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1936
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 329
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1475",
+   "goto /post/4",
+   "goto /post/1936",
+   "goto /post/329",
+   "goto /post/4",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-037",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেখানে 'দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!' মন্তব্য করুন। এটি এই পোস্টগুলোর একটি: ‘ফয়সালাবাদ-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2019 Kia Sportage’, ‘আজকের রাস্তার খোঁজ: 2023 Land Rover Range Rover’, ‘লাহোর-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2016 Audi Q3’, ‘করাচি-তে হাঁটতে হাঁটতে এই Hyundai Tucson-টা দেখে থমকে গেলাম’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1924_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1924,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 979,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 613,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 268,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/979",
+   "goto /post/613",
+   "goto /post/268",
+   "goto /post/1924",
+   "goto /post/1924",
+   "fill 3 body=দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-038",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেখানে 'দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!' মন্তব্য করুন। এটি এই পোস্টগুলোর একটি: ‘আজকের রাস্তার খোঁজ: 2014 Audi Q5’, ‘শীতের আগে: 2015 Discovery-টাকে রাস্তার উপযোগী করা’, ‘লাহোর-তে হাঁটতে হাঁটতে এই Chevrolet Captiva-টা দেখে থমকে গেলাম’, ‘Patrol-টা অবশেষে চালু হলো — ছবির ঢল’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1952_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1952,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 976,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1037,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 746,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/976",
+   "goto /post/1037",
+   "goto /post/746",
+   "goto /post/1952",
+   "goto /post/1952",
+   "fill 3 body=দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-039",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেখানে 'দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!' মন্তব্য করুন। এটি এই পোস্টগুলোর একটি: ‘ix35-টা অবশেষে চালু হলো — ছবির ঢল’, ‘লাহোর-তে হাঁটতে হাঁটতে এই Citroen C5 Aircross-টা দেখে থমকে গেলাম’, ‘আমার 2023 Buick Envision প্রজেক্ট — অগ্রগতির ছবি’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1156_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1156,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 284,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 201,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/284",
+   "goto /post/1156",
+   "goto /post/201",
+   "goto /post/1156",
+   "fill 3 body=দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-040",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেখানে 'দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!' মন্তব্য করুন। এটি এই পোস্টগুলোর একটি: ‘শীতের আগে: 2024 3 Series-টাকে রাস্তার উপযোগী করা’, ‘পেশোয়ার-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2023 Volkswagen Passat’, ‘শিয়ালকোট-তে হাঁটতে হাঁটতে এই Volkswagen Passat-টা দেখে থমকে গেলাম’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/1626_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1626,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1427,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1504,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1626",
+   "goto /post/1427",
+   "goto /post/1504",
+   "goto /post/1626",
+   "fill 3 body=দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-041",
+  "site": "reddit",
+  "kind": "C3_comment",
+  "intent": "ছবির গাড়িটি যে পোস্টে আছে সেখানে 'দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!' মন্তব্য করুন। এটি এই পোস্টগুলোর একটি: ‘লাহোর-তে হাঁটতে হাঁটতে এই Buick LaCrosse-টা দেখে থমকে গেলাম’, ‘আমার 2016 Mercedes-Benz S-Class প্রজেক্ট — অগ্রগতির ছবি’, ‘রাওয়ালপিন্ডি-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2016 Toyota Corolla’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/reddit/static/post_images/312_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 312,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 1998,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 988,
+     "author_id": 1,
+     "body": "দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/312",
+   "goto /post/1998",
+   "goto /post/988",
+   "goto /post/312",
+   "fill 3 body=দারুণ খোঁজ, শেয়ার করার জন্য ধন্যবাদ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-042",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "ছবির গাড়িটি কে পোস্ট করেছেন? এটি এই পোস্টগুলোর একটি: ‘ইসলামাবাদ-তে হাঁটতে হাঁটতে এই Honda Accord-টা দেখে থমকে গেলাম’, ‘মুলতান-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2018 Volkswagen Jetta’, ‘শীতের আগে: 2020 Teana-টাকে রাস্তার উপযোগী করা’। ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/1438_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "basil_baron"
+    ],
+    "none_of": [
+     "dune_darius",
+     "glacier_glen"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1438",
+   "goto /post/1080",
+   "goto /post/551",
+   "goto /post/1438",
+   "stop basil_baron"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-043",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "ছবির গাড়িটি কে পোস্ট করেছেন? এটি এই পোস্টগুলোর একটি: ‘আজকের রাস্তার খোঁজ: 2022 Nissan Sylphy’, ‘আমার 2020 Audi A7 প্রজেক্ট — অগ্রগতির ছবি’, ‘Mondeo-টা অবশেষে চালু হলো — ছবির ঢল’। ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/141_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "yellow_yakub"
+    ],
+    "none_of": [
+     "cider_cyra",
+     "harbor_hadi"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/141",
+   "goto /post/1893",
+   "goto /post/761",
+   "goto /post/141",
+   "stop yellow_yakub"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-044",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "ছবির গাড়িটি কে পোস্ট করেছেন? এটি এই পোস্টগুলোর একটি: ‘ইসলামাবাদ-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2022 BMW 5 Series’, ‘শীতের আগে: 2020 A4-টাকে রাস্তার উপযোগী করা’, ‘পরের প্রজেক্ট হিসেবে একটা 2013 Buick LaCrosse নিলাম’। ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/663_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "opal_omar"
+    ],
+    "none_of": [
+     "ember_elif",
+     "lens_flare"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/336",
+   "goto /post/663",
+   "goto /post/1693",
+   "goto /post/663",
+   "stop opal_omar"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-045",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "ছবির গাড়িটি কে পোস্ট করেছেন? এটি এই পোস্টগুলোর একটি: ‘পরের প্রজেক্ট হিসেবে একটা 2020 Nissan Sylphy নিলাম’, ‘আজকের রাস্তার খোঁজ: 2023 Volkswagen Passat’, ‘ইসলামাবাদ-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2019 Mercedes-Benz C-Class’। ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/831_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "lumen_lark"
+    ],
+    "none_of": [
+     "humble_hana",
+     "jolly_jasper"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/1029",
+   "goto /post/831",
+   "goto /post/1375",
+   "goto /post/831",
+   "stop lumen_lark"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-046",
+  "site": "reddit",
+  "kind": "C4_author",
+  "intent": "ছবির গাড়িটি কে পোস্ট করেছেন? এটি এই পোস্টগুলোর একটি: ‘পরের প্রজেক্ট হিসেবে একটা 2022 Honda Civic নিলাম’, ‘শীতের আগে: 2021 Elantra-টাকে রাস্তার উপযোগী করা’, ‘লাহোর-তে আমার অফিসের কাছে পার্ক করা ঝকঝকে 2023 Kia Cerato’। ইউজারনেম দিয়ে উত্তর দিন।",
+  "image": "sites/visual/reddit/static/post_images/835_1.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "violet_vega"
+    ],
+    "none_of": [
+     "wasabi_wren",
+     "xenon_xavi"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/835",
+   "goto /post/785",
+   "goto /post/1628",
+   "goto /post/835",
+   "stop violet_vega"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-047",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing-এ ছবির জিনিসটি দেখানো পোস্টটি খুঁজে বলুন প্রথম মন্তব্যে একে কী বলা হয়েছে। কোনো পোস্টে এটি না থাকলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-048",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing-এ ছবির জিনিসটি দেখানো পোস্টটি খুঁজে বলুন প্রথম মন্তব্যে একে কী বলা হয়েছে। কোনো পোস্টে এটি না থাকলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p75.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-049",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing-এ ছবির জিনিসটি দেখানো পোস্টটি খুঁজে বলুন প্রথম মন্তব্যে একে কী বলা হয়েছে। কোনো পোস্টে এটি না থাকলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p239.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-reddit-050",
+  "site": "reddit",
+  "kind": "T_not_posted",
+  "intent": "f/whatisthisthing-এ ছবির জিনিসটি দেখানো পোস্টটি খুঁজে বলুন প্রথম মন্তব্যে একে কী বলা হয়েছে। কোনো পোস্টে এটি না থাকলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/whatisthisthing",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ }
+]

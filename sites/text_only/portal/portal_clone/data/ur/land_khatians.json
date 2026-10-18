@@ -1,0 +1,310 @@
+[
+ {
+  "id": 1,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "دلاور حق",
+  "father_name": "منیر اسلام",
+  "land_type": "باغ"
+ },
+ {
+  "id": 2,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "دلاور حق",
+  "father_name": "منیر اسلام",
+  "land_type": "بنجر"
+ },
+ {
+  "id": 3,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "توفضل داس",
+  "father_name": "دلاور محمود",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 4,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "شہناز بھوئیاں",
+  "father_name": "رفیقل رحمٰن",
+  "land_type": "باغ"
+ },
+ {
+  "id": 5,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "منیر داس",
+  "father_name": "غلام چودھری",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 6,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "منیر داس",
+  "father_name": "غلام چودھری",
+  "land_type": "باغ"
+ },
+ {
+  "id": 7,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "امینل چودھری",
+  "father_name": "دلاور منڈل",
+  "land_type": "باغ"
+ },
+ {
+  "id": 8,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "ثبینہ خان",
+  "father_name": "فاروق منڈل",
+  "land_type": "زرعی"
+ },
+ {
+  "id": 9,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "غلام خان",
+  "father_name": "تنویر گپتا",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 10,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "غلام خان",
+  "father_name": "تنویر گپتا",
+  "land_type": "باغ"
+ },
+ {
+  "id": 11,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "یاسمین گپتا",
+  "father_name": "کمرل رحمٰن",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 12,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "ریحانہ داس",
+  "father_name": "شفیقل منڈل",
+  "land_type": "زرعی"
+ },
+ {
+  "id": 13,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "ریحانہ داس",
+  "father_name": "شفیقل منڈل",
+  "land_type": "زرعی"
+ },
+ {
+  "id": 14,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "ثبینہ ساہا",
+  "father_name": "مصطفیٰ چودھری",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 15,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "ثبینہ ساہا",
+  "father_name": "مصطفیٰ چودھری",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 16,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "مصطفیٰ حسین",
+  "father_name": "عبدال حسین",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 17,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "اشرفل بیگم",
+  "father_name": "دلاور منڈل",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 18,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "عبدال بھوئیاں",
+  "father_name": "جاشم عالم",
+  "land_type": "باغ"
+ },
+ {
+  "id": 19,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "جہانگیر حق",
+  "father_name": "توفضل خان",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 20,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "توفضل کریم",
+  "father_name": "کمرل بیگم",
+  "land_type": "بنجر"
+ },
+ {
+  "id": 21,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "توفضل کریم",
+  "father_name": "کمرل بیگم",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 22,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "خالد اختر",
+  "father_name": "حبیبر حق",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 23,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "جہاں آرا بڑوا",
+  "father_name": "محبوب داس",
+  "land_type": "بنجر"
+ },
+ {
+  "id": 24,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "جہاں آرا بڑوا",
+  "father_name": "محبوب داس",
+  "land_type": "باغ"
+ },
+ {
+  "id": 25,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "رقیہ کریم",
+  "father_name": "رضاءل صدیق",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 26,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "کوہ نور عالم",
+  "father_name": "خالد داس",
+  "land_type": "باغ"
+ },
+ {
+  "id": 27,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "کوہ نور عالم",
+  "father_name": "خالد داس",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 28,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "فاروق رائے",
+  "father_name": "توفضل ملا",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 29,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "لطفہ محمود",
+  "father_name": "تنویر رحمٰن",
+  "land_type": "باغ"
+ },
+ {
+  "id": 30,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "لطفہ محمود",
+  "father_name": "تنویر رحمٰن",
+  "land_type": "باغ"
+ },
+ {
+  "id": 31,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "شہیدل حق",
+  "father_name": "عبدال خان",
+  "land_type": "بنجر"
+ },
+ {
+  "id": 32,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "شہیدل حق",
+  "father_name": "عبدال خان",
+  "land_type": "بنجر"
+ },
+ {
+  "id": 33,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "رضاءل حق",
+  "father_name": "نذرل محمود",
+  "land_type": "باغ"
+ },
+ {
+  "id": 34,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "رضاءل خان",
+  "father_name": "رفیقل چودھری",
+  "land_type": "باغ"
+ },
+ {
+  "id": 35,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "رضاءل خان",
+  "father_name": "رفیقل چودھری",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 36,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "کوہ نور گپتا",
+  "father_name": "رضاءل بڑوا",
+  "land_type": "بنجر"
+ },
+ {
+  "id": 37,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "کوہ نور گپتا",
+  "father_name": "رضاءل بڑوا",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 38,
+  "khatian_type": "ایس.اے.",
+  "owner_name": "انور صدیق",
+  "father_name": "نورل چودھری",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 39,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "ریحانہ رحمٰن",
+  "father_name": "زاہد بھوئیاں",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 40,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "عبدال عالم",
+  "father_name": "کمرل بڑوا",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 41,
+  "khatian_type": "سی.ایس.",
+  "owner_name": "عبدال عالم",
+  "father_name": "کمرل بڑوا",
+  "land_type": "رہائشی"
+ },
+ {
+  "id": 42,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "دلربا عالم",
+  "father_name": "نذرل میاں",
+  "land_type": "تالاب"
+ },
+ {
+  "id": 43,
+  "khatian_type": "آر.ایس.",
+  "owner_name": "دلربا عالم",
+  "father_name": "نذرل میاں",
+  "land_type": "باغ"
+ },
+ {
+  "id": 44,
+  "khatian_type": "بی.ایس.",
+  "owner_name": "زاہد رحمٰن",
+  "father_name": "محبوب رحمٰن",
+  "land_type": "رہائشی"
+ }
+]

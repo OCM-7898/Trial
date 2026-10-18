@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.pnr_check }}</h1>
+<div class="card">
+  <form method="post" action="/pnr">
+    <label>{{ S.pnr_no }}</label>
+    <input type="text" name="pnr">
+    <button type="submit">{{ S.check }}</button>
+  </form>
+</div>
+{% if searched %}
+  {% if b %}
+  <div class="card">
+    <table>
+      <tr><th>PNR</th><td>{{ b.pnr }}</td></tr>
+      <tr><th>{{ S.train }}</th>
+          <td>{{ b.train_no }} {{ tname(b.train_no) }}</td></tr>
+      <tr><th>{{ S.station }}</th>
+          <td>{{ sname(b.from_code) }} → {{ sname(b.to_code) }} · {{ b.date }}</td></tr>
+      <tr><th>{{ S.cls }}</th><td>{{ b.class_code }}</td></tr>
+      <tr><th>{{ S.passenger }}</th>
+          <td>{{ b.passenger }}, {{ nd(b.age) }}</td></tr>
+      <tr><th>{{ S.status }}</th>
+          <td><span class="st-{{ b.status }}">{{ b.status }} — {{ S["st_" ~ b.status] }}</span></td></tr>
+    </table>
+  </div>
+  {% else %}
+  <div class="error">{{ S.pnr_not_found }}</div>
+  {% endif %}
+{% endif %}
+{% endblock %}

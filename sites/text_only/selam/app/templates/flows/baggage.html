@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "flows/_segment_header.html" import segment_header %}
+{% block title %}{{ t("baggage.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('manage_pnr', pnr=booking.pnr) }}">{{ booking.pnr }}</a></li>
+        <li>{{ t("baggage.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("baggage.title") }}</h1>
+  {{ segment_header(view) }}
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+
+  {% if rule %}
+  <p>{{ t("baggage.included", pieces=rule.checked_pieces, kg=rule.checked_kg) }}</p>
+  <p>{{ t("baggage.rate", amount=fmt_money(rule.extra_kg_price_usd)) }}</p>
+
+  <form class="searchform" method="post" action="{{ path('bag_add', pnr=booking.pnr) }}">
+    <input type="hidden" name="segment_id" value="{{ view.segment.id }}">
+    <div class="field">
+      <label for="extra_kg">{{ t("baggage.extra_kg") }}</label>
+      <select id="extra_kg" name="extra_kg">
+        {% for kg in [5, 10, 15, 20, 23, 30] %}
+        <option value="{{ kg }}">{{ t("manage.kg", n=kg) }} &mdash; {{ fmt_money(kg * rule.extra_kg_price_usd) }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("baggage.add") }}</button></div>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

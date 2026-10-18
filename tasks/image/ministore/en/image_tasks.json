@@ -1,0 +1,2044 @@
+[
+ {
+  "id": "image-ministore-001",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Merrill Queen Headboard with Decorative Nailhead Trim’, ‘Bridgewater Curved Queen Headboard’, ‘Glenwilde Full Headboard’, ‘Katama Slipcover Queen Headboard’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p921.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "89.99"
+    ],
+    "none_of": [
+     "99.99",
+     "119.00",
+     "129.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Glenwilde%20Full%20Headboard",
+   "view 0",
+   "goto /product/1112",
+   "goto /product/919",
+   "goto /product/921",
+   "goto /product/867",
+   "stop 89.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-002",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Lawson Modern Angled Leather Chair’, ‘Armless Tufted Turned Wood Leg Accent Chair’, ‘Cheyanne Modern Accent Arm Chair’, ‘Curved Tufted Velvet Accent Chair’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p980.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "149.00"
+    ],
+    "none_of": [
+     "249.00",
+     "129.00",
+     "109.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cheyanne%20Modern%20Accent%20Arm%20Chair",
+   "view 0",
+   "goto /product/920",
+   "goto /product/874",
+   "goto /product/980",
+   "goto /product/953",
+   "stop 149.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-003",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Avondale Nailhead Trim Queen Bed with Headboard’, ‘College Dorm Bed-in-a-Bag with Elastic Storage Pockets’, ‘Fairmount Industrial Metal King Bed with Headboard’, ‘Modern Wood King Bed’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p1113.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "229.00"
+    ],
+    "none_of": [
+     "399.00",
+     "69.99",
+     "299.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Fairmount%20Industrial%20Metal%20King%20Bed%20with%20Headboard",
+   "view 0",
+   "goto /product/1081",
+   "goto /product/1002",
+   "goto /product/1113",
+   "goto /product/1127",
+   "stop 229.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-004",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Elevated Cooling Pet Bed Classic’, ‘Round Pet Bed’, ‘Raised Pet Bed’, ‘Foam Pet Bed for Cats or Dogs’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p2003.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "29.99"
+    ],
+    "none_of": [
+     "19.99",
+     "22.99",
+     "14.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Elevated%20Cooling%20Pet%20Bed%20Classic",
+   "view 0",
+   "goto /product/2003",
+   "goto /product/1958",
+   "goto /product/1974",
+   "goto /product/1775",
+   "stop 29.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-005",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Gaming Chat Headset for PlayStation 4 with Microphone’, ‘PlayStation 3 Wired USB Chat Headset’, ‘Gaming Headset with Microphone for PC’, ‘Pro Gaming Headset’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p240.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "19.99"
+    ],
+    "none_of": [
+     "24.99",
+     "12.99",
+     "39.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Gaming%20Headset%20with%20Microphone%20for%20PC",
+   "view 0",
+   "goto /product/86",
+   "goto /product/74",
+   "goto /product/240",
+   "goto /product/171",
+   "stop 19.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-006",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Microfiber Flat Sheet’, ‘Premium Microfibre Flat Sheet’, ‘400 Thread Count Sheet Set’, ‘400TC Cotton Sateen Wrinkle Free Flat Sheet’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p1096.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "11.99"
+    ],
+    "none_of": [
+     "12.99",
+     "34.99",
+     "27.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Premium%20Microfibre%20Flat%20Sheet",
+   "view 0",
+   "goto /product/1176",
+   "goto /product/1096",
+   "goto /product/1118",
+   "goto /product/1202",
+   "stop 11.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-007",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Large Cat Scratching Post Tree Tower with Platform Bed’, ‘Multi Platform Steps Cat Tree Tower’, ‘Small Cat Tree Tower With Condo And Scratching Post’, ‘Cat Tree Sisal Scratching Posts Cats Tower with Plush Condo’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p1873.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "44.99"
+    ],
+    "none_of": [
+     "69.99",
+     "54.99",
+     "64.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Small%20Cat%20Tree%20Tower%20With%20Condo%20And%20Scratching%20Post",
+   "view 0",
+   "goto /product/1813",
+   "goto /product/1847",
+   "goto /product/1873",
+   "goto /product/1996",
+   "stop 44.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-008",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘White Board Markers Set’, ‘Retractable Permanent Markers’, ‘Bullet/Chisel Reversible Tip Chalk Markers’, ‘Whiteboard Markers Set’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p2093.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "7.99"
+    ],
+    "none_of": [
+     "7.49",
+     "8.99",
+     "6.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Bullet/Chisel%20Reversible%20Tip%20Chalk%20Markers",
+   "view 0",
+   "goto /product/2185",
+   "goto /product/2101",
+   "goto /product/2093",
+   "goto /product/2171",
+   "stop 7.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-009",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Pink Teddy 3.5 Feet Standing Classic’, ‘Beige Teddy 3.5 Feet Standing Family Size’, ‘Cream Teddy 60 cm Classic’, ‘Brown Teddy 3.5 Feet Standing Compact’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p1724.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "34.99"
+    ],
+    "none_of": [
+     "44.99",
+     "64.99",
+     "12.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Brown%20Teddy%203.5%20Feet%20Standing%20Compact",
+   "view 0",
+   "goto /product/1663",
+   "goto /product/1734",
+   "goto /product/1661",
+   "goto /product/1724",
+   "stop 34.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-010",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘160 Gram Plaid Flannel Cotton Duvet Cover’, ‘Essentials Microfiber Duvet Cover Set’, ‘100% Linen Duvet Cover Set-135x200+1x80x80cm’, ‘Kids Printed Multi Dots Full/Queen Duvet Cover’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p1006.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "17.99"
+    ],
+    "none_of": [
+     "48.99",
+     "89.00",
+     "24.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Essentials%20Microfiber%20Duvet%20Cover%20Set",
+   "view 0",
+   "goto /product/1137",
+   "goto /product/1006",
+   "goto /product/929",
+   "goto /product/984",
+   "stop 17.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-011",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Traditional Dining Table 29\"H’, ‘Parson Wood Side End Table’, ‘Eastport Industrial Wood Nightstand Table’, ‘Tucana Engineered Wood Bedside Table with Drawer’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1248.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1248
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1166
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 923
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 986
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Eastport%20Industrial%20Wood%20Nightstand%20Table",
+   "view 0",
+   "goto /product/1166",
+   "goto /product/923",
+   "goto /product/1248",
+   "goto /product/986",
+   "goto /product/1248",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-012",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Modern Farmhouse Wood Base Adjustable Living Room Floor Lamp’, ‘Accent Bedroom Table Lamp With LED Light Bulb’, ‘Rustic Farmhouse Jug Living Room Table Lamp With LED Light Bulb’, ‘Modern Ceramic Table Lamp with Geometric-Patterned Base’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1042.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1042
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1135
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1054
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Accent%20Bedroom%20Table%20Lamp%20With%20LED%20Light%20Bulb",
+   "view 0",
+   "goto /product/1135",
+   "goto /product/1042",
+   "goto /product/1200",
+   "goto /product/1054",
+   "goto /product/1042",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-013",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Strathwood Umbrella Furniture Cover’, ‘Round Patio Fire Pit Cover’, ‘Fire Pit Patio Cover’, ‘Gas Grill Barbecue Cover’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1376.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1496
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1382
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Fire%20Pit%20Patio%20Cover",
+   "view 0",
+   "goto /product/1496",
+   "goto /product/1382",
+   "goto /product/1376",
+   "goto /product/1304",
+   "goto /product/1376",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-014",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Truve Modern Studded Ottoman’, ‘Audrey Modern Ottoman’, ‘Modern Oversized Upholstered Square Ottoman’, ‘Strathwood Brooklyn Leather Ottoman’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p906.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 906
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1107
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 990
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1171
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Truve%20Modern%20Studded%20Ottoman",
+   "view 0",
+   "goto /product/906",
+   "goto /product/1107",
+   "goto /product/990",
+   "goto /product/1171",
+   "goto /product/906",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-015",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Alaina Contemporary Leather High-Back Swivel Seat Counter Stool’, ‘Alaina Contemporary High-Back’, ‘Modern Plush High-Pile Shag Area Rug’, ‘Celinda Tufted High-Back Barstool’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1164.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 896
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 972
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 946
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alaina%20Contemporary%20Leather%20High-Back%20Swivel%20Seat%20Counter%20Stool",
+   "view 0",
+   "goto /product/1164",
+   "goto /product/896",
+   "goto /product/972",
+   "goto /product/946",
+   "goto /product/1164",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-016",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Contemporary Striated Jute Area Rug’, ‘Modern Wave Cosmopolitan Area Rug’, ‘Woven Bordered Sisal Area Rug’, ‘Pink Global Floral Wool Rug’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1048.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1048
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1069
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 882
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 898
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Woven%20Bordered%20Sisal%20Area%20Rug",
+   "view 0",
+   "goto /product/1069",
+   "goto /product/882",
+   "goto /product/1048",
+   "goto /product/898",
+   "goto /product/1048",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-017",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Pet Cave Bed’, ‘Collapsible Cube Cat Bed’, ‘Cuddler Pet Bed’, ‘Essential Soft & Comfy Bolster Lounge Dog Bed’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1833.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1833
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1932
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1857
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1933
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Collapsible%20Cube%20Cat%20Bed",
+   "view 0",
+   "goto /product/1932",
+   "goto /product/1833",
+   "goto /product/1857",
+   "goto /product/1933",
+   "goto /product/1833",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-018",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Plastic Shot Glass’, ‘Shatterproof Stemless Wine Glass’, ‘Nia High Ball Glass Set’, ‘Electric Glass and Steel Kettle’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p580.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 580
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 485
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 445
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 512
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Nia%20High%20Ball%20Glass%20Set",
+   "view 0",
+   "goto /product/485",
+   "goto /product/445",
+   "goto /product/580",
+   "goto /product/512",
+   "goto /product/580",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-019",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Olander Mid-Century Modern Recliner Chair with a Swivel Base’, ‘Mid-Century Modern Brass Trimmed Table Lamp with LED Light Bulb’, ‘Uptown Mid-Century Tufted Customizable Daybed Sofa’, ‘Ava Mid-Century Modern Upholstered Ottoman’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1065.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1065
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1007
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1090
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 851
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ava%20Mid-Century%20Modern%20Upholstered%20Ottoman",
+   "view 0",
+   "goto /product/1007",
+   "goto /product/1090",
+   "goto /product/851",
+   "goto /product/1065",
+   "goto /product/1065",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-020",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Aiden Tufted Mid-Century Velvet Bench Seat Sofa’, ‘Mid-Century Modern White Marble and Metal Side End Table’, ‘Uptown Mid-Century Modern Tufted Velvet Daybed Loveseat’, ‘Mid-Century Swivel Chair’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1229.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1229
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 934
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1106
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 950
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Aiden%20Tufted%20Mid-Century%20Velvet%20Bench%20Seat%20Sofa",
+   "view 0",
+   "goto /product/1229",
+   "goto /product/934",
+   "goto /product/1106",
+   "goto /product/950",
+   "goto /product/1229",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-021",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '310 Elm Rd, Madison, 53703'. It is one of: ‘Brown Teddy 60 cm Family Size’, ‘Pink Teddy 33 cm Twin Pack’, ‘Cream Teddy 33 cm Family Size’, ‘Beige Teddy 3.5 Feet Standing Classic’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1746.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%310 Elm Rd, Madison, 53703%",
+    "items": {
+     "1746": 1
+    },
+    "total": 24.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1683
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1743
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1650
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Brown%20Teddy%2060%20cm%20Family%20Size",
+   "view 0",
+   "goto /product/1746",
+   "goto /product/1683",
+   "goto /product/1743",
+   "goto /product/1650",
+   "goto /product/1746",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=310 Elm Rd, Madison, 53703",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-022",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '41 Maple St, Reno, 89501'. It is one of: ‘Modern Geometric Ceramic Planter’, ‘Round Wall Mount Planter’, ‘Recycled Wood Deck Hanging Planter’, ‘Medium Windowpane Footed Stoneware Planter’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1297.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%41 Maple St, Reno, 89501%",
+    "items": {
+     "1297": 1
+    },
+    "total": 24.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1357
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1480
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1263
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Recycled%20Wood%20Deck%20Hanging%20Planter",
+   "view 0",
+   "goto /product/1357",
+   "goto /product/1480",
+   "goto /product/1297",
+   "goto /product/1263",
+   "goto /product/1297",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=41 Maple St, Reno, 89501",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-023",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '68 Willow Dr, Boise, 83702'. It is one of: ‘100% Stoneware Planter’, ‘Wicker Planter with Trellis’, ‘Terrazzo Planter with Wood Stand’, ‘Geometric Ceramic Planter’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1383.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%68 Willow Dr, Boise, 83702%",
+    "items": {
+     "1383": 1
+    },
+    "total": 17.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1261
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1283
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1371
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=100%25%20Stoneware%20Planter",
+   "view 0",
+   "goto /product/1383",
+   "goto /product/1261",
+   "goto /product/1283",
+   "goto /product/1371",
+   "goto /product/1383",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=68 Willow Dr, Boise, 83702",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-024",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '7 Juniper Ave, Salem, 97301'. It is one of: ‘Cream Teddy 33 cm’, ‘Beige Teddy 3.5 Feet Standing’, ‘Brown Teddy 3.5 Feet Standing’, ‘Pink Teddy 33 cm’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1640.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%7 Juniper Ave, Salem, 97301%",
+    "items": {
+     "1640": 1
+    },
+    "total": 44.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1631
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1622
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1627
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Brown%20Teddy%203.5%20Feet%20Standing",
+   "view 0",
+   "goto /product/1631",
+   "goto /product/1622",
+   "goto /product/1640",
+   "goto /product/1627",
+   "goto /product/1640",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=7 Juniper Ave, Salem, 97301",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-025",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '150 Aspen Pl, Ogden, 84401'. It is one of: ‘Beige Teddy 3.5 Feet Standing Compact’, ‘Cream Teddy 33 cm Twin Pack’, ‘Brown Teddy 60 cm Twin Pack’, ‘Pink Teddy 60 cm Family Size’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1690.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%150 Aspen Pl, Ogden, 84401%",
+    "items": {
+     "1690": 1
+    },
+    "total": 32.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1706
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1687
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1732
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Brown%20Teddy%2060%20cm%20Twin%20Pack",
+   "view 0",
+   "goto /product/1706",
+   "goto /product/1687",
+   "goto /product/1690",
+   "goto /product/1732",
+   "goto /product/1690",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=150 Aspen Pl, Ogden, 84401",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-026",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '26 Poplar Ln, Fresno, 93650'. It is one of: ‘Extra Thick Exercise Yoga Gym Floor Mat with Carrying Strap’, ‘1.27 cm Thick Yoga Mat 6 Piece Set’, ‘TPE Yoga Mat’, ‘TPE & Suede Yoga Mat’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p684.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%26 Poplar Ln, Fresno, 93650%",
+    "items": {
+     "684": 1
+    },
+    "total": 19.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 818
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 682
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 706
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Extra%20Thick%20Exercise%20Yoga%20Gym%20Floor%20Mat%20with%20Carrying%20Strap",
+   "view 0",
+   "goto /product/684",
+   "goto /product/818",
+   "goto /product/682",
+   "goto /product/706",
+   "goto /product/684",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=26 Poplar Ln, Fresno, 93650",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-027",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '88 Laurel St, Tucson, 85701'. It is one of: ‘Malida Mid-Century Modern Open Back Swivel Kitchen Bar Stool’, ‘Aiden Mid-Century Sofa with Tapered Wood Legs’, ‘Ray Mid-Century Modern Kitchen Dining Room Chairs’, ‘Mid-Century Modern Double Circle Plug-In Hanging Pendant’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p910.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%88 Laurel St, Tucson, 85701%",
+    "items": {
+     "910": 1
+    },
+    "total": 79.99
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1155
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1077
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 904
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Malida%20Mid-Century%20Modern%20Open%20Back%20Swivel%20Kitchen%20Bar%20Stool",
+   "view 0",
+   "goto /product/910",
+   "goto /product/1155",
+   "goto /product/1077",
+   "goto /product/904",
+   "goto /product/910",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=88 Laurel St, Tucson, 85701",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-028",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '13 Sycamore Rd, Akron, 44301'. It is one of: ‘Corona Magazine Table’, ‘Modern Round Metal Side End Accent Table’, ‘Ian Modern Medium Dining Kitchen Table’, ‘Phoenix Home Granite Round Plastic Bar Height Folding Table’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p1243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%13 Sycamore Rd, Akron, 44301%",
+    "items": {
+     "1243": 1
+    },
+    "total": 159.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 967
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1125
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1046
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ian%20Modern%20Medium%20Dining%20Kitchen%20Table",
+   "view 0",
+   "goto /product/967",
+   "goto /product/1125",
+   "goto /product/1243",
+   "goto /product/1046",
+   "goto /product/1243",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=13 Sycamore Rd, Akron, 44301",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-029",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "Which brand sells the product shown in the photo? It is one of: ‘Movian Aero Coffee Table’, ‘Industrial Desk Table’, ‘Parker Round Shelf Storage Coffee Table’, ‘Industrial Cafe Table’.",
+  "image": "sites/visual/ministore/static/img/products/p1196.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ravenna Home"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Parker%20Round%20Shelf%20Storage%20Coffee%20Table",
+   "view 0",
+   "goto /product/1017",
+   "goto /product/1040",
+   "goto /product/1196",
+   "goto /product/1059",
+   "stop Ravenna Home"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-030",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "Which brand sells the product shown in the photo? It is one of: ‘Essentials Foam Brush Set of 6 Stamp Painter Travel Edition’, ‘Penguin Open Eyes Ash Travel Edition’, ‘12\" Wild Onez Tiger Travel Edition’, ‘Putty Slime 4\" Tin Travel Edition’.",
+  "image": "sites/visual/ministore/static/img/products/p1764.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Umi."
+    ],
+    "none_of": [
+     "Amazon Brand - Jam & Honey",
+     "Amazon Brand - Jam and Honey",
+     "AmazonBasics"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Essentials%20Foam%20Brush%20Set%20of%206%20Stamp%20Painter%20Travel%20Edition",
+   "view 0",
+   "goto /product/1764",
+   "goto /product/1763",
+   "goto /product/1761",
+   "goto /product/1756",
+   "stop Umi."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-031",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "Which brand sells the product shown in the photo? It is one of: ‘Topstar 70570BB00 Swivel Chair for Children and Teenagers High’, ‘Dunford Casual Rolled Arm Chair’, ‘Bayard Contemporary Leather Living Room Chair with Curved Back’, ‘Cedar Upholstered Accent Chair with Nailheads’.",
+  "image": "sites/visual/ministore/static/img/products/p983.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Stone & Beam"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Rivet",
+     "Top Star"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cedar%20Upholstered%20Accent%20Chair%20with%20Nailheads",
+   "view 0",
+   "goto /product/959",
+   "goto /product/1074",
+   "goto /product/944",
+   "goto /product/983",
+   "stop Stone & Beam"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-032",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "Which brand sells the product shown in the photo? It is one of: ‘Ross Modern Fabric Lift-Top Storage Ottoman Pouf’, ‘Movian Aggol Lift-Top Coffee Table’, ‘Alkove Hayes Lift-Top Solid Wood Coffee Table with 1-Drawer’.",
+  "image": "sites/visual/ministore/static/img/products/p870.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Alkove"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Alkove%20Hayes%20Lift-Top%20Solid%20Wood%20Coffee%20Table%20with%201-Drawer",
+   "view 0",
+   "goto /product/1020",
+   "goto /product/979",
+   "goto /product/870",
+   "stop Alkove"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-033",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "Which brand sells the product shown in the photo? It is one of: ‘Essentials Stand for Apple Watch Charger’, ‘FITUEYES PS304003WB Printer Stand’, ‘Adjustable Tablet Holder Stand’.",
+  "image": "sites/visual/ministore/static/img/products/p291.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonBasics"
+    ],
+    "none_of": [
+     "Eono",
+     "Unbranded"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Adjustable%20Tablet%20Holder%20Stand",
+   "view 0",
+   "goto /product/206",
+   "goto /product/230",
+   "goto /product/291",
+   "stop AmazonBasics"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-034",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "Which brand sells the product shown in the photo? It is one of: ‘Premium Bed Pillow’, ‘Industrial Leather Detail Throw Pillow’, ‘Vintage Throw Pillow’.",
+  "image": "sites/visual/ministore/static/img/products/p1215.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Premium%20Bed%20Pillow",
+   "view 0",
+   "goto /product/1215",
+   "goto /product/1116",
+   "goto /product/1145",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-035",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "How many reviews does the product shown in the photo have? It is one of: ‘Bluetooth stereo speaker with water resistant design’, ‘Micro Bluetooth Speaker’, ‘Bose SoundLink Micro Waterproof Bluetooth speaker with’, ‘Mini Bluetooth Speaker’.",
+  "image": "sites/visual/ministore/static/img/products/p151.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ],
+    "none_of": [
+     "0",
+     "5",
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Mini%20Bluetooth%20Speaker",
+   "view 0",
+   "goto /product/147",
+   "goto /product/219",
+   "goto /product/40",
+   "goto /product/151",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-036",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "How many reviews does the product shown in the photo have? It is one of: ‘Cream Teddy 60 cm Compact’, ‘Brown Teddy 3.5 Feet Standing Twin Pack’, ‘Pink Teddy 3.5 Feet Standing Family Size’, ‘Beige Teddy 3.5 Feet Standing Twin Pack’.",
+  "image": "sites/visual/ministore/static/img/products/p1747.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3"
+    ],
+    "none_of": [
+     "2",
+     "0",
+     "5"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Pink%20Teddy%203.5%20Feet%20Standing%20Family%20Size",
+   "view 0",
+   "goto /product/1717",
+   "goto /product/1696",
+   "goto /product/1747",
+   "goto /product/1678",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-037",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "How many reviews does the product shown in the photo have? It is one of: ‘Bigelow Modern Leather Sofa with Square Legs’, ‘Mayes Sloped Nailhead Sofa’, ‘Elizabeth Contemporary Loveseat Sofa’, ‘Charles Classic Oversized Leather Sofa’.",
+  "image": "sites/visual/ministore/static/img/products/p1160.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ],
+    "none_of": [
+     "10",
+     "12",
+     "0"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Elizabeth%20Contemporary%20Loveseat%20Sofa",
+   "view 0",
+   "goto /product/1158",
+   "goto /product/999",
+   "goto /product/1160",
+   "goto /product/987",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-038",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "How many reviews does the product shown in the photo have? It is one of: ‘Mid-Century Modern Ceramic and Bamboo Planter Flower Pot with’, ‘Mid-Century 100% Stoneware Planter’, ‘Mid-Century Ceramic Planter with Iron Stand 9.1\"H’, ‘Mid-Century Patterned Planter’.",
+  "image": "sites/visual/ministore/static/img/products/p1254.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1"
+    ],
+    "none_of": [
+     "6",
+     "2",
+     "3"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Mid-Century%20Ceramic%20Planter%20with%20Iron%20Stand%209.1%22H",
+   "view 0",
+   "goto /product/1401",
+   "goto /product/1462",
+   "goto /product/1254",
+   "goto /product/1390",
+   "stop 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-039",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "How many reviews does the product shown in the photo have? It is one of: ‘Herring Medallion Traditional Area Rug’, ‘Modern Geometric Wool Area Rug’, ‘Casual Plaid Rug’, ‘Contemporary Hourglass Wool Area Rug’.",
+  "image": "sites/visual/ministore/static/img/products/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ],
+    "none_of": [
+     "2",
+     "5",
+     "1"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Herring%20Medallion%20Traditional%20Area%20Rug",
+   "view 0",
+   "goto /product/928",
+   "goto /product/1086",
+   "goto /product/1015",
+   "goto /product/1024",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-040",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "How many reviews does the product shown in the photo have? It is one of: ‘Contemporary Metal Floor Lamp with Mercury Glass Accent’, ‘Vintage Task Table Desk Lamp with LED Light Bulb’, ‘Traditional Chinoiserie Ceramic Table Lamp’, ‘Traditional Metal Downbridge Desk Lamp with Adjustable Shade’.",
+  "image": "sites/visual/ministore/static/img/products/p1009.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5"
+    ],
+    "none_of": [
+     "6",
+     "3",
+     "0"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Contemporary%20Metal%20Floor%20Lamp%20with%20Mercury%20Glass%20Accent",
+   "view 0",
+   "goto /product/1009",
+   "goto /product/1091",
+   "goto /product/1070",
+   "goto /product/1139",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-041",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "Find the product shown in the photo in this shop and report its price. If the shop does not sell it, answer N/A.",
+  "image": "assets/trap_photos/p661.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not found",
+     "no such product",
+     "does not exist",
+     "not listed",
+     "not available",
+     "not be found",
+     "could not find",
+     "couldn't find",
+     "cannot find"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1645",
+   "goto /product/1632",
+   "goto /product/1759",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-042",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "Find the product shown in the photo in this shop and report its price. If the shop does not sell it, answer N/A.",
+  "image": "assets/trap_photos/p442.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not found",
+     "no such product",
+     "does not exist",
+     "not listed",
+     "not available",
+     "not be found",
+     "could not find",
+     "couldn't find",
+     "cannot find"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/936",
+   "goto /product/1039",
+   "goto /product/966",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-043",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "Find the product shown in the photo in this shop and report its price. If the shop does not sell it, answer N/A.",
+  "image": "assets/trap_photos/p402.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not found",
+     "no such product",
+     "does not exist",
+     "not listed",
+     "not available",
+     "not be found",
+     "could not find",
+     "couldn't find",
+     "cannot find"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1205",
+   "goto /product/1234",
+   "goto /product/1185",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-044",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "Find the product shown in the photo in this shop and report its price. If the shop does not sell it, answer N/A.",
+  "image": "assets/trap_photos/p698.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "not found",
+     "no such product",
+     "does not exist",
+     "not listed",
+     "not available",
+     "not be found",
+     "could not find",
+     "couldn't find",
+     "cannot find"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1762",
+   "goto /product/1644",
+   "goto /product/1708",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-045",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Amelia Modern 74\" Sofa’, ‘Victoria Fabric 3 seater sofa’, ‘Blaine Modern Loveseat Sofa’, ‘Emerly Modern Sectional Sofa’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p1004.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "549.00"
+    ],
+    "none_of": [
+     "449.00",
+     "399.00",
+     "699.00"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amelia%20Modern%2074%22%20Sofa",
+   "view 0",
+   "goto /product/1004",
+   "goto /product/878",
+   "goto /product/916",
+   "goto /product/1163",
+   "stop 549.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-046",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "The photo shows a product sold in this shop. It is one of: ‘Copper Bottle and Jug Combo’, ‘Stainless Steel Insulated Water Bottle with Spout Lid’, ‘Shaker Bottle with Mixer Ball’, ‘Boroscilicate Glass Water Bottle with Sleeve’. What is its price?",
+  "image": "sites/visual/ministore/static/img/products/p381.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "14.99"
+    ],
+    "none_of": [
+     "17.99",
+     "16.99",
+     "8.99"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Boroscilicate%20Glass%20Water%20Bottle%20with%20Sleeve",
+   "view 0",
+   "goto /product/465",
+   "goto /product/444",
+   "goto /product/325",
+   "goto /product/381",
+   "stop 14.99"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-047",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "Add the product shown in the photo to your wishlist. It is one of: ‘Viewridge Upholstered Rocking Recliner Chair with Swivel’, ‘Sloped Nailhead Trim Accent Chair’, ‘Bonded Leather Big & Tall Executive Office Computer Desk Chair’, ‘Bradbury Chesterfield Classic Chair’. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p964.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 964
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1203
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 956
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 864
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Bradbury%20Chesterfield%20Classic%20Chair",
+   "view 0",
+   "goto /product/1203",
+   "goto /product/956",
+   "goto /product/864",
+   "goto /product/964",
+   "goto /product/964",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-048",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "Open the product page of ‘C Cell Everyday Alkaline Batteries’. According to its photo, how many units come in the pack?",
+  "image": "sites/visual/ministore/static/img/products/p181.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/181",
+   "stop 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-049",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "Open the product page of ‘Excersise Fitness Ab Rollers for Workouts’. According to its photo, how many units come in the pack?",
+  "image": "sites/visual/ministore/static/img/products/p825.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/825",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-050",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "Buy 1 of the product shown in the photo and have it shipped to '34 Redwood Ave, Davis, 95616'. It is one of: ‘Alkove Hayes Rectangular Solid Wood Coffee Table with 1-Shelf’, ‘Classic Coffee Table’, ‘Amber Farmhouse Shelf Storage Side End Table’, ‘Essential Engineered Wood Coffee Table’. Complete the checkout so the order is placed. Log in as agent_smith (password: password123) if needed.",
+  "image": "sites/visual/ministore/static/img/products/p947.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%34 Redwood Ave, Davis, 95616%",
+    "items": {
+     "947": 1
+    },
+    "total": 199.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 903
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1194
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1170
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alkove%20Hayes%20Rectangular%20Solid%20Wood%20Coffee%20Table%20with%201-Shelf",
+   "view 0",
+   "goto /product/947",
+   "goto /product/903",
+   "goto /product/1194",
+   "goto /product/1170",
+   "goto /product/947",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=34 Redwood Ave, Davis, 95616",
+   "fill 2"
+  ],
+  "max_steps": 30
+ }
+]

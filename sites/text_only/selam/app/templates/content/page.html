@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block meta_description %}{{ page.summary }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol>
+      <li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('help') }}">{{ t("nav.help_centre") }}</a></li>
+      <li>{{ page.title }}</li>
+    </ol>
+  </nav>
+
+  <div class="content-layout">
+    <nav class="sidenav" aria-label="{{ t('content.related') }}">
+      <h2 class="h4">{{ t("content.in_this_section") }}</h2>
+      <ul>
+        {% for sibling in siblings %}
+        {% set url = route_for(sibling.slug) %}
+        <li>
+          {% if url %}
+          <a href="{{ url }}" {% if sibling.id == page.id %}aria-current="page"{% endif %}>{{ sibling.title }}</a>
+          {% else %}
+          <a href="{{ path('help') }}">{{ sibling.title }}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <article class="prose">
+      <h1>{{ page.title }}</h1>
+      {% include "partials/also.html" %}
+      <p class="hint">{{ page.summary }}</p>
+      {{ page.body_html | safe }}
+      {% if extra_template %}{% include extra_template %}{% endif %}
+    </article>
+  </div>
+</div>
+{% endblock %}

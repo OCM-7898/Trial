@@ -1,0 +1,42 @@
+{% extends "partner_base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block content %}
+<div class="wrap section">
+  <h1>{{ partner.name }}</h1>
+  <p>{{ t("partner.rail_intro") }}</p>
+
+  <form class="searchform" method="get" action="{{ partner.home }}">
+    {{ text_field("arrival", "arrival", t("partner.arrival_airport"), "FRA", t("search.code_hint"), arrival) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("partner.find_rail") }}</button></div>
+  </form>
+
+  {% if connections %}
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("partner.from_airport") }}</th>
+        <th scope="col">{{ t("search.destination") }}</th>
+        <th scope="col">{{ t("partner.operator") }}</th>
+        <th scope="col">{{ t("results.duration") }}</th>
+        <th scope="col">{{ t("partner.changes") }}</th>
+        <th scope="col">{{ t("partner.how_to_book") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for row in connections %}
+        <tr>
+          <td>{{ row.arrival_iata }}</td>
+          <td>{{ row.destination }}</td>
+          <td>{{ row.operator }}</td>
+          <td>{{ t("results.hours_minutes", h=row.journey_min // 60, m="%02d" % (row.journey_min % 60)) }}</td>
+          <td>{{ row.changes }}</td>
+          <td><strong>{{ row.ticket_type }}</strong><br><span class="hint">{{ row.booking_note }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% elif searched %}
+  <div class="notice notice-warn"><div>{{ t("partner.no_rail") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

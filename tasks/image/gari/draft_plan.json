@@ -1,0 +1,2293 @@
+[
+ {
+  "n": 1,
+  "kind": "A1_price",
+  "target": 78,
+  "candidates": [
+   {
+    "id": 81,
+    "name": "2023 Buick Envision",
+    "city": "Karachi",
+    "colour": "Champagne",
+    "price": 20400,
+    "mileage": 33000,
+    "seller": "Ahmed Khan",
+    "status": "active",
+    "img": "img/c81_1.jpg"
+   },
+   {
+    "id": 78,
+    "name": "2020 Buick Envision",
+    "city": "Multan",
+    "colour": "Black",
+    "price": 14000,
+    "mileage": 52000,
+    "seller": "Ahmed Khan",
+    "status": "active",
+    "img": "img/c78_1.jpg"
+   },
+   {
+    "id": 80,
+    "name": "2016 Buick Envision",
+    "city": "Lahore",
+    "colour": "Brown",
+    "price": 7700,
+    "mileage": 143000,
+    "seller": "Metro Cars",
+    "status": "active",
+    "img": "img/c80_1.jpg"
+   },
+   {
+    "id": 83,
+    "name": "2021 Buick Envision",
+    "city": "Lahore",
+    "colour": "Gray",
+    "price": 16000,
+    "mileage": 43000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c83_1.jpg"
+   }
+  ],
+  "photo": "img/c78_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 2,
+  "kind": "A1_price",
+  "target": 392,
+  "candidates": [
+   {
+    "id": 391,
+    "name": "2020 Tesla Model 3",
+    "city": "Islamabad",
+    "colour": "Blue",
+    "price": 30000,
+    "mileage": 80000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c391_1.jpg"
+   },
+   {
+    "id": 390,
+    "name": "2017 Tesla Model 3",
+    "city": "Peshawar",
+    "colour": "Gray",
+    "price": 20800,
+    "mileage": 126000,
+    "seller": "Hira Farooq",
+    "status": "active",
+    "img": "img/c390_1.jpg"
+   },
+   {
+    "id": 393,
+    "name": "2021 Tesla Model 3",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 32200,
+    "mileage": 78000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c393_1.jpg"
+   },
+   {
+    "id": 392,
+    "name": "2015 Tesla Model 3",
+    "city": "Islamabad",
+    "colour": "Pink",
+    "price": 15600,
+    "mileage": 173000,
+    "seller": "Prime Wheels",
+    "status": "active",
+    "img": "img/c392_1.jpg"
+   }
+  ],
+  "photo": "img/c392_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 3,
+  "kind": "A1_price",
+  "target": 115,
+  "candidates": [
+   {
+    "id": 117,
+    "name": "2024 Chevrolet Cruze",
+    "city": "Lahore",
+    "colour": "Yellow",
+    "price": 16000,
+    "mileage": 24000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c117_1.jpg"
+   },
+   {
+    "id": 112,
+    "name": "2023 Chevrolet Cruze",
+    "city": "Rawalpindi",
+    "colour": "Black",
+    "price": 14100,
+    "mileage": 43000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c112_1.jpg"
+   },
+   {
+    "id": 113,
+    "name": "2019 Chevrolet Cruze",
+    "city": "Lahore",
+    "colour": "Gray",
+    "price": 9700,
+    "mileage": 80000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c113_1.jpg"
+   },
+   {
+    "id": 115,
+    "name": "2019 Chevrolet Cruze",
+    "city": "Karachi",
+    "colour": "Red",
+    "price": 9600,
+    "mileage": 100000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c115_1.jpg"
+   }
+  ],
+  "photo": "img/c115_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 4,
+  "kind": "A1_price",
+  "target": 247,
+  "candidates": [
+   {
+    "id": 247,
+    "name": "2017 Kia Sportage",
+    "city": "Rawalpindi",
+    "colour": "Black",
+    "price": 8200,
+    "mileage": 136000,
+    "seller": "Hassan Raza",
+    "status": "active",
+    "img": "img/c247_1.jpg"
+   },
+   {
+    "id": 251,
+    "name": "2024 Kia Sportage",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 21200,
+    "mileage": 28000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c251_1.jpg"
+   },
+   {
+    "id": 250,
+    "name": "2019 Kia Sportage",
+    "city": "Faisalabad",
+    "colour": "Silver",
+    "price": 10700,
+    "mileage": 118000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c250_1.jpg"
+   },
+   {
+    "id": 248,
+    "name": "2013 Kia Sportage",
+    "city": "Islamabad",
+    "colour": "Gold",
+    "price": 5500,
+    "mileage": 203000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c248_1.jpg"
+   }
+  ],
+  "photo": "img/c247_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 5,
+  "kind": "A1_price",
+  "target": 337,
+  "candidates": [
+   {
+    "id": 338,
+    "name": "2017 Nissan Teana",
+    "city": "Karachi",
+    "colour": "Blue",
+    "price": 6100,
+    "mileage": 149000,
+    "seller": "Nadia Hussain",
+    "status": "active",
+    "img": "img/c338_1.jpg"
+   },
+   {
+    "id": 340,
+    "name": "2018 Nissan Teana",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 7100,
+    "mileage": 85000,
+    "seller": "Metro Cars",
+    "status": "active",
+    "img": "img/c340_1.jpg"
+   },
+   {
+    "id": 337,
+    "name": "2021 Nissan Teana",
+    "city": "Karachi",
+    "colour": "Black",
+    "price": 11500,
+    "mileage": 80000,
+    "seller": "Ahmed Khan",
+    "status": "active",
+    "img": "img/c337_1.jpg"
+   },
+   {
+    "id": 339,
+    "name": "2013 Nissan Teana",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 3900,
+    "mileage": 221000,
+    "seller": "Faisal Mahmood",
+    "status": "active",
+    "img": "img/c339_1.jpg"
+   }
+  ],
+  "photo": "img/c337_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 6,
+  "kind": "A1_price",
+  "target": 303,
+  "candidates": [
+   {
+    "id": 303,
+    "name": "2021 Mercedes-Benz GLK",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 39300,
+    "mileage": 66000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c303_1.jpg"
+   },
+   {
+    "id": 301,
+    "name": "2020 Mercedes-Benz GLK",
+    "city": "Islamabad",
+    "colour": "Brown",
+    "price": 34100,
+    "mileage": 102000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c301_1.jpg"
+   },
+   {
+    "id": 302,
+    "name": "2019 Mercedes-Benz GLK",
+    "city": "Multan",
+    "colour": "Black",
+    "price": 31300,
+    "mileage": 89000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c302_1.jpg"
+   }
+  ],
+  "photo": "img/c303_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 7,
+  "kind": "A1_price",
+  "target": 92,
+  "candidates": [
+   {
+    "id": 94,
+    "name": "2018 Buick Regal",
+    "city": "Karachi",
+    "colour": "Gray",
+    "price": 8700,
+    "mileage": 133000,
+    "seller": "Mehwish Iqbal",
+    "status": "active",
+    "img": "img/c94_1.jpg"
+   },
+   {
+    "id": 92,
+    "name": "2018 Buick Regal",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 8100,
+    "mileage": 139000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c92_1.jpg"
+   },
+   {
+    "id": 98,
+    "name": "2022 Buick Regal",
+    "city": "Rawalpindi",
+    "colour": "Gold",
+    "price": 12800,
+    "mileage": 46000,
+    "seller": "Nadia Hussain",
+    "status": "active",
+    "img": "img/c98_1.jpg"
+   }
+  ],
+  "photo": "img/c92_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 8,
+  "kind": "A1_price",
+  "target": 109,
+  "candidates": [
+   {
+    "id": 108,
+    "name": "2023 Chevrolet Aveo",
+    "city": "Rawalpindi",
+    "colour": "Silver",
+    "price": 14100,
+    "mileage": 41000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c108_1.jpg"
+   },
+   {
+    "id": 109,
+    "name": "2019 Chevrolet Aveo",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 9200,
+    "mileage": 58000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c109_1.jpg"
+   },
+   {
+    "id": 107,
+    "name": "2023 Chevrolet Aveo",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 16100,
+    "mileage": 42000,
+    "seller": "Highway Motors",
+    "status": "active",
+    "img": "img/c107_1.jpg"
+   }
+  ],
+  "photo": "img/c109_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 9,
+  "kind": "A1_price",
+  "target": 350,
+  "candidates": [
+   {
+    "id": 350,
+    "name": "2018 Nissan X-Trail",
+    "city": "Karachi",
+    "colour": "Brown",
+    "price": 9200,
+    "mileage": 131000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c350_1.jpg"
+   },
+   {
+    "id": 351,
+    "name": "2017 Nissan X-Trail",
+    "city": "Multan",
+    "colour": "White",
+    "price": 8900,
+    "mileage": 139000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c351_1.jpg"
+   },
+   {
+    "id": 349,
+    "name": "2024 Nissan X-Trail",
+    "city": "Sialkot",
+    "colour": "Black",
+    "price": 19100,
+    "mileage": 19000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c349_1.jpg"
+   }
+  ],
+  "photo": "img/c350_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 10,
+  "kind": "A1_price",
+  "target": 48,
+  "candidates": [
+   {
+    "id": 48,
+    "name": "2022 BMW 1 Series",
+    "city": "Islamabad",
+    "colour": "Orange",
+    "price": 25200,
+    "mileage": 59000,
+    "seller": "Hassan Raza",
+    "status": "active",
+    "img": "img/c48_1.jpg"
+   },
+   {
+    "id": 49,
+    "name": "2017 BMW 1 Series",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 14100,
+    "mileage": 75000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c49_1.jpg"
+   },
+   {
+    "id": 47,
+    "name": "2018 BMW 1 Series",
+    "city": "Peshawar",
+    "colour": "Blue",
+    "price": 18300,
+    "mileage": 69000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c47_1.jpg"
+   }
+  ],
+  "photo": "img/c48_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 11,
+  "kind": "A1_price",
+  "target": 154,
+  "candidates": [
+   {
+    "id": 154,
+    "name": "2016 Honda Accord",
+    "city": "Faisalabad",
+    "colour": "Black",
+    "price": 7600,
+    "mileage": 82000,
+    "seller": "Faisal Mahmood",
+    "status": "active",
+    "img": "img/c154_1.jpg"
+   },
+   {
+    "id": 158,
+    "name": "2020 Honda Accord",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 13200,
+    "mileage": 50000,
+    "seller": "Imran Qureshi",
+    "status": "active",
+    "img": "img/c158_1.jpg"
+   },
+   {
+    "id": 156,
+    "name": "2018 Honda Accord",
+    "city": "Lahore",
+    "colour": "Silver",
+    "price": 10100,
+    "mileage": 138000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c156_1.jpg"
+   }
+  ],
+  "photo": "img/c154_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 12,
+  "kind": "A1_price",
+  "target": 55,
+  "candidates": [
+   {
+    "id": 52,
+    "name": "2024 BMW 3 Series",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 40500,
+    "mileage": 21000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c52_1.jpg"
+   },
+   {
+    "id": 50,
+    "name": "2018 BMW 3 Series",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 18500,
+    "mileage": 67000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c50_1.jpg"
+   },
+   {
+    "id": 55,
+    "name": "2024 BMW 3 Series",
+    "city": "Multan",
+    "colour": "White",
+    "price": 39300,
+    "mileage": 35000,
+    "seller": "Rabia Anwar",
+    "status": "active",
+    "img": "img/c55_1.jpg"
+   }
+  ],
+  "photo": "img/c55_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 13,
+  "kind": "A2_save",
+  "target": 227,
+  "candidates": [
+   {
+    "id": 224,
+    "name": "2023 Hyundai Verna",
+    "city": "Sialkot",
+    "colour": "Red",
+    "price": 13500,
+    "mileage": 29000,
+    "seller": "Tariq Jameel",
+    "status": "active",
+    "img": "img/c224_1.jpg"
+   },
+   {
+    "id": 225,
+    "name": "2021 Hyundai Verna",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 11700,
+    "mileage": 54000,
+    "seller": "Adeel Akram",
+    "status": "active",
+    "img": "img/c225_1.jpg"
+   },
+   {
+    "id": 227,
+    "name": "2020 Hyundai Verna",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 9200,
+    "mileage": 84000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c227_1.jpg"
+   }
+  ],
+  "photo": "img/c227_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 14,
+  "kind": "A2_save",
+  "target": 284,
+  "candidates": [
+   {
+    "id": 286,
+    "name": "2019 Mercedes-Benz C-Class",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 24300,
+    "mileage": 69000,
+    "seller": "Mehwish Iqbal",
+    "status": "active",
+    "img": "img/c286_1.jpg"
+   },
+   {
+    "id": 285,
+    "name": "2017 Mercedes-Benz C-Class",
+    "city": "Karachi",
+    "colour": "Red",
+    "price": 19200,
+    "mileage": 90000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c285_1.jpg"
+   },
+   {
+    "id": 284,
+    "name": "2018 Mercedes-Benz C-Class",
+    "city": "Islamabad",
+    "colour": "Gray",
+    "price": 24700,
+    "mileage": 137000,
+    "seller": "Imran Qureshi",
+    "status": "active",
+    "img": "img/c284_1.jpg"
+   }
+  ],
+  "photo": "img/c284_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 15,
+  "kind": "A2_save",
+  "target": 209,
+  "candidates": [
+   {
+    "id": 201,
+    "name": "2021 Hyundai Elantra",
+    "city": "Rawalpindi",
+    "colour": "Gray",
+    "price": 11100,
+    "mileage": 73000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c201_1.jpg"
+   },
+   {
+    "id": 202,
+    "name": "2021 Hyundai Elantra",
+    "city": "Karachi",
+    "colour": "Black",
+    "price": 11200,
+    "mileage": 80000,
+    "seller": "Faisal Mahmood",
+    "status": "active",
+    "img": "img/c202_1.jpg"
+   },
+   {
+    "id": 209,
+    "name": "2016 Hyundai Elantra",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 5700,
+    "mileage": 136000,
+    "seller": "Faisal Mahmood",
+    "status": "active",
+    "img": "img/c209_1.jpg"
+   }
+  ],
+  "photo": "img/c209_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 16,
+  "kind": "A2_save",
+  "target": 213,
+  "candidates": [
+   {
+    "id": 212,
+    "name": "2014 Hyundai Sonata",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 4700,
+    "mileage": 192000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c212_1.jpg"
+   },
+   {
+    "id": 213,
+    "name": "2021 Hyundai Sonata",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 11800,
+    "mileage": 40000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c213_1.jpg"
+   },
+   {
+    "id": 211,
+    "name": "2017 Hyundai Sonata",
+    "city": "Faisalabad",
+    "colour": "Black",
+    "price": 6600,
+    "mileage": 82000,
+    "seller": "Hassan Raza",
+    "status": "active",
+    "img": "img/c211_1.jpg"
+   }
+  ],
+  "photo": "img/c213_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 17,
+  "kind": "A2_save",
+  "target": 448,
+  "candidates": [
+   {
+    "id": 449,
+    "name": "2023 Volkswagen Golf",
+    "city": "Karachi",
+    "colour": "Red",
+    "price": 12900,
+    "mileage": 46000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c449_1.jpg"
+   },
+   {
+    "id": 448,
+    "name": "2019 Volkswagen Golf",
+    "city": "Islamabad",
+    "colour": "Gray",
+    "price": 7600,
+    "mileage": 117000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c448_1.jpg"
+   },
+   {
+    "id": 445,
+    "name": "2017 Volkswagen Golf",
+    "city": "Rawalpindi",
+    "colour": "Champagne",
+    "price": 6600,
+    "mileage": 108000,
+    "seller": "Star Motors",
+    "status": "active",
+    "img": "img/c445_1.jpg"
+   }
+  ],
+  "photo": "img/c448_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 18,
+  "kind": "A2_save",
+  "target": 277,
+  "candidates": [
+   {
+    "id": 277,
+    "name": "2024 Mazda Mazda6",
+    "city": "Karachi",
+    "colour": "Black",
+    "price": 18700,
+    "mileage": 35000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c277_1.jpg"
+   },
+   {
+    "id": 279,
+    "name": "2024 Mazda Mazda6",
+    "city": "Lahore",
+    "colour": "Silver",
+    "price": 19400,
+    "mileage": 35000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c279_1.jpg"
+   },
+   {
+    "id": 278,
+    "name": "2017 Mazda Mazda6",
+    "city": "Karachi",
+    "colour": "Red",
+    "price": 6900,
+    "mileage": 101000,
+    "seller": "Highway Motors",
+    "status": "active",
+    "img": "img/c278_1.jpg"
+   }
+  ],
+  "photo": "img/c277_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 19,
+  "kind": "A2_save",
+  "target": 9,
+  "candidates": [
+   {
+    "id": 8,
+    "name": "2019 Audi A4",
+    "city": "Islamabad",
+    "colour": "Black",
+    "price": 20600,
+    "mileage": 109000,
+    "seller": "Khan Motors",
+    "status": "active",
+    "img": "img/c8_1.jpg"
+   },
+   {
+    "id": 14,
+    "name": "2024 Audi A4",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 37100,
+    "mileage": 28000,
+    "seller": "Faisal Mahmood",
+    "status": "active",
+    "img": "img/c14_1.jpg"
+   },
+   {
+    "id": 9,
+    "name": "2017 Audi A4",
+    "city": "Multan",
+    "colour": "Gray",
+    "price": 14900,
+    "mileage": 125000,
+    "seller": "Khan Motors",
+    "status": "active",
+    "img": "img/c9_1.jpg"
+   }
+  ],
+  "photo": "img/c9_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 20,
+  "kind": "A2_save",
+  "target": 324,
+  "candidates": [
+   {
+    "id": 333,
+    "name": "2022 Nissan Sylphy",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 12700,
+    "mileage": 47000,
+    "seller": "Ahmed Khan",
+    "status": "active",
+    "img": "img/c333_1.jpg"
+   },
+   {
+    "id": 324,
+    "name": "2021 Nissan Sylphy",
+    "city": "Sialkot",
+    "colour": "Black",
+    "price": 11000,
+    "mileage": 81000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c324_1.jpg"
+   },
+   {
+    "id": 328,
+    "name": "2016 Nissan Sylphy",
+    "city": "Rawalpindi",
+    "colour": "Silver",
+    "price": 5800,
+    "mileage": 95000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c328_1.jpg"
+   }
+  ],
+  "photo": "img/c324_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 21,
+  "kind": "A2_save",
+  "target": 322,
+  "candidates": [
+   {
+    "id": 322,
+    "name": "2024 Nissan Sylphy",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 17500,
+    "mileage": 20000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c322_1.jpg"
+   },
+   {
+    "id": 332,
+    "name": "2022 Nissan Sylphy",
+    "city": "Peshawar",
+    "colour": "White",
+    "price": 12000,
+    "mileage": 33000,
+    "seller": "City Auto Traders",
+    "status": "active",
+    "img": "img/c332_1.jpg"
+   },
+   {
+    "id": 327,
+    "name": "2014 Nissan Sylphy",
+    "city": "Lahore",
+    "colour": "Gray",
+    "price": 4400,
+    "mileage": 118000,
+    "seller": "Hira Farooq",
+    "status": "active",
+    "img": "img/c327_1.jpg"
+   }
+  ],
+  "photo": "img/c322_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 22,
+  "kind": "A2_save",
+  "target": 403,
+  "candidates": [
+   {
+    "id": 403,
+    "name": "2021 Toyota Camry",
+    "city": "Rawalpindi",
+    "colour": "Black",
+    "price": 14700,
+    "mileage": 48000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c403_1.jpg"
+   },
+   {
+    "id": 406,
+    "name": "2023 Toyota Camry",
+    "city": "Multan",
+    "colour": "Silver",
+    "price": 19000,
+    "mileage": 36000,
+    "seller": "Usman Sheikh",
+    "status": "active",
+    "img": "img/c406_1.jpg"
+   },
+   {
+    "id": 407,
+    "name": "2023 Toyota Camry",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 19700,
+    "mileage": 37000,
+    "seller": "Star Motors",
+    "status": "active",
+    "img": "img/c407_1.jpg"
+   }
+  ],
+  "photo": "img/c403_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 23,
+  "kind": "A2_save",
+  "target": 206,
+  "candidates": [
+   {
+    "id": 206,
+    "name": "2016 Hyundai Elantra",
+    "city": "Multan",
+    "colour": "White",
+    "price": 6300,
+    "mileage": 155000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c206_1.jpg"
+   },
+   {
+    "id": 204,
+    "name": "2018 Hyundai Elantra",
+    "city": "Karachi",
+    "colour": "Gray",
+    "price": 7700,
+    "mileage": 128000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c204_1.jpg"
+   },
+   {
+    "id": 200,
+    "name": "2021 Hyundai Elantra",
+    "city": "Islamabad",
+    "colour": "Black",
+    "price": 11600,
+    "mileage": 71000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c200_1.jpg"
+   }
+  ],
+  "photo": "img/c206_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 24,
+  "kind": "A2_save",
+  "target": 146,
+  "candidates": [
+   {
+    "id": 145,
+    "name": "2019 Ford Mondeo",
+    "city": "Peshawar",
+    "colour": "Black",
+    "price": 9500,
+    "mileage": 116000,
+    "seller": "Ahmed Khan",
+    "status": "active",
+    "img": "img/c145_1.jpg"
+   },
+   {
+    "id": 146,
+    "name": "2024 Ford Mondeo",
+    "city": "Rawalpindi",
+    "colour": "Gray",
+    "price": 20600,
+    "mileage": 34000,
+    "seller": "Hira Farooq",
+    "status": "active",
+    "img": "img/c146_1.jpg"
+   },
+   {
+    "id": 149,
+    "name": "2022 Ford Mondeo",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 15700,
+    "mileage": 45000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c149_1.jpg"
+   }
+  ],
+  "photo": "img/c146_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 25,
+  "kind": "A3_offer",
+  "target": 479,
+  "candidates": [
+   {
+    "id": 481,
+    "name": "2014 Volkswagen T-Roc",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 6600,
+    "mileage": 123000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c481_1.jpg"
+   },
+   {
+    "id": 479,
+    "name": "2024 Volkswagen T-Roc",
+    "city": "Rawalpindi",
+    "colour": "Champagne",
+    "price": 22700,
+    "mileage": 20000,
+    "seller": "Galaxy Car Centre",
+    "status": "active",
+    "img": "img/c479_1.jpg"
+   },
+   {
+    "id": 480,
+    "name": "2024 Volkswagen T-Roc",
+    "city": "Islamabad",
+    "colour": "Gray",
+    "price": 22900,
+    "mileage": 17000,
+    "seller": "Imran Qureshi",
+    "status": "active",
+    "img": "img/c480_1.jpg"
+   }
+  ],
+  "photo": "img/c479_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 26,
+  "kind": "A3_offer",
+  "target": 468,
+  "candidates": [
+   {
+    "id": 467,
+    "name": "2023 Volkswagen Passat",
+    "city": "Multan",
+    "colour": "Gray",
+    "price": 16700,
+    "mileage": 29000,
+    "seller": "Tariq Jameel",
+    "status": "active",
+    "img": "img/c467_1.jpg"
+   },
+   {
+    "id": 468,
+    "name": "2023 Volkswagen Passat",
+    "city": "Peshawar",
+    "colour": "Black",
+    "price": 16600,
+    "mileage": 24000,
+    "seller": "Khan Motors",
+    "status": "active",
+    "img": "img/c468_1.jpg"
+   },
+   {
+    "id": 470,
+    "name": "2023 Volkswagen Passat",
+    "city": "Lahore",
+    "colour": "Champagne",
+    "price": 18000,
+    "mileage": 30000,
+    "seller": "Metro Cars",
+    "status": "active",
+    "img": "img/c470_1.jpg"
+   }
+  ],
+  "photo": "img/c468_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 27,
+  "kind": "A3_offer",
+  "target": 170,
+  "candidates": [
+   {
+    "id": 170,
+    "name": "2024 Honda CR-V",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 25900,
+    "mileage": 34000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c170_1.jpg"
+   },
+   {
+    "id": 165,
+    "name": "2021 Honda CR-V",
+    "city": "Lahore",
+    "colour": "Silver",
+    "price": 16700,
+    "mileage": 74000,
+    "seller": "Rabia Anwar",
+    "status": "active",
+    "img": "img/c165_1.jpg"
+   },
+   {
+    "id": 163,
+    "name": "2017 Honda CR-V",
+    "city": "Rawalpindi",
+    "colour": "Black",
+    "price": 9900,
+    "mileage": 143000,
+    "seller": "Salman Butt",
+    "status": "active",
+    "img": "img/c163_1.jpg"
+   }
+  ],
+  "photo": "img/c170_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 28,
+  "kind": "A3_offer",
+  "target": 86,
+  "candidates": [
+   {
+    "id": 84,
+    "name": "2022 Buick LaCrosse",
+    "city": "Sialkot",
+    "colour": "Gray",
+    "price": 14600,
+    "mileage": 41000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c84_1.jpg"
+   },
+   {
+    "id": 90,
+    "name": "2018 Buick LaCrosse",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 7900,
+    "mileage": 65000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c90_1.jpg"
+   },
+   {
+    "id": 86,
+    "name": "2020 Buick LaCrosse",
+    "city": "Sialkot",
+    "colour": "Black",
+    "price": 10900,
+    "mileage": 49000,
+    "seller": "Nadia Hussain",
+    "status": "active",
+    "img": "img/c86_1.jpg"
+   }
+  ],
+  "photo": "img/c86_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 29,
+  "kind": "A3_offer",
+  "target": 346,
+  "candidates": [
+   {
+    "id": 343,
+    "name": "2021 Nissan Tiida",
+    "city": "Rawalpindi",
+    "colour": "Blue",
+    "price": 14100,
+    "mileage": 55000,
+    "seller": "Saad Chaudhry",
+    "status": "active",
+    "img": "img/c343_1.jpg"
+   },
+   {
+    "id": 345,
+    "name": "2023 Nissan Tiida",
+    "city": "Lahore",
+    "colour": "Red",
+    "price": 11200,
+    "mileage": 42000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c345_1.jpg"
+   },
+   {
+    "id": 346,
+    "name": "2022 Nissan Tiida",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 13300,
+    "mileage": 35000,
+    "seller": "Highway Motors",
+    "status": "active",
+    "img": "img/c346_1.jpg"
+   }
+  ],
+  "photo": "img/c346_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 30,
+  "kind": "A3_offer",
+  "target": 496,
+  "candidates": [
+   {
+    "id": 494,
+    "name": "2015 Volvo XC60",
+    "city": "Peshawar",
+    "colour": "Brown",
+    "price": 12900,
+    "mileage": 178000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c494_1.jpg"
+   },
+   {
+    "id": 496,
+    "name": "2024 Volvo XC60",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 45200,
+    "mileage": 22000,
+    "seller": "City Auto Traders",
+    "status": "active",
+    "img": "img/c496_1.jpg"
+   },
+   {
+    "id": 495,
+    "name": "2014 Volvo XC60",
+    "city": "Multan",
+    "colour": "Champagne",
+    "price": 11400,
+    "mileage": 125000,
+    "seller": "Adeel Akram",
+    "status": "active",
+    "img": "img/c495_1.jpg"
+   }
+  ],
+  "photo": "img/c496_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 31,
+  "kind": "A3_offer",
+  "target": 162,
+  "candidates": [
+   {
+    "id": 162,
+    "name": "2017 Honda CR-V",
+    "city": "Peshawar",
+    "colour": "Black",
+    "price": 11300,
+    "mileage": 120000,
+    "seller": "Fatima Malik",
+    "status": "active",
+    "img": "img/c162_1.jpg"
+   },
+   {
+    "id": 164,
+    "name": "2024 Honda CR-V",
+    "city": "Lahore",
+    "colour": "Gray",
+    "price": 24600,
+    "mileage": 26000,
+    "seller": "Galaxy Car Centre",
+    "status": "active",
+    "img": "img/c164_1.jpg"
+   },
+   {
+    "id": 166,
+    "name": "2017 Honda CR-V",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 11500,
+    "mileage": 99000,
+    "seller": "Adeel Akram",
+    "status": "active",
+    "img": "img/c166_1.jpg"
+   }
+  ],
+  "photo": "img/c162_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 32,
+  "kind": "A3_offer",
+  "target": 256,
+  "candidates": [
+   {
+    "id": 256,
+    "name": "2018 Land Rover Range Rover",
+    "city": "Faisalabad",
+    "colour": "Black",
+    "price": 36000,
+    "mileage": 77000,
+    "seller": "Imran Qureshi",
+    "status": "active",
+    "img": "img/c256_1.jpg"
+   },
+   {
+    "id": 258,
+    "name": "2024 Land Rover Range Rover Evoque",
+    "city": "Lahore",
+    "colour": "Brown",
+    "price": 77700,
+    "mileage": 31000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c258_1.jpg"
+   },
+   {
+    "id": 259,
+    "name": "2018 Land Rover Range Rover Evoque",
+    "city": "Islamabad",
+    "colour": "Red",
+    "price": 37000,
+    "mileage": 67000,
+    "seller": "Saad Chaudhry",
+    "status": "active",
+    "img": "img/c259_1.jpg"
+   },
+   {
+    "id": 262,
+    "name": "2021 Land Rover Range Rover Sport",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 48400,
+    "mileage": 89000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c262_1.jpg"
+   }
+  ],
+  "photo": "img/c256_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 33,
+  "kind": "A3_offer",
+  "target": 43,
+  "candidates": [
+   {
+    "id": 37,
+    "name": "2020 Audi Q3",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 29200,
+    "mileage": 65000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c37_1.jpg"
+   },
+   {
+    "id": 36,
+    "name": "2016 Audi Q3",
+    "city": "Lahore",
+    "colour": "Red",
+    "price": 16400,
+    "mileage": 142000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c36_1.jpg"
+   },
+   {
+    "id": 46,
+    "name": "2023 Audi Q7",
+    "city": "Islamabad",
+    "colour": "Black",
+    "price": 44300,
+    "mileage": 51000,
+    "seller": "Hira Farooq",
+    "status": "active",
+    "img": "img/c46_1.jpg"
+   },
+   {
+    "id": 43,
+    "name": "2018 Audi Q5",
+    "city": "Rawalpindi",
+    "colour": "White",
+    "price": 24200,
+    "mileage": 134000,
+    "seller": "Adeel Akram",
+    "status": "active",
+    "img": "img/c43_1.jpg"
+   }
+  ],
+  "photo": "img/c43_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 34,
+  "kind": "A3_offer",
+  "target": 121,
+  "candidates": [
+   {
+    "id": 122,
+    "name": "2022 Chevrolet Malibu",
+    "city": "Rawalpindi",
+    "colour": "White",
+    "price": 13800,
+    "mileage": 42000,
+    "seller": "Nadia Hussain",
+    "status": "active",
+    "img": "img/c122_1.jpg"
+   },
+   {
+    "id": 121,
+    "name": "2018 Chevrolet Malibu",
+    "city": "Sialkot",
+    "colour": "Champagne",
+    "price": 8100,
+    "mileage": 122000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c121_1.jpg"
+   },
+   {
+    "id": 116,
+    "name": "2024 Chevrolet Cruze",
+    "city": "Rawalpindi",
+    "colour": "Red",
+    "price": 15800,
+    "mileage": 27000,
+    "seller": "Salman Butt",
+    "status": "active",
+    "img": "img/c116_1.jpg"
+   },
+   {
+    "id": 118,
+    "name": "2019 Chevrolet Epica",
+    "city": "Karachi",
+    "colour": "Black",
+    "price": 8300,
+    "mileage": 94000,
+    "seller": "Salman Butt",
+    "status": "active",
+    "img": "img/c118_1.jpg"
+   }
+  ],
+  "photo": "img/c121_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 35,
+  "kind": "A4_seller",
+  "target": 292,
+  "candidates": [
+   {
+    "id": 292,
+    "name": "2020 Mercedes-Benz E-Class",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 25400,
+    "mileage": 60000,
+    "seller": "Hassan Raza",
+    "status": "active",
+    "img": "img/c292_1.jpg"
+   },
+   {
+    "id": 280,
+    "name": "2015 Mercedes-Benz A-Class",
+    "city": "Rawalpindi",
+    "colour": "Red",
+    "price": 13000,
+    "mileage": 145000,
+    "seller": "Rabia Anwar",
+    "status": "active",
+    "img": "img/c280_1.jpg"
+   },
+   {
+    "id": 305,
+    "name": "2021 Mercedes-Benz S-Class",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 31200,
+    "mileage": 67000,
+    "seller": "Galaxy Car Centre",
+    "status": "active",
+    "img": "img/c305_1.jpg"
+   },
+   {
+    "id": 291,
+    "name": "2019 Mercedes-Benz E-Class",
+    "city": "Karachi",
+    "colour": "Blue",
+    "price": 22700,
+    "mileage": 110000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c291_1.jpg"
+   }
+  ],
+  "photo": "img/c292_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 36,
+  "kind": "A4_seller",
+  "target": 136,
+  "candidates": [
+   {
+    "id": 138,
+    "name": "2018 Ford Focus",
+    "city": "Rawalpindi",
+    "colour": "Red",
+    "price": 8700,
+    "mileage": 114000,
+    "seller": "Hassan Raza",
+    "status": "active",
+    "img": "img/c138_1.jpg"
+   },
+   {
+    "id": 144,
+    "name": "2020 Ford Mondeo",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 12400,
+    "mileage": 54000,
+    "seller": "Galaxy Car Centre",
+    "status": "active",
+    "img": "img/c144_1.jpg"
+   },
+   {
+    "id": 148,
+    "name": "2015 Ford Mondeo",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 6400,
+    "mileage": 148000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c148_1.jpg"
+   },
+   {
+    "id": 136,
+    "name": "2022 Ford Focus",
+    "city": "Islamabad",
+    "colour": "Gray",
+    "price": 14000,
+    "mileage": 43000,
+    "seller": "Mehwish Iqbal",
+    "status": "active",
+    "img": "img/c136_1.jpg"
+   }
+  ],
+  "photo": "img/c136_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 37,
+  "kind": "A4_seller",
+  "target": 446,
+  "candidates": [
+   {
+    "id": 452,
+    "name": "2013 Volkswagen ID.3",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 3500,
+    "mileage": 204000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c452_1.jpg"
+   },
+   {
+    "id": 446,
+    "name": "2023 Volkswagen Golf",
+    "city": "Lahore",
+    "colour": "Champagne",
+    "price": 14200,
+    "mileage": 51000,
+    "seller": "City Auto Traders",
+    "status": "active",
+    "img": "img/c446_1.jpg"
+   },
+   {
+    "id": 451,
+    "name": "2021 Volkswagen Golf",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 9700,
+    "mileage": 44000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c451_1.jpg"
+   },
+   {
+    "id": 475,
+    "name": "2024 Volkswagen Polo",
+    "city": "Rawalpindi",
+    "colour": "Orange",
+    "price": 14300,
+    "mileage": 18000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c475_1.jpg"
+   }
+  ],
+  "photo": "img/c446_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 38,
+  "kind": "A4_seller",
+  "target": 313,
+  "candidates": [
+   {
+    "id": 313,
+    "name": "2018 Nissan Patrol",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 10100,
+    "mileage": 91000,
+    "seller": "Kamran Baig",
+    "status": "active",
+    "img": "img/c313_1.jpg"
+   },
+   {
+    "id": 314,
+    "name": "2019 Nissan Qashqai",
+    "city": "Karachi",
+    "colour": "Red",
+    "price": 9900,
+    "mileage": 109000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c314_1.jpg"
+   },
+   {
+    "id": 309,
+    "name": "2022 Nissan Livina",
+    "city": "Lahore",
+    "colour": "Silver",
+    "price": 15100,
+    "mileage": 59000,
+    "seller": "Salman Butt",
+    "status": "active",
+    "img": "img/c309_1.jpg"
+   },
+   {
+    "id": 348,
+    "name": "2019 Nissan X-Trail",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 10300,
+    "mileage": 122000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c348_1.jpg"
+   }
+  ],
+  "photo": "img/c313_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 39,
+  "kind": "A4_seller",
+  "target": 450,
+  "candidates": [
+   {
+    "id": 453,
+    "name": "2018 Volkswagen ID.3",
+    "city": "Multan",
+    "colour": "White",
+    "price": 7800,
+    "mileage": 81000,
+    "seller": "Metro Cars",
+    "status": "active",
+    "img": "img/c453_1.jpg"
+   },
+   {
+    "id": 450,
+    "name": "2017 Volkswagen Golf",
+    "city": "Peshawar",
+    "colour": "Silver",
+    "price": 6700,
+    "mileage": 114000,
+    "seller": "Ayesha Siddiqui",
+    "status": "active",
+    "img": "img/c450_1.jpg"
+   },
+   {
+    "id": 447,
+    "name": "2022 Volkswagen Golf",
+    "city": "Islamabad",
+    "colour": "Champagne",
+    "price": 11200,
+    "mileage": 42000,
+    "seller": "City Auto Traders",
+    "status": "active",
+    "img": "img/c447_1.jpg"
+   },
+   {
+    "id": 476,
+    "name": "2016 Volkswagen Polo",
+    "city": "Islamabad",
+    "colour": "Red",
+    "price": 5800,
+    "mileage": 157000,
+    "seller": "Zainab Akhtar",
+    "status": "active",
+    "img": "img/c476_1.jpg"
+   }
+  ],
+  "photo": "img/c450_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 40,
+  "kind": "A4_seller",
+  "target": 67,
+  "candidates": [
+   {
+    "id": 75,
+    "name": "2021 BMW X4",
+    "city": "Faisalabad",
+    "colour": "Red",
+    "price": 35900,
+    "mileage": 75000,
+    "seller": "Usman Sheikh",
+    "status": "active",
+    "img": "img/c75_1.jpg"
+   },
+   {
+    "id": 70,
+    "name": "2021 BMW X3",
+    "city": "Peshawar",
+    "colour": "Black",
+    "price": 37900,
+    "mileage": 56000,
+    "seller": "Adeel Akram",
+    "status": "active",
+    "img": "img/c70_1.jpg"
+   },
+   {
+    "id": 67,
+    "name": "2014 BMW X2",
+    "city": "Peshawar",
+    "colour": "White",
+    "price": 13700,
+    "mileage": 124000,
+    "seller": "Star Motors",
+    "status": "active",
+    "img": "img/c67_1.jpg"
+   },
+   {
+    "id": 62,
+    "name": "2020 BMW X1",
+    "city": "Rawalpindi",
+    "colour": "Brown",
+    "price": 33400,
+    "mileage": 82000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c62_1.jpg"
+   }
+  ],
+  "photo": "img/c67_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 41,
+  "kind": "A5_mileage",
+  "target": 421,
+  "candidates": [
+   {
+    "id": 426,
+    "name": "2022 Toyota RAV4",
+    "city": "Islamabad",
+    "colour": "Black",
+    "price": 20600,
+    "mileage": 43000,
+    "seller": "Galaxy Car Centre",
+    "status": "active",
+    "img": "img/c426_1.jpg"
+   },
+   {
+    "id": 422,
+    "name": "2022 Toyota Land Cruiser Prado",
+    "city": "Islamabad",
+    "colour": "Green",
+    "price": 20600,
+    "mileage": 67000,
+    "seller": "Imran Qureshi",
+    "status": "active",
+    "img": "img/c422_1.jpg"
+   },
+   {
+    "id": 421,
+    "name": "2021 Toyota Highlander",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 20300,
+    "mileage": 73000,
+    "seller": "Tariq Jameel",
+    "status": "active",
+    "img": "img/c421_1.jpg"
+   }
+  ],
+  "photo": "img/c421_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 42,
+  "kind": "A5_mileage",
+  "target": 243,
+  "candidates": [
+   {
+    "id": 239,
+    "name": "2014 Kia Cerato",
+    "city": "Lahore",
+    "colour": "Red",
+    "price": 4400,
+    "mileage": 214000,
+    "seller": "Star Motors",
+    "status": "active",
+    "img": "img/c239_1.jpg"
+   },
+   {
+    "id": 243,
+    "name": "2014 Kia Rio",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 4700,
+    "mileage": 107000,
+    "seller": "Usman Sheikh",
+    "status": "active",
+    "img": "img/c243_1.jpg"
+   },
+   {
+    "id": 240,
+    "name": "2020 Kia Cerato",
+    "city": "Karachi",
+    "colour": "Silver",
+    "price": 10500,
+    "mileage": 106000,
+    "seller": "Fatima Malik",
+    "status": "active",
+    "img": "img/c240_1.jpg"
+   }
+  ],
+  "photo": "img/c243_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 43,
+  "kind": "A5_mileage",
+  "target": 295,
+  "candidates": [
+   {
+    "id": 299,
+    "name": "2019 Mercedes-Benz GLE",
+    "city": "Multan",
+    "colour": "Black",
+    "price": 27800,
+    "mileage": 84000,
+    "seller": "Imran Qureshi",
+    "status": "active",
+    "img": "img/c299_1.jpg"
+   },
+   {
+    "id": 295,
+    "name": "2022 Mercedes-Benz GLA",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 44100,
+    "mileage": 50000,
+    "seller": "Star Motors",
+    "status": "active",
+    "img": "img/c295_1.jpg"
+   },
+   {
+    "id": 297,
+    "name": "2021 Mercedes-Benz GLB",
+    "city": "Multan",
+    "colour": "Gray",
+    "price": 40000,
+    "mileage": 87000,
+    "seller": "Mehwish Iqbal",
+    "status": "active",
+    "img": "img/c297_1.jpg"
+   }
+  ],
+  "photo": "img/c295_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 44,
+  "kind": "A5_mileage",
+  "target": 128,
+  "candidates": [
+   {
+    "id": 128,
+    "name": "2024 Citroen C5",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 15300,
+    "mileage": 31000,
+    "seller": "Sana Tariq",
+    "status": "active",
+    "img": "img/c128_1.jpg"
+   },
+   {
+    "id": 127,
+    "name": "2023 Citroen C5",
+    "city": "Sialkot",
+    "colour": "Gray",
+    "price": 12800,
+    "mileage": 25000,
+    "seller": "Usman Sheikh",
+    "status": "active",
+    "img": "img/c127_1.jpg"
+   },
+   {
+    "id": 131,
+    "name": "2019 Citroen Elysee",
+    "city": "Karachi",
+    "colour": "Red",
+    "price": 7200,
+    "mileage": 123000,
+    "seller": "Crescent Automobiles",
+    "status": "active",
+    "img": "img/c131_1.jpg"
+   }
+  ],
+  "photo": "img/c128_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 45,
+  "kind": "A5_mileage",
+  "target": 58,
+  "candidates": [
+   {
+    "id": 54,
+    "name": "2024 BMW 3 Series",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 43600,
+    "mileage": 24000,
+    "seller": "Usman Sheikh",
+    "status": "active",
+    "img": "img/c54_1.jpg"
+   },
+   {
+    "id": 58,
+    "name": "2020 BMW 5 Series",
+    "city": "Islamabad",
+    "colour": "Silver",
+    "price": 23500,
+    "mileage": 64000,
+    "seller": "Mehwish Iqbal",
+    "status": "active",
+    "img": "img/c58_1.jpg"
+   },
+   {
+    "id": 51,
+    "name": "2015 BMW 3 Series",
+    "city": "Multan",
+    "colour": "Black",
+    "price": 12500,
+    "mileage": 176000,
+    "seller": "Rabia Anwar",
+    "status": "active",
+    "img": "img/c51_1.jpg"
+   }
+  ],
+  "photo": "img/c58_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 46,
+  "kind": "A5_mileage",
+  "target": 161,
+  "candidates": [
+   {
+    "id": 161,
+    "name": "2020 Honda Accord",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 13400,
+    "mileage": 81000,
+    "seller": "Hira Farooq",
+    "status": "active",
+    "img": "img/c161_1.jpg"
+   },
+   {
+    "id": 180,
+    "name": "2018 Honda Crosstour",
+    "city": "Islamabad",
+    "colour": "Red",
+    "price": 9300,
+    "mileage": 140000,
+    "seller": "Galaxy Car Centre",
+    "status": "active",
+    "img": "img/c180_1.jpg"
+   },
+   {
+    "id": 153,
+    "name": "2015 Honda Accord",
+    "city": "Multan",
+    "colour": "Black",
+    "price": 6400,
+    "mileage": 92000,
+    "seller": "Usman Sheikh",
+    "status": "active",
+    "img": "img/c153_1.jpg"
+   }
+  ],
+  "photo": "img/c161_4.jpg",
+  "photo_k": 4
+ },
+ {
+  "n": 47,
+  "kind": "A6_sold",
+  "target": null,
+  "sold_id": 260,
+  "candidates": [
+   {
+    "id": 261,
+    "name": "2024 Land Rover Range Rover Sport",
+    "city": "Islamabad",
+    "colour": "White",
+    "price": 80500,
+    "mileage": 31000,
+    "seller": "Star Motors",
+    "status": "active",
+    "img": "img/c261_1.jpg"
+   },
+   {
+    "id": 262,
+    "name": "2021 Land Rover Range Rover Sport",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 48400,
+    "mileage": 89000,
+    "seller": "Capital Car Point",
+    "status": "active",
+    "img": "img/c262_1.jpg"
+   }
+  ],
+  "photo": "img/c260_4.jpg",
+  "photo_k": 4,
+  "sold": {
+   "id": 260,
+   "name": "2018 Land Rover Range Rover Sport",
+   "city": "Rawalpindi",
+   "colour": "Black",
+   "price": 36600,
+   "mileage": 75000,
+   "seller": "Amna Javed",
+   "status": "sold",
+   "img": "img/c260_1.jpg"
+  }
+ },
+ {
+  "n": 48,
+  "kind": "A6_sold",
+  "target": null,
+  "sold_id": 383,
+  "candidates": [
+   {
+    "id": 384,
+    "name": "2020 Skoda Superb",
+    "city": "Lahore",
+    "colour": "Silver",
+    "price": 11200,
+    "mileage": 87000,
+    "seller": "Hira Farooq",
+    "status": "active",
+    "img": "img/c384_1.jpg"
+   }
+  ],
+  "photo": "img/c383_4.jpg",
+  "photo_k": 4,
+  "sold": {
+   "id": 383,
+   "name": "2019 Skoda Superb",
+   "city": "Karachi",
+   "colour": "Black",
+   "price": 9700,
+   "mileage": 60000,
+   "seller": "Hira Farooq",
+   "status": "sold",
+   "img": "img/c383_1.jpg"
+  }
+ },
+ {
+  "n": 49,
+  "kind": "A6_sold",
+  "target": null,
+  "sold_id": 99,
+  "candidates": [
+   {
+    "id": 91,
+    "name": "2021 Buick Regal",
+    "city": "Rawalpindi",
+    "colour": "Black",
+    "price": 12200,
+    "mileage": 72000,
+    "seller": "City Auto Traders",
+    "status": "active",
+    "img": "img/c91_1.jpg"
+   },
+   {
+    "id": 92,
+    "name": "2018 Buick Regal",
+    "city": "Lahore",
+    "colour": "Black",
+    "price": 8100,
+    "mileage": 139000,
+    "seller": "Amna Javed",
+    "status": "active",
+    "img": "img/c92_1.jpg"
+   },
+   {
+    "id": 93,
+    "name": "2019 Buick Regal",
+    "city": "Sialkot",
+    "colour": "Black",
+    "price": 9800,
+    "mileage": 82000,
+    "seller": "Fatima Malik",
+    "status": "active",
+    "img": "img/c93_1.jpg"
+   },
+   {
+    "id": 94,
+    "name": "2018 Buick Regal",
+    "city": "Karachi",
+    "colour": "Gray",
+    "price": 8700,
+    "mileage": 133000,
+    "seller": "Mehwish Iqbal",
+    "status": "active",
+    "img": "img/c94_1.jpg"
+   }
+  ],
+  "photo": "img/c99_4.jpg",
+  "photo_k": 4,
+  "sold": {
+   "id": 99,
+   "name": "2024 Buick Regal",
+   "city": "Karachi",
+   "colour": "White",
+   "price": 18200,
+   "mileage": 19000,
+   "seller": "Star Motors",
+   "status": "sold",
+   "img": "img/c99_1.jpg"
+  }
+ },
+ {
+  "n": 50,
+  "kind": "A6_sold",
+  "target": null,
+  "sold_id": 435,
+  "candidates": [
+   {
+    "id": 436,
+    "name": "2022 Toyota Vios",
+    "city": "Multan",
+    "colour": "White",
+    "price": 18900,
+    "mileage": 44000,
+    "seller": "Salman Butt",
+    "status": "active",
+    "img": "img/c436_1.jpg"
+   },
+   {
+    "id": 438,
+    "name": "2020 Toyota Vios",
+    "city": "Lahore",
+    "colour": "White",
+    "price": 10600,
+    "mileage": 78000,
+    "seller": "Faisal Mahmood",
+    "status": "active",
+    "img": "img/c438_1.jpg"
+   },
+   {
+    "id": 439,
+    "name": "2021 Toyota Vios",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 16100,
+    "mileage": 74000,
+    "seller": "Tariq Jameel",
+    "status": "active",
+    "img": "img/c439_1.jpg"
+   },
+   {
+    "id": 440,
+    "name": "2023 Toyota Vios",
+    "city": "Karachi",
+    "colour": "White",
+    "price": 20100,
+    "mileage": 48000,
+    "seller": "Bilal Hussain",
+    "status": "active",
+    "img": "img/c440_1.jpg"
+   }
+  ],
+  "photo": "img/c435_4.jpg",
+  "photo_k": 4,
+  "sold": {
+   "id": 435,
+   "name": "2023 Toyota Vios",
+   "city": "Karachi",
+   "colour": "Silver",
+   "price": 20000,
+   "mileage": 35000,
+   "seller": "Mehwish Iqbal",
+   "status": "sold",
+   "img": "img/c435_1.jpg"
+  }
+ }
+]

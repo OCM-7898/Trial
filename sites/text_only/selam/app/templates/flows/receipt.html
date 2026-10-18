@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("manage.receipt") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("manage.receipt")) }}
+<p class="hint">{{ t("receipt.issued", date=fmt_date(booking.created_on)) }} &middot; {{ booking.pnr }}</p>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("results.flight") }}</th><th scope="col">{{ t("book.fare_total") }}</th>
+    <th scope="col">{{ t("award.taxes") }}</th></tr></thead>
+  <tbody>{% for line in lines %}<tr>
+    <td>{{ line.view.flight.flight_no }} &middot; {{ line.view.origin.iata }}&ndash;{{ line.view.destination.iata }}</td>
+    <td>{{ fmt_money(line.fare) }}</td><td>{{ fmt_money(line.taxes) }}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+<dl class="summary" style="position:static;max-width:420px">
+  <dt>{{ t("receipt.passengers", n=passengers) }}</dt><dd></dd>
+  <dt class="total">{{ t("manage.total_paid", amount="") }}</dt><dd class="total">{{ fmt_money(booking.total_paid) }}</dd>
+</dl>
+<p class="hint">{{ t("receipt.note") }}</p>
+</div>{% endblock %}

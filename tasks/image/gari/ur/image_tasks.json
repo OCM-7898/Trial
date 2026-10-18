@@ -1,0 +1,2076 @@
+[
+ {
+  "id": "image-gari-001",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2023 Buick Envision’ (کراچی)، ‘2020 Buick Envision’ (ملتان)، ‘2016 Buick Envision’ (لاہور)، ‘2021 Buick Envision’ (لاہور)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/78/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3920000",
+     "3,920,000",
+     "۳۹۲۰۰۰۰",
+     "۳,۹۲۰,۰۰۰",
+     "٣٩٢٠٠٠٠",
+     "٣,٩٢٠,٠٠٠"
+    ],
+    "none_of": [
+     "5712000",
+     "5,712,000",
+     "۵۷۱۲۰۰۰",
+     "۵,۷۱۲,۰۰۰",
+     "٥٧١٢٠٠٠",
+     "٥,٧١٢,٠٠٠",
+     "2156000",
+     "2,156,000",
+     "۲۱۵۶۰۰۰",
+     "۲,۱۵۶,۰۰۰",
+     "٢١٥٦٠٠٠",
+     "٢,١٥٦,٠٠٠",
+     "4480000",
+     "4,480,000",
+     "۴۴۸۰۰۰۰",
+     "۴,۴۸۰,۰۰۰",
+     "٤٤٨٠٠٠٠",
+     "٤,٤٨٠,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Envision",
+   "goto /car/81",
+   "goto /car/78",
+   "goto /car/80",
+   "goto /car/83",
+   "stop 3920000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-002",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2020 Tesla Model 3’ (اسلام آباد)، ‘2017 Tesla Model 3’ (پشاور)، ‘2021 Tesla Model 3’ (کراچی)، ‘2015 Tesla Model 3’ (اسلام آباد)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/392/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4368000",
+     "4,368,000",
+     "۴۳۶۸۰۰۰",
+     "۴,۳۶۸,۰۰۰",
+     "٤٣٦٨٠٠٠",
+     "٤,٣٦٨,٠٠٠"
+    ],
+    "none_of": [
+     "8400000",
+     "8,400,000",
+     "۸۴۰۰۰۰۰",
+     "۸,۴۰۰,۰۰۰",
+     "٨٤٠٠٠٠٠",
+     "٨,٤٠٠,٠٠٠",
+     "5824000",
+     "5,824,000",
+     "۵۸۲۴۰۰۰",
+     "۵,۸۲۴,۰۰۰",
+     "٥٨٢٤٠٠٠",
+     "٥,٨٢٤,٠٠٠",
+     "9016000",
+     "9,016,000",
+     "۹۰۱۶۰۰۰",
+     "۹,۰۱۶,۰۰۰",
+     "٩٠١٦٠٠٠",
+     "٩,٠١٦,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Model%203",
+   "goto /car/391",
+   "goto /car/390",
+   "goto /car/393",
+   "goto /car/392",
+   "stop 4368000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-003",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2024 Chevrolet Cruze’ (لاہور)، ‘2023 Chevrolet Cruze’ (راولپنڈی)، ‘2019 Chevrolet Cruze’ (لاہور)، ‘2019 Chevrolet Cruze’ (کراچی)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/115/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2688000",
+     "2,688,000",
+     "۲۶۸۸۰۰۰",
+     "۲,۶۸۸,۰۰۰",
+     "٢٦٨٨٠٠٠",
+     "٢,٦٨٨,٠٠٠"
+    ],
+    "none_of": [
+     "4480000",
+     "4,480,000",
+     "۴۴۸۰۰۰۰",
+     "۴,۴۸۰,۰۰۰",
+     "٤٤٨٠٠٠٠",
+     "٤,٤٨٠,٠٠٠",
+     "3948000",
+     "3,948,000",
+     "۳۹۴۸۰۰۰",
+     "۳,۹۴۸,۰۰۰",
+     "٣٩٤٨٠٠٠",
+     "٣,٩٤٨,٠٠٠",
+     "2716000",
+     "2,716,000",
+     "۲۷۱۶۰۰۰",
+     "۲,۷۱۶,۰۰۰",
+     "٢٧١٦٠٠٠",
+     "٢,٧١٦,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Cruze",
+   "goto /car/117",
+   "goto /car/112",
+   "goto /car/113",
+   "goto /car/115",
+   "stop 2688000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-004",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2017 Kia Sportage’ (راولپنڈی)، ‘2024 Kia Sportage’ (لاہور)، ‘2019 Kia Sportage’ (فیصل آباد)، ‘2013 Kia Sportage’ (اسلام آباد)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/247/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2296000",
+     "2,296,000",
+     "۲۲۹۶۰۰۰",
+     "۲,۲۹۶,۰۰۰",
+     "٢٢٩٦٠٠٠",
+     "٢,٢٩٦,٠٠٠"
+    ],
+    "none_of": [
+     "5936000",
+     "5,936,000",
+     "۵۹۳۶۰۰۰",
+     "۵,۹۳۶,۰۰۰",
+     "٥٩٣٦٠٠٠",
+     "٥,٩٣٦,٠٠٠",
+     "2996000",
+     "2,996,000",
+     "۲۹۹۶۰۰۰",
+     "۲,۹۹۶,۰۰۰",
+     "٢٩٩٦٠٠٠",
+     "٢,٩٩٦,٠٠٠",
+     "1540000",
+     "1,540,000",
+     "۱۵۴۰۰۰۰",
+     "۱,۵۴۰,۰۰۰",
+     "١٥٤٠٠٠٠",
+     "١,٥٤٠,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Sportage",
+   "goto /car/247",
+   "goto /car/251",
+   "goto /car/250",
+   "goto /car/248",
+   "stop 2296000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-005",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2017 Nissan Teana’ (کراچی)، ‘2018 Nissan Teana’ (کراچی)، ‘2021 Nissan Teana’ (کراچی)، ‘2013 Nissan Teana’ (کراچی)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/337/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3220000",
+     "3,220,000",
+     "۳۲۲۰۰۰۰",
+     "۳,۲۲۰,۰۰۰",
+     "٣٢٢٠٠٠٠",
+     "٣,٢٢٠,٠٠٠"
+    ],
+    "none_of": [
+     "1708000",
+     "1,708,000",
+     "۱۷۰۸۰۰۰",
+     "۱,۷۰۸,۰۰۰",
+     "١٧٠٨٠٠٠",
+     "١,٧٠٨,٠٠٠",
+     "1988000",
+     "1,988,000",
+     "۱۹۸۸۰۰۰",
+     "۱,۹۸۸,۰۰۰",
+     "١٩٨٨٠٠٠",
+     "١,٩٨٨,٠٠٠",
+     "1092000",
+     "1,092,000",
+     "۱۰۹۲۰۰۰",
+     "۱,۰۹۲,۰۰۰",
+     "١٠٩٢٠٠٠",
+     "١,٠٩٢,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Teana",
+   "goto /car/338",
+   "goto /car/340",
+   "goto /car/337",
+   "goto /car/339",
+   "stop 3220000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-006",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2021 Mercedes-Benz GLK’ (کراچی)، ‘2020 Mercedes-Benz GLK’ (اسلام آباد)، ‘2019 Mercedes-Benz GLK’ (ملتان)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/303/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "11004000",
+     "11,004,000",
+     "۱۱۰۰۴۰۰۰",
+     "۱۱,۰۰۴,۰۰۰",
+     "١١٠٠٤٠٠٠",
+     "١١,٠٠٤,٠٠٠"
+    ],
+    "none_of": [
+     "9548000",
+     "9,548,000",
+     "۹۵۴۸۰۰۰",
+     "۹,۵۴۸,۰۰۰",
+     "٩٥٤٨٠٠٠",
+     "٩,٥٤٨,٠٠٠",
+     "8764000",
+     "8,764,000",
+     "۸۷۶۴۰۰۰",
+     "۸,۷۶۴,۰۰۰",
+     "٨٧٦٤٠٠٠",
+     "٨,٧٦٤,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=GLK",
+   "goto /car/303",
+   "goto /car/301",
+   "goto /car/302",
+   "stop 11004000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-007",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2018 Buick Regal’ (کراچی)، ‘2018 Buick Regal’ (لاہور)، ‘2022 Buick Regal’ (راولپنڈی)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/92/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2268000",
+     "2,268,000",
+     "۲۲۶۸۰۰۰",
+     "۲,۲۶۸,۰۰۰",
+     "٢٢٦٨٠٠٠",
+     "٢,٢٦٨,٠٠٠"
+    ],
+    "none_of": [
+     "2436000",
+     "2,436,000",
+     "۲۴۳۶۰۰۰",
+     "۲,۴۳۶,۰۰۰",
+     "٢٤٣٦٠٠٠",
+     "٢,٤٣٦,٠٠٠",
+     "3584000",
+     "3,584,000",
+     "۳۵۸۴۰۰۰",
+     "۳,۵۸۴,۰۰۰",
+     "٣٥٨٤٠٠٠",
+     "٣,٥٨٤,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Regal",
+   "goto /car/94",
+   "goto /car/92",
+   "goto /car/98",
+   "stop 2268000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-008",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2023 Chevrolet Aveo’ (راولپنڈی)، ‘2019 Chevrolet Aveo’ (لاہور)، ‘2023 Chevrolet Aveo’ (لاہور)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/109/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2576000",
+     "2,576,000",
+     "۲۵۷۶۰۰۰",
+     "۲,۵۷۶,۰۰۰",
+     "٢٥٧٦٠٠٠",
+     "٢,٥٧٦,٠٠٠"
+    ],
+    "none_of": [
+     "3948000",
+     "3,948,000",
+     "۳۹۴۸۰۰۰",
+     "۳,۹۴۸,۰۰۰",
+     "٣٩٤٨٠٠٠",
+     "٣,٩٤٨,٠٠٠",
+     "4508000",
+     "4,508,000",
+     "۴۵۰۸۰۰۰",
+     "۴,۵۰۸,۰۰۰",
+     "٤٥٠٨٠٠٠",
+     "٤,٥٠٨,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Aveo",
+   "goto /car/108",
+   "goto /car/109",
+   "goto /car/107",
+   "stop 2576000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-009",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2018 Nissan X-Trail’ (کراچی)، ‘2017 Nissan X-Trail’ (ملتان)، ‘2024 Nissan X-Trail’ (سیالکوٹ)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/350/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2576000",
+     "2,576,000",
+     "۲۵۷۶۰۰۰",
+     "۲,۵۷۶,۰۰۰",
+     "٢٥٧٦٠٠٠",
+     "٢,٥٧٦,٠٠٠"
+    ],
+    "none_of": [
+     "2492000",
+     "2,492,000",
+     "۲۴۹۲۰۰۰",
+     "۲,۴۹۲,۰۰۰",
+     "٢٤٩٢٠٠٠",
+     "٢,٤٩٢,٠٠٠",
+     "5348000",
+     "5,348,000",
+     "۵۳۴۸۰۰۰",
+     "۵,۳۴۸,۰۰۰",
+     "٥٣٤٨٠٠٠",
+     "٥,٣٤٨,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=X-Trail",
+   "goto /car/350",
+   "goto /car/351",
+   "goto /car/349",
+   "stop 2576000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-010",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2022 BMW 1 Series’ (اسلام آباد)، ‘2017 BMW 1 Series’ (کراچی)، ‘2018 BMW 1 Series’ (پشاور)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/48/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "7056000",
+     "7,056,000",
+     "۷۰۵۶۰۰۰",
+     "۷,۰۵۶,۰۰۰",
+     "٧٠٥٦٠٠٠",
+     "٧,٠٥٦,٠٠٠"
+    ],
+    "none_of": [
+     "3948000",
+     "3,948,000",
+     "۳۹۴۸۰۰۰",
+     "۳,۹۴۸,۰۰۰",
+     "٣٩٤٨٠٠٠",
+     "٣,٩٤٨,٠٠٠",
+     "5124000",
+     "5,124,000",
+     "۵۱۲۴۰۰۰",
+     "۵,۱۲۴,۰۰۰",
+     "٥١٢٤٠٠٠",
+     "٥,١٢٤,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=1%20Series",
+   "goto /car/48",
+   "goto /car/49",
+   "goto /car/47",
+   "stop 7056000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-011",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2016 Honda Accord’ (فیصل آباد)، ‘2020 Honda Accord’ (لاہور)، ‘2018 Honda Accord’ (لاہور)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/154/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2128000",
+     "2,128,000",
+     "۲۱۲۸۰۰۰",
+     "۲,۱۲۸,۰۰۰",
+     "٢١٢٨٠٠٠",
+     "٢,١٢٨,٠٠٠"
+    ],
+    "none_of": [
+     "3696000",
+     "3,696,000",
+     "۳۶۹۶۰۰۰",
+     "۳,۶۹۶,۰۰۰",
+     "٣٦٩٦٠٠٠",
+     "٣,٦٩٦,٠٠٠",
+     "2828000",
+     "2,828,000",
+     "۲۸۲۸۰۰۰",
+     "۲,۸۲۸,۰۰۰",
+     "٢٨٢٨٠٠٠",
+     "٢,٨٢٨,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Accord",
+   "goto /car/154",
+   "goto /car/158",
+   "goto /car/156",
+   "stop 2128000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-012",
+  "site": "gari",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس سائٹ پر درج ایک گاڑی دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘2024 BMW 3 Series’ (کراچی)، ‘2018 BMW 3 Series’ (لاہور)، ‘2024 BMW 3 Series’ (ملتان)۔ اس کی مانگی گئی قیمت کیا ہے؟",
+  "image": "sites/visual/gari/static/cars/55/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "11004000",
+     "11,004,000",
+     "۱۱۰۰۴۰۰۰",
+     "۱۱,۰۰۴,۰۰۰",
+     "١١٠٠٤٠٠٠",
+     "١١,٠٠٤,٠٠٠"
+    ],
+    "none_of": [
+     "11340000",
+     "11,340,000",
+     "۱۱۳۴۰۰۰۰",
+     "۱۱,۳۴۰,۰۰۰",
+     "١١٣٤٠٠٠٠",
+     "١١,٣٤٠,٠٠٠",
+     "5180000",
+     "5,180,000",
+     "۵۱۸۰۰۰۰",
+     "۵,۱۸۰,۰۰۰",
+     "٥١٨٠٠٠٠",
+     "٥,١٨٠,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=3%20Series",
+   "goto /car/52",
+   "goto /car/50",
+   "goto /car/55",
+   "stop 11004000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-013",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2023 Hyundai Verna’ (سیالکوٹ)، ‘2021 Hyundai Verna’ (کراچی)، ‘2020 Hyundai Verna’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/227/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 227
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 224
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 225
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Verna",
+   "goto /car/224",
+   "goto /car/225",
+   "goto /car/227",
+   "goto /car/227",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-014",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2019 Mercedes-Benz C-Class’ (اسلام آباد)، ‘2017 Mercedes-Benz C-Class’ (کراچی)، ‘2018 Mercedes-Benz C-Class’ (اسلام آباد)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/284/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 284
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 286
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 285
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=C-Class",
+   "goto /car/286",
+   "goto /car/285",
+   "goto /car/284",
+   "goto /car/284",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-015",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2021 Hyundai Elantra’ (راولپنڈی)، ‘2021 Hyundai Elantra’ (کراچی)، ‘2016 Hyundai Elantra’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/209/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 209
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 201
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 202
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Elantra",
+   "goto /car/201",
+   "goto /car/202",
+   "goto /car/209",
+   "goto /car/209",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-016",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2014 Hyundai Sonata’ (کراچی)، ‘2021 Hyundai Sonata’ (لاہور)، ‘2017 Hyundai Sonata’ (فیصل آباد)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/213/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 213
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 212
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 211
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sonata",
+   "goto /car/212",
+   "goto /car/213",
+   "goto /car/211",
+   "goto /car/213",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-017",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2023 Volkswagen Golf’ (کراچی)، ‘2019 Volkswagen Golf’ (اسلام آباد)، ‘2017 Volkswagen Golf’ (راولپنڈی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/448/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 448
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 449
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 445
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Golf",
+   "goto /car/449",
+   "goto /car/448",
+   "goto /car/445",
+   "goto /car/448",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-018",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2024 Mazda Mazda6’ (کراچی)، ‘2024 Mazda Mazda6’ (لاہور)، ‘2017 Mazda Mazda6’ (کراچی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/277/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 277
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 279
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Mazda6",
+   "goto /car/277",
+   "goto /car/279",
+   "goto /car/278",
+   "goto /car/277",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-019",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2019 Audi A4’ (اسلام آباد)، ‘2024 Audi A4’ (اسلام آباد)، ‘2017 Audi A4’ (ملتان)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/9/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 9
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 8
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 14
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=A4",
+   "goto /car/8",
+   "goto /car/14",
+   "goto /car/9",
+   "goto /car/9",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-020",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2022 Nissan Sylphy’ (کراچی)، ‘2021 Nissan Sylphy’ (سیالکوٹ)، ‘2016 Nissan Sylphy’ (راولپنڈی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/324/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 324
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 333
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 328
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sylphy",
+   "goto /car/333",
+   "goto /car/324",
+   "goto /car/328",
+   "goto /car/324",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-021",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2024 Nissan Sylphy’ (لاہور)، ‘2022 Nissan Sylphy’ (پشاور)، ‘2014 Nissan Sylphy’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/322/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 322
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 332
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 327
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Sylphy",
+   "goto /car/322",
+   "goto /car/332",
+   "goto /car/327",
+   "goto /car/322",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-022",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2021 Toyota Camry’ (راولپنڈی)، ‘2023 Toyota Camry’ (ملتان)، ‘2023 Toyota Camry’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/403/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 403
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 406
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 407
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Camry",
+   "goto /car/403",
+   "goto /car/406",
+   "goto /car/407",
+   "goto /car/403",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-023",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2016 Hyundai Elantra’ (ملتان)، ‘2018 Hyundai Elantra’ (کراچی)، ‘2021 Hyundai Elantra’ (اسلام آباد)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/206/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 206
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 204
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 200
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Elantra",
+   "goto /car/206",
+   "goto /car/204",
+   "goto /car/200",
+   "goto /car/206",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-024",
+  "site": "gari",
+  "kind": "A2_save",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اپنی محفوظ گاڑیوں میں محفوظ کریں۔ یہ ان میں سے ایک ہے: ‘2019 Ford Mondeo’ (پشاور)، ‘2024 Ford Mondeo’ (راولپنڈی)، ‘2022 Ford Mondeo’ (اسلام آباد)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/146/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "listing_id": 146
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 145
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "listing_id": 149
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Mondeo",
+   "goto /car/145",
+   "goto /car/146",
+   "goto /car/149",
+   "goto /car/146",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-025",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۵,۷۲۰,۴۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2014 Volkswagen T-Roc’ (اسلام آباد)، ‘2024 Volkswagen T-Roc’ (راولپنڈی)، ‘2024 Volkswagen T-Roc’ (اسلام آباد)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/479/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 479,
+     "amount": 5720400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 481
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 480
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=T-Roc",
+   "goto /car/481",
+   "goto /car/479",
+   "goto /car/480",
+   "goto /car/479",
+   "fill 1 amount=5720400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-026",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۴,۱۸۳,۲۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2023 Volkswagen Passat’ (ملتان)، ‘2023 Volkswagen Passat’ (پشاور)، ‘2023 Volkswagen Passat’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/468/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 468,
+     "amount": 4183200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 467
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 470
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Passat",
+   "goto /car/467",
+   "goto /car/468",
+   "goto /car/470",
+   "goto /car/468",
+   "fill 1 amount=4183200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-027",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۶,۵۲۶,۸۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2024 Honda CR-V’ (اسلام آباد)، ‘2021 Honda CR-V’ (لاہور)، ‘2017 Honda CR-V’ (راولپنڈی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/170/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 170,
+     "amount": 6526800
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 165
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 163
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=CR-V",
+   "goto /car/170",
+   "goto /car/165",
+   "goto /car/163",
+   "goto /car/170",
+   "fill 1 amount=6526800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-028",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۲,۷۴۶,۸۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2022 Buick LaCrosse’ (سیالکوٹ)، ‘2018 Buick LaCrosse’ (لاہور)، ‘2020 Buick LaCrosse’ (سیالکوٹ)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/86/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 86,
+     "amount": 2746800
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 84
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 90
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=LaCrosse",
+   "goto /car/84",
+   "goto /car/90",
+   "goto /car/86",
+   "goto /car/86",
+   "fill 1 amount=2746800"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-029",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۳,۳۵۱,۶۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2021 Nissan Tiida’ (راولپنڈی)، ‘2023 Nissan Tiida’ (لاہور)، ‘2022 Nissan Tiida’ (کراچی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/346/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 346,
+     "amount": 3351600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 343
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 345
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Tiida",
+   "goto /car/343",
+   "goto /car/345",
+   "goto /car/346",
+   "goto /car/346",
+   "fill 1 amount=3351600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-030",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۱۱,۳۹۰,۴۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2015 Volvo XC60’ (پشاور)، ‘2024 Volvo XC60’ (کراچی)، ‘2014 Volvo XC60’ (ملتان)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/496/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 496,
+     "amount": 11390400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 494
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 495
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=XC60",
+   "goto /car/494",
+   "goto /car/496",
+   "goto /car/495",
+   "goto /car/496",
+   "fill 1 amount=11390400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-031",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۲,۸۴۷,۶۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2017 Honda CR-V’ (پشاور)، ‘2024 Honda CR-V’ (لاہور)، ‘2017 Honda CR-V’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/162/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 162,
+     "amount": 2847600
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 166
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=CR-V",
+   "goto /car/162",
+   "goto /car/164",
+   "goto /car/166",
+   "goto /car/162",
+   "fill 1 amount=2847600"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-032",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۹,۰۷۲,۰۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2018 Land Rover Range Rover’ (فیصل آباد)، ‘2024 Land Rover Range Rover Evoque’ (لاہور)، ‘2018 Land Rover Range Rover Evoque’ (اسلام آباد)، ‘2021 Land Rover Range Rover Sport’ (لاہور)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/256/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 256,
+     "amount": 9072000
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 258
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 259
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 262
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Land%20Rover",
+   "goto /car/256",
+   "goto /car/258",
+   "goto /car/259",
+   "goto /car/262",
+   "goto /car/256",
+   "fill 1 amount=9072000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-033",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۶,۰۹۸,۴۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2020 Audi Q3’ (کراچی)، ‘2016 Audi Q3’ (لاہور)، ‘2023 Audi Q7’ (اسلام آباد)، ‘2018 Audi Q5’ (راولپنڈی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/43/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 43,
+     "amount": 6098400
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 37
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 36
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 46
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Audi",
+   "goto /car/37",
+   "goto /car/36",
+   "goto /car/46",
+   "goto /car/43",
+   "goto /car/43",
+   "fill 1 amount=6098400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-034",
+  "site": "gari",
+  "kind": "A3_offer",
+  "intent": "تصویر میں دکھائی گئی گاڑی پر Rs.۲,۰۴۱,۲۰۰ کی آفر دیں۔ یہ ان میں سے ایک ہے: ‘2022 Chevrolet Malibu’ (راولپنڈی)، ‘2018 Chevrolet Malibu’ (سیالکوٹ)، ‘2024 Chevrolet Cruze’ (راولپنڈی)، ‘2019 Chevrolet Epica’ (کراچی)۔ ضرورت ہو تو ahmed.raza@garibazaar.test (پاس ورڈ: garibazaar2026) کے طور پر سائن اِن کریں۔",
+  "image": "sites/visual/gari/static/cars/121/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "offers",
+    "match": {
+     "listing_id": 121,
+     "amount": 2041200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 122
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 116
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "offers",
+    "match": {
+     "listing_id": 118
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 email=ahmed.raza@garibazaar.test; password=garibazaar2026",
+   "goto /cars?q=Chevrolet",
+   "goto /car/122",
+   "goto /car/121",
+   "goto /car/116",
+   "goto /car/118",
+   "goto /car/121",
+   "fill 1 amount=2041200"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-035",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "تصویر میں دکھائی گئی گاڑی کون بیچ رہا ہے؟ یہ ان میں سے ایک ہے: ‘2020 Mercedes-Benz E-Class’ (کراچی)، ‘2015 Mercedes-Benz A-Class’ (راولپنڈی)، ‘2021 Mercedes-Benz S-Class’ (لاہور)، ‘2019 Mercedes-Benz E-Class’ (کراچی)۔",
+  "image": "sites/visual/gari/static/cars/292/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "حسن رضا"
+    ],
+    "none_of": [
+     "رابعہ انور",
+     "کامران بیگ",
+     "گلیکسی کار سینٹر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Mercedes-Benz",
+   "goto /car/292",
+   "goto /car/280",
+   "goto /car/305",
+   "goto /car/291",
+   "stop حسن رضا"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-036",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "تصویر میں دکھائی گئی گاڑی کون بیچ رہا ہے؟ یہ ان میں سے ایک ہے: ‘2018 Ford Focus’ (راولپنڈی)، ‘2020 Ford Mondeo’ (لاہور)، ‘2015 Ford Mondeo’ (لاہور)، ‘2022 Ford Focus’ (اسلام آباد)۔",
+  "image": "sites/visual/gari/static/cars/136/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "مہوش اقبال"
+    ],
+    "none_of": [
+     "حسن رضا",
+     "کیپیٹل کار پوائنٹ",
+     "گلیکسی کار سینٹر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Ford",
+   "goto /car/138",
+   "goto /car/144",
+   "goto /car/148",
+   "goto /car/136",
+   "stop مہوش اقبال"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-037",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "تصویر میں دکھائی گئی گاڑی کون بیچ رہا ہے؟ یہ ان میں سے ایک ہے: ‘2013 Volkswagen ID.3’ (کراچی)، ‘2023 Volkswagen Golf’ (لاہور)، ‘2021 Volkswagen Golf’ (کراچی)، ‘2024 Volkswagen Polo’ (راولپنڈی)۔",
+  "image": "sites/visual/gari/static/cars/446/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "سٹی آٹو ٹریڈرز"
+    ],
+    "none_of": [
+     "آمنہ جاوید",
+     "ثنا طارق",
+     "کامران بیگ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Volkswagen",
+   "goto /car/452",
+   "goto /car/446",
+   "goto /car/451",
+   "goto /car/475",
+   "stop سٹی آٹو ٹریڈرز"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-038",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "تصویر میں دکھائی گئی گاڑی کون بیچ رہا ہے؟ یہ ان میں سے ایک ہے: ‘2018 Nissan Patrol’ (لاہور)، ‘2019 Nissan Qashqai’ (کراچی)، ‘2022 Nissan Livina’ (لاہور)، ‘2019 Nissan X-Trail’ (لاہور)۔",
+  "image": "sites/visual/gari/static/cars/313/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "کامران بیگ"
+    ],
+    "none_of": [
+     "بلال حسین",
+     "زینب اختر",
+     "سلمان بٹ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Nissan",
+   "goto /car/313",
+   "goto /car/314",
+   "goto /car/309",
+   "goto /car/348",
+   "stop کامران بیگ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-039",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "تصویر میں دکھائی گئی گاڑی کون بیچ رہا ہے؟ یہ ان میں سے ایک ہے: ‘2018 Volkswagen ID.3’ (ملتان)، ‘2017 Volkswagen Golf’ (پشاور)، ‘2022 Volkswagen Golf’ (اسلام آباد)، ‘2016 Volkswagen Polo’ (اسلام آباد)۔",
+  "image": "sites/visual/gari/static/cars/450/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "عائشہ صدیقی"
+    ],
+    "none_of": [
+     "زینب اختر",
+     "سٹی آٹو ٹریڈرز",
+     "میٹرو کارز"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Volkswagen",
+   "goto /car/453",
+   "goto /car/450",
+   "goto /car/447",
+   "goto /car/476",
+   "stop عائشہ صدیقی"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-040",
+  "site": "gari",
+  "kind": "A4_seller",
+  "intent": "تصویر میں دکھائی گئی گاڑی کون بیچ رہا ہے؟ یہ ان میں سے ایک ہے: ‘2021 BMW X4’ (فیصل آباد)، ‘2021 BMW X3’ (پشاور)، ‘2014 BMW X2’ (پشاور)، ‘2020 BMW X1’ (راولپنڈی)۔",
+  "image": "sites/visual/gari/static/cars/67/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "اسٹار موٹرز"
+    ],
+    "none_of": [
+     "عثمان شیخ",
+     "عدیل اکرم",
+     "کریسنٹ آٹوموبائلز"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=BMW",
+   "goto /car/75",
+   "goto /car/70",
+   "goto /car/67",
+   "goto /car/62",
+   "stop اسٹار موٹرز"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-041",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "تصویر میں دکھائی گئی گاڑی کتنے کلومیٹر چلی ہے؟ یہ ان میں سے ایک ہے: ‘2022 Toyota RAV4’ (اسلام آباد)، ‘2022 Toyota Land Cruiser Prado’ (اسلام آباد)، ‘2021 Toyota Highlander’ (کراچی)۔",
+  "image": "sites/visual/gari/static/cars/421/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "73000",
+     "73,000",
+     "۷۳۰۰۰",
+     "۷۳,۰۰۰",
+     "٧٣٠٠٠",
+     "٧٣,٠٠٠"
+    ],
+    "none_of": [
+     "43000",
+     "43,000",
+     "۴۳۰۰۰",
+     "۴۳,۰۰۰",
+     "٤٣٠٠٠",
+     "٤٣,٠٠٠",
+     "67000",
+     "67,000",
+     "۶۷۰۰۰",
+     "۶۷,۰۰۰",
+     "٦٧٠٠٠",
+     "٦٧,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Toyota",
+   "goto /car/426",
+   "goto /car/422",
+   "goto /car/421",
+   "stop 73000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-042",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "تصویر میں دکھائی گئی گاڑی کتنے کلومیٹر چلی ہے؟ یہ ان میں سے ایک ہے: ‘2014 Kia Cerato’ (لاہور)، ‘2014 Kia Rio’ (کراچی)، ‘2020 Kia Cerato’ (کراچی)۔",
+  "image": "sites/visual/gari/static/cars/243/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "107000",
+     "107,000",
+     "۱۰۷۰۰۰",
+     "۱۰۷,۰۰۰",
+     "١٠٧٠٠٠",
+     "١٠٧,٠٠٠"
+    ],
+    "none_of": [
+     "214000",
+     "214,000",
+     "۲۱۴۰۰۰",
+     "۲۱۴,۰۰۰",
+     "٢١٤٠٠٠",
+     "٢١٤,٠٠٠",
+     "106000",
+     "106,000",
+     "۱۰۶۰۰۰",
+     "۱۰۶,۰۰۰",
+     "١٠٦٠٠٠",
+     "١٠٦,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Kia",
+   "goto /car/239",
+   "goto /car/243",
+   "goto /car/240",
+   "stop 107000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-043",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "تصویر میں دکھائی گئی گاڑی کتنے کلومیٹر چلی ہے؟ یہ ان میں سے ایک ہے: ‘2019 Mercedes-Benz GLE’ (ملتان)، ‘2022 Mercedes-Benz GLA’ (کراچی)، ‘2021 Mercedes-Benz GLB’ (ملتان)۔",
+  "image": "sites/visual/gari/static/cars/295/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "50000",
+     "50,000",
+     "۵۰۰۰۰",
+     "۵۰,۰۰۰",
+     "٥٠٠٠٠",
+     "٥٠,٠٠٠"
+    ],
+    "none_of": [
+     "84000",
+     "84,000",
+     "۸۴۰۰۰",
+     "۸۴,۰۰۰",
+     "٨٤٠٠٠",
+     "٨٤,٠٠٠",
+     "87000",
+     "87,000",
+     "۸۷۰۰۰",
+     "۸۷,۰۰۰",
+     "٨٧٠٠٠",
+     "٨٧,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Mercedes-Benz",
+   "goto /car/299",
+   "goto /car/295",
+   "goto /car/297",
+   "stop 50000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-044",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "تصویر میں دکھائی گئی گاڑی کتنے کلومیٹر چلی ہے؟ یہ ان میں سے ایک ہے: ‘2024 Citroen C5’ (لاہور)، ‘2023 Citroen C5’ (سیالکوٹ)، ‘2019 Citroen Elysee’ (کراچی)۔",
+  "image": "sites/visual/gari/static/cars/128/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "31000",
+     "31,000",
+     "۳۱۰۰۰",
+     "۳۱,۰۰۰",
+     "٣١٠٠٠",
+     "٣١,٠٠٠"
+    ],
+    "none_of": [
+     "25000",
+     "25,000",
+     "۲۵۰۰۰",
+     "۲۵,۰۰۰",
+     "٢٥٠٠٠",
+     "٢٥,٠٠٠",
+     "123000",
+     "123,000",
+     "۱۲۳۰۰۰",
+     "۱۲۳,۰۰۰",
+     "١٢٣٠٠٠",
+     "١٢٣,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Citroen",
+   "goto /car/128",
+   "goto /car/127",
+   "goto /car/131",
+   "stop 31000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-045",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "تصویر میں دکھائی گئی گاڑی کتنے کلومیٹر چلی ہے؟ یہ ان میں سے ایک ہے: ‘2024 BMW 3 Series’ (لاہور)، ‘2020 BMW 5 Series’ (اسلام آباد)، ‘2015 BMW 3 Series’ (ملتان)۔",
+  "image": "sites/visual/gari/static/cars/58/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "64000",
+     "64,000",
+     "۶۴۰۰۰",
+     "۶۴,۰۰۰",
+     "٦٤٠٠٠",
+     "٦٤,٠٠٠"
+    ],
+    "none_of": [
+     "24000",
+     "24,000",
+     "۲۴۰۰۰",
+     "۲۴,۰۰۰",
+     "٢٤٠٠٠",
+     "٢٤,٠٠٠",
+     "176000",
+     "176,000",
+     "۱۷۶۰۰۰",
+     "۱۷۶,۰۰۰",
+     "١٧٦٠٠٠",
+     "١٧٦,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=BMW",
+   "goto /car/54",
+   "goto /car/58",
+   "goto /car/51",
+   "stop 64000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-046",
+  "site": "gari",
+  "kind": "A5_mileage",
+  "intent": "تصویر میں دکھائی گئی گاڑی کتنے کلومیٹر چلی ہے؟ یہ ان میں سے ایک ہے: ‘2020 Honda Accord’ (اسلام آباد)، ‘2018 Honda Crosstour’ (اسلام آباد)، ‘2015 Honda Accord’ (ملتان)۔",
+  "image": "sites/visual/gari/static/cars/161/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "81000",
+     "81,000",
+     "۸۱۰۰۰",
+     "۸۱,۰۰۰",
+     "٨١٠٠٠",
+     "٨١,٠٠٠"
+    ],
+    "none_of": [
+     "140000",
+     "140,000",
+     "۱۴۰۰۰۰",
+     "۱۴۰,۰۰۰",
+     "١٤٠٠٠٠",
+     "١٤٠,٠٠٠",
+     "92000",
+     "92,000",
+     "۹۲۰۰۰",
+     "۹۲,۰۰۰",
+     "٩٢٠٠٠",
+     "٩٢,٠٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Honda",
+   "goto /car/161",
+   "goto /car/180",
+   "goto /car/153",
+   "stop 81000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-047",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اس سائٹ پر تلاش کریں اور اس کی مانگی گئی قیمت بتائیں۔ اگر یہ اب فروخت کے لیے نہیں ہے تو N/A جواب دیں۔",
+  "image": "sites/visual/gari/static/cars/260/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "فروخت ہو گئی"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Range%20Rover%20Sport",
+   "goto /car/261",
+   "goto /car/262",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-048",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اس سائٹ پر تلاش کریں اور اس کی مانگی گئی قیمت بتائیں۔ اگر یہ اب فروخت کے لیے نہیں ہے تو N/A جواب دیں۔",
+  "image": "sites/visual/gari/static/cars/383/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "فروخت ہو گئی"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Superb",
+   "goto /car/384",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-049",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اس سائٹ پر تلاش کریں اور اس کی مانگی گئی قیمت بتائیں۔ اگر یہ اب فروخت کے لیے نہیں ہے تو N/A جواب دیں۔",
+  "image": "sites/visual/gari/static/cars/99/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "فروخت ہو گئی"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Regal",
+   "goto /car/91",
+   "goto /car/92",
+   "goto /car/93",
+   "goto /car/94",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-gari-050",
+  "site": "gari",
+  "kind": "A6_sold",
+  "intent": "تصویر میں دکھائی گئی گاڑی کو اس سائٹ پر تلاش کریں اور اس کی مانگی گئی قیمت بتائیں۔ اگر یہ اب فروخت کے لیے نہیں ہے تو N/A جواب دیں۔",
+  "image": "sites/visual/gari/static/cars/435/4.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "فروخت ہو گئی"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /cars?q=Vios",
+   "goto /car/436",
+   "goto /car/438",
+   "goto /car/439",
+   "goto /car/440",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ }
+]

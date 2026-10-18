@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.name }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+      <li><a href="{{ path('search') }}">{{ t("nav.book_flight") }}</a></li>
+      <li>{{ entry.name }}</li></ol></nav>
+<h1>{{ entry.name }} ({{ entry.code }})</h1>
+<div class="table-scroll"><table><tbody>
+  <tr><th scope="row">{{ t("search.cabin") }}</th><td>{% if entry.cabin == "business" %}{{ t("brand.cabin_business") }}{% else %}{{ t("brand.cabin_economy") }}{% endif %}</td></tr>
+  <tr><th scope="row">{{ t("farerules.refundable") }}</th>
+      <td>{% if entry.refundable %}{{ t("farerules.refund_pct", pct=entry.refund_pct, fee=fmt_money(entry.refund_fee_usd)) }}{% else %}{{ t("schedules.no") }}{% endif %}</td></tr>
+  <tr><th scope="row">{{ t("farerules.changeable") }}</th>
+      <td>{% if entry.changeable %}{% if entry.change_fee_usd %}{{ t("farerules.change_fee", fee=fmt_money(entry.change_fee_usd)) }}{% else %}{{ t("farerules.change_free") }}{% endif %}{% else %}{{ t("schedules.no") }}{% endif %}</td></tr>
+  <tr><th scope="row">{{ t("farerules.miles") }}</th><td>{{ entry.miles_earn_pct }}%</td></tr>
+  <tr><th scope="row">{{ t("farerules.upgradeable") }}</th><td>{% if entry.upgrade_eligible %}{{ t("schedules.yes") }}{% else %}{{ t("schedules.no") }}{% endif %}</td></tr>
+  <tr><th scope="row">{{ t("farerules.free_seat") }}</th><td>{% if entry.seat_selection_free %}{{ t("schedules.yes") }}{% else %}{{ t("schedules.no") }}{% endif %}</td></tr>
+</tbody></table></div>
+<h2>{{ t("farerules.compare") }}</h2>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("results.fare_family") }}</th><th scope="col">{{ t("farerules.refundable") }}</th>
+    <th scope="col">{{ t("farerules.changeable") }}</th><th scope="col">{{ t("farerules.miles") }}</th></tr></thead>
+  <tbody>{% for other in others %}<tr>
+    <td><a href="{{ path('fare_rules', fare_class=other.code) }}">{{ other.name }} ({{ other.code }})</a></td>
+    <td>{% if other.refundable %}{{ other.refund_pct }}%{% else %}{{ t("schedules.no") }}{% endif %}</td>
+    <td>{% if other.changeable %}{% if other.change_fee_usd %}{{ fmt_money(other.change_fee_usd) }}{% else %}{{ t("farerules.change_free") }}{% endif %}{% else %}{{ t("schedules.no") }}{% endif %}</td>
+    <td>{{ other.miles_earn_pct }}%</td>
+  </tr>{% endfor %}</tbody></table></div>
+</div>{% endblock %}

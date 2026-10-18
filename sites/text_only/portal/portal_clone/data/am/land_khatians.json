@@ -1,0 +1,310 @@
+[
+ {
+  "id": 1,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ደልዋር ሀቅ",
+  "father_name": "ሞኒር ኢስላም",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 2,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ደልዋር ሀቅ",
+  "father_name": "ሞኒር ኢስላም",
+  "land_type": "ጦም ያደረ"
+ },
+ {
+  "id": 3,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ቶፋዛል ዳስ",
+  "father_name": "ደልዋር ማህሙድ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 4,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ሻህናዝ ብሁይያን",
+  "father_name": "ራፊቁል ራህማን",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 5,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "ሞኒር ዳስ",
+  "father_name": "ጎላም ቾውዱሪ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 6,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ሞኒር ዳስ",
+  "father_name": "ጎላም ቾውዱሪ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 7,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "አሚኑል ቾውዱሪ",
+  "father_name": "ደልዋር ሞንዳል",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 8,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "ሳቢና ኻን",
+  "father_name": "ፋሩቅ ሞንዳል",
+  "land_type": "የእርሻ"
+ },
+ {
+  "id": 9,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ጎላም ኻን",
+  "father_name": "ታንቪር ጉፕታ",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 10,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ጎላም ኻን",
+  "father_name": "ታንቪር ጉፕታ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 11,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "ያስሚን ጉፕታ",
+  "father_name": "ካምሩል ራህማን",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 12,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ሬሃና ዳስ",
+  "father_name": "ሻፊቁል ሞንዳል",
+  "land_type": "የእርሻ"
+ },
+ {
+  "id": 13,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ሬሃና ዳስ",
+  "father_name": "ሻፊቁል ሞንዳል",
+  "land_type": "የእርሻ"
+ },
+ {
+  "id": 14,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ሳቢና ሳሃ",
+  "father_name": "ሙስጠፋ ቾውዱሪ",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 15,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ሳቢና ሳሃ",
+  "father_name": "ሙስጠፋ ቾውዱሪ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 16,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ሙስጠፋ ሆሴን",
+  "father_name": "አብዱል ሆሴን",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 17,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "አሽራፉል ቤጉም",
+  "father_name": "ደልዋር ሞንዳል",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 18,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "አብዱል ብሁይያን",
+  "father_name": "ጃሺም አላም",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 19,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ጃሃንጊር ሀቅ",
+  "father_name": "ቶፋዛል ኻን",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 20,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ቶፋዛል ካሪም",
+  "father_name": "ካምሩል ቤጉም",
+  "land_type": "ጦም ያደረ"
+ },
+ {
+  "id": 21,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ቶፋዛል ካሪም",
+  "father_name": "ካምሩል ቤጉም",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 22,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ኻሌድ አክተር",
+  "father_name": "ሀቢቡር ሀቅ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 23,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ጃሃናራ ባሩዋ",
+  "father_name": "ማህቡብ ዳስ",
+  "land_type": "ጦም ያደረ"
+ },
+ {
+  "id": 24,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ጃሃናራ ባሩዋ",
+  "father_name": "ማህቡብ ዳስ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 25,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ሮኬያ ካሪም",
+  "father_name": "ሬዛኡል ሲዲቅ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 26,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ኮሂኑር አላም",
+  "father_name": "ኻሌድ ዳስ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 27,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "ኮሂኑር አላም",
+  "father_name": "ኻሌድ ዳስ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 28,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ፋሩቅ ሮይ",
+  "father_name": "ቶፋዛል ሞላ",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 29,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ሉትፋ ማህሙድ",
+  "father_name": "ታንቪር ራህማን",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 30,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ሉትፋ ማህሙድ",
+  "father_name": "ታንቪር ራህማን",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 31,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ሻሂዱል ሀቅ",
+  "father_name": "አብዱል ኻን",
+  "land_type": "ጦም ያደረ"
+ },
+ {
+  "id": 32,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ሻሂዱል ሀቅ",
+  "father_name": "አብዱል ኻን",
+  "land_type": "ጦም ያደረ"
+ },
+ {
+  "id": 33,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "ሬዛኡል ሀቅ",
+  "father_name": "ናዝሩል ማህሙድ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 34,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ሬዛኡል ኻን",
+  "father_name": "ራፊቁል ቾውዱሪ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 35,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ሬዛኡል ኻን",
+  "father_name": "ራፊቁል ቾውዱሪ",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 36,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ኮሂኑር ጉፕታ",
+  "father_name": "ሬዛኡል ባሩዋ",
+  "land_type": "ጦም ያደረ"
+ },
+ {
+  "id": 37,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "ኮሂኑር ጉፕታ",
+  "father_name": "ሬዛኡል ባሩዋ",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 38,
+  "khatian_type": "ኤስ.ኤ.",
+  "owner_name": "አንዋር ሲዲቅ",
+  "father_name": "ኑሩል ቾውዱሪ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 39,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "ሬሃና ራህማን",
+  "father_name": "ዛሂድ ብሁይያን",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 40,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "አብዱል አላም",
+  "father_name": "ካምሩል ባሩዋ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 41,
+  "khatian_type": "ሲ.ኤስ.",
+  "owner_name": "አብዱል አላም",
+  "father_name": "ካምሩል ባሩዋ",
+  "land_type": "የመኖሪያ"
+ },
+ {
+  "id": 42,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ዲልሩባ አላም",
+  "father_name": "ናዝሩል ሚያ",
+  "land_type": "ኩሬ"
+ },
+ {
+  "id": 43,
+  "khatian_type": "አር.ኤስ.",
+  "owner_name": "ዲልሩባ አላም",
+  "father_name": "ናዝሩል ሚያ",
+  "land_type": "የፍራፍሬ አትክልት"
+ },
+ {
+  "id": 44,
+  "khatian_type": "ቢ.ኤስ.",
+  "owner_name": "ዛሂድ ራህማን",
+  "father_name": "ማህቡብ ራህማን",
+  "land_type": "የመኖሪያ"
+ }
+]

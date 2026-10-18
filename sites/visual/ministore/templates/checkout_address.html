@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ S.co_ship_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.co_step1 }}</h2>
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+<table>
+  {% for it in items %}<tr><td>{{ it.p.name }}</td><td>x{{ it.qty }}</td>
+  <td>{{ S.cur }}{{ ('%.2f' % it.subtotal) | v2_num }}</td></tr>{% endfor %}
+</table>
+<p><strong>{{ S.items_total }} {{ S.cur }}{{ ('%.2f' % total) | v2_num }}</strong></p>
+<form method="post" action="/checkout">
+  <label>{{ S.ship_label }}<br><input name="address" style="width:420px" value="{{ saved_address }}" placeholder="{{ S.addr_placeholder }}"></label><br>
+  <span class="meta">{{ S.prefilled_hint }}</span><br><br>
+  <button class="btn">{{ S.continue_review }}</button>
+</form>
+{% endblock %}

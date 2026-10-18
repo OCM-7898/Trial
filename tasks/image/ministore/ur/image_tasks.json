@@ -1,0 +1,2324 @@
+[
+ {
+  "id": "image-ministore-001",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘Merrill کوئین ہیڈ بورڈ، ڈیکوریٹو نیل ہیڈ ٹرم کے ساتھ’، ‘Bridgewater کروڈ کوئین ہیڈ بورڈ’، ‘Glenwilde فل ہیڈ بورڈ’، ‘Katama سلپ کور کوئین ہیڈ بورڈ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p921.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25197.20",
+     "25,197.20",
+     "۲۵۱۹۷.۲۰",
+     "۲۵,۱۹۷.۲۰",
+     "٢٥١٩٧.٢٠",
+     "٢٥,١٩٧.٢٠"
+    ],
+    "none_of": [
+     "27997.20",
+     "27,997.20",
+     "۲۷۹۹۷.۲۰",
+     "۲۷,۹۹۷.۲۰",
+     "٢٧٩٩٧.٢٠",
+     "٢٧,٩٩٧.٢٠",
+     "33320.00",
+     "33,320.00",
+     "۳۳۳۲۰.۰۰",
+     "۳۳,۳۲۰.۰۰",
+     "٣٣٣٢٠.٠٠",
+     "٣٣,٣٢٠.٠٠",
+     "36120.00",
+     "36,120.00",
+     "۳۶۱۲۰.۰۰",
+     "۳۶,۱۲۰.۰۰",
+     "٣٦١٢٠.٠٠",
+     "٣٦,١٢٠.٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Glenwilde%20%D9%81%D9%84%20%DB%81%DB%8C%DA%88%20%D8%A8%D9%88%D8%B1%DA%88",
+   "view 0",
+   "goto /product/1112",
+   "goto /product/919",
+   "goto /product/921",
+   "goto /product/867",
+   "stop 25197.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-002",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘Lawson ماڈرن اینگلڈ لیدر چیئر’، ‘آرم لیس ٹفٹڈ ٹرنڈ لکڑی کے پایوں والی ایکسنٹ چیئر’، ‘Cheyanne ماڈرن ایکسنٹ آرم چیئر’، ‘کروڈ ٹفٹڈ ویلویٹ ایکسنٹ چیئر’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p980.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "41720.00",
+     "41,720.00",
+     "۴۱۷۲۰.۰۰",
+     "۴۱,۷۲۰.۰۰",
+     "٤١٧٢٠.٠٠",
+     "٤١,٧٢٠.٠٠"
+    ],
+    "none_of": [
+     "69720.00",
+     "69,720.00",
+     "۶۹۷۲۰.۰۰",
+     "۶۹,۷۲۰.۰۰",
+     "٦٩٧٢٠.٠٠",
+     "٦٩,٧٢٠.٠٠",
+     "36120.00",
+     "36,120.00",
+     "۳۶۱۲۰.۰۰",
+     "۳۶,۱۲۰.۰۰",
+     "٣٦١٢٠.٠٠",
+     "٣٦,١٢٠.٠٠",
+     "30520.00",
+     "30,520.00",
+     "۳۰۵۲۰.۰۰",
+     "۳۰,۵۲۰.۰۰",
+     "٣٠٥٢٠.٠٠",
+     "٣٠,٥٢٠.٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cheyanne%20%D9%85%D8%A7%DA%88%D8%B1%D9%86%20%D8%A7%DB%8C%DA%A9%D8%B3%D9%86%D9%B9%20%D8%A2%D8%B1%D9%85%20%DA%86%DB%8C%D8%A6%D8%B1",
+   "view 0",
+   "goto /product/920",
+   "goto /product/874",
+   "goto /product/980",
+   "goto /product/953",
+   "stop 41720.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-003",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘Avondale نیل ہیڈ ٹرم کوئین بیڈ، ہیڈ بورڈ کے ساتھ’، ‘کالج ڈارم بیڈ-ان-اے-بیگ، الاسٹک سٹوریج جیبوں کے ساتھ’، ‘Fairmount انڈسٹریل دھاتی کنگ بیڈ، ہیڈ بورڈ کے ساتھ’، ‘ماڈرن لکڑی کا کنگ بیڈ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p1113.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "64120.00",
+     "64,120.00",
+     "۶۴۱۲۰.۰۰",
+     "۶۴,۱۲۰.۰۰",
+     "٦٤١٢٠.٠٠",
+     "٦٤,١٢٠.٠٠"
+    ],
+    "none_of": [
+     "111720.00",
+     "111,720.00",
+     "۱۱۱۷۲۰.۰۰",
+     "۱۱۱,۷۲۰.۰۰",
+     "١١١٧٢٠.٠٠",
+     "١١١,٧٢٠.٠٠",
+     "19597.20",
+     "19,597.20",
+     "۱۹۵۹۷.۲۰",
+     "۱۹,۵۹۷.۲۰",
+     "١٩٥٩٧.٢٠",
+     "١٩,٥٩٧.٢٠",
+     "83720.00",
+     "83,720.00",
+     "۸۳۷۲۰.۰۰",
+     "۸۳,۷۲۰.۰۰",
+     "٨٣٧٢٠.٠٠",
+     "٨٣,٧٢٠.٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Fairmount%20%D8%A7%D9%86%DA%88%D8%B3%D9%B9%D8%B1%DB%8C%D9%84%20%D8%AF%DA%BE%D8%A7%D8%AA%DB%8C%20%DA%A9%D9%86%DA%AF%20%D8%A8%DB%8C%DA%88%D8%8C%20%DB%81%DB%8C%DA%88%20%D8%A8%D9%88%D8%B1%DA%88%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/1081",
+   "goto /product/1002",
+   "goto /product/1113",
+   "goto /product/1127",
+   "stop 64120.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-004",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘ایلیویٹڈ کولنگ پیٹ بیڈ کلاسک’، ‘گول پیٹ بیڈ’، ‘ریزڈ پیٹ بیڈ’، ‘فوم پیٹ بیڈ، بلیوں یا کتوں کے لیے’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p2003.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8397.20",
+     "8,397.20",
+     "۸۳۹۷.۲۰",
+     "۸,۳۹۷.۲۰",
+     "٨٣٩٧.٢٠",
+     "٨,٣٩٧.٢٠"
+    ],
+    "none_of": [
+     "5597.20",
+     "5,597.20",
+     "۵۵۹۷.۲۰",
+     "۵,۵۹۷.۲۰",
+     "٥٥٩٧.٢٠",
+     "٥,٥٩٧.٢٠",
+     "6437.20",
+     "6,437.20",
+     "۶۴۳۷.۲۰",
+     "۶,۴۳۷.۲۰",
+     "٦٤٣٧.٢٠",
+     "٦,٤٣٧.٢٠",
+     "4197.20",
+     "4,197.20",
+     "۴۱۹۷.۲۰",
+     "۴,۱۹۷.۲۰",
+     "٤١٩٧.٢٠",
+     "٤,١٩٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A7%DB%8C%D9%84%DB%8C%D9%88%DB%8C%D9%B9%DA%88%20%DA%A9%D9%88%D9%84%D9%86%DA%AF%20%D9%BE%DB%8C%D9%B9%20%D8%A8%DB%8C%DA%88%20%DA%A9%D9%84%D8%A7%D8%B3%DA%A9",
+   "view 0",
+   "goto /product/2003",
+   "goto /product/1958",
+   "goto /product/1974",
+   "goto /product/1775",
+   "stop 8397.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-005",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘گیمنگ چیٹ ہیڈ سیٹ، PlayStation 4 کے لیے، مائیکروفون کے ساتھ’، ‘PlayStation 3 وائرڈ یو ایس بی چیٹ ہیڈ سیٹ’، ‘گیمنگ ہیڈ سیٹ، مائیکروفون کے ساتھ، PC کے لیے’، ‘پرو گیمنگ ہیڈ سیٹ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p240.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5597.20",
+     "5,597.20",
+     "۵۵۹۷.۲۰",
+     "۵,۵۹۷.۲۰",
+     "٥٥٩٧.٢٠",
+     "٥,٥٩٧.٢٠"
+    ],
+    "none_of": [
+     "6997.20",
+     "6,997.20",
+     "۶۹۹۷.۲۰",
+     "۶,۹۹۷.۲۰",
+     "٦٩٩٧.٢٠",
+     "٦,٩٩٧.٢٠",
+     "3637.20",
+     "3,637.20",
+     "۳۶۳۷.۲۰",
+     "۳,۶۳۷.۲۰",
+     "٣٦٣٧.٢٠",
+     "٣,٦٣٧.٢٠",
+     "11197.20",
+     "11,197.20",
+     "۱۱۱۹۷.۲۰",
+     "۱۱,۱۹۷.۲۰",
+     "١١١٩٧.٢٠",
+     "١١,١٩٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%DA%AF%DB%8C%D9%85%D9%86%DA%AF%20%DB%81%DB%8C%DA%88%20%D8%B3%DB%8C%D9%B9%D8%8C%20%D9%85%D8%A7%D8%A6%DB%8C%DA%A9%D8%B1%D9%88%D9%81%D9%88%D9%86%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE%D8%8C%20PC%20%DA%A9%DB%92%20%D9%84%DB%8C%DB%92",
+   "view 0",
+   "goto /product/86",
+   "goto /product/74",
+   "goto /product/240",
+   "goto /product/171",
+   "stop 5597.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-006",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘مائیکرو فائبر فلیٹ شیٹ’، ‘پریمیم مائیکرو فائبر فلیٹ شیٹ’، ‘400 تھریڈ کاؤنٹ شیٹ سیٹ’، ‘400TC سوتی ساٹن رنکل فری فلیٹ شیٹ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p1096.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3357.20",
+     "3,357.20",
+     "۳۳۵۷.۲۰",
+     "۳,۳۵۷.۲۰",
+     "٣٣٥٧.٢٠",
+     "٣,٣٥٧.٢٠"
+    ],
+    "none_of": [
+     "3637.20",
+     "3,637.20",
+     "۳۶۳۷.۲۰",
+     "۳,۶۳۷.۲۰",
+     "٣٦٣٧.٢٠",
+     "٣,٦٣٧.٢٠",
+     "9797.20",
+     "9,797.20",
+     "۹۷۹۷.۲۰",
+     "۹,۷۹۷.۲۰",
+     "٩٧٩٧.٢٠",
+     "٩,٧٩٧.٢٠",
+     "7837.20",
+     "7,837.20",
+     "۷۸۳۷.۲۰",
+     "۷,۸۳۷.۲۰",
+     "٧٨٣٧.٢٠",
+     "٧,٨٣٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%BE%D8%B1%DB%8C%D9%85%DB%8C%D9%85%20%D9%85%D8%A7%D8%A6%DB%8C%DA%A9%D8%B1%D9%88%20%D9%81%D8%A7%D8%A6%D8%A8%D8%B1%20%D9%81%D9%84%DB%8C%D9%B9%20%D8%B4%DB%8C%D9%B9",
+   "view 0",
+   "goto /product/1176",
+   "goto /product/1096",
+   "goto /product/1118",
+   "goto /product/1202",
+   "stop 3357.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-007",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘بڑا کیٹ سکریچنگ پوسٹ ٹری ٹاور، پلیٹ فارم بیڈ کے ساتھ’، ‘ملٹی پلیٹ فارم سٹیپس کیٹ ٹری ٹاور’، ‘چھوٹا کیٹ ٹری ٹاور، کونڈو اور سکریچنگ پوسٹ کے ساتھ’، ‘بلی کا ٹری، سیسل سکریچنگ پوسٹ اور پلش کونڈو والا ٹاور’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p1873.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12597.20",
+     "12,597.20",
+     "۱۲۵۹۷.۲۰",
+     "۱۲,۵۹۷.۲۰",
+     "١٢٥٩٧.٢٠",
+     "١٢,٥٩٧.٢٠"
+    ],
+    "none_of": [
+     "19597.20",
+     "19,597.20",
+     "۱۹۵۹۷.۲۰",
+     "۱۹,۵۹۷.۲۰",
+     "١٩٥٩٧.٢٠",
+     "١٩,٥٩٧.٢٠",
+     "15397.20",
+     "15,397.20",
+     "۱۵۳۹۷.۲۰",
+     "۱۵,۳۹۷.۲۰",
+     "١٥٣٩٧.٢٠",
+     "١٥,٣٩٧.٢٠",
+     "18197.20",
+     "18,197.20",
+     "۱۸۱۹۷.۲۰",
+     "۱۸,۱۹۷.۲۰",
+     "١٨١٩٧.٢٠",
+     "١٨,١٩٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%DA%86%DA%BE%D9%88%D9%B9%D8%A7%20%DA%A9%DB%8C%D9%B9%20%D9%B9%D8%B1%DB%8C%20%D9%B9%D8%A7%D9%88%D8%B1%D8%8C%20%DA%A9%D9%88%D9%86%DA%88%D9%88%20%D8%A7%D9%88%D8%B1%20%D8%B3%DA%A9%D8%B1%DB%8C%DA%86%D9%86%DA%AF%20%D9%BE%D9%88%D8%B3%D9%B9%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/1813",
+   "goto /product/1847",
+   "goto /product/1873",
+   "goto /product/1996",
+   "stop 12597.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-008",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘وائٹ بورڈ مارکر سیٹ’، ‘ری ٹریکٹ ایبل پرماننٹ مارکر’، ‘بلٹ/چیزل ریورسیبل ٹپ چاک مارکر’، ‘وائٹ بورڈ مارکر سیٹ (سیٹ)’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p2093.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2237.20",
+     "2,237.20",
+     "۲۲۳۷.۲۰",
+     "۲,۲۳۷.۲۰",
+     "٢٢٣٧.٢٠",
+     "٢,٢٣٧.٢٠"
+    ],
+    "none_of": [
+     "2097.20",
+     "2,097.20",
+     "۲۰۹۷.۲۰",
+     "۲,۰۹۷.۲۰",
+     "٢٠٩٧.٢٠",
+     "٢,٠٩٧.٢٠",
+     "2517.20",
+     "2,517.20",
+     "۲۵۱۷.۲۰",
+     "۲,۵۱۷.۲۰",
+     "٢٥١٧.٢٠",
+     "٢,٥١٧.٢٠",
+     "1957.20",
+     "1,957.20",
+     "۱۹۵۷.۲۰",
+     "۱,۹۵۷.۲۰",
+     "١٩٥٧.٢٠",
+     "١,٩٥٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A8%D9%84%D9%B9/%DA%86%DB%8C%D8%B2%D9%84%20%D8%B1%DB%8C%D9%88%D8%B1%D8%B3%DB%8C%D8%A8%D9%84%20%D9%B9%D9%BE%20%DA%86%D8%A7%DA%A9%20%D9%85%D8%A7%D8%B1%DA%A9%D8%B1",
+   "view 0",
+   "goto /product/2185",
+   "goto /product/2101",
+   "goto /product/2093",
+   "goto /product/2171",
+   "stop 2237.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-009",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘گلابی ٹیڈی 3.5 فٹ، کھڑا کلاسک’، ‘بیج ٹیڈی 3.5 فٹ، کھڑا - فیملی سائز’، ‘کریم ٹیڈی 60 سینٹی میٹر کلاسک’، ‘بھورا ٹیڈی 3.5 فٹ، کھڑا - کمپیکٹ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p1724.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "9797.20",
+     "9,797.20",
+     "۹۷۹۷.۲۰",
+     "۹,۷۹۷.۲۰",
+     "٩٧٩٧.٢٠",
+     "٩,٧٩٧.٢٠"
+    ],
+    "none_of": [
+     "12597.20",
+     "12,597.20",
+     "۱۲۵۹۷.۲۰",
+     "۱۲,۵۹۷.۲۰",
+     "١٢٥٩٧.٢٠",
+     "١٢,٥٩٧.٢٠",
+     "18197.20",
+     "18,197.20",
+     "۱۸۱۹۷.۲۰",
+     "۱۸,۱۹۷.۲۰",
+     "١٨١٩٧.٢٠",
+     "١٨,١٩٧.٢٠",
+     "3637.20",
+     "3,637.20",
+     "۳۶۳۷.۲۰",
+     "۳,۶۳۷.۲۰",
+     "٣٦٣٧.٢٠",
+     "٣,٦٣٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A8%DA%BE%D9%88%D8%B1%D8%A7%20%D9%B9%DB%8C%DA%88%DB%8C%203.5%20%D9%81%D9%B9%D8%8C%20%DA%A9%DA%BE%DA%91%D8%A7%20-%20%DA%A9%D9%85%D9%BE%DB%8C%DA%A9%D9%B9",
+   "view 0",
+   "goto /product/1663",
+   "goto /product/1734",
+   "goto /product/1661",
+   "goto /product/1724",
+   "stop 9797.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-010",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘160 گرام پلیڈ فلالین سوتی ڈوے کور’، ‘ایسینشلز مائیکرو فائبر ڈوے کور سیٹ’، ‘100% لینن ڈوے کور سیٹ - 135x200+1x80x80 سینٹی میٹر’، ‘کڈز پرنٹڈ ملٹی ڈاٹس فل/کوئین ڈوے کور’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p1006.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5037.20",
+     "5,037.20",
+     "۵۰۳۷.۲۰",
+     "۵,۰۳۷.۲۰",
+     "٥٠٣٧.٢٠",
+     "٥,٠٣٧.٢٠"
+    ],
+    "none_of": [
+     "13717.20",
+     "13,717.20",
+     "۱۳۷۱۷.۲۰",
+     "۱۳,۷۱۷.۲۰",
+     "١٣٧١٧.٢٠",
+     "١٣,٧١٧.٢٠",
+     "24920.00",
+     "24,920.00",
+     "۲۴۹۲۰.۰۰",
+     "۲۴,۹۲۰.۰۰",
+     "٢٤٩٢٠.٠٠",
+     "٢٤,٩٢٠.٠٠",
+     "6997.20",
+     "6,997.20",
+     "۶۹۹۷.۲۰",
+     "۶,۹۹۷.۲۰",
+     "٦٩٩٧.٢٠",
+     "٦,٩٩٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A7%DB%8C%D8%B3%DB%8C%D9%86%D8%B4%D9%84%D8%B2%20%D9%85%D8%A7%D8%A6%DB%8C%DA%A9%D8%B1%D9%88%20%D9%81%D8%A7%D8%A6%D8%A8%D8%B1%20%DA%88%D9%88%DB%92%20%DA%A9%D9%88%D8%B1%20%D8%B3%DB%8C%D9%B9",
+   "view 0",
+   "goto /product/1137",
+   "goto /product/1006",
+   "goto /product/929",
+   "goto /product/984",
+   "stop 5037.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-011",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘ٹریڈیشنل ڈائننگ ٹیبل 29\"H’، ‘Parson لکڑی کی سائیڈ اینڈ ٹیبل’، ‘Eastport انڈسٹریل لکڑی کی نائٹ سٹینڈ ٹیبل’، ‘Tucana انجینئرڈ لکڑی کی بیڈ سائیڈ ٹیبل، دراز کے ساتھ’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1248.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1248
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1166
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 923
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 986
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Eastport%20%D8%A7%D9%86%DA%88%D8%B3%D9%B9%D8%B1%DB%8C%D9%84%20%D9%84%DA%A9%DA%91%DB%8C%20%DA%A9%DB%8C%20%D9%86%D8%A7%D8%A6%D9%B9%20%D8%B3%D9%B9%DB%8C%D9%86%DA%88%20%D9%B9%DB%8C%D8%A8%D9%84",
+   "view 0",
+   "goto /product/1166",
+   "goto /product/923",
+   "goto /product/1248",
+   "goto /product/986",
+   "goto /product/1248",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-012",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘ماڈرن فارم ہاؤس لکڑی کے بیس والا ایڈجسٹ ایبل لیونگ روم فلور لیمپ’، ‘ایکسنٹ بیڈروم ٹیبل لیمپ، ایل ای ڈی بلب کے ساتھ’، ‘رسٹک فارم ہاؤس جگ لیونگ روم ٹیبل لیمپ، ایل ای ڈی بلب کے ساتھ’، ‘ماڈرن سرامک ٹیبل لیمپ، جیومیٹرک-پیٹرن بیس کے ساتھ’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1042.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1042
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1135
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1054
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%A7%DB%8C%DA%A9%D8%B3%D9%86%D9%B9%20%D8%A8%DB%8C%DA%88%D8%B1%D9%88%D9%85%20%D9%B9%DB%8C%D8%A8%D9%84%20%D9%84%DB%8C%D9%85%D9%BE%D8%8C%20%D8%A7%DB%8C%D9%84%20%D8%A7%DB%8C%20%DA%88%DB%8C%20%D8%A8%D9%84%D8%A8%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/1135",
+   "goto /product/1042",
+   "goto /product/1200",
+   "goto /product/1054",
+   "goto /product/1042",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-013",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘Strathwood چھتری فرنیچر کور’، ‘گول پیٹیو فائر پٹ کور’، ‘فائر پٹ پیٹیو کور’، ‘گیس گرل باربی کیو کور’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1376.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1496
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1382
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D9%81%D8%A7%D8%A6%D8%B1%20%D9%BE%D9%B9%20%D9%BE%DB%8C%D9%B9%DB%8C%D9%88%20%DA%A9%D9%88%D8%B1",
+   "view 0",
+   "goto /product/1496",
+   "goto /product/1382",
+   "goto /product/1376",
+   "goto /product/1304",
+   "goto /product/1376",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-014",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘Truve ماڈرن سٹڈڈ اوٹومن’، ‘Audrey ماڈرن اوٹومن’، ‘ماڈرن اوور سائزڈ اپہولسٹرڈ چوکور اوٹومن’، ‘Strathwood Brooklyn لیدر اوٹومن’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p906.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 906
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1107
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 990
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1171
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Truve%20%D9%85%D8%A7%DA%88%D8%B1%D9%86%20%D8%B3%D9%B9%DA%88%DA%88%20%D8%A7%D9%88%D9%B9%D9%88%D9%85%D9%86",
+   "view 0",
+   "goto /product/906",
+   "goto /product/1107",
+   "goto /product/990",
+   "goto /product/1171",
+   "goto /product/906",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-015",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘Alaina کنٹیمپریری لیدر ہائی-بیک سوئول سیٹ کاؤنٹر سٹول’، ‘Alaina کنٹیمپریری ہائی-بیک سٹول’، ‘ماڈرن پلش ہائی-پائل شیگ ایریا رگ’، ‘Celinda ٹفٹڈ ہائی-بیک بار سٹول’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1164.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 896
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 972
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 946
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alaina%20%DA%A9%D9%86%D9%B9%DB%8C%D9%85%D9%BE%D8%B1%DB%8C%D8%B1%DB%8C%20%D9%84%DB%8C%D8%AF%D8%B1%20%DB%81%D8%A7%D8%A6%DB%8C-%D8%A8%DB%8C%DA%A9%20%D8%B3%D9%88%D8%A6%D9%88%D9%84%20%D8%B3%DB%8C%D9%B9%20%DA%A9%D8%A7%D8%A4%D9%86%D9%B9%D8%B1%20%D8%B3%D9%B9%D9%88%D9%84",
+   "view 0",
+   "goto /product/1164",
+   "goto /product/896",
+   "goto /product/972",
+   "goto /product/946",
+   "goto /product/1164",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-016",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘کنٹیمپریری سٹرائیٹڈ جوٹ ایریا رگ’، ‘ماڈرن ویو کاسموپولیٹن ایریا رگ’، ‘بُنا بارڈر والا سیسل ایریا رگ’، ‘گلابی گلوبل فلورل اونی رگ’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1048.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1048
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1069
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 882
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 898
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%A8%D9%8F%D9%86%D8%A7%20%D8%A8%D8%A7%D8%B1%DA%88%D8%B1%20%D9%88%D8%A7%D9%84%D8%A7%20%D8%B3%DB%8C%D8%B3%D9%84%20%D8%A7%DB%8C%D8%B1%DB%8C%D8%A7%20%D8%B1%DA%AF",
+   "view 0",
+   "goto /product/1069",
+   "goto /product/882",
+   "goto /product/1048",
+   "goto /product/898",
+   "goto /product/1048",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-017",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘پیٹ کیو بیڈ’، ‘فولڈ ایبل کیوب کیٹ بیڈ’، ‘کڈلر پیٹ بیڈ’، ‘ایسینشل نرم اور آرام دہ بولسٹر لاؤنج ڈاگ بیڈ’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1833.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1833
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1932
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1857
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1933
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D9%81%D9%88%D9%84%DA%88%20%D8%A7%DB%8C%D8%A8%D9%84%20%DA%A9%DB%8C%D9%88%D8%A8%20%DA%A9%DB%8C%D9%B9%20%D8%A8%DB%8C%DA%88",
+   "view 0",
+   "goto /product/1932",
+   "goto /product/1833",
+   "goto /product/1857",
+   "goto /product/1933",
+   "goto /product/1833",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-018",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘پلاسٹک شاٹ گلاس’، ‘شیٹر پروف سٹیم لیس وائن گلاس’، ‘Nia ہائی-بال گلاس سیٹ’، ‘الیکٹرک شیشے اور سٹیل کی کیتلی’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p580.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 580
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 485
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 445
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 512
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Nia%20%DB%81%D8%A7%D8%A6%DB%8C-%D8%A8%D8%A7%D9%84%20%DA%AF%D9%84%D8%A7%D8%B3%20%D8%B3%DB%8C%D9%B9",
+   "view 0",
+   "goto /product/485",
+   "goto /product/445",
+   "goto /product/580",
+   "goto /product/512",
+   "goto /product/580",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-019",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘Olander مڈ-سنچری ماڈرن ری کلائنر چیئر، سوئول بیس کے ساتھ’، ‘مڈ-سنچری ماڈرن براس ٹرمڈ ٹیبل لیمپ، ایل ای ڈی بلب کے ساتھ’، ‘Uptown مڈ-سنچری ٹفٹڈ کسٹمائز ایبل ڈے بیڈ صوفہ’، ‘Ava مڈ-سنچری ماڈرن اپہولسٹرڈ اوٹومن’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1065.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1065
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1007
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1090
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 851
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ava%20%D9%85%DA%88-%D8%B3%D9%86%DA%86%D8%B1%DB%8C%20%D9%85%D8%A7%DA%88%D8%B1%D9%86%20%D8%A7%D9%BE%DB%81%D9%88%D9%84%D8%B3%D9%B9%D8%B1%DA%88%20%D8%A7%D9%88%D9%B9%D9%88%D9%85%D9%86",
+   "view 0",
+   "goto /product/1007",
+   "goto /product/1090",
+   "goto /product/851",
+   "goto /product/1065",
+   "goto /product/1065",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-020",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘Aiden ٹفٹڈ مڈ-سنچری ویلویٹ بینچ سیٹ صوفہ’، ‘مڈ-سنچری ماڈرن سفید ماربل اور دھاتی سائیڈ اینڈ ٹیبل’، ‘Uptown مڈ-سنچری ماڈرن ٹفٹڈ ویلویٹ ڈے بیڈ لو سیٹ’، ‘مڈ-سنچری سوئول چیئر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1229.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1229
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 934
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1106
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 950
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Aiden%20%D9%B9%D9%81%D9%B9%DA%88%20%D9%85%DA%88-%D8%B3%D9%86%DA%86%D8%B1%DB%8C%20%D9%88%DB%8C%D9%84%D9%88%DB%8C%D9%B9%20%D8%A8%DB%8C%D9%86%DA%86%20%D8%B3%DB%8C%D9%B9%20%D8%B5%D9%88%D9%81%DB%81",
+   "view 0",
+   "goto /product/1229",
+   "goto /product/934",
+   "goto /product/1106",
+   "goto /product/950",
+   "goto /product/1229",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-021",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘بھورا ٹیڈی 60 سینٹی میٹر - فیملی سائز’، ‘گلابی ٹیڈی 33 سینٹی میٹر ٹوئن پیک’، ‘کریم ٹیڈی 33 سینٹی میٹر - فیملی سائز’، ‘بیج ٹیڈی 3.5 فٹ، کھڑا کلاسک’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1746.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳%",
+    "items": {
+     "1746": 1
+    },
+    "total": 6997.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1683
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1743
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1650
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%A8%DA%BE%D9%88%D8%B1%D8%A7%20%D9%B9%DB%8C%DA%88%DB%8C%2060%20%D8%B3%DB%8C%D9%86%D9%B9%DB%8C%20%D9%85%DB%8C%D9%B9%D8%B1%20-%20%D9%81%DB%8C%D9%85%D9%84%DB%8C%20%D8%B3%D8%A7%D8%A6%D8%B2",
+   "view 0",
+   "goto /product/1746",
+   "goto /product/1683",
+   "goto /product/1743",
+   "goto /product/1650",
+   "goto /product/1746",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-022",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘ماڈرن جیومیٹرک سرامک پلانٹر’، ‘گول وال ماؤنٹ پلانٹر’، ‘ری سائیکلڈ لکڑی کا ڈیک ہینگنگ پلانٹر’، ‘میڈیم ونڈو پین فٹڈ سٹون ویئر پلانٹر’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1297.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱%",
+    "items": {
+     "1297": 1
+    },
+    "total": 6997.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1357
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1480
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1263
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%B1%DB%8C%20%D8%B3%D8%A7%D8%A6%DB%8C%DA%A9%D9%84%DA%88%20%D9%84%DA%A9%DA%91%DB%8C%20%DA%A9%D8%A7%20%DA%88%DB%8C%DA%A9%20%DB%81%DB%8C%D9%86%DA%AF%D9%86%DA%AF%20%D9%BE%D9%84%D8%A7%D9%86%D9%B9%D8%B1",
+   "view 0",
+   "goto /product/1357",
+   "goto /product/1480",
+   "goto /product/1297",
+   "goto /product/1263",
+   "goto /product/1297",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-023",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۶۸ ولو ڈرائیو، بوائزی، ۸۳۷۰۲' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘100% سٹون ویئر پلانٹر’، ‘وکر پلانٹر، ٹریلس کے ساتھ’، ‘ٹیرازو پلانٹر، لکڑی کے سٹینڈ کے ساتھ’، ‘جیومیٹرک سرامک پلانٹر’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1383.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۶۸ ولو ڈرائیو، بوائزی، ۸۳۷۰۲%",
+    "items": {
+     "1383": 1
+    },
+    "total": 5037.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1261
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1283
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1371
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=100%25%20%D8%B3%D9%B9%D9%88%D9%86%20%D9%88%DB%8C%D8%A6%D8%B1%20%D9%BE%D9%84%D8%A7%D9%86%D9%B9%D8%B1",
+   "view 0",
+   "goto /product/1383",
+   "goto /product/1261",
+   "goto /product/1283",
+   "goto /product/1371",
+   "goto /product/1383",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۶۸ ولو ڈرائیو، بوائزی، ۸۳۷۰۲",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-024",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۷ جونیپر ایونیو، سیلم، ۹۷۳۰۱' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘کریم ٹیڈی 33 سینٹی میٹر’، ‘بیج ٹیڈی 3.5 فٹ، کھڑا’، ‘بھورا ٹیڈی 3.5 فٹ، کھڑا’، ‘گلابی ٹیڈی 33 سینٹی میٹر’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1640.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۷ جونیپر ایونیو، سیلم، ۹۷۳۰۱%",
+    "items": {
+     "1640": 1
+    },
+    "total": 12597.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1631
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1622
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1627
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%A8%DA%BE%D9%88%D8%B1%D8%A7%20%D9%B9%DB%8C%DA%88%DB%8C%203.5%20%D9%81%D9%B9%D8%8C%20%DA%A9%DA%BE%DA%91%D8%A7",
+   "view 0",
+   "goto /product/1631",
+   "goto /product/1622",
+   "goto /product/1640",
+   "goto /product/1627",
+   "goto /product/1640",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۷ جونیپر ایونیو، سیلم، ۹۷۳۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-025",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘بیج ٹیڈی 3.5 فٹ، کھڑا - کمپیکٹ’، ‘کریم ٹیڈی 33 سینٹی میٹر ٹوئن پیک’، ‘بھورا ٹیڈی 60 سینٹی میٹر ٹوئن پیک’، ‘گلابی ٹیڈی 60 سینٹی میٹر - فیملی سائز’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1690.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱%",
+    "items": {
+     "1690": 1
+    },
+    "total": 9237.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1706
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1687
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1732
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%A8%DA%BE%D9%88%D8%B1%D8%A7%20%D9%B9%DB%8C%DA%88%DB%8C%2060%20%D8%B3%DB%8C%D9%86%D9%B9%DB%8C%20%D9%85%DB%8C%D9%B9%D8%B1%20%D9%B9%D9%88%D8%A6%D9%86%20%D9%BE%DB%8C%DA%A9",
+   "view 0",
+   "goto /product/1706",
+   "goto /product/1687",
+   "goto /product/1690",
+   "goto /product/1732",
+   "goto /product/1690",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-026",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۲۶ پاپلر لین، فریسنو، ۹۳۶۵۰' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘ایکسٹرا موٹی ایکسرسائز یوگا جم فلور میٹ، کیرینگ سٹریپ کے ساتھ’، ‘1.27 سینٹی میٹر موٹی یوگا میٹ 6 پیس سیٹ’، ‘TPE یوگا میٹ’، ‘TPE اور سویڈ یوگا میٹ’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p684.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۲۶ پاپلر لین، فریسنو، ۹۳۶۵۰%",
+    "items": {
+     "684": 1
+    },
+    "total": 5597.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 818
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 682
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 706
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%D8%A7%DB%8C%DA%A9%D8%B3%D9%B9%D8%B1%D8%A7%20%D9%85%D9%88%D9%B9%DB%8C%20%D8%A7%DB%8C%DA%A9%D8%B3%D8%B1%D8%B3%D8%A7%D8%A6%D8%B2%20%DB%8C%D9%88%DA%AF%D8%A7%20%D8%AC%D9%85%20%D9%81%D9%84%D9%88%D8%B1%20%D9%85%DB%8C%D9%B9%D8%8C%20%DA%A9%DB%8C%D8%B1%DB%8C%D9%86%DA%AF%20%D8%B3%D9%B9%D8%B1%DB%8C%D9%BE%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/684",
+   "goto /product/818",
+   "goto /product/682",
+   "goto /product/706",
+   "goto /product/684",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۲۶ پاپلر لین، فریسنو، ۹۳۶۵۰",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-027",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۸۸ لارل اسٹریٹ، ٹکسن، ۸۵۷۰۱' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘Malida مڈ-سنچری ماڈرن اوپن بیک سوئول کچن بار سٹول’، ‘Aiden مڈ-سنچری صوفہ، ٹیپرڈ لکڑی کے پایوں کے ساتھ’، ‘Ray مڈ-سنچری ماڈرن کچن ڈائننگ روم چیئر’، ‘مڈ-سنچری ماڈرن ڈبل سرکل پلگ-ان ہینگنگ پینڈنٹ’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p910.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۸۸ لارل اسٹریٹ، ٹکسن، ۸۵۷۰۱%",
+    "items": {
+     "910": 1
+    },
+    "total": 22397.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1155
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1077
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 904
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Malida%20%D9%85%DA%88-%D8%B3%D9%86%DA%86%D8%B1%DB%8C%20%D9%85%D8%A7%DA%88%D8%B1%D9%86%20%D8%A7%D9%88%D9%BE%D9%86%20%D8%A8%DB%8C%DA%A9%20%D8%B3%D9%88%D8%A6%D9%88%D9%84%20%DA%A9%DA%86%D9%86%20%D8%A8%D8%A7%D8%B1%20%D8%B3%D9%B9%D9%88%D9%84",
+   "view 0",
+   "goto /product/910",
+   "goto /product/1155",
+   "goto /product/1077",
+   "goto /product/904",
+   "goto /product/910",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۸۸ لارل اسٹریٹ، ٹکسن، ۸۵۷۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-028",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۱۳ سیکامور روڈ، ایکرن، ۴۴۳۰۱' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘Corona میگزین ٹیبل’، ‘ماڈرن گول دھاتی سائیڈ اینڈ ایکسنٹ ٹیبل’، ‘Ian ماڈرن میڈیم ڈائننگ کچن ٹیبل’، ‘Phoenix Home گرینائٹ گول پلاسٹک بار ہائٹ فولڈنگ ٹیبل’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p1243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۱۳ سیکامور روڈ، ایکرن، ۴۴۳۰۱%",
+    "items": {
+     "1243": 1
+    },
+    "total": 44520.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 967
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1125
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1046
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ian%20%D9%85%D8%A7%DA%88%D8%B1%D9%86%20%D9%85%DB%8C%DA%88%DB%8C%D9%85%20%DA%88%D8%A7%D8%A6%D9%86%D9%86%DA%AF%20%DA%A9%DA%86%D9%86%20%D9%B9%DB%8C%D8%A8%D9%84",
+   "view 0",
+   "goto /product/967",
+   "goto /product/1125",
+   "goto /product/1243",
+   "goto /product/1046",
+   "goto /product/1243",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۱۳ سیکامور روڈ، ایکرن، ۴۴۳۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-029",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کون سا برانڈ بیچتا ہے؟ یہ ان میں سے ایک ہے: ‘Movian Aero کافی ٹیبل’، ‘انڈسٹریل ڈیسک ٹیبل’، ‘Parker گول شیلف سٹوریج کافی ٹیبل’، ‘انڈسٹریل کیفے ٹیبل’۔",
+  "image": "sites/visual/ministore/static/img/products/p1196.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ravenna Home"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Parker%20%DA%AF%D9%88%D9%84%20%D8%B4%DB%8C%D9%84%D9%81%20%D8%B3%D9%B9%D9%88%D8%B1%DB%8C%D8%AC%20%DA%A9%D8%A7%D9%81%DB%8C%20%D9%B9%DB%8C%D8%A8%D9%84",
+   "view 0",
+   "goto /product/1017",
+   "goto /product/1040",
+   "goto /product/1196",
+   "goto /product/1059",
+   "stop Ravenna Home"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-030",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کون سا برانڈ بیچتا ہے؟ یہ ان میں سے ایک ہے: ‘ایسینشلز فوم برش سیٹ، 6 پیس، سٹیمپ پینٹر - ٹریول ایڈیشن’، ‘پینگوئن اوپن آئیز، ایش - ٹریول ایڈیشن’، ‘12\" Wild Onez شیر ٹریول ایڈیشن’، ‘پٹی سلائم 4\" ٹن - ٹریول ایڈیشن’۔",
+  "image": "sites/visual/ministore/static/img/products/p1764.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Umi."
+    ],
+    "none_of": [
+     "Amazon Brand - Jam & Honey",
+     "Amazon Brand - Jam and Honey",
+     "AmazonBasics"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A7%DB%8C%D8%B3%DB%8C%D9%86%D8%B4%D9%84%D8%B2%20%D9%81%D9%88%D9%85%20%D8%A8%D8%B1%D8%B4%20%D8%B3%DB%8C%D9%B9%D8%8C%206%20%D9%BE%DB%8C%D8%B3%D8%8C%20%D8%B3%D9%B9%DB%8C%D9%85%D9%BE%20%D9%BE%DB%8C%D9%86%D9%B9%D8%B1%20-%20%D9%B9%D8%B1%DB%8C%D9%88%D9%84%20%D8%A7%DB%8C%DA%88%DB%8C%D8%B4%D9%86",
+   "view 0",
+   "goto /product/1764",
+   "goto /product/1763",
+   "goto /product/1761",
+   "goto /product/1756",
+   "stop Umi."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-031",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کون سا برانڈ بیچتا ہے؟ یہ ان میں سے ایک ہے: ‘Topstar 70570BB00 سوئول چیئر، بچوں اور نوعمروں کے لیے، ہائی بیک’، ‘Dunford کیژول رولڈ آرم چیئر’، ‘Bayard کنٹیمپریری لیدر لیونگ روم چیئر، کروڈ بیک کے ساتھ’، ‘Cedar اپہولسٹرڈ ایکسنٹ چیئر، نیل ہیڈ کے ساتھ’۔",
+  "image": "sites/visual/ministore/static/img/products/p983.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Stone & Beam"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Rivet",
+     "Top Star"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cedar%20%D8%A7%D9%BE%DB%81%D9%88%D9%84%D8%B3%D9%B9%D8%B1%DA%88%20%D8%A7%DB%8C%DA%A9%D8%B3%D9%86%D9%B9%20%DA%86%DB%8C%D8%A6%D8%B1%D8%8C%20%D9%86%DB%8C%D9%84%20%DB%81%DB%8C%DA%88%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/959",
+   "goto /product/1074",
+   "goto /product/944",
+   "goto /product/983",
+   "stop Stone & Beam"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-032",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کون سا برانڈ بیچتا ہے؟ یہ ان میں سے ایک ہے: ‘Ross ماڈرن فیبرک لفٹ-ٹاپ سٹوریج اوٹومن پوف’، ‘Movian Aggol لفٹ-ٹاپ کافی ٹیبل’، ‘Alkove Hayes لفٹ-ٹاپ ٹھوس لکڑی کی کافی ٹیبل، 1 دراز کے ساتھ’۔",
+  "image": "sites/visual/ministore/static/img/products/p870.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Alkove"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Alkove%20Hayes%20%D9%84%D9%81%D9%B9-%D9%B9%D8%A7%D9%BE%20%D9%B9%DA%BE%D9%88%D8%B3%20%D9%84%DA%A9%DA%91%DB%8C%20%DA%A9%DB%8C%20%DA%A9%D8%A7%D9%81%DB%8C%20%D9%B9%DB%8C%D8%A8%D9%84%D8%8C%201%20%D8%AF%D8%B1%D8%A7%D8%B2%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/1020",
+   "goto /product/979",
+   "goto /product/870",
+   "stop Alkove"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-033",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کون سا برانڈ بیچتا ہے؟ یہ ان میں سے ایک ہے: ‘ایسینشلز سٹینڈ، Apple Watch چارجر کے لیے’، ‘FITUEYES PS304003WB پرنٹر سٹینڈ’، ‘ایڈجسٹ ایبل ٹیبلٹ ہولڈر سٹینڈ’۔",
+  "image": "sites/visual/ministore/static/img/products/p291.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonBasics"
+    ],
+    "none_of": [
+     "Eono",
+     "Unbranded"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A7%DB%8C%DA%88%D8%AC%D8%B3%D9%B9%20%D8%A7%DB%8C%D8%A8%D9%84%20%D9%B9%DB%8C%D8%A8%D9%84%D9%B9%20%DB%81%D9%88%D9%84%DA%88%D8%B1%20%D8%B3%D9%B9%DB%8C%D9%86%DA%88",
+   "view 0",
+   "goto /product/206",
+   "goto /product/230",
+   "goto /product/291",
+   "stop AmazonBasics"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-034",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کون سا برانڈ بیچتا ہے؟ یہ ان میں سے ایک ہے: ‘پریمیم بیڈ پلو’، ‘انڈسٹریل لیدر ڈیٹیل تھرو پلو’، ‘ونٹیج تھرو پلو’۔",
+  "image": "sites/visual/ministore/static/img/products/p1215.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%BE%D8%B1%DB%8C%D9%85%DB%8C%D9%85%20%D8%A8%DB%8C%DA%88%20%D9%BE%D9%84%D9%88",
+   "view 0",
+   "goto /product/1215",
+   "goto /product/1116",
+   "goto /product/1145",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-035",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کے کتنے ریویوز ہیں؟ یہ ان میں سے ایک ہے: ‘بلوٹوتھ سٹیریو سپیکر، واٹر ریزسٹنٹ ڈیزائن’، ‘مائیکرو بلوٹوتھ سپیکر’، ‘Bose SoundLink Micro واٹر پروف بلوٹوتھ سپیکر’، ‘منی بلوٹوتھ سپیکر’۔",
+  "image": "sites/visual/ministore/static/img/products/p151.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "۲",
+     "٢"
+    ],
+    "none_of": [
+     "0",
+     "۰",
+     "٠",
+     "5",
+     "۵",
+     "٥",
+     "8",
+     "۸",
+     "٨"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%85%D9%86%DB%8C%20%D8%A8%D9%84%D9%88%D9%B9%D9%88%D8%AA%DA%BE%20%D8%B3%D9%BE%DB%8C%DA%A9%D8%B1",
+   "view 0",
+   "goto /product/147",
+   "goto /product/219",
+   "goto /product/40",
+   "goto /product/151",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-036",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کے کتنے ریویوز ہیں؟ یہ ان میں سے ایک ہے: ‘کریم ٹیڈی 60 سینٹی میٹر - کمپیکٹ’، ‘بھورا ٹیڈی 3.5 فٹ، کھڑا ٹوئن پیک’، ‘گلابی ٹیڈی 3.5 فٹ، کھڑا - فیملی سائز’، ‘بیج ٹیڈی 3.5 فٹ، کھڑا ٹوئن پیک’۔",
+  "image": "sites/visual/ministore/static/img/products/p1747.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "۳",
+     "٣"
+    ],
+    "none_of": [
+     "2",
+     "۲",
+     "٢",
+     "0",
+     "۰",
+     "٠",
+     "5",
+     "۵",
+     "٥"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%DA%AF%D9%84%D8%A7%D8%A8%DB%8C%20%D9%B9%DB%8C%DA%88%DB%8C%203.5%20%D9%81%D9%B9%D8%8C%20%DA%A9%DA%BE%DA%91%D8%A7%20-%20%D9%81%DB%8C%D9%85%D9%84%DB%8C%20%D8%B3%D8%A7%D8%A6%D8%B2",
+   "view 0",
+   "goto /product/1717",
+   "goto /product/1696",
+   "goto /product/1747",
+   "goto /product/1678",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-037",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کے کتنے ریویوز ہیں؟ یہ ان میں سے ایک ہے: ‘Bigelow ماڈرن لیدر صوفہ، چوکور پایوں کے ساتھ’، ‘Mayes سلوپڈ نیل ہیڈ صوفہ’، ‘Elizabeth کنٹیمپریری لو سیٹ صوفہ’، ‘Charles کلاسک اوور سائزڈ لیدر صوفہ’۔",
+  "image": "sites/visual/ministore/static/img/products/p1160.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "۲",
+     "٢"
+    ],
+    "none_of": [
+     "10",
+     "۱۰",
+     "١٠",
+     "12",
+     "۱۲",
+     "١٢",
+     "0",
+     "۰",
+     "٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Elizabeth%20%DA%A9%D9%86%D9%B9%DB%8C%D9%85%D9%BE%D8%B1%DB%8C%D8%B1%DB%8C%20%D9%84%D9%88%20%D8%B3%DB%8C%D9%B9%20%D8%B5%D9%88%D9%81%DB%81",
+   "view 0",
+   "goto /product/1158",
+   "goto /product/999",
+   "goto /product/1160",
+   "goto /product/987",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-038",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کے کتنے ریویوز ہیں؟ یہ ان میں سے ایک ہے: ‘مڈ-سنچری ماڈرن سرامک اور بانس کا پلانٹر گملا’، ‘مڈ-سنچری 100% سٹون ویئر پلانٹر’، ‘مڈ-سنچری سرامک پلانٹر، لوہے کے سٹینڈ کے ساتھ 9.1\"H’، ‘مڈ-سنچری پیٹرنڈ پلانٹر’۔",
+  "image": "sites/visual/ministore/static/img/products/p1254.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1",
+     "۱",
+     "١"
+    ],
+    "none_of": [
+     "6",
+     "۶",
+     "٦",
+     "2",
+     "۲",
+     "٢",
+     "3",
+     "۳",
+     "٣"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%85%DA%88-%D8%B3%D9%86%DA%86%D8%B1%DB%8C%20%D8%B3%D8%B1%D8%A7%D9%85%DA%A9%20%D9%BE%D9%84%D8%A7%D9%86%D9%B9%D8%B1%D8%8C%20%D9%84%D9%88%DB%81%DB%92%20%DA%A9%DB%92%20%D8%B3%D9%B9%DB%8C%D9%86%DA%88%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE%209.1%22H",
+   "view 0",
+   "goto /product/1401",
+   "goto /product/1462",
+   "goto /product/1254",
+   "goto /product/1390",
+   "stop 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-039",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کے کتنے ریویوز ہیں؟ یہ ان میں سے ایک ہے: ‘ہیرنگ میڈیلین ٹریڈیشنل ایریا رگ’، ‘ماڈرن جیومیٹرک اونی ایریا رگ’، ‘کیژول پلیڈ رگ’، ‘کنٹیمپریری آور گلاس اونی ایریا رگ’۔",
+  "image": "sites/visual/ministore/static/img/products/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6",
+     "۶",
+     "٦"
+    ],
+    "none_of": [
+     "2",
+     "۲",
+     "٢",
+     "5",
+     "۵",
+     "٥",
+     "1",
+     "۱",
+     "١"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%DB%81%DB%8C%D8%B1%D9%86%DA%AF%20%D9%85%DB%8C%DA%88%DB%8C%D9%84%DB%8C%D9%86%20%D9%B9%D8%B1%DB%8C%DA%88%DB%8C%D8%B4%D9%86%D9%84%20%D8%A7%DB%8C%D8%B1%DB%8C%D8%A7%20%D8%B1%DA%AF",
+   "view 0",
+   "goto /product/928",
+   "goto /product/1086",
+   "goto /product/1015",
+   "goto /product/1024",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-040",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کے کتنے ریویوز ہیں؟ یہ ان میں سے ایک ہے: ‘کنٹیمپریری دھاتی فلور لیمپ، مرکری گلاس ایکسنٹ کے ساتھ’، ‘ونٹیج ٹاسک ٹیبل ڈیسک لیمپ، ایل ای ڈی بلب کے ساتھ’، ‘ٹریڈیشنل شینوازری سرامک ٹیبل لیمپ’، ‘ٹریڈیشنل دھاتی ڈاؤن برج ڈیسک لیمپ، ایڈجسٹ ایبل شیڈ کے ساتھ’۔",
+  "image": "sites/visual/ministore/static/img/products/p1009.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5",
+     "۵",
+     "٥"
+    ],
+    "none_of": [
+     "6",
+     "۶",
+     "٦",
+     "3",
+     "۳",
+     "٣",
+     "0",
+     "۰",
+     "٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%DA%A9%D9%86%D9%B9%DB%8C%D9%85%D9%BE%D8%B1%DB%8C%D8%B1%DB%8C%20%D8%AF%DA%BE%D8%A7%D8%AA%DB%8C%20%D9%81%D9%84%D9%88%D8%B1%20%D9%84%DB%8C%D9%85%D9%BE%D8%8C%20%D9%85%D8%B1%DA%A9%D8%B1%DB%8C%20%DA%AF%D9%84%D8%A7%D8%B3%20%D8%A7%DB%8C%DA%A9%D8%B3%D9%86%D9%B9%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/1009",
+   "goto /product/1091",
+   "goto /product/1070",
+   "goto /product/1139",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-041",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اس دکان میں تلاش کریں اور اس کی قیمت بتائیں۔ اگر دکان اسے نہیں بیچتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p661.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں ملی",
+     "نہیں ملا",
+     "ایسی کوئی پروڈکٹ نہیں",
+     "موجود نہیں",
+     "درج نہیں",
+     "دستیاب نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1645",
+   "goto /product/1632",
+   "goto /product/1759",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-042",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اس دکان میں تلاش کریں اور اس کی قیمت بتائیں۔ اگر دکان اسے نہیں بیچتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p442.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں ملی",
+     "نہیں ملا",
+     "ایسی کوئی پروڈکٹ نہیں",
+     "موجود نہیں",
+     "درج نہیں",
+     "دستیاب نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/936",
+   "goto /product/1039",
+   "goto /product/966",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-043",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اس دکان میں تلاش کریں اور اس کی قیمت بتائیں۔ اگر دکان اسے نہیں بیچتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p402.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں ملی",
+     "نہیں ملا",
+     "ایسی کوئی پروڈکٹ نہیں",
+     "موجود نہیں",
+     "درج نہیں",
+     "دستیاب نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1205",
+   "goto /product/1234",
+   "goto /product/1185",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-044",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اس دکان میں تلاش کریں اور اس کی قیمت بتائیں۔ اگر دکان اسے نہیں بیچتی تو N/A جواب دیں۔",
+  "image": "assets/trap_photos/p698.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں ملی",
+     "نہیں ملا",
+     "ایسی کوئی پروڈکٹ نہیں",
+     "موجود نہیں",
+     "درج نہیں",
+     "دستیاب نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1762",
+   "goto /product/1644",
+   "goto /product/1708",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-045",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘Amelia ماڈرن 74\" صوفہ’، ‘Victoria فیبرک 3 سیٹر صوفہ’، ‘Blaine ماڈرن لو سیٹ صوفہ’، ‘Emerly ماڈرن سیکشنل صوفہ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p1004.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "153720.00",
+     "153,720.00",
+     "۱۵۳۷۲۰.۰۰",
+     "۱۵۳,۷۲۰.۰۰",
+     "١٥٣٧٢٠.٠٠",
+     "١٥٣,٧٢٠.٠٠"
+    ],
+    "none_of": [
+     "125720.00",
+     "125,720.00",
+     "۱۲۵۷۲۰.۰۰",
+     "۱۲۵,۷۲۰.۰۰",
+     "١٢٥٧٢٠.٠٠",
+     "١٢٥,٧٢٠.٠٠",
+     "111720.00",
+     "111,720.00",
+     "۱۱۱۷۲۰.۰۰",
+     "۱۱۱,۷۲۰.۰۰",
+     "١١١٧٢٠.٠٠",
+     "١١١,٧٢٠.٠٠",
+     "195720.00",
+     "195,720.00",
+     "۱۹۵۷۲۰.۰۰",
+     "۱۹۵,۷۲۰.۰۰",
+     "١٩٥٧٢٠.٠٠",
+     "١٩٥,٧٢٠.٠٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amelia%20%D9%85%D8%A7%DA%88%D8%B1%D9%86%2074%22%20%D8%B5%D9%88%D9%81%DB%81",
+   "view 0",
+   "goto /product/1004",
+   "goto /product/878",
+   "goto /product/916",
+   "goto /product/1163",
+   "stop 153720.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-046",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "تصویر میں اس دکان پر بکنے والی ایک پروڈکٹ دکھائی گئی ہے۔ یہ ان میں سے ایک ہے: ‘تانبے کی بوتل اور جگ کومبو’، ‘سٹینلیس سٹیل انسولیٹڈ پانی کی بوتل، سپاؤٹ ڈھکن کے ساتھ’، ‘شیکر بوتل، مکسر بال کے ساتھ’، ‘بوروسلیکیٹ شیشے کی پانی کی بوتل، سلیو کے ساتھ’۔ اس کی قیمت کیا ہے؟",
+  "image": "sites/visual/ministore/static/img/products/p381.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4197.20",
+     "4,197.20",
+     "۴۱۹۷.۲۰",
+     "۴,۱۹۷.۲۰",
+     "٤١٩٧.٢٠",
+     "٤,١٩٧.٢٠"
+    ],
+    "none_of": [
+     "5037.20",
+     "5,037.20",
+     "۵۰۳۷.۲۰",
+     "۵,۰۳۷.۲۰",
+     "٥٠٣٧.٢٠",
+     "٥,٠٣٧.٢٠",
+     "4757.20",
+     "4,757.20",
+     "۴۷۵۷.۲۰",
+     "۴,۷۵۷.۲۰",
+     "٤٧٥٧.٢٠",
+     "٤,٧٥٧.٢٠",
+     "2517.20",
+     "2,517.20",
+     "۲۵۱۷.۲۰",
+     "۲,۵۱۷.۲۰",
+     "٢٥١٧.٢٠",
+     "٢,٥١٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A8%D9%88%D8%B1%D9%88%D8%B3%D9%84%DB%8C%DA%A9%DB%8C%D9%B9%20%D8%B4%DB%8C%D8%B4%DB%92%20%DA%A9%DB%8C%20%D9%BE%D8%A7%D9%86%DB%8C%20%DA%A9%DB%8C%20%D8%A8%D9%88%D8%AA%D9%84%D8%8C%20%D8%B3%D9%84%DB%8C%D9%88%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/465",
+   "goto /product/444",
+   "goto /product/325",
+   "goto /product/381",
+   "stop 4197.20"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-047",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کو اپنی وش لسٹ میں شامل کریں۔ یہ ان میں سے ایک ہے: ‘Viewridge اپہولسٹرڈ راکنگ ری کلائنر چیئر، سوئول کے ساتھ’، ‘سلوپڈ نیل ہیڈ ٹرم ایکسنٹ چیئر’، ‘بانڈڈ لیدر بگ اینڈ ٹال ایگزیکٹو آفس کمپیوٹر ڈیسک چیئر’، ‘Bradbury چیسٹر فیلڈ کلاسک چیئر’۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p964.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 964
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1203
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 956
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 864
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Bradbury%20%DA%86%DB%8C%D8%B3%D9%B9%D8%B1%20%D9%81%DB%8C%D9%84%DA%88%20%DA%A9%D9%84%D8%A7%D8%B3%DA%A9%20%DA%86%DB%8C%D8%A6%D8%B1",
+   "view 0",
+   "goto /product/1203",
+   "goto /product/956",
+   "goto /product/864",
+   "goto /product/964",
+   "goto /product/964",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-048",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "‘C سیل ایوری ڈے الکلائن بیٹریاں’ کا پروڈکٹ صفحہ کھولیں۔ اس کی تصویر کے مطابق پیک میں کتنے یونٹ ہیں؟",
+  "image": "sites/visual/ministore/static/img/products/p181.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12",
+     "۱۲",
+     "١٢"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/181",
+   "stop 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-049",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "‘ایکسرسائز فٹنس ایب رولر، ورک آؤٹ کے لیے’ کا پروڈکٹ صفحہ کھولیں۔ اس کی تصویر کے مطابق پیک میں کتنے یونٹ ہیں؟",
+  "image": "sites/visual/ministore/static/img/products/p825.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "۲",
+     "٢"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/825",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-050",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "تصویر میں دکھائی گئی پروڈکٹ کا ۱ عدد خریدیں اور اسے '۳۴ ریڈ ووڈ ایونیو، ڈیوس، ۹۵۶۱۶' پر بھجوائیں۔ یہ ان میں سے ایک ہے: ‘Alkove Hayes مستطیل ٹھوس لکڑی کی کافی ٹیبل، 1 شیلف کے ساتھ’، ‘کلاسک کافی ٹیبل’، ‘Amber فارم ہاؤس شیلف سٹوریج سائیڈ اینڈ ٹیبل’، ‘ایسینشل انجینئرڈ لکڑی کی کافی ٹیبل’۔ آرڈر مکمل کرنے کے لیے چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "image": "sites/visual/ministore/static/img/products/p947.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۳۴ ریڈ ووڈ ایونیو، ڈیوس، ۹۵۶۱۶%",
+    "items": {
+     "947": 1
+    },
+    "total": 55720.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 903
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1194
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1170
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alkove%20Hayes%20%D9%85%D8%B3%D8%AA%D8%B7%DB%8C%D9%84%20%D9%B9%DA%BE%D9%88%D8%B3%20%D9%84%DA%A9%DA%91%DB%8C%20%DA%A9%DB%8C%20%DA%A9%D8%A7%D9%81%DB%8C%20%D9%B9%DB%8C%D8%A8%D9%84%D8%8C%201%20%D8%B4%DB%8C%D9%84%D9%81%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "view 0",
+   "goto /product/947",
+   "goto /product/903",
+   "goto /product/1194",
+   "goto /product/1170",
+   "goto /product/947",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۳۴ ریڈ ووڈ ایونیو، ڈیوس، ۹۵۶۱۶",
+   "fill 2"
+  ],
+  "max_steps": 30
+ }
+]

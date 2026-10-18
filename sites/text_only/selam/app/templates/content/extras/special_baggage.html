@@ -1,0 +1,25 @@
+<h2>{{ t("special_bag.table_title") }}</h2>
+<p>{{ t("special_bag.table_intro") }}</p>
+<div class="table-scroll"><table>
+  <thead><tr>
+    <th scope="col">{{ t("special_bag.item") }}</th>
+    <th scope="col">{{ t("form.category") }}</th>
+    <th scope="col">{{ t("special_bag.max_weight") }}</th>
+    <th scope="col">{{ t("special_bag.max_size") }}</th>
+    <th scope="col">{{ t("special_bag.fee") }}</th>
+    <th scope="col">{{ t("special_bag.notice") }}</th>
+  </tr></thead>
+  <tbody>
+  {% for row in extra_rows %}
+    <tr>
+      <td><strong>{{ row.item }}</strong><br><span class="hint">{{ row.notes }}</span></td>
+      <td>{{ special_bag_category(row.category) }}</td>
+      <td>{% if row.max_kg %}{{ row.max_kg }} {{ t("manage.kg") }}{% else %}{{ t("special_bag.not_carried") }}{% endif %}</td>
+      <td>{{ row.max_dims_cm }}</td>
+      <td>{% if row.max_kg == 0 %}&mdash;{% elif row.fee_usd %}{{ fmt_money(row.fee_usd) }}{% else %}{{ t("special_bag.no_charge") }}{% endif %}</td>
+      <td>{% if row.advance_notice_required %}{{ t("special_bag.notice_yes") }}{% else %}{{ t("schedules.no") }}{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+<p class="hint">{{ t("special_bag.table_note") }}</p>

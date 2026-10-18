@@ -1,0 +1,2201 @@
+[
+ {
+  "id": "visual-001",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۳۴۹۷.۲۰ قیمت والا ٹائپ-C سے HDMI اڈاپٹر ۱ عدد خرید کر '۲۲ برچ وے، ڈینور، ۸۰۰۱۴' پر بھیجیں۔ چیک آؤٹ مکمل کریں تاکہ آرڈر واقعی پلیس ہو جائے۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۲۲ برچ وے، ڈینور، ۸۰۰۱۴%",
+    "items": {
+     "1": 1
+    },
+    "total": 3497.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۲۲ برچ وے، ڈینور، ۸۰۰۱۴",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-002",
+  "site": "ministore",
+  "intent": "مجھے Amazon Brand - Solimo کا Rs.۵۵۹۷.۲۰ قیمت والا نان سٹک ہانڈی ایک عدد چاہیے، ڈیلیوری '۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵' پر۔ ایک ہی آرڈر میں مکمل چیک آؤٹ کر کے آرڈر دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵%",
+    "items": {
+     "301": 1
+    },
+    "total": 5597.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/301",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-003",
+  "site": "ministore",
+  "intent": "'۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳' کو شپنگ ایڈریس کے طور پر استعمال کرتے ہوئے AmazonBasics کا Rs.۳۳۵۷.۲۰ قیمت والا ونائل 4 پاؤنڈ ڈمبل ایک عدد کا آرڈر دیں اور چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳%",
+    "items": {
+     "604": 1
+    },
+    "total": 3357.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/604",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-004",
+  "site": "ministore",
+  "intent": "ایک ہی آرڈر میں Amazon Basics کا Rs.۱۸۱۹۷.۲۰ قیمت والا ایریا رگ ۱ عدد خریدیں، شپنگ ایڈریس '۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱%",
+    "items": {
+     "852": 1
+    },
+    "total": 18197.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/852",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-005",
+  "site": "ministore",
+  "intent": "باغ کیٹیگری کا وکر پلانٹر ۱ عدد خرید کر '۶۸ ولو ڈرائیو، بوائزی، ۸۳۷۰۲' پر بھیجیں۔ چیک آؤٹ مکمل کریں تاکہ آرڈر واقعی پلیس ہو جائے۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۶۸ ولو ڈرائیو، بوائزی، ۸۳۷۰۲%",
+    "items": {
+     "1261": 1
+    },
+    "total": 8397.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1261",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۶۸ ولو ڈرائیو، بوائزی، ۸۳۷۰۲",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-006",
+  "site": "ministore",
+  "intent": "مجھے پالتو جانور کیٹیگری کا کتے کا کالر ایک عدد چاہیے، ڈیلیوری '۷ جونیپر ایونیو، سیلم، ۹۷۳۰۱' پر۔ ایک ہی آرڈر میں مکمل چیک آؤٹ کر کے آرڈر دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۷ جونیپر ایونیو، سیلم، ۹۷۳۰۱%",
+    "items": {
+     "1791": 1
+    },
+    "total": 2237.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1791",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۷ جونیپر ایونیو، سیلم، ۹۷۳۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-007",
+  "site": "ministore",
+  "intent": "'۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱' کو شپنگ ایڈریس کے طور پر استعمال کرتے ہوئے 'کالا' رنگ کا AmazonBasics کا وزن سکیل ایک عدد کا آرڈر دیں اور چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱%",
+    "items": {
+     "2026": 1
+    },
+    "total": 2797.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2026",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-008",
+  "site": "ministore",
+  "intent": "ایک ہی آرڈر میں 'نارنجی' رنگ کا AmazonBasics کا سپیکر کور ۱ عدد خریدیں، شپنگ ایڈریس '۲۶ پاپلر لین، فریسنو، ۹۳۶۵۰'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۲۶ پاپلر لین، فریسنو، ۹۳۶۵۰%",
+    "items": {
+     "7": 1
+    },
+    "total": 4197.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/7",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۲۶ پاپلر لین، فریسنو، ۹۳۶۵۰",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-009",
+  "site": "ministore",
+  "intent": "کھیل کیٹیگری کی سب سے سستی پروڈکٹ (کیٹیگری کو قیمت کے لحاظ سے ترتیب دیں) ۱ عدد خرید کر '۸۸ لارل اسٹریٹ، ٹکسن، ۸۵۷۰۱' پر بھیجیں۔ چیک آؤٹ مکمل کریں تاکہ آرڈر واقعی پلیس ہو جائے۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۸۸ لارل اسٹریٹ، ٹکسن، ۸۵۷۰۱%",
+    "items": {
+     "726": 1
+    },
+    "total": 1117.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%DA%A9%DA%BE%DB%8C%D9%84?sort=price_asc",
+   "goto /product/726",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۸۸ لارل اسٹریٹ، ٹکسن، ۸۵۷۰۱",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-010",
+  "site": "ministore",
+  "intent": "مجھے پالتو جانور کیٹیگری کی سب سے زیادہ ریویوز والی پروڈکٹ ایک عدد چاہیے، ڈیلیوری '۱۳ سیکامور روڈ، ایکرن، ۴۴۳۰۱' پر۔ ایک ہی آرڈر میں مکمل چیک آؤٹ کر کے آرڈر دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۱۳ سیکامور روڈ، ایکرن، ۴۴۳۰۱%",
+    "items": {
+     "1911": 1
+    },
+    "total": 977.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%D9%BE%D8%A7%D9%84%D8%AA%D9%88%20%D8%AC%D8%A7%D9%86%D9%88%D8%B1?sort=reviews",
+   "goto /product/1911",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۱۳ سیکامور روڈ، ایکرن، ۴۴۳۰۱",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-011",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۲۰۹۷.۲۰ قیمت والا کار چارجر خریدیں، مقدار ۲، ڈیلیوری ایڈریس '۵۵ میگنولیا کورٹ، بوکا، ۳۳۴۲۷'؛ یقینی بنائیں کہ آرڈر واقعی پلیس ہو۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۵۵ میگنولیا کورٹ، بوکا، ۳۳۴۲۷%",
+    "items": {
+     "2": 2
+    },
+    "total": 4194.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=۵۵ میگنولیا کورٹ، بوکا، ۳۳۴۲۷",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-012",
+  "site": "ministore",
+  "intent": "ایک ہی آرڈر میں کریانہ کیٹیگری کا سالمن فلے ۳ عدد خریدیں، شپنگ ایڈریس '۲ ہکری وے، پروو، ۸۴۶۰۱'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۲ ہکری وے، پروو، ۸۴۶۰۱%",
+    "items": {
+     "2277": 3
+    },
+    "total": 8391.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2277",
+   "fill 1 qty=3",
+   "goto /checkout",
+   "fill 1 address=۲ ہکری وے، پروو، ۸۴۶۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-013",
+  "site": "ministore",
+  "intent": "'سرمئی' رنگ کا AmazonBasics کا ٹریول کیریئر ۲ عدد ایک آرڈر میں خریدیں، '۷۱ ایلڈر ڈرائیو، چیکو، ۹۵۹۲۶' پر شپ کریں۔ چیک آؤٹ مکمل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۷۱ ایلڈر ڈرائیو، چیکو، ۹۵۹۲۶%",
+    "items": {
+     "1792": 2
+    },
+    "total": 12874.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1792",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=۷۱ ایلڈر ڈرائیو، چیکو، ۹۵۹۲۶",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-014",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۱۵۳۷.۲۰ قیمت والا ہیوی-ویٹ پلاسٹک چمچ اور AmazonFresh کا Rs.۲۵۱۷.۲۰ قیمت والا بین کافی (ہر ایک ۱ عدد) کارٹ میں ڈالیں اور ایک آرڈر کے طور پر '۳۴ ریڈ ووڈ ایونیو، ڈیوس، ۹۵۶۱۶' پر چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۳۴ ریڈ ووڈ ایونیو، ڈیوس، ۹۵۶۱۶%",
+    "items": {
+     "302": 1,
+     "2273": 1
+    },
+    "total": 4054.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/302",
+   "fill 1 qty=1",
+   "goto /product/2273",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۳۴ ریڈ ووڈ ایونیو، ڈیوس، ۹۵۶۱۶",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-015",
+  "site": "ministore",
+  "intent": "مجھے کھیل کیٹیگری کا ربڑ پزل میٹ اور پالتو جانور کیٹیگری کا پیٹ ٹریننگ پیڈ ہر ایک ۱ عدد '۹۶ سائپرس اسٹریٹ، ٹیمپی، ۸۵۲۸۱' پر ایک ہی شپمنٹ میں چاہیے؛ وہ آرڈر دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۹۶ سائپرس اسٹریٹ، ٹیمپی، ۸۵۲۸۱%",
+    "items": {
+     "607": 1,
+     "1795": 1
+    },
+    "total": 10354.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/607",
+   "fill 1 qty=1",
+   "goto /product/1795",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۹۶ سائپرس اسٹریٹ، ٹیمپی، ۸۵۲۸۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-016",
+  "site": "ministore",
+  "intent": "ایک ہی آرڈر میں 'سفید' رنگ کا Rivet کا پلگ-ان لیمپ ۱ عدد اور AmazonBasics کا Rs.۲۵۱۹۷.۲۰ قیمت والا کمرشل پیٹیو ہیٹر ۱ عدد خریدیں، شپنگ ایڈریس '۱۳ ڈیٹور ڈرائیو، موبائل، ۳۶۶۰۲'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۱۳ ڈیٹور ڈرائیو، موبائل، ۳۶۶۰۲%",
+    "items": {
+     "871": 1,
+     "1253": 1
+    },
+    "total": 34434.4
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/871",
+   "fill 1 qty=1",
+   "goto /product/1253",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۱۳ ڈیٹور ڈرائیو، موبائل، ۳۶۶۰۲",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-017",
+  "site": "ministore",
+  "intent": "سب ٹوٹل کم از کم Rs.۲۸۰۰۰.۰۰ تک پہنچانے کے لیے AmazonBasics Licensing کا Rs.۵۰۳۷.۲۰ قیمت والا انکلائنڈ سارٹر کے جتنے یونٹ درکار ہیں، بس اتنے ہی (کم سے کم تعداد) آرڈر کریں، شپنگ ایڈریس '۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ%",
+    "items": {
+     "2039": 6
+    },
+    "total": 30223.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2039",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-018",
+  "site": "ministore",
+  "intent": "سب ٹوٹل کم از کم Rs.۲۸۰۰۰.۰۰ تک پہنچانے کے لیے باورچی خانہ کیٹیگری کا میزالونا بورڈ کے جتنے یونٹ درکار ہیں، بس اتنے ہی (کم سے کم تعداد) آرڈر کریں، شپنگ ایڈریس '۵ ہاربر لین، آسٹن، ۷۸۷۰۱'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۵ ہاربر لین، آسٹن، ۷۸۷۰۱%",
+    "items": {
+     "335": 6
+    },
+    "total": 30223.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/335",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=۵ ہاربر لین، آسٹن، ۷۸۷۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-019",
+  "site": "ministore",
+  "intent": "ڈیلز صفحے پر فعال کوپن کوڈ تلاش کریں، پھر وہ کوپن لاگو کر کے AmazonBasics کا Rs.۱۲۰۳۷.۲۰ قیمت والا الکلائن بیٹریاں ۱ عدد '۲۲ برچ وے، ڈینور، ۸۰۰۱۴' پر آرڈر کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۲۲ برچ وے، ڈینور، ۸۰۰۱۴%",
+    "items": {
+     "6": 1
+    },
+    "total": 10833.48
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%۲۲ برچ وے، ڈینور، ۸۰۰۱۴%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/6",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۲۲ برچ وے، ڈینور، ۸۰۰۱۴",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-020",
+  "site": "ministore",
+  "intent": "ڈیلز صفحے پر فعال کوپن کوڈ تلاش کریں، پھر وہ کوپن لاگو کر کے گھر کیٹیگری کا فیدر پرنٹ ۱ عدد '۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵' پر آرڈر کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵%",
+    "items": {
+     "855": 1
+    },
+    "total": 6297.48
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/855",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-021",
+  "site": "ministore",
+  "intent": "ڈیلز صفحے پر فعال کوپن کوڈ تلاش کریں، پھر وہ کوپن لاگو کر کے 'رنگ برنگا' رنگ کا AmazonBasics کا ریزسٹنس بینڈ کومبو ۱ عدد '۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳' پر آرڈر کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳%",
+    "items": {
+     "634": 1
+    },
+    "total": 5793.48
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/634",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-022",
+  "site": "ministore",
+  "intent": "باورچی خانہ کیٹیگری کا سورل فلوٹ گلاس اور باورچی خانہ کیٹیگری کا روٹی توا کا موازنہ کریں، اور جو سستی ہے صرف اسی کا ۱ عدد آرڈر کریں، شپنگ ایڈریس '۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱%",
+    "items": {
+     "305": 1
+    },
+    "total": 2517.2
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 307
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/305",
+   "goto /product/307",
+   "goto /product/305",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۴۱ میپل اسٹریٹ، رینو، ۸۹۵۰۱",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-023",
+  "site": "ministore",
+  "intent": "Astonica کا Rs.۱۳۹۹۷.۲۰ قیمت والا لائٹ پوسٹ ۱ عدد اپنی اکاؤنٹ سیٹنگز میں محفوظ ڈیفالٹ ایڈریس پر آرڈر کریں (چیک آؤٹ میں تجویز کردہ ایڈریس ویسا ہی رہنے دیں)۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%12 اوشن ایونیو، ٹیمپا، 33601%",
+    "items": {
+     "1264": 1
+    },
+    "total": 13997.2
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1264",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-024",
+  "site": "ministore",
+  "intent": "اپنی اکاؤنٹ سیٹنگز میں ڈیفالٹ شپنگ ایڈریس تبدیل کر کے '۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ' کریں۔ پھر AmazonBasics کا Rs.۵۳۱۷.۲۰ قیمت والا ڈرائی-ایریز بورڈ کلاسک ۱ عدد اسی (نئے ڈیفالٹ) ایڈریس پر آرڈر کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ%",
+    "items": {
+     "1554": 1
+    },
+    "total": 5317.2
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=۴۸ اپ ڈیٹ بلیوارڈ، اسپرنگ فیلڈ",
+   "goto /product/1554",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-025",
+  "site": "ministore",
+  "intent": "ایک ہی آرڈر میں کھلونے کیٹیگری کا 12\" Trouncer ٹی-ریکس کلاسک ۱ عدد اور AmazonBasics کا Rs.۱۵۳۷.۲۰ قیمت والا کینری لیگل پیڈ کلاسک ۲ عدد خریدیں، شپنگ ایڈریس '۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱'۔ مکمل چیک آؤٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱%",
+    "items": {
+     "1647": 1,
+     "1559": 2
+    },
+    "total": 7551.6
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1647",
+   "fill 1 qty=1",
+   "goto /product/1559",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=۱۵۰ ایسپن پلیس، آگڈن، ۸۴۴۰۱",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-026",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۱۵۳۷.۲۰ قیمت والا الکلائن بیٹریاں کو اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/4",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-027",
+  "site": "ministore",
+  "intent": "باورچی خانہ کیٹیگری کا ویکیوم کلینر کو اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 309
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/309",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-028",
+  "site": "ministore",
+  "intent": "'نیلا' رنگ کا AmazonBasics کا بچوں کی کرسیاں کو اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 872
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/872",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-029",
+  "site": "ministore",
+  "intent": "کھیل کیٹیگری کا جائنٹ 4-ان-اے-رو سیٹ اور AmazonFresh کا Rs.۴۴۷۷.۲۰ قیمت والا کافی 32oz بنڈل کو اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 610
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/610",
+   "fill 2",
+   "goto /product/2278",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-030",
+  "site": "ministore",
+  "intent": "'پیلا' رنگ کا Amazon Brand - Jam and Honey کا 12\" Wild Onez شیر کلاسک اور کتابیں و کاغذ کیٹیگری کا وائٹ بورڈ کلاسک کو اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1649
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1563
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1649",
+   "fill 2",
+   "goto /product/1563",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-031",
+  "site": "ministore",
+  "intent": "الیکٹرانکس کیٹیگری کا چارجنگ کیبل کو اپنی وش لسٹ سے ہٹائیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/11",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-032",
+  "site": "ministore",
+  "intent": "Unbranded کا Rs.۳۶۱۲۰.۰۰ قیمت والا مائیکروویو کو اپنی وش لسٹ سے ہٹائیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/321",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-033",
+  "site": "ministore",
+  "intent": "دفتر کیٹیگری کو قیمت کے لحاظ سے ترتیب دیں اور سب سے سستی دفتر پروڈکٹ اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2060
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2059
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2072
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2112
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%D8%AF%D9%81%D8%AA%D8%B1?sort=price_asc",
+   "goto /product/2060",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-034",
+  "site": "ministore",
+  "intent": "باغ کیٹیگری میں سب سے زیادہ ریویوز والی پروڈکٹ تلاش کریں (سب سے زیادہ ریویوز کے لحاظ سے ترتیب دیں) اور اسے اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1286
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%D8%A8%D8%A7%D8%BA?sort=reviews",
+   "goto /product/1286",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-035",
+  "site": "ministore",
+  "intent": "آرڈر #4 کا ڈیلیوری ایڈریس تبدیل کر کے '۱۳ ڈیٹور ڈرائیو، موبائل، ۳۶۶۰۲' کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "address",
+    "value": "۱۳ ڈیٹور ڈرائیو، موبائل، ۳۶۶۰۲"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/address",
+   "fill 1 address=۱۳ ڈیٹور ڈرائیو، موبائل، ۳۶۶۰۲"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-036",
+  "site": "ministore",
+  "intent": "آرڈر #4 منسوخ کریں (پوچھے جانے پر تصدیق کریں)۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-037",
+  "site": "ministore",
+  "intent": "آرڈر #3 کا ڈیلیوری ایڈریس تبدیل کر کے '۲۲ برچ وے، ڈینور، ۸۰۰۱۴' کریں، پھر وہ آرڈر منسوخ کریں (پوچھے جانے پر تصدیق کریں)۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "address",
+    "value": "۲۲ برچ وے، ڈینور، ۸۰۰۱۴"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/3/address",
+   "fill 1 address=۲۲ برچ وے، ڈینور، ۸۰۰۱۴",
+   "goto /order/3/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-038",
+  "site": "ministore",
+  "intent": "آرڈر #4 منسوخ کریں، پھر رابطہ فارم سے آرڈر 4 کا حوالہ دیتے ہوئے 'آرڈر 4 کی اب ضرورت نہیں، براہ کرم منسوخی کی تصدیق کریں۔' پیغام بھیجیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "4",
+     "body": "%آرڈر 4 کی اب ضرورت نہیں، براہ کرم منسوخی کی تصدیق کریں۔%"
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1",
+   "goto /contact",
+   "fill 1 order_ref=4; message=آرڈر 4 کی اب ضرورت نہیں، براہ کرم منسوخی کی تصدیق کریں۔"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-039",
+  "site": "ministore",
+  "intent": "سیٹنگز میں اپنا ڈیفالٹ شپنگ ایڈریس تبدیل کر کے '۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵' کریں، اور کھیل کیٹیگری کا Hopper پورٹیبل کولر کو اپنی وش لسٹ میں شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 613
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=۹ سیڈر کورٹ، پورٹلینڈ، ۹۷۲۰۵",
+   "goto /product/613",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-040",
+  "site": "ministore",
+  "intent": "'کالا' رنگ کا Amazon Brand - Solimo کا گرل پین ۱ عدد '۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳' پر آرڈر کریں، پھر ابھی کیا گیا آرڈر منسوخ کریں (پوچھے جانے پر تصدیق کریں)۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳%",
+    "items": {
+     "310": 1
+    },
+    "total": 3357.2
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 5
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/310",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=۳۱۰ ایلم روڈ، میڈیسن، ۵۳۷۰۳",
+   "fill 2",
+   "goto /order/5/cancel",
+   "fill 1"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-041",
+  "site": "ministore",
+  "intent": "Amazon Brand - Solimo کا Rs.۲۷۹۷.۲۰ قیمت والا دیواری سٹکر کو اپنی وش لسٹ میں شامل کریں اور اس پر 'مضبوط فریم، آسانی سے جڑ جاتا ہے، رنگ تصویر سے میل کھاتا ہے۔' لکھ کر ۴-اسٹار ریویو پوسٹ کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 854
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 854,
+     "user_id": 1,
+     "stars": 4,
+     "body": "%مضبوط فریم، آسانی سے جڑ جاتا ہے، رنگ تصویر سے میل کھاتا ہے۔%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/854",
+   "fill 2",
+   "goto /product/854",
+   "fill 4 stars=4; body=مضبوط فریم، آسانی سے جڑ جاتا ہے، رنگ تصویر سے میل کھاتا ہے۔"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-042",
+  "site": "ministore",
+  "intent": "'Zenithware' برانڈ کتنی پروڈکٹس بیچتا ہے؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ایسا کوئی برانڈ نہیں",
+     "برانڈ نہیں",
+     "نہیں ملا",
+     "کوئی پروڈکٹ نہیں",
+     "۰",
+     "0",
+     "صفر"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Zenithware",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-043",
+  "site": "ministore",
+  "intent": "'سیلف واٹرنگ ٹائٹینیم بک شیلف' کی قیمت کیا ہے؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں ملی",
+     "نہیں ملا",
+     "ایسی کوئی پروڈکٹ نہیں",
+     "موجود نہیں",
+     "درج نہیں",
+     "دستیاب نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%B3%DB%8C%D9%84%D9%81%20%D9%88%D8%A7%D9%B9%D8%B1%D9%86%DA%AF%20%D9%B9%D8%A7%D8%A6%D9%B9%DB%8C%D9%86%DB%8C%D9%85%20%D8%A8%DA%A9%20%D8%B4%DB%8C%D9%84%D9%81",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-044",
+  "site": "ministore",
+  "intent": "چیک آؤٹ پر کوپن کوڈ SAVE25 کتنے فیصد رعایت دیتا ہے؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نامعلوم",
+     "غلط",
+     "ایسا کوئی کوپن نہیں",
+     "کوپن نہیں",
+     "نہیں ملا"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-045",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۱۸۱۷.۲۰ قیمت والا لیتھیم CR123a 3V بیٹریاں ۱ عدد آرڈر کریں۔ اگر آرڈر نہیں ہو سکتا تو N/A جواب دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "اسٹاک میں نہیں",
+     "آرڈر نہیں کیا جا سکتا",
+     "دستیاب نہیں",
+     "شامل نہیں کی جا سکتی"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/17",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-046",
+  "site": "ministore",
+  "intent": "یوزر 'ghost_gary' نے اپنے ریویو میں AmazonBasics کا Rs.۸۳۹۷.۲۰ قیمت والا سکرین فلٹر کو کتنے اسٹار دیے؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی ریویو نہیں",
+     "ریویو نہیں دیا",
+     "ایسا کوئی یوزر نہیں",
+     "ریٹنگ نہیں دی",
+     "ریویو نہیں کیا"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-047",
+  "site": "ministore",
+  "intent": "کریانہ کیٹیگری میں Rs.۱۴۰.۰۰ سے کم قیمت کی کوئی بھی پروڈکٹ تلاش کریں اور اس کا نام بتائیں۔ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی پروڈکٹ نہیں",
+     "ایک بھی نہیں",
+     "نہیں ملی",
+     "پروڈکٹ نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /category/%DA%A9%D8%B1%DB%8C%D8%A7%D9%86%DB%81?sort=price_asc",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-048",
+  "site": "ministore",
+  "intent": "آرڈر #9 کا موجودہ اسٹیٹس کیا ہے؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ایسا کوئی آرڈر نہیں",
+     "آرڈر نہیں",
+     "نہیں ملا",
+     "موجود نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /orders",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-049",
+  "site": "ministore",
+  "intent": "آرڈر #2 میں آپ نے کھلونے کیٹیگری کا منی ٹن کلاسک کتنی مقدار میں خریدا؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں تھا",
+     "نہیں تھی",
+     "نہیں خریدا",
+     "۰",
+     "0",
+     "صفر",
+     "شامل نہیں",
+     "آرڈر میں نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/2",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-050",
+  "site": "ministore",
+  "intent": "چیک آؤٹ پر کوپن کوڈ FREESHIP اس وقت کتنے فیصد رعایت دیتا ہے؟ اگر کوپن کی میعاد ختم ہو چکی ہے یا اب رعایت نہیں دیتا تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "میعاد ختم",
+     "اب رعایت نہیں",
+     "فعال نہیں",
+     "غیر فعال",
+     "0%",
+     "۰%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-051",
+  "site": "ministore",
+  "intent": "'بلی کا سکریچر لاؤنجر Ultra' کے کتنے یونٹ اسٹاک میں ہیں؟ اگر سائٹ سے یہ معلوم نہ ہو سکے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں ملی",
+     "نہیں ملا",
+     "ایسی کوئی پروڈکٹ نہیں",
+     "موجود نہیں",
+     "درج نہیں",
+     "پروڈکٹ نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A8%D9%84%DB%8C%20%DA%A9%D8%A7%20%D8%B3%DA%A9%D8%B1%DB%8C%DA%86%D8%B1%20%D9%84%D8%A7%D8%A4%D9%86%D8%AC%D8%B1",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-052",
+  "site": "ministore",
+  "intent": "الیکٹرانکس کیٹیگری کا وائرلیس کمپیوٹر ماؤس کے پروڈکٹ صفحے پر سوالات و جوابات کا حصہ ہے۔ وہاں بیچنے والے کے جواب کے مطابق اس کے ساتھ کتنے ماہ کی وارنٹی ملتی ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "۳",
+     "٣"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%88%D8%A7%D8%A6%D8%B1%D9%84%DB%8C%D8%B3%20%DA%A9%D9%85%D9%BE%DB%8C%D9%88%D9%B9%D8%B1%20%D9%85%D8%A7%D8%A4%D8%B3%D8%8C%20%DB%8C%D9%88%20%D8%A7%DB%8C%D8%B3%20%D8%A8%DB%8C%20%D9%86%DB%8C%D9%86%D9%88%20%D8%B1%DB%8C%D8%B3%DB%8C%D9%88%D8%B1%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "goto /product/52",
+   "stop 3 months"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-053",
+  "site": "ministore",
+  "intent": "'کالا' رنگ کا AmazonBasics کا ایکسٹینشن کارڈ کے پروڈکٹ صفحے کے سوالات و جوابات کے مطابق معیاری ڈیلیوری میں کتنے کاروباری دن لگتے ہیں؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "۴",
+     "٤"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%A7%DB%8C%DA%A9%D8%B3%D9%B9%DB%8C%D9%86%D8%B4%D9%86%20%DA%A9%D8%A7%D8%B1%DA%88-%205%20M%20UK%D8%8C%20%DA%A9%D8%A7%D9%84%D8%A7",
+   "goto /product/31",
+   "stop 4 business days"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-054",
+  "site": "ministore",
+  "intent": "Unbranded کا Rs.۹۲۳۷.۲۰ قیمت والا Technoline BC 700 سیٹ کے سوالات و جوابات کے حصے میں کتنے سوالات درج ہیں؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "۴",
+     "٤"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Technoline%20BC%20700%20%D8%B3%DB%8C%D9%B9%D8%8C%20%DA%A9%D8%A7%D9%84%D8%A7",
+   "goto /product/38",
+   "stop 4"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-055",
+  "site": "ministore",
+  "intent": "باغ کیٹیگری کا گیس گرل کور کے پروڈکٹ صفحے پر سوال و جواب فارم سے 'کیا رنگ تصویروں سے بالکل میل کھاتا ہے؟' سوال پوچھیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 1265,
+     "user_id": 1,
+     "question": "کیا رنگ تصویروں سے بالکل میل کھاتا ہے؟",
+     "answer": ""
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1265",
+   "fill 3 question=کیا رنگ تصویروں سے بالکل میل کھاتا ہے؟"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-056",
+  "site": "ministore",
+  "intent": "'کالا' رنگ کا AmazonBasics کا پین انک کے پروڈکٹ صفحے پر 'کیا متبادل پرزے آرڈر کیے جا سکتے ہیں؟' سوال پوچھیں، اور اس پروڈکٹ کو اپنی وش لسٹ میں بھی شامل کریں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 2027,
+     "user_id": 1,
+     "question": "کیا متبادل پرزے آرڈر کیے جا سکتے ہیں؟"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2027
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2027",
+   "fill 3 question=کیا متبادل پرزے آرڈر کیے جا سکتے ہیں؟",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-057",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۶۱۵۷.۲۰ قیمت والا وائرلیس شاور سپیکر کے پروڈکٹ صفحے پر کس ریویوئر کے ریویو کو سب سے زیادہ 'مددگار' ووٹ ملے ہیں؟ یوزر نیم بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "minimal_mia"
+    ],
+    "none_of": [
+     "bargain_ben",
+     "bookish_bea",
+     "kitchen_kat",
+     "outdoor_ollie"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%88%D8%A7%D8%A6%D8%B1%D9%84%DB%8C%D8%B3%20%D8%B4%D8%A7%D9%88%D8%B1%20%D8%B3%D9%BE%DB%8C%DA%A9%D8%B1%D8%8C%205W%20%DA%88%D8%B1%D8%A7%D8%A6%DB%8C%D9%88%D8%B1%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "goto /product/14",
+   "stop minimal_mia"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-058",
+  "site": "ministore",
+  "intent": "الیکٹرانکس کیٹیگری کا کنورٹر کیبل کے پروڈکٹ صفحے پر 'gymrat_gus' کے ریویو کو کتنے لوگوں نے مددگار پایا؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26",
+     "۲۶",
+     "٢٦"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amazon%20Basic%20HDMI%20%D8%B3%DB%92%20DVI%20%DA%A9%D9%86%D9%88%D8%B1%D9%B9%D8%B1%20%DA%A9%DB%8C%D8%A8%D9%84%D8%8C%20%DA%A9%D8%A7%D9%84%D8%A7",
+   "goto /product/5",
+   "stop 26"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-059",
+  "site": "ministore",
+  "intent": "'کالا' رنگ کا AmazonBasics کا پورٹیبل بلوٹوتھ سپیکر کے پروڈکٹ صفحے پر 'kitchen_kat' کے لکھے ریویو کا 'مددگار' بٹن دبائیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 91,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "reviews",
+    "match": {
+     "id": 91
+    },
+    "field": "helpful",
+    "value": 1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/20",
+   "fill 5"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-060",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۳۶۳۷.۲۰ قیمت والا آن-ایئر ہیڈ فون کے پروڈکٹ صفحے پر سب سے زیادہ 'مددگار' ووٹ والا ریویو تلاش کریں اور اس کا 'مددگار' بٹن دبائیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 103,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/23",
+   "fill 6"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-061",
+  "site": "ministore",
+  "intent": "اسٹور اپنے برانڈز صفحے پر کتنے برانڈز درج کرتا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "99",
+     "۹۹",
+     "٩٩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop 99"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-062",
+  "site": "ministore",
+  "intent": "برانڈز صفحے کے مطابق کون سا برانڈ زیادہ پروڈکٹس درج کرتا ہے: 'Pinzon by Amazon' یا 'AmazonCommercial'؟ برانڈ کا نام بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonCommercial"
+    ],
+    "none_of": [
+     "Pinzon by Amazon"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop AmazonCommercial"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-063",
+  "site": "ministore",
+  "intent": "برانڈز صفحے کے مطابق 'UMI' اور 'Whole Paws' میں سے کس کی اوسط ریویو ریٹنگ زیادہ ہے؟ برانڈ کا نام بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Whole Paws"
+    ],
+    "none_of": [
+     "UMI"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop Whole Paws"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-064",
+  "site": "ministore",
+  "intent": "الیکٹرانکس کیٹیگری کا AMAZONBASICS کا چارجنگ کیبل کی قیمت کیا ہے؟ رقم بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2237.20",
+     "2,237.20",
+     "۲۲۳۷.۲۰",
+     "۲,۲۳۷.۲۰",
+     "٢٢٣٧.٢٠",
+     "٢,٢٣٧.٢٠"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=PlayStation%204%20%DA%A9%D9%86%D9%B9%D8%B1%D9%88%D9%84%D8%B1%20%DA%86%D8%A7%D8%B1%D8%AC%D9%86%DA%AF%20%DA%A9%DB%8C%D8%A8%D9%84",
+   "stop 2237.20"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-065",
+  "site": "ministore",
+  "intent": "گھر کیٹیگری کا Rs.۱۱۱۹۷.۲۰ قیمت والا کوئلٹ کمبل کس برانڈ کی ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Arendale%20%D9%85%D8%A7%D8%A6%DB%8C%DA%A9%D8%B1%D9%88%20%D9%81%D8%A7%D8%A6%D8%A8%D8%B1%20%D9%BE%D8%B1%D9%86%D9%B9%DA%88%20%DA%A9%D9%88%D8%A6%D9%84%D9%B9%20%DA%A9%D9%85%D8%A8%D9%84",
+   "goto /product/858",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-066",
+  "site": "ministore",
+  "intent": "کھیل کیٹیگری کا ونائل 2 پاؤنڈ ڈمبل کے کتنے یونٹ اس وقت اسٹاک میں ہیں؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12",
+     "۱۲",
+     "١٢"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D9%88%D9%86%D8%A7%D8%A6%D9%84%202%20%D9%BE%D8%A7%D8%A4%D9%86%DA%88%20%DA%88%D9%85%D8%A8%D9%84",
+   "goto /product/617",
+   "stop 12"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-067",
+  "site": "ministore",
+  "intent": "کون سی سستی ہے، باورچی خانہ کیٹیگری کا AmazonCommercial کا ویئر سیٹ یا باورچی خانہ کیٹیگری کا AmazonCommercial کا ونائل دستانے؟ پروڈکٹ کا درست نام بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ہیوی ڈیوٹی پاؤڈر فری ڈسپوزیبل ونائل دستانے"
+    ],
+    "none_of": [
+     "7-پیس سٹینلیس سٹیل انڈکشن ریڈی کک ویئر سیٹ",
+     "۷-پیس سٹینلیس سٹیل انڈکشن ریڈی کک ویئر سیٹ",
+     "٧-پیس سٹینلیس سٹیل انڈکشن ریڈی کک ویئر سیٹ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=7-%D9%BE%DB%8C%D8%B3%20%D8%B3%D9%B9%DB%8C%D9%86%D9%84%DB%8C%D8%B3%20%D8%B3%D9%B9%DB%8C%D9%84%20%D8%A7%D9%86%DA%88%DA%A9%D8%B4%D9%86%20%D8%B1%DB%8C%DA%88%DB%8C%20%DA%A9%DA%A9%20%D9%88%DB%8C%D8%A6%D8%B1%20%D8%B3%DB%8C%D9%B9",
+   "goto /?q=%DB%81%DB%8C%D9%88%DB%8C%20%DA%88%DB%8C%D9%88%D9%B9%DB%8C%20%D9%BE%D8%A7%D8%A4%DA%88%D8%B1%20%D9%81%D8%B1%DB%8C%20%DA%88%D8%B3%D9%BE%D9%88%D8%B2%DB%8C%D8%A8%D9%84%20%D9%88%D9%86%D8%A7%D8%A6%D9%84%20%D8%AF%D8%B3%D8%AA%D8%A7%D9%86%DB%92",
+   "stop ہیوی ڈیوٹی پاؤڈر فری ڈسپوزیبل ونائل دستانے"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-068",
+  "site": "ministore",
+  "intent": "ان میں سب سے مہنگی کون سی ہے: الیکٹرانکس کیٹیگری کا AmazonBasics کا ایتھرنیٹ اڈاپٹر, الیکٹرانکس کیٹیگری کا AmazonBasics کا سکرو بلب, الیکٹرانکس کیٹیگری کا Unbranded کا آڈیو سپلٹر؟ پروڈکٹ کا درست نام بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "USB 3.0 سے 10/100/1000 گیگابٹ ایتھرنیٹ اڈاپٹر",
+     "USB ۳.۰ سے ۱۰/۱۰۰/۱۰۰۰ گیگابٹ ایتھرنیٹ اڈاپٹر",
+     "USB ٣.٠ سے ١٠/١٠٠/١٠٠٠ گیگابٹ ایتھرنیٹ اڈاپٹر"
+    ],
+    "none_of": [
+     "ایل ای ڈی E27 ایڈیسن سکرو بلب",
+     "ایل ای ڈی E۲۷ ایڈیسن سکرو بلب",
+     "ایل ای ڈی E٢٧ ایڈیسن سکرو بلب",
+     "5-وے آکس آڈیو سپلٹر، ہیڈ فون کے لیے، کالا",
+     "۵-وے آکس آڈیو سپلٹر، ہیڈ فون کے لیے، کالا",
+     "٥-وے آکس آڈیو سپلٹر، ہیڈ فون کے لیے، کالا"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=USB%203.0%20%D8%B3%DB%92%2010/100/1000%20%DA%AF%DB%8C%DA%AF%D8%A7%D8%A8%D9%B9%20%D8%A7%DB%8C%D8%AA%DA%BE%D8%B1%D9%86%DB%8C%D9%B9%20%D8%A7%DA%88%D8%A7%D9%BE%D9%B9%D8%B1",
+   "goto /?q=%D8%A7%DB%8C%D9%84%20%D8%A7%DB%8C%20%DA%88%DB%8C%20E27%20%D8%A7%DB%8C%DA%88%DB%8C%D8%B3%D9%86%20%D8%B3%DA%A9%D8%B1%D9%88%20%D8%A8%D9%84%D8%A8",
+   "goto /?q=5-%D9%88%DB%92%20%D8%A2%DA%A9%D8%B3%20%D8%A2%DA%88%DB%8C%D9%88%20%D8%B3%D9%BE%D9%84%D9%B9%D8%B1%D8%8C%20%DB%81%DB%8C%DA%88%20%D9%81%D9%88%D9%86%20%DA%A9%DB%92%20%D9%84%DB%8C%DB%92%D8%8C%20%DA%A9%D8%A7%D9%84%D8%A7",
+   "stop USB 3.0 سے 10/100/1000 گیگابٹ ایتھرنیٹ اڈاپٹر"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-069",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۸۳۹۷.۲۰ قیمت والا سکرین فلٹر کے کتنے ریویوز ہیں؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25",
+     "۲۵",
+     "٢٥"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%D8%B3%D9%84%D9%85%20%D9%85%DB%8C%DA%AF%D9%86%DB%8C%D9%B9%DA%A9%20%D9%BE%D8%B1%D8%A7%D8%A6%DB%8C%D9%88%DB%8C%D8%B3%DB%8C%20%D8%B3%DA%A9%D8%B1%DB%8C%D9%86%20%D9%81%D9%84%D9%B9%D8%B1%D8%8C%2013%20%D8%A7%D9%86%DA%86%20MacBook%20Air%202018%20%DA%A9%DB%92%20%D9%84%DB%8C%DB%92",
+   "goto /product/53",
+   "stop 25"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-070",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۶۲۹۷.۲۰ قیمت والا باؤل سیٹ کے کتنے ۱-اسٹار ریویوز ہیں؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "۲",
+     "٢"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=10-%D9%BE%DB%8C%D8%B3%20%D9%85%DA%A9%D8%B3%D9%86%DA%AF%20%D8%A8%D8%A7%D8%A4%D9%84%20%D8%B3%DB%8C%D9%B9%D8%8C%20%DA%88%DA%BE%DA%A9%D9%86%20%DA%A9%DB%92%20%D8%B3%D8%A7%D8%AA%DA%BE",
+   "goto /product/489",
+   "stop 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-071",
+  "site": "ministore",
+  "intent": "AmazonBasics کا Rs.۸۳۹۷.۲۰ قیمت والا سکرین فلٹر کے لیے دکھائی گئی اوسط اسٹار ریٹنگ کیا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3.4",
+     "۳.۴",
+     "٣.٤"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop 3.4"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-072",
+  "site": "ministore",
+  "intent": "کس کی اوسط اسٹار ریٹنگ زیادہ ہے: باورچی خانہ کیٹیگری کا ٹریڈیشنل ہائی-بال گلاس یا AmazonBasics کا Rs.۶۲۹۷.۲۰ قیمت والا باؤل سیٹ؟ پروڈکٹ کا درست نام بتائیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10-پیس مکسنگ باؤل سیٹ، ڈھکن کے ساتھ",
+     "۱۰-پیس مکسنگ باؤل سیٹ، ڈھکن کے ساتھ",
+     "١٠-پیس مکسنگ باؤل سیٹ، ڈھکن کے ساتھ"
+    ],
+    "none_of": [
+     "ٹریڈیشنل ہائی-بال گلاس"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/421",
+   "goto /product/489",
+   "stop 10-پیس مکسنگ باؤل سیٹ، ڈھکن کے ساتھ"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-073",
+  "site": "ministore",
+  "intent": "ڈیلز صفحے پر درج اس وقت فعال کوپن کوڈ کیا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SAVE10"
+    ],
+    "none_of": [
+     "WELCOME5",
+     "FREESHIP"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop SAVE10"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-074",
+  "site": "ministore",
+  "intent": "کریانہ کیٹیگری کا ایسپریسو پوڈ پر 'تازہ پہنچا اور پیکنگ بھی ٹھیک رہی۔' لکھ کر ۵-اسٹار ریویو لکھیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 2287,
+     "user_id": 1,
+     "stars": 5,
+     "body": "%تازہ پہنچا اور پیکنگ بھی ٹھیک رہی۔%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=50%20Ct.%20Solimo%20%D8%A7%DB%8C%D8%B3%D9%BE%D8%B1%DB%8C%D8%B3%D9%88%20%D9%BE%D9%88%DA%88",
+   "goto /product/2287",
+   "fill 4 stars=5; body=تازہ پہنچا اور پیکنگ بھی ٹھیک رہی۔"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-075",
+  "site": "ministore",
+  "intent": "رابطہ فارم سے آرڈر 2 کا حوالہ دیتے ہوئے 'آرڈر 2 میں ایک چیز غائب تھی، براہ کرم رہنمائی کریں۔' پیغام بھیجیں۔ ضرورت ہو تو agent_smith (پاس ورڈ: password123) کے طور پر لاگ اِن کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "2",
+     "body": "%آرڈر 2 میں ایک چیز غائب تھی، براہ کرم رہنمائی کریں۔%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /contact",
+   "fill 1 order_ref=2; message=آرڈر 2 میں ایک چیز غائب تھی، براہ کرم رہنمائی کریں۔"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ }
+]

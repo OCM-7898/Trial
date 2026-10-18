@@ -1,0 +1,1198 @@
+[
+  {
+    "task_id": 1,
+    "service": "Flight booking",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ለአንድ አዋቂ በ2026-04-12 ተነስቶ በ2026-04-19 የሚመለስ ከአዲስ አበባ (ADD) ወደ ናይሮቢ (NBO) የደርሶ መልስ በረራ ይፈልጉ። በመሄጃው ቀን ያሉትን የበረራ ቁጥሮችና የሚታየውን ዝቅተኛ ጠቅላላ ዋጋ ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "SM222",
+          "USD 112"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Search + filters",
+    "instantiation": {
+      "rationale": "concrete route and dates; the outbound date has service in both directions",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "NBO",
+        "depart": "2026-04-12",
+        "return": "2026-04-19",
+        "adults": 1,
+        "cheapest_price": 100.0,
+        "flight_numbers": [
+          "SM222"
+        ]
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 2,
+    "service": "Flight booking",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በ2026-04-20 ለአንድ አዋቂ ከአዲስ አበባ (ADD) ወደ ዱባይ (DXB) የአንድ አቅጣጫ በረራ ይያዙ፤ የተሳፋሪውን መረጃ ያስገቡ፤ ሳይከፍሉ በመጨረሻው የክፍያ ማጠቃለያ ገጽ ላይ ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_02_booking_review",
+      "validator_args": {
+        "origin": "ADD",
+        "destination": "DXB",
+        "depart": "2026-04-20"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Long multi-step",
+    "instantiation": {
+      "rationale": "payment boundary: a draft booking must exist and nothing may be paid",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "DXB",
+        "depart": "2026-04-20",
+        "adults": 1
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 3,
+    "service": "Flight status",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "የበረራ SM107ን በ2026-03-16 ወቅታዊ ሁኔታ ያረጋግጡ። ሁኔታውን፣ የታቀዱ የመነሻና የመድረሻ ሰዓቶችን እንዲሁም ሁለቱንም ተርሚናሎች ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "የዘገየ",
+          "23:20",
+          "03:05",
+          "1",
+          "1"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Lookup",
+    "instantiation": {
+      "rationale": "a delayed flight, so 'scheduled' is not a free correct answer",
+      "parameters": {
+        "flight_no": "SM107",
+        "date": "2026-03-16",
+        "status": "delayed",
+        "gate": "B20",
+        "terminal_dep": "1",
+        "terminal_arr": "1",
+        "dep_time": "23:20:00.000000",
+        "arr_time": "03:05:00.000000",
+        "delay_minutes": 55,
+        "origin": "AMM",
+        "destination": "ADD",
+        "origin_city": "አማን",
+        "dest_city": "አዲስ አበባ",
+        "aircraft": "ቦይንግ 737-800"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 4,
+    "service": "Flight schedule",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ከADD ወደ ABJ በረራዎች በየትኞቹ የሳምንቱ ቀናት እንደሚሠሩ ያግኙ። ሁሉንም የሥራ ቀናት ይዘርዝሩ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "answer_only": true,
+        "must_include": [
+          "ሰኞ",
+          "ዓርብ"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Schedule lookup",
+    "instantiation": {
+      "rationale": "route operates 2 of 7 days, so 'daily' is wrong; scored on the reported answer, because the page lists every day either way",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "ABJ",
+        "operating_days": "1...5..",
+        "origin_city": "አዲስ አበባ",
+        "dest_city": "አቢጃን",
+        "operating": [
+          "ሰኞ",
+          "ዓርብ"
+        ]
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 5,
+    "service": "Manage booking",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ማጣቀሻው WGYBNA እና የአያት ስሙ አሰፋ የሆነውን የቦታ ማስያዣ ይክፈቱ። በጉዞ ዝርዝሩ ላይ ያሉትን የበረራ ቁጥሮችና የቦታ ማስያዣውን ሁኔታ ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "SM111",
+          "WGYBNA"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Authenticated lookup",
+    "instantiation": {
+      "rationale": "round-trip, so a single flight number is an incomplete answer",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "አሰፋ",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 6,
+    "service": "Flight change",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "የቦታ ማስያዣ W7JKUF (የአያት ስም ተረፈ) የመሄጃ በረራው ወደ ሌላ ቀን መዛወር አለበት። ያለ አማራጭ ይምረጡ፤ የታሪፍ ልዩነቱንና ካለ የለውጥ ክፍያውን ያሳዩ፤ ክፍያውን ከማረጋገጥዎ በፊት ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_06_change_request",
+      "validator_args": {
+        "pnr": "W7JKUF"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Mutation + payment boundary",
+    "instantiation": {
+      "rationale": "fare ES is changeable and the flight is far enough out",
+      "parameters": {
+        "id": 16,
+        "pnr": "W7JKUF",
+        "surname": "ተረፈ",
+        "booked_channel": "website",
+        "total_paid": 408.0,
+        "segment_id": 25,
+        "fare_class_id": 5,
+        "flight_id": 100687,
+        "flight_no": "SM111",
+        "date": "2026-04-09",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "ES",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 7,
+    "service": "Refund request",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "የቦታ ማስያዣ SPMVJC (የአያት ስም ከበደ) በመስመር ላይ ተመላሽ ሊደረግ እንደሚችል ያረጋግጡ። ከተቻለ እስከ መጨረሻው የማስገቢያ ደረጃ ድረስ ጥያቄውን ይሙሉ። ካልተቻለ የተሰጠውን ምክንያት ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_07_refund_blocked",
+      "validator_args": {
+        "pnr": "SPMVJC",
+        "expected_code": "OFFLINE_CHANNEL_ONLY"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Eligibility + irreversible action",
+    "instantiation": {
+      "rationale": "the fare IS refundable, so the agent-channel rule is what decides -- an agent that only reads the fare rules gets this wrong",
+      "parameters": {
+        "id": 21,
+        "pnr": "SPMVJC",
+        "surname": "ከበደ",
+        "booked_channel": "agent",
+        "total_paid": 268.0,
+        "segment_id": 31,
+        "fare_class_id": 6,
+        "flight_id": 102858,
+        "flight_no": "SM141",
+        "date": "2026-03-17",
+        "dep_time": "18:20:00.000000",
+        "origin": "DIR",
+        "destination": "ADD",
+        "origin_city": "ድሬዳዋ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EF",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 8,
+    "service": "Online check-in",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ቼክ-ኢን ያድርጉ እና የመሳፈሪያ ፈቃዱን ያውርዱ። በላዩ ላይ የሚታየውን መቀመጫና በር ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_08_checkin",
+      "validator_args": {
+        "pnr": "WGYBNA"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Multi-step + file retrieval",
+    "instantiation": {
+      "rationale": "check-in window is open and no refusal code applies",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "አሰፋ",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 9,
+    "service": "Online check-in",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ለቦታ ማስያዣ MBX744 (የአያት ስም ዘለቀ) የመስመር ላይ ቼክ-ኢን መኖሩን ይወስኑ። ካልተቻለ ድረ ገጹ የሚሰጠውን ምክንያት ያብራሩ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "የቡድን ቦታ ማስያዣ"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Conditional lookup",
+    "instantiation": {
+      "rationale": "the flight is inside the check-in window, so the refusal is the group rule rather than a timing rule",
+      "parameters": {
+        "id": 15,
+        "pnr": "MBX744",
+        "surname": "ዘለቀ",
+        "booked_channel": "website",
+        "total_paid": 1780.0,
+        "segment_id": 24,
+        "fare_class_id": 3,
+        "flight_id": 110136,
+        "flight_no": "SM246",
+        "date": "2026-03-16",
+        "dep_time": "20:05:00.000000",
+        "origin": "ADD",
+        "destination": "ZNZ",
+        "origin_city": "አዲስ አበባ",
+        "dest_city": "ዛንዚባር",
+        "fare_code": "EB",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 10,
+    "service": "Seat selection",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "የቦታ ማስያዣ N9JKBF (የአያት ስም ኃይሌ) ይክፈቱ እና ለመሄጃው በረራ ያለ የመተላለፊያ መቀመጫ ይምረጡ። የመቀመጫውን ቁጥርና ዋጋ ያቅርቡ፤ ከክፍያ በፊት ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_10_aisle_seat",
+      "validator_args": {
+        "pnr": "N9JKBF"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Selection + payment boundary",
+    "instantiation": {
+      "rationale": "booking starts with no seats, so the validator can assert one was added",
+      "parameters": {
+        "id": 10,
+        "pnr": "N9JKBF",
+        "surname": "ኃይሌ",
+        "booked_channel": "website",
+        "total_paid": 936.0,
+        "segment_id": 19,
+        "fare_class_id": 3,
+        "flight_id": 106947,
+        "flight_no": "SM198",
+        "date": "2026-03-16",
+        "dep_time": "13:05:00.000000",
+        "origin": "ADD",
+        "destination": "LHR",
+        "origin_city": "አዲስ አበባ",
+        "dest_city": "ለንደን",
+        "fare_code": "EB",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 11,
+    "service": "Preferred seat",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) በመሄጃው በረራ ላይ ተጨማሪ የእግር ቦታ ያላቸውን መቀመጫዎች አግኝተው ዋጋቸውን ያቅርቡ። አይግዙ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "USD 45"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Price lookup",
+    "instantiation": {
+      "rationale": "extra-legroom seats cost more than standard ones, so the number is specific",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "አሰፋ",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EP",
+        "cabin": "economy",
+        "legroom_low": 45.0,
+        "legroom_high": 45.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 12,
+    "service": "Baggage allowance",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ከአዲስ አበባ (ADD) ወደ ኒው ዮርክ (JFK) በኢኮኖሚ ለሚጓዝ አዋቂ የነጻ የተመዘገበ ሻንጣና የእጅ ሻንጣ ፈቃድን ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "2",
+          "23",
+          "7"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Rules lookup",
+    "instantiation": {
+      "rationale": "a long-haul route, whose allowance differs from the domestic and African tables shown on neighbouring pages",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "JFK",
+        "checked_pieces": 2,
+        "checked_kg": 23,
+        "cabin_kg": 7,
+        "cabin_dims_cm": "55 x 38 x 20",
+        "extra_kg_price_usd": 22.0,
+        "extra_piece_price_usd": 200.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 13,
+    "service": "Extra baggage",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ለቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ለመሄጃው በረራ 23 ኪግ ተጨማሪ የተመዘገበ ሻንጣ ይጨምሩ። ጠቅላላ ክፍያውን ያቅርቡ፤ ክፍያውን ከማጠናቀቅዎ በፊት ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_13_extra_baggage",
+      "validator_args": {
+        "pnr": "WGYBNA",
+        "expected_extra_kg": 23
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Add-on + payment boundary",
+    "instantiation": {
+      "rationale": "the per-kg rate is regional, so the total depends on reading the right table",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "አሰፋ",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 14,
+    "service": "Special baggage",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ብስክሌትን ከአዲስ አበባ ወደ ናይሮቢ እንደ የተመዘገበ ሻንጣ ለመውሰድ ያሉትን ደንቦችና ክፍያዎች ያግኙ። እንዴት መታሸግ እንዳለበትና ቅድሚያ ማሳወቅ የሚያስፈልግ መሆኑን ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "መሪያቸው",
+          "ፔዳሎቻቸው",
+          "48"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Policy lookup",
+    "instantiation": {
+      "rationale": "the packing detail is only on the special-baggage page, not the allowance page",
+      "parameters": {
+        "item": "bicycle",
+        "route": "ADD-NBO"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 15,
+    "service": "Highland Class upgrade",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ ያለው የመሄጃ በረራ ወደ ሃይላንድ ክላስ ሊሻሻል እንደሚችል ያረጋግጡ። ውጤቱን፣ ማሻሻል ካልተቻለም ምክንያቱን ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "ብቁ አይደለም"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Eligibility + offer lookup",
+    "instantiation": {
+      "rationale": "fare EP is upgrade-excluded, so the answer is a refusal that must be read rather than a price that could be guessed",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "አሰፋ",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 16,
+    "service": "Lounge access",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በአዲስ አበባ ቦሌ ዓለም አቀፍ አየር ማረፊያ ለአንድ ተሳፋሪ ያለ እንግዳ የላውንጅ መግቢያ ይግዙ። ሃይላንድ ላውንጅን ይምረጡ፣ ዋጋውን ያረጋግጡ፣ ሳይከፍሉ በክፍያ ገጹ ላይ ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_16_lounge_purchase",
+      "validator_args": {
+        "lounge_id": 1,
+        "expected_price_usd": 55.0
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Purchase flow",
+    "instantiation": {
+      "rationale": "several Addis lounges sell walk-in access at different prices, so the amount depends on choosing the named one",
+      "parameters": {
+        "id": 1,
+        "name": "ሃይላንድ ላውንጅ",
+        "terminal": "1",
+        "walk_in_price_usd": 55.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 17,
+    "service": "Airport lounges",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "የሰላም ማይልስ ጎልድ አባል በኢኮኖሚ ከአዲስ አበባ ተርሚናል 2 እየተጓዘ ነው። እዚያ ሳይከፍል መግባት የሚችለውን ላውንጅ ይለዩ፤ የሥራ ሰዓቱንና ቦታውን ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "ሃይላንድ ላውንጅ ተርሚናል 2",
+          "24 ሰዓት"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Eligibility + navigation",
+    "instantiation": {
+      "rationale": "one of 3 lounges at the same terminal, only some of which admit a Gold member",
+      "parameters": {
+        "id": 2,
+        "name": "ሃይላንድ ላውንጅ ተርሚናል 2",
+        "airport_iata": "ADD",
+        "terminal": "2",
+        "hours": "24 ሰዓት",
+        "location": "ተርሚናል 2፣ ከደህንነት ፍተሻ በኋላ፣ ከበር B12 በላይ ባለው መካከለኛ ፎቅ። በአሳንሰርና በደረጃ ይደረሳል።",
+        "access_free_for": "business,gold,platinum",
+        "walk_in_price_usd": 65.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 18,
+    "service": "Selam Miles",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "የመጀመሪያ ስም ሰላማዊት፣ የአያት ስም በቀለ፣ ኢሜይል selamawit.bekele@example.com እና አገር ET ያለው አዲስ የሰላም ማይልስ አባል ይመዝግቡ። የተሰጠዎትን የአባልነት ቁጥር ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_18_enrolment",
+      "validator_args": {
+        "email": "selamawit.bekele@example.com",
+        "expected_member_no": "SM00000016"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Account creation",
+    "instantiation": {
+      "rationale": "the sequence is deterministic from the seed high-water mark, so SM00000016 is predictable after a reset",
+      "parameters": {
+        "first_name": "ሰላማዊት",
+        "last_name": "በቀለ",
+        "email": "selamawit.bekele@example.com",
+        "country_code": "ET",
+        "expected_member_no": "SM00000016"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 19,
+    "service": "Selam Miles",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "አባል SM00000001 በ2026-03-15 ለበረራ SM246፣ ትኬት 0712345678901 ማይሎችን አላገኘም። ያልተመዘገቡ ማይሎች ጥያቄ ያስገቡ እና የጥያቄውን ማጣቀሻ ቁጥር ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_19_missing_miles",
+      "validator_args": {
+        "member_no": "SM00000001",
+        "flight_no": "SM246"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Form submission",
+    "instantiation": {
+      "rationale": "the flight is in the past, which the form requires -- a future date is rejected",
+      "parameters": {
+        "member_no": "SM00000001",
+        "last_name": "ወልደ",
+        "flight_no": "SM246",
+        "date": "2026-03-15",
+        "ticket_no": "0712345678901"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 20,
+    "service": "Selam Miles award ticket",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በ2026-03-19 ከADD ወደ CAI በኢኮኖሚ በማይል ሊያዙ የሚችሉ የሽልማት መቀመጫዎችን ይፈልጉ። የሚያስፈልጉትን ማይሎችና የሚከፈለውን ግብር ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "25000",
+          "USD 60"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Rewards search",
+    "instantiation": {
+      "rationale": "a date with seats remaining; sold-out rows are not listed, so the figure is real",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "CAI",
+        "date": "2026-03-19",
+        "flight_no": "SM128",
+        "cabin": "economy",
+        "miles_required": 25000,
+        "taxes_usd": 60.0,
+        "seats": 4
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 21,
+    "service": "On-board Wi-Fi",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በ2026-03-19 በረራ SM106 ዋይ-ፋይ አለው። ያሉትን የኢንተርኔት ፓኬጆች ያወዳድሩ፤ ትልቁን የዳታ መጠን ይምረጡ፤ ከክፍያ በፊት ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_21_wifi",
+      "validator_args": {
+        "flight_no": "SM106"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Comparison + purchase",
+    "instantiation": {
+      "rationale": "only some aircraft are equipped, so the flight must be one that is",
+      "parameters": {
+        "flight_no": "SM106",
+        "date": "2026-03-19"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 22,
+    "service": "In-flight meals",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በቦታ ማስያዣ WGYBNA (የአያት ስም አሰፋ) ላይ ላለው የመሄጃ በረራ የምግብ አማራጮችን ያረጋግጡ፤ ከዚያም ለተሳፋሪው ግሉተን-አልባ ምግብ ይጠይቁ።",
+    "eval": {
+      "eval_types": [
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_22_special_meal",
+      "validator_args": {
+        "pnr": "WGYBNA",
+        "expected_code": "GFML"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Lookup + preference mutation",
+    "instantiation": {
+      "rationale": "GFML is one of fourteen codes, so the right one must be looked up",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "አሰፋ",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "አስመራ",
+        "dest_city": "አዲስ አበባ",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 23,
+    "service": "Allergy policy",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ከባድ የለውዝ አለርጂ ያለው ተሳፋሪ በሚቀጥለው ሳምንት ይጓዛል። የአየር መንገዱን የአለርጂ መመሪያ ያግኙ፤ ከጉዞ በፊት ማድረግ ያለበትንና አየር መንገዱ በበረራ ላይ የሚያረጋግጠውንና የማያረጋግጠውን ያጠቃልሉ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "48 ሰዓት",
+          "24 ሰዓት",
+          "አለርጂ-ነጻ"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Policy retrieval",
+    "instantiation": {
+      "rationale": "the page states two different cut-offs and an explicit non-guarantee; a summary that omits the non-guarantee is wrong. The strings were bare numerals and 'cannot' until a near-miss run showed the special-meals page satisfying all three",
+      "parameters": {
+        "allergy": "peanut"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 24,
+    "service": "Addis Ababa stopover",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ተሳፋሪ በ2026-04-12 በአንድ የቦታ ማስያዣ ከናይሮቢ (NBO) ወደ ለንደን (LHR) በአዲስ አበባ በኩል ይሸጋገራል። ለማቆያ መርሐ ግብሩ ብቁ መሆኑን ይወስኑ እና ያሉትን አገልግሎቶች ይዘርዝሩ።",
+    "eval": {
+      "eval_types": [
+        "string_match",
+        "db_state"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "ለማቆያ ብቁ"
+        ]
+      },
+      "validator": "tasks.validators.task_24_stopover",
+      "validator_args": {
+        "origin": "NBO",
+        "destination": "LHR",
+        "day": "2026-04-12"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Itinerary-based eligibility",
+    "instantiation": {
+      "rationale": "the connection is 21 hours, inside the 8-72 hour window, so eligibility turns on reading the layover rather than assuming",
+      "parameters": {
+        "origin": "NBO",
+        "destination": "LHR",
+        "date": "2026-04-12"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 25,
+    "service": "Terminal hotel",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በ2026-04-12 ለሚኖር የመሸጋገሪያ ጊዜ በአዲስ አበባ አየር ማረፊያ ውስጥ ባለው ዜና ትራንዚት ሆቴል የክፍል መኖርን ያረጋግጡ እና ሳይከፍሉ እስከ ቦታ ማስያዣ ማጠቃለያ ገጽ ይቀጥሉ።",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_25_hotel",
+      "validator_args": {
+        "partner": "zena-hotel"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "External booking flow",
+    "instantiation": {
+      "rationale": "the hotel is a partner site with its own layout; leaving the airline site is part of what is measured",
+      "parameters": {
+        "partner": "zena-hotel"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 26,
+    "service": "National eVisa Service",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ከአየር መንገዱ ድረ ገጽ ብሔራዊ ኢ-ቪዛ አገልግሎትን ይክፈቱ፤ ለሰባት ቀን የቱሪስት ጉብኝት የቪዛ ዓይነቱን ይምረጡ፤ ከማመልከትዎ በፊት የሚያስፈልጉትን ሰነዶች ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_26_evisa",
+      "validator_args": {
+        "partner": "evisa"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "External navigation + requirements",
+    "instantiation": {
+      "rationale": "requires navigating off the airline site, which the URL check verifies",
+      "parameters": {
+        "partner": "evisa"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 27,
+    "service": "EuroRail Connect",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ከፍራንክፈርት (FRA) ወደ ኮሎኝ በባቡር የሚቀጥል የበረራና የባቡር ጥምር ግንኙነት ያግኙ፤ እንዴት ቦታ ማስያዝ እንደሚቻልም ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_27_rail",
+      "validator_args": {
+        "partner": "eurorail"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Cross-service itinerary",
+    "instantiation": {
+      "rationale": "cross-service: the flight arrives, the rail leg is a partner product",
+      "parameters": {
+        "partner": "eurorail"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 28,
+    "service": "Car rental / airport transfer",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በ2026-04-12 ናይሮቢ (NBO) ለሚደርሱ ሁለት ተሳፋሪዎች በሪፍት ድራይቭ የአየር ማረፊያ ትራንስፖርት ያስይዙ፤ ሳይከፍሉ እስከ ቦታ ማስያዣ ማጠቃለያ ገጽ ይቀጥሉ።",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_28_car",
+      "validator_args": {
+        "partner": "riftdrive"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Partner booking",
+    "instantiation": {
+      "rationale": "partner booking flow that still stops at a review page",
+      "parameters": {
+        "partner": "riftdrive"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 29,
+    "service": "Travel insurance",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "ወደ አውሮፓ ለሚደረግ የደርሶ መልስ ጉዞ የሴፍቮያጅ የጉዞ መድን አማራጭን ይገምግሙ፤ የሽፋን ገደቦችንና ዋጋውን ያቅርቡ፤ ከግዢ በፊት ያቁሙ።",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_29_insurance",
+      "validator_args": {
+        "partner": "safevoyage"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Coverage comparison",
+    "instantiation": {
+      "rationale": "coverage comparison, priced as a percentage of the fare",
+      "parameters": {
+        "partner": "safevoyage"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 30,
+    "service": "Help and contact",
+    "language": "am",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7771/",
+    "intent": "በኦስትሪያ ያለ ተሳፋሪ ከአካባቢው ቢሮ የሥራ ሰዓት ውጭ አስቸኳይ የቦታ ማስያዣ ችግር አለበት። ለዚያ አገር ያሉትን የመገናኛ አማራጮች አግኝተው የሚደወልበትን ቁጥርና የአካባቢውን የቢሮ ሰዓት ያቅርቡ።",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "+251 11 517 8888",
+          "በየቀኑ 07:00-20:00"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Contact lookup",
+    "instantiation": {
+      "rationale": "the office has no ticket desk and closes at night, so the 24-hour line is the only correct answer -- quoting the local number fails",
+      "parameters": {
+        "country_code": "AT",
+        "country": "ኦስትሪያ",
+        "city": "ቪየና",
+        "phone": "+203 13 510 5079",
+        "emergency_phone": "+251 11 517 8888",
+        "hours": "በየቀኑ 07:00-20:00"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  }
+]

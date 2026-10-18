@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}{{ form.title }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('help') }}">{{ t("nav.help_centre") }}</a></li>
+        <li>{{ form.title }}</li></ol>
+  </nav>
+  <h1>{{ form.title }}</h1>
+  {% include "partials/also.html" %}
+
+  {% if record %}
+  <div class="notice notice-ok" role="status"><div>
+    <strong>{{ form.done_title }}</strong><p>{{ form.done_body }}</p></div></div>
+  <dl class="summary" style="position:static;max-width:540px">
+    <dt>{{ t("form.reference") }}</dt><dd><strong>{{ record.reference_no }}</strong></dd>
+    <dt>{{ t("claim.status") }}</dt><dd>{{ t("form.status_received") }}</dd>
+    {% if record.quoted_usd %}
+    <dt>{{ t("form.quoted") }}</dt><dd>{{ fmt_money(record.quoted_usd) }}</dd>
+    {% endif %}
+  </dl>
+  {% if form.status_slug %}
+  <p><a class="btn btn-secondary" href="{{ slug(form.status_slug) }}?reference={{ record.reference_no }}">{{ t("form.check_status") }}</a></p>
+  {% endif %}
+  {% else %}
+  <p>{{ form.intro }}</p>
+  {% if form.status_slug %}
+  <p class="hint">{{ t("form.already_filed") }}
+     <a href="{{ slug(form.status_slug) }}">{{ t("form.check_status") }}</a></p>
+  {% endif %}
+  <form class="searchform" method="post" novalidate>
+    {% for entry in form.fields %}
+    <div class="field{% if entry.kind == 'textarea' %}" style="grid-column:1/-1{% endif %}">
+      <label for="{{ entry.name }}">{{ entry.label }}</label>
+      {% if entry.kind == "textarea" %}
+      <textarea id="{{ entry.name }}" name="{{ entry.name }}"
+                {% if errors.get(entry.name) %}aria-invalid="true"{% endif %}>{{ values.get(entry.name, '') }}</textarea>
+      {% elif entry.kind == "select" %}
+      <select id="{{ entry.name }}" name="{{ entry.name }}">
+        {% for value, label in entry.choices %}
+        <option value="{{ value }}" {% if values.get(entry.name) == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+      {% elif entry.kind == "number" %}
+      <input type="number" id="{{ entry.name }}" name="{{ entry.name }}"
+             value="{{ values.get(entry.name, '') }}" min="0"
+             {% if errors.get(entry.name) %}aria-invalid="true"{% endif %}>
+      {% else %}
+      <input type="text" id="{{ entry.name }}" name="{{ entry.name }}"
+             value="{{ values.get(entry.name, '') }}"
+             {% if entry.kind == "date" %}inputmode="numeric" placeholder="2026-04-12"
+             pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"{% endif %}
+             {% if errors.get(entry.name) %}aria-invalid="true"{% endif %}>
+      {% endif %}
+      {% if errors.get(entry.name) %}<span class="error-text">{{ errors[entry.name] }}</span>
+      {% elif entry.hint %}<span class="hint">{{ entry.hint }}</span>
+      {% elif entry.kind == "date" %}<span class="hint">{{ t("common.date_hint") }}</span>{% endif %}
+    </div>
+    {% endfor %}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ form.submit }}</button></div>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

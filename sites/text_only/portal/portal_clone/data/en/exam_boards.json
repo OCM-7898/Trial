@@ -1,0 +1,56 @@
+[
+ {
+  "id": 1,
+  "code": "BD01",
+  "name": "Dhaka",
+  "sort_order": 1
+ },
+ {
+  "id": 2,
+  "code": "BD02",
+  "name": "Chattogram",
+  "sort_order": 2
+ },
+ {
+  "id": 3,
+  "code": "BD03",
+  "name": "Rajshahi",
+  "sort_order": 3
+ },
+ {
+  "id": 4,
+  "code": "BD04",
+  "name": "Khulna",
+  "sort_order": 4
+ },
+ {
+  "id": 5,
+  "code": "BD05",
+  "name": "Barishal",
+  "sort_order": 5
+ },
+ {
+  "id": 6,
+  "code": "BD06",
+  "name": "Sylhet",
+  "sort_order": 6
+ },
+ {
+  "id": 7,
+  "code": "BD07",
+  "name": "Rangpur",
+  "sort_order": 7
+ },
+ {
+  "id": 8,
+  "code": "BD08",
+  "name": "Mymensingh",
+  "sort_order": 8
+ },
+ {
+  "id": 9,
+  "code": "BD09",
+  "name": "Technical",
+  "sort_order": 9
+ }
+]

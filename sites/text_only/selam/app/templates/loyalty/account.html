@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}{{ t("nav.miles_account") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li>{{ t("nav.miles_account") }}</li></ol>
+  </nav>
+  <h1>{{ member.full_name }}</h1>
+  {% set also = [(t("nav.statement"), path("miles_statement")), (t("nav.tier_progress"), path("miles_tier")), (t("nav.nominees"), path("miles_nominees")), (t("nav.buy_miles"), path("miles_buy"))] %}
+  {% include "partials/also.html" %}
+  <p class="hint">{{ t("miles.member_no") }} {{ member.member_no }} &middot;
+     {{ t("miles.joined", date=fmt_date(member.joined_on)) }}</p>
+
+  <div class="split">
+    <div>
+      <h2>{{ t("miles.statement") }}</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>
+            <th scope="col">{{ t("status.date") }}</th>
+            <th scope="col">{{ t("miles.activity") }}</th>
+            <th scope="col">{{ t("results.flight") }}</th>
+            <th scope="col">{{ t("miles.miles") }}</th>
+          </tr></thead>
+          <tbody>
+            {% for row in transactions %}
+            <tr>
+              <td>{{ fmt_date(row.posted_on) }}</td>
+              <td>{{ row.description }}</td>
+              <td>{{ row.flight_no or "--" }}</td>
+              <td>{{ row.miles }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p><a class="btn btn-secondary" href="{{ path('miles_claim') }}">{{ t("nav.miles_claim") }}</a>
+         <a class="btn btn-secondary" href="{{ path('award_search') }}">{{ t("nav.award_search") }}</a></p>
+    </div>
+
+    <aside class="summary">
+      <dl>
+        <dt>{{ t("miles.balance") }}</dt><dd><strong>{{ member.miles_balance }}</strong></dd>
+        <dt>{{ t("miles.qualifying") }}</dt><dd>{{ member.qualifying_miles }}</dd>
+        <dt>{{ t("lounge.tier") }}</dt><dd>{{ member.tier }}</dd>
+      </dl>
+      <p class="hint">
+        {% if progress.next_tier %}
+          {{ t("miles.to_next_tier", n=progress.needed, tier=progress.next_tier) }}
+        {% else %}
+          {{ t("miles.top_tier") }}
+        {% endif %}
+      </p>
+    </aside>
+  </div>
+</div>
+{% endblock %}

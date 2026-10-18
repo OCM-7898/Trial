@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "macros/fields.html" import text_field %}
+{% block title %}{{ t("schedules.title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("schedules.title") }}</li></ol>
+  </nav>
+  <h1>{{ t("schedules.title") }}</h1>
+  {% set also = [(t("nav.seasonal"), path("schedules_seasonal"))] %}
+  {% include "partials/also.html" %}
+  <p>{{ t("schedules.intro") }}</p>
+
+  <form class="searchform" method="get" action="{{ path('schedules') }}">
+    {{ text_field("origin", "origin", t("search.origin"), "ADD", t("search.code_hint"), origin) }}
+    {{ text_field("destination", "destination", t("search.destination"), "NBO", t("search.code_hint"), destination) }}
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("schedules.show") }}</button></div>
+  </form>
+
+  {% if route %}
+  <div class="table-scroll">
+    <table>
+      <caption class="visually-hidden">{{ t("schedules.title") }}</caption>
+      <thead><tr>
+        <th scope="col">{{ t("schedules.day") }}</th>
+        <th scope="col">{{ t("results.flight") }}</th>
+        <th scope="col">{{ t("results.depart") }}</th>
+        <th scope="col">{{ t("results.arrive") }}</th>
+        <th scope="col">{{ t("schedules.operates") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <th scope="row">{{ weekday_names[row.weekday] }}</th>
+          <td>{{ row.flight.flight_no if row.operates and row.flight else "--" }}</td>
+          <td>{{ fmt_time(row.flight.dep_time) if row.operates and row.flight else "--" }}</td>
+          <td>{{ fmt_time(row.flight.arr_time) if row.operates and row.flight else "--" }}</td>
+          <td>{% if row.operates %}<span class="badge badge-ok">{{ t("schedules.yes") }}</span>
+              {% else %}<span class="badge">{{ t("schedules.no") }}</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% elif origin and destination %}
+  <div class="notice notice-warn"><div>{{ t("schedules.no_route") }}</div></div>
+  {% endif %}
+</div>
+{% endblock %}

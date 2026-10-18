@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ t("nav.partner_services") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("nav.partner_services") }}</li></ol>
+  </nav>
+  <h1>{{ t("nav.partner_services") }}</h1>
+  <p>{{ t("partner.hub_intro") }}</p>
+  <div class="cards">
+    {% for entry in partners %}
+    <article class="card">
+      <div class="card-body">
+        <h3>{{ entry.info.name }}</h3>
+        <p>{{ entry.blurb }}</p>
+      </div>
+      <div class="card-foot"><a class="btn btn-secondary" href="{{ entry.url }}">{{ t("partner.visit") }}</a></div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

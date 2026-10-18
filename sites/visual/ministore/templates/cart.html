@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ S.cart_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.cart_h }}</h2>
+{% if items %}
+<table>
+  <tr><th>{{ S.th_product }}</th><th>{{ S.th_qty }}</th><th>{{ S.th_price }}</th><th>{{ S.th_subtotal }}</th><th></th></tr>
+  {% for it in items %}
+  <tr>
+    <td><a href="/product/{{ it.p.id }}">{{ it.p.name }}</a></td>
+    <td><form class="inline" method="post" action="/cart/update/{{ it.p.id }}">
+      <input type="number" name="qty" value="{{ it.qty }}" min="0" style="width:60px"> <button class="btn grey">{{ S["update"] }}</button></form></td>
+    <td>{{ S.cur }}{{ ('%.2f' % it.p.price) | v2_num }}</td>
+    <td>{{ S.cur }}{{ ('%.2f' % it.subtotal) | v2_num }}</td>
+    <td><form class="inline" method="post" action="/cart/remove/{{ it.p.id }}"><button class="btn grey">{{ S.remove }}</button></form></td>
+  </tr>
+  {% endfor %}
+</table>
+<p><strong>{{ S.total }} {{ S.cur }}{{ ('%.2f' % total) | v2_num }}</strong></p>
+<a href="/checkout" class="btn">{{ S.proceed_checkout }}</a>
+<form class="inline" method="post" action="/cart/clear"><button class="btn grey">{{ S.empty_cart_btn }}</button></form>
+{% else %}<p>{{ S.cart_empty }} <a href="/">{{ S.keep_shopping }}</a>.</p>{% endif %}
+{% endblock %}

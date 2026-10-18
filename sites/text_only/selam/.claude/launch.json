@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "selam-en", "runtimeExecutable": ".venv/bin/python", "runtimeArgs": ["run.py", "--lang", "en", "--port", "7770"], "port": 7770 },
+    { "name": "selam-am", "runtimeExecutable": ".venv/bin/python", "runtimeArgs": ["run.py", "--lang", "am", "--port", "7771"], "port": 7771 }
+  ]
+}

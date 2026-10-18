@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ S.compare_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.compare_title }}</h1>
+<p class="muted">{{ S.compare_intro }}</p>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<div class="panel">
+<form class="stack rowform" method="get" action="/compare">
+  <div><label>{{ S.first_id }}</label>
+    <input type="text" name="a" value="{{ a }}"></div>
+  <div><label>{{ S.second_id }}</label>
+    <input type="text" name="b" value="{{ b }}"></div>
+  <div><button type="submit">{{ S.compare_btn }}</button></div>
+</form>
+</div>
+{% if pair %}
+{% set ca, cb = pair %}
+<table class="spec" style="max-width:760px">
+  <tr><th></th><td><a href="/car/{{ ca.id }}"><strong>{{ car_name(ca) }}</strong></a></td>
+      <td><a href="/car/{{ cb.id }}"><strong>{{ car_name(cb) }}</strong></a></td></tr>
+  <tr><th>{{ S.spec_price }}</th><td>{{ ca.price | money }}</td><td>{{ cb.price | money }}</td></tr>
+  <tr><th>{{ S.spec_mileage }}</th><td>{{ ca.mileage_km | grp }} {{ S.km }}</td><td>{{ cb.mileage_km | grp }} {{ S.km }}</td></tr>
+  <tr><th>{{ S.spec_engine }}</th><td>{% if ca.fuel == 'Electric' %}{{ S.electric }}{% else %}{{ ca.engine_cc | grp }} {{ S.cc }}{% endif %}</td>
+      <td>{% if cb.fuel == 'Electric' %}{{ S.electric }}{% else %}{{ cb.engine_cc | grp }} {{ S.cc }}{% endif %}</td></tr>
+  <tr><th>{{ S.spec_transmission }}</th><td>{{ ca.transmission }}</td><td>{{ cb.transmission }}</td></tr>
+  <tr><th>{{ S.spec_fuel }}</th><td>{{ ca.fuel }}</td><td>{{ cb.fuel }}</td></tr>
+  <tr><th>{{ S.spec_color }}</th><td>{{ ca.color }}</td><td>{{ cb.color }}</td></tr>
+  <tr><th>{{ S.spec_body }}</th><td>{{ ca.body_type }}</td><td>{{ cb.body_type }}</td></tr>
+  <tr><th>{{ S.spec_city }}</th><td>{{ ca.city }}</td><td>{{ cb.city }}</td></tr>
+  <tr><th>{{ S.spec_owners }}</th><td>{{ ca.owners | v2_num }}</td><td>{{ cb.owners | v2_num }}</td></tr>
+  <tr><th>{{ S.spec_status }}</th><td>{{ S.status_active if ca.status == 'active' else S.status_sold }}</td>
+      <td>{{ S.status_active if cb.status == 'active' else S.status_sold }}</td></tr>
+</table>
+{% endif %}
+{% endblock %}

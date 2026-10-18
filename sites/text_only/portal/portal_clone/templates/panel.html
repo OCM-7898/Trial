@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ S.panel_title }} · {{ s.name }}{% endblock %}
+{% block body %}
+{% include "_sidebar.html" %}
+<div class="content">
+  <p class="crumbs"><a href="/services/{{ s.slug }}/">{{ s.name }}</a></p>
+  <h1>{{ S.panel_title }}</h1>
+  <ul class="panel-list">
+  {% for i in items %}
+    <li><a href="/services/{{ s.slug }}/panel/{{ i.slug }}/">
+      <strong>{{ i.title }}</strong><span>{{ i.summary }}</span></a></li>
+  {% endfor %}
+  </ul>
+</div>
+{% endblock %}

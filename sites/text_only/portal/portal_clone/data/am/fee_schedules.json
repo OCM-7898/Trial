@@ -1,0 +1,569 @@
+[
+ {
+  "id": 1,
+  "category": "እርማት",
+  "variant": "የስም አጻጻፍ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 2,
+  "category": "እርማት",
+  "variant": "የስም አጻጻፍ",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 3,
+  "category": "እርማት",
+  "variant": "የልደት ቀን",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 4,
+  "category": "እርማት",
+  "variant": "የልደት ቀን",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 5,
+  "category": "እርማት",
+  "variant": "አድራሻ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 6,
+  "category": "እርማት",
+  "variant": "አድራሻ",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 7,
+  "category": "ዳግም ማውጣት",
+  "variant": "የጠፋ ካርድ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 8,
+  "category": "ዳግም ማውጣት",
+  "variant": "የጠፋ ካርድ",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 9,
+  "category": "ዳግም ማውጣት",
+  "variant": "የተበላሸ ካርድ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 10,
+  "category": "ምትክ",
+  "variant": "ሁለተኛና ከዚያ በላይ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 11,
+  "category": "ተራ",
+  "variant": "48 ገጽ",
+  "validity": "5 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 12,
+  "category": "ተራ",
+  "variant": "48 ገጽ",
+  "validity": "5 ዓመት",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 13,
+  "category": "ተራ",
+  "variant": "48 ገጽ",
+  "validity": "5 ዓመት",
+  "delivery": "አስቸኳይ"
+ },
+ {
+  "id": 14,
+  "category": "ተራ",
+  "variant": "48 ገጽ",
+  "validity": "10 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 15,
+  "category": "ተራ",
+  "variant": "48 ገጽ",
+  "validity": "10 ዓመት",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 16,
+  "category": "ተራ",
+  "variant": "64 ገጽ",
+  "validity": "5 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 17,
+  "category": "ተራ",
+  "variant": "64 ገጽ",
+  "validity": "5 ዓመት",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 18,
+  "category": "ተራ",
+  "variant": "64 ገጽ",
+  "validity": "10 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 19,
+  "category": "ተራ",
+  "variant": "64 ገጽ",
+  "validity": "10 ዓመት",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 20,
+  "category": "መንግሥታዊ",
+  "variant": "48 ገጽ",
+  "validity": "5 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 21,
+  "category": "ልደት",
+  "variant": "በ45 ቀን ውስጥ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 22,
+  "category": "ልደት",
+  "variant": "ከ46 ቀን እስከ 5 ዓመት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 23,
+  "category": "ልደት",
+  "variant": "ከ5 ዓመት በኋላ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 24,
+  "category": "ሞት",
+  "variant": "በ45 ቀን ውስጥ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 25,
+  "category": "ሞት",
+  "variant": "ከ45 ቀን በኋላ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 26,
+  "category": "እርማት",
+  "variant": "ስም ወይም ቀን",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 27,
+  "category": "የተረጋገጠ ቅጂ",
+  "variant": "ልደት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 28,
+  "category": "የተረጋገጠ ቅጂ",
+  "variant": "ሞት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 29,
+  "category": "የባለቤትነት ዝውውር",
+  "variant": "ተራ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 30,
+  "category": "የባለቤትነት ዝውውር",
+  "variant": "ተራ",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 31,
+  "category": "የተረጋገጠ ቅጂ",
+  "variant": "ካቲያን",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 32,
+  "category": "የተረጋገጠ ቅጂ",
+  "variant": "ካቲያን",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 33,
+  "category": "ፍለጋ",
+  "variant": "የመዝገብ ምርመራ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 34,
+  "category": "የልማት ግብር",
+  "variant": "የመኖሪያ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 35,
+  "category": "የልማት ግብር",
+  "variant": "ንግድ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 36,
+  "category": "ግንኙነት",
+  "variant": "የቤት ነጠላ ፌዝ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 37,
+  "category": "ግንኙነት",
+  "variant": "የቤት ሶስት ፌዝ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 38,
+  "category": "ግንኙነት",
+  "variant": "ንግድ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 39,
+  "category": "ቆጣሪ",
+  "variant": "መተካት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 40,
+  "category": "ቆጣሪ",
+  "variant": "ማዛወር",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 41,
+  "category": "ዳግም ግንኙነት",
+  "variant": "ከመቋረጥ በኋላ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 42,
+  "category": "ዳግም ምርመራ",
+  "variant": "በትምህርት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 43,
+  "category": "የምስክር ወረቀት",
+  "variant": "ዳግም ማውጣት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 44,
+  "category": "ትራንስክሪፕት",
+  "variant": "በቅጂ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 45,
+  "category": "አቻነት",
+  "variant": "የምስክር ወረቀት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 46,
+  "category": "የመግቢያ ካርድ",
+  "variant": "ምትክ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 47,
+  "category": "ተማሪ",
+  "variant": "ሞተር ሳይክል",
+  "validity": "2 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 48,
+  "category": "ተማሪ",
+  "variant": "ቀላል ተሽከርካሪ",
+  "validity": "2 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 49,
+  "category": "ፈቃድ",
+  "variant": "ሙያዊ",
+  "validity": "5 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 50,
+  "category": "ፈቃድ",
+  "variant": "ሙያዊ ያልሆነ",
+  "validity": "10 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 51,
+  "category": "ፈቃድ",
+  "variant": "ሙያዊ ያልሆነ",
+  "validity": "10 ዓመት",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 52,
+  "category": "እድሳት",
+  "variant": "ሙያዊ",
+  "validity": "5 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 53,
+  "category": "ምትክ",
+  "variant": "ማንኛውም ክፍል",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 54,
+  "category": "ምዝገባ",
+  "variant": "ግለሰብ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 55,
+  "category": "ምዝገባ",
+  "variant": "ኩባንያ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 56,
+  "category": "ክሊራንስ",
+  "variant": "የምስክር ወረቀት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 57,
+  "category": "ሪተርን",
+  "variant": "የዘገየ ማስገባት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 58,
+  "category": "ይግባኝ",
+  "variant": "ማስታወሻ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 59,
+  "category": "ቅድመ ምዝገባ",
+  "variant": "የመንግሥት ፓኬጅ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 60,
+  "category": "ቅድመ ምዝገባ",
+  "variant": "የግል ፓኬጅ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 61,
+  "category": "ምዝገባ",
+  "variant": "የመንግሥት ፓኬጅ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 62,
+  "category": "ምዝገባ",
+  "variant": "የግል ፓኬጅ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 63,
+  "category": "ምትክነት",
+  "variant": "የወራሽ ለውጥ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 64,
+  "category": "የምስክር ወረቀት",
+  "variant": "ክትባት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 65,
+  "category": "የምስክር ወረቀት",
+  "variant": "እርማት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 66,
+  "category": "የጤና ካርድ",
+  "variant": "ማውጣት",
+  "validity": "5 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 67,
+  "category": "የሕክምና ቦርድ",
+  "variant": "ግምገማ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 68,
+  "category": "ክሊራንስ",
+  "variant": "የአገር ውስጥ አገልግሎት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 69,
+  "category": "ክሊራንስ",
+  "variant": "የውጭ አገር አገልግሎት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 70,
+  "category": "ክሊራንስ",
+  "variant": "የውጭ አገር አገልግሎት",
+  "validity": "—",
+  "delivery": "ፈጣን"
+ },
+ {
+  "id": 71,
+  "category": "የስነምግባር",
+  "variant": "የምስክር ወረቀት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 72,
+  "category": "ተከራይ",
+  "variant": "ምዝገባ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 73,
+  "category": "አዲስ",
+  "variant": "አነስተኛ ንግድ",
+  "validity": "1 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 74,
+  "category": "አዲስ",
+  "variant": "መካከለኛ ንግድ",
+  "validity": "1 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 75,
+  "category": "አዲስ",
+  "variant": "ትልቅ ንግድ",
+  "validity": "1 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 76,
+  "category": "እድሳት",
+  "variant": "አነስተኛ ንግድ",
+  "validity": "1 ዓመት",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 77,
+  "category": "ምትክ",
+  "variant": "ማንኛውም ምድብ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 78,
+  "category": "ጥያቄ",
+  "variant": "የዕድሜ ጡረታ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 79,
+  "category": "ጥያቄ",
+  "variant": "የቤተሰብ ጡረታ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 80,
+  "category": "የምስክር ወረቀት",
+  "variant": "የሕይወት ማረጋገጫ",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ },
+ {
+  "id": 81,
+  "category": "ምትክ",
+  "variant": "የክፍያ ወረቀት",
+  "validity": "—",
+  "delivery": "መደበኛ"
+ }
+]

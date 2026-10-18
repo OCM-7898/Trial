@@ -1,0 +1,2086 @@
+[
+ {
+  "id": "visualreddit-001",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/technology ውስጥ 'ረቂቅ፡ ስለ ኪቦርድ ሐሳቦች' በሚል ርዕስ እና 'ይህን በኋላ በአግባቡ እጽፈዋለሁ።' በሚል ይዘት ልጥፍ ያስገቡ፣ ከዚያ ያንን ልጥፍ አርትዕተው ርዕሱን 'ስልሳ በመቶ ኪቦርዶች፣ ከአንድ ዓመት በኋላ' ያድርጉት (ይዘቱን እንዳለ ይተዉት)። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "ስልሳ በመቶ ኪቦርዶች፣ ከአንድ ዓመት በኋላ",
+     "body": "ይህን በኋላ በአግባቡ እጽፈዋለሁ።",
+     "forum_id": 9,
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "posts",
+    "match": {
+     "title": "ረቂቅ፡ ስለ ኪቦርድ ሐሳቦች"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=technology; title=ረቂቅ፡ ስለ ኪቦርድ ሐሳቦች; body=ይህን በኋላ በአግባቡ እጽፈዋለሁ።",
+   "goto /post/2001/edit",
+   "fill 0 title=ስልሳ በመቶ ኪቦርዶች፣ ከአንድ ዓመት በኋላ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-002",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/movies ውስጥ 'የተሳሳተ ማህበረሰብ፣ ችላ በሉት' በሚል ርዕስ እና 'በስህተት ተለጠፈ።' በሚል ይዘት ልጥፍ ያስገቡ፣ ከዚያ ያንኑ ልጥፍ በቋሚነት ይሰርዙት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "deletions",
+    "match": {
+     "kind": "post",
+     "title": "የተሳሳተ ማህበረሰብ፣ ችላ በሉት",
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "posts",
+    "match": {
+     "title": "የተሳሳተ ማህበረሰብ፣ ችላ በሉት"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=movies; title=የተሳሳተ ማህበረሰብ፣ ችላ በሉት; body=በስህተት ተለጠፈ።",
+   "goto /post/2001/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-003",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/askanything ውስጥ 'ሌላ ሰው የተቆለፉ በሮችን ሦስቴ ያረጋግጣል?' በሚል ርዕስ እና 'ለራሴ ነው የምጠይቀው።' በሚል ይዘት ልጥፍ ያስገቡ፣ ከዚያ በራስዎ አዲስ ልጥፍ ላይ የመጀመሪያውን አስተያየት ይስጡ፡ 'ዝመና፡ አዎ፣ አሁን እንደገና አደረግሁት።'። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "ሌላ ሰው የተቆለፉ በሮችን ሦስቴ ያረጋግጣል?",
+     "body": "ለራሴ ነው የምጠይቀው።",
+     "forum_id": 6,
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 2001,
+     "author_id": 1,
+     "body": "ዝመና፡ አዎ፣ አሁን እንደገና አደረግሁት።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=askanything; title=ሌላ ሰው የተቆለፉ በሮችን ሦስቴ ያረጋግጣል?; body=ለራሴ ነው የምጠይቀው።",
+   "fill 3 body=ዝመና፡ አዎ፣ አሁን እንደገና አደረግሁት።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-004",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "'espresso' በሚል ስም እና 'የቤት ኤስፕሬሶ፡ ማሽኖች፣ ፍሬዎችና ዘዴ።' በሚል መግለጫ አዲስ ማህበረሰብ ይፍጠሩ፣ ከዚያ 'አንድ ኪሎ ሳያባክኑ ማስተካከል' በሚል ርዕስ እና 'ሻካራ ጀምር፣ በፍጥነት ቀጥል።' በሚል ይዘት የመጀመሪያውን ልጥፍ ያስገቡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "forums",
+    "match": {
+     "name": "espresso",
+     "description": "የቤት ኤስፕሬሶ፡ ማሽኖች፣ ፍሬዎችና ዘዴ።"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "አንድ ኪሎ ሳያባክኑ ማስተካከል",
+     "body": "ሻካራ ጀምር፣ በፍጥነት ቀጥል።",
+     "forum_id": 13,
+     "author_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /create_community",
+   "fill 0 name=espresso; description=የቤት ኤስፕሬሶ፡ ማሽኖች፣ ፍሬዎችና ዘዴ።",
+   "goto /submit",
+   "fill 0 forum=espresso; title=አንድ ኪሎ ሳያባክኑ ማስተካከል; body=ሻካራ ጀምር፣ በፍጥነት ቀጥል።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-005",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/technology ውስጥ ከፍተኛ ነጥብ ያለውን ልጥፍ ይክፈቱ (በከፍተኛ ደርድሩ)፣ ከዚያ በ f/technology ውስጥ ርዕሱ የዚያ ልጥፍ ርዕስ በፊቱ 'RE: ' ተጨምሮበት የሆነና ይዘቱ 'ከከፍተኛው ክር ውይይቱን እቀጥላለሁ።' የሆነ አዲስ የራስዎን ልጥፍ ያስገቡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "%RE: ሌላ ሰው ለማንኛውም ጊዜ ቋሚ ማሳያዎች ያስቀምጣል?%",
+     "body": "ከከፍተኛው ክር ውይይቱን እቀጥላለሁ።",
+     "forum_id": 9,
+     "author_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/15",
+   "goto /submit",
+   "fill 0 forum=technology; title=RE: ሌላ ሰው ለማንኛውም ጊዜ ቋሚ ማሳያዎች ያስቀምጣል? (62); body=ከከፍተኛው ክር ውይይቱን እቀጥላለሁ።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-006",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/personalfinance ውስጥ 'የፖስታው ወር፡ ውጤቶች' በሚል ርዕስ እና 'ስፕሬድሺቱ በአስተያየቶች ውስጥ።' በሚል ይዘት ልጥፍ ያስገቡ፣ ከዚያ የራስዎን አዲስ ልጥፍ ወደ የተቀመጡ ዝርዝርዎ ያስቀምጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "title": "የፖስታው ወር፡ ውጤቶች",
+     "body": "ስፕሬድሺቱ በአስተያየቶች ውስጥ።",
+     "forum_id": 11,
+     "author_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 2001
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /submit",
+   "fill 0 forum=personalfinance; title=የፖስታው ወር፡ ውጤቶች; body=ስፕሬድሺቱ በአስተያየቶች ውስጥ።",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-007",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 33 ላይ የተመዘገበው ድምጽዎ በመጨረሻ ዳውንቮት መሆኑን ያረጋግጡ — አስቀድመው አፕቮት አድርገው ከሆነ ድምጹን ይቀይሩ። የመጨረሻው የተመዘገበ ድምጽዎ ዳውንቮት መሆን አለበት፣ ነጥቡም ያንን ማንጸባረቅ አለበት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 33,
+     "user_id": 1,
+     "dir": -1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "posts",
+    "match": {
+     "id": 33
+    },
+    "field": "score",
+    "value": 182
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/33",
+   "fill 0",
+   "fill 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-008",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 2 ላይ ከፍተኛ ነጥብ ያለውን የላይኛው ደረጃ አስተያየት ፈልገው ያንን አስተያየት አፕቮት ያድርጉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comment_votes",
+    "match": {
+     "comment_id": 11,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/2",
+   "fill 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-009",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "f/technology ን በከፍተኛ ደርድረው የሚታየውን ሁለተኛ ልጥፍ ይክፈቱ። ዳውንቮት ያድርጉት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 880,
+     "user_id": 1,
+     "dir": -1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/880",
+   "fill 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-010",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የድረ-ገጹን ፍለጋ ተጠቅመው በትክክል 'የእኔ ሱኩለንት በመጨረሻ አበበ — ትዕግስት ይከፍላል' የሚል ርዕስ ያለውን ልጥፍ ፈልገው አፕቮት ያድርጉት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 43,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/43",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-011",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "እነዚህን ሦስት ልጥፎች ሁሉ አፕቮት ያድርጉ፡ 53፣ 63 እና 73። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 53,
+     "user_id": 1,
+     "dir": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 63,
+     "user_id": 1,
+     "dir": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 73,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/53",
+   "fill 0",
+   "goto /post/63",
+   "fill 0",
+   "goto /post/73",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-012",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 83 ላይ በትክክል ይህን አስተያየት ይስጡ፡ 'ይህን ወደ ቅዳሜና እሁድ ዝርዝሬ እጨምረዋለሁ።'። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 83,
+     "author_id": 1,
+     "body": "ይህን ወደ ቅዳሜና እሁድ ዝርዝሬ እጨምረዋለሁ።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/83",
+   "fill 3 body=ይህን ወደ ቅዳሜና እሁድ ዝርዝሬ እጨምረዋለሁ።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-013",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 4 ላይ በ u/lumen_lark የተጻፈውን የላይኛው ደረጃ አስተያየት ፈልገው ለዚያ አስተያየት 'እኔም ይህን ለማለት ነው የመጣሁት።' በማለት መልስ ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 4,
+     "author_id": 1,
+     "parent_id": 24,
+     "body": "እኔም ይህን ለማለት ነው የመጣሁት።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/4",
+   "fill 7 body=እኔም ይህን ለማለት ነው የመጣሁት።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-014",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 8 ላይ ከፍተኛ ነጥብ ላለው የላይኛው ደረጃ አስተያየት 'ክሩ እንደ ሁልጊዜው አደረሰ።' በማለት መልስ ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "parent_id": 53,
+     "author_id": 1,
+     "body": "ክሩ እንደ ሁልጊዜው አደረሰ።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/8",
+   "fill 17 body=ክሩ እንደ ሁልጊዜው አደረሰ።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-015",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 93 ላይ 'ባለ ሁለት ክፍል ጥያቄ እየመጣ ነው።' የሚል የላይኛው ደረጃ አስተያየት ይጨምሩ፣ ከዚያ ለራስዎ አዲስ አስተያየት 'ክፍል ሁለት፡ ተወው፣ ፈታሁት።' በማለት መልስ ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 93,
+     "author_id": 1,
+     "body": "ባለ ሁለት ክፍል ጥያቄ እየመጣ ነው።"
+    }
+   },
+   {
+    "type": "db_reply_to",
+    "author_id": 1,
+    "post_id": 93,
+    "parent_body": "ባለ ሁለት ክፍል ጥያቄ እየመጣ ነው።",
+    "child_body": "ክፍል ሁለት፡ ተወው፣ ፈታሁት።"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/93",
+   "fill 3 body=ባለ ሁለት ክፍል ጥያቄ እየመጣ ነው።",
+   "fill 27 body=ክፍል ሁለት፡ ተወው፣ ፈታሁት።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-016",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/whatisthisthing ውስጥ ልጥፍ 12 አንድ የማይታወቅ ነገር ምን እንደሆነ ይጠይቃል። ከአስተያየቶቹ አንዱ ይለየዋል። ለዚያ ለሚለየው አስተያየት 'አመሰግናለሁ፣ ምስጢሩ ተፈታ!' በማለት መልስ ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "parent_id": 66,
+     "author_id": 1,
+     "body": "አመሰግናለሁ፣ ምስጢሩ ተፈታ!"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/12",
+   "fill 5 body=አመሰግናለሁ፣ ምስጢሩ ተፈታ!"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-017",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/askanything ውስጥ ብዙ አስተያየት ያለውን ልጥፍ ፈልገው (በብዙ አስተያየት ያላቸው ደርድሩ) 'ይህ ክር እውነተኛው FAQ ነው።' የሚል አስተያየት ይጨምሩ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 1969,
+     "author_id": 1,
+     "body": "ይህ ክር እውነተኛው FAQ ነው።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1969",
+   "fill 3 body=ይህ ክር እውነተኛው FAQ ነው።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-018",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "አሁን በሦስት ማህበረሰቦች ተመዝግበዋል። ከ f/carspotting ብቻ ምዝገባዎን ያቋርጡ፣ ሌሎቹን ምዝገባዎች ይያዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 1
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 7
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 9
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/carspotting",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-019",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ምዝገባዎችዎን ያጽዱ፡ ከ f/cooking በስተቀር ከሁሉም ማህበረሰብ ምዝገባዎን ያቋርጡ፣ f/cooking ን ይያዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 7
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 9
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/technology",
+   "fill 0",
+   "goto /f/carspotting",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-020",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፎች 113፣ 123 እና 133 ን ወደ የተቀመጡ ዝርዝርዎ ያስቀምጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 113
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 123
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 133
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/113",
+   "fill 2",
+   "goto /post/123",
+   "fill 2",
+   "goto /post/133",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-021",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በተቀመጡ ዝርዝርዎ ውስጥ ካሉት ልጥፎች በትክክል አንዱ የ f/gardening ነው። ያንን ብቻ ከተቀመጡ ልጥፎችዎ ያስወግዱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 43
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 254
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1376
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1847
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /saved",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-022",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የተቀመጡ ዝርዝርዎን ሙሉ በሙሉ ባዶ ያድርጉ፣ ከዚያ ልጥፍ 143 ን ብቻ ወደ እሱ ያስቀምጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 43
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 254
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1847
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 143
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /saved",
+   "fill 0",
+   "fill 0",
+   "fill 0",
+   "fill 0",
+   "goto /post/143",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-023",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ሦስቱንም ያድርጉ፡ ልጥፍ 163 ን ያስቀምጡ፣ ልጥፍ 174 ን ያስቀምጡ፣ እና ከ f/technology ምዝገባዎን ያቋርጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 163
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 174
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 9
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/163",
+   "fill 2",
+   "goto /post/174",
+   "fill 2",
+   "goto /f/technology",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-024",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በተቀመጡ ዝርዝርዎ ውስጥ ካሉት ልጥፎች ብዙ አስተያየት ያለውን ፈልገው አፕቮት ያድርጉት። በልጥፍ ርዕስ መጨረሻ በቅንፍ ውስጥ ያለው ቁጥር የርዕሱ አካል ነው እንጂ የአስተያየቶች ብዛት አይደለም። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 254,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/254",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-025",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የ u/lotus_leila መገለጫ ይክፈቱ። ከልጥፎቻቸው ውስጥ ስንቱ የምስል ልጥፎች ናቸው? በቁጥር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "7"
+   }
+  ],
+  "solution": [
+   "goto /u/lotus_leila",
+   "stop 7"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-026",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/askanything ውስጥ ስንት ልጥፎች ተቆልፈዋል ተብለው ምልክት ተደርጎባቸዋል? የማህበረሰቡን እያንዳንዱን ገጽ ይመልከቱ። በቁጥር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "6"
+   }
+  ],
+  "solution": [
+   "goto /f/askanything?sort=new",
+   "stop 6"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "visualreddit-027",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "f/carspotting በከፍተኛ ሲደረደር ከሚታዩት የመጀመሪያ አምስት ልጥፎች ውስጥ ብዙ አስተያየት ያለውን ያስቀምጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 1320
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1320",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-028",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/buyitforlife ውስጥ ከፍተኛ ነጥብ ያለውን ልጥፍ ይክፈቱ (በከፍተኛ ደርድሩ)፣ ከዚያ የእሱን ከፍተኛ ነጥብ ያለው የላይኛው ደረጃ አስተያየት አፕቮት ያድርጉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comment_votes",
+    "match": {
+     "comment_id": 11907,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1970",
+   "fill 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-029",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/whatisthisthing ውስጥ ልጥፍ 52 አንድ የማይታወቅ ነገር ያሳያል። እሱን በሚለየው አስተያየት መሠረት ነገሩ ምንድን ነው? በስሙ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "1\" ክብ ሪንግ ባይንደር"
+   }
+  ],
+  "solution": [
+   "goto /post/52",
+   "stop 1\" ክብ ሪንግ ባይንደር"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-030",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ከ u/lotus_leila መገለጫ ከፍተኛ ነጥብ ያለውን ልጥፋቸውን ፈልገው ያስቀምጡት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 472
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /u/lotus_leila",
+   "goto /post/472",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-031",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "መታወቂያው 184 የሆነውን ልጥፍ ይክፈቱ (ገጹ /post/184 ነው) እና ነጥቡንም የአስተያየቶቹን ብዛትም ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "218"
+   },
+   {
+    "type": "answer_match",
+    "answer": "4"
+   }
+  ],
+  "solution": [
+   "goto /post/184",
+   "stop score 218, 4 comments"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-032",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፎች 204 እና 214 ን ያወዳድሩ። ከፍተኛ ነጥብ ያለውን መታወቂያ እና የነጥባቸውን ልዩነት ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "204",
+    "none_of": [
+     "214"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "462"
+   }
+  ],
+  "solution": [
+   "goto /post/204",
+   "goto /post/214",
+   "stop 204 is higher by 462"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-033",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ u/gearhead_gia መገለጫ ላይ የሚታየው የልጥፍ ካርማ ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4,885",
+     "4885"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /u/gearhead_gia",
+   "stop 4885"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-034",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የድረ-ገጹን ፍለጋ ተጠቅመው በትክክል 'አንድ ሰው ቢሰጠኝ ብዬ የተመኘሁት የካፓዶኪያ መርሐ ግብር (93)' የሚል ርዕስ ያለውን ልጥፍ ይፈልጉ። ነጥቡንም የሚገኝበትን ማህበረሰብም ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "706"
+   },
+   {
+    "type": "answer_match",
+    "answer": "travel"
+   }
+  ],
+  "solution": [
+   "goto /post/225",
+   "stop 706, f/travel"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-035",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "መታወቂያው 4 የሆነውን ልጥፍ ይክፈቱ (ገጹ /post/4 ነው፤ በ f/projectcars ውስጥ ነው) እና ስንት ፎቶዎች እንዳሉት እና የተለጠፈበትን ቀን (YYYY-MM-DD) ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "3"
+   },
+   {
+    "type": "answer_match",
+    "answer": "2026-04-01"
+   }
+  ],
+  "solution": [
+   "goto /post/4",
+   "stop 3 photos, posted 2026-04-01"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-036",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "f/homegadgets በአጠቃላይ ስንት ልጥፎች ይዟል? የገጽ አሰሳውን ተጠቅመው በሁሉም ገጾች ይቁጠሩ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "40"
+   }
+  ],
+  "solution": [
+   "goto /f/homegadgets",
+   "stop 40"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-037",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የ f/askanything ልጥፎች በስንት ገጾች ላይ ይዘልቃሉ (ድረ-ገጹ በአንድ ገጽ 15 ልጥፎችን ያሳያል)?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "17"
+   }
+  ],
+  "solution": [
+   "goto /f/askanything",
+   "stop 17"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-038",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፎች 235 እና 245 ን ከፍተው የሁለቱን ነጥቦች ድምር ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "743"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/235",
+   "goto /post/245",
+   "stop 743"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-039",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፎች 255 እና 265 በአንድነት ስንት አስተያየቶች አሏቸው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "17"
+   }
+  ],
+  "solution": [
+   "goto /post/255",
+   "goto /post/265",
+   "stop 17"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-040",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፍ 275 ን ሪፖርት ያድርጉ፣ ምክንያት 'Spam' (አላስፈላጊ መልእክት) መርጠው እና በዝርዝሩ ውስጥ 'ተመሳሳይ አገናኝ በአራት ማህበረሰቦች ተለጠፈ' ጽፈው። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reports",
+    "match": {
+     "post_id": 275,
+     "user_id": 1,
+     "reason": "Spam",
+     "details": "ተመሳሳይ አገናኝ በአራት ማህበረሰቦች ተለጠፈ"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/275/report",
+   "fill 0 reason=Spam; details=ተመሳሳይ አገናኝ በአራት ማህበረሰቦች ተለጠፈ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-041",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 285 ላይ፡ መጀመሪያ ያስቀምጡት፣ ከዚያ ሪፖርት ያድርጉት፣ ምክንያት 'Misinformation' (የተሳሳተ መረጃ) መርጠው እና በዝርዝሩ ውስጥ 'የቀረቡት ጥያቄዎች በአስተያየቶቹ ውስጥ ተቃርነዋል' ጽፈው። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 285
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reports",
+    "match": {
+     "post_id": 285,
+     "user_id": 1,
+     "reason": "Misinformation",
+     "details": "የቀረቡት ጥያቄዎች በአስተያየቶቹ ውስጥ ተቃርነዋል"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/285",
+   "fill 2",
+   "goto /post/285/report",
+   "fill 0 reason=Misinformation; details=የቀረቡት ጥያቄዎች በአስተያየቶቹ ውስጥ ተቃርነዋል"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-042",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የመገለጫዎን ባዮ በትክክል ይህ ያድርጉት፡ 'የቤንችማርክ ወኪል። በአብዛኛው ለመኪና ፎቶዎች ነው እዚህ ያለሁት።'። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "bio",
+    "value": "የቤንችማርክ ወኪል። በአብዛኛው ለመኪና ፎቶዎች ነው እዚህ ያለሁት።"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 0 bio=የቤንችማርክ ወኪል። በአብዛኛው ለመኪና ፎቶዎች ነው እዚህ ያለሁት።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-043",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "መገለጫዎ አሁን ባዮ አለው። ቅንብሮችን ከፍተው ያጽዱት፣ ባዮዎ ሙሉ በሙሉ ባዶ እንዲሆን። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "id": 1
+    },
+    "field": "bio",
+    "value": ""
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 0 bio="
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-044",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በልጥፍ 166 ላይ 'ለዚህ ክር ዘግይቻለሁ።' የሚል አስተያየት ይለጥፉ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "post_id": 166,
+     "author_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/166",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-045",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፍ 215 ን አፕቮት ያድርጉ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 215,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/215",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-046",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፍ 2001 ን ከፍተው ነጥቡን ይግለጹ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /post/2001",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-047",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በ f/cryptocurrency ማህበረሰብ ይመዝገቡ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /communities",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-048",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፍ 295 ን (በ u/sana_codes የተለጠፈ) ይሰርዙ። ይህ በድረ-ገጹ ላይ የማይቻል ከሆነ N/A ብለው ይመልሱ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "N/A"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "id": 295
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/295",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-049",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "'ትቢሊሲ ውስጥ 8 ቀናት፡ ሐቀኛ የጉዞ ዘገባ' የሚል ርዕስ ያለው ልጥፍ ደራሲ እርስዎ ነዎት። ርዕሱ 'ዝመና፡ ትቢሊሲ ውስጥ 8 ቀናት፡ ሐቀኛ የጉዞ ዘገባ' እንዲሆን አርትዑት (ይዘቱን እንዳለ ይተዉት)። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "id": 1,
+     "title": "ዝመና፡ ትቢሊሲ ውስጥ 8 ቀናት፡ ሐቀኛ የጉዞ ዘገባ",
+     "body": "የመጀመሪያውን ሌሊት ብቻ ያዙና ተለዋዋጭ ሁኑ። የመጀመሪያውን ሌሊት ብቻ ያዙና ተለዋዋጭ ሁኑ። የበጀት ተጓዦች፡ የምሳ ምናሌዎች ምርጥ ጓደኞቻችሁ ናቸው።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/1/edit",
+   "fill 0 title=ዝመና፡ ትቢሊሲ ውስጥ 8 ቀናት፡ ሐቀኛ የጉዞ ዘገባ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-050",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "'ከቤተሰብ ጋር የገንዘብ ውይይትን እንዴት ታስተናግዳላችሁ? (179)' የሚል ርዕስ ያለውን የራስዎን ልጥፍ በቋሚነት ይሰርዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "posts",
+    "match": {
+     "id": 3
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "posts",
+    "match": {
+     "id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/3/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-051",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "'ወደ ካፓዶኪያ የሌሊት ባቡር ወይስ በረራ? (85)' በሚል ርዕስ ባለው ልጥፍ ላይ ቀደም ሲል \"ይህን መርሐ ግብር ነው የምሰርቀው፣ አመሰግናለሁ።\" ብለው አስተያየት ሰጥተው ነበር። ያንን አስተያየት 'እንደገና አየሁት — አሁንም ይሠራል።' እንዲል አርትዑት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "id": 5702,
+     "body": "እንደገና አየሁት — አሁንም ይሠራል።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /comment/5702/edit",
+   "fill 0 body=እንደገና አየሁት — አሁንም ይሠራል።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-052",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "'ትቢሊሲ ውስጥ 10 ቀናትን ያለፈ የዕቃ ዝርዝር' በሚል ርዕስ ባለው ልጥፍ ላይ የራስዎን \"ሁልጊዜ ባቡር። እይታው ራሱ ጉዞው ነው።\" አስተያየት ይሰርዙ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "comments",
+    "match": {
+     "id": 6458
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "id": 5444
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "id": 5702
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /comment/6458/delete",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-053",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "መገለጫዎች የልጥፍ ካርማንም የአስተያየት ካርማንም ያሳያሉ። ከ u/chai_addict እና u/midnight_owl መካከል የማን የአስተያየት ካርማ ከፍ ያለ ነው? በተጠቃሚ ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "chai_addict",
+    "none_of": [
+     "midnight_owl"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /u/chai_addict",
+   "goto /u/midnight_owl",
+   "stop chai_addict"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-054",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፍ 98 ን ይክፈቱ፣ ከዚያ የደራሲውን መገለጫ ከፍተው ደራሲው Redora ን የተቀላቀለበትን ወር (YYYY-MM) ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "2020-05"
+   }
+  ],
+  "solution": [
+   "goto /post/98",
+   "goto /u/apex_anders",
+   "stop 2020-05"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-055",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ከ u/salty_sailor እና u/quiet_quokka መካከል ማን ቀደም ብሎ Redora ን ተቀላቀለ (መገለጫዎች የመቀላቀያ ወሩን ያሳያሉ)? በተጠቃሚ ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "quiet_quokka",
+    "none_of": [
+     "salty_sailor"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /u/salty_sailor",
+   "goto /u/quiet_quokka",
+   "stop quiet_quokka"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-056",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የ u/pixel_pusher መገለጫ ይክፈቱ፣ ከፍተኛ ነጥብ ያለውን አስተያየታቸውን ይፈልጉ፣ ያ አስተያየት የተሰጠበትን ልጥፍ ከፍተው እዚያ ያንን አስተያየት አፕቮት ያድርጉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comment_votes",
+    "match": {
+     "comment_id": 844,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /u/pixel_pusher",
+   "goto /post/144",
+   "fill 22"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-057",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የ f/cooking ስለ ገጽ ከፍተው የማህበረሰብ ደንብ ቁጥር 2 ን ቃል በቃል ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "የሌላ ሰው አሠራር ሲያካፍሉ ምንጩን ይጥቀሱ።"
+   }
+  ],
+  "solution": [
+   "goto /f/cooking/about",
+   "stop የሌላ ሰው አሠራር ሲያካፍሉ ምንጩን ይጥቀሱ።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-058",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "በስለ ገጾቻቸው መሠረት የትኛው ማህበረሰብ ብዙ አባላት አሉት፡ f/travel ወይስ f/movies? በማህበረሰቡ ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "movies",
+    "none_of": [
+     "travel"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/travel/about",
+   "goto /f/movies/about",
+   "stop f/movies"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-059",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የ f/personalfinance ስለ ገጽ ከፍተው በዝርዝሩ የመጀመሪያውን አወያይ ይፈልጉ። የዚያን አወያይ መገለጫ ከፍተው የልጥፍ ካርማቸውን ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "4,093",
+     "4093"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/personalfinance/about",
+   "goto /u/gravel_guru",
+   "stop 4093"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-060",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "u/bokeh_bilal በትክክል አንድ ማህበረሰብ ብቻ ያወያያል (አወያዮች በእያንዳንዱ ማህበረሰብ ስለ ገጽ ላይ ተዘርዝረዋል)። ያንን ማህበረሰብ ፈልገው ይመዝገቡበት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 5
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 6
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 3
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 12
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 10
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 11
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 2
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 8
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/homegadgets/about",
+   "goto /f/homegadgets",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-061",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የ f/technology ስለ ገጽ ከፍተው የአባላቱን ብዛት እና የተፈጠረበትን ወር (YYYY-MM) ሁለቱንም ይግለጹ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "27,184",
+     "27184"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "answer": "2022-02"
+   }
+  ],
+  "solution": [
+   "goto /f/technology/about",
+   "stop 27,184 members, created 2022-02"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-062",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "የእያንዳንዱ ማህበረሰብ ስለ ገጽ የተሰካውን ልጥፍ ያሳያል። የ f/travel የተሰካ ልጥፍ ወደ የተቀመጡ ዝርዝርዎ ያስቀምጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 666
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/travel/about",
+   "goto /post/666",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-063",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "ልጥፎች ፍሌር ሊኖራቸው ይችላል። በ f/cooking ላይ የፍሌር ማጣሪያውን ተጠቅመው ስንት ልጥፎቹ 'አሠራር' ፍሌር አላቸው? በቁጥር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "34"
+   }
+  ],
+  "solution": [
+   "goto /f/cooking?flair=አሠራር",
+   "stop 34"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-064",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "f/carspotting ን በከፍተኛ ደርድሩ። በመጀመሪያው ገጽ ካሉት ልጥፎች መካከል የትኛው ብዙ ሽልማቶች አሉት? በልጥፍ መታወቂያው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "1318"
+   }
+  ],
+  "solution": [
+   "goto /f/carspotting?sort=top",
+   "stop 1318"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-065",
+  "site": "reddit",
+  "difficulty": "hard",
+  "intent": "f/gardening ን በከፍተኛ ደርድሩ። ከሚታዩት የመጀመሪያ አምስት ልጥፎች መካከል በትክክል አንዱ 'መከር' ፍሌር አለው — አፕቮት ያድርጉት። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 673,
+     "user_id": 1,
+     "dir": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 1736,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 877,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 1769,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "votes",
+    "match": {
+     "post_id": 1929,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/673",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-066",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "ልጥፍ 305 ምን ፍሌር አለው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "መከር",
+    "none_of": [
+     "እርዳታ",
+     "ምክር"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /post/305",
+   "stop መከር"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-067",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "ልጥፍ 315 ስንት አስተያየቶች አሉት?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "7"
+   }
+  ],
+  "solution": [
+   "goto /post/315",
+   "stop 7"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-068",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "በስለ ገጹ መሠረት f/movies ስንት አባላት አሉት?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "any_of": [
+     "24,400",
+     "24400"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /f/movies/about",
+   "stop 24,400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-069",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "በ f/movies ይመዝገቡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "subscriptions",
+    "match": {
+     "user_id": 1,
+     "forum_id": 10
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /f/movies",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-070",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "ልጥፍ 335 ን ወደ የተቀመጡ ዝርዝርዎ ያስቀምጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "saved",
+    "match": {
+     "user_id": 1,
+     "post_id": 335
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/335",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-071",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "በልጥፍ 345 ላይ 'ጥሩ ነው።' ብለው አስተያየት ይስጡ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "comments",
+    "match": {
+     "post_id": 345,
+     "author_id": 1,
+     "body": "ጥሩ ነው።"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/345",
+   "fill 3 body=ጥሩ ነው።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-072",
+  "site": "reddit",
+  "difficulty": "easy",
+  "intent": "በድረ-ገጹ ደንቦች መሠረት አወያዮች ሪፖርቶችን በስንት ሰዓት ውስጥ ይገመግማሉ?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "48"
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 48 hours"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-073",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "የ f/cooking ልጥፎች በስንት ገጾች ላይ ይዘልቃሉ (በአንድ ገጽ 15 ልጥፎች)?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "answer": "15"
+   }
+  ],
+  "solution": [
+   "goto /f/cooking",
+   "stop 15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-074",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "ፍለጋውን ተጠቅመው በትክክል 'ለዓመታት ከተቃወምኩ በኋላ ወደ ተራ ስልኮች ተዛወርኩ — ብይን (32)' የሚል ርዕስ ያለውን ልጥፍ ፈልገው በዚያ ልጥፍ ገጽ ላይ ይጨርሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "final_url",
+    "path": "/post/357"
+   }
+  ],
+  "solution": [
+   "goto /post/357"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "visualreddit-075",
+  "site": "reddit",
+  "difficulty": "medium",
+  "intent": "ልጥፍ 366 ን አፕቮት ያድርጉ። አስፈላጊ ከሆነ በ agent_smith (የይለፍ ቃል፡ password123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "votes",
+    "match": {
+     "post_id": 366,
+     "user_id": 1,
+     "dir": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=agent_smith; password=password123",
+   "goto /post/366",
+   "fill 0"
+  ],
+  "max_steps": 30
+ }
+]

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ S.settings_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.settings_h }}</h2>
+{% if saved %}<p class="notice">{{ S.settings_saved }}</p>{% endif %}
+<form method="post" action="/settings">
+  <label>{{ S.default_addr_label }}<br>
+    <input name="default_address" style="width:420px" value="{{ profile.default_address }}"></label><br><br>
+  <button class="btn">{{ S.save_settings }}</button>
+</form>
+{% endblock %}

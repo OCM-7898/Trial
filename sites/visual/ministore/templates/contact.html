@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ S.contact_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.contact_h }}</h2>
+{% if sent %}<p class="notice">{{ S.contact_sent }}</p>{% endif %}
+<p class="meta">{{ S.contact_hint }}</p>
+<form method="post" action="/contact">
+  <label>{{ S.order_no_label }} <input name="order_ref" style="width:120px"></label><br><br>
+  <label>{{ S.message_label }}<br><textarea name="message" rows="5" cols="60" placeholder="{{ S.msg_placeholder }}"></textarea></label><br><br>
+  <button class="btn">{{ S.send_message }}</button>
+</form>
+{% endblock %}

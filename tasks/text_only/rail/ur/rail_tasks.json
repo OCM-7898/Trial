@@ -1,0 +1,2201 @@
+[
+ {
+  "id": "rail-001",
+  "site": "rail",
+  "intent": "ٹرین 12903 ساگرمالا ایکسپریس کو نئی دہلی سے ممبئی سینٹرل تک کتنا وقت لگتا ہے؟ جیسا دکھایا گیا ہے ویسا دورانیہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "16h 55m",
+     "16 hours 55 minutes",
+     "16 hr 55 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=BCT; date=2026-04-06",
+   "stop 16h 55m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-002",
+  "site": "rail",
+  "intent": "2026-04-06 کو نئی دہلی سے کانپور سینٹرل کے سفر کا سب سے کم 3A کرایہ تلاش کریں اور روپے میں رقم جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2156",
+     "2,156",
+     "۲۱۵۶",
+     "۲,۱۵۶"
+    ],
+    "none_of": [
+     "2864"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "stop 2156"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-003",
+  "site": "rail",
+  "intent": "PNR 6201234567 کی PNR حیثیت دیکھیں اور حیثیت کا کوڈ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CNF"
+    ],
+    "none_of": [
+     "CAN",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "stop CNF"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-004",
+  "site": "rail",
+  "intent": "PNR 6203456789 دیکھیں اور مسافر کا نام جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "وکرم راؤ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6203456789",
+   "stop وکرم راؤ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-005",
+  "site": "rail",
+  "intent": "2026-04-06 کو ٹرین 12301 جمنا ایکسپریس میں نئی دہلی سے ہاوڑہ جنکشن تک مسافر کبیر مہتا، عمر 41، مرد، اوپری (Upper) برتھ کا ایک 2A ٹکٹ بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "کبیر مہتا",
+     "date": "2026-04-06",
+     "from_code": "NDLS",
+     "to_code": "HWH"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-06&class=2A",
+   "fill 0 name=کبیر مہتا; age=41; gender=M; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-006",
+  "site": "rail",
+  "intent": "2026-04-07 کو ٹرین 12417 گومتی سمپرک میں نئی دہلی سے لکھنؤ تک مسافر سنیتا ورما، عمر 55، عورت، برتھ کی کوئی ترجیح نہیں — ایک CC (چیئر کار) ٹکٹ بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "سنیتا ورما",
+     "class_code": "CC",
+     "train_no": "12417",
+     "date": "2026-04-07",
+     "from_code": "NDLS",
+     "to_code": "LKO"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12417?from=NDLS&to=LKO&date=2026-04-07&class=CC",
+   "fill 0 name=سنیتا ورما; age=55; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-007",
+  "site": "rail",
+  "intent": "2026-04-08 کو ٹرین 12841 کورومنڈل لنک ایکسپریس میں ہاوڑہ جنکشن سے چنئی سینٹرل تک مسافر فرحان علی، عمر 23، مرد، سائیڈ اوپری (Side Upper) برتھ کا ایک SL (سلیپر) ٹکٹ بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "فرحان علی",
+     "berth": "Side Upper",
+     "train_no": "12841",
+     "class_code": "SL",
+     "date": "2026-04-08",
+     "from_code": "HWH",
+     "to_code": "MAS"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12841?from=HWH&to=MAS&date=2026-04-08&class=SL",
+   "fill 0 name=فرحان علی; age=23; gender=M; berth=Side Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-008",
+  "site": "rail",
+  "intent": "PNR 6203456789 والی بکنگ منسوخ کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /cancel/6203456789",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-009",
+  "site": "rail",
+  "intent": "ٹرین 12622 برہم پتر لنک ایکسپریس میں ہاوڑہ جنکشن سے گوہاٹی تک 2A ٹکٹ 3A ٹکٹ سے کتنا مہنگا ہے؟ روپے میں فرق جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2388",
+     "2,388",
+     "۲۳۸۸",
+     "۲,۳۸۸"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "stop 2388"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-010",
+  "site": "rail",
+  "intent": "2026-04-07 کو روانہ ہونے والی سکندرآباد جنکشن سے پونے جنکشن کی براہِ راست ٹرین تلاش کریں۔ اس دن کوئی ٹرین نہ چلے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی ٹرین نہیں",
+     "براہ راست ٹرین نہیں",
+     "نہیں چلتی",
+     "اس دن نہیں چلتی",
+     "ٹرین نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-011",
+  "site": "rail",
+  "intent": "PNR 6299999999 کی PNR حیثیت دیکھیں۔ کوئی بکنگ نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی بکنگ نہیں",
+     "نہیں ملی",
+     "کوئی ریکارڈ نہیں",
+     "موجود نہیں",
+     "غلط pnr"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6299999999",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-012",
+  "site": "rail",
+  "intent": "کسٹمر سپورٹ کو 'ریفنڈ میں تاخیر' موضوع کے ساتھ ایک پیغام بھیجیں جس میں بتائیں کہ آپ کا ریفنڈ نہیں آیا۔ اپنا نام اور ای میل (پریا شرما، priya.sharma@example.in) شامل کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "ریفنڈ میں تاخیر",
+     "name": "پریا شرما",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=پریا شرما; email=priya.sharma@example.in; subject=ریفنڈ میں تاخیر; message=میرے منسوخ ٹکٹ کا ریفنڈ ابھی تک نہیں آیا۔"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-013",
+  "site": "rail",
+  "intent": "اپنی پروفائل میں موبائل نمبر بدل کر 9876501234 کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9876501234"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 mobile=9876501234"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-014",
+  "site": "rail",
+  "intent": "ریفنڈ قواعد کے مطابق، روانگی سے 48 گھنٹے سے زیادہ پہلے منسوخ کیے گئے تصدیق شدہ AC کلاس ٹکٹ پر روپے میں مقررہ منسوخی چارج کتنا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "792",
+     "۷۹۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 792"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-015",
+  "site": "rail",
+  "intent": "کیا 2026-04-09 کو جے پور جنکشن سے لکھنؤ کی کوئی براہِ راست ٹرین ہے؟ کوئی نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی ٹرین نہیں",
+     "براہ راست ٹرین نہیں",
+     "کوئی نہیں",
+     "ٹرین نہیں",
+     "سروس نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=JP; to=LKO; date=2026-04-09",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-016",
+  "site": "rail",
+  "intent": "اس سائٹ کی تمام ٹرینوں میں کون سی ایک ٹرین مبدا سے منزل تک سب سے لمبا کل فاصلہ طے کرتی ہے؟ ٹرین نمبر اور کلومیٹر میں فاصلہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2182",
+     "2,182",
+     "۲۱۸۲",
+     "۲,۱۸۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615, 2182 km"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-017",
+  "site": "rail",
+  "intent": "کون سی ٹرین کل سب سے زیادہ طے شدہ اسٹاپ کرتی ہے (مبدا اور منزل سمیت)؟ ٹرین نمبر اور اسٹاپوں کی تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615 with 6 stops"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-018",
+  "site": "rail",
+  "intent": "روزانہ چلنے والی ٹرینوں میں کون سی اپنی منزل پر دن میں سب سے دیر سے (گھڑی کے وقت سے) پہنچتی ہے؟ ٹرین نمبر اور آمد کا وقت جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12417"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "22:35"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12417 at 22:35"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-019",
+  "site": "rail",
+  "intent": "اس سائٹ پر کس ٹرین کا کسی درمیانی اسٹیشن پر سب سے لمبا ٹھہراؤ ہے؟ ٹرین نمبر اور منٹوں میں ٹھہراؤ کا دورانیہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12841"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "20"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12841",
+   "stop 12841, 20 minutes at وشاکھاپٹنم"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-020",
+  "site": "rail",
+  "intent": "SL (سلیپر) والی تمام ٹرینوں میں کس کا پورے روٹ کا SL کرایہ سب سے سستا ہے؟ ٹرین نمبر اور روپے میں کرایہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12723"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1104",
+     "1,104",
+     "۱۱۰۴",
+     "۱,۱۰۴"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12723",
+   "stop 12723, 1104"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-021",
+  "site": "rail",
+  "intent": "1A (AC فرسٹ کلاس) والی تمام ٹرینوں میں کس کا پورے روٹ کا 1A کرایہ سب سے مہنگا ہے؟ ٹرین نمبر اور روپے میں کرایہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "21792",
+     "21,792",
+     "۲۱۷۹۲",
+     "۲۱,۷۹۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12301",
+   "stop 12301, 21792"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-022",
+  "site": "rail",
+  "intent": "اس سائٹ پر بالکل دو اسٹیشنوں پر بالکل 3-3 ٹرینیں رکتی ہیں۔ کون سے دو؟ دونوں اسٹیشنوں کے نام جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ممبئی سینٹرل",
+     "BCT"
+    ],
+    "none_of": [
+     "آبو روڈ",
+     "آگرہ کینٹ",
+     "اجمیر جنکشن",
+     "احمد آباد جنکشن",
+     "بھوپال جنکشن",
+     "جے پور جنکشن",
+     "سکندرآباد جنکشن",
+     "لکھنؤ",
+     "نئی دہلی",
+     "ناگپور جنکشن",
+     "نیو جلپائی گوڑی",
+     "وارانسی جنکشن",
+     "وشاکھاپٹنم",
+     "پونے جنکشن",
+     "پٹنہ جنکشن",
+     "چنئی سینٹرل",
+     "کانپور سینٹرل",
+     "گوہاٹی",
+     "ہاوڑہ جنکشن"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "رتلام جنکشن",
+     "RTM"
+    ],
+    "none_of": [
+     "آبو روڈ",
+     "آگرہ کینٹ",
+     "اجمیر جنکشن",
+     "احمد آباد جنکشن",
+     "بھوپال جنکشن",
+     "جے پور جنکشن",
+     "سکندرآباد جنکشن",
+     "لکھنؤ",
+     "نئی دہلی",
+     "ناگپور جنکشن",
+     "نیو جلپائی گوڑی",
+     "وارانسی جنکشن",
+     "وشاکھاپٹنم",
+     "پونے جنکشن",
+     "پٹنہ جنکشن",
+     "چنئی سینٹرل",
+     "کانپور سینٹرل",
+     "گوہاٹی",
+     "ہاوڑہ جنکشن"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop ممبئی سینٹرل and رتلام جنکشن"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-023",
+  "site": "rail",
+  "intent": "روزانہ چلنے والی ٹرینوں میں کون سی صبح سب سے پہلے اپنے مبدا سے چلتی ہے؟ ٹرین نمبر اور روانگی کا وقت جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:15",
+     "6:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12615 at 06:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-024",
+  "site": "rail",
+  "intent": "2026-04-07 کو روانہ ہو کر کون سی ٹرین آپ کو پٹنہ جنکشن سے ہاوڑہ جنکشن لے جا سکتی ہے؟ اس کا ٹرین نمبر جواب دیں (کوئی نہ چلے تو N/A)۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=PNBE; to=HWH; date=2026-04-07",
+   "stop 12301"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-025",
+  "site": "rail",
+  "intent": "2026-04-08 کو روانہ ہونے والی نیو جلپائی گوڑی سے گوہاٹی کی براہِ راست ٹرین تلاش کریں۔ اس کا ٹرین نمبر جواب دیں (کوئی نہ چلے تو N/A)۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NJP; to=GHY; date=2026-04-08",
+   "stop 12622"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-026",
+  "site": "rail",
+  "intent": "2026-04-06 سے 2026-04-12 تک ہر تاریخ پر غور کرتے ہوئے، کس تاریخ کو نئی دہلی سے کانپور سینٹرل تک سب سے زیادہ براہِ راست ٹرینیں چلتی ہیں؟ تاریخ (YYYY-MM-DD) اور اس دن کتنی ٹرینیں چلتی ہیں، جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2026-04-12",
+     "اتوار"
+    ],
+    "none_of": [
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-11"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "۳"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-07",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-10",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-11",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 2026-04-12, 3 trains"
+  ],
+  "max_steps": 40,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-027",
+  "site": "rail",
+  "intent": "ہفتے کے کتنے دن ٹرین 12301 جمنا ایکسپریس پٹنہ جنکشن پر رکتی ہے؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "۴"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/PNBE",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-028",
+  "site": "rail",
+  "intent": "آپ کی بکنگ 6203456789 ایک تصدیق شدہ AC کلاس ٹکٹ ہے۔ اگر آپ اسے آج (روانگی سے 48 گھنٹے سے زیادہ پہلے) منسوخ کریں تو شائع شدہ ریفنڈ قواعد کے مطابق روپے میں کتنا ریفنڈ واجب ہوگا؟ رقم جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12072",
+     "12,072",
+     "۱۲۰۷۲",
+     "۱۲,۰۷۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 12072"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-029",
+  "site": "rail",
+  "intent": "آپ کی بکنگ 6202345678 ویٹنگ لسٹ میں ہے۔ ریفنڈ قواعد کے مطابق، روانگی سے پہلے منسوخ کرنے پر آپ کو روپے میں کتنا ریفنڈ ملے گا؟ رقم جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4400",
+     "4,400",
+     "۴۴۰۰",
+     "۴,۴۰۰"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 4400"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-030",
+  "site": "rail",
+  "intent": "ٹرین 12615 دکشن ایکسپریس کے پورے روٹ (نئی دہلی سے چنئی سینٹرل) کا ایک تصدیق شدہ 3A ٹکٹ روانگی سے 24 گھنٹے پہلے منسوخ کیا جاتا ہے۔ ریفنڈ قواعد کے مطابق روپے میں کتنا ریفنڈ واجب ہے؟ رقم جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8895",
+     "8,895",
+     "۸۸۹۵",
+     "۸,۸۹۵"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "goto /rules",
+   "stop 8895"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-031",
+  "site": "rail",
+  "intent": "اگر آپ کی تصدیق شدہ بکنگ 6205678901 (ایک AC کلاس ٹکٹ) روانگی سے 6 گھنٹے پہلے منسوخ کی جائے تو قواعد روپے میں کتنے ریفنڈ کی اجازت دیں گے؟ رقم جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "362",
+     "۳۶۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 362"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-032",
+  "site": "rail",
+  "intent": "ٹرین 12559 کاشی ایکسپریس میں نئی دہلی سے وارانسی جنکشن تک دو 2A ٹکٹوں کی کل قیمت کتنی ہوگی؟ روپے میں کل جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12152",
+     "12,152",
+     "۱۲۱۵۲",
+     "۱۲,۱۵۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 12152"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-033",
+  "site": "rail",
+  "intent": "آپ کی تمام تصدیق شدہ (CNF) بکنگز کا مجموعی کرایہ روپے میں کتنا ہے؟ کل جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "35576",
+     "35,576",
+     "۳۵۵۷۶",
+     "۳۵,۵۷۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 35576"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-034",
+  "site": "rail",
+  "intent": "ٹرین 12615 دکشن ایکسپریس میں آگرہ کینٹ سے سکندرآباد جنکشن کے سفر کے لیے 3A، SL سے کتنا مہنگا ہے؟ روپے میں فرق جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4976",
+     "4,976",
+     "۴۹۷۶",
+     "۴,۹۷۶"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615?from=AGC&to=SC&date=2026-04-06",
+   "stop 4976"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-035",
+  "site": "rail",
+  "intent": "نئی دہلی سے وارانسی جنکشن تک براہِ راست ٹرین 12559 میں SL سے سفر کا موازنہ دو SL مراحل میں بٹے سفر سے کریں: ٹرین 12301 میں نئی دہلی سے کانپور سینٹرل، پھر ٹرین 12559 میں کانپور سینٹرل سے وارانسی جنکشن۔ دو مرحلہ آپشن کے مقابلے میں براہِ راست ٹکٹ کتنے روپے بچاتا ہے؟",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "184",
+     "۱۸۴"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559?from=NDLS&to=BSB&date=2026-04-07",
+   "goto /train/12301?from=NDLS&to=CNB&date=2026-04-06",
+   "goto /train/12559?from=CNB&to=BSB&date=2026-04-07",
+   "stop 184"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-036",
+  "site": "rail",
+  "intent": "ٹرین 12904 ممبئی سمپرک ایکسپریس میں تمام کلاسیں ملا کر کل کتنی نشستیں دستیاب ہیں؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "93",
+     "۹۳"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12904",
+   "stop 93"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-037",
+  "site": "rail",
+  "intent": "آپ کی دو بکنگز مسافر انیتا دیسائی اور میرا آئر کے لیے ہیں۔ کس کے ٹکٹ کا کرایہ زیادہ ہے، اور کتنے روپے زیادہ؟ مسافر کا نام اور فرق جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "انیتا دیسائی",
+     "انیتا"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1072",
+     "1,072",
+     "۱۰۷۲",
+     "۱,۰۷۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop انیتا دیسائی by 1072"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-038",
+  "site": "rail",
+  "intent": "ٹرین 12302 ہاوڑہ میل کے پورے روٹ پر ۳۲۹۶ روپے سے زیادہ قیمت والی سب سے سستی کلاس کون سی ہے؟ کلاس کوڈ اور اس کا کرایہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3A"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "7888",
+     "7,888",
+     "۷۸۸۸",
+     "۷,۸۸۸"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12302",
+   "stop 3A at 7888"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-039",
+  "site": "rail",
+  "intent": "ٹرین 12659 اراولی ایکسپریس میں جے پور جنکشن سے احمد آباد جنکشن تک ۱۶۴۸ روپے سے زیادہ نہ ہونے والی سب سے مہنگی کلاس کون سی ہے؟ کلاس کوڈ اور اس کا کرایہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SL"
+    ],
+    "none_of": [
+     "2S",
+     "3A",
+     "CC"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1152",
+     "1,152",
+     "۱۱۵۲",
+     "۱,۱۵۲"
+    ],
+    "none_of": [
+     "2324",
+     "3064",
+     "624"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop SL at 1152"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-040",
+  "site": "rail",
+  "intent": "نئی دہلی سے کانپور سینٹرل حصے پر چلنے والی تمام ٹرینوں میں کون سی اس حصے کا سب سے سستا SL (سلیپر) کرایہ دیتی ہے؟ ٹرین نمبر اور روپے میں کرایہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12559"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "904",
+     "۹۰۴"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 12559 at 904"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-041",
+  "site": "rail",
+  "intent": "کون سا مہنگا ہے: ٹرین 12622 برہم پتر لنک ایکسپریس کے پورے روٹ کا 1A ٹکٹ، یا ٹرین 12615 دکشن ایکسپریس میں نئی دہلی سے بھوپال جنکشن تک 2A ٹکٹ؟ جیتنے والا ٹرین نمبر اور وہ کرایہ روپے میں جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "13012",
+     "13,012",
+     "۱۳۰۱۲",
+     "۱۳,۰۱۲"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "goto /train/12615?from=NDLS&to=BPL&date=2026-04-06",
+   "stop 12622 at 13012"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-042",
+  "site": "rail",
+  "intent": "رتلام جنکشن پر رکنے والی تمام ٹرینوں میں کون سی دن میں سب سے پہلے (گھڑی کے وقت سے) وہاں سے چلتی ہے؟ ٹرین نمبر اور وہاں سے اس کی روانگی کا وقت جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12903"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "03:15",
+     "3:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/RTM",
+   "stop 12903 at 03:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-043",
+  "site": "rail",
+  "intent": "آپ کی ایک بکنگ ویٹنگ لسٹ (WL) میں ہے۔ وہ بکنگ منسوخ کریں — اور صرف وہی۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6202345678"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6202345678",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-044",
+  "site": "rail",
+  "intent": "2026-04-10 یا اس کے بعد کی تاریخ کے سفروں کی اپنی تمام بکنگز جو پہلے سے منسوخ نہیں، منسوخ کریں۔ ہر پہلے کا سفر جوں کا توں رہنے دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6206789012"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6203456789",
+   "fill 0",
+   "goto /cancel/6208901234",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-045",
+  "site": "rail",
+  "intent": "اپنی پروفائل میں ای میل پتہ priya.s@newmail.in اور موبائل نمبر 9812399999 کریں (دونوں، ایک ہی اپ ڈیٹ میں)۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "email",
+    "value": "priya.s@newmail.in"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9812399999"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 email=priya.s@newmail.in; mobile=9812399999"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-046",
+  "site": "rail",
+  "intent": "PNR 6204567890 دیکھ کر مسافر کا نام معلوم کریں، پھر کسٹمر سپورٹ کو اپنے نام (پریا شرما)، اپنے ای میل (priya.sharma@example.in)، موضوع 'PNR سوال' اور بالکل اس پیغام کے ساتھ ایک پیغام بھیجیں: 'ریفنڈ کی حیثیت: <مسافر کا نام>' — <مسافر کا نام> کی جگہ آپ کو ملا نام رکھتے ہوئے۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "PNR سوال",
+     "message": "ریفنڈ کی حیثیت: میرا آئر",
+     "name": "پریا شرما",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6204567890",
+   "goto /contact",
+   "fill 0 name=پریا شرما; email=priya.sharma@example.in; subject=PNR سوال; message=ریفنڈ کی حیثیت: میرا آئر"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-047",
+  "site": "rail",
+  "intent": "PNR 6201234567 دیکھیں، پھر 2026-04-06 کو ٹرین 12049 تاج سمپرک میں نئی دہلی سے آگرہ کینٹ تک اس بکنگ کے اسی مسافر (وہی نام اور عمر) کے لیے، مرد، برتھ کی کوئی ترجیح نہیں — ایک CC ٹکٹ بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "CC",
+     "passenger": "روہن شرما",
+     "age": 34,
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=CC",
+   "fill 0 name=روہن شرما; age=34; gender=M; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-048",
+  "site": "rail",
+  "intent": "2026-04-06 کو ٹرین 12138 نرمدا میل میں ممبئی سینٹرل سے بھوپال جنکشن تک مسافر نشا راؤ، عمر 30، عورت، نچلی (Lower) برتھ کا ایک SL ٹکٹ بک کریں — اور پھر اس نئی بکنگ کو منسوخ کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "نشا راؤ",
+     "status": "CAN",
+     "train_no": "12138",
+     "class_code": "SL",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12138?from=BCT&to=BPL&date=2026-04-06&class=SL",
+   "fill 0 name=نشا راؤ; age=30; gender=F; berth=Lower",
+   "fill 0",
+   "goto /cancel/6210000009",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-049",
+  "site": "rail",
+  "intent": "2026-04-06 کو نئی دہلی سے کانپور سینٹرل تک سب سے پہلے روانہ ہونے والی ٹرین تلاش کریں اور اس میں مسافر انایا کپور، عمر 27، عورت، برتھ کی کوئی ترجیح نہیں — ایک CC ٹکٹ بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12417",
+     "class_code": "CC",
+     "passenger": "انایا کپور",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /book/12417?from=NDLS&to=CNB&date=2026-04-06&class=CC",
+   "fill 0 name=انایا کپور; age=27; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-050",
+  "site": "rail",
+  "intent": "2026-04-06 کو نئی دہلی سے آگرہ کینٹ تک جتنا سستا ہو سکے سفر کریں: اس دن چلنے والی ہر ٹرین کی ہر کلاس کا موازنہ کریں، اور مسافر رتو سنگھ، عمر 24، عورت، برتھ کی کوئی ترجیح نہیں — کے لیے واحد سب سے سستا آپشن بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "2S",
+     "passenger": "رتو سنگھ",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=AGC; date=2026-04-06",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=2S",
+   "fill 0 name=رتو سنگھ; age=24; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-051",
+  "site": "rail",
+  "intent": "2026-04-08 کو نئی دہلی سے کانپور سینٹرل تک سب سے دیر سے روانہ ہونے والی ٹرین میں مسافر موہن داس، عمر 52، مرد، نچلی (Lower) برتھ کا ایک 3A ٹکٹ بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "3A",
+     "passenger": "موہن داس",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /book/12301?from=NDLS&to=CNB&date=2026-04-08&class=3A",
+   "fill 0 name=موہن داس; age=52; gender=M; berth=Lower",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-052",
+  "site": "rail",
+  "intent": "2026-04-09 کو نئی دہلی سے ہاوڑہ جنکشن تک مسافر سارہ خان، عمر 33، عورت، اوپری (Upper) برتھ کا ایک 2A ٹکٹ بک کریں۔ اس دن کوئی ٹرین نہ چلے تو وہی سفر 2026-04-10 کو بک کریں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "سارہ خان",
+     "date": "2026-04-10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-10",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-10&class=2A",
+   "fill 0 name=سارہ خان; age=33; gender=F; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-053",
+  "site": "rail",
+  "intent": "ٹرین 12615 دکشن ایکسپریس کے پورے روٹ کا 1A (AC فرسٹ کلاس) کرایہ کتنا ہے؟ اس ٹرین میں وہ کلاس نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "دستیاب نہیں",
+     "1a نہیں",
+     "پیش نہیں",
+     "اس ٹرین میں نہیں",
+     "ac فرسٹ نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-054",
+  "site": "rail",
+  "intent": "2026-04-08 کو ٹرین 12904 ممبئی سمپرک ایکسپریس میں ممبئی سینٹرل سے نئی دہلی تک مسافر روی کمار، عمر 45، مرد کے لیے ایک 2A ٹکٹ بک کریں۔ اگر ٹرین اس دن نہیں چلتی تو کچھ بھی بک نہ کریں اور N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "نہیں چلتی",
+     "اس دن نہیں چلتی",
+     "کوئی ٹرین نہیں",
+     "نہیں چل رہی",
+     "بک نہیں کی"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "bookings",
+    "match": {
+     "train_no": "12904",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /train/12904?from=BCT&to=NDLS&date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-055",
+  "site": "rail",
+  "intent": "2026-04-07 کو لکھنؤ سے آگرہ کینٹ کی براہِ راست ٹرین تلاش کریں۔ اس روٹ پر کوئی براہِ راست ٹرین نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی ٹرین نہیں",
+     "براہ راست ٹرین نہیں",
+     "سروس نہیں",
+     "ٹرین نہیں",
+     "اس روٹ پر نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=LKO; to=AGC; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-056",
+  "site": "rail",
+  "intent": "2026-04-06 کو روانہ ہونے والی رتلام جنکشن سے نئی دہلی کی براہِ راست ٹرین تلاش کریں۔ اس دن کوئی ٹرین نہ چلے تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی ٹرین نہیں",
+     "نہیں چلتی",
+     "اس دن نہیں چلتی",
+     "ٹرین نہیں",
+     "روانہ نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=RTM; to=NDLS; date=2026-04-06",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-057",
+  "site": "rail",
+  "intent": "2026-04-08 کو گوہاٹی سے ہاوڑہ جنکشن کون سی ٹرین چلتی ہے؟ اس روٹ پر کوئی نہ ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "کوئی ٹرین نہیں",
+     "کوئی نہیں چلتی",
+     "سروس نہیں",
+     "ٹرین نہیں",
+     "اس روٹ پر نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=GHY; to=HWH; date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-058",
+  "site": "rail",
+  "intent": "بکنگ فارم میں تتکال کوٹے کا آپشن ہے۔ ریل سیتو سائٹ پر کہیں بھی روپے میں کتنا اضافی تتکال سرچارج بتایا گیا ہے؟ کوئی سرچارج رقم نہ بتائی گئی ہو تو N/A جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ذکر نہیں",
+     "کوئی سرچارج نہیں",
+     "بتایا نہیں",
+     "کہیں نہیں",
+     "تتکال سرچارج نہیں"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /rules",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-059",
+  "site": "rail",
+  "intent": "کانپور سینٹرل پر کتنی مختلف ٹرینیں رکتی ہیں (کسی بھی سمت میں)؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/CNB",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-060",
+  "site": "rail",
+  "intent": "اس سائٹ پر کتنی ٹرینیں روزانہ (ساتوں دن) چلتی ہیں؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-061",
+  "site": "rail",
+  "intent": "PNR 6207890123 کی PNR حیثیت دیکھیں اور حیثیت کا کوڈ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CAN"
+    ],
+    "none_of": [
+     "CNF",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6207890123",
+   "stop CAN"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-062",
+  "site": "rail",
+  "intent": "ٹرین 12615 دکشن ایکسپریس ناگپور جنکشن پر کتنے منٹ رکتی ہے؟ منٹوں کی تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 10"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-063",
+  "site": "rail",
+  "intent": "کون سی ٹرینیں اپنے مبدا اسٹیشن سے 20:00 یا اس کے بعد چلتی ہیں؟ دونوں ٹرین نمبر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12138"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12302"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12138 and 12302"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-064",
+  "site": "rail",
+  "intent": "اس سائٹ پر سب سے چھوٹے کل روٹ والی دو ٹرینیں تلاش کریں اور ان دو روٹوں کی مجموعی لمبائی کلومیٹر میں جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "707",
+     "۷۰۷"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 707"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-065",
+  "site": "rail",
+  "intent": "آپ کی کتنی بکنگز (کسی بھی حیثیت کی) 2026-04-09 سے پہلے کے سفروں کے لیے ہیں؟ تعداد جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-066",
+  "site": "rail",
+  "intent": "آپ کی کس بکنگ کا کرایہ سب سے زیادہ ہے؟ اس کا PNR اور روپے میں کرایہ جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6203456789"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12864",
+     "12,864",
+     "۱۲۸۶۴",
+     "۱۲,۸۶۴"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 6203456789 at 12864"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-067",
+  "site": "rail",
+  "intent": "ٹرین 12559 کاشی ایکسپریس وارانسی جنکشن پر کس وقت پہنچتی ہے، اور اپنے سفر کے کس دن (1 یا 2)؟ وقت اور دن کا نمبر جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:30",
+     "6:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "دو"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 06:30 on day 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-068",
+  "site": "rail",
+  "intent": "ٹرین 12659 اراولی ایکسپریس میں اجمیر جنکشن سے آبو روڈ کتنے کلومیٹر ہے؟ کلومیٹر میں فاصلہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "304"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop 304"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-069",
+  "site": "rail",
+  "intent": "ٹرین 12615 دکشن ایکسپریس میں ٹرین بھوپال جنکشن اور ناگپور جنکشن کے درمیان کتنے کلومیٹر طے کرتی ہے؟ کلومیٹر میں فاصلہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "389"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 389"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-070",
+  "site": "rail",
+  "intent": "ٹرین 12723 دکن سمپرک کو سکندرآباد جنکشن سے پونے جنکشن تک کتنا وقت لگتا ہے؟ جیسا دکھایا گیا ہے ویسا دورانیہ جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10h 15m",
+     "10 hours 15 minutes",
+     "10 hr 15 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-06",
+   "stop 10h 15m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-071",
+  "site": "rail",
+  "intent": "ٹرین 12301 جمنا ایکسپریس میں 3A کے لیے دکھایا گیا ویٹنگ لسٹ نمبر کیا ہے؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12301",
+   "stop WL 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-072",
+  "site": "rail",
+  "intent": "کسٹمر سپورٹ کو اپنے نام (پریا شرما) اور ای میل (priya.sharma@example.in)، بالکل 'روٹ 12659 پر کرائے کی بے ضابطگی' موضوع اور بالکل 'جے پور جنکشن سے اجمیر جنکشن کا CC کرایہ شائع شدہ نرخ سے زیادہ لگتا ہے۔' پیغام کے ساتھ ایک پیغام بھیجیں",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "روٹ 12659 پر کرائے کی بے ضابطگی",
+     "message": "جے پور جنکشن سے اجمیر جنکشن کا CC کرایہ شائع شدہ نرخ سے زیادہ لگتا ہے۔",
+     "name": "پریا شرما",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=پریا شرما; email=priya.sharma@example.in; subject=روٹ 12659 پر کرائے کی بے ضابطگی; message=جے پور جنکشن سے اجمیر جنکشن کا CC کرایہ شائع شدہ نرخ سے زیادہ لگتا ہے۔"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-073",
+  "site": "rail",
+  "intent": "آپ کی بکنگ ہسٹری میں کتنی بکنگز (کسی بھی حیثیت کی) درج ہیں؟ تعداد جواب دیں۔ ضرورت ہو تو priya_sharma (پاس ورڈ: travel123) کے طور پر سائن ان کریں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-074",
+  "site": "rail",
+  "intent": "2026-04-06 کو ٹرین 12301 جمنا ایکسپریس میں نئی دہلی سے ہاوڑہ جنکشن تک کتنی 2A نشستیں دستیاب ہیں؟ تعداد جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-06",
+   "stop 26"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-075",
+  "site": "rail",
+  "intent": "ممبئی سینٹرل سے بھوپال جنکشن چلنے والی ٹرین تلاش کریں اور اس سفر کا اس کا SL (سلیپر) کرایہ روپے میں جواب دیں۔",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1712",
+     "1,712",
+     "۱۷۱۲",
+     "۱,۷۱۲"
+    ],
+    "none_of": [
+     "4544",
+     "6472"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=BCT; to=BPL; date=2026-04-06",
+   "stop 1712"
+  ],
+  "max_steps": 30
+ }
+]

@@ -1,0 +1,650 @@
+special_baggage_items:
+- id: 1
+  category: sport
+  item_en: Bicycle
+  item_am: ብስክሌት
+  max_kg: 32
+  max_dims_cm: 140x30x80
+  fee_usd: 60.0
+  advance_notice_required: true
+  notes_en: Handlebars turned, pedals removed and tyres deflated, in a bicycle bag or box.
+  notes_am: እጀታው ተዞሮ፣ ፔዳሎቹ ተነስተው፣ ጎማዎቹ ነፋሱ ወጥቶ በብስክሌት ከረጢት ወይም ሳጥን ውስጥ።
+  item_bn: সাইকেল
+  item_hi: साइकिल
+  item_ur: سائیکل
+  notes_bn: হ্যান্ডেলবার ঘুরিয়ে, প্যাডেল খুলে ও টায়ারের হাওয়া ছেড়ে, সাইকেলের ব্যাগ বা
+    বাক্সে।
+  notes_hi: हैंडलबार घुमाकर, पैडल हटाकर और टायरों की हवा निकालकर, साइकिल बैग या बॉक्स में।
+  notes_ur: ہینڈل بار گھمائے ہوئے، پیڈل اتارے ہوئے اور ٹائروں کی ہوا نکالی ہوئی، سائیکل بیگ
+    یا ڈبے میں۔
+- id: 2
+  category: sport
+  item_en: Tandem bicycle
+  item_am: ባለሁለት መቀመጫ ብስክሌት
+  max_kg: 32
+  max_dims_cm: 220x30x80
+  fee_usd: 120.0
+  advance_notice_required: true
+  notes_en: Carried only on wide-body aircraft. Confirm the aircraft type before booking.
+  notes_am: የሚወሰደው በሰፊ አካል አውሮፕላኖች ብቻ ነው። ከመያዝዎ በፊት የአውሮፕላኑን ዓይነት ያረጋግጡ።
+  item_bn: ট্যান্ডেম সাইকেল
+  item_hi: टैंडम साइकिल
+  item_ur: ٹینڈم سائیکل
+  notes_bn: শুধু ওয়াইড-বডি উড়োজাহাজে বহন করা হয়। বুকিংয়ের আগে উড়োজাহাজের ধরন নিশ্চিত
+    করুন।
+  notes_hi: केवल वाइड-बॉडी विमान पर ले जाई जाती है। बुकिंग से पहले विमान के प्रकार की पुष्टि
+    करें।
+  notes_ur: صرف وائیڈ باڈی طیاروں پر لے جائی جاتی ہے۔ بکنگ سے پہلے طیارے کی قسم کی تصدیق کریں۔
+- id: 3
+  category: sport
+  item_en: Golf bag
+  item_am: የጎልፍ ከረጢት
+  max_kg: 23
+  max_dims_cm: 125x35x35
+  fee_usd: 45.0
+  advance_notice_required: false
+  notes_en: One bag holds clubs, balls and a pair of shoes. Counts as one checked piece.
+  notes_am: አንድ ከረጢት ዱላዎችን፣ ኳሶችንና አንድ ጥንድ ጫማ ይይዛል። እንደ አንድ የተመዘገበ ዕቃ ይቆጠራል።
+  item_bn: গলফ ব্যাগ
+  item_hi: गोल्फ़ बैग
+  item_ur: گالف بیگ
+  notes_bn: একটি ব্যাগে ক্লাব, বল ও এক জোড়া জুতা থাকে। একটি চেকড পিস হিসেবে গণ্য হয়।
+  notes_hi: एक बैग में क्लब, गेंदें और एक जोड़ी जूते आते हैं। एक चेक्ड पीस के रूप में गिना
+    जाता है।
+  notes_ur: ایک بیگ میں کلب، گیندیں اور جوتوں کا ایک جوڑا آتا ہے۔ ایک چیکڈ پیس شمار ہوتا ہے۔
+- id: 4
+  category: sport
+  item_en: Ski and boot bag
+  item_am: የበረዶ መንሸራተቻና የጫማ ከረጢት
+  max_kg: 23
+  max_dims_cm: 200x30x30
+  fee_usd: 55.0
+  advance_notice_required: false
+  notes_en: Skis, poles and one pair of boots together count as one piece.
+  notes_am: መንሸራተቻዎች፣ ዘንጎችና አንድ ጥንድ ጫማ በአንድነት እንደ አንድ ዕቃ ይቆጠራሉ።
+  item_bn: স্কি ও বুট ব্যাগ
+  item_hi: स्की और बूट बैग
+  item_ur: اسکی اور بوٹ بیگ
+  notes_bn: স্কি, পোল ও এক জোড়া বুট একসঙ্গে একটি পিস হিসেবে গণ্য হয়।
+  notes_hi: स्की, पोल और एक जोड़ी बूट मिलकर एक पीस गिने जाते हैं।
+  notes_ur: اسکی، پول اور بوٹوں کا ایک جوڑا مل کر ایک پیس شمار ہوتے ہیں۔
+- id: 5
+  category: sport
+  item_en: Snowboard
+  item_am: ስኖውቦርድ
+  max_kg: 23
+  max_dims_cm: 180x40x20
+  fee_usd: 55.0
+  advance_notice_required: false
+  notes_en: In a padded board bag. Loose bindings must be removed.
+  notes_am: በተለሰለሰ የቦርድ ከረጢት ውስጥ። የላሉ ማሰሪያዎች መነሳት አለባቸው።
+  item_bn: স্নোবোর্ড
+  item_hi: स्नोबोर्ड
+  item_ur: اسنو بورڈ
+  notes_bn: প্যাডেড বোর্ড ব্যাগে। আলগা বাইন্ডিং খুলে ফেলতে হবে।
+  notes_hi: पैडेड बोर्ड बैग में। ढीली बाइंडिंग हटानी होगी।
+  notes_ur: پیڈڈ بورڈ بیگ میں۔ ڈھیلی بائنڈنگز اتارنی ہوں گی۔
+- id: 6
+  category: sport
+  item_en: Surfboard
+  item_am: የሰርፍ ቦርድ
+  max_kg: 23
+  max_dims_cm: 300x60x20
+  fee_usd: 90.0
+  advance_notice_required: true
+  notes_en: Boards over 300 cm are refused. Fins removed, in a padded board bag.
+  notes_am: ከ300 ሴሜ በላይ የሆኑ ቦርዶች አይቀበሉም። ክንፎቹ ተነስተው በተለሰለሰ የቦርድ ከረጢት ውስጥ።
+  item_bn: সার্ফবোর্ড
+  item_hi: सर्फ़बोर्ड
+  item_ur: سرف بورڈ
+  notes_bn: 300 cm-এর বেশি লম্বা বোর্ড নেওয়া হয় না। ফিন খুলে, প্যাডেড বোর্ড ব্যাগে।
+  notes_hi: 300 cm से लंबे बोर्ड अस्वीकार किए जाते हैं। फ़िन हटाकर, पैडेड बोर्ड बैग में।
+  notes_ur: 300 cm سے لمبے بورڈ مسترد کیے جاتے ہیں۔ فن اتارے ہوئے، پیڈڈ بورڈ بیگ میں۔
+- id: 7
+  category: sport
+  item_en: Windsurf equipment
+  item_am: የንፋስ ሰርፍ መሣሪያ
+  max_kg: 32
+  max_dims_cm: 300x60x30
+  fee_usd: 110.0
+  advance_notice_required: true
+  notes_en: Mast, board and sail together. Booked as one special item.
+  notes_am: ምሰሶው፣ ቦርዱና ሸራው በአንድነት። እንደ አንድ ልዩ ዕቃ ይያዛል።
+  item_bn: উইন্ডসার্ফ সরঞ্জাম
+  item_hi: विंडसर्फ़ उपकरण
+  item_ur: ونڈ سرف سامان
+  notes_bn: মাস্তুল, বোর্ড ও পাল একসঙ্গে। একটি বিশেষ আইটেম হিসেবে বুক করা হয়।
+  notes_hi: मस्तूल, बोर्ड और पाल एक साथ। एक विशेष वस्तु के रूप में बुक किया जाता है।
+  notes_ur: مستول، بورڈ اور بادبان ایک ساتھ۔ ایک خصوصی آئٹم کے طور پر بک کیا جاتا ہے۔
+- id: 8
+  category: sport
+  item_en: Kitesurf equipment
+  item_am: የካይት ሰርፍ መሣሪያ
+  max_kg: 23
+  max_dims_cm: 180x50x30
+  fee_usd: 75.0
+  advance_notice_required: false
+  notes_en: Lines coiled and the bar secured. Pressurised pumps must be empty.
+  notes_am: ገመዶቹ ተጠቅልለው ዘንጉ ታስሮ። ግፊት ያላቸው ፓምፖች ባዶ መሆን አለባቸው።
+  item_bn: কাইটসার্ফ সরঞ্জাম
+  item_hi: काइटसर्फ़ उपकरण
+  item_ur: کائٹ سرف سامان
+  notes_bn: লাইন গুটিয়ে ও বার আটকে রাখতে হবে। চাপযুক্ত পাম্প খালি থাকতে হবে।
+  notes_hi: लाइनें लपेटी हुई और बार सुरक्षित। दबाव वाले पंप खाली होने चाहिए।
+  notes_ur: لائنیں لپٹی ہوئی اور بار محفوظ۔ دباؤ والے پمپ خالی ہونے چاہئیں۔
+- id: 9
+  category: sport
+  item_en: Kayak or canoe
+  item_am: ካያክ ወይም ታንኳ
+  max_kg: 32
+  max_dims_cm: 300x80x50
+  fee_usd: 150.0
+  advance_notice_required: true
+  notes_en: Carried only on wide-body aircraft and only up to 300 cm.
+  notes_am: የሚወሰደው በሰፊ አካል አውሮፕላኖች ብቻ እንዲሁም እስከ 300 ሴሜ ብቻ ነው።
+  item_bn: কায়াক বা ক্যানো
+  item_hi: कयाक या कैनो
+  item_ur: کیاک یا کینو
+  notes_bn: শুধু ওয়াইড-বডি উড়োজাহাজে এবং শুধু 300 cm পর্যন্ত বহন করা হয়।
+  notes_hi: केवल वाइड-बॉडी विमान पर और केवल 300 cm तक ले जाई जाती है।
+  notes_ur: صرف وائیڈ باڈی طیاروں پر اور صرف 300 cm تک لے جائی جاتی ہے۔
+- id: 10
+  category: sport
+  item_en: Diving equipment
+  item_am: የመጥለቅ መሣሪያ
+  max_kg: 23
+  max_dims_cm: 90x60x40
+  fee_usd: 50.0
+  advance_notice_required: true
+  notes_en: Cylinders must be empty with the valve removed or open for inspection.
+  notes_am: ሲሊንደሮች ባዶ መሆንና ቫልቫቸው ተነስቶ ወይም ለምርመራ ክፍት መሆን አለበት።
+  item_bn: ডাইভিং সরঞ্জাম
+  item_hi: डाइविंग उपकरण
+  item_ur: ڈائیونگ سامان
+  notes_bn: সিলিন্ডার খালি থাকতে হবে, ভাল্ভ খোলা বা পরিদর্শনের জন্য উন্মুক্ত অবস্থায়।
+  notes_hi: सिलेंडर खाली होने चाहिए, वाल्व हटा हुआ या निरीक्षण के लिए खुला।
+  notes_ur: سلنڈر خالی ہونے چاہئیں، والو اتارا ہوا یا معائنے کے لیے کھلا۔
+- id: 11
+  category: sport
+  item_en: Fishing gear
+  item_am: የዓሣ ማጥመጃ መሣሪያ
+  max_kg: 23
+  max_dims_cm: 200x30x30
+  fee_usd: 40.0
+  advance_notice_required: false
+  notes_en: Rods in a hard tube. Hooks must be covered and stowed in the tackle box.
+  notes_am: ዘንጎቹ በጠንካራ ቱቦ ውስጥ። መንጠቆዎቹ ተሸፍነው በመሣሪያ ሳጥን ውስጥ መቀመጥ አለባቸው።
+  item_bn: মাছ ধরার সরঞ্জাম
+  item_hi: मछली पकड़ने का सामान
+  item_ur: مچھلی پکڑنے کا سامان
+  notes_bn: ছিপ শক্ত টিউবে। হুক ঢেকে ট্যাকল বক্সে রাখতে হবে।
+  notes_hi: छड़ें कठोर ट्यूब में। हुक ढके हुए और टैकल बॉक्स में रखे होने चाहिए।
+  notes_ur: چھڑیاں سخت ٹیوب میں۔ کانٹے ڈھکے ہوئے اور ٹیکل باکس میں رکھے ہوں۔
+- id: 12
+  category: sport
+  item_en: Archery equipment
+  item_am: የቀስት መሣሪያ
+  max_kg: 23
+  max_dims_cm: 140x40x30
+  fee_usd: 55.0
+  advance_notice_required: false
+  notes_en: Bow and arrows in a hard case. Not accepted as cabin baggage.
+  notes_am: ቀስቱና ፍላጻዎቹ በጠንካራ ሳጥን ውስጥ። እንደ የእጅ ሻንጣ አይቀበልም።
+  item_bn: তীরন্দাজি সরঞ্জাম
+  item_hi: तीरंदाज़ी उपकरण
+  item_ur: تیر اندازی کا سامان
+  notes_bn: ধনুক ও তীর শক্ত কেসে। কেবিন ব্যাগেজ হিসেবে গ্রহণ করা হয় না।
+  notes_hi: धनुष और तीर कठोर केस में। केबिन बैगेज के रूप में स्वीकार नहीं।
+  notes_ur: کمان اور تیر سخت کیس میں۔ کیبن سامان کے طور پر قبول نہیں۔
+- id: 13
+  category: sport
+  item_en: Bowling ball
+  item_am: የቦውሊንግ ኳስ
+  max_kg: 16
+  max_dims_cm: 40x40x40
+  fee_usd: 30.0
+  advance_notice_required: false
+  notes_en: One ball per passenger, in a fitted bag.
+  notes_am: በአንድ ተሳፋሪ አንድ ኳስ፣ በሚመጥን ከረጢት ውስጥ።
+  item_bn: বোলিং বল
+  item_hi: बॉलिंग बॉल
+  item_ur: بولنگ بال
+  notes_bn: যাত্রীপ্রতি একটি বল, মাপমতো ব্যাগে।
+  notes_hi: प्रति यात्री एक गेंद, फ़िट किए गए बैग में।
+  notes_ur: فی مسافر ایک گیند، فٹ کیے گئے بیگ میں۔
+- id: 14
+  category: sport
+  item_en: Pole vault poles
+  item_am: የፖል ቮልት ዘንጎች
+  max_kg: 23
+  max_dims_cm: 500x20x20
+  fee_usd: 200.0
+  advance_notice_required: true
+  notes_en: Length over 300 cm requires cargo carriage on a separate air waybill.
+  notes_am: ከ300 ሴሜ በላይ ርዝመት በተለየ የአየር ማጓጓዣ ሰነድ የጭነት ማጓጓዝ ይፈልጋል።
+  item_bn: পোল ভল্টের পোল
+  item_hi: पोल वॉल्ट पोल
+  item_ur: پول والٹ پول
+  notes_bn: 300 cm-এর বেশি দৈর্ঘ্যের জন্য আলাদা এয়ার ওয়েবিলে কার্গো বহন প্রয়োজন।
+  notes_hi: 300 cm से अधिक लंबाई के लिए अलग एयर वेबिल पर कार्गो द्वारा ढुलाई आवश्यक।
+  notes_ur: 300 cm سے زیادہ لمبائی کے لیے علیحدہ ایئر وے بل پر کارگو ترسیل درکار۔
+- id: 15
+  category: sport
+  item_en: Hang-glider
+  item_am: ተንጠልጣይ ተንሳፋፊ
+  max_kg: 32
+  max_dims_cm: 400x40x40
+  fee_usd: 180.0
+  advance_notice_required: true
+  notes_en: Wide-body aircraft only, and subject to space on the day.
+  notes_am: በሰፊ አካል አውሮፕላኖች ብቻ፣ እንዲሁም በዕለቱ ባለው ቦታ ልክ።
+  item_bn: হ্যাং-গ্লাইডার
+  item_hi: हैंग-ग्लाइडर
+  item_ur: ہینگ گلائیڈر
+  notes_bn: শুধু ওয়াইড-বডি উড়োজাহাজে, এবং সেদিনের জায়গার উপর নির্ভরশীল।
+  notes_hi: केवल वाइड-बॉडी विमान, और उस दिन की जगह पर निर्भर।
+  notes_ur: صرف وائیڈ باڈی طیارے، اور اس دن جگہ کی دستیابی سے مشروط۔
+- id: 16
+  category: sport
+  item_en: Parachute
+  item_am: ፓራሹት
+  max_kg: 23
+  max_dims_cm: 70x50x40
+  fee_usd: 45.0
+  advance_notice_required: true
+  notes_en: Packed rig only. The reserve must be within its repack date.
+  notes_am: የታሸገ መሣሪያ ብቻ። ተጠባባቂው በእንደገና ማሸጊያ ቀኑ ውስጥ መሆን አለበት።
+  item_bn: প্যারাশুট
+  item_hi: पैराशूट
+  item_ur: پیراشوٹ
+  notes_bn: শুধু প্যাক করা রিগ। রিজার্ভটি তার রিপ্যাক তারিখের মধ্যে থাকতে হবে।
+  notes_hi: केवल पैक किया हुआ रिग। रिज़र्व अपनी रीपैक तिथि के भीतर होना चाहिए।
+  notes_ur: صرف پیک شدہ رِگ۔ ریزرو اپنی ری پیک تاریخ کے اندر ہونا چاہیے۔
+- id: 17
+  category: music
+  item_en: Violin or viola
+  item_am: ቫዮሊን ወይም ቪዮላ
+  max_kg: 8
+  max_dims_cm: 55x38x20
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Fits the cabin bag size and travels as your cabin bag at no charge.
+  notes_am: የእጅ ሻንጣ መጠንን ስለሚያሟላ እንደ የእጅ ሻንጣዎ ያለክፍያ ይጓዛል።
+  item_bn: বেহালা বা ভায়োলা
+  item_hi: वायलिन या वियोला
+  item_ur: وائلن یا وائلا
+  notes_bn: কেবিন ব্যাগের মাপে আঁটে এবং বিনা খরচে আপনার কেবিন ব্যাগ হিসেবে যায়।
+  notes_hi: केबिन बैग के आकार में आता है और बिना शुल्क आपके केबिन बैग के रूप में जाता है।
+  notes_ur: کیبن بیگ کے سائز میں آتا ہے اور بلا معاوضہ آپ کے کیبن بیگ کے طور پر سفر کرتا ہے۔
+- id: 18
+  category: music
+  item_en: Guitar
+  item_am: ጊታር
+  max_kg: 23
+  max_dims_cm: 120x45x20
+  fee_usd: 50.0
+  advance_notice_required: false
+  notes_en: Too large for the cabin. Hard case required in the hold.
+  notes_am: ለካቢን በጣም ትልቅ ነው። በጭነት ክፍል ጠንካራ ሳጥን ያስፈልጋል።
+  item_bn: গিটার
+  item_hi: गिटार
+  item_ur: گٹار
+  notes_bn: কেবিনের জন্য খুব বড়। হোল্ডে শক্ত কেস প্রয়োজন।
+  notes_hi: केबिन के लिए बहुत बड़ा। होल्ड में कठोर केस आवश्यक।
+  notes_ur: کیبن کے لیے بہت بڑا۔ ہولڈ میں سخت کیس درکار۔
+- id: 19
+  category: music
+  item_en: Cello
+  item_am: ቼሎ
+  max_kg: 32
+  max_dims_cm: 150x50x40
+  fee_usd: 0.0
+  advance_notice_required: true
+  notes_en: Travels on a seat bought for it at the adult fare. Booked 72 hours ahead.
+  notes_am: ለእሱ በተገዛ መቀመጫ በአዋቂ ታሪፍ ይጓዛል። ከ72 ሰዓት በፊት ይያዛል።
+  item_bn: চেলো
+  item_hi: चेलो
+  item_ur: چیلو
+  notes_bn: প্রাপ্তবয়স্ক ভাড়ায় এর জন্য কেনা আসনে যায়। 72 ঘণ্টা আগে বুক করতে হয়।
+  notes_hi: वयस्क किराए पर इसके लिए खरीदी गई सीट पर जाता है। 72 घंटे पहले बुक किया जाता है।
+  notes_ur: بالغ کرائے پر اس کے لیے خریدی گئی سیٹ پر سفر کرتا ہے۔ 72 گھنٹے پہلے بک کیا جاتا
+    ہے۔
+- id: 20
+  category: music
+  item_en: Double bass
+  item_am: ድርብ ባስ
+  max_kg: 45
+  max_dims_cm: 200x70x60
+  fee_usd: 220.0
+  advance_notice_required: true
+  notes_en: Hold only, in a hard flight case. Not accepted in a soft cover.
+  notes_am: በጭነት ክፍል ብቻ፣ በጠንካራ የበረራ ሳጥን ውስጥ። በለስላሳ ሽፋን አይቀበልም።
+  item_bn: ডাবল বেস
+  item_hi: डबल बेस
+  item_ur: ڈبل بیس
+  notes_bn: শুধু হোল্ডে, শক্ত ফ্লাইট কেসে। নরম কভারে গ্রহণ করা হয় না।
+  notes_hi: केवल होल्ड में, कठोर फ़्लाइट केस में। नरम कवर में स्वीकार नहीं।
+  notes_ur: صرف ہولڈ میں، سخت فلائٹ کیس میں۔ نرم کور میں قبول نہیں۔
+- id: 21
+  category: music
+  item_en: Brass instrument
+  item_am: የናስ መሣሪያ
+  max_kg: 23
+  max_dims_cm: 100x60x40
+  fee_usd: 45.0
+  advance_notice_required: false
+  notes_en: Hard case required. Valves must be secured.
+  notes_am: ጠንካራ ሳጥን ያስፈልጋል። ቫልቮቹ መታሰር አለባቸው።
+  item_bn: পিতলের বাদ্যযন্ত্র
+  item_hi: पीतल का वाद्य
+  item_ur: پیتل کا ساز
+  notes_bn: শক্ত কেস প্রয়োজন। ভাল্ভ আটকে রাখতে হবে।
+  notes_hi: कठोर केस आवश्यक। वाल्व सुरक्षित होने चाहिए।
+  notes_ur: سخت کیس درکار۔ والو محفوظ ہونے چاہئیں۔
+- id: 22
+  category: music
+  item_en: Drum kit
+  item_am: የከበሮ ስብስብ
+  max_kg: 32
+  max_dims_cm: 120x60x60
+  fee_usd: 130.0
+  advance_notice_required: true
+  notes_en: Carried as two pieces. Cymbals must be in a separate padded bag.
+  notes_am: እንደ ሁለት ዕቃ ይወሰዳል። ሲምባሎቹ በተለየ የተለሰለሰ ከረጢት ውስጥ መሆን አለባቸው።
+  item_bn: ড্রাম কিট
+  item_hi: ड्रम किट
+  item_ur: ڈرم کٹ
+  notes_bn: দুটি পিস হিসেবে বহন করা হয়। সিম্বাল আলাদা প্যাডেড ব্যাগে থাকতে হবে।
+  notes_hi: दो पीस के रूप में ले जाई जाती है। झांझ अलग पैडेड बैग में होने चाहिए।
+  notes_ur: دو پیس کے طور پر لے جائی جاتی ہے۔ جھانجھ علیحدہ پیڈڈ بیگ میں ہونے چاہئیں۔
+- id: 23
+  category: music
+  item_en: Keyboard
+  item_am: ኪቦርድ
+  max_kg: 23
+  max_dims_cm: 150x50x25
+  fee_usd: 55.0
+  advance_notice_required: false
+  notes_en: Hard case or flight case. Stands travel separately.
+  notes_am: ጠንካራ ሳጥን ወይም የበረራ ሳጥን። መቆሚያዎቹ በተለየ ይጓዛሉ።
+  item_bn: কিবোর্ড
+  item_hi: कीबोर्ड
+  item_ur: کی بورڈ
+  notes_bn: শক্ত কেস বা ফ্লাইট কেস। স্ট্যান্ড আলাদাভাবে যায়।
+  notes_hi: कठोर केस या फ़्लाइट केस। स्टैंड अलग से जाते हैं।
+  notes_ur: سخت کیس یا فلائٹ کیس۔ اسٹینڈ علیحدہ سفر کرتے ہیں۔
+- id: 24
+  category: music
+  item_en: Harp
+  item_am: በገና
+  max_kg: 45
+  max_dims_cm: 180x100x60
+  fee_usd: 260.0
+  advance_notice_required: true
+  notes_en: Wide-body aircraft only. Two-week notice and a signed damage waiver.
+  notes_am: በሰፊ አካል አውሮፕላኖች ብቻ። የሁለት ሳምንት ማሳወቂያና የተፈረመ የጉዳት ማስተባበያ።
+  item_bn: হার্প
+  item_hi: हार्प
+  item_ur: ہارپ
+  notes_bn: শুধু ওয়াইড-বডি উড়োজাহাজে। দুই সপ্তাহের নোটিশ ও স্বাক্ষরিত ক্ষতি-দায়মুক্তিপত্র।
+  notes_hi: केवल वाइड-बॉडी विमान। दो सप्ताह की सूचना और हस्ताक्षरित क्षति छूट पत्र।
+  notes_ur: صرف وائیڈ باڈی طیارے۔ دو ہفتے کا نوٹس اور دستخط شدہ نقصان سے دستبرداری۔
+- id: 25
+  category: medical
+  item_en: Folding wheelchair
+  item_am: የሚታጠፍ የተሽከርካሪ ወንበር
+  max_kg: 32
+  max_dims_cm: 120x60x40
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Carried free and does not count against your allowance.
+  notes_am: በነጻ ይወሰዳል፤ ከፈቃድዎም ላይ አይቀነስም።
+  item_bn: ভাঁজযোগ্য হুইলচেয়ার
+  item_hi: फ़ोल्डिंग व्हीलचेयर
+  item_ur: فولڈنگ وہیل چیئر
+  notes_bn: বিনামূল্যে বহন করা হয় এবং আপনার অ্যালাউন্সে গণনা হয় না।
+  notes_hi: निःशुल्क ले जाई जाती है और आपके अलाउंस में नहीं गिनी जाती।
+  notes_ur: مفت لے جائی جاتی ہے اور آپ کے الاؤنس میں شمار نہیں ہوتی۔
+- id: 26
+  category: medical
+  item_en: Powered wheelchair
+  item_am: በኃይል የሚሠራ የተሽከርካሪ ወንበር
+  max_kg: 100
+  max_dims_cm: 120x70x100
+  fee_usd: 0.0
+  advance_notice_required: true
+  notes_en: Free, but the battery type must be declared 48 hours ahead.
+  notes_am: በነጻ ነው፤ ነገር ግን የባትሪው ዓይነት ከ48 ሰዓት በፊት መገለጽ አለበት።
+  item_bn: মোটরচালিত হুইলচেয়ার
+  item_hi: मोटर चालित व्हीलचेयर
+  item_ur: بجلی سے چلنے والی وہیل چیئر
+  notes_bn: বিনামূল্যে, তবে ব্যাটারির ধরন 48 ঘণ্টা আগে জানাতে হবে।
+  notes_hi: निःशुल्क, लेकिन बैटरी का प्रकार 48 घंटे पहले घोषित करना होगा।
+  notes_ur: مفت، لیکن بیٹری کی قسم 48 گھنٹے پہلے ظاہر کرنی ہوگی۔
+- id: 27
+  category: medical
+  item_en: Mobility scooter
+  item_am: የመንቀሳቀሻ ስኩተር
+  max_kg: 100
+  max_dims_cm: 130x60x100
+  fee_usd: 0.0
+  advance_notice_required: true
+  notes_en: Free. Lithium batteries above 300 Wh must be removed and carried in the cabin.
+  notes_am: በነጻ። ከ300 ዋት-ሰዓት በላይ የሆኑ የሊቲየም ባትሪዎች ተነስተው በካቢን መያዝ አለባቸው።
+  item_bn: মোবিলিটি স্কুটার
+  item_hi: मोबिलिटी स्कूटर
+  item_ur: موبیلٹی اسکوٹر
+  notes_bn: বিনামূল্যে। 300 Wh-এর বেশি লিথিয়াম ব্যাটারি খুলে কেবিনে বহন করতে হবে।
+  notes_hi: निःशुल्क। 300 Wh से अधिक की लिथियम बैटरियाँ निकालकर केबिन में ले जानी होंगी।
+  notes_ur: مفت۔ 300 Wh سے زیادہ کی لیتھیم بیٹریاں اتار کر کیبن میں لے جانی ہوں گی۔
+- id: 28
+  category: medical
+  item_en: Portable oxygen concentrator
+  item_am: ተንቀሳቃሽ የኦክስጅን ማጎሪያ
+  max_kg: 10
+  max_dims_cm: 40x30x30
+  fee_usd: 0.0
+  advance_notice_required: true
+  notes_en: Free. Bring enough battery for 150% of the flight time and a medical letter.
+  notes_am: በነጻ። ለበረራው ጊዜ 150% የሚበቃ ባትሪና የሕክምና ደብዳቤ ይዘው ይምጡ።
+  item_bn: পোর্টেবল অক্সিজেন কনসেনট্রেটর
+  item_hi: पोर्टेबल ऑक्सीजन कंसन्ट्रेटर
+  item_ur: پورٹیبل آکسیجن کنسنٹریٹر
+  notes_bn: বিনামূল্যে। ফ্লাইট সময়ের 150%-এর জন্য যথেষ্ট ব্যাটারি ও একটি চিকিৎসকের চিঠি আনুন।
+  notes_hi: निःशुल्क। उड़ान समय के 150% के लिए पर्याप्त बैटरी और एक चिकित्सा पत्र लाएँ।
+  notes_ur: مفت۔ پرواز کے وقت کے 150% کے لیے کافی بیٹری اور ایک طبی خط لائیں۔
+- id: 29
+  category: medical
+  item_en: CPAP machine
+  item_am: የሲፓፕ መሣሪያ
+  max_kg: 10
+  max_dims_cm: 40x30x25
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Free and additional to your cabin allowance. Distilled water is not supplied.
+  notes_am: በነጻ ነው፤ ከእጅ ሻንጣ ፈቃድዎም በተጨማሪ። የተጣራ ውሃ አይቀርብም።
+  item_bn: CPAP মেশিন
+  item_hi: CPAP मशीन
+  item_ur: CPAP مشین
+  notes_bn: বিনামূল্যে এবং আপনার কেবিন অ্যালাউন্সের অতিরিক্ত। পাতিত পানি সরবরাহ করা হয় না।
+  notes_hi: निःशुल्क और आपके केबिन अलाउंस के अतिरिक्त। आसुत जल उपलब्ध नहीं कराया जाता।
+  notes_ur: مفت اور آپ کے کیبن الاؤنس کے علاوہ۔ کشید شدہ پانی فراہم نہیں کیا جاتا۔
+- id: 30
+  category: medical
+  item_en: Stretcher
+  item_am: አልጋ ቃሬዛ
+  max_kg: 0
+  max_dims_cm: '-'
+  fee_usd: 0.0
+  advance_notice_required: true
+  notes_en: Arranged through the medical desk only, at six economy fares. Not bookable online.
+  notes_am: የሚዘጋጀው በሕክምና ክፍል ብቻ ነው፤ በስድስት የኢኮኖሚ ታሪፍ። በመስመር ላይ አይያዝም።
+  item_bn: স্ট্রেচার
+  item_hi: स्ट्रेचर
+  item_ur: اسٹریچر
+  notes_bn: শুধু মেডিকেল ডেস্কের মাধ্যমে ব্যবস্থা করা হয়, ছয়টি ইকোনমি ভাড়ায়। অনলাইনে বুক
+    করা যায় না।
+  notes_hi: केवल मेडिकल डेस्क के ज़रिए व्यवस्था, छह इकोनॉमी किरायों पर। ऑनलाइन बुक नहीं किया
+    जा सकता।
+  notes_ur: صرف میڈیکل ڈیسک کے ذریعے انتظام، چھ اکانومی کرایوں پر۔ آن لائن بک نہیں ہو سکتا۔
+- id: 31
+  category: outsize
+  item_en: Pushchair or pram
+  item_am: የሕፃን ጋሪ
+  max_kg: 20
+  max_dims_cm: 100x50x40
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Free for a passenger travelling with a child. Taken at the aircraft door.
+  notes_am: ከልጅ ጋር ለሚጓዝ ተሳፋሪ በነጻ። በአውሮፕላኑ በር ላይ ይወሰዳል።
+  item_bn: পুশচেয়ার বা প্র্যাম
+  item_hi: पुशचेयर या प्रैम
+  item_ur: پش چیئر یا پرام
+  notes_bn: শিশুসহ ভ্রমণকারী যাত্রীর জন্য বিনামূল্যে। উড়োজাহাজের দরজায় নেওয়া হয়।
+  notes_hi: बच्चे के साथ यात्रा कर रहे यात्री के लिए निःशुल्क। विमान के दरवाज़े पर लिया जाता
+    है।
+  notes_ur: بچے کے ساتھ سفر کرنے والے مسافر کے لیے مفت۔ طیارے کے دروازے پر لی جاتی ہے۔
+- id: 32
+  category: outsize
+  item_en: Car child seat
+  item_am: የመኪና የሕፃን መቀመጫ
+  max_kg: 12
+  max_dims_cm: 70x50x50
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Free when a child is on the booking. Otherwise charged as an extra piece.
+  notes_am: በቦታ ማስያዣው ላይ ልጅ ሲኖር በነጻ። ካልሆነ እንደ ተጨማሪ ዕቃ ይከፈላል።
+  item_bn: গাড়ির শিশু আসন
+  item_hi: कार चाइल्ड सीट
+  item_ur: کار چائلڈ سیٹ
+  notes_bn: বুকিংয়ে শিশু থাকলে বিনামূল্যে। অন্যথায় অতিরিক্ত পিস হিসেবে চার্জ করা হয়।
+  notes_hi: बुकिंग में बच्चा होने पर निःशुल्क। अन्यथा अतिरिक्त पीस के रूप में शुल्क।
+  notes_ur: بکنگ میں بچہ ہونے پر مفت۔ بصورتِ دیگر اضافی پیس کے طور پر چارج۔
+- id: 33
+  category: outsize
+  item_en: Television or monitor
+  item_am: ቴሌቪዥን ወይም ማሳያ
+  max_kg: 32
+  max_dims_cm: 160x30x110
+  fee_usd: 95.0
+  advance_notice_required: true
+  notes_en: Original packaging or a wooden crate. Screens above 165 cm go as cargo.
+  notes_am: የመጀመሪያው ማሸጊያ ወይም የእንጨት ሳጥን። ከ165 ሴሜ በላይ ማሳያዎች እንደ ጭነት ይሄዳሉ።
+  item_bn: টেলিভিশন বা মনিটর
+  item_hi: टेलीविज़न या मॉनिटर
+  item_ur: ٹیلی ویژن یا مانیٹر
+  notes_bn: আসল প্যাকেজিং বা কাঠের ক্রেট। 165 cm-এর বেশি স্ক্রিন কার্গো হিসেবে যায়।
+  notes_hi: मूल पैकेजिंग या लकड़ी का क्रेट। 165 cm से बड़ी स्क्रीन कार्गो से जाती हैं।
+  notes_ur: اصل پیکنگ یا لکڑی کا کریٹ۔ 165 cm سے بڑی اسکرینیں کارگو سے جاتی ہیں۔
+- id: 34
+  category: outsize
+  item_en: Bulky household appliance
+  item_am: ግዙፍ የቤት ዕቃ
+  max_kg: 32
+  max_dims_cm: 120x80x80
+  fee_usd: 110.0
+  advance_notice_required: true
+  notes_en: Fluids drained and the door taped shut.
+  notes_am: ፈሳሾቹ ተራግፈው በሩ ተለጥፎ ተዘግቶ።
+  item_bn: বড় গৃহস্থালি যন্ত্র
+  item_hi: बड़ा घरेलू उपकरण
+  item_ur: بڑا گھریلو آلہ
+  notes_bn: তরল নিষ্কাশন করে এবং দরজা টেপ দিয়ে বন্ধ করে।
+  notes_hi: तरल निकाला हुआ और दरवाज़ा टेप से बंद।
+  notes_ur: مائع نکالا ہوا اور دروازہ ٹیپ سے بند۔
+- id: 35
+  category: outsize
+  item_en: Framed artwork
+  item_am: በክፈፍ የተቀረጸ ሥዕል
+  max_kg: 23
+  max_dims_cm: 150x100x20
+  fee_usd: 80.0
+  advance_notice_required: true
+  notes_en: Glass must be removed or taped. We do not insure glass in the hold.
+  notes_am: መስታወቱ መነሳት ወይም መለጠፍ አለበት። በጭነት ክፍል ላለ መስታወት ዋስትና አንሰጥም።
+  item_bn: ফ্রেমযুক্ত শিল্পকর্ম
+  item_hi: फ़्रेम की हुई कलाकृति
+  item_ur: فریم شدہ فن پارہ
+  notes_bn: কাচ খুলে ফেলতে বা টেপ দিয়ে আটকাতে হবে। হোল্ডে কাচের বিমা আমরা করি না।
+  notes_hi: काँच हटाना या टेप करना होगा। होल्ड में काँच का हम बीमा नहीं करते।
+  notes_ur: شیشہ اتارنا یا ٹیپ کرنا ہوگا۔ ہولڈ میں شیشے کا ہم بیمہ نہیں کرتے۔
+- id: 36
+  category: outsize
+  item_en: Traditional drum
+  item_am: ባህላዊ ከበሮ
+  max_kg: 23
+  max_dims_cm: 100x60x60
+  fee_usd: 45.0
+  advance_notice_required: false
+  notes_en: Skin heads loosened for the pressure change, in a padded cover.
+  notes_am: ለግፊት ለውጡ ቆዳዎቹ ላልተው፣ በተለሰለሰ ሽፋን ውስጥ።
+  item_bn: ঐতিহ্যবাহী ঢোল
+  item_hi: पारंपरिक ढोल
+  item_ur: روایتی ڈھول
+  notes_bn: চাপের পরিবর্তনের জন্য চামড়ার মাথা ঢিলা করে, প্যাডেড কভারে।
+  notes_hi: दबाव परिवर्तन के लिए चमड़े के सिरे ढीले किए हुए, पैडेड कवर में।
+  notes_ur: دباؤ کی تبدیلی کے لیے چمڑے کے سرے ڈھیلے کیے ہوئے، پیڈڈ کور میں۔
+- id: 37
+  category: restricted
+  item_en: Sporting firearm
+  item_am: የስፖርት ተኩስ መሣሪያ
+  max_kg: 23
+  max_dims_cm: 130x30x20
+  fee_usd: 100.0
+  advance_notice_required: true
+  notes_en: Permit required, declared at check-in, in a locked hard case.
+  notes_am: ፈቃድ ያስፈልጋል፤ በቼክ-ኢን ጊዜ ይገለጻል፤ በተቆለፈ ጠንካራ ሳጥን ውስጥ።
+  item_bn: ক্রীড়া আগ্নেয়াস্ত্র
+  item_hi: खेल की बंदूक
+  item_ur: کھیل کا آتشیں اسلحہ
+  notes_bn: পারমিট প্রয়োজন, চেক-ইনে ঘোষণা করতে হবে, তালাবদ্ধ শক্ত কেসে।
+  notes_hi: परमिट आवश्यक, चेक-इन पर घोषित, बंद कठोर केस में।
+  notes_ur: پرمٹ درکار، چیک اِن پر ظاہر کیا گیا، تالا بند سخت کیس میں۔
+- id: 38
+  category: restricted
+  item_en: Ammunition
+  item_am: ጥይት
+  max_kg: 5
+  max_dims_cm: 30x20x20
+  fee_usd: 50.0
+  advance_notice_required: true
+  notes_en: Up to 5 kg per passenger, in the manufacturer's packaging, separate from the firearm.
+  notes_am: በአንድ ተሳፋሪ እስከ 5 ኪግ፣ በአምራቹ ማሸጊያ ውስጥ፣ ከተኩስ መሣሪያው ተለይቶ።
+  item_bn: গোলাবারুদ
+  item_hi: गोला-बारूद
+  item_ur: گولہ بارود
+  notes_bn: যাত্রীপ্রতি 5 kg পর্যন্ত, প্রস্তুতকারকের প্যাকেজিংয়ে, আগ্নেয়াস্ত্র থেকে আলাদা।
+  notes_hi: प्रति यात्री 5 kg तक, निर्माता की पैकेजिंग में, बंदूक से अलग।
+  notes_ur: فی مسافر 5 kg تک، ساز کی اصل پیکنگ میں، آتشیں اسلحے سے علیحدہ۔
+- id: 39
+  category: restricted
+  item_en: Hoverboard or self-balancing board
+  item_am: ሆቨርቦርድ ወይም ራስ ማመጣጠኛ ቦርድ
+  max_kg: 0
+  max_dims_cm: '-'
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Not accepted in the cabin or the hold, on any route, at any weight.
+  notes_am: በካቢንም ሆነ በጭነት ክፍል፣ በማንኛውም መስመር፣ በማንኛውም ክብደት አይቀበልም።
+  item_bn: হোভারবোর্ড বা সেলফ-ব্যালেন্সিং বোর্ড
+  item_hi: होवरबोर्ड या सेल्फ़-बैलेंसिंग बोर्ड
+  item_ur: ہوور بورڈ یا سیلف بیلنسنگ بورڈ
+  notes_bn: কেবিনে বা হোল্ডে, কোনো রুটে, কোনো ওজনে গ্রহণ করা হয় না।
+  notes_hi: केबिन या होल्ड में, किसी भी मार्ग पर, किसी भी वज़न पर स्वीकार नहीं।
+  notes_ur: کیبن یا ہولڈ میں، کسی بھی روٹ پر، کسی بھی وزن پر قبول نہیں۔
+- id: 40
+  category: restricted
+  item_en: Smart bag with fixed battery
+  item_am: ቋሚ ባትሪ ያለው ስማርት ሻንጣ
+  max_kg: 0
+  max_dims_cm: '-'
+  fee_usd: 0.0
+  advance_notice_required: false
+  notes_en: Refused unless the battery can be removed and carried in the cabin.
+  notes_am: ባትሪው ተነስቶ በካቢን መያዝ ካልተቻለ አይቀበልም።
+  item_bn: স্থায়ী ব্যাটারিসহ স্মার্ট ব্যাগ
+  item_hi: स्थायी बैटरी वाला स्मार्ट बैग
+  item_ur: مستقل بیٹری والا اسمارٹ بیگ
+  notes_bn: ব্যাটারি খুলে কেবিনে বহন করা না গেলে প্রত্যাখ্যান করা হয়।
+  notes_hi: जब तक बैटरी निकालकर केबिन में न ले जाई जा सके, अस्वीकार।
+  notes_ur: جب تک بیٹری اتار کر کیبن میں نہ لے جائی جا سکے، مسترد۔

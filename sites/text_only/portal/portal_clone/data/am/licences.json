@@ -1,0 +1,152 @@
+[
+ {
+  "id": 1,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 2,
+  "licence_class": "ሞተር ሳይክል",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 3,
+  "licence_class": "ሞተር ሳይክል",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 4,
+  "licence_class": "ሙያዊ ቀላል",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 5,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 6,
+  "licence_class": "ከባድ ተሽከርካሪ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 7,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 8,
+  "licence_class": "ከባድ ተሽከርካሪ",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 9,
+  "licence_class": "ሞተር ሳይክል",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 10,
+  "licence_class": "ሞተር ሳይክል",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 11,
+  "licence_class": "ሙያዊ ቀላል",
+  "status": "ማረጋገጫ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 12,
+  "licence_class": "ሙያዊ ቀላል",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 13,
+  "licence_class": "ከባድ ተሽከርካሪ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 14,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 15,
+  "licence_class": "ሞተር ሳይክል",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 16,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 17,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 18,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ተልኳል"
+ },
+ {
+  "id": 19,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 20,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ተላልፏል"
+ },
+ {
+  "id": 21,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ተልኳል"
+ },
+ {
+  "id": 22,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 23,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ገብቷል"
+ },
+ {
+  "id": 24,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "ክፍያ በመጠባበቅ ላይ"
+ },
+ {
+  "id": 25,
+  "licence_class": "ቀላል ተሽከርካሪ",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 26,
+  "licence_class": "ከባድ ተሽከርካሪ",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 27,
+  "licence_class": "ሙያዊ ቀላል",
+  "status": "በግምገማ ላይ"
+ },
+ {
+  "id": 28,
+  "licence_class": "ሞተር ሳይክል",
+  "status": "ጸድቋል"
+ },
+ {
+  "id": 29,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ተልኳል"
+ },
+ {
+  "id": 30,
+  "licence_class": "መካከለኛ ተሽከርካሪ",
+  "status": "ገብቷል"
+ }
+]

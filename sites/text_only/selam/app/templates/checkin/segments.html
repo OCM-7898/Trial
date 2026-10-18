@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ t("checkin.title") }} {{ booking.pnr }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('checkin') }}">{{ t("checkin.title") }}</a></li>
+        <li>{{ booking.pnr }}</li></ol>
+  </nav>
+  <h1>{{ t("checkin.choose_flight") }}</h1>
+  {% if refused %}
+  <div class="notice notice-warn" role="alert"><div>{{ refused }}</div></div>
+  {% endif %}
+
+  {% for row in rows %}
+  {% set v = row.view %}
+  <section class="card" style="margin-bottom:18px">
+    <div class="card-body">
+      <h3>{{ v.origin.city }} ({{ v.origin.iata }}) &rarr; {{ v.destination.city }} ({{ v.destination.iata }})</h3>
+      <p class="hint">{{ v.flight.flight_no }} &middot; {{ fmt_date(v.flight.date) }} &middot;
+         {{ fmt_time(v.flight.dep_time) }} &middot; {{ row.status_label }}</p>
+      <p>
+        {% if row.decision.allowed %}<span class="badge badge-ok">{{ row.label }}</span>
+        {% else %}<span class="badge badge-warn">{{ row.label }}</span>{% endif %}
+      </p>
+    </div>
+    <div class="card-foot">
+      {% if row.decision.allowed and not v.segment.checked_in %}
+      <form method="post" action="{{ path('checkin') }}">
+        <input type="hidden" name="pnr" value="{{ booking.pnr }}">
+        <input type="hidden" name="surname" value="{{ booking.surname }}">
+        <input type="hidden" name="segment_id" value="{{ v.segment.id }}">
+        <button class="btn btn-primary" type="submit">{{ t("checkin.check_in_now") }}</button>
+      </form>
+      {% elif v.segment.checked_in %}
+      <span class="badge badge-ok">{{ t("checkin.already") }}</span>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

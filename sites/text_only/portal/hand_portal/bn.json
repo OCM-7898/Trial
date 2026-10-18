@@ -1,0 +1,154 @@
+{
+  "_note": "HAND-WRITTEN 2026-09-26 Bangla vocabulary for the Haritia portal (no lexicon, no reuse of the deleted 2026-09 packs). translate_portal_data.py composes every data overlay from these tables. DB tokens (record_type, meter_type, exam, applications.kind, status_key, doc_type, delivery/package/method values typed into forms), ids, numbers, dates, emails, filenames and blood groups are never translated. Digits inside data stay ASCII (policy: native digits only at display time).",
+  "first_names": {
+    "Abdul": "আবদুল", "Afroza": "আফরোজা", "Aminul": "আমিনুল", "Anwar": "আনোয়ার", "Ashraful": "আশরাফুল",
+    "Bashir": "বশির", "Bilkis": "বিলকিস", "Delwar": "দেলোয়ার", "Dilruba": "দিলরুবা", "Faruk": "ফারুক",
+    "Fatema": "ফাতেমা", "Ferdousi": "ফেরদৌসী", "Golam": "গোলাম", "Habibur": "হাবিবুর", "Halima": "হালিমা",
+    "Hasina": "হাসিনা", "Jahanara": "জাহানারা", "Jahangir": "জাহাঙ্গীর", "Jashim": "জসিম", "Jesmin": "জেসমিন",
+    "Kamrul": "কামরুল", "Khaled": "খালেদ", "Kohinoor": "কোহিনূর", "Lutfa": "লুৎফা", "Mahbub": "মাহবুব",
+    "Mahmuda": "মাহমুদা", "Mizanur": "মিজানুর", "Momtaz": "মমতাজ", "Monir": "মনির", "Mostafa": "মোস্তফা",
+    "Nargis": "নার্গিস", "Nasrin": "নাসরিন", "Nazrul": "নজরুল", "Nurul": "নুরুল", "Parvin": "পারভীন",
+    "Rafiqul": "রফিকুল", "Rahima": "রহিমা", "Rashed": "রাশেদ", "Rehana": "রেহানা", "Rezaul": "রেজাউল",
+    "Rokeya": "রোকেয়া", "Sabina": "সাবিনা", "Salma": "সালমা", "Shafiqul": "শফিকুল", "Shahidul": "শহীদুল",
+    "Shahnaz": "শাহনাজ", "Shirin": "শিরিন", "Sohel": "সোহেল", "Sultana": "সুলতানা", "Tanvir": "তানভীর",
+    "Taslima": "তাসলিমা", "Tofazzal": "তোফাজ্জল", "Ummul": "উম্মুল", "Yasmin": "ইয়াসমিন", "Zahid": "জাহিদ",
+    "Delwara": "দেলোয়ারা"
+  },
+  "surnames": {
+    "Ahmed": "আহমেদ", "Akter": "আক্তার", "Alam": "আলম", "Barua": "বড়ুয়া", "Begum": "বেগম", "Bhuiyan": "ভূঁইয়া",
+    "Biswas": "বিশ্বাস", "Chowdhury": "চৌধুরী", "Das": "দাস", "Gupta": "গুপ্ত", "Haque": "হক", "Hossain": "হোসেন",
+    "Howlader": "হাওলাদার", "Islam": "ইসলাম", "Karim": "করিম", "Khan": "খান", "Mahmud": "মাহমুদ", "Mia": "মিয়া",
+    "Molla": "মোল্লা", "Mondal": "মণ্ডল", "Rahman": "রহমান", "Roy": "রায়", "Saha": "সাহা", "Sarkar": "সরকার",
+    "Sheikh": "শেখ", "Siddique": "সিদ্দিক", "Talukder": "তালুকদার", "Uddin": "উদ্দিন", "Hoque": "হোক", "Sr": "সিনিয়র"
+  },
+  "divisions": {
+    "Barishal": "বরিশাল", "Chattogram": "চট্টগ্রাম", "Dhaka": "ঢাকা", "Khulna": "খুলনা", "Mymensingh": "ময়মনসিংহ",
+    "Rajshahi": "রাজশাহী", "Rangpur": "রংপুর", "Sylhet": "সিলেট"
+  },
+  "districts": {
+    "Barguna": "বরগুনা", "Barishal": "বরিশাল", "Bhola": "ভোলা", "Jhalokati": "ঝালকাঠি", "Patuakhali": "পটুয়াখালী",
+    "Pirojpur": "পিরোজপুর", "Bandarban": "বান্দরবান", "Brahmanbaria": "ব্রাহ্মণবাড়িয়া", "Chandpur": "চাঁদপুর",
+    "Chattogram": "চট্টগ্রাম", "Cox's Bazar": "কক্সবাজার", "Cumilla": "কুমিল্লা", "Feni": "ফেনী",
+    "Khagrachhari": "খাগড়াছড়ি", "Lakshmipur": "লক্ষ্মীপুর", "Noakhali": "নোয়াখালী", "Rangamati": "রাঙ্গামাটি",
+    "Dhaka": "ঢাকা", "Faridpur": "ফরিদপুর", "Gazipur": "গাজীপুর", "Gopalganj": "গোপালগঞ্জ", "Kishoreganj": "কিশোরগঞ্জ",
+    "Madaripur": "মাদারীপুর", "Manikganj": "মানিকগঞ্জ", "Munshiganj": "মুন্সীগঞ্জ", "Narayanganj": "নারায়ণগঞ্জ",
+    "Narsingdi": "নরসিংদী", "Rajbari": "রাজবাড়ী", "Shariatpur": "শরীয়তপুর", "Tangail": "টাঙ্গাইল",
+    "Bagerhat": "বাগেরহাট", "Chuadanga": "চুয়াডাঙ্গা", "Jashore": "যশোর", "Jhenaidah": "ঝিনাইদহ", "Khulna": "খুলনা",
+    "Kushtia": "কুষ্টিয়া", "Magura": "মাগুরা", "Meherpur": "মেহেরপুর", "Narail": "নড়াইল", "Satkhira": "সাতক্ষীরা",
+    "Jamalpur": "জামালপুর", "Mymensingh": "ময়মনসিংহ", "Netrokona": "নেত্রকোনা", "Sherpur": "শেরপুর",
+    "Bogura": "বগুড়া", "Chapainawabganj": "চাঁপাইনবাবগঞ্জ", "Joypurhat": "জয়পুরহাট", "Naogaon": "নওগাঁ",
+    "Natore": "নাটোর", "Pabna": "পাবনা", "Rajshahi": "রাজশাহী", "Sirajganj": "সিরাজগঞ্জ",
+    "Dinajpur": "দিনাজপুর", "Gaibandha": "গাইবান্ধা", "Kurigram": "কুড়িগ্রাম", "Lalmonirhat": "লালমনিরহাট",
+    "Nilphamari": "নীলফামারী", "Panchagarh": "পঞ্চগড়", "Rangpur": "রংপুর", "Thakurgaon": "ঠাকুরগাঁও",
+    "Habiganj": "হবিগঞ্জ", "Moulvibazar": "মৌলভীবাজার", "Sunamganj": "সুনামগঞ্জ", "Sylhet": "সিলেট"
+  },
+  "upazila_suffixes": {
+    "Sadar": "সদর", "Para": "পাড়া", "South": "দক্ষিণ", "Hat": "হাট", "Bazar": "বাজার", "Ganj": "গঞ্জ", "North": "উত্তর"
+  },
+  "mouzas": {
+    "Char Kanda": "চর কান্দা", "Dakshin Char": "দক্ষিণ চর", "Madhya Para": "মধ্য পাড়া", "Noya Bazar": "নয়া বাজার",
+    "Paschim Para": "পশ্চিম পাড়া", "Purano Hat": "পুরানো হাট", "Purba Para": "পূর্ব পাড়া", "Uttar Char": "উত্তর চর"
+  },
+  "villages": {
+    "Paschimpara": "পশ্চিমপাড়া", "Majhipara": "মাঝিপাড়া", "Purbapara": "পূর্বপাড়া", "Uttarpara": "উত্তরপাড়া",
+    "Dakshinpara": "দক্ষিণপাড়া"
+  },
+  "address_words": {"House": "বাড়ি", "Road": "রোড", "Village": "গ্রাম", "Lake Road": "লেক রোড", "Administrative Block": "প্রশাসনিক ব্লক"},
+  "office_types": {
+    "Board of Examinations Office": "শিক্ষা বোর্ড কার্যালয়",
+    "Civil Registration Office": "জন্ম ও মৃত্যু নিবন্ধন কার্যালয়",
+    "Civil Surgeon Office": "সিভিল সার্জন কার্যালয়",
+    "Electricity Distribution Office": "বিদ্যুৎ বিতরণ কার্যালয়",
+    "Identity Registration Office": "পরিচয়পত্র নিবন্ধন কার্যালয়",
+    "Land Records Office": "ভূমি রেকর্ড কার্যালয়",
+    "Passport and Immigration Office": "পাসপোর্ট ও ইমিগ্রেশন কার্যালয়",
+    "Pension Disbursement Office": "পেনশন বিতরণ কার্যালয়",
+    "Pilgrimage Affairs Office": "হজ বিষয়ক কার্যালয়",
+    "Police Clearance Cell": "পুলিশ ক্লিয়ারেন্স সেল",
+    "Revenue Circle Office": "রাজস্ব সার্কেল কার্যালয়",
+    "Trade Licensing Office": "ট্রেড লাইসেন্স কার্যালয়",
+    "Transport Licensing Office": "পরিবহন লাইসেন্স কার্যালয়"
+  },
+  "office_hours": {"09:00 to 16:00, Sunday to Thursday": "09:00 থেকে 16:00, রবিবার থেকে বৃহস্পতিবার"},
+  "vaccination_centre": {"Vaccination Centre": "টিকাদান কেন্দ্র"},
+  "fee_categories": {
+    "Admit card": "প্রবেশপত্র", "Appeal": "আপিল", "Birth": "জন্ম", "Certificate": "সনদ", "Certified copy": "সত্যায়িত অনুলিপি",
+    "Character": "চরিত্র", "Claim": "দাবি", "Clearance": "ক্লিয়ারেন্স", "Connection": "সংযোগ", "Correction": "সংশোধন",
+    "Death": "মৃত্যু", "Development tax": "উন্নয়ন কর", "Duplicate": "প্রতিলিপি", "Equivalence": "সমমান",
+    "Health card": "স্বাস্থ্য কার্ড", "Learner": "শিক্ষানবিশ", "Licence": "লাইসেন্স", "Medical board": "মেডিকেল বোর্ড",
+    "Meter": "মিটার", "Mutation": "নামজারি", "New": "নতুন", "Official": "দাপ্তরিক", "Ordinary": "সাধারণ",
+    "Pre-registration": "প্রাক-নিবন্ধন", "Reconnection": "পুনঃসংযোগ", "Registration": "নিবন্ধন", "Reissue": "পুনঃপ্রদান",
+    "Renewal": "নবায়ন", "Rescrutiny": "পুনর্নিরীক্ষণ", "Return": "রিটার্ন", "Search": "অনুসন্ধান", "Substitution": "প্রতিস্থাপন",
+    "Tenant": "ভাড়াটিয়া", "Transcript": "ট্রান্সক্রিপ্ট"
+  },
+  "fee_variants": {
+    "46 days to 5 years": "46 দিন থেকে 5 বছর", "48 pages": "48 পৃষ্ঠা", "64 pages": "64 পৃষ্ঠা", "Address": "ঠিকানা",
+    "After 45 days": "45 দিন পর", "After 5 years": "5 বছর পর", "After disconnection": "সংযোগ বিচ্ছিন্নের পর",
+    "Any category": "যেকোনো শ্রেণি", "Any class": "যেকোনো ক্লাস", "Assessment": "মূল্যায়ন", "Birth": "জন্ম",
+    "Certificate": "সনদ", "Commercial": "বাণিজ্যিক", "Company": "কোম্পানি", "Correction": "সংশোধন",
+    "Damaged card": "ক্ষতিগ্রস্ত কার্ড", "Date of birth": "জন্মতারিখ", "Death": "মৃত্যু",
+    "Domestic single phase": "আবাসিক সিঙ্গেল ফেজ", "Domestic three phase": "আবাসিক থ্রি ফেজ", "Domestic use": "দেশীয় ব্যবহার",
+    "Duplicate": "প্রতিলিপি", "Family pension": "পারিবারিক পেনশন", "Foreign use": "বিদেশে ব্যবহার",
+    "Government package": "সরকারি প্যাকেজ", "Individual": "ব্যক্তি", "Issue": "প্রদান", "Khatian": "খতিয়ান",
+    "Large trade": "বৃহৎ ব্যবসা", "Late filing": "বিলম্বে দাখিল", "Life certificate": "জীবিত থাকার সনদ",
+    "Light vehicle": "হালকা যান", "Lost card": "হারানো কার্ড", "Medium trade": "মাঝারি ব্যবসা", "Memorandum": "স্মারক",
+    "Motorcycle": "মোটরসাইকেল", "Name or date": "নাম বা তারিখ", "Name spelling": "নামের বানান",
+    "Nominee change": "নমিনি পরিবর্তন", "Non-professional": "অপেশাদার", "Ordinary": "সাধারণ", "Payslip": "বেতন বিবরণী",
+    "Per copy": "প্রতি কপি", "Per subject": "প্রতি বিষয়", "Private package": "বেসরকারি প্যাকেজ", "Professional": "পেশাদার",
+    "Record inspection": "রেকর্ড পরিদর্শন", "Registration": "নিবন্ধন", "Reissue": "পুনঃপ্রদান", "Relocation": "স্থানান্তর",
+    "Replacement": "প্রতিস্থাপন", "Residential": "আবাসিক", "Second and later": "দ্বিতীয় ও পরবর্তী", "Small trade": "ক্ষুদ্র ব্যবসা",
+    "Superannuation": "অবসর", "Vaccination": "টিকাদান", "Within 45 days": "45 দিনের মধ্যে"
+  },
+  "fee_validity": {"1 year": "1 বছর", "2 years": "2 বছর", "5 years": "5 বছর", "10 years": "10 বছর", "—": "—"},
+  "delivery": {"regular": "নিয়মিত", "express": "এক্সপ্রেস", "emergency": "জরুরি"},
+  "statuses": {
+    "Approved": "অনুমোদিত", "Awaiting payment": "পরিশোধের অপেক্ষায়", "Awaiting verification": "যাচাইয়ের অপেক্ষায়",
+    "Delivered": "বিতরণ করা হয়েছে", "Dispatched": "প্রেরিত", "Submitted": "দাখিলকৃত", "Under review": "পর্যালোচনাধীন"
+  },
+  "licence_classes": {
+    "Heavy vehicle": "ভারী যান", "Light vehicle": "হালকা যান", "Medium vehicle": "মাঝারি যান", "Motorcycle": "মোটরসাইকেল",
+    "Professional light": "পেশাদার হালকা"
+  },
+  "tariffs": {"Commercial": "বাণিজ্যিক", "Domestic A": "আবাসিক এ", "Domestic B": "আবাসিক বি"},
+  "khatian_types": {"B.S.": "বি.এস.", "C.S.": "সি.এস.", "R.S.": "আর.এস.", "S.A.": "এস.এ."},
+  "land_types": {"Agricultural": "কৃষি", "Fallow": "পতিত", "Homestead": "বসতভিটা", "Orchard": "বাগান", "Pond": "পুকুর"},
+  "institutions": {
+    "City College": "সিটি কলেজ", "City High School": "সিটি হাই স্কুল", "Govt. College": "সরকারি কলেজ",
+    "Govt. High School": "সরকারি হাই স্কুল", "Ideal College": "আইডিয়াল কলেজ", "Ideal High School": "আইডিয়াল হাই স্কুল",
+    "Model College": "মডেল কলেজ", "Model High School": "মডেল হাই স্কুল"
+  },
+  "groups": {"Business Studies": "ব্যবসায় শিক্ষা", "Humanities": "মানবিক", "Science": "বিজ্ঞান"},
+  "result_status": {"Passed": "উত্তীর্ণ"},
+  "boards": {
+    "Barishal": "বরিশাল", "Chattogram": "চট্টগ্রাম", "Dhaka": "ঢাকা", "Khulna": "খুলনা", "Mymensingh": "ময়মনসিংহ",
+    "Rajshahi": "রাজশাহী", "Rangpur": "রংপুর", "Sylhet": "সিলেট", "Technical": "কারিগরি"
+  },
+  "tin_words": {"Circle": "সার্কেল", "Zone": "জোন"},
+  "vaccines": {"Combined DT": "কম্বাইন্ড ডিটি", "Seasonal IV": "মৌসুমি আইভি", "Trivalent A": "ট্রাইভ্যালেন্ট এ", "Trivalent B": "ট্রাইভ্যালেন্ট বি"},
+  "application_kinds": {
+    "birth-late": "বিলম্বিত জন্ম নিবন্ধন", "certificate": "সনদ", "claim": "দাবি", "clearance": "ক্লিয়ারেন্স",
+    "complaint": "অভিযোগ", "mutation": "নামজারি", "name-correction": "নাম সংশোধন", "new": "নতুন আবেদন",
+    "pre-registration": "প্রাক-নিবন্ধন", "renewal": "নবায়ন", "rescrutiny": "পুনর্নিরীক্ষণ", "return": "রিটার্ন"
+  },
+  "application_detail": "{kind}-এর জন্য আবেদন।",
+  "notice_categories": {"closure": "বন্ধ", "deadline": "সময়সীমা", "maintenance": "রক্ষণাবেক্ষণ", "procedure": "প্রক্রিয়া"},
+  "notice_service_phrases": {
+    "identity registration": "পরিচয়পত্র নিবন্ধন", "passport issuance": "পাসপোর্ট প্রদান", "civil registration": "জন্ম ও মৃত্যু নিবন্ধন",
+    "land records": "ভূমি রেকর্ড", "electricity billing": "বিদ্যুৎ বিল", "examination results": "পরীক্ষার ফলাফল",
+    "driver licensing": "ড্রাইভিং লাইসেন্স", "revenue administration": "রাজস্ব প্রশাসন", "pilgrimage management": "হজ ব্যবস্থাপনা",
+    "public health services": "জনস্বাস্থ্য সেবা", "police clearance": "পুলিশ ক্লিয়ারেন্স", "trade licensing": "ট্রেড লাইসেন্স",
+    "pension disbursement": "পেনশন বিতরণ"
+  },
+  "notice_title_templates": {
+    "Counter closure at selected {svc} offices": "নির্বাচিত {svc} কার্যালয়ে কাউন্টার বন্ধ",
+    "Revised counter hours for {svc}": "{svc}-এর কাউন্টার সময় পরিবর্তন",
+    "System maintenance affecting {svc}": "{svc}-এ প্রভাব ফেলা সিস্টেম রক্ষণাবেক্ষণ",
+    "Suspension of express processing for {svc}": "{svc}-এর এক্সপ্রেস প্রক্রিয়াকরণ স্থগিত",
+    "Public inspection period for {svc} records": "{svc}-এর রেকর্ড জনসাধারণের পরিদর্শনের সময়কাল"
+  },
+  "notice_body_template": {
+    "Applicants for {svc} should note the dates given below. Applications already booked for the affected dates have been moved and applicants notified individually.": "{svc}-এর আবেদনকারীদের নিচের তারিখগুলো লক্ষ করার অনুরোধ করা হলো। প্রভাবিত তারিখে আগে থেকে বুক করা আবেদনগুলো সরিয়ে নেওয়া হয়েছে এবং আবেদনকারীদের আলাদাভাবে জানানো হয়েছে।"
+  },
+  "tin_names_note": "registered_name uses the name tables",
+  "misc": {"Delwar Hoque": "দেলোয়ার হোক"}
+}

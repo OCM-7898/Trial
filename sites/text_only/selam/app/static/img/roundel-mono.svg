@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-hidden="true">
+  <!-- Single-colour variant for the boarding pass and print stylesheets. -->
+  <circle cx="32" cy="32" r="31" fill="none" stroke="currentColor" stroke-width="3"/>
+  <g transform="rotate(-45 32 32)" fill="currentColor">
+    <rect x="13" y="21" width="38" height="6" rx="3"/>
+    <rect x="17" y="30" width="30" height="6" rx="3"/>
+    <rect x="21" y="39" width="22" height="6" rx="3"/>
+  </g>
+</svg>

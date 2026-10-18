@@ -1,0 +1,310 @@
+[
+ {
+  "id": 1,
+  "khatian_type": "बी.एस.",
+  "owner_name": "देलवार हक़",
+  "father_name": "मुनीर इस्लाम",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 2,
+  "khatian_type": "बी.एस.",
+  "owner_name": "देलवार हक़",
+  "father_name": "मुनीर इस्लाम",
+  "land_type": "परती"
+ },
+ {
+  "id": 3,
+  "khatian_type": "आर.एस.",
+  "owner_name": "तोफ़ज्जल दास",
+  "father_name": "देलवार महमूद",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 4,
+  "khatian_type": "आर.एस.",
+  "owner_name": "शहनाज़ भुइयाँ",
+  "father_name": "रफ़ीक़ुल रहमान",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 5,
+  "khatian_type": "सी.एस.",
+  "owner_name": "मुनीर दास",
+  "father_name": "ग़ुलाम चौधरी",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 6,
+  "khatian_type": "एस.ए.",
+  "owner_name": "मुनीर दास",
+  "father_name": "ग़ुलाम चौधरी",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 7,
+  "khatian_type": "सी.एस.",
+  "owner_name": "अमीनुल चौधरी",
+  "father_name": "देलवार मंडल",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 8,
+  "khatian_type": "सी.एस.",
+  "owner_name": "सबीना ख़ान",
+  "father_name": "फ़ारूक़ मंडल",
+  "land_type": "कृषि"
+ },
+ {
+  "id": 9,
+  "khatian_type": "आर.एस.",
+  "owner_name": "ग़ुलाम ख़ान",
+  "father_name": "तनवीर गुप्ता",
+  "land_type": "आवास"
+ },
+ {
+  "id": 10,
+  "khatian_type": "बी.एस.",
+  "owner_name": "ग़ुलाम ख़ान",
+  "father_name": "तनवीर गुप्ता",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 11,
+  "khatian_type": "सी.एस.",
+  "owner_name": "यास्मीन गुप्ता",
+  "father_name": "कमरुल रहमान",
+  "land_type": "आवास"
+ },
+ {
+  "id": 12,
+  "khatian_type": "आर.एस.",
+  "owner_name": "रेहाना दास",
+  "father_name": "शफ़ीक़ुल मंडल",
+  "land_type": "कृषि"
+ },
+ {
+  "id": 13,
+  "khatian_type": "एस.ए.",
+  "owner_name": "रेहाना दास",
+  "father_name": "शफ़ीक़ुल मंडल",
+  "land_type": "कृषि"
+ },
+ {
+  "id": 14,
+  "khatian_type": "बी.एस.",
+  "owner_name": "सबीना साहा",
+  "father_name": "मुस्तफ़ा चौधरी",
+  "land_type": "आवास"
+ },
+ {
+  "id": 15,
+  "khatian_type": "आर.एस.",
+  "owner_name": "सबीना साहा",
+  "father_name": "मुस्तफ़ा चौधरी",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 16,
+  "khatian_type": "बी.एस.",
+  "owner_name": "मुस्तफ़ा हुसैन",
+  "father_name": "अब्दुल हुसैन",
+  "land_type": "आवास"
+ },
+ {
+  "id": 17,
+  "khatian_type": "एस.ए.",
+  "owner_name": "अशरफ़ुल बेगम",
+  "father_name": "देलवार मंडल",
+  "land_type": "आवास"
+ },
+ {
+  "id": 18,
+  "khatian_type": "एस.ए.",
+  "owner_name": "अब्दुल भुइयाँ",
+  "father_name": "जशीम आलम",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 19,
+  "khatian_type": "एस.ए.",
+  "owner_name": "जहाँगीर हक़",
+  "father_name": "तोफ़ज्जल ख़ान",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 20,
+  "khatian_type": "आर.एस.",
+  "owner_name": "तोफ़ज्जल करीम",
+  "father_name": "कमरुल बेगम",
+  "land_type": "परती"
+ },
+ {
+  "id": 21,
+  "khatian_type": "बी.एस.",
+  "owner_name": "तोफ़ज्जल करीम",
+  "father_name": "कमरुल बेगम",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 22,
+  "khatian_type": "आर.एस.",
+  "owner_name": "ख़ालिद अख़्तर",
+  "father_name": "हबीबुर हक़",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 23,
+  "khatian_type": "एस.ए.",
+  "owner_name": "जहाँआरा बरुआ",
+  "father_name": "महबूब दास",
+  "land_type": "परती"
+ },
+ {
+  "id": 24,
+  "khatian_type": "बी.एस.",
+  "owner_name": "जहाँआरा बरुआ",
+  "father_name": "महबूब दास",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 25,
+  "khatian_type": "आर.एस.",
+  "owner_name": "रुक़ैया करीम",
+  "father_name": "रेज़ाउल सिद्दीक़",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 26,
+  "khatian_type": "एस.ए.",
+  "owner_name": "कोहिनूर आलम",
+  "father_name": "ख़ालिद दास",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 27,
+  "khatian_type": "सी.एस.",
+  "owner_name": "कोहिनूर आलम",
+  "father_name": "ख़ालिद दास",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 28,
+  "khatian_type": "आर.एस.",
+  "owner_name": "फ़ारूक़ रॉय",
+  "father_name": "तोफ़ज्जल मोल्ला",
+  "land_type": "आवास"
+ },
+ {
+  "id": 29,
+  "khatian_type": "एस.ए.",
+  "owner_name": "लुत्फ़ा महमूद",
+  "father_name": "तनवीर रहमान",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 30,
+  "khatian_type": "एस.ए.",
+  "owner_name": "लुत्फ़ा महमूद",
+  "father_name": "तनवीर रहमान",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 31,
+  "khatian_type": "आर.एस.",
+  "owner_name": "शहीदुल हक़",
+  "father_name": "अब्दुल ख़ान",
+  "land_type": "परती"
+ },
+ {
+  "id": 32,
+  "khatian_type": "आर.एस.",
+  "owner_name": "शहीदुल हक़",
+  "father_name": "अब्दुल ख़ान",
+  "land_type": "परती"
+ },
+ {
+  "id": 33,
+  "khatian_type": "सी.एस.",
+  "owner_name": "रेज़ाउल हक़",
+  "father_name": "नज़रुल महमूद",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 34,
+  "khatian_type": "एस.ए.",
+  "owner_name": "रेज़ाउल ख़ान",
+  "father_name": "रफ़ीक़ुल चौधरी",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 35,
+  "khatian_type": "एस.ए.",
+  "owner_name": "रेज़ाउल ख़ान",
+  "father_name": "रफ़ीक़ुल चौधरी",
+  "land_type": "आवास"
+ },
+ {
+  "id": 36,
+  "khatian_type": "बी.एस.",
+  "owner_name": "कोहिनूर गुप्ता",
+  "father_name": "रेज़ाउल बरुआ",
+  "land_type": "परती"
+ },
+ {
+  "id": 37,
+  "khatian_type": "एस.ए.",
+  "owner_name": "कोहिनूर गुप्ता",
+  "father_name": "रेज़ाउल बरुआ",
+  "land_type": "आवास"
+ },
+ {
+  "id": 38,
+  "khatian_type": "एस.ए.",
+  "owner_name": "अनवर सिद्दीक़",
+  "father_name": "नूरुल चौधरी",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 39,
+  "khatian_type": "सी.एस.",
+  "owner_name": "रेहाना रहमान",
+  "father_name": "ज़ाहिद भुइयाँ",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 40,
+  "khatian_type": "आर.एस.",
+  "owner_name": "अब्दुल आलम",
+  "father_name": "कमरुल बरुआ",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 41,
+  "khatian_type": "सी.एस.",
+  "owner_name": "अब्दुल आलम",
+  "father_name": "कमरुल बरुआ",
+  "land_type": "आवास"
+ },
+ {
+  "id": 42,
+  "khatian_type": "आर.एस.",
+  "owner_name": "दिलरुबा आलम",
+  "father_name": "नज़रुल मियाँ",
+  "land_type": "तालाब"
+ },
+ {
+  "id": 43,
+  "khatian_type": "आर.एस.",
+  "owner_name": "दिलरुबा आलम",
+  "father_name": "नज़रुल मियाँ",
+  "land_type": "बाग़"
+ },
+ {
+  "id": 44,
+  "khatian_type": "बी.एस.",
+  "owner_name": "ज़ाहिद रहमान",
+  "father_name": "महबूब रहमान",
+  "land_type": "आवास"
+ }
+]

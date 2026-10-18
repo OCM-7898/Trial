@@ -1,0 +1,2180 @@
+[
+ {
+  "id": "visual-001",
+  "site": "ministore",
+  "intent": "₹१०६१.६५ कीमत वाला AmazonBasics का टाइप-C से HDMI अडैप्टर १ खरीदकर '२२ बर्च वे, डेनवर, ८००१४' पर भेजें। चेकआउट पूरा करें ताकि ऑर्डर सचमुच प्लेस हो जाए। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%२२ बर्च वे, डेनवर, ८००१४%",
+    "items": {
+     "1": 1
+    },
+    "total": 1061.65
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=२२ बर्च वे, डेनवर, ८००१४",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-002",
+  "site": "ministore",
+  "intent": "मुझे ₹१६९९.१५ कीमत वाला Amazon Brand - Solimo का नॉन स्टिक हांडी एक चाहिए, डिलीवरी '९ सीडर कोर्ट, पोर्टलैंड, ९७२०५' पर। एक ही ऑर्डर में पूरा चेकआउट करके ऑर्डर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%९ सीडर कोर्ट, पोर्टलैंड, ९७२०५%",
+    "items": {
+     "301": 1
+    },
+    "total": 1699.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/301",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=९ सीडर कोर्ट, पोर्टलैंड, ९७२०५",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-003",
+  "site": "ministore",
+  "intent": "'३१० एल्म रोड, मैडिसन, ५३७०३' को शिपिंग पते के रूप में इस्तेमाल करते हुए ₹१०१९.१५ कीमत वाला AmazonBasics का विनाइल 4 पाउंड डम्बल एक का ऑर्डर दें और चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%३१० एल्म रोड, मैडिसन, ५३७०३%",
+    "items": {
+     "604": 1
+    },
+    "total": 1019.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/604",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=३१० एल्म रोड, मैडिसन, ५३७०३",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-004",
+  "site": "ministore",
+  "intent": "एक ही ऑर्डर में ₹५५२४.१५ कीमत वाला Amazon Basics का एरिया रग १ खरीदें, शिपिंग पता '४१ मेपल स्ट्रीट, रीनो, ८९५०१'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%४१ मेपल स्ट्रीट, रीनो, ८९५०१%",
+    "items": {
+     "852": 1
+    },
+    "total": 5524.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/852",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=४१ मेपल स्ट्रीट, रीनो, ८९५०१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-005",
+  "site": "ministore",
+  "intent": "बगीचा श्रेणी का विकर प्लांटर १ खरीदकर '६८ विलो ड्राइव, बॉइज़ी, ८३७०२' पर भेजें। चेकआउट पूरा करें ताकि ऑर्डर सचमुच प्लेस हो जाए। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%६८ विलो ड्राइव, बॉइज़ी, ८३७०२%",
+    "items": {
+     "1261": 1
+    },
+    "total": 2549.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1261",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=६८ विलो ड्राइव, बॉइज़ी, ८३७०२",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-006",
+  "site": "ministore",
+  "intent": "मुझे पालतू श्रेणी का कुत्ते का कॉलर एक चाहिए, डिलीवरी '७ जूनिपर एवेन्यू, सेलम, ९७३०१' पर। एक ही ऑर्डर में पूरा चेकआउट करके ऑर्डर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%७ जूनिपर एवेन्यू, सेलम, ९७३०१%",
+    "items": {
+     "1791": 1
+    },
+    "total": 679.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1791",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=७ जूनिपर एवेन्यू, सेलम, ९७३०१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-007",
+  "site": "ministore",
+  "intent": "'१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१' को शिपिंग पते के रूप में इस्तेमाल करते हुए 'काला' रंग का AmazonBasics का वज़न स्केल एक का ऑर्डर दें और चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१%",
+    "items": {
+     "2026": 1
+    },
+    "total": 849.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2026",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-008",
+  "site": "ministore",
+  "intent": "एक ही ऑर्डर में 'नारंगी' रंग का AmazonBasics का स्पीकर कवर १ खरीदें, शिपिंग पता '२६ पॉपलर लेन, फ़्रेस्नो, ९३६५०'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%२६ पॉपलर लेन, फ़्रेस्नो, ९३६५०%",
+    "items": {
+     "7": 1
+    },
+    "total": 1274.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/7",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=२६ पॉपलर लेन, फ़्रेस्नो, ९३६५०",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-009",
+  "site": "ministore",
+  "intent": "खेल-कूद श्रेणी का सबसे सस्ता उत्पाद (श्रेणी को कीमत के अनुसार क्रमबद्ध करें) १ खरीदकर '८८ लॉरेल स्ट्रीट, टक्सन, ८५७०१' पर भेजें। चेकआउट पूरा करें ताकि ऑर्डर सचमुच प्लेस हो जाए। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%८८ लॉरेल स्ट्रीट, टक्सन, ८५७०१%",
+    "items": {
+     "726": 1
+    },
+    "total": 339.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A4%96%E0%A5%87%E0%A4%B2-%E0%A4%95%E0%A5%82%E0%A4%A6?sort=price_asc",
+   "goto /product/726",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=८८ लॉरेल स्ट्रीट, टक्सन, ८५७०१",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-010",
+  "site": "ministore",
+  "intent": "मुझे पालतू श्रेणी का सबसे ज़्यादा रिव्यू वाला उत्पाद एक चाहिए, डिलीवरी '१३ सिकामोर रोड, एक्रन, ४४३०१' पर। एक ही ऑर्डर में पूरा चेकआउट करके ऑर्डर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%१३ सिकामोर रोड, एक्रन, ४४३०१%",
+    "items": {
+     "1911": 1
+    },
+    "total": 296.65
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%A4%E0%A5%82?sort=reviews",
+   "goto /product/1911",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=१३ सिकामोर रोड, एक्रन, ४४३०१",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-011",
+  "site": "ministore",
+  "intent": "₹६३६.६५ कीमत वाला AmazonBasics का कार चार्जर खरीदें, मात्रा २, डिलीवरी पता '५५ मैग्नोलिया कोर्ट, बोका, ३३४२७'; सुनिश्चित करें कि ऑर्डर वाकई प्लेस हो। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%५५ मैग्नोलिया कोर्ट, बोका, ३३४२७%",
+    "items": {
+     "2": 2
+    },
+    "total": 1273.3
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=५५ मैग्नोलिया कोर्ट, बोका, ३३४२७",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-012",
+  "site": "ministore",
+  "intent": "एक ही ऑर्डर में किराना श्रेणी का सैल्मन फ़िले ३ खरीदें, शिपिंग पता '२ हिकरी वे, प्रोवो, ८४६०१'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%२ हिकरी वे, प्रोवो, ८४६०१%",
+    "items": {
+     "2277": 3
+    },
+    "total": 2547.45
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2277",
+   "fill 1 qty=3",
+   "goto /checkout",
+   "fill 1 address=२ हिकरी वे, प्रोवो, ८४६०१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-013",
+  "site": "ministore",
+  "intent": "'ग्रे' रंग का AmazonBasics का ट्रैवल कैरियर २ यूनिट एक ऑर्डर में खरीदें, '७१ एल्डर ड्राइव, चिको, ९५९२६' पर शिप करें। चेकआउट पूरा करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%७१ एल्डर ड्राइव, चिको, ९५९२६%",
+    "items": {
+     "1792": 2
+    },
+    "total": 3908.3
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1792",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=७१ एल्डर ड्राइव, चिको, ९५९२६",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-014",
+  "site": "ministore",
+  "intent": "₹४६६.६५ कीमत वाला AmazonBasics का हेवी-वेट प्लास्टिक चम्मच और ₹७६४.१५ कीमत वाला AmazonFresh का बीन कॉफ़ी (हर एक १) कार्ट में डालें और एक ऑर्डर के रूप में '३४ रेडवुड एवेन्यू, डेविस, ९५६१६' पर चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%३४ रेडवुड एवेन्यू, डेविस, ९५६१६%",
+    "items": {
+     "302": 1,
+     "2273": 1
+    },
+    "total": 1230.8
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/302",
+   "fill 1 qty=1",
+   "goto /product/2273",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=३४ रेडवुड एवेन्यू, डेविस, ९५६१६",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-015",
+  "site": "ministore",
+  "intent": "मुझे खेल-कूद श्रेणी का रबर पज़ल मैट और पालतू श्रेणी का पेट ट्रेनिंग पैड हर एक १ '९६ साइप्रस स्ट्रीट, टेम्पी, ८५२८१' पर एक ही शिपमेंट में चाहिए; वह ऑर्डर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%९६ साइप्रस स्ट्रीट, टेम्पी, ८५२८१%",
+    "items": {
+     "607": 1,
+     "1795": 1
+    },
+    "total": 3143.3
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/607",
+   "fill 1 qty=1",
+   "goto /product/1795",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=९६ साइप्रस स्ट्रीट, टेम्पी, ८५२८१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-016",
+  "site": "ministore",
+  "intent": "एक ही ऑर्डर में 'सफ़ेद' रंग का Rivet का प्लग-इन लैंप १ और ₹७६४९.१५ कीमत वाला AmazonBasics का कमर्शियल पेटियो हीटर १ खरीदें, शिपिंग पता '१३ डिटूर ड्राइव, मोबील, ३६६०२'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%१३ डिटूर ड्राइव, मोबील, ३६६०२%",
+    "items": {
+     "871": 1,
+     "1253": 1
+    },
+    "total": 10453.3
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/871",
+   "fill 1 qty=1",
+   "goto /product/1253",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=१३ डिटूर ड्राइव, मोबील, ३६६०२",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-017",
+  "site": "ministore",
+  "intent": "सबटोटल कम से कम ₹८५००.०० पहुँचाने के लिए ₹१५२९.१५ कीमत वाला AmazonBasics Licensing का इनक्लाइंड सॉर्टर की जितनी इकाइयाँ ज़रूरी हैं, उतनी ही (सबसे कम संख्या) ऑर्डर करें, शिपिंग पता '४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड%",
+    "items": {
+     "2039": 6
+    },
+    "total": 9174.9
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2039",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-018",
+  "site": "ministore",
+  "intent": "सबटोटल कम से कम ₹८५००.०० पहुँचाने के लिए रसोई श्रेणी का मेज़ालूना बोर्ड की जितनी इकाइयाँ ज़रूरी हैं, उतनी ही (सबसे कम संख्या) ऑर्डर करें, शिपिंग पता '५ हार्बर लेन, ऑस्टिन, ७८७०१'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%५ हार्बर लेन, ऑस्टिन, ७८७०१%",
+    "items": {
+     "335": 6
+    },
+    "total": 9174.9
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/335",
+   "fill 1 qty=6",
+   "goto /checkout",
+   "fill 1 address=५ हार्बर लेन, ऑस्टिन, ७८७०१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-019",
+  "site": "ministore",
+  "intent": "डील्स पेज पर सक्रिय कूपन कोड खोजें, फिर वह कूपन लागू करके ₹३६५४.१५ कीमत वाला AmazonBasics का अल्कलाइन बैटरी १ को '२२ बर्च वे, डेनवर, ८००१४' पर ऑर्डर करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%२२ बर्च वे, डेनवर, ८००१४%",
+    "items": {
+     "6": 1
+    },
+    "total": 3288.74
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%२२ बर्च वे, डेनवर, ८००१४%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/6",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=२२ बर्च वे, डेनवर, ८००१४",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-020",
+  "site": "ministore",
+  "intent": "डील्स पेज पर सक्रिय कूपन कोड खोजें, फिर वह कूपन लागू करके घर-गृहस्थी श्रेणी का फ़ेदर प्रिंट १ को '९ सीडर कोर्ट, पोर्टलैंड, ९७२०५' पर ऑर्डर करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%९ सीडर कोर्ट, पोर्टलैंड, ९७२०५%",
+    "items": {
+     "855": 1
+    },
+    "total": 1911.73
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%९ सीडर कोर्ट, पोर्टलैंड, ९७२०५%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/855",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=९ सीडर कोर्ट, पोर्टलैंड, ९७२०५",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-021",
+  "site": "ministore",
+  "intent": "डील्स पेज पर सक्रिय कूपन कोड खोजें, फिर वह कूपन लागू करके 'बहुरंगी' रंग का AmazonBasics का रेज़िस्टेंस बैंड कॉम्बो १ को '३१० एल्म रोड, मैडिसन, ५३७०३' पर ऑर्डर करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%३१० एल्म रोड, मैडिसन, ५३७०३%",
+    "items": {
+     "634": 1
+    },
+    "total": 1758.73
+   },
+   {
+    "type": "db_record_exists",
+    "table": "orders",
+    "match": {
+     "address": "%३१० एल्म रोड, मैडिसन, ५३७०३%",
+     "coupon_code": "SAVE10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /deals",
+   "goto /product/634",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=३१० एल्म रोड, मैडिसन, ५३७०३",
+   "fill 1 code=SAVE10",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-022",
+  "site": "ministore",
+  "intent": "रसोई श्रेणी का स्वर्ल फ्लूट ग्लास और रसोई श्रेणी का रोटी तवा की तुलना करें, और जो सस्ता है सिर्फ़ उसी का १ ऑर्डर करें, शिपिंग पता '४१ मेपल स्ट्रीट, रीनो, ८९५०१'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%४१ मेपल स्ट्रीट, रीनो, ८९५०१%",
+    "items": {
+     "305": 1
+    },
+    "total": 764.15
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 307
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/305",
+   "goto /product/307",
+   "goto /product/305",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=४१ मेपल स्ट्रीट, रीनो, ८९५०१",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-023",
+  "site": "ministore",
+  "intent": "₹४२४९.१५ कीमत वाला Astonica का लाइट पोस्ट १ को अपने खाता सेटिंग्स में सहेजे डिफ़ॉल्ट पते पर ऑर्डर करें (चेकआउट में सुझाया गया पता वैसा ही रहने दें)। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%12 ओशन एवेन्यू, टैम्पा, 33601%",
+    "items": {
+     "1264": 1
+    },
+    "total": 4249.15
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1264",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-024",
+  "site": "ministore",
+  "intent": "अपने खाता सेटिंग्स में डिफ़ॉल्ट शिपिंग पता बदलकर '४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड' करें। फिर ₹१६१४.१५ कीमत वाला AmazonBasics का ड्राई-इरेज़ बोर्ड क्लासिक १ को उसी (नए डिफ़ॉल्ट) पते पर ऑर्डर करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड%",
+    "items": {
+     "1554": 1
+    },
+    "total": 1614.15
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=४८ अपडेट बुलेवार्ड, स्प्रिंगफ़ील्ड",
+   "goto /product/1554",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-025",
+  "site": "ministore",
+  "intent": "एक ही ऑर्डर में खिलौने श्रेणी का 12\" Trouncer टी-रेक्स क्लासिक १ और ₹४६६.६५ कीमत वाला AmazonBasics का कैनरी लीगल पैड क्लासिक २ खरीदें, शिपिंग पता '१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१'। पूरा चेकआउट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१%",
+    "items": {
+     "1647": 1,
+     "1559": 2
+    },
+    "total": 2292.45
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1647",
+   "fill 1 qty=1",
+   "goto /product/1559",
+   "fill 1 qty=2",
+   "goto /checkout",
+   "fill 1 address=१५० एस्पेन प्लेस, ऑग्डेन, ८४४०१",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-026",
+  "site": "ministore",
+  "intent": "₹४६६.६५ कीमत वाला AmazonBasics का अल्कलाइन बैटरी को अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 4
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/4",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-027",
+  "site": "ministore",
+  "intent": "रसोई श्रेणी का वैक्यूम क्लीनर को अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 309
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/309",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-028",
+  "site": "ministore",
+  "intent": "'नीला' रंग का AmazonBasics का बच्चों की कुर्सियाँ को अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 872
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/872",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-029",
+  "site": "ministore",
+  "intent": "खेल-कूद श्रेणी का जायंट 4-इन-अ-रो सेट और ₹१३५९.१५ कीमत वाला AmazonFresh का कॉफ़ी 32oz बंडल को अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 610
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2278
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/610",
+   "fill 2",
+   "goto /product/2278",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-030",
+  "site": "ministore",
+  "intent": "'पीला' रंग का Amazon Brand - Jam and Honey का 12\" Wild Onez बाघ क्लासिक और किताबें-कागज़ श्रेणी का मैग्नेटिक व्हाइटबोर्ड क्लासिक को अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1649
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1563
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1649",
+   "fill 2",
+   "goto /product/1563",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-031",
+  "site": "ministore",
+  "intent": "इलेक्ट्रॉनिक्स श्रेणी का चार्जिंग केबल को अपनी विशलिस्ट से हटाएँ। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/11",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-032",
+  "site": "ministore",
+  "intent": "₹१०९६५.०० कीमत वाला Unbranded का माइक्रोवेव को अपनी विशलिस्ट से हटाएँ। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 321
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 11
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1511
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/321",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-033",
+  "site": "ministore",
+  "intent": "दफ़्तर श्रेणी को कीमत के अनुसार क्रमबद्ध करें और सबसे सस्ता दफ़्तर उत्पाद अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2060
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2059
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2072
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2112
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A4%A6%E0%A4%AB%E0%A4%BC%E0%A5%8D%E0%A4%A4%E0%A4%B0?sort=price_asc",
+   "goto /product/2060",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-034",
+  "site": "ministore",
+  "intent": "बगीचा श्रेणी में सबसे ज़्यादा रिव्यू वाला उत्पाद खोजें (सबसे ज़्यादा रिव्यू के अनुसार क्रमबद्ध करें) और उसे अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1286
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /category/%E0%A4%AC%E0%A4%97%E0%A5%80%E0%A4%9A%E0%A4%BE?sort=reviews",
+   "goto /product/1286",
+   "fill 2"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-035",
+  "site": "ministore",
+  "intent": "ऑर्डर #4 का डिलीवरी पता बदलकर '१३ डिटूर ड्राइव, मोबील, ३६६०२' करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "address",
+    "value": "१३ डिटूर ड्राइव, मोबील, ३६६०२"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/address",
+   "fill 1 address=१३ डिटूर ड्राइव, मोबील, ३६६०२"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-036",
+  "site": "ministore",
+  "intent": "ऑर्डर #4 रद्द करें (पूछे जाने पर पुष्टि करें)। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-037",
+  "site": "ministore",
+  "intent": "ऑर्डर #3 का डिलीवरी पता बदलकर '२२ बर्च वे, डेनवर, ८००१४' करें, फिर उस ऑर्डर को रद्द करें (पूछे जाने पर पुष्टि करें)। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "address",
+    "value": "२२ बर्च वे, डेनवर, ८००१४"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/3/address",
+   "fill 1 address=२२ बर्च वे, डेनवर, ८००१४",
+   "goto /order/3/cancel",
+   "fill 1"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-038",
+  "site": "ministore",
+  "intent": "ऑर्डर #4 रद्द करें, फिर संपर्क फ़ॉर्म से ऑर्डर 4 का हवाला देते हुए 'ऑर्डर 4 की अब ज़रूरत नहीं है, कृपया रद्दीकरण की पुष्टि करें।' संदेश भेजें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "4",
+     "body": "%ऑर्डर 4 की अब ज़रूरत नहीं है, कृपया रद्दीकरण की पुष्टि करें।%"
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/4/cancel",
+   "fill 1",
+   "goto /contact",
+   "fill 1 order_ref=4; message=ऑर्डर 4 की अब ज़रूरत नहीं है, कृपया रद्दीकरण की पुष्टि करें।"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-039",
+  "site": "ministore",
+  "intent": "सेटिंग्स में अपना डिफ़ॉल्ट शिपिंग पता बदलकर '९ सीडर कोर्ट, पोर्टलैंड, ९७२०५' करें, और खेल-कूद श्रेणी का Hopper पोर्टेबल कूलर को अपनी विशलिस्ट में जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "agent_smith"
+    },
+    "field": "default_address",
+    "value": "९ सीडर कोर्ट, पोर्टलैंड, ९७२०५"
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 613
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /settings",
+   "fill 1 default_address=९ सीडर कोर्ट, पोर्टलैंड, ९७२०५",
+   "goto /product/613",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-040",
+  "site": "ministore",
+  "intent": "'काला' रंग का Amazon Brand - Solimo का ग्रिल पैन १ को '३१० एल्म रोड, मैडिसन, ५३७०३' पर ऑर्डर करें, फिर अभी किया गया ऑर्डर रद्द करें (पूछे जाने पर पुष्टि करें)। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%३१० एल्म रोड, मैडिसन, ५३७०३%",
+    "items": {
+     "310": 1
+    },
+    "total": 1019.15
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 5
+    },
+    "field": "status",
+    "value": "cancelled"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 3
+    },
+    "field": "status",
+    "value": "shipped"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "orders",
+    "match": {
+     "id": 4
+    },
+    "field": "status",
+    "value": "placed"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/310",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=३१० एल्म रोड, मैडिसन, ५३७०३",
+   "fill 2",
+   "goto /order/5/cancel",
+   "fill 1"
+  ],
+  "max_steps": 40,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-041",
+  "site": "ministore",
+  "intent": "₹८४९.१५ कीमत वाला Amazon Brand - Solimo का दीवार स्टिकर को अपनी विशलिस्ट में जोड़ें और उस पर 'मज़बूत फ़्रेम, आसानी से जुड़ जाता है, रंग फ़ोटो से मेल खाता है।' लिखकर ४-स्टार रिव्यू पोस्ट करें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 854
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 854,
+     "user_id": 1,
+     "stars": 4,
+     "body": "%मज़बूत फ़्रेम, आसानी से जुड़ जाता है, रंग फ़ोटो से मेल खाता है।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/854",
+   "fill 2",
+   "goto /product/854",
+   "fill 4 stars=4; body=मज़बूत फ़्रेम, आसानी से जुड़ जाता है, रंग फ़ोटो से मेल खाता है।"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-042",
+  "site": "ministore",
+  "intent": "'Zenithware' ब्रांड कितने उत्पाद बेचता है? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ऐसा कोई ब्रांड नहीं",
+     "ब्रांड नहीं",
+     "नहीं मिला",
+     "कोई उत्पाद नहीं",
+     "०",
+     "0",
+     "शून्य"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Zenithware",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-043",
+  "site": "ministore",
+  "intent": "'सेल्फ़-वॉटरिंग टाइटेनियम बुकशेल्फ़' की कीमत क्या है? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं मिला",
+     "ऐसा कोई उत्पाद नहीं",
+     "मौजूद नहीं",
+     "सूचीबद्ध नहीं",
+     "उपलब्ध नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%B8%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AB%E0%A4%BC-%E0%A4%B5%E0%A5%89%E0%A4%9F%E0%A4%B0%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%9F%E0%A4%BE%E0%A4%87%E0%A4%9F%E0%A5%87%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%20%E0%A4%AC%E0%A5%81%E0%A4%95%E0%A4%B6%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AB%E0%A4%BC",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-044",
+  "site": "ministore",
+  "intent": "चेकआउट पर कूपन कोड SAVE25 कितने प्रतिशत की छूट देता है? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "अज्ञात",
+     "अमान्य",
+     "ऐसा कोई कूपन नहीं",
+     "कूपन नहीं",
+     "नहीं मिला"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-045",
+  "site": "ministore",
+  "intent": "₹५५१.६५ कीमत वाला AmazonBasics का लिथियम CR123a 3V बैटरी १ ऑर्डर करें। अगर ऑर्डर नहीं हो सकता, तो N/A उत्तर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "स्टॉक में नहीं",
+     "ऑर्डर नहीं किया जा सकता",
+     "उपलब्ध नहीं",
+     "नहीं डाला जा सकता"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/17",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-046",
+  "site": "ministore",
+  "intent": "यूज़र 'ghost_gary' ने अपने रिव्यू में ₹२५४९.१५ कीमत वाला AmazonBasics का स्क्रीन फ़िल्टर को कितने स्टार दिए? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई रिव्यू नहीं",
+     "रिव्यू नहीं दिया",
+     "ऐसा कोई यूज़र नहीं",
+     "रेटिंग नहीं दी",
+     "रिव्यू नहीं किया"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-047",
+  "site": "ministore",
+  "intent": "किराना श्रेणी में ₹४२.५० से कम कीमत का कोई भी उत्पाद खोजें और उसका नाम बताएँ। अगर साइट से यह तय न हो सके, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "कोई उत्पाद नहीं",
+     "एक भी नहीं",
+     "नहीं मिला",
+     "उत्पाद नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /category/%E0%A4%95%E0%A4%BF%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A4%BE?sort=price_asc",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-048",
+  "site": "ministore",
+  "intent": "ऑर्डर #9 की वर्तमान स्थिति क्या है? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ऐसा कोई ऑर्डर नहीं",
+     "ऑर्डर नहीं",
+     "नहीं मिला",
+     "मौजूद नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /orders",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-049",
+  "site": "ministore",
+  "intent": "ऑर्डर #2 में आपने खिलौने श्रेणी का मिनी टिन क्लासिक कितनी मात्रा में खरीदा? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं था",
+     "नहीं खरीदा",
+     "०",
+     "0",
+     "शून्य",
+     "शामिल नहीं",
+     "ऑर्डर में नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /order/2",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-050",
+  "site": "ministore",
+  "intent": "चेकआउट पर कूपन कोड FREESHIP अभी कितने प्रतिशत की छूट देता है? अगर कूपन समाप्त हो चुका है या अब छूट नहीं देता, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "समाप्त",
+     "अब छूट नहीं",
+     "सक्रिय नहीं",
+     "निष्क्रिय",
+     "0%",
+     "०%"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-051",
+  "site": "ministore",
+  "intent": "'बिल्ली का स्क्रैचर लाउंजर Ultra' की कितनी इकाइयाँ स्टॉक में हैं? अगर साइट से यह तय न हो सके, तो N/A उत्तर दें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "नहीं मिला",
+     "ऐसा कोई उत्पाद नहीं",
+     "मौजूद नहीं",
+     "सूचीबद्ध नहीं",
+     "उत्पाद नहीं"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%AC%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%80%20%E0%A4%95%E0%A4%BE%20%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%88%E0%A4%9A%E0%A4%B0%20%E0%A4%B2%E0%A4%BE%E0%A4%89%E0%A4%82%E0%A4%9C%E0%A4%B0",
+   "stop N/A"
+  ],
+  "max_steps": 30,
+  "difficulty": "hard"
+ },
+ {
+  "id": "visual-052",
+  "site": "ministore",
+  "intent": "इलेक्ट्रॉनिक्स श्रेणी का वायरलेस कंप्यूटर माउस के उत्पाद पेज पर प्रश्न और उत्तर अनुभाग है। वहाँ विक्रेता के उत्तर के अनुसार इसके साथ कितने महीने की वारंटी मिलती है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "३"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B2%E0%A5%87%E0%A4%B8%20%E0%A4%95%E0%A4%82%E0%A4%AA%E0%A5%8D%E0%A4%AF%E0%A5%82%E0%A4%9F%E0%A4%B0%20%E0%A4%AE%E0%A4%BE%E0%A4%89%E0%A4%B8%2C%20%E0%A4%AF%E0%A5%82%E0%A4%8F%E0%A4%B8%E0%A4%AC%E0%A5%80%20%E0%A4%A8%E0%A5%88%E0%A4%A8%E0%A5%8B%20%E0%A4%B0%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%B5%E0%A4%B0%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "goto /product/52",
+   "stop 3 months"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-053",
+  "site": "ministore",
+  "intent": "'काला' रंग का AmazonBasics का एक्सटेंशन कॉर्ड के उत्पाद पेज के प्रश्न और उत्तर अनुभाग के अनुसार स्टैंडर्ड डिलीवरी में कितने कार्यदिवस लगते हैं?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "४"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%8F%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%9F%E0%A5%87%E0%A4%82%E0%A4%B6%E0%A4%A8%20%E0%A4%95%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%A1-%205%20M%20UK%2C%20%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE",
+   "goto /product/31",
+   "stop 4 business days"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-054",
+  "site": "ministore",
+  "intent": "₹२८०४.१५ कीमत वाला Unbranded का Technoline BC 700 सेट के प्रश्न और उत्तर अनुभाग में कितने प्रश्न सूचीबद्ध हैं?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4",
+     "४"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Technoline%20BC%20700%20%E0%A4%B8%E0%A5%87%E0%A4%9F%2C%20%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE",
+   "goto /product/38",
+   "stop 4"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-055",
+  "site": "ministore",
+  "intent": "बगीचा श्रेणी का गैस ग्रिल कवर के उत्पाद पेज पर प्रश्न-उत्तर फ़ॉर्म से 'क्या रंग फ़ोटो से बिल्कुल मेल खाता है?' प्रश्न पूछें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 1265,
+     "user_id": 1,
+     "question": "क्या रंग फ़ोटो से बिल्कुल मेल खाता है?",
+     "answer": ""
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/1265",
+   "fill 3 question=क्या रंग फ़ोटो से बिल्कुल मेल खाता है?"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-056",
+  "site": "ministore",
+  "intent": "'काला' रंग का AmazonBasics का पेन इंक के उत्पाद पेज पर 'क्या बदलने के पुर्ज़े ऑर्डर किए जा सकते हैं?' प्रश्न पूछें, और उस उत्पाद को अपनी विशलिस्ट में भी जोड़ें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "qa",
+    "match": {
+     "product_id": 2027,
+     "user_id": 1,
+     "question": "क्या बदलने के पुर्ज़े ऑर्डर किए जा सकते हैं?"
+    }
+   },
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 2027
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/2027",
+   "fill 3 question=क्या बदलने के पुर्ज़े ऑर्डर किए जा सकते हैं?",
+   "fill 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-057",
+  "site": "ministore",
+  "intent": "₹१८६९.१५ कीमत वाला AmazonBasics का वायरलेस शावर स्पीकर के उत्पाद पेज पर किस रिव्यूअर के रिव्यू को सबसे ज़्यादा 'उपयोगी' वोट मिले हैं? यूज़रनेम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "minimal_mia"
+    ],
+    "none_of": [
+     "bargain_ben",
+     "bookish_bea",
+     "kitchen_kat",
+     "outdoor_ollie"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%B5%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B2%E0%A5%87%E0%A4%B8%20%E0%A4%B6%E0%A4%BE%E0%A4%B5%E0%A4%B0%20%E0%A4%B8%E0%A5%8D%E0%A4%AA%E0%A5%80%E0%A4%95%E0%A4%B0%2C%205W%20%E0%A4%A1%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%87%E0%A4%B5%E0%A4%B0%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "goto /product/14",
+   "stop minimal_mia"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-058",
+  "site": "ministore",
+  "intent": "इलेक्ट्रॉनिक्स श्रेणी का कन्वर्टर केबल के उत्पाद पेज पर 'gymrat_gus' के रिव्यू को कितने लोगों ने उपयोगी पाया?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26",
+     "२६"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amazon%20Basic%20HDMI%20%E0%A4%B8%E0%A5%87%20DVI%20%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%B0%20%E0%A4%95%E0%A5%87%E0%A4%AC%E0%A4%B2%2C%20%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE",
+   "goto /product/5",
+   "stop 26"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-059",
+  "site": "ministore",
+  "intent": "'काला' रंग का AmazonBasics का पोर्टेबल ब्लूटूथ स्पीकर के उत्पाद पेज पर 'kitchen_kat' द्वारा लिखे रिव्यू का 'उपयोगी' बटन दबाएँ। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 91,
+     "user_id": 1
+    }
+   },
+   {
+    "type": "db_field_equals",
+    "table": "reviews",
+    "match": {
+     "id": 91
+    },
+    "field": "helpful",
+    "value": 1
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/20",
+   "fill 5"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-060",
+  "site": "ministore",
+  "intent": "₹११०४.१५ कीमत वाला AmazonBasics का ऑन-ईयर हेडफ़ोन के उत्पाद पेज पर सबसे ज़्यादा 'उपयोगी' वोट वाला रिव्यू खोजें और उसका 'उपयोगी' बटन दबाएँ। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "helpful_votes",
+    "match": {
+     "review_id": 103,
+     "user_id": 1
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /product/23",
+   "fill 6"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-061",
+  "site": "ministore",
+  "intent": "स्टोर अपने ब्रांड पेज पर कितने ब्रांड सूचीबद्ध करता है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "99",
+     "९९"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop 99"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-062",
+  "site": "ministore",
+  "intent": "ब्रांड पेज के अनुसार कौन सा ब्रांड ज़्यादा उत्पाद सूचीबद्ध करता है: 'Pinzon by Amazon' या 'AmazonCommercial'? ब्रांड का नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonCommercial"
+    ],
+    "none_of": [
+     "Pinzon by Amazon"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop AmazonCommercial"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-063",
+  "site": "ministore",
+  "intent": "ब्रांड पेज के अनुसार 'UMI' और 'Whole Paws' में से किसकी औसत रिव्यू रेटिंग ज़्यादा है? ब्रांड का नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Whole Paws"
+    ],
+    "none_of": [
+     "UMI"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /brands",
+   "stop Whole Paws"
+  ],
+  "max_steps": 30,
+  "difficulty": "medium"
+ },
+ {
+  "id": "visual-064",
+  "site": "ministore",
+  "intent": "इलेक्ट्रॉनिक्स श्रेणी का AMAZONBASICS का चार्जिंग केबल की कीमत क्या है? राशि बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "679.15",
+     "६७९.१५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=PlayStation%204%20%E0%A4%95%E0%A4%82%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%B2%E0%A4%B0%20%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%95%E0%A5%87%E0%A4%AC%E0%A4%B2",
+   "stop 679.15"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-065",
+  "site": "ministore",
+  "intent": "घर-गृहस्थी श्रेणी का ₹३३९९.१५ कीमत वाला क्विल्ट कंबल किस ब्रांड का है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Arendale%20%E0%A4%AE%E0%A4%BE%E0%A4%87%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%AB%E0%A4%BC%E0%A4%BE%E0%A4%87%E0%A4%AC%E0%A4%B0%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%82%E0%A4%9F%E0%A5%87%E0%A4%A1%20%E0%A4%95%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%82%E0%A4%AC%E0%A4%B2",
+   "goto /product/858",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-066",
+  "site": "ministore",
+  "intent": "खेल-कूद श्रेणी का विनाइल 2 पाउंड डम्बल की कितनी इकाइयाँ अभी स्टॉक में हैं?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12",
+     "१२"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BE%E0%A4%87%E0%A4%B2%202%20%E0%A4%AA%E0%A4%BE%E0%A4%89%E0%A4%82%E0%A4%A1%20%E0%A4%A1%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%B2",
+   "goto /product/617",
+   "stop 12"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-067",
+  "site": "ministore",
+  "intent": "कौन सा सस्ता है, रसोई श्रेणी का AmazonCommercial का कुकवेयर सेट या रसोई श्रेणी का AmazonCommercial का विनाइल दस्ताने? उत्पाद का सटीक नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "हेवी ड्यूटी पाउडर फ्री डिस्पोज़ेबल विनाइल दस्ताने"
+    ],
+    "none_of": [
+     "7-पीस स्टेनलेस स्टील इंडक्शन रेडी कुकवेयर सेट",
+     "७-पीस स्टेनलेस स्टील इंडक्शन रेडी कुकवेयर सेट"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=7-%E0%A4%AA%E0%A5%80%E0%A4%B8%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%87%E0%A4%A8%E0%A4%B2%E0%A5%87%E0%A4%B8%20%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A5%80%E0%A4%B2%20%E0%A4%87%E0%A4%82%E0%A4%A1%E0%A4%95%E0%A5%8D%E0%A4%B6%E0%A4%A8%20%E0%A4%B0%E0%A5%87%E0%A4%A1%E0%A5%80%20%E0%A4%95%E0%A5%81%E0%A4%95%E0%A4%B5%E0%A5%87%E0%A4%AF%E0%A4%B0%20%E0%A4%B8%E0%A5%87%E0%A4%9F",
+   "goto /?q=%E0%A4%B9%E0%A5%87%E0%A4%B5%E0%A5%80%20%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A5%82%E0%A4%9F%E0%A5%80%20%E0%A4%AA%E0%A4%BE%E0%A4%89%E0%A4%A1%E0%A4%B0%20%E0%A4%AB%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%A1%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%AA%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A5%87%E0%A4%AC%E0%A4%B2%20%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BE%E0%A4%87%E0%A4%B2%20%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A5%87",
+   "stop हेवी ड्यूटी पाउडर फ्री डिस्पोज़ेबल विनाइल दस्ताने"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-068",
+  "site": "ministore",
+  "intent": "इनमें से सबसे महँगा कौन सा है: इलेक्ट्रॉनिक्स श्रेणी का AmazonBasics का ईथरनेट अडैप्टर, इलेक्ट्रॉनिक्स श्रेणी का AmazonBasics का स्क्रू बल्ब, इलेक्ट्रॉनिक्स श्रेणी का Unbranded का ऑडियो स्प्लिटर? उत्पाद का सटीक नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "USB 3.0 से 10/100/1000 गीगाबिट ईथरनेट अडैप्टर",
+     "USB ३.० से १०/१००/१००० गीगाबिट ईथरनेट अडैप्टर"
+    ],
+    "none_of": [
+     "एलईडी E27 एडिसन स्क्रू बल्ब",
+     "एलईडी E२७ एडिसन स्क्रू बल्ब",
+     "5-वे ऑक्स ऑडियो स्प्लिटर, हेडफ़ोन के लिए, काला",
+     "५-वे ऑक्स ऑडियो स्प्लिटर, हेडफ़ोन के लिए, काला"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=USB%203.0%20%E0%A4%B8%E0%A5%87%2010/100/1000%20%E0%A4%97%E0%A5%80%E0%A4%97%E0%A4%BE%E0%A4%AC%E0%A4%BF%E0%A4%9F%20%E0%A4%88%E0%A4%A5%E0%A4%B0%E0%A4%A8%E0%A5%87%E0%A4%9F%20%E0%A4%85%E0%A4%A1%E0%A5%88%E0%A4%AA%E0%A5%8D%E0%A4%9F%E0%A4%B0",
+   "goto /?q=%E0%A4%8F%E0%A4%B2%E0%A4%88%E0%A4%A1%E0%A5%80%20E27%20%E0%A4%8F%E0%A4%A1%E0%A4%BF%E0%A4%B8%E0%A4%A8%20%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%82%20%E0%A4%AC%E0%A4%B2%E0%A5%8D%E0%A4%AC",
+   "goto /?q=5-%E0%A4%B5%E0%A5%87%20%E0%A4%91%E0%A4%95%E0%A5%8D%E0%A4%B8%20%E0%A4%91%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A5%8B%20%E0%A4%B8%E0%A5%8D%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A4%BF%E0%A4%9F%E0%A4%B0%2C%20%E0%A4%B9%E0%A5%87%E0%A4%A1%E0%A4%AB%E0%A4%BC%E0%A5%8B%E0%A4%A8%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%2C%20%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE",
+   "stop USB 3.0 से 10/100/1000 गीगाबिट ईथरनेट अडैप्टर"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-069",
+  "site": "ministore",
+  "intent": "₹२५४९.१५ कीमत वाला AmazonBasics का स्क्रीन फ़िल्टर के कितने रिव्यू हैं?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "25",
+     "२५"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A4%B8%E0%A5%8D%E0%A4%B2%E0%A4%BF%E0%A4%AE%20%E0%A4%AE%E0%A5%88%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A5%87%E0%A4%9F%E0%A4%BF%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%87%E0%A4%B5%E0%A5%87%E0%A4%B8%E0%A5%80%20%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%A8%20%E0%A4%AB%E0%A4%BC%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%9F%E0%A4%B0%2C%2013%20%E0%A4%87%E0%A4%82%E0%A4%9A%20MacBook%20Air%202018%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F",
+   "goto /product/53",
+   "stop 25"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-070",
+  "site": "ministore",
+  "intent": "₹१९११.६५ कीमत वाला AmazonBasics का बाउल सेट के कितने १-स्टार रिव्यू हैं?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "२"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=10-%E0%A4%AA%E0%A5%80%E0%A4%B8%20%E0%A4%AE%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AC%E0%A4%BE%E0%A4%89%E0%A4%B2%20%E0%A4%B8%E0%A5%87%E0%A4%9F%2C%20%E0%A4%A2%E0%A4%95%E0%A5%8D%E0%A4%95%E0%A4%A8%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A5",
+   "goto /product/489",
+   "stop 2"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-071",
+  "site": "ministore",
+  "intent": "₹२५४९.१५ कीमत वाला AmazonBasics का स्क्रीन फ़िल्टर के लिए दिखाई गई औसत स्टार रेटिंग क्या है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3.4",
+     "३.४"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/53",
+   "stop 3.4"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-072",
+  "site": "ministore",
+  "intent": "किसकी औसत स्टार रेटिंग ज़्यादा है: रसोई श्रेणी का ट्रेडिशनल हाईबॉल ग्लास या ₹१९११.६५ कीमत वाला AmazonBasics का बाउल सेट? उत्पाद का सटीक नाम बताएँ।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10-पीस मिक्सिंग बाउल सेट, ढक्कन के साथ",
+     "१०-पीस मिक्सिंग बाउल सेट, ढक्कन के साथ"
+    ],
+    "none_of": [
+     "ट्रेडिशनल हाईबॉल ग्लास"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/421",
+   "goto /product/489",
+   "stop 10-पीस मिक्सिंग बाउल सेट, ढक्कन के साथ"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-073",
+  "site": "ministore",
+  "intent": "डील्स पेज पर सूचीबद्ध अभी सक्रिय कूपन कोड क्या है?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SAVE10"
+    ],
+    "none_of": [
+     "WELCOME5",
+     "FREESHIP"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /deals",
+   "stop SAVE10"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-074",
+  "site": "ministore",
+  "intent": "किराना श्रेणी का एस्प्रेसो पॉड पर 'ताज़ा पहुँचा और पैकेजिंग भी ठीक रही।' लिखकर ५-स्टार रिव्यू लिखें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "reviews",
+    "match": {
+     "product_id": 2287,
+     "user_id": 1,
+     "stars": 5,
+     "body": "%ताज़ा पहुँचा और पैकेजिंग भी ठीक रही।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=50%20Ct.%20Solimo%20%E0%A4%8F%E0%A4%B8%E0%A5%8D%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B8%E0%A5%8B%20%E0%A4%AA%E0%A5%89%E0%A4%A1",
+   "goto /product/2287",
+   "fill 4 stars=5; body=ताज़ा पहुँचा और पैकेजिंग भी ठीक रही।"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ },
+ {
+  "id": "visual-075",
+  "site": "ministore",
+  "intent": "संपर्क फ़ॉर्म से ऑर्डर 2 का हवाला देते हुए 'ऑर्डर 2 में एक वस्तु गायब थी, कृपया बताएँ।' संदेश भेजें। ज़रूरत हो तो agent_smith (पासवर्ड: password123) के रूप में लॉग इन करें।",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "user_id": 1,
+     "order_ref": "2",
+     "body": "%ऑर्डर 2 में एक वस्तु गायब थी, कृपया बताएँ।%"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /contact",
+   "fill 1 order_ref=2; message=ऑर्डर 2 में एक वस्तु गायब थी, कृपया बताएँ।"
+  ],
+  "max_steps": 30,
+  "difficulty": "easy"
+ }
+]

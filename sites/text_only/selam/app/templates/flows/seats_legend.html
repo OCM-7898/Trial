@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("seats.legend_title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("seats.legend_title")) }}
+<p>{{ t("seats.legend_intro") }}</p>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("seats.characteristic") }}</th><th scope="col">{{ t("dining.description") }}</th></tr></thead>
+  <tbody>
+    <tr><td>{{ t("seats.window") }}</td><td>{{ t("seats.window_desc") }}</td></tr>
+    <tr><td>{{ t("seats.aisle") }}</td><td>{{ t("seats.aisle_desc") }}</td></tr>
+    <tr><td>{{ t("seats.exit_row") }}</td><td>{{ t("seats.exit_desc") }}</td></tr>
+    <tr><td>{{ t("seats.bulkhead") }}</td><td>{{ t("seats.bulkhead_desc") }}</td></tr>
+    <tr><td>{{ t("seats.bassinet") }}</td><td>{{ t("seats.bassinet_desc") }}</td></tr>
+  </tbody>
+</table></div>
+<p><a class="btn btn-primary" href="{{ path('seats', pnr=booking.pnr) }}">{{ t("manage.choose_seats") }}</a></p>
+</div>{% endblock %}

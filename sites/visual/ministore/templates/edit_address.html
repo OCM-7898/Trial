@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ S.edit_addr_title }}{% endblock %}
+{% block content %}
+<h2>{{ S.edit_addr_h.format(id=o.id) }}</h2>
+{% if error %}<p class="error">{{ error }}</p>
+<p><a href="/order/{{ o.id }}">{{ S.back_to_order }}</a></p>
+{% else %}
+<p>{{ S.current_addr }} <strong>{{ o.address }}</strong></p>
+<form method="post" action="/order/{{ o.id }}/address">
+  <label>{{ S.new_addr_label }}<br><input name="address" style="width:420px" value="{{ o.address }}"></label><br><br>
+  <button class="btn">{{ S.update_addr_btn }}</button>
+</form>
+{% endif %}
+{% endblock %}

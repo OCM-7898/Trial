@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ S.report_title }}{% endblock %}
+{% block content %}
+<h1>{{ S.report_title }}</h1>
+<div class="card">
+  <div class="meta">f/{{ p.forum_name }} · {{ S.posted_by }} {{ p.username }}</div>
+  <h2><a href="/post/{{ p.id }}">{{ p.title }}</a></h2>
+</div>
+{% if sent %}<div class="notice">{{ S.report_sent }}</div>{% endif %}
+<div class="card">
+<form class="stack" method="post" action="/post/{{ p.id }}/report">
+  <label>{{ S.report_reason }}</label>
+  <select name="reason">
+    {% for val, lbl in [("Spam", S.reason_spam), ("Harassment", S.reason_harassment), ("Misinformation", S.reason_misinfo), ("Off-topic", S.reason_offtopic)] %}
+    <option value="{{ val }}">{{ lbl }}</option>
+    {% endfor %}
+  </select>
+  <label>{{ S.report_details }}</label>
+  <textarea name="details"></textarea>
+  <button>{{ S.report_btn }}</button>
+</form>
+</div>
+{% endblock %}

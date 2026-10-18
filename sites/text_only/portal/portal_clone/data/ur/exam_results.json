@@ -1,0 +1,422 @@
+[
+ {
+  "id": 1,
+  "candidate_name": "دلاور حق",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 2,
+  "candidate_name": "دلاور حق",
+  "institution": "گورنمنٹ کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 3,
+  "candidate_name": "توفضل داس",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 4,
+  "candidate_name": "توفضل داس",
+  "institution": "سٹی کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 5,
+  "candidate_name": "شہناز بھوئیاں",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 6,
+  "candidate_name": "شہناز بھوئیاں",
+  "institution": "آئیڈیل کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 7,
+  "candidate_name": "منیر داس",
+  "institution": "آئیڈیل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 8,
+  "candidate_name": "منیر داس",
+  "institution": "سٹی کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 9,
+  "candidate_name": "امینل چودھری",
+  "institution": "آئیڈیل ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 10,
+  "candidate_name": "امینل چودھری",
+  "institution": "سٹی کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 11,
+  "candidate_name": "ثبینہ خان",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 12,
+  "candidate_name": "ثبینہ خان",
+  "institution": "گورنمنٹ کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 13,
+  "candidate_name": "غلام خان",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 14,
+  "candidate_name": "غلام خان",
+  "institution": "آئیڈیل کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 15,
+  "candidate_name": "یاسمین گپتا",
+  "institution": "آئیڈیل ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 16,
+  "candidate_name": "یاسمین گپتا",
+  "institution": "آئیڈیل کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 17,
+  "candidate_name": "ریحانہ داس",
+  "institution": "آئیڈیل ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 18,
+  "candidate_name": "ریحانہ داس",
+  "institution": "گورنمنٹ کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 19,
+  "candidate_name": "ثبینہ ساہا",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 20,
+  "candidate_name": "ثبینہ ساہا",
+  "institution": "سٹی کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 21,
+  "candidate_name": "مصطفیٰ حسین",
+  "institution": "گورنمنٹ ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 22,
+  "candidate_name": "مصطفیٰ حسین",
+  "institution": "ماڈل کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 23,
+  "candidate_name": "اشرفل بیگم",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 24,
+  "candidate_name": "اشرفل بیگم",
+  "institution": "ماڈل کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 25,
+  "candidate_name": "عبدال بھوئیاں",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 26,
+  "candidate_name": "عبدال بھوئیاں",
+  "institution": "آئیڈیل کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 27,
+  "candidate_name": "جہانگیر حق",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 28,
+  "candidate_name": "جہانگیر حق",
+  "institution": "آئیڈیل کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 29,
+  "candidate_name": "توفضل کریم",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 30,
+  "candidate_name": "توفضل کریم",
+  "institution": "ماڈل کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 31,
+  "candidate_name": "خالد اختر",
+  "institution": "گورنمنٹ ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 32,
+  "candidate_name": "خالد اختر",
+  "institution": "سٹی کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 33,
+  "candidate_name": "جہاں آرا بڑوا",
+  "institution": "گورنمنٹ ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 34,
+  "candidate_name": "جہاں آرا بڑوا",
+  "institution": "سٹی کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 35,
+  "candidate_name": "رقیہ کریم",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 36,
+  "candidate_name": "رقیہ کریم",
+  "institution": "سٹی کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 37,
+  "candidate_name": "کوہ نور عالم",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 38,
+  "candidate_name": "کوہ نور عالم",
+  "institution": "گورنمنٹ کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 39,
+  "candidate_name": "فاروق رائے",
+  "institution": "گورنمنٹ ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 40,
+  "candidate_name": "فاروق رائے",
+  "institution": "سٹی کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 41,
+  "candidate_name": "لطفہ محمود",
+  "institution": "آئیڈیل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 42,
+  "candidate_name": "لطفہ محمود",
+  "institution": "آئیڈیل کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 43,
+  "candidate_name": "شہیدل حق",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 44,
+  "candidate_name": "شہیدل حق",
+  "institution": "ماڈل کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 45,
+  "candidate_name": "رضاءل حق",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 46,
+  "candidate_name": "رضاءل حق",
+  "institution": "گورنمنٹ کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 47,
+  "candidate_name": "رضاءل خان",
+  "institution": "گورنمنٹ ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 48,
+  "candidate_name": "رضاءل خان",
+  "institution": "ماڈل کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 49,
+  "candidate_name": "کوہ نور گپتا",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 50,
+  "candidate_name": "کوہ نور گپتا",
+  "institution": "گورنمنٹ کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 51,
+  "candidate_name": "انور صدیق",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 52,
+  "candidate_name": "انور صدیق",
+  "institution": "سٹی کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 53,
+  "candidate_name": "ریحانہ رحمٰن",
+  "institution": "ماڈل ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 54,
+  "candidate_name": "ریحانہ رحمٰن",
+  "institution": "سٹی کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 55,
+  "candidate_name": "عبدال عالم",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 56,
+  "candidate_name": "عبدال عالم",
+  "institution": "آئیڈیل کالج",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 57,
+  "candidate_name": "دلربا عالم",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "سائنس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 58,
+  "candidate_name": "دلربا عالم",
+  "institution": "آئیڈیل کالج",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 59,
+  "candidate_name": "زاہد رحمٰن",
+  "institution": "سٹی ہائی اسکول",
+  "group_name": "کامرس",
+  "result_status": "کامیاب"
+ },
+ {
+  "id": 60,
+  "candidate_name": "زاہد رحمٰن",
+  "institution": "آئیڈیل کالج",
+  "group_name": "آرٹس",
+  "result_status": "کامیاب"
+ }
+]

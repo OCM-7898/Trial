@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "flows/_manage_page.html" import manage_page %}
+{% block title %}{{ t("contact_details.title") }}{% endblock %}
+{% block content %}<div class="wrap">
+{{ manage_page(booking, t("contact_details.title")) }}
+{% if saved %}<div class="notice notice-ok" role="status"><div>{{ t("contact_details.saved") }}</div></div>{% endif %}
+<p>{{ t("contact_details.intro") }}</p>
+<form class="searchform" method="post" novalidate>
+  <div class="field"><label for="email">{{ t("join.email") }}</label>
+    <input type="text" id="email" name="email" value="{{ booking.email }}"
+      {% if errors.get('email') %}aria-invalid="true"{% endif %}>
+    {% if errors.get('email') %}<span class="error-text">{{ errors['email'] }}</span>{% endif %}</div>
+  <div class="field"><label for="phone">{{ t("book.phone") }}</label>
+    <input type="text" id="phone" name="phone" value="{{ booking.phone }}"
+      {% if errors.get('phone') %}aria-invalid="true"{% endif %}>
+    {% if errors.get('phone') %}<span class="error-text">{{ errors['phone'] }}</span>{% endif %}</div>
+  <div class="actions"><button class="btn btn-primary" type="submit">{{ t("contact_details.save") }}</button></div>
+</form>
+</div>{% endblock %}

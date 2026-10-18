@@ -1,0 +1,2192 @@
+[
+ {
+  "id": "image-ministore-001",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘Merrill কুইন হেডবোর্ড, ডেকোরেটিভ নেইলহেড ট্রিম সহ’, ‘Bridgewater কার্ভড কুইন হেডবোর্ড’, ‘Glenwilde ফুল হেডবোর্ড’, ‘Katama স্লিপকভার কুইন হেডবোর্ড’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p921.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10798.80",
+     "10,798.80",
+     "১০৭৯৮.৮০",
+     "১০,৭৯৮.৮০"
+    ],
+    "none_of": [
+     "11998.80",
+     "11,998.80",
+     "১১৯৯৮.৮০",
+     "১১,৯৯৮.৮০",
+     "14280.00",
+     "14,280.00",
+     "১৪২৮০.০০",
+     "১৪,২৮০.০০",
+     "15480.00",
+     "15,480.00",
+     "১৫৪৮০.০০",
+     "১৫,৪৮০.০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Glenwilde%20%E0%A6%AB%E0%A7%81%E0%A6%B2%20%E0%A6%B9%E0%A7%87%E0%A6%A1%E0%A6%AC%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%A1",
+   "view 0",
+   "goto /product/1112",
+   "goto /product/919",
+   "goto /product/921",
+   "goto /product/867",
+   "stop 10798.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-002",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘Lawson মডার্ন অ্যাঙ্গেলড লেদার চেয়ার’, ‘আর্মলেস টাফটেড টার্নড কাঠের পায়ার অ্যাকসেন্ট চেয়ার’, ‘Cheyanne মডার্ন অ্যাকসেন্ট আর্ম চেয়ার’, ‘কার্ভড টাফটেড ভেলভেট অ্যাকসেন্ট চেয়ার’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p980.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "17880.00",
+     "17,880.00",
+     "১৭৮৮০.০০",
+     "১৭,৮৮০.০০"
+    ],
+    "none_of": [
+     "29880.00",
+     "29,880.00",
+     "২৯৮৮০.০০",
+     "২৯,৮৮০.০০",
+     "15480.00",
+     "15,480.00",
+     "১৫৪৮০.০০",
+     "১৫,৪৮০.০০",
+     "13080.00",
+     "13,080.00",
+     "১৩০৮০.০০",
+     "১৩,০৮০.০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cheyanne%20%E0%A6%AE%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A8%20%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%86%E0%A6%B0%E0%A7%8D%E0%A6%AE%20%E0%A6%9A%E0%A7%87%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/920",
+   "goto /product/874",
+   "goto /product/980",
+   "goto /product/953",
+   "stop 17880.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-003",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘Avondale নেইলহেড ট্রিম কুইন বেড, হেডবোর্ড সহ’, ‘কলেজ ডর্ম বেড-ইন-এ-ব্যাগ, ইলাস্টিক স্টোরেজ পকেট সহ’, ‘Fairmount ইন্ডাস্ট্রিয়াল ধাতব কিং বেড, হেডবোর্ড সহ’, ‘মডার্ন কাঠের কিং বেড’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p1113.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "27480.00",
+     "27,480.00",
+     "২৭৪৮০.০০",
+     "২৭,৪৮০.০০"
+    ],
+    "none_of": [
+     "47880.00",
+     "47,880.00",
+     "৪৭৮৮০.০০",
+     "৪৭,৮৮০.০০",
+     "8398.80",
+     "8,398.80",
+     "৮৩৯৮.৮০",
+     "৮,৩৯৮.৮০",
+     "35880.00",
+     "35,880.00",
+     "৩৫৮৮০.০০",
+     "৩৫,৮৮০.০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Fairmount%20%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%20%E0%A6%A7%E0%A6%BE%E0%A6%A4%E0%A6%AC%20%E0%A6%95%E0%A6%BF%E0%A6%82%20%E0%A6%AC%E0%A7%87%E0%A6%A1%2C%20%E0%A6%B9%E0%A7%87%E0%A6%A1%E0%A6%AC%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%A1%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/1081",
+   "goto /product/1002",
+   "goto /product/1113",
+   "goto /product/1127",
+   "stop 27480.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-004",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘এলিভেটেড কুলিং পেট বেড ক্লাসিক’, ‘গোল পেট বেড’, ‘রেইজড পেট বেড’, ‘ফোম পেট বেড, বিড়াল বা কুকুরের জন্য’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p2003.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3598.80",
+     "3,598.80",
+     "৩৫৯৮.৮০",
+     "৩,৫৯৮.৮০"
+    ],
+    "none_of": [
+     "2398.80",
+     "2,398.80",
+     "২৩৯৮.৮০",
+     "২,৩৯৮.৮০",
+     "2758.80",
+     "2,758.80",
+     "২৭৫৮.৮০",
+     "২,৭৫৮.৮০",
+     "1798.80",
+     "1,798.80",
+     "১৭৯৮.৮০",
+     "১,৭৯৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%8F%E0%A6%B2%E0%A6%BF%E0%A6%AD%E0%A7%87%E0%A6%9F%E0%A7%87%E0%A6%A1%20%E0%A6%95%E0%A7%81%E0%A6%B2%E0%A6%BF%E0%A6%82%20%E0%A6%AA%E0%A7%87%E0%A6%9F%20%E0%A6%AC%E0%A7%87%E0%A6%A1%20%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%95",
+   "view 0",
+   "goto /product/2003",
+   "goto /product/1958",
+   "goto /product/1974",
+   "goto /product/1775",
+   "stop 3598.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-005",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘গেমিং চ্যাট হেডসেট, PlayStation 4-এর জন্য, মাইক্রোফোন সহ’, ‘PlayStation 3 ওয়্যার্ড ইউএসবি চ্যাট হেডসেট’, ‘গেমিং হেডসেট, মাইক্রোফোন সহ, PC-র জন্য’, ‘প্রো গেমিং হেডসেট’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p240.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2398.80",
+     "2,398.80",
+     "২৩৯৮.৮০",
+     "২,৩৯৮.৮০"
+    ],
+    "none_of": [
+     "2998.80",
+     "2,998.80",
+     "২৯৯৮.৮০",
+     "২,৯৯৮.৮০",
+     "1558.80",
+     "1,558.80",
+     "১৫৫৮.৮০",
+     "১,৫৫৮.৮০",
+     "4798.80",
+     "4,798.80",
+     "৪৭৯৮.৮০",
+     "৪,৭৯৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%97%E0%A7%87%E0%A6%AE%E0%A6%BF%E0%A6%82%20%E0%A6%B9%E0%A7%87%E0%A6%A1%E0%A6%B8%E0%A7%87%E0%A6%9F%2C%20%E0%A6%AE%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%AB%E0%A7%8B%E0%A6%A8%20%E0%A6%B8%E0%A6%B9%2C%20PC-%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF",
+   "view 0",
+   "goto /product/86",
+   "goto /product/74",
+   "goto /product/240",
+   "goto /product/171",
+   "stop 2398.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-006",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘মাইক্রোফাইবার ফ্ল্যাট শিট’, ‘প্রিমিয়াম মাইক্রোফাইবার ফ্ল্যাট শিট’, ‘400 থ্রেড কাউন্ট শিট সেট’, ‘400TC সুতির সাটিন রিংকল ফ্রি ফ্ল্যাট শিট’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p1096.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1438.80",
+     "1,438.80",
+     "১৪৩৮.৮০",
+     "১,৪৩৮.৮০"
+    ],
+    "none_of": [
+     "1558.80",
+     "1,558.80",
+     "১৫৫৮.৮০",
+     "১,৫৫৮.৮০",
+     "4198.80",
+     "4,198.80",
+     "৪১৯৮.৮০",
+     "৪,১৯৮.৮০",
+     "3358.80",
+     "3,358.80",
+     "৩৩৫৮.৮০",
+     "৩,৩৫৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AE%20%E0%A6%AE%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%AC%E0%A6%BE%E0%A6%B0%20%E0%A6%AB%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%20%E0%A6%B6%E0%A6%BF%E0%A6%9F",
+   "view 0",
+   "goto /product/1176",
+   "goto /product/1096",
+   "goto /product/1118",
+   "goto /product/1202",
+   "stop 1438.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-007",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘বড় ক্যাট স্ক্র্যাচিং পোস্ট ট্রি টাওয়ার, প্ল্যাটফর্ম বেড সহ’, ‘মাল্টি প্ল্যাটফর্ম স্টেপস ক্যাট ট্রি টাওয়ার’, ‘ছোট ক্যাট ট্রি টাওয়ার, কন্ডো ও স্ক্র্যাচিং পোস্ট সহ’, ‘বিড়ালের ট্রি, সিসাল স্ক্র্যাচিং পোস্ট ও প্লাশ কন্ডো সহ টাওয়ার’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p1873.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5398.80",
+     "5,398.80",
+     "৫৩৯৮.৮০",
+     "৫,৩৯৮.৮০"
+    ],
+    "none_of": [
+     "8398.80",
+     "8,398.80",
+     "৮৩৯৮.৮০",
+     "৮,৩৯৮.৮০",
+     "6598.80",
+     "6,598.80",
+     "৬৫৯৮.৮০",
+     "৬,৫৯৮.৮০",
+     "7798.80",
+     "7,798.80",
+     "৭৭৯৮.৮০",
+     "৭,৭৯৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%9B%E0%A7%8B%E0%A6%9F%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%20%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%20%E0%A6%9F%E0%A6%BE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A7%8B%20%E0%A6%93%20%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9A%E0%A6%BF%E0%A6%82%20%E0%A6%AA%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%9F%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/1813",
+   "goto /product/1847",
+   "goto /product/1873",
+   "goto /product/1996",
+   "stop 5398.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-008",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘হোয়াইট বোর্ড মার্কার সেট’, ‘রিট্র্যাক্টেবল পার্মানেন্ট মার্কার’, ‘বুলেট/চিজেল রিভার্সিবল টিপ চক মার্কার’, ‘হোয়াইটবোর্ড মার্কার সেট’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p2093.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "958.80",
+     "৯৫৮.৮০"
+    ],
+    "none_of": [
+     "898.80",
+     "৮৯৮.৮০",
+     "1078.80",
+     "1,078.80",
+     "১০৭৮.৮০",
+     "১,০৭৮.৮০",
+     "838.80",
+     "৮৩৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AC%E0%A7%81%E0%A6%B2%E0%A7%87%E0%A6%9F/%E0%A6%9A%E0%A6%BF%E0%A6%9C%E0%A7%87%E0%A6%B2%20%E0%A6%B0%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A6%BF%E0%A6%AC%E0%A6%B2%20%E0%A6%9F%E0%A6%BF%E0%A6%AA%20%E0%A6%9A%E0%A6%95%20%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/2185",
+   "goto /product/2101",
+   "goto /product/2093",
+   "goto /product/2171",
+   "stop 958.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-009",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘গোলাপি টেডি 3.5 ফুট, দাঁড়ানো ক্লাসিক’, ‘বেইজ টেডি 3.5 ফুট, দাঁড়ানো - ফ্যামিলি সাইজ’, ‘ক্রিম টেডি 60 সেমি ক্লাসিক’, ‘বাদামি টেডি 3.5 ফুট, দাঁড়ানো - কমপ্যাক্ট’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p1724.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4198.80",
+     "4,198.80",
+     "৪১৯৮.৮০",
+     "৪,১৯৮.৮০"
+    ],
+    "none_of": [
+     "5398.80",
+     "5,398.80",
+     "৫৩৯৮.৮০",
+     "৫,৩৯৮.৮০",
+     "7798.80",
+     "7,798.80",
+     "৭৭৯৮.৮০",
+     "৭,৭৯৮.৮০",
+     "1558.80",
+     "1,558.80",
+     "১৫৫৮.৮০",
+     "১,৫৫৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%AE%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%A1%E0%A6%BF%203.5%20%E0%A6%AB%E0%A7%81%E0%A6%9F%2C%20%E0%A6%A6%E0%A6%BE%E0%A6%81%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%8B%20-%20%E0%A6%95%E0%A6%AE%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F",
+   "view 0",
+   "goto /product/1663",
+   "goto /product/1734",
+   "goto /product/1661",
+   "goto /product/1724",
+   "stop 4198.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-010",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘160 গ্রাম প্লেইড ফ্ল্যানেল সুতির ডুভেট কভার’, ‘এসেনশিয়ালস মাইক্রোফাইবার ডুভেট কভার সেট’, ‘100% লিনেন ডুভেট কভার সেট - 135x200+1x80x80 সেমি’, ‘কিডস প্রিন্টেড মাল্টি ডটস ফুল/কুইন ডুভেট কভার’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p1006.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2158.80",
+     "2,158.80",
+     "২১৫৮.৮০",
+     "২,১৫৮.৮০"
+    ],
+    "none_of": [
+     "5878.80",
+     "5,878.80",
+     "৫৮৭৮.৮০",
+     "৫,৮৭৮.৮০",
+     "10680.00",
+     "10,680.00",
+     "১০৬৮০.০০",
+     "১০,৬৮০.০০",
+     "2998.80",
+     "2,998.80",
+     "২৯৯৮.৮০",
+     "২,৯৯৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%8F%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A6%B8%20%E0%A6%AE%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%AC%E0%A6%BE%E0%A6%B0%20%E0%A6%A1%E0%A7%81%E0%A6%AD%E0%A7%87%E0%A6%9F%20%E0%A6%95%E0%A6%AD%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%87%E0%A6%9F",
+   "view 0",
+   "goto /product/1137",
+   "goto /product/1006",
+   "goto /product/929",
+   "goto /product/984",
+   "stop 2158.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-011",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘ট্র্যাডিশনাল ডাইনিং টেবিল 29\"H’, ‘Parson কাঠের সাইড এন্ড টেবিল’, ‘Eastport ইন্ডাস্ট্রিয়াল কাঠের নাইটস্ট্যান্ড টেবিল’, ‘Tucana ইঞ্জিনিয়ারড কাঠের বেডসাইড টেবিল, দেরাজ সহ’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1248.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1248
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1166
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 923
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 986
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Eastport%20%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%20%E0%A6%95%E0%A6%BE%E0%A6%A0%E0%A7%87%E0%A6%B0%20%E0%A6%A8%E0%A6%BE%E0%A6%87%E0%A6%9F%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%20%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%BF%E0%A6%B2",
+   "view 0",
+   "goto /product/1166",
+   "goto /product/923",
+   "goto /product/1248",
+   "goto /product/986",
+   "goto /product/1248",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-012",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘মডার্ন ফার্মহাউস কাঠের বেস অ্যাডজাস্টেবল লিভিং রুম ফ্লোর ল্যাম্প’, ‘অ্যাকসেন্ট বেডরুম টেবিল ল্যাম্প, এলইডি বাল্ব সহ’, ‘রাস্টিক ফার্মহাউস জগ লিভিং রুম টেবিল ল্যাম্প, এলইডি বাল্ব সহ’, ‘মডার্ন সিরামিক টেবিল ল্যাম্প, জ্যামিতিক-প্যাটার্ন বেস সহ’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1042.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1042
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1135
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1200
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1054
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%AC%E0%A7%87%E0%A6%A1%E0%A6%B0%E0%A7%81%E0%A6%AE%20%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%BF%E0%A6%B2%20%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AA%2C%20%E0%A6%8F%E0%A6%B2%E0%A6%87%E0%A6%A1%E0%A6%BF%20%E0%A6%AC%E0%A6%BE%E0%A6%B2%E0%A7%8D%E0%A6%AC%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/1135",
+   "goto /product/1042",
+   "goto /product/1200",
+   "goto /product/1054",
+   "goto /product/1042",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-013",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘Strathwood ছাতা ফার্নিচার কভার’, ‘গোল প্যাটিও ফায়ার পিট কভার’, ‘ফায়ার পিট প্যাটিও কভার’, ‘গ্যাস গ্রিল বারবিকিউ কভার’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1376.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1376
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1496
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1382
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1304
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%AB%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%20%E0%A6%AA%E0%A6%BF%E0%A6%9F%20%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%E0%A6%BF%E0%A6%93%20%E0%A6%95%E0%A6%AD%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/1496",
+   "goto /product/1382",
+   "goto /product/1376",
+   "goto /product/1304",
+   "goto /product/1376",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-014",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘Truve মডার্ন স্টাডেড অটোমান’, ‘Audrey মডার্ন অটোমান’, ‘মডার্ন ওভারসাইজড আপহোলস্টার্ড চারকোনা অটোমান’, ‘Strathwood Brooklyn লেদার অটোমান’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p906.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 906
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1107
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 990
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1171
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Truve%20%E0%A6%AE%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A8%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%A1%E0%A7%87%E0%A6%A1%20%E0%A6%85%E0%A6%9F%E0%A7%8B%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+   "view 0",
+   "goto /product/906",
+   "goto /product/1107",
+   "goto /product/990",
+   "goto /product/1171",
+   "goto /product/906",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-015",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘Alaina কনটেম্পোরারি লেদার হাই-ব্যাক সুইভেল সিট কাউন্টার স্টুল’, ‘Alaina কনটেম্পোরারি হাই-ব্যাক স্টুল’, ‘মডার্ন প্লাশ হাই-পাইল শ্যাগ এরিয়া রাগ’, ‘Celinda টাফটেড হাই-ব্যাক বারস্টুল’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1164.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1164
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 896
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 972
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 946
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alaina%20%E0%A6%95%E0%A6%A8%E0%A6%9F%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A7%8B%E0%A6%B0%E0%A6%BE%E0%A6%B0%E0%A6%BF%20%E0%A6%B2%E0%A7%87%E0%A6%A6%E0%A6%BE%E0%A6%B0%20%E0%A6%B9%E0%A6%BE%E0%A6%87-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%20%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AD%E0%A7%87%E0%A6%B2%20%E0%A6%B8%E0%A6%BF%E0%A6%9F%20%E0%A6%95%E0%A6%BE%E0%A6%89%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B2",
+   "view 0",
+   "goto /product/1164",
+   "goto /product/896",
+   "goto /product/972",
+   "goto /product/946",
+   "goto /product/1164",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-016",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘কনটেম্পোরারি স্ট্রিয়েটেড জুট এরিয়া রাগ’, ‘মডার্ন ওয়েভ কসমোপলিটান এরিয়া রাগ’, ‘বোনা বর্ডারড সিসাল এরিয়া রাগ’, ‘গোলাপি গ্লোবাল ফ্লোরাল উলের রাগ’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1048.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1048
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1069
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 882
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 898
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%AC%E0%A7%8B%E0%A6%A8%E0%A6%BE%20%E0%A6%AC%E0%A6%B0%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A6%A1%20%E0%A6%B8%E0%A6%BF%E0%A6%B8%E0%A6%BE%E0%A6%B2%20%E0%A6%8F%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%20%E0%A6%B0%E0%A6%BE%E0%A6%97",
+   "view 0",
+   "goto /product/1069",
+   "goto /product/882",
+   "goto /product/1048",
+   "goto /product/898",
+   "goto /product/1048",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-017",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘পেট কেভ বেড’, ‘ভাঁজযোগ্য কিউব ক্যাট বেড’, ‘কাডলার পেট বেড’, ‘এসেনশিয়াল নরম ও আরামদায়ক বলস্টার লাউঞ্জ ডগ বেড’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1833.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1833
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1932
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1857
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1933
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%AD%E0%A6%BE%E0%A6%81%E0%A6%9C%E0%A6%AF%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%AF%20%E0%A6%95%E0%A6%BF%E0%A6%89%E0%A6%AC%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%20%E0%A6%AC%E0%A7%87%E0%A6%A1",
+   "view 0",
+   "goto /product/1932",
+   "goto /product/1833",
+   "goto /product/1857",
+   "goto /product/1933",
+   "goto /product/1833",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-018",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘প্লাস্টিক শট গ্লাস’, ‘শ্যাটারপ্রুফ স্টেমলেস ওয়াইন গ্লাস’, ‘Nia হাইবল গ্লাস সেট’, ‘ইলেকট্রিক কাচ ও স্টিলের কেটলি’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p580.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 580
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 485
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 445
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 512
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Nia%20%E0%A6%B9%E0%A6%BE%E0%A6%87%E0%A6%AC%E0%A6%B2%20%E0%A6%97%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%20%E0%A6%B8%E0%A7%87%E0%A6%9F",
+   "view 0",
+   "goto /product/485",
+   "goto /product/445",
+   "goto /product/580",
+   "goto /product/512",
+   "goto /product/580",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-019",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘Olander মিড-সেঞ্চুরি মডার্ন রিক্লাইনার চেয়ার, সুইভেল বেস সহ’, ‘মিড-সেঞ্চুরি মডার্ন ব্রাস ট্রিমড টেবিল ল্যাম্প, এলইডি বাল্ব সহ’, ‘Uptown মিড-সেঞ্চুরি টাফটেড কাস্টমাইজেবল ডেবেড সোফা’, ‘Ava মিড-সেঞ্চুরি মডার্ন আপহোলস্টার্ড অটোমান’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1065.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1065
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1007
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1090
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 851
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ava%20%E0%A6%AE%E0%A6%BF%E0%A6%A1-%E0%A6%B8%E0%A7%87%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A7%81%E0%A6%B0%E0%A6%BF%20%E0%A6%AE%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A8%20%E0%A6%86%E0%A6%AA%E0%A6%B9%E0%A7%8B%E0%A6%B2%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A1%20%E0%A6%85%E0%A6%9F%E0%A7%8B%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+   "view 0",
+   "goto /product/1007",
+   "goto /product/1090",
+   "goto /product/851",
+   "goto /product/1065",
+   "goto /product/1065",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-020",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘Aiden টাফটেড মিড-সেঞ্চুরি ভেলভেট বেঞ্চ সিট সোফা’, ‘মিড-সেঞ্চুরি মডার্ন সাদা মার্বেল ও ধাতব সাইড এন্ড টেবিল’, ‘Uptown মিড-সেঞ্চুরি মডার্ন টাফটেড ভেলভেট ডেবেড লাভসিট’, ‘মিড-সেঞ্চুরি সুইভেল চেয়ার’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1229.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1229
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 934
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1106
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 950
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Aiden%20%E0%A6%9F%E0%A6%BE%E0%A6%AB%E0%A6%9F%E0%A7%87%E0%A6%A1%20%E0%A6%AE%E0%A6%BF%E0%A6%A1-%E0%A6%B8%E0%A7%87%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A7%81%E0%A6%B0%E0%A6%BF%20%E0%A6%AD%E0%A7%87%E0%A6%B2%E0%A6%AD%E0%A7%87%E0%A6%9F%20%E0%A6%AC%E0%A7%87%E0%A6%9E%E0%A7%8D%E0%A6%9A%20%E0%A6%B8%E0%A6%BF%E0%A6%9F%20%E0%A6%B8%E0%A7%8B%E0%A6%AB%E0%A6%BE",
+   "view 0",
+   "goto /product/1229",
+   "goto /product/934",
+   "goto /product/1106",
+   "goto /product/950",
+   "goto /product/1229",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-021",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘বাদামি টেডি 60 সেমি - ফ্যামিলি সাইজ’, ‘গোলাপি টেডি 33 সেমি টুইন প্যাক’, ‘ক্রিম টেডি 33 সেমি - ফ্যামিলি সাইজ’, ‘বেইজ টেডি 3.5 ফুট, দাঁড়ানো ক্লাসিক’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1746.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩%",
+    "items": {
+     "1746": 1
+    },
+    "total": 2998.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1683
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1743
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1650
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%AE%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%A1%E0%A6%BF%2060%20%E0%A6%B8%E0%A7%87%E0%A6%AE%E0%A6%BF%20-%20%E0%A6%AB%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%BF%20%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9C",
+   "view 0",
+   "goto /product/1746",
+   "goto /product/1683",
+   "goto /product/1743",
+   "goto /product/1650",
+   "goto /product/1746",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৩১০ এলম রোড, ম্যাডিসন, ৫৩৭০৩",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-022",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘মডার্ন জ্যামিতিক সিরামিক প্ল্যান্টার’, ‘গোল ওয়াল মাউন্ট প্ল্যান্টার’, ‘রিসাইকেলড কাঠের ডেক হ্যাংগিং প্ল্যান্টার’, ‘মিডিয়াম উইন্ডোপেন ফুটেড স্টোনওয়্যার প্ল্যান্টার’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1297.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১%",
+    "items": {
+     "1297": 1
+    },
+    "total": 2998.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1357
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1480
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1263
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%B0%E0%A6%BF%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%87%E0%A6%B2%E0%A6%A1%20%E0%A6%95%E0%A6%BE%E0%A6%A0%E0%A7%87%E0%A6%B0%20%E0%A6%A1%E0%A7%87%E0%A6%95%20%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82%E0%A6%97%E0%A6%BF%E0%A6%82%20%E0%A6%AA%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/1357",
+   "goto /product/1480",
+   "goto /product/1297",
+   "goto /product/1263",
+   "goto /product/1297",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৪১ মেপল স্ট্রিট, রিনো, ৮৯৫০১",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-023",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '৬৮ উইলো ড্রাইভ, বয়সি, ৮৩৭০২' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘100% স্টোনওয়্যার প্ল্যান্টার’, ‘উইকার প্ল্যান্টার, ট্রেলিস সহ’, ‘টেরাজো প্ল্যান্টার, কাঠের স্ট্যান্ড সহ’, ‘জ্যামিতিক সিরামিক প্ল্যান্টার’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1383.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৬৮ উইলো ড্রাইভ, বয়সি, ৮৩৭০২%",
+    "items": {
+     "1383": 1
+    },
+    "total": 2158.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1261
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1283
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1371
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=100%25%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%A8%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%20%E0%A6%AA%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/1383",
+   "goto /product/1261",
+   "goto /product/1283",
+   "goto /product/1371",
+   "goto /product/1383",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৬৮ উইলো ড্রাইভ, বয়সি, ৮৩৭০২",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-024",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '৭ জুনিপার অ্যাভিনিউ, সেলেম, ৯৭৩০১' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘ক্রিম টেডি 33 সেমি’, ‘বেইজ টেডি 3.5 ফুট, দাঁড়ানো’, ‘বাদামি টেডি 3.5 ফুট, দাঁড়ানো’, ‘গোলাপি টেডি 33 সেমি’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1640.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৭ জুনিপার অ্যাভিনিউ, সেলেম, ৯৭৩০১%",
+    "items": {
+     "1640": 1
+    },
+    "total": 5398.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1631
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1622
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1627
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%AE%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%A1%E0%A6%BF%203.5%20%E0%A6%AB%E0%A7%81%E0%A6%9F%2C%20%E0%A6%A6%E0%A6%BE%E0%A6%81%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%8B",
+   "view 0",
+   "goto /product/1631",
+   "goto /product/1622",
+   "goto /product/1640",
+   "goto /product/1627",
+   "goto /product/1640",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৭ জুনিপার অ্যাভিনিউ, সেলেম, ৯৭৩০১",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-025",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘বেইজ টেডি 3.5 ফুট, দাঁড়ানো - কমপ্যাক্ট’, ‘ক্রিম টেডি 33 সেমি টুইন প্যাক’, ‘বাদামি টেডি 60 সেমি টুইন প্যাক’, ‘গোলাপি টেডি 60 সেমি - ফ্যামিলি সাইজ’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1690.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১%",
+    "items": {
+     "1690": 1
+    },
+    "total": 3958.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1706
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1687
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1732
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%AC%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%AE%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%A1%E0%A6%BF%2060%20%E0%A6%B8%E0%A7%87%E0%A6%AE%E0%A6%BF%20%E0%A6%9F%E0%A7%81%E0%A6%87%E0%A6%A8%20%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95",
+   "view 0",
+   "goto /product/1706",
+   "goto /product/1687",
+   "goto /product/1690",
+   "goto /product/1732",
+   "goto /product/1690",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=১৫০ অ্যাসপেন প্লেস, অগডেন, ৮৪৪০১",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-026",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '২৬ পপলার লেন, ফ্রেসনো, ৯৩৬৫০' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘এক্সট্রা পুরু এক্সারসাইজ যোগ জিম ফ্লোর ম্যাট, ক্যারিং স্ট্র্যাপ সহ’, ‘1.27 সেমি পুরু যোগ ম্যাট 6 পিস সেট’, ‘TPE যোগ ম্যাট’, ‘TPE ও সুয়েড যোগ ম্যাট’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p684.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%২৬ পপলার লেন, ফ্রেসনো, ৯৩৬৫০%",
+    "items": {
+     "684": 1
+    },
+    "total": 2398.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 818
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 682
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 706
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%20%E0%A6%AA%E0%A7%81%E0%A6%B0%E0%A7%81%20%E0%A6%8F%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9C%20%E0%A6%AF%E0%A7%8B%E0%A6%97%20%E0%A6%9C%E0%A6%BF%E0%A6%AE%20%E0%A6%AB%E0%A7%8D%E0%A6%B2%E0%A7%8B%E0%A6%B0%20%E0%A6%AE%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%9F%2C%20%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%82%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/684",
+   "goto /product/818",
+   "goto /product/682",
+   "goto /product/706",
+   "goto /product/684",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=২৬ পপলার লেন, ফ্রেসনো, ৯৩৬৫০",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-027",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '৮৮ লরেল স্ট্রিট, টুসন, ৮৫৭০১' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘Malida মিড-সেঞ্চুরি মডার্ন ওপেন ব্যাক সুইভেল কিচেন বার স্টুল’, ‘Aiden মিড-সেঞ্চুরি সোফা, টেপার্ড কাঠের পায়া সহ’, ‘Ray মিড-সেঞ্চুরি মডার্ন কিচেন ডাইনিং রুম চেয়ার’, ‘মিড-সেঞ্চুরি মডার্ন ডাবল সার্কেল প্লাগ-ইন হ্যাংগিং পেন্ডেন্ট’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p910.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৮৮ লরেল স্ট্রিট, টুসন, ৮৫৭০১%",
+    "items": {
+     "910": 1
+    },
+    "total": 9598.8
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1155
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1077
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 904
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Malida%20%E0%A6%AE%E0%A6%BF%E0%A6%A1-%E0%A6%B8%E0%A7%87%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A7%81%E0%A6%B0%E0%A6%BF%20%E0%A6%AE%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A8%20%E0%A6%93%E0%A6%AA%E0%A7%87%E0%A6%A8%20%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%20%E0%A6%B8%E0%A7%81%E0%A6%87%E0%A6%AD%E0%A7%87%E0%A6%B2%20%E0%A6%95%E0%A6%BF%E0%A6%9A%E0%A7%87%E0%A6%A8%20%E0%A6%AC%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%81%E0%A6%B2",
+   "view 0",
+   "goto /product/910",
+   "goto /product/1155",
+   "goto /product/1077",
+   "goto /product/904",
+   "goto /product/910",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৮৮ লরেল স্ট্রিট, টুসন, ৮৫৭০১",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-028",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '১৩ সিকামোর রোড, অ্যাক্রন, ৪৪৩০১' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘Corona ম্যাগাজিন টেবিল’, ‘মডার্ন গোল ধাতব সাইড এন্ড অ্যাকসেন্ট টেবিল’, ‘Ian মডার্ন মিডিয়াম ডাইনিং কিচেন টেবিল’, ‘Phoenix Home গ্রানাইট গোল প্লাস্টিক বার হাইট ফোল্ডিং টেবিল’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p1243.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%১৩ সিকামোর রোড, অ্যাক্রন, ৪৪৩০১%",
+    "items": {
+     "1243": 1
+    },
+    "total": 19080.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 967
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1125
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1046
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Ian%20%E0%A6%AE%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A8%20%E0%A6%AE%E0%A6%BF%E0%A6%A1%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AE%20%E0%A6%A1%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A6%BF%E0%A6%82%20%E0%A6%95%E0%A6%BF%E0%A6%9A%E0%A7%87%E0%A6%A8%20%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%BF%E0%A6%B2",
+   "view 0",
+   "goto /product/967",
+   "goto /product/1125",
+   "goto /product/1243",
+   "goto /product/1046",
+   "goto /product/1243",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=১৩ সিকামোর রোড, অ্যাক্রন, ৪৪৩০১",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-029",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "ছবিতে দেখানো পণ্যটি কোন ব্র্যান্ড বিক্রি করে? এটি এগুলোর একটি: ‘Movian Aero কফি টেবিল’, ‘ইন্ডাস্ট্রিয়াল ডেস্ক টেবিল’, ‘Parker গোল শেলফ স্টোরেজ কফি টেবিল’, ‘ইন্ডাস্ট্রিয়াল ক্যাফে টেবিল’।",
+  "image": "sites/visual/ministore/static/img/products/p1196.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Ravenna Home"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Parker%20%E0%A6%97%E0%A7%8B%E0%A6%B2%20%E0%A6%B6%E0%A7%87%E0%A6%B2%E0%A6%AB%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%B0%E0%A7%87%E0%A6%9C%20%E0%A6%95%E0%A6%AB%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%BF%E0%A6%B2",
+   "view 0",
+   "goto /product/1017",
+   "goto /product/1040",
+   "goto /product/1196",
+   "goto /product/1059",
+   "stop Ravenna Home"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-030",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "ছবিতে দেখানো পণ্যটি কোন ব্র্যান্ড বিক্রি করে? এটি এগুলোর একটি: ‘এসেনশিয়ালস ফোম ব্রাশ সেট, 6টি, স্ট্যাম্প পেইন্টার - ট্রাভেল এডিশন’, ‘পেঙ্গুইন ওপেন আইজ, অ্যাশ - ট্রাভেল এডিশন’, ‘12\" Wild Onez বাঘ ট্রাভেল এডিশন’, ‘পুটি স্লাইম 4\" টিন - ট্রাভেল এডিশন’।",
+  "image": "sites/visual/ministore/static/img/products/p1764.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Umi."
+    ],
+    "none_of": [
+     "Amazon Brand - Jam & Honey",
+     "Amazon Brand - Jam and Honey",
+     "AmazonBasics"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%8F%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A6%B6%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B2%E0%A6%B8%20%E0%A6%AB%E0%A7%8B%E0%A6%AE%20%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B6%20%E0%A6%B8%E0%A7%87%E0%A6%9F%2C%206%E0%A6%9F%E0%A6%BF%2C%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AA%20%E0%A6%AA%E0%A7%87%E0%A6%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%20-%20%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AD%E0%A7%87%E0%A6%B2%20%E0%A6%8F%E0%A6%A1%E0%A6%BF%E0%A6%B6%E0%A6%A8",
+   "view 0",
+   "goto /product/1764",
+   "goto /product/1763",
+   "goto /product/1761",
+   "goto /product/1756",
+   "stop Umi."
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-031",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "ছবিতে দেখানো পণ্যটি কোন ব্র্যান্ড বিক্রি করে? এটি এগুলোর একটি: ‘Topstar 70570BB00 সুইভেল চেয়ার, শিশু ও কিশোরদের জন্য, হাই ব্যাক’, ‘Dunford ক্যাজুয়াল রোলড আর্ম চেয়ার’, ‘Bayard কনটেম্পোরারি লেদার লিভিং রুম চেয়ার, কার্ভড ব্যাক সহ’, ‘Cedar আপহোলস্টার্ড অ্যাকসেন্ট চেয়ার, নেইলহেড সহ’।",
+  "image": "sites/visual/ministore/static/img/products/p983.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Stone & Beam"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Rivet",
+     "Top Star"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Cedar%20%E0%A6%86%E0%A6%AA%E0%A6%B9%E0%A7%8B%E0%A6%B2%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A1%20%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%9A%E0%A7%87%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%A8%E0%A7%87%E0%A6%87%E0%A6%B2%E0%A6%B9%E0%A7%87%E0%A6%A1%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/959",
+   "goto /product/1074",
+   "goto /product/944",
+   "goto /product/983",
+   "stop Stone & Beam"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-032",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "ছবিতে দেখানো পণ্যটি কোন ব্র্যান্ড বিক্রি করে? এটি এগুলোর একটি: ‘Ross মডার্ন ফ্যাব্রিক লিফট-টপ স্টোরেজ অটোমান পুফ’, ‘Movian Aggol লিফট-টপ কফি টেবিল’, ‘Alkove Hayes লিফট-টপ সলিড কাঠের কফি টেবিল, 1 দেরাজ সহ’।",
+  "image": "sites/visual/ministore/static/img/products/p870.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Alkove"
+    ],
+    "none_of": [
+     "Movian",
+     "Rivet"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Alkove%20Hayes%20%E0%A6%B2%E0%A6%BF%E0%A6%AB%E0%A6%9F-%E0%A6%9F%E0%A6%AA%20%E0%A6%B8%E0%A6%B2%E0%A6%BF%E0%A6%A1%20%E0%A6%95%E0%A6%BE%E0%A6%A0%E0%A7%87%E0%A6%B0%20%E0%A6%95%E0%A6%AB%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%BF%E0%A6%B2%2C%201%20%E0%A6%A6%E0%A7%87%E0%A6%B0%E0%A6%BE%E0%A6%9C%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/1020",
+   "goto /product/979",
+   "goto /product/870",
+   "stop Alkove"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-033",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "ছবিতে দেখানো পণ্যটি কোন ব্র্যান্ড বিক্রি করে? এটি এগুলোর একটি: ‘এসেনশিয়ালস স্ট্যান্ড, Apple Watch চার্জারের জন্য’, ‘FITUEYES PS304003WB প্রিন্টার স্ট্যান্ড’, ‘অ্যাডজাস্টেবল ট্যাবলেট হোল্ডার স্ট্যান্ড’।",
+  "image": "sites/visual/ministore/static/img/products/p291.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "AmazonBasics"
+    ],
+    "none_of": [
+     "Eono",
+     "Unbranded"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A6%9C%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%B2%20%E0%A6%9F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AC%E0%A6%B2%E0%A7%87%E0%A6%9F%20%E0%A6%B9%E0%A7%8B%E0%A6%B2%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1",
+   "view 0",
+   "goto /product/206",
+   "goto /product/230",
+   "goto /product/291",
+   "stop AmazonBasics"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-034",
+  "site": "ministore",
+  "kind": "A4_brand",
+  "intent": "ছবিতে দেখানো পণ্যটি কোন ব্র্যান্ড বিক্রি করে? এটি এগুলোর একটি: ‘প্রিমিয়াম বেড পিলো’, ‘ইন্ডাস্ট্রিয়াল লেদার ডিটেইল থ্রো পিলো’, ‘ভিন্টেজ থ্রো পিলো’।",
+  "image": "sites/visual/ministore/static/img/products/p1215.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "Amazon Brand - Solimo"
+    ],
+    "none_of": [
+     "Ravenna Home",
+     "Stone & Beam"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%AE%20%E0%A6%AC%E0%A7%87%E0%A6%A1%20%E0%A6%AA%E0%A6%BF%E0%A6%B2%E0%A7%8B",
+   "view 0",
+   "goto /product/1215",
+   "goto /product/1116",
+   "goto /product/1145",
+   "stop Amazon Brand - Solimo"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-035",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "ছবিতে দেখানো পণ্যটির কতগুলো রিভিউ আছে? এটি এগুলোর একটি: ‘ব্লুটুথ স্টেরিও স্পিকার, ওয়াটার রেজিস্ট্যান্ট ডিজাইন’, ‘মাইক্রো ব্লুটুথ স্পিকার’, ‘Bose SoundLink Micro ওয়াটারপ্রুফ ব্লুটুথ স্পিকার’, ‘মিনি ব্লুটুথ স্পিকার’।",
+  "image": "sites/visual/ministore/static/img/products/p151.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "২"
+    ],
+    "none_of": [
+     "0",
+     "০",
+     "5",
+     "৫",
+     "8",
+     "৮"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AE%E0%A6%BF%E0%A6%A8%E0%A6%BF%20%E0%A6%AC%E0%A7%8D%E0%A6%B2%E0%A7%81%E0%A6%9F%E0%A7%81%E0%A6%A5%20%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A6%BF%E0%A6%95%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/147",
+   "goto /product/219",
+   "goto /product/40",
+   "goto /product/151",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-036",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "ছবিতে দেখানো পণ্যটির কতগুলো রিভিউ আছে? এটি এগুলোর একটি: ‘ক্রিম টেডি 60 সেমি - কমপ্যাক্ট’, ‘বাদামি টেডি 3.5 ফুট, দাঁড়ানো টুইন প্যাক’, ‘গোলাপি টেডি 3.5 ফুট, দাঁড়ানো - ফ্যামিলি সাইজ’, ‘বেইজ টেডি 3.5 ফুট, দাঁড়ানো টুইন প্যাক’।",
+  "image": "sites/visual/ministore/static/img/products/p1747.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3",
+     "৩"
+    ],
+    "none_of": [
+     "2",
+     "২",
+     "0",
+     "০",
+     "5",
+     "৫"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%97%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%AA%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%A1%E0%A6%BF%203.5%20%E0%A6%AB%E0%A7%81%E0%A6%9F%2C%20%E0%A6%A6%E0%A6%BE%E0%A6%81%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%8B%20-%20%E0%A6%AB%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%BF%20%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9C",
+   "view 0",
+   "goto /product/1717",
+   "goto /product/1696",
+   "goto /product/1747",
+   "goto /product/1678",
+   "stop 3"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-037",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "ছবিতে দেখানো পণ্যটির কতগুলো রিভিউ আছে? এটি এগুলোর একটি: ‘Bigelow মডার্ন লেদার সোফা, চারকোনা পায়া সহ’, ‘Mayes স্লোপড নেইলহেড সোফা’, ‘Elizabeth কনটেম্পোরারি লাভসিট সোফা’, ‘Charles ক্লাসিক ওভারসাইজড লেদার সোফা’।",
+  "image": "sites/visual/ministore/static/img/products/p1160.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "২"
+    ],
+    "none_of": [
+     "10",
+     "১০",
+     "12",
+     "১২",
+     "0",
+     "০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Elizabeth%20%E0%A6%95%E0%A6%A8%E0%A6%9F%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A7%8B%E0%A6%B0%E0%A6%BE%E0%A6%B0%E0%A6%BF%20%E0%A6%B2%E0%A6%BE%E0%A6%AD%E0%A6%B8%E0%A6%BF%E0%A6%9F%20%E0%A6%B8%E0%A7%8B%E0%A6%AB%E0%A6%BE",
+   "view 0",
+   "goto /product/1158",
+   "goto /product/999",
+   "goto /product/1160",
+   "goto /product/987",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-038",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "ছবিতে দেখানো পণ্যটির কতগুলো রিভিউ আছে? এটি এগুলোর একটি: ‘মিড-সেঞ্চুরি মডার্ন সিরামিক ও বাঁশের প্ল্যান্টার ফুলের টব’, ‘মিড-সেঞ্চুরি 100% স্টোনওয়্যার প্ল্যান্টার’, ‘মিড-সেঞ্চুরি সিরামিক প্ল্যান্টার, লোহার স্ট্যান্ড সহ 9.1\"H’, ‘মিড-সেঞ্চুরি প্যাটার্নড প্ল্যান্টার’।",
+  "image": "sites/visual/ministore/static/img/products/p1254.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1",
+     "১"
+    ],
+    "none_of": [
+     "6",
+     "৬",
+     "2",
+     "২",
+     "3",
+     "৩"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AE%E0%A6%BF%E0%A6%A1-%E0%A6%B8%E0%A7%87%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A7%81%E0%A6%B0%E0%A6%BF%20%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%95%20%E0%A6%AA%E0%A7%8D%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%2C%20%E0%A6%B2%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%20%E0%A6%B8%E0%A6%B9%209.1%22H",
+   "view 0",
+   "goto /product/1401",
+   "goto /product/1462",
+   "goto /product/1254",
+   "goto /product/1390",
+   "stop 1"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-039",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "ছবিতে দেখানো পণ্যটির কতগুলো রিভিউ আছে? এটি এগুলোর একটি: ‘হেরিং মেডালিয়ন ট্র্যাডিশনাল এরিয়া রাগ’, ‘মডার্ন জ্যামিতিক উলের এরিয়া রাগ’, ‘ক্যাজুয়াল প্লেইড রাগ’, ‘কনটেম্পোরারি আওয়ারগ্লাস উলের এরিয়া রাগ’।",
+  "image": "sites/visual/ministore/static/img/products/p928.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6",
+     "৬"
+    ],
+    "none_of": [
+     "2",
+     "২",
+     "5",
+     "৫",
+     "1",
+     "১"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%B9%E0%A7%87%E0%A6%B0%E0%A6%BF%E0%A6%82%20%E0%A6%AE%E0%A7%87%E0%A6%A1%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%A8%20%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A1%E0%A6%BF%E0%A6%B6%E0%A6%A8%E0%A6%BE%E0%A6%B2%20%E0%A6%8F%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%20%E0%A6%B0%E0%A6%BE%E0%A6%97",
+   "view 0",
+   "goto /product/928",
+   "goto /product/1086",
+   "goto /product/1015",
+   "goto /product/1024",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-040",
+  "site": "ministore",
+  "kind": "A5_reviews",
+  "intent": "ছবিতে দেখানো পণ্যটির কতগুলো রিভিউ আছে? এটি এগুলোর একটি: ‘কনটেম্পোরারি ধাতব ফ্লোর ল্যাম্প, মার্কারি গ্লাস অ্যাকসেন্ট সহ’, ‘ভিন্টেজ টাস্ক টেবিল ডেস্ক ল্যাম্প, এলইডি বাল্ব সহ’, ‘ট্র্যাডিশনাল শিনোয়াজরি সিরামিক টেবিল ল্যাম্প’, ‘ট্র্যাডিশনাল ধাতব ডাউনব্রিজ ডেস্ক ল্যাম্প, অ্যাডজাস্টেবল শেড সহ’।",
+  "image": "sites/visual/ministore/static/img/products/p1009.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5",
+     "৫"
+    ],
+    "none_of": [
+     "6",
+     "৬",
+     "3",
+     "৩",
+     "0",
+     "০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%95%E0%A6%A8%E0%A6%9F%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A7%8B%E0%A6%B0%E0%A6%BE%E0%A6%B0%E0%A6%BF%20%E0%A6%A7%E0%A6%BE%E0%A6%A4%E0%A6%AC%20%E0%A6%AB%E0%A7%8D%E0%A6%B2%E0%A7%8B%E0%A6%B0%20%E0%A6%B2%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AA%2C%20%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF%20%E0%A6%97%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%20%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/1009",
+   "goto /product/1091",
+   "goto /product/1070",
+   "goto /product/1139",
+   "stop 5"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-041",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "ছবিতে দেখানো পণ্যটি এই দোকানে খুঁজে এর দাম জানান। দোকানে এটি বিক্রি না হলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p661.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "পাওয়া যায়নি",
+     "এমন কোনো পণ্য নেই",
+     "খুঁজে পাওয়া যায়নি",
+     "তালিকায় নেই",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1645",
+   "goto /product/1632",
+   "goto /product/1759",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-042",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "ছবিতে দেখানো পণ্যটি এই দোকানে খুঁজে এর দাম জানান। দোকানে এটি বিক্রি না হলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p442.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "পাওয়া যায়নি",
+     "এমন কোনো পণ্য নেই",
+     "খুঁজে পাওয়া যায়নি",
+     "তালিকায় নেই",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/936",
+   "goto /product/1039",
+   "goto /product/966",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-043",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "ছবিতে দেখানো পণ্যটি এই দোকানে খুঁজে এর দাম জানান। দোকানে এটি বিক্রি না হলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p402.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "পাওয়া যায়নি",
+     "এমন কোনো পণ্য নেই",
+     "খুঁজে পাওয়া যায়নি",
+     "তালিকায় নেই",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1205",
+   "goto /product/1234",
+   "goto /product/1185",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-044",
+  "site": "ministore",
+  "kind": "A6_not_sold",
+  "intent": "ছবিতে দেখানো পণ্যটি এই দোকানে খুঁজে এর দাম জানান। দোকানে এটি বিক্রি না হলে N/A উত্তর দিন।",
+  "image": "assets/trap_photos/p698.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "পাওয়া যায়নি",
+     "এমন কোনো পণ্য নেই",
+     "খুঁজে পাওয়া যায়নি",
+     "তালিকায় নেই",
+     "পণ্য নেই"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /product/1762",
+   "goto /product/1644",
+   "goto /product/1708",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-045",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘Amelia মডার্ন 74\" সোফা’, ‘Victoria ফ্যাব্রিক 3 সিটার সোফা’, ‘Blaine মডার্ন লাভসিট সোফা’, ‘Emerly মডার্ন সেকশনাল সোফা’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p1004.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "65880.00",
+     "65,880.00",
+     "৬৫৮৮০.০০",
+     "৬৫,৮৮০.০০"
+    ],
+    "none_of": [
+     "53880.00",
+     "53,880.00",
+     "৫৩৮৮০.০০",
+     "৫৩,৮৮০.০০",
+     "47880.00",
+     "47,880.00",
+     "৪৭৮৮০.০০",
+     "৪৭,৮৮০.০০",
+     "83880.00",
+     "83,880.00",
+     "৮৩৮৮০.০০",
+     "৮৩,৮৮০.০০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=Amelia%20%E0%A6%AE%E0%A6%A1%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A8%2074%22%20%E0%A6%B8%E0%A7%8B%E0%A6%AB%E0%A6%BE",
+   "view 0",
+   "goto /product/1004",
+   "goto /product/878",
+   "goto /product/916",
+   "goto /product/1163",
+   "stop 65880.00"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-046",
+  "site": "ministore",
+  "kind": "A1_price",
+  "intent": "ছবিতে এই দোকানে বিক্রি হওয়া একটি পণ্য দেখানো হয়েছে। এটি এগুলোর একটি: ‘তামার বোতল ও জগ কম্বো’, ‘স্টেইনলেস স্টিল ইনসুলেটেড পানির বোতল, স্পাউট ঢাকনা সহ’, ‘শেকার বোতল, মিক্সার বল সহ’, ‘বোরোসিলিকেট কাচের পানির বোতল, স্লিভ সহ’। এর দাম কত?",
+  "image": "sites/visual/ministore/static/img/products/p381.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1798.80",
+     "1,798.80",
+     "১৭৯৮.৮০",
+     "১,৭৯৮.৮০"
+    ],
+    "none_of": [
+     "2158.80",
+     "2,158.80",
+     "২১৫৮.৮০",
+     "২,১৫৮.৮০",
+     "2038.80",
+     "2,038.80",
+     "২০৩৮.৮০",
+     "২,০৩৮.৮০",
+     "1078.80",
+     "1,078.80",
+     "১০৭৮.৮০",
+     "১,০৭৮.৮০"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /?q=%E0%A6%AC%E0%A7%8B%E0%A6%B0%E0%A7%8B%E0%A6%B8%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A7%87%E0%A6%9F%20%E0%A6%95%E0%A6%BE%E0%A6%9A%E0%A7%87%E0%A6%B0%20%E0%A6%AA%E0%A6%BE%E0%A6%A8%E0%A6%BF%E0%A6%B0%20%E0%A6%AC%E0%A7%8B%E0%A6%A4%E0%A6%B2%2C%20%E0%A6%B8%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%AD%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/465",
+   "goto /product/444",
+   "goto /product/325",
+   "goto /product/381",
+   "stop 1798.80"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-047",
+  "site": "ministore",
+  "kind": "A2_wishlist",
+  "intent": "ছবিতে দেখানো পণ্যটি আপনার উইশলিস্টে যোগ করুন। এটি এগুলোর একটি: ‘Viewridge আপহোলস্টার্ড রকিং রিক্লাইনার চেয়ার, সুইভেল সহ’, ‘স্লোপড নেইলহেড ট্রিম অ্যাকসেন্ট চেয়ার’, ‘বন্ডেড লেদার বিগ অ্যান্ড টল এক্সিকিউটিভ অফিস কম্পিউটার ডেস্ক চেয়ার’, ‘Bradbury চেস্টারফিল্ড ক্লাসিক চেয়ার’। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p964.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 964
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 1203
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 956
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "wishlist",
+    "match": {
+     "user_id": 1,
+     "product_id": 864
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Bradbury%20%E0%A6%9A%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%A1%20%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%95%20%E0%A6%9A%E0%A7%87%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0",
+   "view 0",
+   "goto /product/1203",
+   "goto /product/956",
+   "goto /product/864",
+   "goto /product/964",
+   "goto /product/964",
+   "fill 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-048",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "‘C সেল এভরিডে অ্যালকালাইন ব্যাটারি’-এর পণ্য পাতা খুলুন। এর ছবি অনুযায়ী প্যাকে কয়টি ইউনিট আছে?",
+  "image": "sites/visual/ministore/static/img/products/p181.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12",
+     "১২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/181",
+   "stop 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-049",
+  "site": "ministore",
+  "kind": "B1_pack",
+  "intent": "‘এক্সারসাইজ ফিটনেস অ্যাব রোলার, ওয়ার্কআউটের জন্য’-এর পণ্য পাতা খুলুন। এর ছবি অনুযায়ী প্যাকে কয়টি ইউনিট আছে?",
+  "image": "sites/visual/ministore/static/img/products/p825.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "২"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /product/825",
+   "stop 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "image-ministore-050",
+  "site": "ministore",
+  "kind": "A3_buy",
+  "intent": "ছবিতে দেখানো পণ্যটির ১টি কিনুন এবং '৩৪ রেডউড অ্যাভিনিউ, ডেভিস, ৯৫৬১৬' ঠিকানায় পাঠান। এটি এগুলোর একটি: ‘Alkove Hayes আয়তাকার সলিড কাঠের কফি টেবিল, 1 শেলফ সহ’, ‘ক্লাসিক কফি টেবিল’, ‘Amber ফার্মহাউস শেলফ স্টোরেজ সাইড এন্ড টেবিল’, ‘এসেনশিয়াল ইঞ্জিনিয়ারড কাঠের কফি টেবিল’। অর্ডারটি সম্পূর্ণ করতে চেকআউট শেষ করুন। প্রয়োজনে agent_smith (পাসওয়ার্ড: password123) হিসেবে লগ ইন করুন।",
+  "image": "sites/visual/ministore/static/img/products/p947.jpg",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "order_contains",
+    "address": "%৩৪ রেডউড অ্যাভিনিউ, ডেভিস, ৯৫৬১৬%",
+    "items": {
+     "947": 1
+    },
+    "total": 23880.0
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 903
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1194
+    }
+   },
+   {
+    "type": "db_record_absent",
+    "table": "order_items",
+    "match": {
+     "product_id": 1170
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 1 username=agent_smith; password=password123",
+   "goto /?q=Alkove%20Hayes%20%E0%A6%86%E0%A6%AF%E0%A6%BC%E0%A6%A4%E0%A6%BE%E0%A6%95%E0%A6%BE%E0%A6%B0%20%E0%A6%B8%E0%A6%B2%E0%A6%BF%E0%A6%A1%20%E0%A6%95%E0%A6%BE%E0%A6%A0%E0%A7%87%E0%A6%B0%20%E0%A6%95%E0%A6%AB%E0%A6%BF%20%E0%A6%9F%E0%A7%87%E0%A6%AC%E0%A6%BF%E0%A6%B2%2C%201%20%E0%A6%B6%E0%A7%87%E0%A6%B2%E0%A6%AB%20%E0%A6%B8%E0%A6%B9",
+   "view 0",
+   "goto /product/947",
+   "goto /product/903",
+   "goto /product/1194",
+   "goto /product/1170",
+   "goto /product/947",
+   "fill 1 qty=1",
+   "goto /checkout",
+   "fill 1 address=৩৪ রেডউড অ্যাভিনিউ, ডেভিস, ৯৫৬১৬",
+   "fill 2"
+  ],
+  "max_steps": 30
+ }
+]

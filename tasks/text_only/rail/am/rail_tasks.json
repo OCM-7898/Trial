@@ -1,0 +1,2155 @@
+[
+ {
+  "id": "rail-001",
+  "site": "rail",
+  "intent": "ባቡር 12903 ሳጋርማላ ኤክስፕረስ ከኒው ዴልሂ ወደ ሙምባይ ሴንትራል ምን ያህል ጊዜ ይወስዳል? እንደታየው ቆይታውን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "16h 55m",
+     "16 hours 55 minutes",
+     "16 hr 55 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=BCT; date=2026-04-06",
+   "stop 16h 55m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-002",
+  "site": "rail",
+  "intent": "በ2026-04-06 ከኒው ዴልሂ ወደ ካንፑር ሴንትራል ለሚደረግ ጉዞ ዝቅተኛውን የ3A ዋጋ ያግኙና መጠኑን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1000",
+     "1,000"
+    ],
+    "none_of": [
+     "1332"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "stop 1000"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-003",
+  "site": "rail",
+  "intent": "የPNR 6201234567 የPNR ሁኔታ ይመልከቱና የሁኔታውን ኮድ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CNF"
+    ],
+    "none_of": [
+     "CAN",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "stop CNF"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-004",
+  "site": "rail",
+  "intent": "PNR 6203456789ን ተመልክተው የተሳፋሪውን ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ቪክራም ራኦ"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6203456789",
+   "stop ቪክራም ራኦ"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-005",
+  "site": "rail",
+  "intent": "በ2026-04-06 በባቡር 12301 ያሙና ኤክስፕረስ ከኒው ዴልሂ ወደ ሃውራ ጀንክሽን ለተሳፋሪ ካቢር ሜህታ፣ ዕድሜ 41፣ ወንድ፣ የላይ (Upper) መኝታ አንድ የ2A ትኬት ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "ካቢር ሜህታ",
+     "date": "2026-04-06",
+     "from_code": "NDLS",
+     "to_code": "HWH"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-06&class=2A",
+   "fill 0 name=ካቢር ሜህታ; age=41; gender=M; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-006",
+  "site": "rail",
+  "intent": "በ2026-04-07 በባቡር 12417 ጎምቲ ሳምፓርክ ከኒው ዴልሂ ወደ ላክናው ለተሳፋሪ ሱኒታ ቨርማ፣ ዕድሜ 55፣ ሴት፣ የመኝታ ምርጫ የሌላት አንድ የCC (ወንበር መኪና) ትኬት ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "ሱኒታ ቨርማ",
+     "class_code": "CC",
+     "train_no": "12417",
+     "date": "2026-04-07",
+     "from_code": "NDLS",
+     "to_code": "LKO"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12417?from=NDLS&to=LKO&date=2026-04-07&class=CC",
+   "fill 0 name=ሱኒታ ቨርማ; age=55; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-007",
+  "site": "rail",
+  "intent": "በ2026-04-08 በባቡር 12841 ኮሮማንዴል ሊንክ ኤክስፕረስ ከሃውራ ጀንክሽን ወደ ቼናይ ሴንትራል ለተሳፋሪ ፋርሃን አሊ፣ ዕድሜ 23፣ ወንድ፣ የጎን ላይ (Side Upper) መኝታ አንድ የSL (ስሊፐር) ትኬት ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "ፋርሃን አሊ",
+     "berth": "Side Upper",
+     "train_no": "12841",
+     "class_code": "SL",
+     "date": "2026-04-08",
+     "from_code": "HWH",
+     "to_code": "MAS"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12841?from=HWH&to=MAS&date=2026-04-08&class=SL",
+   "fill 0 name=ፋርሃን አሊ; age=23; gender=M; berth=Side Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-008",
+  "site": "rail",
+  "intent": "PNR 6203456789 ያለውን ማስያዣ ይሰርዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /cancel/6203456789",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-009",
+  "site": "rail",
+  "intent": "በባቡር 12622 ብራህማፑትራ ሊንክ ኤክስፕረስ ከሃውራ ጀንክሽን ወደ ጉዋሃቲ የ2A ትኬት ከ3A ትኬት በምን ያህል ይበልጣል? ልዩነቱን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "1108",
+     "1,108"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "stop 1108"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-010",
+  "site": "rail",
+  "intent": "በ2026-04-07 የሚነሳ ከሴኩንደራባድ ጀንክሽን ወደ ፑኔ ጀንክሽን ቀጥተኛ ባቡር ያግኙ። በዚያ ቀን ባቡር ከሌለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ባቡር የለም",
+     "ቀጥተኛ ባቡር የለም",
+     "አይሠራም",
+     "በዚያ ቀን አይሠራም",
+     "ባቡሮች የሉም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-011",
+  "site": "rail",
+  "intent": "የPNR 6299999999 የPNR ሁኔታ ይመልከቱ። ማስያዣ ከሌለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ማስያዣ የለም",
+     "አልተገኘም",
+     "መዝገብ የለም",
+     "የለም",
+     "ልክ ያልሆነ pnr"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6299999999",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-012",
+  "site": "rail",
+  "intent": "ተመላሽዎ እንዳልደረሰ የሚገልጽ መልእክት በርዕስ 'የተመላሽ መዘግየት' ለደንበኞች ድጋፍ ይላኩ። ስምዎንና ኢሜይልዎን (ፕሪያ ሻርማ፣ priya.sharma@example.in) ያካትቱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "የተመላሽ መዘግየት",
+     "name": "ፕሪያ ሻርማ",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=ፕሪያ ሻርማ; email=priya.sharma@example.in; subject=የተመላሽ መዘግየት; message=ለተሰረዘ ትኬቴ ተመላሹ አልደረሰም።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-013",
+  "site": "rail",
+  "intent": "በመገለጫዎ ውስጥ የሞባይል ቁጥሩን ወደ 9876501234 ያዘምኑ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9876501234"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 mobile=9876501234"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-014",
+  "site": "rail",
+  "intent": "በተመላሽ ደንቦች መሠረት፣ ከመነሻ ከ48 ሰዓት በላይ ቀደም ብሎ ለተሰረዘ የተረጋገጠ የAC ክፍል ትኬት ቋሚ የስረዛ ክፍያ በብር ስንት ነው?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "368"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /rules",
+   "stop 368"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-015",
+  "site": "rail",
+  "intent": "በ2026-04-09 ከጃይፑር ጀንክሽን ወደ ላክናው ቀጥተኛ ባቡር አለ? ከሌለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ባቡር የለም",
+     "ቀጥተኛ ባቡር የለም",
+     "ምንም የለም",
+     "ባቡሮች የሉም",
+     "አገልግሎት የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=JP; to=LKO; date=2026-04-09",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-016",
+  "site": "rail",
+  "intent": "በዚህ ጣቢያ ካሉት ሁሉም ባቡሮች መካከል የትኛው አንድ ባቡር ከመነሻው እስከ መድረሻው ረጅሙን ጠቅላላ ርቀት ይሸፍናል? የባቡር ቁጥሩንና ርቀቱን በኪሜ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2182",
+     "2,182"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615, 2182 km"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-017",
+  "site": "rail",
+  "intent": "የትኛው ባቡር በጠቅላላ ብዙ የተያዙ ማቆሚያዎች አሉት (መነሻውንና መድረሻውን ጨምሮ)? የባቡር ቁጥሩንና የማቆሚያዎቹን ብዛት ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12615",
+   "stop 12615 with 6 stops"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-018",
+  "site": "rail",
+  "intent": "በየቀኑ ከሚሠሩ ባቡሮች መካከል የትኛው በቀኑ ውስጥ ዘግይቶ (በሰዓት) መድረሻው ላይ ይደርሳል? የባቡር ቁጥሩንና የመድረሻ ሰዓቱን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12417"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "22:35"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12417 at 22:35"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-019",
+  "site": "rail",
+  "intent": "በዚህ ጣቢያ የትኛው ባቡር በማንኛውም መካከለኛ ጣቢያ ረጅሙ ቆይታ አለው? የባቡር ቁጥሩንና የቆይታውን ርዝመት በደቂቃ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12841"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "20"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12841",
+   "stop 12841, 20 minutes at ቪሻካፓትናም"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-020",
+  "site": "rail",
+  "intent": "SL (ስሊፐር) ካላቸው ሁሉም ባቡሮች መካከል የትኛው ርካሹ የሙሉ መስመር SL ዋጋ አለው? የባቡር ቁጥሩንና ዋጋውን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12723"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "512"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12723",
+   "stop 12723, 512"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-021",
+  "site": "rail",
+  "intent": "1A (AC አንደኛ ክፍል) ካላቸው ሁሉም ባቡሮች መካከል የትኛው ውዱ የሙሉ መስመር 1A ዋጋ አለው? የባቡር ቁጥሩንና ዋጋውን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10116",
+     "10,116"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "goto /train/12301",
+   "stop 12301, 10116"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-022",
+  "site": "rail",
+  "intent": "በዚህ ጣቢያ ልክ ሁለት ጣቢያዎች እያንዳንዳቸው በልክ 3 ባቡሮች ይገለገላሉ። የትኞቹ ሁለት? የሁለቱንም ጣቢያዎች ስም ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ሙምባይ ሴንትራል",
+     "BCT"
+    ],
+    "none_of": [
+     "ሃውራ ጀንክሽን",
+     "ላክናው",
+     "ሴኩንደራባድ ጀንክሽን",
+     "ቦፓል ጀንክሽን",
+     "ቪሻካፓትናም",
+     "ቫራናሲ ጀንክሽን",
+     "ቼናይ ሴንትራል",
+     "ኒው ዴልሂ",
+     "ኒው ጃልፓይጉሪ",
+     "ናግፑር ጀንክሽን",
+     "አህመዳባድ ጀንክሽን",
+     "አቡ ሮድ",
+     "አጅመር ጀንክሽን",
+     "አግራ ካንት",
+     "ካንፑር ሴንትራል",
+     "ጃይፑር ጀንክሽን",
+     "ጉዋሃቲ",
+     "ፑኔ ጀንክሽን",
+     "ፓትና ጀንክሽን"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "ራትላም ጀንክሽን",
+     "RTM"
+    ],
+    "none_of": [
+     "ሃውራ ጀንክሽን",
+     "ላክናው",
+     "ሴኩንደራባድ ጀንክሽን",
+     "ቦፓል ጀንክሽን",
+     "ቪሻካፓትናም",
+     "ቫራናሲ ጀንክሽን",
+     "ቼናይ ሴንትራል",
+     "ኒው ዴልሂ",
+     "ኒው ጃልፓይጉሪ",
+     "ናግፑር ጀንክሽን",
+     "አህመዳባድ ጀንክሽን",
+     "አቡ ሮድ",
+     "አጅመር ጀንክሽን",
+     "አግራ ካንት",
+     "ካንፑር ሴንትራል",
+     "ጃይፑር ጀንክሽን",
+     "ጉዋሃቲ",
+     "ፑኔ ጀንክሽን",
+     "ፓትና ጀንክሽን"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop ሙምባይ ሴንትራል and ራትላም ጀንክሽን"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-023",
+  "site": "rail",
+  "intent": "በየቀኑ ከሚሠሩ ባቡሮች መካከል የትኛው ጠዋት ቀድሞ ከመነሻው ይነሳል? የባቡር ቁጥሩንና የመነሻ ሰዓቱን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12615"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:15",
+     "6:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12615 at 06:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-024",
+  "site": "rail",
+  "intent": "በ2026-04-07 ተነስቶ የትኛው ባቡር ከፓትና ጀንክሽን ወደ ሃውራ ጀንክሽን ሊወስድዎ ይችላል? የባቡር ቁጥሩን ይመልሱ (ምንም ካልሠራ N/A)።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12301"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12622",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=PNBE; to=HWH; date=2026-04-07",
+   "stop 12301"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-025",
+  "site": "rail",
+  "intent": "በ2026-04-08 የሚነሳ ከኒው ጃልፓይጉሪ ወደ ጉዋሃቲ ቀጥተኛ ባቡር ያግኙ። የባቡር ቁጥሩን ይመልሱ (ምንም ካልሠራ N/A)።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ],
+    "none_of": [
+     "12049",
+     "12138",
+     "12301",
+     "12302",
+     "12417",
+     "12559",
+     "12615",
+     "12659",
+     "12723",
+     "12841",
+     "12903",
+     "12904"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NJP; to=GHY; date=2026-04-08",
+   "stop 12622"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-026",
+  "site": "rail",
+  "intent": "ከ2026-04-06 እስከ 2026-04-12 ያለውን እያንዳንዱን ቀን በማየት፣ በየትኛው ቀን ከኒው ዴልሂ ወደ ካንፑር ሴንትራል ብዙ ቀጥተኛ ባቡሮች ይሠራሉ? ቀኑን (YYYY-MM-DD) እና በዚያ ቀን ስንት ባቡሮች እንደሚሠሩ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2026-04-12",
+     "እሁድ"
+    ],
+    "none_of": [
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-11"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-07",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-10",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-11",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 2026-04-12, 3 trains"
+  ],
+  "max_steps": 40,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-027",
+  "site": "rail",
+  "intent": "ባቡር 12301 ያሙና ኤክስፕረስ በሳምንት ስንት ቀናት ፓትና ጀንክሽን ላይ ይቆማል? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/PNBE",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-028",
+  "site": "rail",
+  "intent": "ማስያዣዎ 6203456789 የተረጋገጠ የAC ክፍል ትኬት ነው። ዛሬ (ከመነሻ ከ48 ሰዓት በላይ ቀደም ብለው) ቢሰርዙት፣ በታተሙት የተመላሽ ደንቦች መሠረት በብር ስንት ተመላሽ ይገባዎታል? መጠኑን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5604",
+     "5,604"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 5604"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-029",
+  "site": "rail",
+  "intent": "ማስያዣዎ 6202345678 በተጠባባቂ ዝርዝር ነው። በተመላሽ ደንቦች መሠረት፣ ከመነሻ በፊት ቢሰርዙት በብር ስንት ተመላሽ ያገኛሉ? መጠኑን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2040",
+     "2,040"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 2040"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-030",
+  "site": "rail",
+  "intent": "የባቡር 12615 ዳክሺን ኤክስፕረስ ሙሉ መስመር (ከኒው ዴልሂ ወደ ቼናይ ሴንትራል) የተረጋገጠ የ3A ትኬት ከመነሻ 24 ሰዓት በፊት ይሰረዛል። በተመላሽ ደንቦች መሠረት በብር ስንት ተመላሽ ይገባል? መጠኑን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4128",
+     "4,128"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "goto /rules",
+   "stop 4128"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-031",
+  "site": "rail",
+  "intent": "የተረጋገጠ ማስያዣዎ 6205678901 (የAC ክፍል ትኬት) ከመነሻ 6 ሰዓት በፊት ቢሰረዝ፣ ደንቦቹ በብር ስንት ተመላሽ ይፈቅዳሉ? መጠኑን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "168"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /rules",
+   "stop 168"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-032",
+  "site": "rail",
+  "intent": "በባቡር 12559 ካሺ ኤክስፕረስ ከኒው ዴልሂ ወደ ቫራናሲ ጀንክሽን ሁለት የ2A ትኬቶች በጠቅላላ ስንት ያስከፍላሉ? ጠቅላላውን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5640",
+     "5,640"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 5640"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-033",
+  "site": "rail",
+  "intent": "የሁሉም የተረጋገጡ (CNF) ማስያዣዎችዎ ጥምር ዋጋ በብር ስንት ነው? ጠቅላላውን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "16516",
+     "16,516"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 16516"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-034",
+  "site": "rail",
+  "intent": "በባቡር 12615 ዳክሺን ኤክስፕረስ ከአግራ ካንት ወደ ሴኩንደራባድ ጀንክሽን ለሚደረግ ጉዞ 3A ከSL በምን ያህል ይበልጣል? ልዩነቱን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2308",
+     "2,308"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615?from=AGC&to=SC&date=2026-04-06",
+   "stop 2308"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-035",
+  "site": "rail",
+  "intent": "ከኒው ዴልሂ ወደ ቫራናሲ ጀንክሽን በቀጥተኛው ባቡር 12559 በSL መጓዝን ጉዞውን በሁለት የSL ክፍሎች ከመክፈል ጋር ያወዳድሩ፡ በባቡር 12301 ከኒው ዴልሂ ወደ ካንፑር ሴንትራል፣ ከዚያ በባቡር 12559 ከካንፑር ሴንትራል ወደ ቫራናሲ ጀንክሽን። ቀጥተኛው ትኬት ከሁለት ክፍል አማራጩ ስንት ብር ያድናል?",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "84"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559?from=NDLS&to=BSB&date=2026-04-07",
+   "goto /train/12301?from=NDLS&to=CNB&date=2026-04-06",
+   "goto /train/12559?from=CNB&to=BSB&date=2026-04-07",
+   "stop 84"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-036",
+  "site": "rail",
+  "intent": "በባቡር 12904 ሙምባይ ሳምፓርክ ኤክስፕረስ ሁሉንም ክፍሎቹን ደምሮ በጠቅላላ ስንት መቀመጫዎች ይገኛሉ? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "93"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12904",
+   "stop 93"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-037",
+  "site": "rail",
+  "intent": "ሁለቱ ማስያዣዎችዎ ለተሳፋሪዎች አኒታ ደሳይ እና ሚራ አየር ናቸው። የማን የትኬት ዋጋ ከፍ ያለ ነው፣ በስንት ብር? የተሳፋሪውን ስምና ልዩነቱን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "አኒታ ደሳይ",
+     "አኒታ"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "496"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop አኒታ ደሳይ by 496"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-038",
+  "site": "rail",
+  "intent": "በባቡር 12302 ሃውራ ሜይል ለሙሉ መስመሩ ከ1528 ብር በላይ የሚያስከፍል ርካሹ ክፍል የትኛው ነው? የክፍሉን ኮድና ዋጋውን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3A"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "3664",
+     "3,664"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12302",
+   "stop 3A at 3664"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-039",
+  "site": "rail",
+  "intent": "በባቡር 12659 አራቫሊ ኤክስፕረስ ከጃይፑር ጀንክሽን ወደ አህመዳባድ ጀንክሽን ከ764 ብር የማይበልጥ ውዱ ክፍል የትኛው ነው? የክፍሉን ኮድና ዋጋውን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "SL"
+    ],
+    "none_of": [
+     "2S",
+     "3A",
+     "CC"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "536"
+    ],
+    "none_of": [
+     "1080",
+     "1424",
+     "292"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop SL at 536"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-040",
+  "site": "rail",
+  "intent": "የኒው ዴልሂ ወደ ካንፑር ሴንትራል ክፍልን ከሚያገለግሉ ሁሉም ባቡሮች መካከል የትኛው ለዚያ ክፍል ርካሹን የSL (ስሊፐር) ዋጋ ይሰጣል? የባቡር ቁጥሩንና ዋጋውን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12559"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "420"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-12",
+   "stop 12559 at 420"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-041",
+  "site": "rail",
+  "intent": "የቱ ይበልጣል፡ የባቡር 12622 ብራህማፑትራ ሊንክ ኤክስፕረስ የሙሉ መስመር 1A ትኬት፣ ወይስ በባቡር 12615 ዳክሺን ኤክስፕረስ ከኒው ዴልሂ ወደ ቦፓል ጀንክሽን የ2A ትኬት? የሚያሸንፈውን የባቡር ቁጥርና ያንን ዋጋ በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12622"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6040",
+     "6,040"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12622",
+   "goto /train/12615?from=NDLS&to=BPL&date=2026-04-06",
+   "stop 12622 at 6040"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-042",
+  "site": "rail",
+  "intent": "ራትላም ጀንክሽን ላይ ከሚቆሙ ሁሉም ባቡሮች መካከል የትኛው በቀኑ ውስጥ ቀድሞ (በሰዓት) ከዚያ ይነሳል? የባቡር ቁጥሩንና ከዚያ የሚነሳበትን ሰዓት ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12903"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "03:15",
+     "3:15"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/RTM",
+   "stop 12903 at 03:15"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-043",
+  "site": "rail",
+  "intent": "ከማስያዣዎችዎ አንዱ በተጠባባቂ ዝርዝር (WL) ነው። ያንን ማስያዣ ይሰርዙ — እሱን ብቻ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6202345678"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6202345678",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-044",
+  "site": "rail",
+  "intent": "ገና ያልተሰረዙ በ2026-04-10 ወይም ከዚያ በኋላ የተያዙ የጉዞ ማስያዣዎችዎን ሁሉ ይሰርዙ። እያንዳንዱን ቀደምት ጉዞ እንዳለ ይተዉ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6203456789"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6208901234"
+    },
+    "field": "status",
+    "value": "CAN"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6206789012"
+    },
+    "field": "status",
+    "value": "CNF"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "bookings",
+    "match": {
+     "pnr": "6201234567"
+    },
+    "field": "status",
+    "value": "CNF"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "goto /cancel/6203456789",
+   "fill 0",
+   "goto /cancel/6208901234",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-045",
+  "site": "rail",
+  "intent": "በመገለጫዎ ውስጥ የኢሜይል አድራሻውን ወደ priya.s@newmail.in እና የሞባይል ቁጥሩን ወደ 9812399999 ይቀይሩ (ሁለቱንም፣ በአንድ ዝማኔ)። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "email",
+    "value": "priya.s@newmail.in"
+   },
+   {
+    "type": "db_field_equals",
+    "table": "users",
+    "match": {
+     "username": "priya_sharma"
+    },
+    "field": "mobile",
+    "value": "9812399999"
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/profile",
+   "fill 0 email=priya.s@newmail.in; mobile=9812399999"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-046",
+  "site": "rail",
+  "intent": "PNR 6204567890ን ተመልክተው የተሳፋሪውን ስም ያግኙ፣ ከዚያ ለደንበኞች ድጋፍ በስምዎ (ፕሪያ ሻርማ)፣ በኢሜይልዎ (priya.sharma@example.in)፣ በርዕስ 'የPNR ጥያቄ' እና በትክክል በዚህ መልእክት ይላኩ፡ 'የተመላሽ ሁኔታ ለ <የተሳፋሪ ስም>' — <የተሳፋሪ ስም>ን ባገኙት ስም በመተካት።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "የPNR ጥያቄ",
+     "message": "የተመላሽ ሁኔታ ለ ሚራ አየር",
+     "name": "ፕሪያ ሻርማ",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6204567890",
+   "goto /contact",
+   "fill 0 name=ፕሪያ ሻርማ; email=priya.sharma@example.in; subject=የPNR ጥያቄ; message=የተመላሽ ሁኔታ ለ ሚራ አየር"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-047",
+  "site": "rail",
+  "intent": "PNR 6201234567ን ይመልከቱ፣ ከዚያ በ2026-04-06 በባቡር 12049 ታጅ ሳምፓርክ ከኒው ዴልሂ ወደ አግራ ካንት ለዚያው ተሳፋሪ (ተመሳሳይ ስምና ዕድሜ)፣ ወንድ፣ የመኝታ ምርጫ የሌለው አንድ የCC ትኬት ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "CC",
+     "passenger": "ሮሃን ሻርማ",
+     "age": 34,
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /pnr",
+   "fill 0 pnr=6201234567",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=CC",
+   "fill 0 name=ሮሃን ሻርማ; age=34; gender=M; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-048",
+  "site": "rail",
+  "intent": "በ2026-04-06 በባቡር 12138 ናርማዳ ሜይል ከሙምባይ ሴንትራል ወደ ቦፓል ጀንክሽን ለተሳፋሪ ኒሻ ራኦ፣ ዕድሜ 30፣ ሴት፣ የታች (Lower) መኝታ አንድ የSL ትኬት ያስይዙ — ከዚያም ያንን አዲስ ማስያዣ ይሰርዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "passenger": "ኒሻ ራኦ",
+     "status": "CAN",
+     "train_no": "12138",
+     "class_code": "SL",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /book/12138?from=BCT&to=BPL&date=2026-04-06&class=SL",
+   "fill 0 name=ኒሻ ራኦ; age=30; gender=F; berth=Lower",
+   "fill 0",
+   "goto /cancel/6210000009",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-049",
+  "site": "rail",
+  "intent": "በ2026-04-06 ከኒው ዴልሂ ወደ ካንፑር ሴንትራል ቀድሞ የሚነሳውን ባቡር ያግኙና በእሱ ላይ ለተሳፋሪ አናያ ካፑር፣ ዕድሜ 27፣ ሴት፣ የመኝታ ምርጫ የሌላት አንድ የCC ትኬት ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12417",
+     "class_code": "CC",
+     "passenger": "አናያ ካፑር",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-06",
+   "goto /book/12417?from=NDLS&to=CNB&date=2026-04-06&class=CC",
+   "fill 0 name=አናያ ካፑር; age=27; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-050",
+  "site": "rail",
+  "intent": "በ2026-04-06 ከኒው ዴልሂ ወደ አግራ ካንት በተቻለ መጠን ርካሽ ይጓዙ፡ በዚያ ቀን የሚሠራውን እያንዳንዱን ባቡር እያንዳንዱን ክፍል ያወዳድሩ፣ እና ለተሳፋሪ ሪቱ ሲንግ፣ ዕድሜ 24፣ ሴት፣ የመኝታ ምርጫ የሌላት አንዱን ርካሽ አማራጭ ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12049",
+     "class_code": "2S",
+     "passenger": "ሪቱ ሲንግ",
+     "date": "2026-04-06"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=AGC; date=2026-04-06",
+   "goto /book/12049?from=NDLS&to=AGC&date=2026-04-06&class=2S",
+   "fill 0 name=ሪቱ ሲንግ; age=24; gender=F; berth=No Preference",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-051",
+  "site": "rail",
+  "intent": "በ2026-04-08 ከኒው ዴልሂ ወደ ካንፑር ሴንትራል ዘግይቶ በሚነሳው ባቡር ለተሳፋሪ ሞሃን ዳስ፣ ዕድሜ 52፣ ወንድ፣ የታች (Lower) መኝታ አንድ የ3A ትኬት ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "3A",
+     "passenger": "ሞሃን ዳስ",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=CNB; date=2026-04-08",
+   "goto /book/12301?from=NDLS&to=CNB&date=2026-04-08&class=3A",
+   "fill 0 name=ሞሃን ዳስ; age=52; gender=M; berth=Lower",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-052",
+  "site": "rail",
+  "intent": "በ2026-04-09 ከኒው ዴልሂ ወደ ሃውራ ጀንክሽን ለተሳፋሪ ሳራ ካን፣ ዕድሜ 33፣ ሴት፣ የላይ (Upper) መኝታ አንድ የ2A ትኬት ያስይዙ። በዚያ ቀን ባቡር ከሌለ ያንኑ ጉዞ በ2026-04-10 ያስይዙ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "bookings",
+    "match": {
+     "train_no": "12301",
+     "class_code": "2A",
+     "passenger": "ሳራ ካን",
+     "date": "2026-04-10"
+    }
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-09",
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-10",
+   "goto /book/12301?from=NDLS&to=HWH&date=2026-04-10&class=2A",
+   "fill 0 name=ሳራ ካን; age=33; gender=F; berth=Upper",
+   "fill 0"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-053",
+  "site": "rail",
+  "intent": "የባቡር 12615 ዳክሺን ኤክስፕረስ ሙሉ መስመር የ1A (AC አንደኛ ክፍል) ዋጋ ስንት ነው? ያ ክፍል በዚህ ባቡር ካልቀረበ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አይሰጥም",
+     "1a የለም",
+     "አይቀርብም",
+     "በዚህ ባቡር የለም",
+     "ac አንደኛ የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-054",
+  "site": "rail",
+  "intent": "በ2026-04-08 በባቡር 12904 ሙምባይ ሳምፓርክ ኤክስፕረስ ከሙምባይ ሴንትራል ወደ ኒው ዴልሂ ለተሳፋሪ ራቪ ኩማር፣ ዕድሜ 45፣ ወንድ አንድ የ2A ትኬት ያስይዙ። ባቡሩ በዚያ ቀን የማይሠራ ከሆነ ምንም አያስይዙ እና N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አይሠራም",
+     "በዚያ ቀን አይሠራም",
+     "ባቡር የለም",
+     "እየሠራ አይደለም",
+     "አላስያዝኩም"
+    ]
+   },
+   {
+    "type": "db_record_absent",
+    "table": "bookings",
+    "match": {
+     "train_no": "12904",
+     "date": "2026-04-08"
+    }
+   }
+  ],
+  "solution": [
+   "goto /train/12904?from=BCT&to=NDLS&date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-055",
+  "site": "rail",
+  "intent": "በ2026-04-07 ከላክናው ወደ አግራ ካንት ቀጥተኛ ባቡር ያግኙ። ይህን መስመር የሚያገለግል ቀጥተኛ ባቡር ከሌለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ባቡር የለም",
+     "ቀጥተኛ ባቡር የለም",
+     "አገልግሎት የለም",
+     "ባቡሮች የሉም",
+     "በዚህ መስመር የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=LKO; to=AGC; date=2026-04-07",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-056",
+  "site": "rail",
+  "intent": "በ2026-04-06 የሚነሳ ከራትላም ጀንክሽን ወደ ኒው ዴልሂ ቀጥተኛ ባቡር ያግኙ። በዚያ ቀን ባቡር ከሌለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ባቡር የለም",
+     "አይሠራም",
+     "በዚያ ቀን አይሠራም",
+     "ባቡሮች የሉም",
+     "አይነሳም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=RTM; to=NDLS; date=2026-04-06",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-057",
+  "site": "rail",
+  "intent": "በ2026-04-08 ከጉዋሃቲ ወደ ሃውራ ጀንክሽን የትኛው ባቡር ይሠራል? ያን መስመር የሚያገለግል ከሌለ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "ባቡር የለም",
+     "ምንም አይሠራም",
+     "አገልግሎት የለም",
+     "ባቡሮች የሉም",
+     "በዚህ መስመር የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=GHY; to=HWH; date=2026-04-08",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-058",
+  "site": "rail",
+  "intent": "የማስያዣ ቅጹ የታትካል ኮታ አማራጭ ይሰጣል። ሬልሴቱ በጣቢያው ላይ የትም ቦታ በብር ስንት ተጨማሪ የታትካል ክፍያ ይገልጻል? የተጨማሪ ክፍያ መጠን ካልተገለጸ N/A ብለው ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "N/A",
+     "አልተገለጸም",
+     "ተጨማሪ ክፍያ የለም",
+     "አይገልጽም",
+     "አልተጠቀሰም",
+     "የታትካል ተጨማሪ ክፍያ የለም"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "goto /rules",
+   "stop N/A"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-059",
+  "site": "rail",
+  "intent": "በካንፑር ሴንትራል ስንት የተለያዩ ባቡሮች ይቆማሉ (በማንኛውም አቅጣጫ)? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /station/CNB",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-060",
+  "site": "rail",
+  "intent": "በዚህ ጣቢያ ስንት ባቡሮች በየቀኑ (ሰባቱንም ቀናት) ይሠራሉ? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 6"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-061",
+  "site": "rail",
+  "intent": "የPNR 6207890123 የPNR ሁኔታ ይመልከቱና የሁኔታውን ኮድ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "CAN"
+    ],
+    "none_of": [
+     "CNF",
+     "WL"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /pnr",
+   "fill 0 pnr=6207890123",
+   "stop CAN"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-062",
+  "site": "rail",
+  "intent": "ባቡር 12615 ዳክሺን ኤክስፕረስ በናግፑር ጀንክሽን ስንት ደቂቃ ይቆያል? የደቂቃዎቹን ብዛት ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 10"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-063",
+  "site": "rail",
+  "intent": "የትኞቹ ባቡሮች ከመነሻ ጣቢያቸው በ20:00 ወይም ከዚያ በኋላ ይነሳሉ? የሁለቱንም የባቡር ቁጥሮች ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12138"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12302"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 12138 and 12302"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-064",
+  "site": "rail",
+  "intent": "በዚህ ጣቢያ አጭሩን ጠቅላላ መስመር ያላቸውን ሁለት ባቡሮች ያግኙና የሁለቱን መስመሮች ጥምር ርዝመት በኪሜ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "707"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /trains",
+   "stop 707"
+  ],
+  "max_steps": 30,
+  "tags": [
+   "memory"
+  ]
+ },
+ {
+  "id": "rail-065",
+  "site": "rail",
+  "intent": "ስንት ማስያዣዎችዎ (ማንኛውም ሁኔታ) ከ2026-04-09 በፊት ላሉ ጉዞዎች ናቸው? ቁጥሩን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "4"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 4"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-066",
+  "site": "rail",
+  "intent": "የትኛው ማስያዣዎ ከፍተኛውን ዋጋ አለው? PNRውንና ዋጋውን በብር ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "6203456789"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "5972",
+     "5,972"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 6203456789 at 5972"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-067",
+  "site": "rail",
+  "intent": "ባቡር 12559 ካሺ ኤክስፕረስ በስንት ሰዓት ቫራናሲ ጀንክሽን ላይ ይደርሳል፣ እና በጉዞው በየትኛው ቀን (1 ወይም 2)? ሰዓቱንና የቀኑን ቁጥር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "06:30",
+     "6:30"
+    ]
+   },
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "2",
+     "ሁለት"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12559",
+   "stop 06:30 on day 2"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-068",
+  "site": "rail",
+  "intent": "በባቡር 12659 አራቫሊ ኤክስፕረስ ከአጅመር ጀንክሽን ወደ አቡ ሮድ ስንት ኪሜ ነው? ርቀቱን በኪሜ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "304"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12659",
+   "stop 304"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-069",
+  "site": "rail",
+  "intent": "በባቡር 12615 ዳክሺን ኤክስፕረስ ባቡሩ በቦፓል ጀንክሽን እና ናግፑር ጀንክሽን መካከል ስንት ኪሜ ይሸፍናል? ርቀቱን በኪሜ ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "389"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12615",
+   "stop 389"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-070",
+  "site": "rail",
+  "intent": "ባቡር 12723 ዴካን ሳምፓርክ ከሴኩንደራባድ ጀንክሽን ወደ ፑኔ ጀንክሽን ምን ያህል ጊዜ ይወስዳል? እንደታየው ቆይታውን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "10h 15m",
+     "10 hours 15 minutes",
+     "10 hr 15 min"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=SC; to=PUNE; date=2026-04-06",
+   "stop 10h 15m"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-071",
+  "site": "rail",
+  "intent": "በባቡር 12301 ያሙና ኤክስፕረስ ለ3A የሚታየው የተጠባባቂ ዝርዝር ቁጥር ስንት ነው? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "12"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /train/12301",
+   "stop WL 12"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-072",
+  "site": "rail",
+  "intent": "ለደንበኞች ድጋፍ በስምዎ (ፕሪያ ሻርማ) እና በኢሜይልዎ (priya.sharma@example.in)፣ በትክክል 'በመስመር 12659 የዋጋ ልዩነት' በሚል ርዕስ እና በትክክል 'ከጃይፑር ጀንክሽን ወደ አጅመር ጀንክሽን ያለው የCC ዋጋ ከታተመው ታሪፍ ከፍ ያለ ይመስላል።' በሚል መልእክት አንድ መልእክት ይላኩ",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "db_record_exists",
+    "table": "messages",
+    "match": {
+     "subject": "በመስመር 12659 የዋጋ ልዩነት",
+     "message": "ከጃይፑር ጀንክሽን ወደ አጅመር ጀንክሽን ያለው የCC ዋጋ ከታተመው ታሪፍ ከፍ ያለ ይመስላል።",
+     "name": "ፕሪያ ሻርማ",
+     "email": "priya.sharma@example.in"
+    }
+   }
+  ],
+  "solution": [
+   "goto /contact",
+   "fill 0 name=ፕሪያ ሻርማ; email=priya.sharma@example.in; subject=በመስመር 12659 የዋጋ ልዩነት; message=ከጃይፑር ጀንክሽን ወደ አጅመር ጀንክሽን ያለው የCC ዋጋ ከታተመው ታሪፍ ከፍ ያለ ይመስላል።"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-073",
+  "site": "rail",
+  "intent": "በማስያዣ ታሪክዎ ውስጥ ስንት ማስያዣዎች (ማንኛውም ሁኔታ) ተዘርዝረዋል? ቁጥሩን ይመልሱ። ካስፈለገ እንደ priya_sharma (የይለፍ ቃል፡ travel123) ይግቡ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "8"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /login",
+   "fill 0 username=priya_sharma; password=travel123",
+   "goto /account/bookings",
+   "stop 8"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-074",
+  "site": "rail",
+  "intent": "በ2026-04-06 በባቡር 12301 ያሙና ኤክስፕረስ ከኒው ዴልሂ ወደ ሃውራ ጀንክሽን ስንት የ2A መቀመጫዎች ይገኛሉ? ቁጥሩን ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "26"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=NDLS; to=HWH; date=2026-04-06",
+   "stop 26"
+  ],
+  "max_steps": 30
+ },
+ {
+  "id": "rail-075",
+  "site": "rail",
+  "intent": "ከሙምባይ ሴንትራል ወደ ቦፓል ጀንክሽን የሚሠራውን ባቡር ያግኙና ለዚያ ጉዞ የSL (ስሊፐር) ዋጋውን በብር ይመልሱ።",
+  "start_path": "/",
+  "eval": [
+   {
+    "type": "answer_match",
+    "mode": "contains",
+    "any_of": [
+     "796"
+    ],
+    "none_of": [
+     "2112",
+     "3004"
+    ]
+   }
+  ],
+  "solution": [
+   "goto /",
+   "fill 0 from=BCT; to=BPL; date=2026-04-06",
+   "stop 796"
+  ],
+  "max_steps": 30
+ }
+]

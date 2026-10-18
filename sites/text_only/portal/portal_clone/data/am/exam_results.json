@@ -1,0 +1,422 @@
+[
+ {
+  "id": 1,
+  "candidate_name": "ደልዋር ሀቅ",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 2,
+  "candidate_name": "ደልዋር ሀቅ",
+  "institution": "የመንግሥት ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 3,
+  "candidate_name": "ቶፋዛል ዳስ",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 4,
+  "candidate_name": "ቶፋዛል ዳስ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 5,
+  "candidate_name": "ሻህናዝ ብሁይያን",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 6,
+  "candidate_name": "ሻህናዝ ብሁይያን",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 7,
+  "candidate_name": "ሞኒር ዳስ",
+  "institution": "አይዲያል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 8,
+  "candidate_name": "ሞኒር ዳስ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 9,
+  "candidate_name": "አሚኑል ቾውዱሪ",
+  "institution": "አይዲያል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 10,
+  "candidate_name": "አሚኑል ቾውዱሪ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 11,
+  "candidate_name": "ሳቢና ኻን",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 12,
+  "candidate_name": "ሳቢና ኻን",
+  "institution": "የመንግሥት ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 13,
+  "candidate_name": "ጎላም ኻን",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 14,
+  "candidate_name": "ጎላም ኻን",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 15,
+  "candidate_name": "ያስሚን ጉፕታ",
+  "institution": "አይዲያል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 16,
+  "candidate_name": "ያስሚን ጉፕታ",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 17,
+  "candidate_name": "ሬሃና ዳስ",
+  "institution": "አይዲያል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 18,
+  "candidate_name": "ሬሃና ዳስ",
+  "institution": "የመንግሥት ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 19,
+  "candidate_name": "ሳቢና ሳሃ",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 20,
+  "candidate_name": "ሳቢና ሳሃ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 21,
+  "candidate_name": "ሙስጠፋ ሆሴን",
+  "institution": "የመንግሥት ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 22,
+  "candidate_name": "ሙስጠፋ ሆሴን",
+  "institution": "ሞዴል ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 23,
+  "candidate_name": "አሽራፉል ቤጉም",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 24,
+  "candidate_name": "አሽራፉል ቤጉም",
+  "institution": "ሞዴል ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 25,
+  "candidate_name": "አብዱል ብሁይያን",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 26,
+  "candidate_name": "አብዱል ብሁይያን",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 27,
+  "candidate_name": "ጃሃንጊር ሀቅ",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 28,
+  "candidate_name": "ጃሃንጊር ሀቅ",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 29,
+  "candidate_name": "ቶፋዛል ካሪም",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 30,
+  "candidate_name": "ቶፋዛል ካሪም",
+  "institution": "ሞዴል ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 31,
+  "candidate_name": "ኻሌድ አክተር",
+  "institution": "የመንግሥት ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 32,
+  "candidate_name": "ኻሌድ አክተር",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 33,
+  "candidate_name": "ጃሃናራ ባሩዋ",
+  "institution": "የመንግሥት ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 34,
+  "candidate_name": "ጃሃናራ ባሩዋ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 35,
+  "candidate_name": "ሮኬያ ካሪም",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 36,
+  "candidate_name": "ሮኬያ ካሪም",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 37,
+  "candidate_name": "ኮሂኑር አላም",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 38,
+  "candidate_name": "ኮሂኑር አላም",
+  "institution": "የመንግሥት ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 39,
+  "candidate_name": "ፋሩቅ ሮይ",
+  "institution": "የመንግሥት ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 40,
+  "candidate_name": "ፋሩቅ ሮይ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 41,
+  "candidate_name": "ሉትፋ ማህሙድ",
+  "institution": "አይዲያል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 42,
+  "candidate_name": "ሉትፋ ማህሙድ",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 43,
+  "candidate_name": "ሻሂዱል ሀቅ",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 44,
+  "candidate_name": "ሻሂዱል ሀቅ",
+  "institution": "ሞዴል ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 45,
+  "candidate_name": "ሬዛኡል ሀቅ",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 46,
+  "candidate_name": "ሬዛኡል ሀቅ",
+  "institution": "የመንግሥት ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 47,
+  "candidate_name": "ሬዛኡል ኻን",
+  "institution": "የመንግሥት ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 48,
+  "candidate_name": "ሬዛኡል ኻን",
+  "institution": "ሞዴል ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 49,
+  "candidate_name": "ኮሂኑር ጉፕታ",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 50,
+  "candidate_name": "ኮሂኑር ጉፕታ",
+  "institution": "የመንግሥት ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 51,
+  "candidate_name": "አንዋር ሲዲቅ",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 52,
+  "candidate_name": "አንዋር ሲዲቅ",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 53,
+  "candidate_name": "ሬሃና ራህማን",
+  "institution": "ሞዴል ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 54,
+  "candidate_name": "ሬሃና ራህማን",
+  "institution": "ሲቲ ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 55,
+  "candidate_name": "አብዱል አላም",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 56,
+  "candidate_name": "አብዱል አላም",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 57,
+  "candidate_name": "ዲልሩባ አላም",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የተፈጥሮ ሳይንስ",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 58,
+  "candidate_name": "ዲልሩባ አላም",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 59,
+  "candidate_name": "ዛሂድ ራህማን",
+  "institution": "ሲቲ ሁለተኛ ደረጃ ት/ቤት",
+  "group_name": "የንግድ ትምህርት",
+  "result_status": "አልፏል"
+ },
+ {
+  "id": 60,
+  "candidate_name": "ዛሂድ ራህማን",
+  "institution": "አይዲያል ኮሌጅ",
+  "group_name": "ማኅበራዊ ሳይንስ",
+  "result_status": "አልፏል"
+ }
+]

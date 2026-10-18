@@ -1,0 +1,1198 @@
+[
+  {
+    "task_id": 1,
+    "service": "Flight booking",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ایک بالغ کے لیے ادیس ابابا (ADD) سے نیروبی (NBO) کی راؤنڈ ٹرپ پروازیں تلاش کریں، جو 2026-04-12 کو روانہ ہوں اور 2026-04-19 کو واپس آئیں۔ آؤٹ باؤنڈ تاریخ پر دستیاب پرواز نمبر اور دکھائی گئی سب سے کم کل قیمت بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "SM222",
+          "USD 112"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Search + filters",
+    "instantiation": {
+      "rationale": "concrete route and dates; the outbound date has service in both directions",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "NBO",
+        "depart": "2026-04-12",
+        "return": "2026-04-19",
+        "adults": 1,
+        "cheapest_price": 100.0,
+        "flight_numbers": [
+          "SM222"
+        ]
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 2,
+    "service": "Flight booking",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ایک بالغ کے لیے 2026-04-20 کو ادیس ابابا (ADD) سے دبئی (DXB) کی یک طرفہ پرواز بک کریں، مسافر کی تفصیلات درج کریں، اور ادائیگی کیے بغیر آخری ادائیگی جائزہ صفحے پر رکیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_02_booking_review",
+      "validator_args": {
+        "origin": "ADD",
+        "destination": "DXB",
+        "depart": "2026-04-20"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Long multi-step",
+    "instantiation": {
+      "rationale": "payment boundary: a draft booking must exist and nothing may be paid",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "DXB",
+        "depart": "2026-04-20",
+        "adults": 1
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 3,
+    "service": "Flight status",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "2026-03-16 کی پرواز SM107 کی موجودہ حیثیت چیک کریں۔ اس کی حیثیت، طے شدہ روانگی اور آمد کے اوقات، اور دونوں ٹرمینل بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "Delayed",
+          "23:20",
+          "03:05",
+          "1",
+          "1"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Lookup",
+    "instantiation": {
+      "rationale": "a delayed flight, so 'scheduled' is not a free correct answer",
+      "parameters": {
+        "flight_no": "SM107",
+        "date": "2026-03-16",
+        "status": "delayed",
+        "gate": "B20",
+        "terminal_dep": "1",
+        "terminal_arr": "1",
+        "dep_time": "23:20:00.000000",
+        "arr_time": "03:05:00.000000",
+        "delay_minutes": 55,
+        "origin": "AMM",
+        "destination": "ADD",
+        "origin_city": "Amman",
+        "dest_city": "Addis Ababa",
+        "aircraft": "Boeing 737-800"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 4,
+    "service": "Flight schedule",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "معلوم کریں کہ ADD سے ABJ کی پروازیں ہفتے کے کن دنوں چلتی ہیں۔ ہر چلنے کا دن درج کریں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "answer_only": true,
+        "must_include": [
+          "Monday",
+          "Friday"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Schedule lookup",
+    "instantiation": {
+      "rationale": "route operates 2 of 7 days, so 'daily' is wrong; scored on the reported answer, because the page lists every day either way",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "ABJ",
+        "operating_days": "1...5..",
+        "origin_city": "Addis Ababa",
+        "dest_city": "Abidjan",
+        "operating": [
+          "Monday",
+          "Friday"
+        ]
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 5,
+    "service": "Manage booking",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "حوالہ WGYBNA اور آخری نام اسیفا والی بکنگ کھولیں۔ سفری منصوبے کے پرواز نمبر اور بکنگ کی حیثیت بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "SM111",
+          "WGYBNA"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Authenticated lookup",
+    "instantiation": {
+      "rationale": "round-trip, so a single flight number is an incomplete answer",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "اسیفا",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 6,
+    "service": "Flight change",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "بکنگ W7JKUF (آخری نام تیریفے) کی آؤٹ باؤنڈ پرواز کو بعد کی تاریخ پر منتقل کرنا ہے۔ ایک دستیاب متبادل منتخب کریں، کرائے کا فرق اور کوئی تبدیلی فیس دکھائیں، اور ادائیگی کی تصدیق سے پہلے رکیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_06_change_request",
+      "validator_args": {
+        "pnr": "W7JKUF"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Mutation + payment boundary",
+    "instantiation": {
+      "rationale": "fare ES is changeable and the flight is far enough out",
+      "parameters": {
+        "id": 16,
+        "pnr": "W7JKUF",
+        "surname": "تیریفے",
+        "booked_channel": "website",
+        "total_paid": 408.0,
+        "segment_id": 25,
+        "fare_class_id": 5,
+        "flight_id": 100687,
+        "flight_no": "SM111",
+        "date": "2026-04-09",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "ES",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 7,
+    "service": "Refund request",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "چیک کریں کہ بکنگ SPMVJC (آخری نام کیبیدے) آن لائن ریفنڈ ہو سکتی ہے یا نہیں۔ اگر ہو سکتی ہے تو آخری جمع کرانے کے مرحلے تک درخواست مکمل کریں۔ اگر نہیں تو دی گئی وجہ بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_07_refund_blocked",
+      "validator_args": {
+        "pnr": "SPMVJC",
+        "expected_code": "OFFLINE_CHANNEL_ONLY"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Eligibility + irreversible action",
+    "instantiation": {
+      "rationale": "the fare IS refundable, so the agent-channel rule is what decides -- an agent that only reads the fare rules gets this wrong",
+      "parameters": {
+        "id": 21,
+        "pnr": "SPMVJC",
+        "surname": "کیبیدے",
+        "booked_channel": "agent",
+        "total_paid": 268.0,
+        "segment_id": 31,
+        "fare_class_id": 6,
+        "flight_id": 102858,
+        "flight_no": "SM141",
+        "date": "2026-03-17",
+        "dep_time": "18:20:00.000000",
+        "origin": "DIR",
+        "destination": "ADD",
+        "origin_city": "Dire Dawa",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EF",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 8,
+    "service": "Online check-in",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "بکنگ WGYBNA (آخری نام اسیفا) کے لیے چیک اِن کریں اور بورڈنگ پاس ڈاؤن لوڈ کریں۔ اس پر دکھائی گئی سیٹ اور گیٹ بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_08_checkin",
+      "validator_args": {
+        "pnr": "WGYBNA"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Multi-step + file retrieval",
+    "instantiation": {
+      "rationale": "check-in window is open and no refusal code applies",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "اسیفا",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 9,
+    "service": "Online check-in",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "معلوم کریں کہ بکنگ MBX744 (آخری نام زیلیکے) کے لیے آن لائن چیک اِن دستیاب ہے یا نہیں۔ اگر نہیں تو ویب سائٹ کی دی گئی وجہ بیان کریں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "Group booking"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Conditional lookup",
+    "instantiation": {
+      "rationale": "the flight is inside the check-in window, so the refusal is the group rule rather than a timing rule",
+      "parameters": {
+        "id": 15,
+        "pnr": "MBX744",
+        "surname": "زیلیکے",
+        "booked_channel": "website",
+        "total_paid": 1780.0,
+        "segment_id": 24,
+        "fare_class_id": 3,
+        "flight_id": 110136,
+        "flight_no": "SM246",
+        "date": "2026-03-16",
+        "dep_time": "20:05:00.000000",
+        "origin": "ADD",
+        "destination": "ZNZ",
+        "origin_city": "Addis Ababa",
+        "dest_city": "Zanzibar",
+        "fare_code": "EB",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 10,
+    "service": "Seat selection",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "بکنگ N9JKBF (آخری نام ہائلے) کھولیں اور آؤٹ باؤنڈ پرواز کے لیے ایک دستیاب آئل سیٹ منتخب کریں۔ سیٹ نمبر اور اس کی قیمت بتائیں، اور ادائیگی سے پہلے رکیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_10_aisle_seat",
+      "validator_args": {
+        "pnr": "N9JKBF"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Selection + payment boundary",
+    "instantiation": {
+      "rationale": "booking starts with no seats, so the validator can assert one was added",
+      "parameters": {
+        "id": 10,
+        "pnr": "N9JKBF",
+        "surname": "ہائلے",
+        "booked_channel": "website",
+        "total_paid": 936.0,
+        "segment_id": 19,
+        "fare_class_id": 3,
+        "flight_id": 106947,
+        "flight_no": "SM198",
+        "date": "2026-03-16",
+        "dep_time": "13:05:00.000000",
+        "origin": "ADD",
+        "destination": "LHR",
+        "origin_city": "Addis Ababa",
+        "dest_city": "London",
+        "fare_code": "EB",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 11,
+    "service": "Preferred seat",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "بکنگ WGYBNA (آخری نام اسیفا) کے لیے آؤٹ باؤنڈ پرواز پر اضافی لیگ روم والی سیٹیں تلاش کریں اور ان کی قیمت بتائیں۔ کوئی خریدیں نہیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "USD 45"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Price lookup",
+    "instantiation": {
+      "rationale": "extra-legroom seats cost more than standard ones, so the number is specific",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "اسیفا",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EP",
+        "cabin": "economy",
+        "legroom_low": 45.0,
+        "legroom_high": 45.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 12,
+    "service": "Baggage allowance",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ادیس ابابا (ADD) سے نیویارک (JFK) اکانومی میں سفر کرنے والے ایک بالغ کا مفت چیکڈ سامان اور کیبن سامان کا الاؤنس بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "2",
+          "23",
+          "7"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Rules lookup",
+    "instantiation": {
+      "rationale": "a long-haul route, whose allowance differs from the domestic and African tables shown on neighbouring pages",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "JFK",
+        "checked_pieces": 2,
+        "checked_kg": 23,
+        "cabin_kg": 7,
+        "cabin_dims_cm": "55 x 38 x 20",
+        "extra_kg_price_usd": 22.0,
+        "extra_piece_price_usd": 200.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 13,
+    "service": "Extra baggage",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "بکنگ WGYBNA (آخری نام اسیفا) میں آؤٹ باؤنڈ پرواز کے لیے 23 kg اضافی چیکڈ سامان شامل کریں۔ کل چارج بتائیں اور ادائیگی مکمل کرنے سے پہلے رکیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_13_extra_baggage",
+      "validator_args": {
+        "pnr": "WGYBNA",
+        "expected_extra_kg": 23
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Add-on + payment boundary",
+    "instantiation": {
+      "rationale": "the per-kg rate is regional, so the total depends on reading the right table",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "اسیفا",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 14,
+    "service": "Special baggage",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ادیس ابابا سے نیروبی چیکڈ سامان کے طور پر سائیکل لے جانے کے قواعد اور کوئی چارجز تلاش کریں۔ بتائیں کہ اسے کیسے پیک کرنا ہوگا اور آیا پیشگی اطلاع درکار ہے۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "handlebars",
+          "pedals",
+          "48"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Policy lookup",
+    "instantiation": {
+      "rationale": "the packing detail is only on the special-baggage page, not the allowance page",
+      "parameters": {
+        "item": "bicycle",
+        "route": "ADD-NBO"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 15,
+    "service": "Highland Class upgrade",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "چیک کریں کہ بکنگ WGYBNA (آخری نام اسیفا) کی آؤٹ باؤنڈ پرواز ہائی لینڈ کلاس میں اپ گریڈ ہو سکتی ہے یا نہیں۔ نتیجہ بتائیں اور، اگر اپ گریڈ ممکن نہ ہو، تو وجہ۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "not eligible"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Eligibility + offer lookup",
+    "instantiation": {
+      "rationale": "fare EP is upgrade-excluded, so the answer is a refusal that must be read rather than a price that could be guessed",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "اسیفا",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 16,
+    "service": "Lounge access",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ادیس ابابا بولے بین الاقوامی ہوائی اڈے پر بغیر مہمان کے ایک مسافر کے لیے لاؤنج رسائی خریدیں۔ ہائی لینڈ لاؤنج منتخب کریں، قیمت کی تصدیق کریں، اور ادائیگی کیے بغیر ادائیگی صفحے پر رکیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_16_lounge_purchase",
+      "validator_args": {
+        "lounge_id": 1,
+        "expected_price_usd": 55.0
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Purchase flow",
+    "instantiation": {
+      "rationale": "several Addis lounges sell walk-in access at different prices, so the amount depends on choosing the named one",
+      "parameters": {
+        "id": 1,
+        "name": "Highland Lounge",
+        "terminal": "1",
+        "walk_in_price_usd": 55.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 17,
+    "service": "Airport lounges",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ایک سلام مائلز گولڈ رکن ادیس ابابا کے ٹرمینل 2 سے اکانومی میں پرواز کر رہا ہے۔ شناخت کریں کہ وہاں کا کون سا لاؤنج وہ بغیر ادائیگی کے استعمال کر سکتا ہے، اور اس کے کھلنے کے اوقات اور مقام بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "Highland Lounge Terminal 2",
+          "24 hours"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Eligibility + navigation",
+    "instantiation": {
+      "rationale": "one of 3 lounges at the same terminal, only some of which admit a Gold member",
+      "parameters": {
+        "id": 2,
+        "name": "Highland Lounge Terminal 2",
+        "airport_iata": "ADD",
+        "terminal": "2",
+        "hours": "24 hours",
+        "location": "Terminal 2, airside, mezzanine level above Gate B12. Lift and stair access.",
+        "access_free_for": "business,gold,platinum",
+        "walk_in_price_usd": 65.0
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 18,
+    "service": "Selam Miles",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "پہلا نام سیلاماویت، آخری نام بیکیلے، ای میل selamawit.bekele@example.com اور ملک ET کے ساتھ ایک نیا سلام مائلز رکن اندراج کریں۔ آپ کو دیا گیا رکنیتی نمبر بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_18_enrolment",
+      "validator_args": {
+        "email": "selamawit.bekele@example.com",
+        "expected_member_no": "SM00000016"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Account creation",
+    "instantiation": {
+      "rationale": "the sequence is deterministic from the seed high-water mark, so SM00000016 is predictable after a reset",
+      "parameters": {
+        "first_name": "Selamawit",
+        "last_name": "Bekele",
+        "email": "selamawit.bekele@example.com",
+        "country_code": "ET",
+        "expected_member_no": "SM00000016"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 19,
+    "service": "Selam Miles",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "رکن SM00000001 کو 2026-03-15 کی پرواز SM246، ٹکٹ 0712345678901 کے میلز نہیں ملے۔ مسنگ مائلز کلیم جمع کریں اور کلیم حوالہ نمبر بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_19_missing_miles",
+      "validator_args": {
+        "member_no": "SM00000001",
+        "flight_no": "SM246"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Form submission",
+    "instantiation": {
+      "rationale": "the flight is in the past, which the form requires -- a future date is rejected",
+      "parameters": {
+        "member_no": "SM00000001",
+        "last_name": "Wolde",
+        "flight_no": "SM246",
+        "date": "2026-03-15",
+        "ticket_no": "0712345678901"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 20,
+    "service": "Selam Miles award ticket",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "2026-03-19 کو ADD سے CAI اکانومی میں میلز سے بک ہو سکنے والی ایوارڈ سیٹیں تلاش کریں۔ درکار میلز اور قابلِ ادائیگی ٹیکس بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "25000",
+          "USD 60"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Rewards search",
+    "instantiation": {
+      "rationale": "a date with seats remaining; sold-out rows are not listed, so the figure is real",
+      "parameters": {
+        "origin": "ADD",
+        "destination": "CAI",
+        "date": "2026-03-19",
+        "flight_no": "SM128",
+        "cabin": "economy",
+        "miles_required": 25000,
+        "taxes_usd": 60.0,
+        "seats": 4
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 21,
+    "service": "On-board Wi-Fi",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "2026-03-19 کی پرواز SM106 میں وائی فائی ہے۔ دستیاب انٹرنیٹ پیکیجز کا موازنہ کریں، سب سے بڑا ڈیٹا الاؤنس منتخب کریں، اور ادائیگی سے پہلے رکیں۔",
+    "eval": {
+      "eval_types": [
+        "program_html",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_21_wifi",
+      "validator_args": {
+        "flight_no": "SM106"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Comparison + purchase",
+    "instantiation": {
+      "rationale": "only some aircraft are equipped, so the flight must be one that is",
+      "parameters": {
+        "flight_no": "SM106",
+        "date": "2026-03-19"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 22,
+    "service": "In-flight meals",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "بکنگ WGYBNA (آخری نام اسیفا) کی آؤٹ باؤنڈ پرواز کے کھانے کے اختیارات دیکھیں، پھر مسافر کے لیے گلوٹن فری کھانے کی درخواست کریں۔",
+    "eval": {
+      "eval_types": [
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_22_special_meal",
+      "validator_args": {
+        "pnr": "WGYBNA",
+        "expected_code": "GFML"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Lookup + preference mutation",
+    "instantiation": {
+      "rationale": "GFML is one of fourteen codes, so the right one must be looked up",
+      "parameters": {
+        "id": 1,
+        "pnr": "WGYBNA",
+        "surname": "اسیفا",
+        "booked_channel": "website",
+        "total_paid": 336.0,
+        "segment_id": 1,
+        "fare_class_id": 1,
+        "flight_id": 100677,
+        "flight_no": "SM111",
+        "date": "2026-03-16",
+        "dep_time": "15:10:00.000000",
+        "origin": "ASM",
+        "destination": "ADD",
+        "origin_city": "Asmara",
+        "dest_city": "Addis Ababa",
+        "fare_code": "EP",
+        "cabin": "economy"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 23,
+    "service": "Allergy policy",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "شدید مونگ پھلی الرجی والا ایک مسافر اگلے ہفتے سفر کر رہا ہے۔ ایئرلائن کی الرجی رہنمائی تلاش کریں اور مختصراً بتائیں کہ اسے سفر سے پہلے کیا کرنا ہوگا اور طیارے میں ایئرلائن کس چیز کی ضمانت دے گی اور کس کی نہیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "48 hours",
+          "24 hours",
+          "allergen-free"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Policy retrieval",
+    "instantiation": {
+      "rationale": "the page states two different cut-offs and an explicit non-guarantee; a summary that omits the non-guarantee is wrong. The strings were bare numerals and 'cannot' until a near-miss run showed the special-meals page satisfying all three",
+      "parameters": {
+        "allergy": "peanut"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 24,
+    "service": "Addis Ababa stopover",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ایک مسافر 2026-04-12 کو ایک ہی بکنگ پر ادیس ابابا کے ذریعے نیروبی (NBO) سے لندن (LHR) کنیکٹ کر رہا ہے۔ معلوم کریں کہ آیا وہ اسٹاپ اوور پروگرام کے اہل ہیں اور دستیاب سہولیات درج کریں۔",
+    "eval": {
+      "eval_types": [
+        "string_match",
+        "db_state"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "Eligible for a stopover"
+        ]
+      },
+      "validator": "tasks.validators.task_24_stopover",
+      "validator_args": {
+        "origin": "NBO",
+        "destination": "LHR",
+        "day": "2026-04-12"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Itinerary-based eligibility",
+    "instantiation": {
+      "rationale": "the connection is 21 hours, inside the 8-72 hour window, so eligibility turns on reading the layover rather than assuming",
+      "parameters": {
+        "origin": "NBO",
+        "destination": "LHR",
+        "date": "2026-04-12"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 25,
+    "service": "Terminal hotel",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "2026-04-12 کے لے اوور کے لیے ادیس ابابا ہوائی اڈے کے اندر زینا ٹرانزٹ ہوٹل میں کمرے کی دستیابی چیک کریں اور ادائیگی کیے بغیر بکنگ جائزہ صفحے پر آگے بڑھیں۔",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_25_hotel",
+      "validator_args": {
+        "partner": "zena-hotel"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "External booking flow",
+    "instantiation": {
+      "rationale": "the hotel is a partner site with its own layout; leaving the airline site is part of what is measured",
+      "parameters": {
+        "partner": "zena-hotel"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 26,
+    "service": "National eVisa Service",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "ایئرلائن کی ویب سائٹ سے نیشنل ای ویزا سروس کھولیں، سات دن کے سیاحتی دورے کے لیے ویزا کی قسم منتخب کریں، اور درخواست سے پہلے درکار دستاویزات بتائیں۔",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_26_evisa",
+      "validator_args": {
+        "partner": "evisa"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "External navigation + requirements",
+    "instantiation": {
+      "rationale": "requires navigating off the airline site, which the URL check verifies",
+      "parameters": {
+        "partner": "evisa"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 27,
+    "service": "EuroRail Connect",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "فرینکفرٹ (FRA) سے آگے ٹرین کے ذریعے کولون تک مشترکہ پرواز اور ریل کنکشن تلاش کریں، اور بتائیں کہ اسے کیسے بک کیا جا سکتا ہے۔",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_27_rail",
+      "validator_args": {
+        "partner": "eurorail"
+      }
+    },
+    "require_reset": true,
+    "complexity": "High",
+    "notes": "Cross-service itinerary",
+    "instantiation": {
+      "rationale": "cross-service: the flight arrives, the rail leg is a partner product",
+      "parameters": {
+        "partner": "eurorail"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 28,
+    "service": "Car rental / airport transfer",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "2026-04-12 کو نیروبی (NBO) پہنچنے والے دو مسافروں کے لیے رفٹ ڈرائیو کے ساتھ ایئرپورٹ ٹرانسفر ریزرو کریں، اور ادائیگی کیے بغیر بکنگ جائزہ صفحے پر آگے بڑھیں۔",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_28_car",
+      "validator_args": {
+        "partner": "riftdrive"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Partner booking",
+    "instantiation": {
+      "rationale": "partner booking flow that still stops at a review page",
+      "parameters": {
+        "partner": "riftdrive"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 29,
+    "service": "Travel insurance",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "یورپ کی راؤنڈ ٹرپ کے لیے سیف وائج سفری بیمہ کے آپشن کا جائزہ لیں، کوریج کی حدیں اور قیمت بتائیں، اور خریداری سے پہلے رکیں۔",
+    "eval": {
+      "eval_types": [
+        "url_match",
+        "db_state"
+      ],
+      "validator": "tasks.validators.task_29_insurance",
+      "validator_args": {
+        "partner": "safevoyage"
+      }
+    },
+    "require_reset": true,
+    "complexity": "Medium",
+    "notes": "Coverage comparison",
+    "instantiation": {
+      "rationale": "coverage comparison, priced as a percentage of the fare",
+      "parameters": {
+        "partner": "safevoyage"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  },
+  {
+    "task_id": 30,
+    "service": "Help and contact",
+    "language": "en",
+    "sites": [
+      "selam"
+    ],
+    "start_url": "http://localhost:7770/",
+    "intent": "آسٹریا میں ایک مسافر کو مقامی دفتری اوقات کے باہر بکنگ کا ہنگامی مسئلہ ہے۔ اس ملک کے رابطے کے اختیارات تلاش کریں اور بتائیں کہ کس نمبر پر کال کرنی ہے اور مقامی دفتری اوقات کیا ہیں۔",
+    "eval": {
+      "eval_types": [
+        "string_match"
+      ],
+      "reference_answers": {
+        "must_include": [
+          "+251 11 517 8888",
+          "Daily 07:00-20:00"
+        ]
+      }
+    },
+    "require_reset": true,
+    "complexity": "Low",
+    "notes": "Contact lookup",
+    "instantiation": {
+      "rationale": "the office has no ticket desk and closes at night, so the 24-hour line is the only correct answer -- quoting the local number fails",
+      "parameters": {
+        "country_code": "AT",
+        "country": "Austria",
+        "city": "Vienna",
+        "phone": "+203 13 510 5079",
+        "emergency_phone": "+251 11 517 8888",
+        "hours": "Daily 07:00-20:00"
+      }
+    },
+    "runnable": true,
+    "blocked_by": []
+  }
+]

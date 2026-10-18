@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% set full_bleed = True %}
+{% block content %}
+<div class="hero">
+  <div class="wrap hero-flex">
+    <div class="bookcard">
+      <div class="tabs">
+        <span class="tab active">▣ {{ S.book_ticket }}</span>
+        <a class="tab" href="/pnr">{{ S.tab_pnr }}</a>
+        <span class="tab deco">{{ S.tab_charts }}</span>
+      </div>
+      {% if error %}<div class="error">{{ error }}</div>{% endif %}
+      <form method="get" action="/search">
+        <div class="field-row">
+          <div class="field">
+            <label>{{ S["from"] }}</label>
+            <input type="text" name="from">
+          </div>
+          <span class="swap">⇄</span>
+          <div class="field">
+            <label>{{ S["to"] }}</label>
+            <input type="text" name="to">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>{{ S.date }}</label>
+            <input type="text" name="date" placeholder="2026-04-06">
+          </div>
+          <div class="field">
+            <label>{{ S.cls }}</label>
+            <select name="class">
+              <option value="">{{ S.cls_any }}</option>
+              {% for c in CLASSES %}
+              <option value="{{ c }}">{{ c }} — {{ S["cl_" ~ c] }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="field">
+            <label>{{ S.quota }}</label>
+            <select name="quota">
+              <option value="GN">{{ S.q_general }}</option>
+              <option value="LD">{{ S.q_ladies }}</option>
+              <option value="SS">{{ S.q_senior }}</option>
+              <option value="TQ">{{ S.q_tatkal }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="pwd_conc" value="1"> {{ S.opt_pwd }}</label>
+          <label class="opt"><input type="checkbox" name="flex" value="1"> {{ S.opt_flex }}</label>
+          <label class="opt"><input type="checkbox" name="avlberth" value="1"> {{ S.opt_avlberth }}</label>
+          <label class="opt"><input type="checkbox" name="pass_conc" value="1"> {{ S.opt_pass }}</label>
+        </div>
+        <button type="submit" class="searchbtn">{{ S.find }}</button>
+      </form>
+      <p class="muted small">{{ S.easy_book }}</p>
+    </div>
+    <div class="hero-text">
+      <h1>{{ S.hero_h }}</h1>
+      <p>{{ S.hero_sub }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap page-pad">
+  <h2 class="promo-h">{{ S.promo_h }}</h2>
+  <div class="promos">
+    <div class="promo">
+      <img src="/static/img/promo_holidays.svg" alt="">
+      <h3>{{ S.promo_holidays }}</h3>
+      <p>{{ S.promo_holidays_t }}</p>
+    </div>
+    <div class="promo">
+      <img src="/static/img/promo_hotels.svg" alt="">
+      <h3>{{ S.promo_hotels }}</h3>
+      <p>{{ S.promo_hotels_t }}</p>
+    </div>
+    <div class="promo">
+      <img src="/static/img/promo_meals.svg" alt="">
+      <h3>{{ S.promo_meals }}</h3>
+      <p>{{ S.promo_meals_t }}</p>
+    </div>
+    <div class="promo">
+      <img src="/static/img/promo_loyalty.svg" alt="">
+      <h3>{{ S.promo_loyalty }}</h3>
+      <p>{{ S.promo_loyalty_t }}</p>
+    </div>
+  </div>
+
+  <h2>{{ S.popular }}</h2>
+  <p>
+  {% for code in ["NDLS","BCT","HWH","MAS","CNB","LKO","JP","ADI","BPL","SC","PNBE","GHY"] %}
+    <a class="pill" href="/station/{{ code }}">{{ sname(code) }} ({{ code }})</a>
+  {% endfor %}
+  </p>
+</div>
+{% endblock %}

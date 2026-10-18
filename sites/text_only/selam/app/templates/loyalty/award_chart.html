@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ t("award.chart_title") }}{% endblock %}
+{% block content %}
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+    <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li>
+        <li><a href="{{ path('award_search') }}">{{ t("award.title") }}</a></li>
+        <li>{{ t("award.chart_title") }}</li></ol>
+  </nav>
+  <h1>{{ t("award.chart_title") }}</h1>
+  <p>{{ t("award.chart_intro") }}</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th scope="col">{{ t("baggage.region") }}</th>
+      <th scope="col">{{ t("brand.cabin_economy") }}</th><th scope="col">{{ t("brand.cabin_business") }}</th></tr></thead>
+    <tbody>{% for row in rows %}<tr>
+      <td>{{ row.region }}</td>
+      <td>{% if row.economy %}{{ row.economy | join(" / ") }}{% else %}{{ t("common.none") }}{% endif %}</td>
+      <td>{% if row.business %}{{ row.business | join(" / ") }}{% else %}{{ t("common.none") }}{% endif %}</td>
+    </tr>{% endfor %}</tbody></table></div>
+  <p class="hint">{{ t("award.chart_note") }}</p>
+</div>
+{% endblock %}

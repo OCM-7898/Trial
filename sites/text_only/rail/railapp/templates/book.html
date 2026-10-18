@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ S.passenger_details }}</h1>
+<p class="muted">
+  {{ ctx.no }} {{ tname(ctx.no) }} · {{ sname(ctx.a) }} → {{ sname(ctx.b) }}
+  · {{ ctx.date }} · {{ ctx.cls }} — {{ S["cl_" ~ ctx.cls] }}
+</p>
+<div class="card">
+  <form method="post" action="/book/passenger">
+    <label>{{ S.p_name }}</label>
+    <input type="text" name="name">
+    <label>{{ S.p_age }}</label>
+    <input type="text" name="age">
+    <label>{{ S.p_gender }}</label>
+    <select name="gender">
+      <option value="M">{{ S.g_m }}</option>
+      <option value="F">{{ S.g_f }}</option>
+    </select>
+    <label>{{ S.p_berth }}</label>
+    <select name="berth">
+      <option value="No Preference">{{ S.b_nopref }}</option>
+      <option value="Lower">{{ S.b_lower }}</option>
+      <option value="Middle">{{ S.b_middle }}</option>
+      <option value="Upper">{{ S.b_upper }}</option>
+      <option value="Side Lower">{{ S.b_side_lower }}</option>
+      <option value="Side Upper">{{ S.b_side_upper }}</option>
+    </select>
+    <label>{{ S.p_meal }}</label>
+    <select name="meal">
+      <option value="No meal">{{ S.m_none }}</option>
+      <option value="Veg">{{ S.m_veg }}</option>
+      <option value="Non-veg">{{ S.m_nonveg }}</option>
+    </select>
+    <button type="submit">{{ S["continue"] }}</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ t("nav.vouchers") }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li>{{ t("nav.vouchers") }}</li></ol></nav>
+<h1>{{ t("nav.vouchers") }}</h1>
+<p>{{ t("voucher.intro") }}</p>
+<div class="table-scroll"><table>
+  <thead><tr><th scope="col">{{ t("voucher.amount") }}</th><th scope="col">{{ t("voucher.validity") }}</th></tr></thead>
+  <tbody>{% for amount in amounts %}<tr><td>{{ fmt_money(amount) }}</td><td>{{ t("voucher.months", n=24) }}</td></tr>{% endfor %}</tbody>
+</table></div>
+<p><a class="btn btn-primary" href="{{ path('vouchers_buy') }}">{{ t("voucher.buy") }}</a>
+   <a class="btn btn-secondary" href="{{ path('vouchers_balance') }}">{{ t("voucher.check") }}</a></p>
+</div>{% endblock %}

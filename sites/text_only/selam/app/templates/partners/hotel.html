@@ -1,0 +1,70 @@
+{% extends "partner_base.html" %}
+{% from "macros/fields.html" import date_field, text_field, number_field %}
+{% block content %}
+<div class="wrap section">
+  <h1>{{ partner.name }}</h1>
+  {% if record %}
+  <ol class="stepper"><li class="is-done">{{ t("review.step_select") }}</li>
+    <li class="is-current">{{ t("review.step_review") }}</li><li>{{ t("review.step_pay") }}</li></ol>
+  {% if notice %}<div class="notice notice-info" role="status" id="payment-notice"><div>{{ notice }}</div></div>{% endif %}
+  <h2>{{ t("partner.hotel_review") }}</h2>
+  <div class="split">
+    <div>
+      <div class="table-scroll"><table><tbody>
+        <tr><th scope="row">{{ t("partner.room") }}</th><td>{{ room_for(record.room_id).name }}</td></tr>
+        <tr><th scope="row">{{ t("partner.arrival") }}</th><td>{{ fmt_date(record.arrival) }}</td></tr>
+        <tr><th scope="row">{{ t("partner.stay") }}</th><td>{{ t("partner.hours", n=record.hours) }}</td></tr>
+        <tr><th scope="row">{{ t("boarding.passenger") }}</th><td>{{ record.guest_name }}</td></tr>
+      </tbody></table></div>
+      <p class="hint">{{ t("review.reference", ref=record.reference_no) }}</p>
+    </div>
+    <aside class="summary">
+      <dl><dt class="total">{{ t("review.total_due") }}</dt><dd class="total">{{ fmt_money(record.price_usd) }}</dd></dl>
+      <form method="post"><input type="hidden" name="action" value="pay">
+        <button class="btn btn-primary" type="submit" style="width:100%">{{ t("review.pay_now") }}</button></form>
+      <p class="hint" style="margin-top:10px">{{ t("review.no_card_needed") }}</p>
+    </aside>
+  </div>
+  {% else %}
+  <p>{{ t("partner.hotel_intro") }}</p>
+  {% if error %}<div class="notice notice-error" role="alert"><div>{{ error }}</div></div>{% endif %}
+  <form class="searchform" method="post" action="{{ partner.home }}">
+    {{ date_field("arrival", "arrival", t("partner.arrival"), t("common.date_hint"), arrival) }}
+    {{ number_field("hours", "hours", t("partner.stay_hours"), 4, 72, hours) }}
+    {{ text_field("guest_name", "guest_name", t("boarding.passenger"), "", "", "", true) }}
+    <div class="field" style="grid-column:1/-1">
+      <label for="room_id">{{ t("partner.room") }}</label>
+      <select id="room_id" name="room_id">
+        {% for room in rooms %}
+        <option value="{{ room.id }}">{{ room.name }} &mdash; {{ fmt_money(room.price_per_block_usd) }}
+          {{ t("partner.per_block", n=room.block_hours) }}
+          {%- if room.rooms_available == 0 %} ({{ t("partner.sold_out") }}){% endif %}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit">{{ t("partner.check_availability") }}</button></div>
+  </form>
+
+  <h2>{{ t("partner.rooms") }}</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">{{ t("partner.room") }}</th><th scope="col">{{ t("dining.description") }}</th>
+        <th scope="col">{{ t("partner.sleeps") }}</th><th scope="col">{{ t("partner.rate") }}</th>
+        <th scope="col">{{ t("partner.available") }}</th>
+      </tr></thead>
+      <tbody>
+        {% for room in rooms %}
+        <tr>
+          <td>{{ room.name }}</td><td>{{ room.description }}</td><td>{{ room.sleeps }}</td>
+          <td>{{ fmt_money(room.price_per_block_usd) }} {{ t("partner.per_block", n=room.block_hours) }}</td>
+          <td>{% if room.rooms_available %}<span class="badge badge-ok">{{ room.rooms_available }}</span>
+              {% else %}<span class="badge badge-warn">{{ t("partner.sold_out") }}</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

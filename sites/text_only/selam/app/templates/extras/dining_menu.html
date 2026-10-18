@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ flight.flight_no }}{% endblock %}
+{% block content %}<div class="wrap">
+<nav class="breadcrumb" aria-label="{{ t('nav.breadcrumb') }}">
+  <ol><li><a href="{{ path('home') }}">{{ t("nav.home") }}</a></li><li><a href="{{ path('dining') }}">{{ t("dining.title") }}</a></li><li>{{ flight.flight_no }}</li></ol></nav>
+<h1>{{ flight.flight_no }}</h1>
+<p class="hint">{{ origin.city }} ({{ origin.iata }}) &rarr; {{ destination.city }} ({{ destination.iata }})
+  &middot; {{ fmt_date(flight.date) }}</p>
+{% for entry in menus %}
+<section class="section"><div class="section-head"><h2>{{ entry.label }}</h2></div>
+<div class="table-scroll"><table><tbody>
+  <tr><th scope="row">{{ t("dining.service") }}</th><td>{{ entry.menu.courses }}</td></tr>
+  <tr><th scope="row">{{ t("dining.beverages") }}</th><td>{{ entry.menu.beverages }}</td></tr>
+</tbody></table></div></section>
+{% endfor %}
+<p><a class="btn btn-secondary" href="{{ path('dining_special') }}">{{ t("dining.special_title") }}</a></p>
+</div>{% endblock %}

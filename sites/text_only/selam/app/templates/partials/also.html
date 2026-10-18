@@ -1,0 +1,8 @@
+{% if also is defined and also %}
+<nav class="alsohere" aria-label="{{ t('nav.also_on_this_page') }}">
+  <span class="lbl">{{ t("nav.also_on_this_page") }}</span>
+  <ul>
+    {% for label, url in also %}<li><a href="{{ url }}">{{ label }}</a></li>{% endfor %}
+  </ul>
+</nav>
+{% endif %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h2>{{ title }}</h2>
+{% set sep = '&' if '?' in base_path else '?' %}
+<p class="sort">{{ S.sort_by }}
+  {% for s, label in [('name', S.sort_name), ('price_asc', S.sort_price_asc), ('price_desc', S.sort_price_desc), ('rating', S.sort_rating), ('reviews', S.sort_reviews)] %}
+    <a class="{{ 'on' if sort == s }}" href="{{ base_path }}{{ sep }}sort={{ s }}">{{ label }}</a>
+  {% endfor %}
+</p>
+<div class="grid">
+  {% for p in products %}
+  <div class="card">
+    <a href="/product/{{ p.id }}"><img class="thumb" src="/static/img/products/p{{ p.id }}.jpg" alt=""></a>
+    <a href="/product/{{ p.id }}"><strong>{{ p.name }}</strong></a>
+    <div class="meta">{{ p.category }} · <a href="/brand/{{ p.brand }}">{{ p.brand }}</a></div>
+    <div class="price">{{ S.cur }}{{ ('%.2f' % p.price) | v2_num }}</div>
+    <div class="meta">{% if p.n_reviews %}{{ p.avg_stars | v2_num }}/5 ({{ p.n_reviews | v2_num }} {{ S.n_reviews_suffix }}){% else %}{{ S.no_reviews_yet }}{% endif %}</div>
+  </div>
+  {% else %}<p>{{ S.no_match }}</p>{% endfor %}
+</div>
+<div class="pager">
+  {% if page > 1 %}<a href="{{ base_path }}{{ sep }}sort={{ sort }}&page={{ page - 1 }}">{{ S.prev_page }}</a>{% endif %}
+  {{ S.page_of.format(p=page, n=n_pages) }}
+  {% if page < n_pages %}<a href="{{ base_path }}{{ sep }}sort={{ sort }}&page={{ page + 1 }}">{{ S.next_page }}</a>{% endif %}
+</div>
+{% endblock %}
